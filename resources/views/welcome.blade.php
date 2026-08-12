@@ -108,6 +108,7 @@
 ========================================================= --}}
 
 <section class="hero-banner">
+    <!-- <img src="{{ asset('pics_vids/logo.png') }}"> -->
 </section>
 
 
@@ -211,12 +212,12 @@
 
                     <div class="lists-container">
 
-                        <div class="header">
+                        <div class="headere" id="header">
                             Why WASMaN's Activities Matter
                         </div>
 
 
-                        <div class="lists">
+                        <div class="lists  " id="listss">
 
                             <ul>
 
