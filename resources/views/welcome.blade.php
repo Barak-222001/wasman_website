@@ -389,7 +389,7 @@
             <div class="gists">
 
                 <div class="gist-icon">
-                    <i class="fas fa-flask"></i>
+                    <i class="fas fa-flask">🔍</i>
                 </div>
 
                 <div class="gist_heading">
@@ -415,7 +415,7 @@
             <div class="gists">
 
                 <div class="gist-icon">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-users">📲</i>
                 </div>
 
                 <div class="gist_heading">
@@ -440,7 +440,7 @@
             <div class="gists">
 
                 <div class="gist-icon">
-                    <i class="fas fa-water"></i>
+                    <i class="fas fa-water">⛵</i>
                 </div>
 
                 <div class="gist_heading">
@@ -465,7 +465,7 @@
             <div class="gists">
 
                 <div class="gist-icon">
-                    <i class="fas fa-handshake"></i>
+                    <i class="fas fa-handshake">🛜</i>
                 </div>
 
                 <div class="gist_heading">

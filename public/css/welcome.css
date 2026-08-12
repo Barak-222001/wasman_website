@@ -158,8 +158,8 @@ img {
     align-items: center;
     gap: 10px;
 
-    font-size: 12px;
-    font-weight: 800;
+    font-size: 6pt;
+    font-weight: 500;
     letter-spacing: 2px;
 
     color: var(--ocean-blue);
@@ -536,6 +536,7 @@ img {
     padding: 120px 0;
 
     background: var(--white);
+    height: 600px;
 }
 
 .who_we_are::before {
@@ -736,21 +737,17 @@ img {
 
 .gists {
     position: relative;
-
     padding: 35px 30px;
-
     background: rgba(255,255,255,0.95);
-
     border-radius: 22px;
-
     border: 1px solid rgba(8,126,164,0.10);
-
-    box-shadow:
-        0 10px 35px rgba(5,62,91,0.06);
-
+    box-shadow: 0 10px 35px rgba(5,62,91,0.06);
     overflow: hidden;
-
     transition: var(--transition);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .gists::before {
@@ -971,6 +968,7 @@ img {
     color: var(--turquoise);
 
     justify-content: center;
+    
 }
 
 .cta-content .section-label::before {
