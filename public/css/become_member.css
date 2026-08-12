@@ -1,0 +1,1440 @@
+/*=========================================================
+                MEMBERSHIP PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#003b5c;
+    --secondary:#00a896;
+    --light:#f8fbfc;
+    --white:#ffffff;
+    --text:#555;
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+    --radius:22px;
+
+}
+
+/*=========================================================
+                    MEMBERSHIP HERO
+=========================================================*/
+
+.membership-hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,44,70,.80),
+        rgba(0,44,70,.68)
+    ),
+    url(images/membership-banner.jpg);
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+                    HERO CONTENT
+=========================================================*/
+
+.membership-overlay{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+.membership-content{
+
+    width:90%;
+    max-width:950px;
+    text-align:center;
+    color:white;
+
+}
+
+
+
+.membership-content span{
+
+    display:inline-block;
+
+    padding:10px 25px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:40px;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.membership-content h1{
+
+    font-size:66px;
+
+    line-height:1.15;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.membership-content p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:2;
+
+    margin-bottom:45px;
+
+}
+
+
+
+/*=========================================================
+                    HERO BUTTONS
+=========================================================*/
+
+.membership-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.membership-buttons a{
+
+    text-decoration:none;
+
+    padding:18px 40px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+/* Primary */
+
+.membership-buttons a:first-child{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+
+
+.membership-buttons a:first-child:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* Secondary */
+
+.membership-buttons a:last-child{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+
+
+.membership-buttons a:last-child:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+
+
+/*=========================================================
+                WHY JOIN SECTION
+=========================================================*/
+
+.why-membership{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 520px;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+                WHY CONTENT
+=========================================================*/
+
+.why-content span{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+.why-content h2{
+
+    color:var(--primary);
+
+    font-size:48px;
+
+    line-height:1.3;
+
+    margin:20px 0;
+
+}
+
+
+
+.why-content p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:17px;
+
+}
+
+
+
+/*=========================================================
+                MEMBERSHIP STATS
+=========================================================*/
+
+.membership-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.membership-stats div{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.membership-stats div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.membership-stats h2{
+
+    color:var(--secondary);
+
+    font-size:46px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.membership-stats span{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+
+
+/*=========================================================
+                SECTION TITLE
+=========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+
+
+.section-title span{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+.section-title h2{
+
+    color:var(--primary);
+
+    font-size:46px;
+
+    margin-top:15px;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+.membership-content h1{
+
+    font-size:48px;
+
+}
+
+.why-membership{
+
+    grid-template-columns:1fr;
+
+}
+
+.membership-stats{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.membership-content h1{
+
+    font-size:34px;
+
+}
+
+.membership-content p{
+
+    font-size:16px;
+
+}
+
+.membership-buttons{
+
+    flex-direction:column;
+
+}
+
+.membership-buttons a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.why-content h2{
+
+    font-size:32px;
+
+}
+
+.membership-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.section-title h2{
+
+    font-size:32px;
+
+}
+
+}
+
+/*=========================================================
+                MEMBERSHIP CATEGORIES
+=========================================================*/
+
+.membership-categories{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                CATEGORY GRID
+=========================================================*/
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+
+/*=========================================================
+                MEMBER CARD
+=========================================================*/
+
+.member-card{
+
+    background:white;
+
+    padding:50px 35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.member-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:var(--secondary);
+
+}
+
+
+
+.member-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+}
+
+
+
+.member-card h3{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.member-card p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+}
+
+
+
+/*=========================================================
+                FEATURED CARD
+=========================================================*/
+
+.member-card.featured{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #005f73
+    );
+
+    color:white;
+
+    transform:scale(1.04);
+
+}
+
+
+
+.member-card.featured h3,
+
+.member-card.featured p{
+
+    color:white;
+
+}
+
+
+
+.member-card.featured::after{
+
+    content:"Most Popular";
+
+    position:absolute;
+
+    top:18px;
+
+    right:-40px;
+
+    width:160px;
+
+    text-align:center;
+
+    padding:8px 0;
+
+    background:var(--secondary);
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transform:rotate(45deg);
+
+}
+
+
+
+/*=========================================================
+                MEMBERSHIP BENEFITS
+=========================================================*/
+
+.membership-benefits{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                BENEFITS GRID
+=========================================================*/
+
+.benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+                BENEFIT CARD
+=========================================================*/
+
+.benefit-card{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.benefit-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.benefit-card{
+
+    font-size:48px;
+
+}
+
+
+
+.benefit-card h3{
+
+    margin:25px 0 15px;
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
+
+
+
+.benefit-card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+
+
+/*=========================================================
+                MEMBERSHIP JOURNEY
+=========================================================*/
+
+.membership-process{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                PROCESS GRID
+=========================================================*/
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+}
+
+
+
+/* Connecting Line */
+
+.process-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:55px;
+
+    left:8%;
+
+    width:84%;
+
+    height:4px;
+
+    background:#dcefee;
+
+    z-index:0;
+
+}
+
+
+
+/*=========================================================
+                STEP CARD
+=========================================================*/
+
+.process-grid div{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.process-grid div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/*=========================================================
+                STEP NUMBER
+=========================================================*/
+
+.process-grid h3{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+
+
+.process-grid p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+.category-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.benefits-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.process-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.process-grid::before{
+
+    display:none;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.category-grid,
+
+.benefits-grid,
+
+.process-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.member-card.featured{
+
+    transform:none;
+
+}
+
+.member-card h3{
+
+    font-size:24px;
+
+}
+
+.benefit-card h3{
+
+    font-size:22px;
+
+}
+
+.process-grid h3{
+
+    width:65px;
+
+    height:65px;
+
+    font-size:28px;
+
+}
+
+}
+/*=========================================================
+                MEMBERSHIP ELIGIBILITY
+=========================================================*/
+
+.membership-eligibility{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                ELIGIBILITY GRID
+=========================================================*/
+
+.eligibility-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+                ELIGIBILITY CARD
+=========================================================*/
+
+.eligibility-grid div{
+
+    background:white;
+
+    padding:35px 25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.eligibility-grid div::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--secondary);
+
+}
+
+
+
+.eligibility-grid div:hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/*=========================================================
+                        FAQ
+=========================================================*/
+
+.membership-faq{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:120px auto;
+
+}
+
+
+
+.faq-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+/*=========================================================
+                    FAQ ITEM
+=========================================================*/
+
+.faq-item{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.faq-item:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+
+.faq-item h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+    line-height:1.5;
+
+}
+
+
+
+.faq-item p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+}
+
+
+
+/*=========================================================
+                MEMBERSHIP CTA
+=========================================================*/
+
+.membership-cta{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:130px auto;
+
+    padding:90px 70px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        #005f73
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Decorative Shapes */
+
+.membership-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    left:-90px;
+
+}
+
+
+
+.membership-cta::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:50%;
+
+    bottom:-90px;
+
+    right:-70px;
+
+}
+
+
+
+/*=========================================================
+                    CTA CONTENT
+=========================================================*/
+
+.membership-cta span{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#8ff2df;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+.membership-cta h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:48px;
+
+    margin:20px 0;
+
+}
+
+
+
+.membership-cta p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+    line-height:2;
+
+    color:#e5f3f5;
+
+}
+
+
+
+.membership-cta a{
+
+    position:relative;
+
+    z-index:2;
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:18px 45px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.membership-cta a:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+                    PAGE ANIMATIONS
+=========================================================*/
+
+.member-card,
+.benefit-card,
+.process-grid div,
+.eligibility-grid div,
+.faq-item,
+.membership-cta,
+.membership-stats div{
+
+    animation:membershipFade .8s ease forwards;
+
+}
+
+
+
+@keyframes membershipFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*=========================================================
+                GLOBAL TRANSITIONS
+=========================================================*/
+
+img{
+
+    transition:.45s ease;
+
+}
+
+
+
+button,
+a{
+
+    transition:.35s ease;
+
+}
+
+
+
+/*=========================================================
+                SMOOTH SCROLL
+=========================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/*=========================================================
+                CUSTOM SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#edf7f8;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00857b;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+.eligibility-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.membership-cta{
+
+    padding:70px 40px;
+
+}
+
+.membership-cta h2{
+
+    font-size:38px;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.eligibility-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.faq-item{
+
+    padding:25px;
+
+}
+
+.faq-item h3{
+
+    font-size:20px;
+
+}
+
+.membership-cta{
+
+    padding:55px 25px;
+
+}
+
+.membership-cta h2{
+
+    font-size:30px;
+
+}
+
+.membership-cta p{
+
+    font-size:15px;
+
+}
+
+}

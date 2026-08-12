@@ -1,0 +1,755 @@
+/*======================================
+AREAS OF INTEREST
+======================================*/
+
+.interest-hero{
+
+    height:70vh;
+    position:relative;
+    
+
+
+}
+
+.hero-overlay{
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(135deg,#071325,#365B6E);
+
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.hero-content{
+
+    width:85%;
+    max-width:900px;
+
+    color:white;
+
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+
+
+}
+
+.hero-content span{
+
+    display:block;
+
+    letter-spacing:4px;
+
+    color:#a75959;
+    background-color: white;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+    width: 300px;
+    border-radius: 50px;
+
+}
+
+.hero-content h1{
+
+    font-size:56px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+}
+
+.hero-content p{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+}
+
+
+
+/*==============================
+INTRO
+==============================*/
+
+.interest-intro{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:100px auto;
+
+    display:grid;
+
+    grid-template-columns:480px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.intro-image img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.intro-content span{
+
+    color:#a75959;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+.intro-content h2{
+
+    font-size:42px;
+
+    color:#365B6E;
+
+    margin:20px 0;
+
+}
+
+.intro-content p{
+
+    line-height:2;
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*==============================
+INTEREST BLOCKS
+==============================*/
+
+.interest-block{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 500px;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.reverse{
+
+    grid-template-columns:500px 1fr;
+
+}
+
+.reverse .interest-text{
+
+    order:2;
+
+}
+
+.reverse .interest-image{
+
+    order:1;
+
+}
+
+.interest-text span{
+
+    display:inline-flex;
+
+    width:55px;
+
+    height:55px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#a75959;
+
+    color:white;
+
+    border-radius:50%;
+
+    margin-bottom:25px;
+
+    font-weight:bold;
+
+}
+
+.interest-text h2{
+
+    color:#365B6E;
+
+    font-size:38px;
+
+    margin-bottom:25px;
+
+}
+
+.interest-text p{
+
+    line-height:2;
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+.interest-image img{
+
+    width:100%;
+
+    height:480px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.interest-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+
+/*==============================
+Responsive
+==============================*/
+
+@media(max-width:992px){
+
+.hero-content h1{
+
+    font-size:40px;
+
+}
+
+.interest-intro,
+
+.interest-block,
+
+.reverse{
+
+    grid-template-columns:1fr;
+
+}
+
+.reverse .interest-text,
+
+.reverse .interest-image{
+
+    order:unset;
+
+}
+
+.intro-image img,
+
+.interest-image img{
+
+    height:350px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-content h1{
+
+    font-size:30px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.intro-content h2,
+
+.interest-text h2{
+
+    font-size:30px;
+
+}
+}
+
+
+/*=========================================
+THEMATIC SECTION
+=========================================*/
+
+.thematic-section{
+
+    width:90%;
+    max-width:1300px;
+    margin:120px auto;
+
+}
+
+.thematic-title{
+
+    text-align:center;
+    margin-bottom:70px;
+
+}
+
+.thematic-title span{
+
+    color:#a75959;
+    font-weight:600;
+    letter-spacing:3px;
+
+}
+
+.thematic-title h2{
+
+    font-size:42px;
+    color:#365B6E;
+    margin:20px 0;
+
+}
+
+.thematic-title p{
+
+    max-width:750px;
+    margin:auto;
+    line-height:1.9;
+    color:#666;
+
+}
+
+.thematic-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+
+}
+
+.theme-card{
+
+    background:white;
+    border-radius:22px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.theme-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.theme-icon{
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:#e6f7f5;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+.theme-card h3{
+
+    color:#365B6E;
+    margin-bottom:15px;
+
+}
+
+.theme-card p{
+
+    line-height:1.9;
+    color:#555;
+
+}
+
+/*=====================
+Responsive
+=====================*/
+
+@media(max-width:992px){
+
+.thematic-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.thematic-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.thematic-title h2{
+
+    font-size:32px;
+
+}
+
+}
+
+/*======================================
+OUR IMPACT
+======================================*/
+
+.impact-section{
+
+    width:90%;
+    max-width:1300px;
+    margin:120px auto;
+
+}
+
+.impact-header{
+
+    text-align:center;
+    margin-bottom:70px;
+
+}
+
+.impact-header span{
+
+    color:#a75959;
+    font-weight:600;
+    letter-spacing:3px;
+
+}
+
+.impact-header h2{
+
+    font-size:44px;
+    color:#365B6E;
+    margin:20px 0;
+
+}
+
+.impact-header p{
+
+    max-width:800px;
+    margin:auto;
+    line-height:1.9;
+    color:#666;
+
+}
+
+.impact-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+
+}
+
+.impact-card{
+
+    background:white;
+    padding:45px;
+    border-radius:22px;
+    text-align:center;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.impact-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.impact-card h1{
+
+    font-size:60px;
+    color:#a75959;
+
+}
+
+.impact-card h3{
+
+    color:#365B6E;
+    margin:15px 0;
+
+}
+
+.impact-card p{
+
+    line-height:1.8;
+    color:#555;
+
+}
+
+
+/*======================================
+FEATURE BANNER
+======================================*/
+
+.interest-banner{
+
+    height:65vh;
+
+    margin:120px 0;
+
+    background:url(images/banner-impact.jpg) center/cover;
+
+    position:relative;
+
+}
+
+.banner-overlay{
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(135deg,#365B6E,#071325);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.banner-text{
+
+    width:85%;
+    max-width:850px;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.banner-text h2{
+
+    font-size:52px;
+
+    margin-bottom:25px;
+
+    line-height:1.2;
+
+}
+
+.banner-text p{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+}
+
+
+/*======================================
+CTA
+======================================*/
+
+.cta-section{
+
+    width:90%;
+    max-width:1000px;
+
+    margin:120px auto;
+
+    text-align:center;
+
+}
+
+.cta-section span{
+
+    color:#a75959;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+.cta-section h2{
+
+    font-size:46px;
+
+    color:#365B6E;
+
+    margin:20px 0;
+
+}
+
+.cta-section p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    max-width:700px;
+
+    margin:auto auto 45px;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.cta-buttons a{
+
+    text-decoration:none;
+
+    padding:16px 38px;
+
+    border-radius:40px;
+
+    background:#960000;
+
+    color:white;
+
+    transition:.4s;
+
+}
+
+.cta-buttons a:hover{
+
+    background:#365B6E;
+    color: white;
+
+}
+
+.outline-btn{
+
+    background:white !important;
+
+    color:#365B6E !important;
+
+    border:2px solid #365B6E;
+
+}
+
+.outline-btn:hover{
+
+    background:#365B6E   !important;
+
+    color:white !important;
+
+}
+
+
+
+/*======================================
+RESPONSIVE
+======================================*/
+
+@media(max-width:992px){
+
+.impact-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.banner-text h2{
+
+    font-size:38px;
+
+}
+
+.cta-section h2{
+
+    font-size:36px;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.impact-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.banner-text h2{
+
+    font-size:30px;
+
+}
+
+.banner-text p{
+
+    font-size:16px;
+
+}
+
+.cta-section h2{
+
+    font-size:28px;
+
+}
+
+}

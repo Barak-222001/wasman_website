@@ -1,0 +1,1392 @@
+/*=========================================================
+                INTERNSHIP PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#003b5c;
+    --secondary:#00a896;
+    --light:#f8fbfc;
+    --white:#ffffff;
+    --text:#555;
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+    --radius:22px;
+
+}
+
+/*=========================================================
+                    HERO SECTION
+=========================================================*/
+
+.intern-hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,44,70,.82),
+        rgba(0,44,70,.70)
+    ),
+    url(images/internship-banner.jpg);
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/*=========================================================
+                    HERO OVERLAY
+=========================================================*/
+
+.hero-overlay{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/*=========================================================
+                    HERO CONTENT
+=========================================================*/
+
+.hero-content{
+
+    width:90%;
+
+    max-width:950px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero-content span{
+
+    display:inline-block;
+
+    padding:10px 25px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:40px;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+
+}
+
+.hero-content h1{
+
+    font-size:66px;
+
+    line-height:1.15;
+
+    margin-bottom:30px;
+
+}
+
+.hero-content p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:2;
+
+    font-size:20px;
+
+    margin-bottom:45px;
+
+}
+
+/*=========================================================
+                    HERO BUTTONS
+=========================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-buttons a{
+
+    text-decoration:none;
+
+    padding:18px 42px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+/* Primary Button */
+
+.hero-buttons a:first-child{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+.hero-buttons a:first-child:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+/* Secondary Button */
+
+.hero-buttons a:last-child{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.hero-buttons a:last-child:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+/*=========================================================
+                ABOUT INTERNSHIP
+=========================================================*/
+
+.intern-about{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 520px;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/*=========================================================
+                ABOUT CONTENT
+=========================================================*/
+
+.about-content span{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+.about-content h2{
+
+    color:var(--primary);
+
+    font-size:48px;
+
+    line-height:1.3;
+
+    margin:20px 0;
+
+}
+
+.about-content p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:17px;
+
+}
+
+/*=========================================================
+                INTERNSHIP STATISTICS
+=========================================================*/
+
+.intern-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.intern-stats div{
+
+    background:white;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.intern-stats div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.intern-stats h2{
+
+    color:var(--secondary);
+
+    font-size:46px;
+
+    margin-bottom:12px;
+
+}
+
+.intern-stats span{
+
+    color:#666;
+
+}
+
+/*=========================================================
+                SECTION TITLES
+=========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+.section-title h2{
+
+    color:var(--primary);
+
+    font-size:46px;
+
+    margin-top:15px;
+
+}
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+.hero-content h1{
+
+    font-size:48px;
+
+}
+
+.intern-about{
+
+    grid-template-columns:1fr;
+
+}
+
+.intern-stats{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.hero-content h1{
+
+    font-size:34px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.hero-buttons a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.about-content h2{
+
+    font-size:32px;
+
+}
+
+.intern-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.section-title h2{
+
+    font-size:32px;
+
+}
+
+}
+
+/*=========================================================
+                INTERNSHIP OPPORTUNITIES
+=========================================================*/
+
+.internships{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                OPPORTUNITY GRID
+=========================================================*/
+
+.intern-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+
+/*=========================================================
+                OPPORTUNITY CARD
+=========================================================*/
+
+.intern-card{
+
+    background:white;
+
+    padding:45px 35px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+
+
+.intern-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:var(--secondary);
+
+}
+
+
+
+.intern-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+}
+
+
+
+.intern-card h3{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    line-height:1.4;
+
+}
+
+
+
+.intern-card p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+}
+
+
+
+/*=========================================================
+                PLACEMENT AREAS
+=========================================================*/
+
+.placement{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                PLACEMENT GRID
+=========================================================*/
+
+.placement-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+                PLACEMENT CARD
+=========================================================*/
+
+.placement-grid div{
+
+    background:white;
+
+    padding:35px 25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    font-size:21px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.placement-grid div::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--secondary);
+
+}
+
+
+
+.placement-grid div:hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/*=========================================================
+                INTERNSHIP BENEFITS
+=========================================================*/
+
+.intern-benefits{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                BENEFITS GRID
+=========================================================*/
+
+.benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+                BENEFIT CARD
+=========================================================*/
+
+.benefit-card{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    font-size:50px;
+
+}
+
+
+
+.benefit-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.benefit-card h3{
+
+    margin:25px 0 15px;
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
+
+
+
+.benefit-card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+
+
+/*=========================================================
+                INTERNSHIP PROCESS
+=========================================================*/
+
+.intern-process{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                PROCESS GRID
+=========================================================*/
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+}
+
+
+
+/* Timeline Connector */
+
+.process-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:55px;
+
+    left:8%;
+
+    width:84%;
+
+    height:4px;
+
+    background:#dcefee;
+
+    z-index:0;
+
+}
+
+
+
+/*=========================================================
+                STEP CARD
+=========================================================*/
+
+.process-grid div{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.process-grid div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/*=========================================================
+                STEP NUMBER
+=========================================================*/
+
+.process-grid h3{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+
+
+.process-grid p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+.intern-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.placement-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.benefits-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.process-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.process-grid::before{
+
+    display:none;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.intern-grid,
+
+.placement-grid,
+
+.benefits-grid,
+
+.process-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.intern-card h3{
+
+    font-size:24px;
+
+}
+
+.benefit-card h3{
+
+    font-size:22px;
+
+}
+
+.process-grid h3{
+
+    width:65px;
+
+    height:65px;
+
+    font-size:28px;
+
+}
+
+}
+
+/*=========================================================
+                ELIGIBILITY SECTION
+=========================================================*/
+
+.eligibility{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                REQUIREMENTS LIST
+=========================================================*/
+
+.requirements{
+
+    list-style:none;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    padding:0;
+
+}
+
+
+
+.requirements li{
+
+    background:white;
+
+    padding:25px 30px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-weight:500;
+
+    position:relative;
+
+    padding-left:70px;
+
+    transition:.35s;
+
+}
+
+
+
+.requirements li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:25px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+}
+
+
+
+.requirements li:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+
+/*=========================================================
+                APPLICATION FORM
+=========================================================*/
+
+.application-form{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:130px auto;
+
+}
+
+
+
+/*=========================================================
+                FORM CONTAINER
+=========================================================*/
+
+.application-form form{
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/*=========================================================
+                FORM GRID
+=========================================================*/
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/*=========================================================
+                INPUTS
+=========================================================*/
+
+.form-grid input,
+
+.form-grid select,
+
+.application-form textarea{
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border:1px solid #d8e4e7;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:inherit;
+
+    background:#fcfdfd;
+
+}
+
+
+
+/*=========================================================
+                FOCUS EFFECT
+=========================================================*/
+
+.form-grid input:focus,
+
+.form-grid select:focus,
+
+.application-form textarea:focus{
+
+    border-color:var(--secondary);
+
+    box-shadow:0 0 0 4px rgba(0,168,150,.12);
+
+}
+
+
+
+/*=========================================================
+                TEXTAREA
+=========================================================*/
+
+.application-form textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*=========================================================
+                FILE UPLOAD LABEL
+=========================================================*/
+
+.application-form label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+
+/*=========================================================
+                FILE INPUT
+=========================================================*/
+
+.application-form input[type=file]{
+
+    width:100%;
+
+    padding:18px;
+
+    border:2px dashed #b9d7d4;
+
+    border-radius:15px;
+
+    background:#f8fbfc;
+
+    margin-bottom:35px;
+
+    cursor:pointer;
+
+}
+
+
+
+/*=========================================================
+                SUBMIT BUTTON
+=========================================================*/
+
+.application-form button{
+
+    display:inline-block;
+
+    background:var(--secondary);
+
+    color:white;
+
+    border:none;
+
+    padding:18px 45px;
+
+    border-radius:40px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+
+.application-form button:hover{
+
+    background:#00857b;
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*=========================================================
+                PLACEHOLDER
+=========================================================*/
+
+::placeholder{
+
+    color:#8a8a8a;
+
+}
+
+
+
+/*=========================================================
+                PAGE ANIMATIONS
+=========================================================*/
+
+.intern-card,
+
+.benefit-card,
+
+.process-grid div,
+
+.placement-grid div,
+
+.requirements li,
+
+.application-form form,
+
+.intern-stats div{
+
+    animation:internFade .8s ease forwards;
+
+}
+
+
+
+@keyframes internFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*=========================================================
+                GLOBAL TRANSITIONS
+=========================================================*/
+
+img{
+
+    transition:.45s ease;
+
+}
+
+
+
+button,
+
+a{
+
+    transition:.35s ease;
+
+}
+
+
+
+/*=========================================================
+                SMOOTH SCROLL
+=========================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/*=========================================================
+                CUSTOM SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#edf7f8;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00857b;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+.requirements{
+
+    grid-template-columns:1fr;
+
+}
+
+.form-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.application-form form{
+
+    padding:40px;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.application-form form{
+
+    padding:25px;
+
+}
+
+.requirements li{
+
+    font-size:16px;
+
+    padding-left:60px;
+
+}
+
+.application-form button{
+
+    width:100%;
+
+}
+
+}

@@ -1,0 +1,1782 @@
+/*==================================================
+                    FOOTER
+==================================================*/
+
+.footer{
+
+    background:#00263b;
+
+    color:#fff;
+
+    margin-top:120px;
+
+}
+
+.footer-container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:80px 0 50px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1.2fr 1.5fr;
+
+    gap:50px;
+
+}
+
+.footer-logo{
+
+    font-size:36px;
+
+    color:#00a896;
+
+    margin-bottom:20px;
+
+}
+
+.footer-column p{
+
+    color:#cfd8dc;
+
+    line-height:1.9;
+
+}
+
+.footer-column h3{
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+    color:#fff;
+
+}
+
+.footer-column ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.footer-column ul li{
+
+    margin-bottom:15px;
+
+}
+
+.footer-column ul li a{
+
+    color:#cfd8dc;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-column ul li a:hover{
+
+    color:#00a896;
+
+    padding-left:6px;
+
+}
+
+.contact-info li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#cfd8dc;
+
+}
+
+.contact-info i{
+
+    color:#00a896;
+
+    width:20px;
+
+}
+
+.social-icons{
+
+    margin-top:25px;
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.social-icons a{
+
+    width:45px;
+
+    height:45px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.social-icons a:hover{
+
+    background:#00a896;
+
+    transform:translateY(-5px);
+
+}
+
+.footer-form{
+
+    margin-top:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.footer-form input{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.footer-form button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#00a896;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.35s;
+
+}
+
+.footer-form button:hover{
+
+    background:#00857b;
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+.footer-bottom p{
+
+    color:#b0bec5;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+.footer-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.footer-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer{
+
+    text-align:center;
+
+}
+
+.contact-info li{
+
+    justify-content:center;
+
+}
+
+.social-icons{
+
+    justify-content:center;
+
+}
+
+}
+
+/*=========================================================
+                NEWS PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#003b5c;
+    --secondary:#00a896;
+    --light:#f8fbfc;
+    --white:#ffffff;
+    --text:#555555;
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+    --radius:22px;
+
+}
+
+/*=========================================================
+                    NEWS HERO
+=========================================================*/
+
+.news-hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,44,70,.78),
+    rgba(0,44,70,.65)),
+    url(images/news-banner.jpg);
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.news-overlay{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.news-content{
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.news-content span{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:40px;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+
+    font-size:14px;
+
+}
+
+.news-content h1{
+
+    font-size:68px;
+
+    line-height:1.15;
+
+    margin-bottom:30px;
+
+}
+
+.news-content p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:2;
+
+    margin-bottom:45px;
+
+}
+
+/*=========================================================
+                    HERO BUTTON
+=========================================================*/
+
+.hero-btn{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.hero-btn:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+/*=========================================================
+                FEATURED STORY
+=========================================================*/
+
+.featured-news{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:520px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.featured-image{
+
+    position:relative;
+
+}
+
+.featured-image img{
+
+    width:100%;
+
+    height:600px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.featured-image::before{
+
+    content:"Top Story";
+
+    position:absolute;
+
+    top:25px;
+
+    left:25px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+}
+
+.featured-content span{
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+.featured-content h2{
+
+    font-size:46px;
+
+    color:var(--primary);
+
+    margin:20px 0;
+
+}
+
+.featured-content p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    margin-bottom:30px;
+
+}
+
+/*=========================================================
+                NEWS META
+=========================================================*/
+
+.news-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.news-meta span{
+
+    background:#eef8f8;
+
+    color:var(--primary);
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    letter-spacing:0;
+
+}
+
+.featured-content a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:var(--secondary);
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    transition:.35s;
+
+}
+
+.featured-content a:hover{
+
+    background:#00857b;
+
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+.news-content h1{
+
+    font-size:48px;
+
+}
+
+.featured-news{
+
+    grid-template-columns:1fr;
+
+}
+
+.featured-image img{
+
+    height:450px;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.news-content h1{
+
+    font-size:34px;
+
+}
+
+.news-content p{
+
+    font-size:16px;
+
+}
+
+.featured-content h2{
+
+    font-size:32px;
+
+}
+
+.featured-image img{
+
+    height:320px;
+
+}
+
+}
+/*=========================================================
+                EVENTS SECTION
+=========================================================*/
+
+.events{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:120px auto;
+
+}
+
+
+/*=========================================================
+                EVENT LIST
+=========================================================*/
+
+.event-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+
+/*=========================================================
+                EVENT ITEM
+=========================================================*/
+
+.event-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    border-left:6px solid var(--secondary);
+
+}
+
+
+.event-item:hover{
+
+    transform:translateX(10px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+
+}
+
+
+
+/*=========================================================
+                EVENT DATE BOX
+=========================================================*/
+
+.event-date{
+
+    min-width:110px;
+
+    height:120px;
+
+    background:linear-gradient(
+        135deg,
+        var(--secondary),
+        #00857b
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.event-date h3{
+
+    font-size:48px;
+
+    margin:0;
+
+    line-height:1;
+
+}
+
+
+.event-date span{
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    margin-top:8px;
+
+}
+
+
+
+/*=========================================================
+                EVENT DETAILS
+=========================================================*/
+
+.event-details h3{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+
+.event-details p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+    max-width:800px;
+
+}
+
+
+
+/*=========================================================
+                EVENT DETAILS HOVER
+=========================================================*/
+
+.event-details h3:hover{
+
+    color:var(--secondary);
+
+}
+
+
+
+/*=========================================================
+                EVENT RESPONSIVE
+=========================================================*/
+
+
+@media(max-width:768px){
+
+
+.event-item{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:30px;
+
+}
+
+
+.event-date{
+
+    width:100%;
+
+    height:100px;
+
+}
+
+
+.event-date h3{
+
+    font-size:38px;
+
+}
+
+
+.event-details h3{
+
+    font-size:24px;
+
+}
+
+
+}
+/*=========================================================
+                    LATEST NEWS SECTION
+=========================================================*/
+
+.latest-news{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                    SECTION TITLE
+=========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+}
+
+.section-title h2{
+
+    font-size:48px;
+
+    color:var(--primary);
+
+    margin:0;
+
+}
+
+
+
+/*=========================================================
+                    NEWS GRID
+=========================================================*/
+
+.news-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+
+/*=========================================================
+                    NEWS CARD
+=========================================================*/
+
+.news-card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.news-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+}
+
+
+
+/*=========================================================
+                    NEWS IMAGE
+=========================================================*/
+
+.news-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+.news-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*=========================================================
+                    NEWS BODY
+=========================================================*/
+
+.news-body{
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+
+
+/*=========================================================
+                    CATEGORY TAG
+=========================================================*/
+
+.tag{
+
+    width:max-content;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#e9faf8;
+
+    color:var(--secondary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*=========================================================
+                    ARTICLE TITLE
+=========================================================*/
+
+.news-body h3{
+
+    color:var(--primary);
+
+    font-size:27px;
+
+    line-height:1.4;
+
+    margin-bottom:18px;
+
+}
+
+
+
+/*=========================================================
+                    ARTICLE DESCRIPTION
+=========================================================*/
+
+.news-body p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/*=========================================================
+                    DATE
+=========================================================*/
+
+.news-body small{
+
+    color:#888;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+
+
+/*=========================================================
+                    READ MORE
+=========================================================*/
+
+.news-body a{
+
+    margin-top:auto;
+
+    text-decoration:none;
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+.news-body a:hover{
+
+    letter-spacing:1px;
+
+}
+
+
+
+/*=========================================================
+                FEATURED FIRST ARTICLE
+=========================================================*/
+
+.news-card:first-child{
+
+    position:relative;
+
+}
+
+
+.news-card:first-child::after{
+
+    content:"FEATURED";
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+
+@media(max-width:992px){
+
+
+.news-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.section-title h2{
+
+    font-size:38px;
+
+}
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.news-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.section-title h2{
+
+    font-size:32px;
+
+}
+
+
+.news-body{
+
+    padding:25px;
+
+}
+
+
+.news-body h3{
+
+    font-size:23px;
+
+}
+
+
+}
+
+/*=========================================================
+                MEDIA HIGHLIGHTS SECTION
+=========================================================*/
+
+.media-gallery{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                GALLERY HEADER
+=========================================================*/
+
+.media-gallery .section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+
+.media-gallery .section-title span{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+.media-gallery .section-title h2{
+
+    color:var(--primary);
+
+    font-size:48px;
+
+    margin-top:15px;
+
+}
+
+
+
+/*=========================================================
+                IMAGE GALLERY GRID
+=========================================================*/
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    grid-auto-rows:260px;
+
+    gap:25px;
+
+}
+
+
+
+/*=========================================================
+                GALLERY IMAGE BOX
+=========================================================*/
+
+.gallery img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    transition:.5s;
+
+}
+
+
+
+/* Large Feature Image */
+
+.gallery img:first-child{
+
+    grid-column:span 2;
+
+    grid-row:span 2;
+
+}
+
+
+
+/*=========================================================
+                IMAGE HOVER EFFECT
+=========================================================*/
+
+.gallery{
+
+    overflow:hidden;
+
+}
+
+
+.gallery img:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*=========================================================
+                IMAGE OVERLAY EFFECT
+=========================================================*/
+
+.gallery{
+
+    position:relative;
+
+}
+
+
+.gallery img{
+
+    cursor:pointer;
+
+}
+
+
+
+/*=========================================================
+                GALLERY CARD EFFECT
+=========================================================*/
+
+.gallery img{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+.gallery img:hover{
+
+    box-shadow:0 25px 50px rgba(0,0,0,.18);
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE GALLERY
+=========================================================*/
+
+@media(max-width:992px){
+
+
+.gallery{
+
+    grid-template-columns:repeat(2,1fr);
+
+    grid-auto-rows:230px;
+
+}
+
+
+.gallery img:first-child{
+
+    grid-column:span 2;
+
+}
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.media-gallery .section-title h2{
+
+    font-size:32px;
+
+}
+
+
+.gallery{
+
+    grid-template-columns:1fr;
+
+    grid-auto-rows:260px;
+
+}
+
+
+.gallery img:first-child{
+
+    grid-column:auto;
+
+    grid-row:auto;
+
+}
+
+
+}
+
+/*=========================================================
+                NEWS SUBSCRIBE SECTION
+=========================================================*/
+
+.news-subscribe{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:130px auto;
+
+    padding:90px 70px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        #005f73
+    );
+
+    border-radius:35px;
+
+    text-align:center;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Decorative Shapes */
+
+.news-subscribe::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    left:-80px;
+
+}
+
+
+.news-subscribe::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:50%;
+
+    right:-80px;
+
+    bottom:-100px;
+
+}
+
+
+
+/*=========================================================
+                SUBSCRIBE CONTENT
+=========================================================*/
+
+.news-subscribe span{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#8ff2df;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+.news-subscribe h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:48px;
+
+    margin:20px 0;
+
+}
+
+
+
+.news-subscribe p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+    line-height:2;
+
+    color:#e3f2f3;
+
+}
+
+
+
+/*=========================================================
+                SUBSCRIBE FORM
+=========================================================*/
+
+.news-subscribe form{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    background:white;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+
+
+.news-subscribe input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:22px 30px;
+
+    font-size:16px;
+
+}
+
+
+
+.news-subscribe button{
+
+    width:180px;
+
+    border:none;
+
+    background:var(--secondary);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+
+.news-subscribe button:hover{
+
+    background:#00857b;
+
+}
+
+
+
+/*=========================================================
+                PAGE ANIMATIONS
+=========================================================*/
+
+.news-card,
+.event-item,
+.featured-news,
+.gallery img,
+.news-subscribe{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/*=========================================================
+                GLOBAL IMAGE TRANSITION
+=========================================================*/
+
+img{
+
+    transition:.45s ease;
+
+}
+
+
+
+/*=========================================================
+                GLOBAL BUTTON EFFECT
+=========================================================*/
+
+button,
+.hero-btn,
+.featured-content a{
+
+    transition:.35s ease;
+
+}
+
+
+button:hover,
+.hero-btn:hover,
+.featured-content a:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*=========================================================
+                SMOOTH SCROLL
+=========================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/*=========================================================
+                CUSTOM SCROLL BAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#edf7f8;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00857b;
+
+}
+
+
+
+/*=========================================================
+                FINAL RESPONSIVE SETTINGS
+=========================================================*/
+
+
+@media(max-width:992px){
+
+
+.news-subscribe{
+
+    padding:70px 40px;
+
+}
+
+
+.news-subscribe h2{
+
+    font-size:38px;
+
+}
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.news-subscribe{
+
+    padding:55px 25px;
+
+}
+
+
+.news-subscribe h2{
+
+    font-size:30px;
+
+}
+
+
+.news-subscribe p{
+
+    font-size:15px;
+
+}
+
+
+
+.news-subscribe form{
+
+    flex-direction:column;
+
+    border-radius:20px;
+
+}
+
+
+
+.news-subscribe input{
+
+    width:100%;
+
+}
+
+
+.news-subscribe button{
+
+    width:100%;
+
+    padding:18px;
+
+}
+
+
+}

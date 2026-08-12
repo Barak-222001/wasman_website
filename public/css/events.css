@@ -1,0 +1,1421 @@
+/*=========================================================
+                EVENTS PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#003b5c;
+    --secondary:#00a896;
+    --light:#f8fbfc;
+    --white:#ffffff;
+    --text:#555;
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+    --radius:22px;
+
+}
+
+
+/*=========================================================
+                    EVENTS HERO
+=========================================================*/
+
+.events-hero{
+
+    height:100vh;
+
+    background:
+
+    linear-gradient(
+        rgba(0,44,70,.78),
+        rgba(0,44,70,.65)
+    ),
+
+    url(images/events-banner.jpg);
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+                    HERO OVERLAY
+=========================================================*/
+
+.events-overlay{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.events-content{
+
+    width:90%;
+
+    max-width:950px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.events-content span{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:40px;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.events-content h1{
+
+    font-size:68px;
+
+    line-height:1.15;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.events-content p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:2;
+
+    margin-bottom:45px;
+
+}
+
+
+
+/*=========================================================
+                    HERO BUTTON
+=========================================================*/
+
+.event-btn{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    text-decoration:none;
+
+    background:var(--secondary);
+
+    color:white;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.event-btn:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+                EVENTS INTRODUCTION
+=========================================================*/
+
+.events-intro{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 520px;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+                INTRODUCTION TEXT
+=========================================================*/
+
+.intro-text span{
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.intro-text h2{
+
+    color:var(--primary);
+
+    font-size:48px;
+
+    line-height:1.3;
+
+    margin:20px 0;
+
+}
+
+
+
+.intro-text p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:17px;
+
+}
+
+
+
+/*=========================================================
+                    EVENT STATISTICS
+=========================================================*/
+
+.event-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.event-stats div{
+
+    background:white;
+
+    padding:40px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.event-stats div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.event-stats h2{
+
+    color:var(--secondary);
+
+    font-size:48px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.event-stats span{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+.events-content h1{
+
+    font-size:48px;
+
+}
+
+.events-intro{
+
+    grid-template-columns:1fr;
+
+}
+
+.event-stats{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.events-content h1{
+
+    font-size:34px;
+
+}
+
+.events-content p{
+
+    font-size:16px;
+
+}
+
+.intro-text h2{
+
+    font-size:32px;
+
+}
+
+.event-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/*=========================================================
+                FEATURED EVENT
+=========================================================*/
+
+.featured-event{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:480px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+                FEATURED IMAGE
+=========================================================*/
+
+.featured-event-image{
+
+    position:relative;
+
+}
+
+.featured-event-image img{
+
+    width:100%;
+
+    height:620px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.featured-event-image::before{
+
+    content:"Flagship Event";
+
+    position:absolute;
+
+    top:25px;
+
+    left:25px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    z-index:2;
+
+}
+
+
+
+/*=========================================================
+                FEATURED CONTENT
+=========================================================*/
+
+.featured-event-content span{
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+.featured-event-content h2{
+
+    color:var(--primary);
+
+    font-size:46px;
+
+    line-height:1.3;
+
+    margin:20px 0;
+
+}
+
+.featured-event-content p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*=========================================================
+                EVENT META
+=========================================================*/
+
+.event-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.event-meta span{
+
+    background:#eef8f8;
+
+    color:var(--primary);
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    letter-spacing:0;
+
+}
+
+
+
+/*=========================================================
+                ACTION BUTTONS
+=========================================================*/
+
+.event-actions{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.event-actions a{
+
+    text-decoration:none;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+
+
+/* Primary Button */
+
+.event-actions a:first-child{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+.event-actions a:first-child:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* Secondary Button */
+
+.event-actions a:last-child{
+
+    border:2px solid var(--secondary);
+
+    color:var(--secondary);
+
+}
+
+.event-actions a:last-child:hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+
+
+/*=========================================================
+                UPCOMING EVENTS
+=========================================================*/
+
+.upcoming-events{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                EVENTS GRID
+=========================================================*/
+
+.events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+
+/*=========================================================
+                EVENT CARD
+=========================================================*/
+
+.event-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+}
+
+
+
+/*=========================================================
+                EVENT IMAGE
+=========================================================*/
+
+.event-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.event-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*=========================================================
+                EVENT CARD BODY
+=========================================================*/
+
+.event-card-body{
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+
+
+/*=========================================================
+                EVENT TAG
+=========================================================*/
+
+.event-tag{
+
+    width:max-content;
+
+    padding:8px 18px;
+
+    background:#e9faf8;
+
+    color:var(--secondary);
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*=========================================================
+                EVENT TITLE
+=========================================================*/
+
+.event-card-body h3{
+
+    color:var(--primary);
+
+    font-size:27px;
+
+    line-height:1.4;
+
+    margin-bottom:18px;
+
+}
+
+
+
+/*=========================================================
+                DESCRIPTION
+=========================================================*/
+
+.event-card-body p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/*=========================================================
+                EVENT DATE
+=========================================================*/
+
+.event-card-body small{
+
+    color:#888;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/*=========================================================
+                REGISTER LINK
+=========================================================*/
+
+.event-card-body a{
+
+    margin-top:auto;
+
+    text-decoration:none;
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.event-card-body a:hover{
+
+    letter-spacing:1px;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+.featured-event{
+
+    grid-template-columns:1fr;
+
+}
+
+.featured-event-image img{
+
+    height:500px;
+
+}
+
+.events-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.featured-event-content h2{
+
+    font-size:32px;
+
+}
+
+.featured-event-image img{
+
+    height:340px;
+
+}
+
+.events-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.event-actions{
+
+    flex-direction:column;
+
+}
+
+.event-actions a{
+
+    text-align:center;
+
+}
+
+.event-card-body{
+
+    padding:25px;
+
+}
+
+.event-card-body h3{
+
+    font-size:23px;
+
+}
+
+}
+
+/*=========================================================
+                EVENT CATEGORIES
+=========================================================*/
+
+.event-categories{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                CATEGORY GRID
+=========================================================*/
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+                CATEGORY CARD
+=========================================================*/
+
+.category-grid div{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+    box-shadow:var(--shadow);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.category-grid div::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--secondary);
+
+}
+
+
+
+.category-grid div:hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/*=========================================================
+                PAST EVENTS
+=========================================================*/
+
+.past-events{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                PAST EVENTS GRID
+=========================================================*/
+
+.past-events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+
+/*=========================================================
+                PAST EVENT CARD
+=========================================================*/
+
+.past-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.past-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+}
+
+
+
+/*=========================================================
+                PAST EVENT IMAGE
+=========================================================*/
+
+.past-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+
+
+.past-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*=========================================================
+                PAST EVENT CONTENT
+=========================================================*/
+
+.past-content{
+
+    padding:35px;
+
+}
+
+
+
+.past-content h3{
+
+    color:var(--primary);
+
+    font-size:26px;
+
+    line-height:1.4;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.past-content p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+}
+
+
+
+/*=========================================================
+                JOIN EVENT CTA
+=========================================================*/
+
+.join-event{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:130px auto;
+
+    padding:90px 70px;
+
+    text-align:center;
+
+    color:white;
+
+    border-radius:35px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        #005f73
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Decorative Elements */
+
+.join-event::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    left:-80px;
+
+}
+
+
+
+.join-event::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:50%;
+
+    bottom:-90px;
+
+    right:-70px;
+
+}
+
+
+
+/*=========================================================
+                CTA CONTENT
+=========================================================*/
+
+.join-event span{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#8ff2df;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+.join-event h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:48px;
+
+    margin:20px 0;
+
+}
+
+
+
+.join-event p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+    line-height:2;
+
+    color:#e7f3f4;
+
+}
+
+
+
+.join-event a{
+
+    position:relative;
+
+    z-index:2;
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:var(--secondary);
+
+    color:white;
+
+    padding:18px 45px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.join-event a:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+                PAGE ANIMATIONS
+=========================================================*/
+
+.event-card,
+.past-card,
+.category-grid div,
+.featured-event,
+.join-event,
+.event-stats div{
+
+    animation:eventFade .8s ease forwards;
+
+}
+
+
+
+@keyframes eventFade{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+/*=========================================================
+                GLOBAL TRANSITIONS
+=========================================================*/
+
+img{
+
+    transition:.45s ease;
+
+}
+
+
+
+button,
+a{
+
+    transition:.35s ease;
+
+}
+
+
+
+/*=========================================================
+                SMOOTH SCROLL
+=========================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/*=========================================================
+                CUSTOM SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#edf7f8;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00857b;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+.category-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.past-events-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.join-event{
+
+    padding:70px 40px;
+
+}
+
+.join-event h2{
+
+    font-size:38px;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.category-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.past-events-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.join-event{
+
+    padding:55px 25px;
+
+}
+
+.join-event h2{
+
+    font-size:30px;
+
+}
+
+.join-event p{
+
+    font-size:15px;
+
+}
+
+}

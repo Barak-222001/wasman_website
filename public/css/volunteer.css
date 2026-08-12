@@ -1,0 +1,1279 @@
+/*=========================================================
+                VOLUNTEER PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#003b5c;
+    --secondary:#00a896;
+    --light:#f8fbfc;
+    --white:#ffffff;
+    --text:#555;
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+    --radius:22px;
+
+}
+
+/*=========================================================
+                VOLUNTEER HERO
+=========================================================*/
+
+.volunteer-hero{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,45,70,.82),
+        rgba(0,45,70,.70)
+    ),
+    url(images/volunteer-banner.jpg);
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/*=========================================================
+                HERO OVERLAY
+=========================================================*/
+
+.volunteer-overlay{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/*=========================================================
+                HERO CONTENT
+=========================================================*/
+
+.volunteer-content{
+
+    width:90%;
+    max-width:950px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.volunteer-content span{
+
+    display:inline-block;
+
+    padding:10px 28px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:50px;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    margin-bottom:28px;
+
+}
+
+.volunteer-content h1{
+
+    font-size:64px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+}
+
+.volunteer-content p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:2;
+
+    font-size:20px;
+
+    margin-bottom:45px;
+
+}
+
+/*=========================================================
+                HERO BUTTONS
+=========================================================*/
+
+.volunteer-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.volunteer-buttons a{
+
+    text-decoration:none;
+
+    padding:18px 40px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.volunteer-buttons a:first-child{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+.volunteer-buttons a:first-child:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+.volunteer-buttons a:last-child{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.volunteer-buttons a:last-child:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+/*=========================================================
+                WHY VOLUNTEER
+=========================================================*/
+
+.why-volunteer{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/*=========================================================
+                IMAGE
+=========================================================*/
+
+.volunteer-image{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.volunteer-image img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.volunteer-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*=========================================================
+                TEXT CONTENT
+=========================================================*/
+
+.volunteer-text span{
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+.volunteer-text h2{
+
+    font-size:48px;
+
+    color:var(--primary);
+
+    margin:20px 0;
+
+    line-height:1.3;
+
+}
+
+.volunteer-text p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    margin-bottom:30px;
+
+}
+
+/*=========================================================
+                FEATURE LIST
+=========================================================*/
+
+.volunteer-text ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.volunteer-text li{
+
+    margin-bottom:18px;
+
+    padding-left:35px;
+
+    position:relative;
+
+    color:#444;
+
+}
+
+.volunteer-text li::before{
+
+    content:"✔";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--secondary);
+
+    font-weight:bold;
+
+}
+
+/*=========================================================
+                SECTION TITLE
+=========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+.section-title h2{
+
+    color:var(--primary);
+
+    font-size:46px;
+
+    margin-top:15px;
+
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+.why-volunteer{
+
+    grid-template-columns:1fr;
+
+}
+
+.volunteer-content h1{
+
+    font-size:48px;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.volunteer-content h1{
+
+    font-size:34px;
+
+}
+
+.volunteer-content p{
+
+    font-size:16px;
+
+}
+
+.volunteer-buttons{
+
+    flex-direction:column;
+
+}
+
+.volunteer-buttons a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.volunteer-text h2{
+
+    font-size:34px;
+
+}
+
+.section-title h2{
+
+    font-size:32px;
+
+}
+
+}
+
+/*=========================================================
+                VOLUNTEER OPPORTUNITIES
+=========================================================*/
+
+.volunteer-opportunities{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                OPPORTUNITY GRID
+=========================================================*/
+
+.opportunity-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+                VOLUNTEER CARD
+=========================================================*/
+
+.volunteer-card{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+
+
+.volunteer-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:var(--secondary);
+
+}
+
+
+
+.volunteer-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+}
+
+
+
+.volunteer-card h3{
+
+    color:var(--primary);
+
+    font-size:25px;
+
+    line-height:1.4;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.volunteer-card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+
+
+/*=========================================================
+                VOLUNTEER IMPACT SECTION
+=========================================================*/
+
+.volunteer-impact{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                IMPACT GRID
+=========================================================*/
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+                IMPACT CARD
+=========================================================*/
+
+.impact-grid div{
+
+    background:white;
+
+    padding:45px 25px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.impact-grid div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.impact-grid h2{
+
+    font-size:50px;
+
+    color:var(--secondary);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.impact-grid span{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+
+
+/*=========================================================
+                SKILLS SECTION
+=========================================================*/
+
+.skills-needed{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                SKILLS GRID
+=========================================================*/
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+/*=========================================================
+                SKILL CARDS
+=========================================================*/
+
+.skills-grid div{
+
+    background:white;
+
+    padding:35px 20px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+
+
+/* Accent line */
+
+.skills-grid div::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--secondary);
+
+}
+
+
+
+.skills-grid div:hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/*=========================================================
+                VOLUNTEER JOURNEY
+=========================================================*/
+
+.volunteer-process{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                PROCESS GRID
+=========================================================*/
+
+.volunteer-process .process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+}
+
+
+
+/* Timeline line */
+
+.volunteer-process .process-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:55px;
+
+    left:8%;
+
+    width:84%;
+
+    height:4px;
+
+    background:#dcefee;
+
+    z-index:0;
+
+}
+
+
+
+/*=========================================================
+                PROCESS CARDS
+=========================================================*/
+
+.volunteer-process .process-grid div{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    z-index:2;
+
+    transition:.35s;
+
+}
+
+
+
+.volunteer-process .process-grid div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/*=========================================================
+                PROCESS NUMBER
+=========================================================*/
+
+.volunteer-process .process-grid h3{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    font-size:32px;
+
+}
+
+
+
+.volunteer-process .process-grid p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:1100px){
+
+.opportunity-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.impact-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.skills-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.volunteer-process .process-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.volunteer-process .process-grid::before{
+
+    display:none;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.opportunity-grid,
+
+.impact-grid,
+
+.skills-grid,
+
+.volunteer-process .process-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.volunteer-card h3{
+
+    font-size:23px;
+
+}
+
+
+.impact-grid h2{
+
+    font-size:40px;
+
+}
+
+
+.volunteer-process .process-grid h3{
+
+    width:65px;
+
+    height:65px;
+
+    font-size:26px;
+
+}
+
+}
+
+/*=========================================================
+                VOLUNTEER APPLICATION SECTION
+=========================================================*/
+
+.volunteer-form{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:130px auto;
+
+}
+
+
+
+/*=========================================================
+                FORM CONTAINER
+=========================================================*/
+
+.volunteer-form form{
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/*=========================================================
+                FORM GRID
+=========================================================*/
+
+.volunteer-form .form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*=========================================================
+                INPUT FIELDS
+=========================================================*/
+
+.volunteer-form input,
+
+.volunteer-form select,
+
+.volunteer-form textarea{
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border:1px solid #d9e5e8;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-family:inherit;
+
+    outline:none;
+
+    background:#fcfefe;
+
+    transition:.35s;
+
+}
+
+
+
+/*=========================================================
+                INPUT FOCUS
+=========================================================*/
+
+.volunteer-form input:focus,
+
+.volunteer-form select:focus,
+
+.volunteer-form textarea:focus{
+
+    border-color:var(--secondary);
+
+    box-shadow:
+
+    0 0 0 4px rgba(0,168,150,.12);
+
+}
+
+
+
+/*=========================================================
+                TEXTAREA
+=========================================================*/
+
+.volunteer-form textarea{
+
+    min-height:190px;
+
+    resize:vertical;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*=========================================================
+                DATE INPUT
+=========================================================*/
+
+.volunteer-form input[type="date"]{
+
+    color:#666;
+
+}
+
+
+
+/*=========================================================
+                SUBMIT BUTTON
+=========================================================*/
+
+.volunteer-form button{
+
+    padding:18px 50px;
+
+    background:var(--secondary);
+
+    border:none;
+
+    border-radius:40px;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+
+.volunteer-form button:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+                FORM PLACEHOLDER
+=========================================================*/
+
+.volunteer-form ::placeholder{
+
+    color:#8b989c;
+
+}
+
+
+
+/*=========================================================
+                SUCCESS MESSAGE STYLE
+=========================================================*/
+
+.form-success{
+
+    background:#e7faf5;
+
+    color:#00796b;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+
+
+/*=========================================================
+                ANIMATION EFFECTS
+=========================================================*/
+
+.volunteer-card,
+
+.impact-grid div,
+
+.skills-grid div,
+
+.volunteer-process .process-grid div,
+
+.volunteer-form form{
+
+    animation:volunteerReveal .8s ease forwards;
+
+}
+
+
+
+@keyframes volunteerReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*=========================================================
+                IMAGE EFFECTS
+=========================================================*/
+
+.volunteer-image img{
+
+    transition:.6s ease;
+
+}
+
+
+
+.volunteer-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*=========================================================
+                GLOBAL BUTTON EFFECTS
+=========================================================*/
+
+button,
+a{
+
+    transition:.35s ease;
+
+}
+
+
+
+/*=========================================================
+                SMOOTH PAGE SCROLL
+=========================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/*=========================================================
+                CUSTOM SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#edf7f8;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00857b;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE FORM DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+.volunteer-form form{
+
+    padding:40px;
+
+}
+
+
+.volunteer-form .form-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+.volunteer-form form{
+
+    padding:25px;
+
+}
+
+
+.volunteer-form button{
+
+    width:100%;
+
+}
+
+
+.volunteer-form input,
+
+.volunteer-form select,
+
+.volunteer-form textarea{
+
+    font-size:15px;
+
+}
+
+}

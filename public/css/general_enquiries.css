@@ -1,0 +1,2011 @@
+
+/*=========================================================
+              GENERAL ENQUIRY VARIABLES
+=========================================================*/
+
+
+:root{
+
+    --primary:#003b5c;
+
+    --secondary:#00a896;
+
+    --light:#f8fbfc;
+
+    --white:#ffffff;
+
+    --text:#555;
+
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+
+    --radius:22px;
+
+}
+
+
+
+/*=========================================================
+              GENERAL ENQUIRY HERO SECTION
+=========================================================*/
+
+
+.enquiry-hero{
+
+
+    min-height:100vh;
+
+
+    background:
+
+
+    linear-gradient(
+
+        rgba(0,45,70,.85),
+
+        rgba(0,45,70,.72)
+
+    ),
+
+
+
+    url(images/enquiry-banner.jpg);
+
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    background-repeat:no-repeat;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              HERO OVERLAY
+=========================================================*/
+
+
+.enquiry-overlay{
+
+
+    width:100%;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              HERO CONTENT
+=========================================================*/
+
+
+.enquiry-content{
+
+
+    width:90%;
+
+
+    max-width:1000px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-content span{
+
+
+    display:inline-block;
+
+
+    padding:10px 30px;
+
+
+    background:rgba(255,255,255,.15);
+
+
+    backdrop-filter:blur(12px);
+
+
+    border-radius:50px;
+
+
+    letter-spacing:3px;
+
+
+    font-size:14px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-content h1{
+
+
+    font-size:65px;
+
+
+    line-height:1.15;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-content p{
+
+
+    max-width:800px;
+
+
+    margin:auto;
+
+
+    font-size:20px;
+
+
+    line-height:2;
+
+
+    margin-bottom:45px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              HERO BUTTON
+=========================================================*/
+
+
+.enquiry-content a{
+
+
+    display:inline-block;
+
+
+    padding:18px 50px;
+
+
+    background:var(--secondary);
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    border-radius:45px;
+
+
+    font-weight:600;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-content a:hover{
+
+
+    background:#00857b;
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              ABOUT ENQUIRY SECTION
+=========================================================*/
+
+
+.enquiry-about{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+
+    display:grid;
+
+
+    grid-template-columns:1fr 1fr;
+
+
+    gap:70px;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              ABOUT IMAGE
+=========================================================*/
+
+
+.enquiry-image{
+
+
+    overflow:hidden;
+
+
+    border-radius:25px;
+
+
+    box-shadow:var(--shadow);
+
+
+}
+
+
+
+
+
+
+
+.enquiry-image img{
+
+
+    width:100%;
+
+
+    display:block;
+
+
+    transition:.6s;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-image:hover img{
+
+
+    transform:scale(1.08);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              ABOUT TEXT
+=========================================================*/
+
+
+.enquiry-text span{
+
+
+    color:var(--secondary);
+
+
+    font-weight:600;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-text h2{
+
+
+    color:var(--primary);
+
+
+    font-size:48px;
+
+
+    line-height:1.3;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-text p{
+
+
+    color:var(--text);
+
+
+    font-size:17px;
+
+
+    line-height:2;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              SECTION TITLE STYLE
+=========================================================*/
+
+
+.section-title{
+
+
+    text-align:center;
+
+
+    margin-bottom:60px;
+
+
+}
+
+
+
+
+
+
+
+.section-title span{
+
+
+    color:var(--secondary);
+
+
+    font-weight:600;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+
+
+
+.section-title h2{
+
+
+    color:var(--primary);
+
+
+    font-size:46px;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              PAGE ANIMATION
+=========================================================*/
+
+
+.enquiry-content,
+
+.enquiry-image,
+
+.enquiry-text{
+
+
+    animation:enquiryFade 1s ease forwards;
+
+
+}
+
+
+
+
+
+
+
+@keyframes enquiryFade{
+
+
+from{
+
+
+    opacity:0;
+
+
+    transform:translateY(40px);
+
+
+}
+
+
+
+to{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              RESPONSIVE DESIGN
+=========================================================*/
+
+
+@media(max-width:992px){
+
+
+.enquiry-content h1{
+
+
+    font-size:48px;
+
+
+}
+
+
+
+
+.enquiry-about{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:650px){
+
+
+.enquiry-content h1{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.enquiry-content p{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.enquiry-content a{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.enquiry-text h2{
+
+
+    font-size:34px;
+
+
+}
+
+
+
+.section-title h2{
+
+
+    font-size:32px;
+
+
+}
+
+
+}
+
+
+/*=========================================================
+              AREAS OF ENQUIRY SECTION
+=========================================================*/
+
+
+.enquiry-areas{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              ENQUIRY GRID
+=========================================================*/
+
+
+.enquiry-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              ENQUIRY CARD
+=========================================================*/
+
+
+.enquiry-card{
+
+
+    background:white;
+
+
+    padding:45px 35px;
+
+
+    border-radius:22px;
+
+
+    box-shadow:var(--shadow);
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+/* TOP ACCENT LINE */
+
+
+.enquiry-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:6px;
+
+
+    background:var(--secondary);
+
+
+}
+
+
+
+
+
+
+
+.enquiry-card:hover{
+
+
+    transform:translateY(-12px);
+
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+
+
+
+.enquiry-card h3{
+
+
+    color:var(--primary);
+
+
+    font-size:26px;
+
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-card p{
+
+
+    color:var(--text);
+
+
+    line-height:1.9;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              WHO CAN CONTACT SECTION
+=========================================================*/
+
+
+.enquiry-users{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              USER GRID
+=========================================================*/
+
+
+.user-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(4,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              USER CARD
+=========================================================*/
+
+
+.user-grid div{
+
+
+    background:white;
+
+
+    padding:40px 30px;
+
+
+    border-radius:22px;
+
+
+    text-align:center;
+
+
+    box-shadow:var(--shadow);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.user-grid div:hover{
+
+
+    transform:translateY(-10px);
+
+
+    background:var(--secondary);
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+.user-grid h3{
+
+
+    color:var(--primary);
+
+
+    font-size:24px;
+
+
+    margin-bottom:15px;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.user-grid div:hover h3{
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+.user-grid p{
+
+
+    color:var(--text);
+
+
+    line-height:1.8;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.user-grid div:hover p{
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              CONTACT CHANNEL SECTION
+=========================================================*/
+
+
+.enquiry-contact{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              CHANNEL GRID
+=========================================================*/
+
+
+.channel-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              CHANNEL CARD
+=========================================================*/
+
+
+.channel-grid div{
+
+
+    background:white;
+
+
+    padding:45px 30px;
+
+
+    border-radius:22px;
+
+
+    text-align:center;
+
+
+    box-shadow:var(--shadow);
+
+
+    border-bottom:5px solid var(--secondary);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.channel-grid div:hover{
+
+
+    transform:translateY(-10px);
+
+
+}
+
+
+
+
+
+
+
+.channel-grid h3{
+
+
+    color:var(--primary);
+
+
+    font-size:25px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+
+.channel-grid p{
+
+
+    color:var(--text);
+
+
+    font-size:17px;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              CARD ANIMATION
+=========================================================*/
+
+
+.enquiry-card,
+
+.user-grid div,
+
+.channel-grid div{
+
+
+    animation:cardAppear .8s ease forwards;
+
+
+}
+
+
+
+
+
+
+
+@keyframes cardAppear{
+
+
+from{
+
+
+    opacity:0;
+
+
+    transform:translateY(40px);
+
+
+}
+
+
+
+to{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              RESPONSIVE DESIGN
+=========================================================*/
+
+
+@media(max-width:1100px){
+
+
+.enquiry-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+.user-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+.channel-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:650px){
+
+
+.enquiry-grid,
+
+
+.user-grid,
+
+
+.channel-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.enquiry-card{
+
+
+    padding:35px 25px;
+
+
+}
+
+
+
+.user-grid div,
+
+
+.channel-grid div{
+
+
+    padding:35px 25px;
+
+
+}
+
+
+
+}
+
+
+/*=========================================================
+              GENERAL ENQUIRY FORM SECTION
+=========================================================*/
+
+
+.enquiry-form{
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    margin:130px auto;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FORM CONTAINER
+=========================================================*/
+
+
+.enquiry-form form{
+
+
+    background:white;
+
+
+    padding:60px;
+
+
+    border-radius:30px;
+
+
+    box-shadow:var(--shadow);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FORM GRID
+=========================================================*/
+
+
+.enquiry-form .form-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+    gap:25px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              INPUT ELEMENTS
+=========================================================*/
+
+
+.enquiry-form input,
+
+.enquiry-form select,
+
+.enquiry-form textarea{
+
+
+    width:100%;
+
+
+    padding:18px 20px;
+
+
+    border:1px solid #d8e5e8;
+
+
+    border-radius:14px;
+
+
+    background:#fcfefe;
+
+
+    font-size:16px;
+
+
+    font-family:inherit;
+
+
+    outline:none;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              INPUT FOCUS EFFECT
+=========================================================*/
+
+
+.enquiry-form input:focus,
+
+.enquiry-form select:focus,
+
+.enquiry-form textarea:focus{
+
+
+    border-color:var(--secondary);
+
+
+    box-shadow:
+
+
+    0 0 0 4px rgba(0,168,150,.12);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              MESSAGE FIELD
+=========================================================*/
+
+
+.enquiry-form textarea{
+
+
+    min-height:220px;
+
+
+    resize:vertical;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              SELECT DROPDOWN
+=========================================================*/
+
+
+.enquiry-form select{
+
+
+    cursor:pointer;
+
+
+    color:#666;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              SUBMIT BUTTON
+=========================================================*/
+
+
+.enquiry-form button{
+
+
+    padding:18px 55px;
+
+
+    background:var(--secondary);
+
+
+    color:white;
+
+
+    border:none;
+
+
+    border-radius:45px;
+
+
+    font-size:17px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.enquiry-form button:hover{
+
+
+    background:#00857b;
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FORM STATUS MESSAGE
+=========================================================*/
+
+
+.enquiry-success{
+
+
+    background:#e8faf5;
+
+
+    color:#00796b;
+
+
+    padding:20px;
+
+
+    border-radius:15px;
+
+
+    text-align:center;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+.enquiry-error{
+
+
+    background:#ffeaea;
+
+
+    color:#c0392b;
+
+
+    padding:20px;
+
+
+    border-radius:15px;
+
+
+    text-align:center;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FAQ SECTION
+=========================================================*/
+
+
+.enquiry-faq{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FAQ GRID
+=========================================================*/
+
+
+.faq-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FAQ CARDS
+=========================================================*/
+
+
+.faq-grid div{
+
+
+    background:white;
+
+
+    padding:40px 30px;
+
+
+    border-radius:22px;
+
+
+    box-shadow:var(--shadow);
+
+
+    border-left:5px solid var(--secondary);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.faq-grid div:hover{
+
+
+    transform:translateY(-10px);
+
+
+}
+
+
+
+
+
+
+
+.faq-grid h3{
+
+
+    color:var(--primary);
+
+
+    font-size:22px;
+
+
+    line-height:1.5;
+
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+
+
+
+
+.faq-grid p{
+
+
+    color:var(--text);
+
+
+    line-height:1.9;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FINAL PAGE ANIMATION
+=========================================================*/
+
+
+.enquiry-form form,
+
+.faq-grid div{
+
+
+    animation:finalReveal .9s ease forwards;
+
+
+}
+
+
+
+
+
+
+
+@keyframes finalReveal{
+
+
+from{
+
+
+    opacity:0;
+
+
+    transform:translateY(40px);
+
+
+}
+
+
+
+to{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              GLOBAL SMOOTH EFFECTS
+=========================================================*/
+
+
+html{
+
+
+    scroll-behavior:smooth;
+
+
+}
+
+
+
+
+
+button,
+
+a{
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              CUSTOM SCROLLBAR
+=========================================================*/
+
+
+::-webkit-scrollbar{
+
+
+    width:10px;
+
+
+}
+
+
+
+
+
+
+
+::-webkit-scrollbar-track{
+
+
+    background:#edf7f8;
+
+
+}
+
+
+
+
+
+
+
+::-webkit-scrollbar-thumb{
+
+
+    background:var(--secondary);
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+
+    background:#00857b;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              RESPONSIVE FORM DESIGN
+=========================================================*/
+
+
+@media(max-width:992px){
+
+
+.enquiry-form form{
+
+
+    padding:40px;
+
+
+}
+
+
+
+.enquiry-form .form-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.faq-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:650px){
+
+
+.enquiry-form form{
+
+
+    padding:25px;
+
+
+}
+
+
+
+.enquiry-form button{
+
+
+    width:100%;
+
+
+}
+
+
+
+.faq-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.enquiry-form input,
+
+.enquiry-form select,
+
+.enquiry-form textarea{
+
+
+    font-size:15px;
+
+
+}
+
+
+}

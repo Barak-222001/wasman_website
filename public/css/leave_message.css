@@ -1,0 +1,1755 @@
+
+/*=========================================================
+            LEAVE MESSAGE PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#003b5c;
+
+    --secondary:#00a896;
+
+    --light:#f8fbfc;
+
+    --white:#ffffff;
+
+    --text:#555;
+
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+
+    --radius:22px;
+
+}
+
+
+
+/*=========================================================
+                MESSAGE HERO SECTION
+=========================================================*/
+
+
+.message-hero{
+
+    min-height:100vh;
+
+
+    background:
+
+
+    linear-gradient(
+
+        rgba(0,45,70,.82),
+
+        rgba(0,45,70,.70)
+
+    ),
+
+
+    url(images/message-banner.jpg);
+
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    background-repeat:no-repeat;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+/*=========================================================
+                HERO OVERLAY
+=========================================================*/
+
+
+.message-overlay{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+
+
+/*=========================================================
+                HERO CONTENT
+=========================================================*/
+
+
+.message-content{
+
+
+    width:90%;
+
+
+    max-width:950px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+}
+
+
+
+
+.message-content span{
+
+
+    display:inline-block;
+
+
+    padding:10px 30px;
+
+
+    background:rgba(255,255,255,.15);
+
+
+    backdrop-filter:blur(12px);
+
+
+    border-radius:50px;
+
+
+    letter-spacing:3px;
+
+
+    font-size:14px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+.message-content h1{
+
+
+    font-size:65px;
+
+
+    line-height:1.15;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+.message-content p{
+
+
+    max-width:800px;
+
+
+    margin:auto;
+
+
+    font-size:20px;
+
+
+    line-height:2;
+
+
+    margin-bottom:45px;
+
+
+}
+
+
+
+/*=========================================================
+                HERO BUTTON
+=========================================================*/
+
+
+.message-content a{
+
+
+    display:inline-block;
+
+
+    text-decoration:none;
+
+
+    padding:18px 45px;
+
+
+    background:var(--secondary);
+
+
+    color:white;
+
+
+    border-radius:45px;
+
+
+    font-weight:600;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+.message-content a:hover{
+
+
+    background:#00857b;
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+/*=========================================================
+                CONNECT SECTION
+=========================================================*/
+
+
+.connect-section{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+
+    display:grid;
+
+
+    grid-template-columns:1fr 1fr;
+
+
+    gap:70px;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+/*=========================================================
+                CONNECT IMAGE
+=========================================================*/
+
+
+.connect-image{
+
+
+    overflow:hidden;
+
+
+    border-radius:25px;
+
+
+    box-shadow:var(--shadow);
+
+
+}
+
+
+
+.connect-image img{
+
+
+    width:100%;
+
+
+    display:block;
+
+
+    transition:.6s;
+
+
+}
+
+
+
+.connect-image:hover img{
+
+
+    transform:scale(1.08);
+
+
+}
+
+
+
+
+/*=========================================================
+                CONNECT TEXT
+=========================================================*/
+
+
+.connect-text span{
+
+
+    color:var(--secondary);
+
+
+    font-weight:600;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+.connect-text h2{
+
+
+    font-size:48px;
+
+
+    color:var(--primary);
+
+
+    line-height:1.3;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+.connect-text p{
+
+
+    color:var(--text);
+
+
+    line-height:2;
+
+
+    font-size:17px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+/*=========================================================
+                CONNECT LIST
+=========================================================*/
+
+
+.connect-text ul{
+
+
+    list-style:none;
+
+
+    padding:0;
+
+
+}
+
+
+
+
+.connect-text li{
+
+
+    position:relative;
+
+
+    padding-left:35px;
+
+
+    margin-bottom:18px;
+
+
+    color:#444;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+.connect-text li::before{
+
+
+    content:"✓";
+
+
+    position:absolute;
+
+
+    left:0;
+
+
+    color:var(--secondary);
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+/*=========================================================
+                SECTION TITLES
+=========================================================*/
+
+
+.section-title{
+
+
+    text-align:center;
+
+
+    margin-bottom:60px;
+
+
+}
+
+
+
+.section-title span{
+
+
+    color:var(--secondary);
+
+
+    font-weight:600;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+.section-title h2{
+
+
+    color:var(--primary);
+
+
+    font-size:46px;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+
+@media(max-width:992px){
+
+
+.message-content h1{
+
+
+    font-size:48px;
+
+
+}
+
+
+
+.connect-section{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:650px){
+
+
+.message-content h1{
+
+
+    font-size:34px;
+
+
+}
+
+
+
+.message-content p{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.message-content a{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.connect-text h2{
+
+
+    font-size:34px;
+
+
+}
+
+
+
+.section-title h2{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+}
+
+
+/*=========================================================
+              MESSAGE CATEGORIES SECTION
+=========================================================*/
+
+
+.message-categories{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+
+
+/*=========================================================
+              CATEGORY GRID
+=========================================================*/
+
+
+.category-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(4,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+/*=========================================================
+              CATEGORY CARD
+=========================================================*/
+
+
+.category-card{
+
+
+    background:white;
+
+
+    padding:45px 30px;
+
+
+    border-radius:22px;
+
+
+    box-shadow:var(--shadow);
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+.category-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:6px;
+
+
+    background:var(--secondary);
+
+
+}
+
+
+
+
+
+.category-card:hover{
+
+
+    transform:translateY(-12px);
+
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+.category-card h3{
+
+
+    color:var(--primary);
+
+
+    font-size:25px;
+
+
+    margin-bottom:18px;
+
+
+    line-height:1.4;
+
+
+}
+
+
+
+
+
+.category-card p{
+
+
+    color:var(--text);
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              CONTACT INFORMATION SECTION
+=========================================================*/
+
+
+.contact-information{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+
+
+/*=========================================================
+              CONTACT GRID
+=========================================================*/
+
+
+.contact-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+/*=========================================================
+              CONTACT CARD
+=========================================================*/
+
+
+.contact-grid div{
+
+
+    background:white;
+
+
+    padding:45px 30px;
+
+
+    text-align:center;
+
+
+    border-radius:22px;
+
+
+    box-shadow:var(--shadow);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+.contact-grid div:hover{
+
+
+    transform:translateY(-10px);
+
+
+}
+
+
+
+
+
+.contact-grid h3{
+
+
+    color:var(--secondary);
+
+
+    font-size:24px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+.contact-grid p{
+
+
+    color:var(--text);
+
+
+    line-height:1.8;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+
+
+/*=========================================================
+              FAQ SECTION
+=========================================================*/
+
+
+.message-faq{
+
+
+    width:90%;
+
+
+    max-width:1300px;
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+
+
+/*=========================================================
+              FAQ GRID
+=========================================================*/
+
+
+.faq-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+/*=========================================================
+              FAQ CARD
+=========================================================*/
+
+
+.faq-grid div{
+
+
+    background:white;
+
+
+    padding:40px 30px;
+
+
+    border-radius:22px;
+
+
+    box-shadow:var(--shadow);
+
+
+    transition:.35s;
+
+
+    border-left:5px solid var(--secondary);
+
+
+}
+
+
+
+
+
+.faq-grid div:hover{
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+
+
+.faq-grid h3{
+
+
+    color:var(--primary);
+
+
+    font-size:22px;
+
+
+    line-height:1.5;
+
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+
+
+.faq-grid p{
+
+
+    color:var(--text);
+
+
+    line-height:1.9;
+
+
+}
+
+
+
+
+
+
+/*=========================================================
+              CARD ANIMATION
+=========================================================*/
+
+
+.category-card,
+
+.contact-grid div,
+
+.faq-grid div{
+
+
+    animation:messageFade .8s ease forwards;
+
+
+}
+
+
+
+
+@keyframes messageFade{
+
+
+from{
+
+
+    opacity:0;
+
+
+    transform:translateY(40px);
+
+
+}
+
+
+
+to{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              RESPONSIVE DESIGN
+=========================================================*/
+
+
+@media(max-width:1100px){
+
+
+.category-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+.contact-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+.faq-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:650px){
+
+
+.category-grid,
+
+
+.contact-grid,
+
+
+.faq-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.category-card h3{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+.faq-grid h3{
+
+
+    font-size:20px;
+
+
+}
+
+
+
+}
+
+/*=========================================================
+              LEAVE MESSAGE FORM SECTION
+=========================================================*/
+
+
+.leave-message-form{
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    margin:130px auto;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FORM CONTAINER
+=========================================================*/
+
+
+.leave-message-form form{
+
+
+    background:white;
+
+
+    padding:60px;
+
+
+    border-radius:30px;
+
+
+    box-shadow:var(--shadow);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FORM GRID
+=========================================================*/
+
+
+.leave-message-form .form-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+    gap:25px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              INPUT FIELDS
+=========================================================*/
+
+
+.leave-message-form input,
+
+.leave-message-form select,
+
+.leave-message-form textarea{
+
+
+    width:100%;
+
+
+    padding:18px 20px;
+
+
+    border:1px solid #d8e5e8;
+
+
+    border-radius:14px;
+
+
+    font-size:16px;
+
+
+    font-family:inherit;
+
+
+    outline:none;
+
+
+    background:#fcfefe;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              INPUT FOCUS EFFECT
+=========================================================*/
+
+
+.leave-message-form input:focus,
+
+.leave-message-form select:focus,
+
+.leave-message-form textarea:focus{
+
+
+    border-color:var(--secondary);
+
+
+    box-shadow:
+
+
+    0 0 0 4px rgba(0,168,150,.12);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              MESSAGE TEXTAREA
+=========================================================*/
+
+
+.leave-message-form textarea{
+
+
+    min-height:220px;
+
+
+    resize:vertical;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FILE UPLOAD AREA
+=========================================================*/
+
+
+.file-area{
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+.file-area label{
+
+
+    display:block;
+
+
+    color:var(--primary);
+
+
+    font-weight:600;
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+.leave-message-form input[type="file"]{
+
+
+    padding:25px;
+
+
+    border:2px dashed #b7d8d4;
+
+
+    background:#f8fcfc;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              SEND MESSAGE BUTTON
+=========================================================*/
+
+
+.leave-message-form button{
+
+
+    padding:18px 55px;
+
+
+    background:var(--secondary);
+
+
+    color:white;
+
+
+    border:none;
+
+
+    border-radius:45px;
+
+
+    font-size:17px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+
+
+.leave-message-form button:hover{
+
+
+    background:#00857b;
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              SUCCESS MESSAGE
+=========================================================*/
+
+
+.message-success{
+
+
+    background:#e8faf5;
+
+
+    color:#00796b;
+
+
+    padding:20px;
+
+
+    border-radius:15px;
+
+
+    text-align:center;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              ERROR MESSAGE
+=========================================================*/
+
+
+.message-error{
+
+
+    background:#ffeaea;
+
+
+    color:#c0392b;
+
+
+    padding:20px;
+
+
+    border-radius:15px;
+
+
+    text-align:center;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              PLACEHOLDER STYLE
+=========================================================*/
+
+
+.leave-message-form ::placeholder{
+
+
+    color:#89979c;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              FORM ANIMATION
+=========================================================*/
+
+
+.leave-message-form form{
+
+
+    animation:formReveal .9s ease forwards;
+
+
+}
+
+
+
+
+@keyframes formReveal{
+
+
+from{
+
+
+    opacity:0;
+
+
+    transform:translateY(50px);
+
+
+}
+
+
+
+to{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              GLOBAL PAGE EFFECTS
+=========================================================*/
+
+
+html{
+
+
+    scroll-behavior:smooth;
+
+
+}
+
+
+
+
+
+button,
+
+a{
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              CUSTOM SCROLL BAR
+=========================================================*/
+
+
+::-webkit-scrollbar{
+
+
+    width:10px;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-track{
+
+
+    background:#edf7f8;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-thumb{
+
+
+    background:var(--secondary);
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+
+    background:#00857b;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================================
+              RESPONSIVE FORM DESIGN
+=========================================================*/
+
+
+@media(max-width:992px){
+
+
+.leave-message-form form{
+
+
+    padding:40px;
+
+
+}
+
+
+
+.leave-message-form .form-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:650px){
+
+
+.leave-message-form form{
+
+
+    padding:25px;
+
+
+}
+
+
+
+.leave-message-form button{
+
+
+    width:100%;
+
+
+}
+
+
+
+.leave-message-form input,
+
+.leave-message-form select,
+
+.leave-message-form textarea{
+
+
+    font-size:15px;
+
+
+}
+
+
+}

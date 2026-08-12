@@ -1,0 +1,1431 @@
+/*=========================================================
+                REPORTS PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#003b5c;
+    --secondary:#00a896;
+    --light:#f8fbfc;
+    --white:#ffffff;
+    --text:#555;
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+    --radius:22px;
+
+}
+
+
+
+/*=========================================================
+                    REPORTS HERO
+=========================================================*/
+
+.reports-hero{
+
+    height:100vh;
+
+    background:
+
+    linear-gradient(
+        rgba(0,44,70,.78),
+        rgba(0,44,70,.65)
+    ),
+
+    url(images/reports-banner.jpg);
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+/*=========================================================
+                    HERO OVERLAY
+=========================================================*/
+
+.reports-overlay{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.reports-content{
+
+    width:90%;
+
+    max-width:950px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.reports-content span{
+
+    display:inline-block;
+
+    padding:10px 25px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:40px;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.reports-content h1{
+
+    font-size:68px;
+
+    line-height:1.15;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.reports-content p{
+
+    max-width:780px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:2;
+
+    margin-bottom:45px;
+
+}
+
+
+
+/*=========================================================
+                    REPORT SEARCH BAR
+=========================================================*/
+
+.report-search{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:60px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+}
+
+
+
+.report-search input{
+
+    flex:1;
+
+    padding:22px 30px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+
+
+.report-search button{
+
+    width:170px;
+
+    border:none;
+
+    background:var(--secondary);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+
+.report-search button:hover{
+
+    background:#00857b;
+
+}
+
+
+
+/*=========================================================
+                REPORT OVERVIEW SECTION
+=========================================================*/
+
+.report-overview{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 500px;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+                OVERVIEW CONTENT
+=========================================================*/
+
+.overview-text span{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+.overview-text h2{
+
+    color:var(--primary);
+
+    font-size:48px;
+
+    line-height:1.3;
+
+    margin:20px 0 25px;
+
+}
+
+
+
+.overview-text p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:17px;
+
+}
+
+
+
+/*=========================================================
+                REPORT STATISTICS
+=========================================================*/
+
+.report-statistics{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.report-statistics div{
+
+    background:white;
+
+    padding:40px 25px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+
+.report-statistics div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.report-statistics h2{
+
+    color:var(--secondary);
+
+    font-size:48px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.report-statistics span{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+
+
+/*=========================================================
+                    RESPONSIVE DESIGN
+=========================================================*/
+
+@media(max-width:992px){
+
+
+.reports-content h1{
+
+    font-size:48px;
+
+}
+
+
+
+.report-overview{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.report-statistics{
+
+    max-width:600px;
+
+    margin:auto;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.reports-content h1{
+
+    font-size:34px;
+
+}
+
+
+
+.reports-content p{
+
+    font-size:16px;
+
+}
+
+
+
+.report-search{
+
+    flex-direction:column;
+
+    border-radius:20px;
+
+}
+
+
+
+.report-search button{
+
+    width:100%;
+
+    padding:18px;
+
+}
+
+
+
+.overview-text h2{
+
+    font-size:32px;
+
+}
+
+
+
+.report-statistics{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+}
+
+
+/*=========================================================
+                FEATURED REPORT SECTION
+=========================================================*/
+
+.featured-report{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:450px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+                REPORT COVER
+=========================================================*/
+
+.report-cover{
+
+    position:relative;
+
+}
+
+
+
+.report-cover img{
+
+    width:100%;
+
+    height:620px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+}
+
+
+
+.report-cover::before{
+
+    content:"Featured Report";
+
+    position:absolute;
+
+    top:25px;
+
+    left:25px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    z-index:2;
+
+}
+
+
+
+/*=========================================================
+                REPORT DETAILS
+=========================================================*/
+
+.report-details span{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+.report-details h2{
+
+    color:var(--primary);
+
+    font-size:46px;
+
+    line-height:1.3;
+
+    margin:20px 0;
+
+}
+
+
+
+.report-details p{
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:17px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*=========================================================
+                REPORT INFORMATION
+=========================================================*/
+
+.report-info{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.report-info span{
+
+    background:#eef8f8;
+
+    color:var(--primary);
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    letter-spacing:0;
+
+    font-size:14px;
+
+}
+
+
+
+/*=========================================================
+                REPORT BUTTONS
+=========================================================*/
+
+.report-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.report-buttons a{
+
+    text-decoration:none;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+
+
+.report-buttons a:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* Secondary button */
+
+.report-buttons a:nth-child(2){
+
+    background:transparent;
+
+    border:2px solid var(--secondary);
+
+    color:var(--secondary);
+
+}
+
+
+
+.report-buttons a:nth-child(2):hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+
+
+/*=========================================================
+                REPORT LIBRARY SECTION
+=========================================================*/
+
+.report-library{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                REPORT GRID
+=========================================================*/
+
+.report-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+
+/*=========================================================
+                REPORT CARD
+=========================================================*/
+
+.report-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.report-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+
+}
+
+
+
+/*=========================================================
+                REPORT IMAGE
+=========================================================*/
+
+.report-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+
+.report-card:hover img{
+
+    transform:scale(1.07);
+
+}
+
+
+
+/*=========================================================
+                REPORT BODY
+=========================================================*/
+
+.report-body{
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+
+
+.report-tag{
+
+    width:max-content;
+
+    padding:8px 18px;
+
+    background:#e9faf8;
+
+    color:var(--secondary);
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.report-body h3{
+
+    color:var(--primary);
+
+    font-size:27px;
+
+    line-height:1.4;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.report-body p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.report-body small{
+
+    color:#888;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/*=========================================================
+                DOWNLOAD LINK
+=========================================================*/
+
+.report-body a{
+
+    margin-top:auto;
+
+    text-decoration:none;
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.report-body a:hover{
+
+    letter-spacing:1px;
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+
+@media(max-width:992px){
+
+
+.featured-report{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.report-cover img{
+
+    height:500px;
+
+}
+
+
+
+.report-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.report-details h2{
+
+    font-size:32px;
+
+}
+
+
+
+.report-cover img{
+
+    height:350px;
+
+}
+
+
+
+.report-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.report-buttons{
+
+    flex-direction:column;
+
+}
+
+
+
+.report-buttons a{
+
+    text-align:center;
+
+}
+
+
+
+.report-body{
+
+    padding:25px;
+
+}
+
+
+
+.report-body h3{
+
+    font-size:23px;
+
+}
+
+
+
+}
+
+/*=========================================================
+                REPORT CATEGORIES SECTION
+=========================================================*/
+
+.report-categories{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+
+
+/*=========================================================
+                CATEGORY GRID
+=========================================================*/
+
+.category-boxes{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+                CATEGORY CARD
+=========================================================*/
+
+.category-boxes div{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+    color:var(--primary);
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Top accent */
+
+.category-boxes div::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--secondary);
+
+}
+
+
+
+/* Hover */
+
+.category-boxes div:hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/*=========================================================
+                CATEGORY ICON EFFECT
+=========================================================*/
+
+.category-boxes div{
+
+    line-height:1.8;
+
+}
+
+
+
+/*=========================================================
+                REPORT DOWNLOAD CTA
+=========================================================*/
+
+.report-download{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:130px auto;
+
+    padding:90px 70px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        #006477
+    );
+
+    border-radius:35px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Decorative circles */
+
+.report-download::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-130px;
+
+    left:-100px;
+
+}
+
+
+
+.report-download::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:50%;
+
+    bottom:-100px;
+
+    right:-70px;
+
+}
+
+
+
+/*=========================================================
+                CTA CONTENT
+=========================================================*/
+
+.report-download span{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#8ff2df;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+.report-download h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:48px;
+
+    margin:20px 0;
+
+}
+
+
+
+.report-download p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+    line-height:2;
+
+    color:#e5f3f5;
+
+}
+
+
+
+/*=========================================================
+                CTA BUTTON
+=========================================================*/
+
+.report-download a{
+
+    position:relative;
+
+    z-index:2;
+
+    display:inline-block;
+
+    padding:18px 45px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.report-download a:hover{
+
+    background:#00857b;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+                ANIMATION EFFECTS
+=========================================================*/
+
+.report-card,
+.category-boxes div,
+.report-statistics div,
+.featured-report,
+.report-download{
+
+    animation:reportFade .8s ease forwards;
+
+}
+
+
+
+@keyframes reportFade{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/*=========================================================
+                IMAGE TRANSITIONS
+=========================================================*/
+
+.report-card img,
+.report-cover img{
+
+    transition:.5s ease;
+
+}
+
+
+
+.report-cover:hover img{
+
+    transform:scale(1.03);
+
+}
+
+
+
+/*=========================================================
+                GLOBAL BUTTON TRANSITION
+=========================================================*/
+
+button,
+a{
+
+    transition:.35s ease;
+
+}
+
+
+
+/*=========================================================
+                SMOOTH SCROLL
+=========================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/*=========================================================
+                CUSTOM SCROLL BAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#edf7f8;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00857b;
+
+}
+
+
+
+/*=========================================================
+                FINAL RESPONSIVE DESIGN
+=========================================================*/
+
+
+@media(max-width:992px){
+
+
+.category-boxes{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.report-download{
+
+    padding:70px 40px;
+
+}
+
+
+
+.report-download h2{
+
+    font-size:38px;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.category-boxes{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.report-download{
+
+    padding:55px 25px;
+
+}
+
+
+
+.report-download h2{
+
+    font-size:30px;
+
+}
+
+
+
+.report-download p{
+
+    font-size:15px;
+
+}
+
+
+
+}
