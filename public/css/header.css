@@ -1,0 +1,1056 @@
+/* =========================================================
+   WASMAN WEBSITE HEADER
+   AQUATIC / PREMIUM DESIGN
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* =========================================================
+   MAIN HEADER
+========================================================= */
+
+.wasman-main-header {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 88px;
+
+    background:
+        linear-gradient(
+            115deg,
+            #043b4c 0%,
+            #075e70 25%,
+            #078f96 50%,
+            #21a6a0 72%,
+            #e5806b 100%
+        );
+
+    z-index: 9999;
+
+    box-shadow:
+        0 8px 30px
+        rgba(3, 50, 64, 0.18);
+}
+
+
+/* =========================================================
+   HEADER INNER
+========================================================= */
+
+.wasman-header-inner {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 88px;
+
+    padding:
+        0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.wasman-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+
+.wasman-brand img {
+
+    display: block;
+
+    width: 145px;
+
+    height: auto;
+
+    max-height: 70px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.wasman-brand:hover img {
+
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.wasman-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 7px;
+
+    min-height: 88px;
+}
+
+
+/* =========================================================
+   NAVIGATION ITEMS
+========================================================= */
+
+.wasman-nav-item {
+
+    min-height: 44px;
+
+    padding:
+        0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.16);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: #ffffff;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.wasman-nav-item:hover {
+
+    color: #ffffff;
+
+    background:
+        rgba(255,255,255,0.18);
+
+    border-color:
+        rgba(255,255,255,0.30);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(0,0,0,0.10);
+}
+
+
+/* =========================================================
+   DROPDOWN WRAPPER
+========================================================= */
+
+.wasman-nav-dropdown {
+
+    position: relative;
+}
+
+
+/* =========================================================
+   DROPDOWN BUTTON
+========================================================= */
+
+.wasman-dropdown-btn {
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   CHEVRON
+========================================================= */
+
+.wasman-dropdown-btn
+.fa-chevron-down {
+
+    font-size: 8px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.wasman-nav-dropdown:hover
+.wasman-dropdown-btn
+.fa-chevron-down {
+
+    transform:
+        rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
+
+.wasman-dropdown-menu {
+
+    position: absolute;
+
+    /*
+       Keep the dropdown close to the parent.
+       This prevents the submenu from disappearing
+       while moving the mouse toward it.
+    */
+
+    top:
+        calc(100% + 5px);
+
+    left: 50%;
+
+    width: 270px;
+
+    padding: 9px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        rgba(8,127,140,0.10);
+
+    border-radius:
+        17px;
+
+    box-shadow:
+        0 22px 50px
+        rgba(2,51,64,0.20);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%,10px);
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease,
+        transform 0.22s ease;
+
+    z-index: 10000;
+}
+
+
+/* =========================================================
+   INVISIBLE HOVER BRIDGE
+========================================================= */
+
+.wasman-dropdown-menu::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: -12px;
+
+    width: 100%;
+
+    height: 12px;
+
+    background:
+        transparent;
+}
+
+
+/* =========================================================
+   DROPDOWN ARROW
+========================================================= */
+
+.wasman-dropdown-menu::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 13px;
+
+    height: 13px;
+
+    top: -7px;
+
+    left: 50%;
+
+    background:
+        #ffffff;
+
+    border-top:
+        1px solid
+        rgba(8,127,140,0.08);
+
+    border-left:
+        1px solid
+        rgba(8,127,140,0.08);
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   SHOW DROPDOWN ON HOVER
+========================================================= */
+
+.wasman-nav-dropdown:hover
+.wasman-dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translate(-50%,0);
+}
+
+
+/* =========================================================
+   SHOW DROPDOWN WHEN CLICKED
+========================================================= */
+
+.wasman-nav-dropdown.w-dropdown-open
+.wasman-dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translate(-50%,0);
+}
+
+
+/* =========================================================
+   DROPDOWN LINKS
+========================================================= */
+
+.wasman-dropdown-menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    color:
+        #234f59;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   DROPDOWN LINK HOVER
+========================================================= */
+
+.wasman-dropdown-menu a:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            #e7f8f5,
+            #fff0ec
+        );
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   DROPDOWN ICON
+========================================================= */
+
+.wasman-dropdown-icon {
+
+    width: 39px;
+
+    height: 39px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        #e6f7f5;
+
+    color:
+        #087f8c;
+
+    font-size: 14px;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* =========================================================
+   DROPDOWN ICON HOVER
+========================================================= */
+
+.wasman-dropdown-menu a:hover
+.wasman-dropdown-icon {
+
+    background:
+        #087f8c;
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   DROPDOWN TITLE
+========================================================= */
+
+.wasman-dropdown-menu strong {
+
+    display: block;
+
+    color:
+        #174c57;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DROPDOWN DESCRIPTION
+========================================================= */
+
+.wasman-dropdown-menu small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color:
+        #82969b;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 9.5px;
+}
+
+
+/* =========================================================
+   CONTACT US
+========================================================= */
+
+.wasman-contact
+.wasman-nav-item {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e88973,
+            #d66e5d
+        );
+
+    border-color:
+        rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 6px 17px
+        rgba(120,55,45,0.16);
+}
+
+
+.wasman-contact
+.wasman-nav-item:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ed947d,
+            #d9705e
+        );
+}
+
+
+/* =========================================================
+   CONTACT DROPDOWN
+========================================================= */
+
+.wasman-contact
+.wasman-dropdown-menu {
+
+    width: 280px;
+}
+
+
+/* =========================================================
+   HOME ICON
+========================================================= */
+
+.wasman-nav-item
+.fa-home {
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.wasman-menu-btn {
+
+    display: none;
+
+    width: 43px;
+
+    height: 43px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.20);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    color:
+        #ffffff;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.wasman-menu-btn:hover {
+
+    background:
+        rgba(255,255,255,0.20);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .wasman-header-inner {
+
+        padding:
+            0 3%;
+    }
+
+
+    .wasman-brand img {
+
+        width:
+            125px;
+    }
+
+
+    .wasman-nav {
+
+        gap:
+            4px;
+    }
+
+
+    .wasman-nav-item {
+
+        padding:
+            0 10px;
+
+        font-size:
+            11px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE / TABLET NAVIGATION
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .wasman-main-header {
+
+        min-height:
+            75px;
+    }
+
+
+    .wasman-header-inner {
+
+        min-height:
+            75px;
+
+        padding:
+            0 5%;
+    }
+
+
+    .wasman-brand img {
+
+        width:
+            115px;
+    }
+
+
+    /* Show mobile button */
+
+    .wasman-menu-btn {
+
+        display:
+            flex;
+    }
+
+
+    /* Mobile navigation */
+
+    .wasman-nav {
+
+        position:
+            absolute;
+
+        top:
+            100%;
+
+        left:
+            0;
+
+        width:
+            100%;
+
+        max-height:
+            calc(100vh - 75px);
+
+        overflow-y:
+            auto;
+
+        padding:
+            15px 5% 25px;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            7px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #043b4c,
+                #087f8c,
+                #d97868
+            );
+
+        box-shadow:
+            0 20px 45px
+            rgba(2,48,60,0.25);
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        pointer-events:
+            none;
+
+        transform:
+            translateY(-10px);
+
+        transition:
+            all 0.3s ease;
+    }
+
+
+    /* Open mobile navigation */
+
+    .wasman-nav.w-nav-open {
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        pointer-events:
+            auto;
+
+        transform:
+            translateY(0);
+    }
+
+
+    /* Mobile nav items */
+
+    .wasman-nav-item {
+
+        width:
+            100%;
+
+        min-height:
+            48px;
+
+        justify-content:
+            space-between;
+
+        border-radius:
+            12px;
+
+        font-size:
+            13px;
+    }
+
+
+    .wasman-nav-item:hover {
+
+        transform:
+            none;
+
+        box-shadow:
+            none;
+    }
+
+
+    /* Mobile dropdown wrapper */
+
+    .wasman-nav-dropdown {
+
+        width:
+            100%;
+    }
+
+
+    /* Mobile dropdown */
+
+    .wasman-dropdown-menu {
+
+        position:
+            static;
+
+        width:
+            100%;
+
+        margin-top:
+            5px;
+
+        padding:
+            5px;
+
+        background:
+            rgba(0,45,55,0.35);
+
+        border:
+            1px solid
+            rgba(255,255,255,0.10);
+
+        border-radius:
+            12px;
+
+        box-shadow:
+            none;
+
+        display:
+            none;
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        pointer-events:
+            auto;
+
+        transform:
+            none;
+    }
+
+
+    /* Remove desktop arrow */
+
+    .wasman-dropdown-menu::before,
+    .wasman-dropdown-menu::after {
+
+        display:
+            none;
+    }
+
+
+    /* Open mobile dropdown */
+
+    .wasman-nav-dropdown.w-dropdown-open
+    .wasman-dropdown-menu {
+
+        display:
+            block;
+    }
+
+
+    /* Mobile dropdown links */
+
+    .wasman-dropdown-menu a {
+
+        color:
+            #ffffff;
+    }
+
+
+    .wasman-dropdown-menu strong {
+
+        color:
+            #ffffff;
+    }
+
+
+    .wasman-dropdown-menu small {
+
+        color:
+            #b9d9dc;
+    }
+
+
+    .wasman-dropdown-icon {
+
+        background:
+            rgba(255,255,255,0.10);
+
+        color:
+            #9be2df;
+    }
+
+
+    .wasman-dropdown-menu a:hover {
+
+        background:
+            rgba(255,255,255,0.10);
+
+        transform:
+            none;
+    }
+
+
+    .wasman-dropdown-menu a:hover
+    .wasman-dropdown-icon {
+
+        background:
+            #ffffff;
+
+        color:
+            #087f8c;
+    }
+
+
+    /* Mobile contact */
+
+    .wasman-contact
+    .wasman-nav-item {
+
+        background:
+            rgba(224,121,102,0.80);
+    }
+
+
+    .wasman-contact
+    .wasman-dropdown-menu {
+
+        width:
+            100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .wasman-main-header {
+
+        min-height:
+            68px;
+    }
+
+
+    .wasman-header-inner {
+
+        min-height:
+            68px;
+    }
+
+
+    .wasman-brand img {
+
+        width:
+            105px;
+    }
+
+
+    .wasman-menu-btn {
+
+        width:
+            40px;
+
+        height:
+            40px;
+    }
+
+
+    .wasman-nav {
+
+        padding:
+            12px 4% 20px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .wasman-brand img {
+
+        width:
+            95px;
+    }
+
+
+    .wasman-menu-btn {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        font-size:
+            15px;
+    }
+
+
+    .wasman-nav-item {
+
+        font-size:
+            12px;
+    }
+
+}

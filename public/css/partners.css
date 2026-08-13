@@ -1,275 +1,1247 @@
-.partners{
+/* =========================================================
+   WASMAN PARTNERS PAGE
+   AQUATIC • PREMIUM • PROFESSIONAL • MODERN
+========================================================= */
 
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-    padding:80px 0;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.partners-header{
+body {
+    font-family: 'DM Sans', sans-serif;
 
-    text-align:center;
-    margin-bottom:80px;
+    background: #f4faf9;
 
+    color: #163b45;
+
+    line-height: 1.7;
 }
 
-.partners-header span{
+img {
+    width: 100%;
 
-    color:#a75959;
-    letter-spacing:3px;
-    font-weight:600;
-
+    display: block;
 }
 
-.partners-header h1{
-
-    font-size:48px;
-    margin:20px 0;
-    color: #003b5c;;
-
+a {
+    text-decoration: none;
 }
 
-.partners-header p{
-
-    max-width:750px;
-    margin:auto;
-    line-height:1.8;
-    color:#666;
-
+button,
+input {
+    font-family: inherit;
 }
 
-/* Story */
 
-.partnership-story{
+/* =========================================================
+   PARTNERS PAGE
+========================================================= */
 
-    display:grid;
-    grid-template-columns:1fr 500px;
-    gap:60px;
-    align-items:center;
-    margin-bottom:100px;
+.partners {
+    position: relative;
 
+    overflow: hidden;
+
+    padding: 110px 7% 110px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f5fbfa 0%,
+            #eef8f7 45%,
+            #f8fcfb 100%
+        );
 }
 
-.story-image img{
 
-    width:100%;
-    height:450px;
-    object-fit:cover;
-    border-radius:20px;
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
 
+.partners::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(43, 184, 177, 0.055);
+
+    top: 30px;
+
+    right: -280px;
+
+    pointer-events: none;
 }
 
-.story-content h2{
+.partners::after {
+    content: "";
 
-    font-size:38px;
-    color:#365B6E;
-    margin-bottom:25px;
+    position: absolute;
 
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(7, 127, 140, 0.04);
+
+    top: 850px;
+
+    left: -250px;
+
+    pointer-events: none;
 }
 
-.story-content p{
 
-    line-height:1.9;
-    margin-bottom:20px;
+/* =========================================================
+   HERO / PAGE HEADER
+========================================================= */
 
+.partners-header {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: 0 auto 110px;
+
+    text-align: center;
 }
 
-/* Logos */
+.partners-header > span {
+    display: inline-block;
 
-.partner-section{
+    margin-bottom: 18px;
 
-    text-align:center;
-    margin-bottom:100px;
+    color: #079b9a;
 
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
 }
 
-.partner-section h2{
 
-    font-size:40px;
-    color:#003b5c;
+/* Decorative lines */
 
+.partners-header > span::before,
+.partners-header > span::after {
+    content: "";
+
+    display: inline-block;
+
+    width: 35px;
+    height: 1px;
+
+    background: #39b9b5;
+
+    vertical-align: middle;
+
+    margin: 0 12px;
 }
 
-.partner-section p{
 
-    margin:20px auto 50px;
-    max-width:700px;
+.partners-header h1 {
+    font-family: 'Playfair Display', serif;
 
+    color: #073b4c;
+
+    font-size:
+        clamp(40px, 5vw, 64px);
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
 }
 
-.logo-grid{
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
+.partners-header p {
+    max-width: 780px;
 
+    margin: auto;
+
+    color: #60777d;
+
+    font-size: 17px;
+
+    line-height: 1.9;
 }
 
-.logo-card{
 
-    background:white;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
-    color: #365B6E;
+/* =========================================================
+   PARTNERSHIP STORY
+========================================================= */
 
+.partnership-story {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1200px;
+
+    min-height: 530px;
+
+    margin: 0 auto 120px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 65px;
+
+    align-items: center;
 }
 
-.logo-card:hover{
 
-    transform:translateY(-10px);
+/* =========================================================
+   STORY CONTENT
+========================================================= */
 
+.story-content {
+    padding-right: 25px;
 }
 
-.logo-card img{
+.story-content::before {
+    content: "PARTNERSHIP";
 
-    width:120px;
-    height:120px;
-    object-fit:contain;
-    margin-bottom:20px;
+    display: block;
 
+    color: #079b9a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
 }
 
-.logo-card span{
 
-    color:#a75959;
+.story-content h2 {
+    font-family: 'Playfair Display', serif;
 
+    color: #073b4c;
+
+    font-size: 43px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
 }
 
-/* Areas */
 
-.partnership-areas{
+.story-content p {
+    color: #647b81;
 
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    margin-bottom:100px;
+    font-size: 15px;
 
+    line-height: 1.9;
+
+    margin-bottom: 18px;
 }
 
-.area{
 
-    background:#f4fbfb;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
+/* =========================================================
+   STORY IMAGE
+========================================================= */
 
+.story-image {
+    position: relative;
+
+    height: 500px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 55px rgba(7, 59, 76, 0.13);
 }
 
-.icon{
 
-    font-size:45px;
-    margin-bottom:20px;
+/* Image */
 
+.story-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
 }
 
-.area h3{
 
-    color:#365B6E;
-    margin-bottom:15px;
-
+.story-image:hover img {
+    transform: scale(1.05);
 }
+
+
+/* Image overlay */
+
+.story-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(7, 59, 76, 0.02),
+            rgba(7, 59, 76, 0.30)
+        );
+
+    pointer-events: none;
+}
+
+
+/* Decorative frame */
+
+.story-image::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 3;
+
+    inset: 15px;
+
+    border-radius: 23px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.28);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   STRATEGIC PARTNERS SECTION
+========================================================= */
+
+.partner-section {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1250px;
+
+    margin: 0 auto 115px;
+
+    text-align: center;
+}
+
+
+.partner-section h2 {
+    font-family: 'Playfair Display', serif;
+
+    color: #073b4c;
+
+    font-size: 43px;
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+}
+
+
+.partner-section > p {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    color: #667d82;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PARTNER LOGO GRID
+========================================================= */
+
+.logo-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   PARTNER LOGO CARD
+========================================================= */
+
+.logo-card {
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 35px 30px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border:
+        1px solid rgba(7, 127, 140, 0.09);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 35px rgba(7, 59, 76, 0.055);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Top accent */
+
+.logo-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #087f8c,
+            #2bb8b1,
+            #63d5cf
+        );
+}
+
+
+/* Decorative circle */
+
+.logo-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    right: -80px;
+
+    bottom: -80px;
+
+    background:
+        rgba(43, 184, 177, 0.055);
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.logo-card:hover::after {
+    transform: scale(1.4);
+}
+
+
+.logo-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(43, 184, 177, 0.22);
+
+    box-shadow:
+        0 22px 45px rgba(7, 59, 76, 0.11);
+}
+
+
+/* =========================================================
+   PARTNER LOGO IMAGE
+========================================================= */
+
+.logo-card img {
+    position: relative;
+
+    z-index: 2;
+
+    width: 115px;
+
+    height: 115px;
+
+    object-fit: contain;
+
+    margin-bottom: 25px;
+
+    padding: 14px;
+
+    border-radius: 20px;
+
+    background:
+        #f1f8f7;
+
+    border:
+        1px solid rgba(7, 127, 140, 0.08);
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.logo-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   PARTNER NAME
+========================================================= */
+
+.logo-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #073b4c;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   PARTNER CATEGORY
+========================================================= */
+
+.logo-card span {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-block;
+
+    color: #087f8c;
+
+    background:
+        #e8f7f5;
+
+    padding: 5px 12px;
+
+    border-radius: 50px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PARTNERSHIP AREAS
+========================================================= */
+
+.partnership-areas {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1250px;
+
+    margin: 0 auto 110px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   PARTNERSHIP AREA CARD
+========================================================= */
+
 .area {
-    color:#a75959 ;
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 35px 27px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid rgba(7, 127, 140, 0.08);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 30px rgba(7, 59, 76, 0.055);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-/* CTA */
 
-.partner-cta{
+.area:hover {
+    transform: translateY(-8px);
 
-    background:linear-gradient(135deg,#071325,#365B6E);
-    color:white;
-    text-align:center;
-    padding:80px;
-    border-radius:25px;
-
+    box-shadow:
+        0 20px 42px rgba(7, 59, 76, 0.11);
 }
 
-.partner-cta h2{
 
-    font-size:40px;
-    margin-bottom:20px;
+/* Decorative circle */
 
+.area::after {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    right: -75px;
+
+    bottom: -75px;
+
+    background:
+        rgba(43, 184, 177, 0.06);
 }
 
-.partner-cta p{
 
-    max-width:700px;
-    margin:0 auto 35px;
-    line-height:1.8;
+/* =========================================================
+   AREA ICON
+========================================================= */
 
+.area .icon {
+    position: relative;
+
+    z-index: 2;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3f5f3,
+            #eef9f8
+        );
+
+    border:
+        1px solid rgba(43, 184, 177, 0.12);
+
+    font-size: 25px;
+
+    transition:
+        transform 0.35s ease;
 }
 
-.partner-cta a{
 
-    display:inline-block;
-    background:red;
-    color:white;
-    padding:16px 40px;
-    text-decoration:none;
-    border-radius:40px;
-    font-weight:bold;
-
+.area:hover .icon {
+    transform:
+        translateY(-4px)
+        rotate(-3deg);
 }
 
-.partner-cta a:hover{
 
-    background:#ffffff;
-    color:#365B6E
+/* =========================================================
+   AREA TITLE
+========================================================= */
 
+.area h3 {
+    position: relative;
+
+    z-index: 2;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #073b4c;
+
+    font-size: 20px;
+
+    line-height: 1.35;
+
+    margin-bottom: 10px;
 }
 
-/* Responsive */
 
-@media(max-width:992px){
+/* =========================================================
+   AREA DESCRIPTION
+========================================================= */
 
-.partnership-story{
+.area p {
+    position: relative;
 
-grid-template-columns:1fr;
+    z-index: 2;
 
+    color: #6b8186;
+
+    font-size: 13px;
+
+    line-height: 1.7;
 }
 
-.logo-grid{
 
-grid-template-columns:repeat(2,1fr);
+/* =========================================================
+   PARTNER CTA
+========================================================= */
 
+.partner-cta {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1200px;
+
+    min-height: 380px;
+
+    margin: 0 auto;
+
+    padding: 75px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #063b49 0%,
+            #075e68 50%,
+            #087f8c 100%
+        );
+
+    box-shadow:
+        0 22px 55px rgba(5, 76, 84, 0.18);
 }
 
-.partnership-areas{
 
-grid-template-columns:repeat(2,1fr);
+/* Large circle */
 
+.partner-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    right: -170px;
+
+    top: -210px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
 }
 
+
+/* Secondary circle */
+
+.partner-cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    left: -100px;
+
+    bottom: -150px;
+
+    background:
+        rgba(43, 184, 177, 0.12);
 }
 
-@media(max-width:650px){
 
-.logo-grid,
-.partnership-areas{
+/* =========================================================
+   CTA CONTENT
+========================================================= */
 
-grid-template-columns:1fr;
+.partner-cta h2 {
+    position: relative;
 
+    z-index: 2;
+
+    max-width: 750px;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(32px, 4vw, 48px);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
 }
 
-.partners-header h1{
 
-font-size:34px;
+.partner-cta p {
+    position: relative;
 
+    z-index: 2;
+
+    max-width: 700px;
+
+    color: #c7e2e3;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+
+    margin-bottom: 30px;
 }
 
-.partner-cta{
 
-padding:50px 30px;
+/* =========================================================
+   CTA BUTTON
+========================================================= */
 
+.partner-cta a {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    background:
+        #2bb8b1;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.partner-cta h2{
 
-font-size:30px;
+.partner-cta a:hover {
+    background:
+        #3ac9c1;
 
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
+
+/* =========================================================
+   TABLET — 1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .partners {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    /* Story */
+
+    .partnership-story {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 40px;
+    }
+
+
+    .story-image {
+        height: 450px;
+    }
+
+
+    /* Logos */
+
+    .logo-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* Partnership areas */
+
+    .partnership-areas {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* CTA */
+
+    .partner-cta {
+        margin-left: 0;
+
+        margin-right: 0;
+    }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP — 850px
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .partners-header {
+        margin-bottom: 80px;
+    }
+
+
+    .partnership-story {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-bottom: 90px;
+    }
+
+
+    .story-content {
+        padding-right: 0;
+    }
+
+
+    .story-image {
+        height: 430px;
+
+        max-width: 700px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+
+    .partner-section {
+        margin-bottom: 90px;
+    }
+
+
+    .partner-cta {
+        min-height: 340px;
+
+        padding: 60px 45px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .partners {
+        padding:
+            75px 5% 75px;
+    }
+
+
+    /* Header */
+
+    .partners-header {
+        margin-bottom: 70px;
+    }
+
+
+    .partners-header h1 {
+        font-size: 37px;
+    }
+
+
+    .partners-header p {
+        font-size: 15px;
+    }
+
+
+    .partners-header > span::before,
+    .partners-header > span::after {
+        width: 20px;
+
+        margin: 0 7px;
+    }
+
+
+    /* Story */
+
+    .partnership-story {
+        gap: 35px;
+
+        margin-bottom: 80px;
+    }
+
+
+    .story-content h2 {
+        font-size: 34px;
+    }
+
+
+    .story-content p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    .story-image {
+        height: 340px;
+
+        border-radius: 22px;
+    }
+
+
+    .story-image::before {
+        inset: 10px;
+
+        border-radius: 16px;
+    }
+
+
+    /* Strategic Partners */
+
+    .partner-section h2 {
+        font-size: 34px;
+    }
+
+
+    .partner-section > p {
+        font-size: 14px;
+
+        margin-bottom: 40px;
+    }
+
+
+    /* Partner logos */
+
+    .logo-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .logo-card {
+        min-height: 245px;
+
+        border-radius: 21px;
+    }
+
+
+    .logo-card img {
+        width: 105px;
+
+        height: 105px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Partnership areas */
+
+    .partnership-areas {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-bottom: 75px;
+    }
+
+
+    .area {
+        min-height: 220px;
+
+        padding: 30px 25px;
+    }
+
+
+    /* CTA */
+
+    .partner-cta {
+        min-height: 350px;
+
+        padding:
+            45px 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .partner-cta h2 {
+        font-size: 31px;
+    }
+
+
+    .partner-cta p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .partners-header h1 {
+        font-size: 32px;
+    }
+
+
+    .story-content h2 {
+        font-size: 30px;
+    }
+
+
+    .partner-section h2 {
+        font-size: 30px;
+    }
+
+
+    .logo-card {
+        min-height: 230px;
+
+        padding: 30px 20px;
+    }
+
+
+    .logo-card img {
+        width: 95px;
+
+        height: 95px;
+    }
+
+
+    .area {
+        padding: 27px 22px;
+    }
+
+
+    .partner-cta {
+        padding:
+            40px 22px;
+    }
+
+
+    .partner-cta h2 {
+        font-size: 28px;
+    }
 }

@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/general.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('css/header.css') }}"> 
         <link rel="stylesheet" href="{{ asset('css/publications.css') }}"> 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
@@ -21,118 +21,384 @@
 
         {{-- header and nav section --}}
 
-        <header class="mother text-white">
-           <section class="logo_area">
-            <img src="{{ asset('pics_vids/logo.png') }}">
-           </section>
+<header class="wasman-main-header">
 
-           <section class="nav_buttons_area">
-                   
-            <div class="list_options"><a href="/">Home</a></div>
+    <div class="wasman-header-inner">
 
-            <div class="list_options" id="myList">
-                About Us
+        <!-- LOGO -->
+        <a href="/" class="wasman-brand">
+            <img src="{{ asset('pics_vids/logo.png') }}" alt="WASMAN Logo">
+        </a>
 
-                <div class="lists_container ">
-                    <ul type="none" id="nav_tabs_dropdown">
 
-                        <li><a href="/history">History</a></li>
+        <!-- MOBILE MENU -->
+        <button class="wasman-menu-btn" type="button">
+            <i class="fas fa-bars"></i>
+        </button>
 
-                        <li><a href="/what_we_do">What We Do</a></li>
 
-                        <li><a href="/team">Team</a></li>
+        <!-- NAVIGATION -->
+        <nav class="wasman-nav">
 
-                        <li><a href="/partners">Partners</a></li>
-                    </ul>
+            <!-- HOME -->
+            <a href="/" class="wasman-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+
+
+            <!-- ABOUT US -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>About Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/history">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+
+                        <div>
+                            <strong>History</strong>
+                            <small>Learn about WASMAN</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/what_we_do">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+
+                        <div>
+                            <strong>What We Do</strong>
+                            <small>Our activities and impact</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/team">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+
+                        <div>
+                            <strong>Our Team</strong>
+                            <small>Meet our leadership</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/partners">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partners</strong>
+                            <small>Our strategic partners</small>
+                        </div>
+                    </a>
+
                 </div>
-                
 
             </div>
 
-            <div class="list_options">
-                Project
-            <div class="lists_container one ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/areas_of_interest">Areas Of Interest</a></li>
-                        <li><a href="/ongoing_projects">Ongoing</a></li>
-                        <li><a href="/completed_projects">Completed</a></li>
-                        {{-- <li><a href="/publications">Publications</a></li> --}}
-                    </ul>
+
+            <!-- PROJECTS -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>Projects</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/areas_of_interest">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+
+                        <div>
+                            <strong>Areas of Interest</strong>
+                            <small>Our thematic focus</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/ongoing_projects">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-spinner"></i>
+                        </div>
+
+                        <div>
+                            <strong>Ongoing Projects</strong>
+                            <small>Current initiatives</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/completed_projects">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+
+                        <div>
+                            <strong>Completed Projects</strong>
+                            <small>Our achievements</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/publications">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+
+                        <div>
+                            <strong>Publications</strong>
+                            <small>Research and knowledge</small>
+                        </div>
+                    </a>
+
                 </div>
 
             </div>
 
-            <div class="list_options">
-                News & Media
 
-                <div class="lists_container one ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/news">News</a></li>
-                        <li><a href="/reports">Reports</a></li>
-                        <li><a href="/events">Events</a></li>
-                        <li><a href="/photos_videos">Photos & Videos</a></li>
-                    </ul>
+            <!-- NEWS & MEDIA -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>News & Media</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/news">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+
+                        <div>
+                            <strong>News</strong>
+                            <small>Latest updates</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/reports">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+
+                        <div>
+                            <strong>Reports</strong>
+                            <small>Reports and publications</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/events">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+
+                        <div>
+                            <strong>Events</strong>
+                            <small>Upcoming activities</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/photos_videos">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-photo-video"></i>
+                        </div>
+
+                        <div>
+                            <strong>Photos & Videos</strong>
+                            <small>Explore our gallery</small>
+                        </div>
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="list_options">
-                Join Us
 
-                <div class="lists_container  ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/become_member">Become a Member</a></li>
+            <!-- JOIN US -->
+            <div class="wasman-nav-dropdown">
 
-                        <li><a href="/intern">Intern</a></li>
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
 
-                        <li><a href="/volunteer">Volunteer</a></li>
-                        <li><a href="/research_assistant">Research Assistant</a></li>
-                    </ul>
+                    <span>Join Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/become_member">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+
+                        <div>
+                            <strong>Become a Member</strong>
+                            <small>Join the WASMAN network</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/intern">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+
+                        <div>
+                            <strong>Intern</strong>
+                            <small>Explore opportunities</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/volunteer">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+
+                        <div>
+                            <strong>Volunteer</strong>
+                            <small>Support our work</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/research_assistant">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+
+                        <div>
+                            <strong>Research Assistant</strong>
+                            <small>Research opportunities</small>
+                        </div>
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="list_options">
-                Contact Us
-                <div class="lists_container General_Enquiries ">
-                    <ul type="none" id="nav_tabs_dropdown1">
-                        <li><a href="/leave_message">Leave a Message</li>
-                        <li><a href="/general_enquiries">General Enquiries</a></li>
-                        </ul>
+
+            <!-- CONTACT US -->
+            <div class="wasman-nav-dropdown wasman-contact">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <span>Contact Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <!-- LEAVE MESSAGE -->
+                    <a href="/leave_message">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+
+                        <div>
+                            <strong>Leave a Message</strong>
+                            <small>Send us a direct message</small>
+                        </div>
+
+                    </a>
+
+
+                    <!-- GENERAL ENQUIRIES -->
+                    <a href="/general_enquiries">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-circle-question"></i>
+                        </div>
+
+                        <div>
+                            <strong>General Enquiries</strong>
+                            <small>Questions and information</small>
+                        </div>
+
+                    </a>
+
                 </div>
+
             </div>
-             
-        </section>
-        </header >
- {{-- HERO SECTION --}}
- <section class="publication-hero">
 
-    <div class="publication-overlay">
+        </nav>
 
-        <div class="publication-content">
+    </div>
 
-            <span>PUBLICATIONS</span>
+</header>
+
+ <!-- =========================================================
+                PUBLICATIONS HERO
+========================================================= -->
+
+<section class="publication-hero">
+
+    <div class="publication-hero-overlay">
+
+        <div class="publication-hero-content">
+
+            <span class="section-tag">WASMAN KNOWLEDGE CENTRE</span>
 
             <h1>
-                Advancing Knowledge Through
-                Research and Scientific Publications
+                Research, Knowledge &
+                <span>Scientific Impact</span>
             </h1>
 
             <p>
-                Explore WASMAN's collection of research papers, policy briefs,
-                technical reports, manuals and scientific publications that
-                contribute to sustainable aquatic resource management and the
-                advancement of women in aquatic science.
+                Explore research papers, policy briefs, technical reports,
+                manuals and scientific publications advancing aquatic science,
+                environmental sustainability and women's leadership.
             </p>
 
             <div class="publication-search">
 
                 <input
                     type="text"
-                    placeholder="Search publications...">
+                    placeholder="Search publications, reports or research..."
+                >
 
-                <button>
-
+                <button type="submit">
+                    <i class="fas fa-search"></i>
                     Search
-
                 </button>
 
             </div>
@@ -142,59 +408,89 @@
     </div>
 
 </section>
- {{-- KNOWLEDGE CENTER --}}
- <section class="knowledge-centre">
 
-    <div class="knowledge-text">
 
-        <span>KNOWLEDGE CENTRE</span>
+<!-- =========================================================
+                KNOWLEDGE INTRODUCTION
+========================================================= -->
+
+<section class="knowledge-overview">
+
+    <div class="knowledge-intro">
+
+        <span class="section-tag">KNOWLEDGE CENTRE</span>
 
         <h2>
-            Sharing Knowledge That Inspires
-            Sustainable Change
+            Turning Scientific Knowledge
+            Into Sustainable Action
         </h2>
 
         <p>
+            WASMAN promotes evidence-based decision-making by producing,
+            sharing and supporting high-quality scientific knowledge.
+            Our publications provide valuable resources for researchers,
+            students, policymakers, conservation practitioners and
+            development organizations.
+        </p>
 
-            WASMAN promotes evidence-based decision-making by producing and
-            disseminating high-quality scientific knowledge. Our publications
-            support researchers, policymakers, students, conservation
-            practitioners and development organizations working across aquatic
-            science and environmental sustainability.
-
+        <p>
+            Through research and knowledge exchange, we contribute to
+            improved aquatic resource management, environmental
+            conservation, climate resilience and women's participation
+            in science and leadership.
         </p>
 
     </div>
 
-    <div class="knowledge-stats">
 
-        <div>
+    <div class="knowledge-stat-grid">
 
-            <h2>120+</h2>
+        <div class="knowledge-stat">
+
+            <div class="stat-icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+
+            <h3>120+</h3>
 
             <span>Research Papers</span>
 
         </div>
 
-        <div>
 
-            <h2>45</h2>
+        <div class="knowledge-stat">
+
+            <div class="stat-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+
+            <h3>45</h3>
 
             <span>Technical Reports</span>
 
         </div>
 
-        <div>
 
-            <h2>18</h2>
+        <div class="knowledge-stat">
+
+            <div class="stat-icon">
+                <i class="fas fa-scale-balanced"></i>
+            </div>
+
+            <h3>18</h3>
 
             <span>Policy Briefs</span>
 
         </div>
 
-        <div>
 
-            <h2>5,000+</h2>
+        <div class="knowledge-stat">
+
+            <div class="stat-icon">
+                <i class="fas fa-download"></i>
+            </div>
+
+            <h3>5,000+</h3>
 
             <span>Downloads</span>
 
@@ -203,113 +499,98 @@
     </div>
 
 </section>
-{{-- KNOWLEDGE CENTER --}}
-   <section class="knowledge-centre">
 
-    <div class="knowledge-text">
 
-        <span>KNOWLEDGE CENTRE</span>
 
-        <h2>
-            Sharing Knowledge That Inspires
-            Sustainable Change
-        </h2>
+<!-- =========================================================
+                FEATURED PUBLICATION
+========================================================= -->
 
-        <p>
-
-            WASMAN promotes evidence-based decision-making by producing and
-            disseminating high-quality scientific knowledge. Our publications
-            support researchers, policymakers, students, conservation
-            practitioners and development organizations working across aquatic
-            science and environmental sustainability.
-
-        </p>
-
-    </div>
-
-    <div class="knowledge-stats">
-
-        <div>
-
-            <h2>120+</h2>
-
-            <span>Research Papers</span>
-
-        </div>
-
-        <div>
-
-            <h2>45</h2>
-
-            <span>Technical Reports</span>
-
-        </div>
-
-        <div>
-
-            <h2>18</h2>
-
-            <span>Policy Briefs</span>
-
-        </div>
-
-        <div>
-
-            <h2>5,000+</h2>
-
-            <span>Downloads</span>
-
-        </div>
-
-    </div>
-
-</section>
-{{-- FEATURED PUBLICATIONS --}}
 <section class="featured-publication">
 
-    <div class="publication-cover">
+    <div class="featured-publication-image">
 
-        <img src="images/publication-cover.jpg">
+        <div class="publication-label">
+            <i class="fas fa-star"></i>
+            FEATURED PUBLICATION
+        </div>
+
+        <img
+            src="{{ asset('pics_vids/publication-cover.jpg') }}"
+            alt="Featured WASMAN Publication"
+        >
 
     </div>
 
-    <div class="publication-info">
 
-        <span>FEATURED PUBLICATION</span>
+    <div class="featured-publication-content">
+
+        <span class="section-tag">
+            FEATURED RESEARCH
+        </span>
 
         <h2>
-
             Women Leading Sustainable
             Aquatic Resource Management
-
         </h2>
 
         <p>
-
-            This publication explores the role of women in advancing aquatic
-            science, coastal conservation and sustainable blue economy
-            initiatives across Africa.
-
+            This publication explores the role of women in advancing
+            aquatic science, coastal conservation and sustainable
+            blue economy initiatives across Africa.
         </p>
 
-        <div class="publication-meta">
+        <p>
+            It highlights emerging research, leadership opportunities,
+            community initiatives and innovative approaches that place
+            women at the centre of sustainable aquatic resource management.
+        </p>
 
-            <span><strong>Author:</strong> WASMAN Research Team</span>
 
-            <span><strong>Year:</strong> 2026</span>
+        <div class="publication-details">
 
-            <span><strong>Category:</strong> Research Report</span>
+            <div>
+                <i class="fas fa-user"></i>
+
+                <span>
+                    <strong>Author</strong>
+                    WASMAN Research Team
+                </span>
+            </div>
+
+
+            <div>
+                <i class="fas fa-calendar"></i>
+
+                <span>
+                    <strong>Published</strong>
+                    2026
+                </span>
+            </div>
+
+
+            <div>
+                <i class="fas fa-layer-group"></i>
+
+                <span>
+                    <strong>Category</strong>
+                    Research Report
+                </span>
+            </div>
 
         </div>
+
 
         <div class="publication-buttons">
 
-            <a href="#">Read Online</a>
+            <a href="#" class="primary-btn">
+                <i class="fas fa-book-open"></i>
+                Read Online
+            </a>
 
-            <a href="#" class="download-btn">
-
+            <a href="#" class="secondary-btn">
+                <i class="fas fa-download"></i>
                 Download PDF
-
             </a>
 
         </div>
@@ -318,156 +599,476 @@
 
 </section>
 
-{{-- PUBLICATIONS CARDS --}}
+
+
+<!-- =========================================================
+                PUBLICATION LIBRARY
+========================================================= -->
+
 <section class="publication-library">
 
     <div class="library-header">
 
-        <span>LIBRARY</span>
+        <div>
 
-        <h2>Latest Publications</h2>
+            <span class="section-tag">
+                RESEARCH LIBRARY
+            </span>
+
+            <h2>
+                Explore Our Latest Publications
+            </h2>
+
+        </div>
+
+
+        <a href="#" class="library-link">
+            View All Publications
+            <i class="fas fa-arrow-right"></i>
+        </a>
 
     </div>
 
+
+
     <div class="publication-grid">
 
-        <div class="publication-card">
 
-            <img src="images/pub1.jpg">
+        <!-- CARD 1 -->
 
-            <div class="card-body">
+        <article class="publication-card">
 
-                <span class="category">
+            <div class="publication-card-image">
 
+                <img
+                    src="{{ asset('pics_vids/pub1.jpg') }}"
+                    alt="Coastal Ecosystem Restoration"
+                >
+
+                <span class="publication-category">
                     Marine Science
-
                 </span>
 
+            </div>
+
+
+            <div class="publication-card-body">
+
+                <div class="publication-date">
+                    <i class="far fa-calendar"></i>
+                    March 2026
+                </div>
+
                 <h3>
-
                     Coastal Ecosystem Restoration
-
                 </h3>
 
                 <p>
-
-                    An assessment of restoration techniques and
-                    ecosystem resilience.
-
+                    An assessment of restoration techniques,
+                    ecosystem recovery and coastal resilience.
                 </p>
 
-                <small>
-
-                    Published: March 2026
-
-                </small>
-
                 <a href="#">
-
-                    Read Publication →
-
+                    Read Publication
+                    <i class="fas fa-arrow-right"></i>
                 </a>
 
             </div>
 
-        </div>
+        </article>
 
-        <!-- Repeat more cards -->
+
+
+        <!-- CARD 2 -->
+
+        <article class="publication-card">
+
+            <div class="publication-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/project1.jpg') }}"
+                    alt="Aquatic Research"
+                >
+
+                <span class="publication-category">
+                    Aquatic Science
+                </span>
+
+            </div>
+
+
+            <div class="publication-card-body">
+
+                <div class="publication-date">
+                    <i class="far fa-calendar"></i>
+                    February 2026
+                </div>
+
+                <h3>
+                    Aquatic Ecosystem Health Assessment
+                </h3>
+
+                <p>
+                    Scientific approaches to monitoring aquatic
+                    ecosystem health and biodiversity.
+                </p>
+
+                <a href="#">
+                    Read Publication
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CARD 3 -->
+
+        <article class="publication-card">
+
+            <div class="publication-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/outreach.jpeg') }}"
+                    alt="Women in Aquatic Science"
+                >
+
+                <span class="publication-category">
+                    Gender & Leadership
+                </span>
+
+            </div>
+
+
+            <div class="publication-card-body">
+
+                <div class="publication-date">
+                    <i class="far fa-calendar"></i>
+                    January 2026
+                </div>
+
+                <h3>
+                    Women in Aquatic Science
+                </h3>
+
+                <p>
+                    Examining pathways for strengthening women's
+                    participation in aquatic science and leadership.
+                </p>
+
+                <a href="#">
+                    Read Publication
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CARD 4 -->
+
+        <article class="publication-card">
+
+            <div class="publication-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/climate.jpeg') }}"
+                    alt="Climate Resilience"
+                >
+
+                <span class="publication-category">
+                    Climate Change
+                </span>
+
+            </div>
+
+
+            <div class="publication-card-body">
+
+                <div class="publication-date">
+                    <i class="far fa-calendar"></i>
+                    December 2025
+                </div>
+
+                <h3>
+                    Climate Resilience in Coastal Communities
+                </h3>
+
+                <p>
+                    Exploring practical strategies for strengthening
+                    climate resilience in vulnerable communities.
+                </p>
+
+                <a href="#">
+                    Read Publication
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
 
     </div>
 
 </section>
 
-{{-- RESEARCH CATEGORIES --}}
-<section class="categories">
 
-    <h2>Browse by Category</h2>
+
+<!-- =========================================================
+                RESEARCH CATEGORIES
+========================================================= -->
+
+<section class="publication-categories">
+
+    <div class="categories-header">
+
+        <span class="section-tag">
+            BROWSE OUR KNOWLEDGE
+        </span>
+
+        <h2>
+            Explore Publications by Category
+        </h2>
+
+        <p>
+            Discover research and resources across the major areas
+            of WASMAN's work.
+        </p>
+
+    </div>
+
 
     <div class="category-grid">
 
-        <div>🌊 Marine Science</div>
 
-        <div>🌍 Blue Economy</div>
+        <a href="#" class="category-card">
 
-        <div>🌱 Climate Change</div>
+            <div class="category-icon">
+                <i class="fas fa-water"></i>
+            </div>
 
-        <div>💧 Water Conservation</div>
+            <div>
+                <h3>Marine Science</h3>
+                <p>Research on oceans and marine ecosystems.</p>
+            </div>
 
-        <div>📖 Policy Briefs</div>
+            <i class="fas fa-arrow-right category-arrow"></i>
 
-        <div>🔬 Technical Reports</div>
+        </a>
+
+
+        <a href="#" class="category-card">
+
+            <div class="category-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+
+            <div>
+                <h3>Blue Economy</h3>
+                <p>Sustainable aquatic economic development.</p>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
+
+
+        <a href="#" class="category-card">
+
+            <div class="category-icon">
+                <i class="fas fa-cloud-sun"></i>
+            </div>
+
+            <div>
+                <h3>Climate Change</h3>
+                <p>Climate adaptation and resilience research.</p>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
+
+
+        <a href="#" class="category-card">
+
+            <div class="category-icon">
+                <i class="fas fa-droplet"></i>
+            </div>
+
+            <div>
+                <h3>Water Conservation</h3>
+                <p>Research supporting sustainable water resources.</p>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
+
+
+        <a href="#" class="category-card">
+
+            <div class="category-icon">
+                <i class="fas fa-scale-balanced"></i>
+            </div>
+
+            <div>
+                <h3>Policy Briefs</h3>
+                <p>Evidence supporting environmental policy.</p>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
+
+
+        <a href="#" class="category-card">
+
+            <div class="category-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+
+            <div>
+                <h3>Technical Reports</h3>
+                <p>Detailed technical and scientific findings.</p>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
 
     </div>
 
 </section>
 
-{{-- RESEARCH IMPACT --}}
+
+
+<!-- =========================================================
+                RESEARCH IMPACT
+========================================================= -->
+
 <section class="research-impact">
 
-    <div class="impact-box">
+    <div class="impact-heading">
 
-        <h2>250+</h2>
+        <span class="section-tag">
+            RESEARCH IMPACT
+        </span>
 
-        <span>Citations</span>
-
-    </div>
-
-    <div class="impact-box">
-
-        <h2>60+</h2>
-
-        <span>Partner Institutions</span>
+        <h2>
+            Knowledge That Reaches Beyond
+            the Research Community
+        </h2>
 
     </div>
 
-    <div class="impact-box">
 
-        <h2>30</h2>
+    <div class="impact-grid">
 
-        <span>Countries Reached</span>
 
-    </div>
+        <div class="impact-item">
 
-    <div class="impact-box">
+            <div class="impact-icon">
+                <i class="fas fa-quote-right"></i>
+            </div>
 
-        <h2>15K+</h2>
+            <h2>250+</h2>
 
-        <span>Downloads</span>
+            <span>Citations</span>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-icon">
+                <i class="fas fa-building-columns"></i>
+            </div>
+
+            <h2>60+</h2>
+
+            <span>Partner Institutions</span>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-icon">
+                <i class="fas fa-globe-africa"></i>
+            </div>
+
+            <h2>30</h2>
+
+            <span>Countries Reached</span>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-icon">
+                <i class="fas fa-download"></i>
+            </div>
+
+            <h2>15K+</h2>
+
+            <span>Downloads</span>
+
+        </div>
 
     </div>
 
 </section>
-{{-- NEWS LETTER CTA --}}
-<section class="newsletter">
 
-    <span>STAY INFORMED</span>
 
-    <h2>
 
-        Receive Our Latest Publications
+<!-- =========================================================
+                NEWSLETTER CTA
+========================================================= -->
 
-    </h2>
+<section class="publication-newsletter">
 
-    <p>
+    <div class="newsletter-content">
 
-        Subscribe to receive newly released research papers,
-        technical reports and policy briefs directly in your inbox.
+        <div class="newsletter-icon">
+            <i class="fas fa-envelope-open-text"></i>
+        </div>
 
-    </p>
+        <span class="section-tag">
+            STAY INFORMED
+        </span>
 
-    <form>
+        <h2>
+            Never Miss New Research
+        </h2>
 
-        <input
-            type="email"
-            placeholder="Your Email Address">
+        <p>
+            Subscribe to receive newly released research papers,
+            technical reports, policy briefs and other WASMAN
+            knowledge resources.
+        </p>
 
-        <button>
 
-            Subscribe
+        <form class="newsletter-form">
 
-        </button>
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+            >
 
-    </form>
+            <button type="submit">
+                Subscribe
+                <i class="fas fa-paper-plane"></i>
+            </button>
+
+        </form>
+
+    </div>
 
 </section>
     </body>

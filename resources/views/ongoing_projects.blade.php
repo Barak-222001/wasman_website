@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/general.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('css/header.css') }}"> 
         <link rel="stylesheet" href="{{ asset('css/ongoing.css') }}"> 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
@@ -21,143 +21,1007 @@
 
         {{-- header and nav section --}}
 
-        <header class="mother text-white">
-           <section class="logo_area">
-            <img src="{{ asset('pics_vids/logo.png') }}">
-           </section>
+<header class="wasman-main-header">
 
-           <section class="nav_buttons_area">
-                   
-            <div class="list_options"><a href="/">Home</a></div>
+    <div class="wasman-header-inner">
 
-            <div class="list_options" id="myList">
-                About Us
+        <!-- LOGO -->
+        <a href="/" class="wasman-brand">
+            <img src="{{ asset('pics_vids/logo.png') }}" alt="WASMAN Logo">
+        </a>
 
-                <div class="lists_container ">
-                    <ul type="none" id="nav_tabs_dropdown">
 
-                        <li><a href="/history">History</a></li>
+        <!-- MOBILE MENU -->
+        <button class="wasman-menu-btn" type="button">
+            <i class="fas fa-bars"></i>
+        </button>
 
-                        <li><a href="/what_we_do">What We Do</a></li>
 
-                        <li><a href="/team">Team</a></li>
+        <!-- NAVIGATION -->
+        <nav class="wasman-nav">
 
-                        <li><a href="/partners">Partners</a></li>
-                    </ul>
+            <!-- HOME -->
+            <a href="/" class="wasman-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+
+
+            <!-- ABOUT US -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>About Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/history">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+
+                        <div>
+                            <strong>History</strong>
+                            <small>Learn about WASMAN</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/what_we_do">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+
+                        <div>
+                            <strong>What We Do</strong>
+                            <small>Our activities and impact</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/team">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+
+                        <div>
+                            <strong>Our Team</strong>
+                            <small>Meet our leadership</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/partners">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partners</strong>
+                            <small>Our strategic partners</small>
+                        </div>
+                    </a>
+
                 </div>
-                
 
             </div>
 
-            <div class="list_options">
-                Project
-            <div class="lists_container one ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/areas_of_interest">Areas Of Interest</a></li>
-                        {{-- <li><a href="/ongoing_projects">Ongoing</a></li> --}}
-                        <li><a href="/completed_projects">Completed</a></li>
-                        <li><a href="/publications">Publications</a></li>
-                    </ul>
+
+            <!-- PROJECTS -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>Projects</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/areas_of_interest">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+
+                        <div>
+                            <strong>Areas of Interest</strong>
+                            <small>Our thematic focus</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/ongoing_projects">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-spinner"></i>
+                        </div>
+
+                        <div>
+                            <strong>Ongoing Projects</strong>
+                            <small>Current initiatives</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/completed_projects">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+
+                        <div>
+                            <strong>Completed Projects</strong>
+                            <small>Our achievements</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/publications">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+
+                        <div>
+                            <strong>Publications</strong>
+                            <small>Research and knowledge</small>
+                        </div>
+                    </a>
+
                 </div>
 
             </div>
 
-            <div class="list_options">
-                News & Media
 
-                <div class="lists_container one ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/news">News</a></li>
-                        <li><a href="/reports">Reports</a></li>
-                        <li><a href="/events">Events</a></li>
-                        <li><a href="/photos_videos">Photos & Videos</a></li>
-                    </ul>
+            <!-- NEWS & MEDIA -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>News & Media</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/news">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+
+                        <div>
+                            <strong>News</strong>
+                            <small>Latest updates</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/reports">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+
+                        <div>
+                            <strong>Reports</strong>
+                            <small>Reports and publications</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/events">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+
+                        <div>
+                            <strong>Events</strong>
+                            <small>Upcoming activities</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/photos_videos">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-photo-video"></i>
+                        </div>
+
+                        <div>
+                            <strong>Photos & Videos</strong>
+                            <small>Explore our gallery</small>
+                        </div>
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="list_options">
-                Join Us
 
-                <div class="lists_container  ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/become_member">Become a Member</a></li>
+            <!-- JOIN US -->
+            <div class="wasman-nav-dropdown">
 
-                        <li><a href="/intern">Intern</a></li>
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
 
-                        <li><a href="/volunteer">Volunteer</a></li>
-                        <li><a href="/research_assistant">Research Assistant</a></li>
-                    </ul>
+                    <span>Join Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/become_member">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+
+                        <div>
+                            <strong>Become a Member</strong>
+                            <small>Join the WASMAN network</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/intern">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+
+                        <div>
+                            <strong>Intern</strong>
+                            <small>Explore opportunities</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/volunteer">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+
+                        <div>
+                            <strong>Volunteer</strong>
+                            <small>Support our work</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/research_assistant">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+
+                        <div>
+                            <strong>Research Assistant</strong>
+                            <small>Research opportunities</small>
+                        </div>
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="list_options">
-                Contact Us
-                <div class="lists_container General_Enquiries ">
-                    <ul type="none" id="nav_tabs_dropdown1">
-                        <li><a href="/leave_message">Leave a Message</li>
-                        <li><a href="/general_enquiries">General Enquiries</a></li>
-                        </ul>
+
+            <!-- CONTACT US -->
+            <div class="wasman-nav-dropdown wasman-contact">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <span>Contact Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <!-- LEAVE MESSAGE -->
+                    <a href="/leave_message">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+
+                        <div>
+                            <strong>Leave a Message</strong>
+                            <small>Send us a direct message</small>
+                        </div>
+
+                    </a>
+
+
+                    <!-- GENERAL ENQUIRIES -->
+                    <a href="/general_enquiries">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-circle-question"></i>
+                        </div>
+
+                        <div>
+                            <strong>General Enquiries</strong>
+                            <small>Questions and information</small>
+                        </div>
+
+                    </a>
+
                 </div>
+
             </div>
-             
-        </section>
-        </header >
- {{-- <section class="projects-hero">
 
-    <div class="hero-overlay">
+        </nav>
 
-        <div class="hero-content">
+    </div>
 
-            <span>ONGOING PROJECTS</span>
+</header>
 
-            <h1>
-                Advancing Aquatic Science Through Research,
-                Innovation and Community Action
-            </h1>
+<!-- =====================================================
+     ONGOING PROJECTS PAGE
+===================================================== -->
+
+<section class="projects-page">
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="projects-hero">
+
+        <div class="projects-hero-overlay">
+
+            <div class="projects-hero-content">
+
+                <span>OUR ONGOING PROJECTS</span>
+
+                <h1>
+                    Transforming Research Into
+                    Sustainable Aquatic Solutions
+                </h1>
+
+                <p>
+                    WASMAN brings together science, innovation, women’s
+                    leadership and community action to address emerging
+                    challenges affecting aquatic ecosystems and coastal
+                    communities.
+                </p>
+
+                <div class="projects-hero-buttons">
+
+                    <a href="#featured-project">
+                        Explore Projects
+                    </a>
+
+                    <a href="#" class="projects-outline-btn">
+                        Become a Partner
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PROJECT INTRODUCTION
+    ================================================== -->
+
+    <section class="projects-overview">
+
+        <div class="projects-overview-text">
+
+            <span>WHAT WE ARE DOING</span>
+
+            <h2>
+                Turning Scientific Knowledge Into
+                Meaningful Environmental Action
+            </h2>
 
             <p>
-                WASMAN implements collaborative projects that strengthen
-                scientific research, empower women, promote sustainable
-                aquatic resource management and support resilient
+                WASMAN implements multidisciplinary projects that connect
+                scientific research with practical environmental solutions.
+                Our initiatives address aquatic ecosystem conservation,
+                climate resilience, sustainable livelihoods and women's
+                participation in science and environmental management.
+            </p>
+
+            <p>
+                Through collaboration with researchers, universities,
+                governments, development partners and local communities,
+                we transform knowledge into action that benefits both
+                people and aquatic ecosystems.
+            </p>
+
+            <a href="#" class="text-link">
+                Learn More About Our Work
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="projects-overview-stats">
+
+            <div class="overview-stat">
+
+                <i class="fas fa-flask"></i>
+
+                <h3>15+</h3>
+
+                <p>Active Projects</p>
+
+            </div>
+
+
+            <div class="overview-stat">
+
+                <i class="fas fa-handshake"></i>
+
+                <h3>25+</h3>
+
+                <p>Research Partners</p>
+
+            </div>
+
+
+            <div class="overview-stat">
+
+                <i class="fas fa-map-marker-alt"></i>
+
+                <h3>8</h3>
+
+                <p>Regions Covered</p>
+
+            </div>
+
+
+            <div class="overview-stat">
+
+                <i class="fas fa-users"></i>
+
+                <h3>1,200+</h3>
+
+                <p>Beneficiaries</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FEATURED PROJECT
+    ================================================== -->
+
+    <section class="featured-project" id="featured-project">
+
+        <div class="featured-project-image">
+
+            <img
+                src="{{asset('pics_vids/one.jpg')}}"
+                alt="Coastal environmental research">
+
+            <div class="featured-label">
+                FEATURED PROJECT
+            </div>
+
+        </div>
+
+
+        <div class="featured-project-content">
+
+            <span>CONSERVATION • COMMUNITY • RESEARCH</span>
+
+            <h2>
+                Restoring Coastal Mangrove Ecosystems
+            </h2>
+
+            <p>
+                This initiative focuses on restoring degraded mangrove
+                ecosystems through scientific monitoring, community
+                participation and environmental education.
+            </p>
+
+            <p>
+                The project also creates opportunities for women and young
+                researchers to gain practical experience in ecosystem
+                restoration while supporting sustainable livelihoods within
                 coastal communities.
+            </p>
+
+
+            <div class="project-progress">
+
+                <div class="progress-heading">
+
+                    <span>Project Progress</span>
+
+                    <strong>75%</strong>
+
+                </div>
+
+                <div class="progress-track">
+
+                    <div class="progress-value"></div>
+
+                </div>
+
+            </div>
+
+
+            <a href="#" class="project-btn">
+                View Project
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROJECT CATEGORIES
+    ================================================== -->
+
+    <section class="project-focus">
+
+        <div class="project-focus-header">
+
+            <span>OUR PROJECT PORTFOLIO</span>
+
+            <h2>
+                Research Areas We Are Advancing
+            </h2>
+
+            <p>
+                Our projects span multiple disciplines, allowing WASMAN
+                to address aquatic and environmental challenges from
+                different perspectives.
             </p>
 
         </div>
 
-    </div>
 
-</section>
- --}}
- <!-- ===========================================
-                HERO SECTION
-============================================ -->
+        <div class="project-focus-grid">
 
-<section class="projects-hero">
+            <div class="focus-item">
 
-    <div class="hero-overlay">
+                <div class="focus-icon">
+                    <i class="fas fa-water"></i>
+                </div>
 
-        <div class="hero-content">
+                <div>
+                    <h3>Water Resources</h3>
 
-            <span>OUR ONGOING PROJECTS</span>
+                    <p>
+                        Research and monitoring focused on sustainable
+                        freshwater resources and water quality.
+                    </p>
+                </div>
 
-            <h1>
-                Transforming Research into
-                Sustainable Solutions for
-                Aquatic Ecosystems
-            </h1>
+            </div>
+
+
+            <div class="focus-item">
+
+                <div class="focus-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+
+                <div>
+                    <h3>Ecosystem Conservation</h3>
+
+                    <p>
+                        Protecting wetlands, mangroves, marine habitats
+                        and aquatic biodiversity.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="focus-item">
+
+                <div class="focus-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                </div>
+
+                <div>
+                    <h3>Climate Resilience</h3>
+
+                    <p>
+                        Supporting communities and ecosystems facing
+                        climate-related environmental pressures.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="focus-item">
+
+                <div class="focus-icon">
+                    <i class="fas fa-female"></i>
+                </div>
+
+                <div>
+                    <h3>Women & Leadership</h3>
+
+                    <p>
+                        Creating opportunities for women in research,
+                        leadership and environmental innovation.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROJECT CARDS
+    ================================================== -->
+
+    <section class="project-list">
+
+        <div class="project-list-header">
+
+            <span>CURRENT INITIATIVES</span>
+
+            <h2>
+                Projects Making a Difference
+            </h2>
+
+        </div>
+
+
+        <div class="project-cards">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card">
+
+                <div class="project-card-image">
+
+                    <img
+                        src="{{asset('pics_vids/in_pool.jpg')}}"
+                        alt="Water quality research">
+
+                    <span>RESEARCH</span>
+
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <h3>
+                        Water Quality Assessment
+                    </h3>
+
+                    <p>
+                        Monitoring freshwater quality across selected
+                        river basins to support evidence-based water
+                        resource management.
+                    </p>
+
+                    <a href="#">
+                        Read Project
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card">
+
+                <div class="project-card-image">
+
+                    <img
+                        src="{{asset('pics_vids/dolphin.jpg')}}"
+                        alt="Coastal community project">
+
+                    <span>COMMUNITY</span>
+
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <h3>
+                        Women in the Blue Economy
+                    </h3>
+
+                    <p>
+                        Supporting entrepreneurial opportunities and
+                        sustainable livelihoods for women in coastal
+                        communities.
+                    </p>
+
+                    <a href="#">
+                        Read Project
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card">
+
+                <div class="project-card-image">
+
+                    <img
+                        src="{{asset('pics_vids/cannoe.jpeg')}}"
+                        alt="Marine biodiversity">
+
+                    <span>CONSERVATION</span>
+
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <h3>
+                        Marine Biodiversity Monitoring
+                    </h3>
+
+                    <p>
+                        Assessing aquatic ecosystems and marine species
+                        using innovative scientific monitoring approaches.
+                    </p>
+
+                    <a href="#">
+                        Read Project
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project-card">
+
+                <div class="project-card-image">
+
+                    <img
+                        src="{{asset('pics_vids/outreach.jpeg')}}"
+                        alt="Environmental education">
+
+                    <span>EDUCATION</span>
+
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <h3>
+                        Community Environmental Education
+                    </h3>
+
+                    <p>
+                        Promoting environmental awareness and sustainable
+                        practices through community outreach programmes.
+                    </p>
+
+                    <a href="#">
+                        Read Project
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROJECT ROADMAP
+    ================================================== -->
+
+    <section class="project-roadmap">
+
+        <div class="roadmap-header">
+
+            <span>PROJECT ROADMAP</span>
+
+            <h2>
+                From Research to Impact
+            </h2>
 
             <p>
-                WASMAN implements multidisciplinary projects that empower women,
-                strengthen scientific research, conserve aquatic biodiversity and
-                promote climate-resilient communities through innovation,
-                collaboration and evidence-based action.
+                Our projects follow a structured process that connects
+                scientific discovery with practical environmental action.
             </p>
 
-            <div class="hero-buttons">
+        </div>
 
-                <a href="#">Explore Projects</a>
 
-                <a href="#" class="hero-outline">
+        <div class="roadmap">
+
+            <div class="roadmap-step">
+
+                <div class="roadmap-number">
+                    01
+                </div>
+
+                <h3>Research</h3>
+
+                <p>
+                    Identifying environmental challenges and generating
+                    scientific evidence.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-step">
+
+                <div class="roadmap-number">
+                    02
+                </div>
+
+                <h3>Collaboration</h3>
+
+                <p>
+                    Bringing researchers, communities and institutions
+                    together.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-step">
+
+                <div class="roadmap-number">
+                    03
+                </div>
+
+                <h3>Implementation</h3>
+
+                <p>
+                    Turning scientific knowledge into practical solutions.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-step">
+
+                <div class="roadmap-number">
+                    04
+                </div>
+
+                <h3>Impact</h3>
+
+                <p>
+                    Measuring results and supporting long-term sustainability.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         IMPACT
+    ================================================== -->
+
+    <section class="projects-impact">
+
+        <div class="impact-content">
+
+            <span>OUR COLLECTIVE IMPACT</span>
+
+            <h2>
+                Science That Creates Change
+            </h2>
+
+            <p>
+                Every project contributes to a larger vision of healthier
+                aquatic ecosystems, stronger communities and greater
+                opportunities for women in science and environmental
+                leadership.
+            </p>
+
+        </div>
+
+
+        <div class="impact-numbers">
+
+            <div>
+                <strong>500+</strong>
+                <span>Women Engaged</span>
+            </div>
+
+            <div>
+                <strong>35+</strong>
+                <span>Research Projects</span>
+            </div>
+
+            <div>
+                <strong>20+</strong>
+                <span>Strategic Partners</span>
+            </div>
+
+            <div>
+                <strong>12+</strong>
+                <span>Communities Reached</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL CTA
+    ================================================== -->
+
+    <section class="projects-cta">
+
+        <div class="cta-overlay">
+
+            <span>WORK WITH US</span>
+
+            <h2>
+                Together, We Can Create
+                Healthier Aquatic Ecosystems
+            </h2>
+
+            <p>
+                Partner with WASMAN to support research, conservation,
+                innovation and women's leadership across aquatic science.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="#">
+                    Support Our Projects
+                </a>
+
+                <a href="#" class="cta-outline">
                     Become a Partner
                 </a>
 
@@ -165,359 +1029,9 @@
 
         </div>
 
-    </div>
+    </section>
 
 </section>
-
-
-
-<!-- ===========================================
-              INTRODUCTION SECTION
-============================================ -->
-
-<section class="project-intro">
-
-    <div class="intro-image">
-
-        <img src="images/project-intro.jpg"
-             alt="Researchers conducting fieldwork">
-
-        <div class="floating-card">
-
-            <h2>15+</h2>
-
-            <p>Active Projects</p>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="intro-content">
-
-        <span>WHAT WE ARE DOING</span>
-
-        <h2>
-            Delivering Lasting Environmental and
-            Community Impact
-        </h2>
-
-        <p>
-
-            At WASMAN, every project begins with a commitment to solving
-            real-world environmental challenges through scientific research,
-            collaboration and inclusive participation.
-
-        </p>
-
-        <p>
-
-            Working alongside universities, research institutions,
-            governments, NGOs and local communities, we implement projects
-            that strengthen aquatic ecosystem conservation, improve climate
-            resilience, empower women scientists and create sustainable
-            livelihood opportunities.
-
-        </p>
-
-        <p>
-
-            From restoring mangrove forests and protecting marine biodiversity
-            to promoting water quality monitoring and blue economy innovation,
-            our projects generate practical solutions that benefit both people
-            and nature.
-
-        </p>
-
-        <div class="intro-stats">
-
-            <div>
-
-                <h3>25+</h3>
-
-                <span>Research Partners</span>
-
-            </div>
-
-            <div>
-
-                <h3>8</h3>
-
-                <span>Regions</span>
-
-            </div>
-
-            <div>
-
-                <h3>1,200+</h3>
-
-                <span>Beneficiaries</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="project-intro">
-
-    <div class="intro-left">
-
-        <span>OUR INITIATIVES</span>
-
-        <h2>Projects Creating Lasting Environmental Impact</h2>
-
-        <p>
-
-            Every WASMAN project is designed to bridge science,
-            policy and community action. Working alongside
-            universities, governments, NGOs and development
-            partners, we implement initiatives that generate
-            practical solutions for aquatic ecosystems.
-
-        </p>
-
-    </div>
-
-    <div class="intro-right">
-
-        <div class="stat-box">
-
-            <h2>15+</h2>
-
-            <p>Active Projects</p>
-
-        </div>
-
-        <div class="stat-box">
-
-            <h2>8</h2>
-
-            <p>Regions Covered</p>
-
-        </div>
-
-        <div class="stat-box">
-
-            <h2>25+</h2>
-
-            <p>Research Partners</p>
-
-        </div>
-
-        <div class="stat-box">
-
-            <h2>1,200+</h2>
-
-            <p>Beneficiaries</p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="featured-project">
-
-    <div class="featured-image">
-
-        <img src="images/project1.jpg">
-
-    </div>
-
-    <div class="featured-content">
-
-        <span>FEATURED PROJECT</span>
-
-        <h2>
-            Restoring Coastal Mangrove Ecosystems
-        </h2>
-
-        <p>
-
-            This initiative supports the restoration of degraded
-            mangrove forests through scientific monitoring,
-            community participation and environmental education.
-
-        </p>
-
-        <p>
-
-            The project also trains women and young researchers
-            in ecosystem restoration techniques while promoting
-            sustainable livelihoods for coastal communities.
-
-        </p>
-
-        <div class="progress">
-
-            <div class="progress-title">
-
-                <span>Project Progress</span>
-
-                <span>75%</span>
-
-            </div>
-
-            <div class="progress-bar">
-
-                <div class="progress-fill"></div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="projects-grid">
-
-    <div class="project-card">
-
-        <img src="images/project2.jpg">
-
-        <div class="project-body">
-
-            <span>Research</span>
-
-            <h3>Water Quality Assessment</h3>
-
-            <p>
-
-                Monitoring freshwater quality across
-                selected river basins.
-
-            </p>
-
-            <a href="#">Read More →</a>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="project-card">
-
-        <img src="images/project3.jpg">
-
-        <div class="project-body">
-
-            <span>Community</span>
-
-            <h3>Women in Blue Economy</h3>
-
-            <p>
-
-                Building entrepreneurial opportunities
-                for women in coastal communities.
-
-            </p>
-
-            <a href="#">Read More →</a>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="project-card">
-
-        <img src="images/project4.jpg">
-
-        <div class="project-body">
-
-            <span>Conservation</span>
-
-            <h3>Marine Biodiversity Monitoring</h3>
-
-            <p>
-
-                Assessing marine ecosystems using
-                innovative scientific approaches.
-
-            </p>
-
-            <a href="#">Read More →</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="timeline">
-
-    <div class="timeline-title">
-
-        <h2>Project Roadmap</h2>
-
-    </div>
-
-    <div class="timeline-wrapper">
-
-        <div class="timeline-item">
-
-            <h3>2025</h3>
-
-            <p>
-                Research planning and stakeholder engagement.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>2026</h3>
-
-            <p>
-                Project implementation and field activities.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>2027</h3>
-
-            <p>
-                Monitoring, evaluation and policy recommendations.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="project-cta">
-
-    <span>GET INVOLVED</span>
-
-    <h2>
-        Partner With WASMAN
-    </h2>
-
-    <p>
-
-        Together we can transform scientific knowledge
-        into practical environmental solutions that
-        benefit people and nature.
-
-    </p>
-
-    <a href="#">
-        Support Our Projects
-    </a>
-
-</section>
-   
       
     </body>
 

@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/general.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/header.css') }}">
         <link rel="stylesheet" href="{{ asset('css/research_assistant.css') }}"> 
 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
@@ -22,87 +22,350 @@
 
         {{-- header and nav section --}}
 
-        <header class="mother text-white">
-           <section class="logo_area">
-            <img src="{{ asset('pics_vids/logo.png') }}">
-           </section>
+<header class="wasman-main-header">
 
-           <section class="nav_buttons_area">
-                   
-            <div class="list_options"><a href="/">Home</a></div>
+    <div class="wasman-header-inner">
 
-            <div class="list_options" id="myList">
-                About Us
+        <!-- LOGO -->
+        <a href="/" class="wasman-brand">
+            <img src="{{ asset('pics_vids/logo.png') }}" alt="WASMAN Logo">
+        </a>
 
-                <div class="lists_container ">
-                    <ul type="none" id="nav_tabs_dropdown">
 
-                        <li><a href="/history">History</a></li>
+        <!-- MOBILE MENU -->
+        <button class="wasman-menu-btn" type="button">
+            <i class="fas fa-bars"></i>
+        </button>
 
-                        <li><a href="/what_we_do">What We Do</a></li>
 
-                        <li><a href="/team">Team</a></li>
+        <!-- NAVIGATION -->
+        <nav class="wasman-nav">
 
-                        <li><a href="/partners">Partners</a></li>
-                    </ul>
+            <!-- HOME -->
+            <a href="/" class="wasman-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+
+
+            <!-- ABOUT US -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>About Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/history">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+
+                        <div>
+                            <strong>History</strong>
+                            <small>Learn about WASMAN</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/what_we_do">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+
+                        <div>
+                            <strong>What We Do</strong>
+                            <small>Our activities and impact</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/team">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+
+                        <div>
+                            <strong>Our Team</strong>
+                            <small>Meet our leadership</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/partners">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partners</strong>
+                            <small>Our strategic partners</small>
+                        </div>
+                    </a>
+
                 </div>
-                
 
             </div>
 
-            <div class="list_options">
-                Project
-            <div class="lists_container one ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/areas_of_interest">Areas Of Interest</a></li>
-                        <li><a href="/ongoing_projects">Ongoing</a></li>
-                        <li><a href="/completed_projects">Completed</a></li>
-                        <li><a href="/publications">Publications</a></li>
-                    </ul>
+
+            <!-- PROJECTS -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>Projects</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/areas_of_interest">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+
+                        <div>
+                            <strong>Areas of Interest</strong>
+                            <small>Our thematic focus</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/ongoing_projects">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-spinner"></i>
+                        </div>
+
+                        <div>
+                            <strong>Ongoing Projects</strong>
+                            <small>Current initiatives</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/completed_projects">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+
+                        <div>
+                            <strong>Completed Projects</strong>
+                            <small>Our achievements</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/publications">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+
+                        <div>
+                            <strong>Publications</strong>
+                            <small>Research and knowledge</small>
+                        </div>
+                    </a>
+
                 </div>
 
             </div>
 
-            <div class="list_options">
-                News & Media
 
-                <div class="lists_container one ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/news">News</a></li>
-                        <li><a href="/reports">Reports</a></li>
-                        <li><a href="/events">Events</a></li>
-                        <li><a href="/photos_videos">Photos & Videos</a></li>
-                    </ul>
+            <!-- NEWS & MEDIA -->
+            <div class="wasman-nav-dropdown">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <span>News & Media</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/news">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+
+                        <div>
+                            <strong>News</strong>
+                            <small>Latest updates</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/reports">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+
+                        <div>
+                            <strong>Reports</strong>
+                            <small>Reports and publications</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/events">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+
+                        <div>
+                            <strong>Events</strong>
+                            <small>Upcoming activities</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/photos_videos">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-photo-video"></i>
+                        </div>
+
+                        <div>
+                            <strong>Photos & Videos</strong>
+                            <small>Explore our gallery</small>
+                        </div>
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="list_options">
-                Join Us
 
-                <div class="lists_container  ">
-                    <ul type="none" id="nav_tabs_dropdown">
-                        <li><a href="/become_member">Become a Member</a></li>
+            <!-- JOIN US -->
+            <div class="wasman-nav-dropdown">
 
-                        <li><a href="/intern">Intern</a></li>
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
 
-                        <li><a href="/volunteer">Volunteer</a></li>
-                        <li><a href="/research_assistant">Research Assistant</a></li>
-                    </ul>
+                    <span>Join Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <a href="/become_member">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+
+                        <div>
+                            <strong>Become a Member</strong>
+                            <small>Join the WASMAN network</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/intern">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+
+                        <div>
+                            <strong>Intern</strong>
+                            <small>Explore opportunities</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/volunteer">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+
+                        <div>
+                            <strong>Volunteer</strong>
+                            <small>Support our work</small>
+                        </div>
+                    </a>
+
+
+                    <a href="/research_assistant">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+
+                        <div>
+                            <strong>Research Assistant</strong>
+                            <small>Research opportunities</small>
+                        </div>
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="list_options">
-                Contact Us
-                <div class="lists_container General_Enquiries ">
-                    <ul type="none" id="nav_tabs_dropdown1">
-                        <li><a href="/leave_message">Leave a Message</li>
-                        <li><a href="/general_enquiries">General Enquiries</a></li>
-                        </ul>
+
+            <!-- CONTACT US -->
+            <div class="wasman-nav-dropdown wasman-contact">
+
+                <button class="wasman-nav-item wasman-dropdown-btn" type="button">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <span>Contact Us</span>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="wasman-dropdown-menu">
+
+                    <!-- LEAVE MESSAGE -->
+                    <a href="/leave_message">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+
+                        <div>
+                            <strong>Leave a Message</strong>
+                            <small>Send us a direct message</small>
+                        </div>
+
+                    </a>
+
+
+                    <!-- GENERAL ENQUIRIES -->
+                    <a href="/general_enquiries">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-circle-question"></i>
+                        </div>
+
+                        <div>
+                            <strong>General Enquiries</strong>
+                            <small>Questions and information</small>
+                        </div>
+
+                    </a>
+
                 </div>
+
             </div>
-             
-        </section>
-        </header >
+
+        </nav>
+
+    </div>
+
+</header>
  {{-- HERO SECTION --}}
  <section class="research-hero">
 
