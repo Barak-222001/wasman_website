@@ -230,14 +230,8 @@
 
     </div>
     
-</section>
-    
-
-    
-
-    </div>
-
-</section>
+</section> 
+  
 <footer class="footer">
 
     <div class="footer-container">
@@ -259,13 +253,13 @@
             <h3>Quick Links</h3>
 
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Membership</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/history">History</a></li>
+                <li><a href="/ongoing">Projects</a></li>
+                <li><a href="/become_member">Membership</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/photos_videos">Gallery</a></li>
+                <li><a href="/general_enquiries">Contact</a></li>
             </ul>
 
         </div>
@@ -314,13 +308,14 @@
 
         <div class="social-links">
 
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+             <a href="#"><i class="fa-solid fa-globe"></i></a>
 
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
 
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
 
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <!-- <a href="#"><i class="fab fa-x-twitter"></i></a> -->
 
             <a href="#"><i class="fab fa-youtube"></i></a>
 
