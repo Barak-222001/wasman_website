@@ -36,7 +36,7 @@
                 <div class="lists_container ">
                     <ul type="none" id="nav_tabs_dropdown">
 
-                        {{-- <li><a href="/history">History</a></li> --}}
+                         <li><a href="/history">History</a></li>
 
                         <li><a href="/what_we_do">What We Do</a></li>
 

@@ -102,7 +102,15 @@
              
         </section>
         </header >
- <section class="team-page">
+<!-- =========================================================
+     WASMAN TEAM PAGE
+========================================================= -->
+
+<section class="team-page">
+
+    <!-- =====================================================
+         TEAM HEADER
+    ====================================================== -->
 
     <div class="team-header">
 
@@ -111,154 +119,772 @@
         <h1>Meet the Women Leading Change</h1>
 
         <p>
-            WASMAN is driven by a passionate team of scientists, researchers,
-            educators, conservationists and professionals committed to advancing
-            women’s leadership in aquatic science, marine conservation and the
-            sustainable blue economy.
+            WASMAN is driven by a passionate community of scientists,
+            researchers, educators, conservationists and professionals
+            committed to advancing women's leadership in aquatic science,
+            marine conservation and the sustainable blue economy.
         </p>
 
     </div>
 
-    <!-- Executive Highlight -->
 
-    <div class="executive">
-
-        <div class="executive-image">
-
-             <img src="{{asset('pics_vids/dr.alberta.jpeg')}}">
-
-        </div>
-
-        <div class="executive-content">
-
-            <h4>Network President</h4>
-
-            <h2>Dr. Alberta Ama Saggoe</h2>
-
-            <p>
-                Dr. Alberta Ama Saggoe  provides strategic leadership for WASMAN,
-                championing scientific excellence, environmental stewardship
-                and women's empowerment across Africa's aquatic science sector.
-            </p>
-
-            <p>
-                Her vision is to build a strong network that nurtures future
-                female leaders while promoting sustainable management of
-                aquatic resources.
-            </p>
-
-        </div>
-
-    </div>
-
-    <!-- Leadership Team -->
+    <!-- =====================================================
+         EXECUTIVE COMMITTEE
+    ====================================================== -->
 
     <div class="section-title">
 
+        <span>LEADERSHIP</span>
+
         <h2>Executive Committee</h2>
 
-        <p>Dedicated leaders guiding the vision and growth of WASMAN.</p>
+        <p>
+            Our Executive Committee provides strategic direction and
+            coordinates the activities, programmes and growth of WASMAN.
+        </p>
 
     </div>
+
 
     <div class="team-grid">
 
+        <!-- =================================================
+             PRESIDENT
+        ================================================== -->
+
         <div class="member">
 
-             <img src="{{asset('pics_vids/michelle_clottey.jpeg')}}">
+            <div class="member-image">
 
-            <h3>Dr. Michelle Clottey</h3>
+                <img src="{{asset('pics_vids/dr.alberta.jpeg')}}"
+                     alt="Dr. Alberta Ama Saggoe">
 
-            <span>Vice President</span>
+            </div>
+
+            <div class="member-info">
+
+                <h3>Dr. Alberta Ama Saggoe</h3>
+
+                <span class="member-role">
+                    President
+                </span>
+
+                <div class="member-specialty">
+
+                    <strong>Specialty</strong>
+
+                    <p>
+                        Aquatic Science & Environmental Management
+                    </p>
+
+                </div>
+
+                <p class="member-description">
+                    Providing strategic leadership and advancing the
+                    vision and mission of WASMAN through scientific
+                    collaboration and environmental stewardship.
+                </p>
+
+            </div>
 
         </div>
 
+
+        <!-- =================================================
+             VICE PRESIDENT
+        ================================================== -->
+
         <div class="member">
 
-             <img src="{{asset('pics_vids/michelle.jpeg')}}">
+            <div class="member-image">
 
-            <h3>Dr. Angela Brown</h3>
+                <img src="{{asset('pics_vids/michelle_clottey.jpeg')}}"
+                     alt="Dr. Michelle Clottey">
 
-            <span>Secretary</span>
+            </div>
+
+            <div class="member-info">
+
+                <h3>Dr. Michelle Clottey</h3>
+
+                <span class="member-role">
+                    Vice President
+                </span>
+
+                <div class="member-specialty">
+
+                    <strong>Specialty</strong>
+
+                    <p>
+                        Marine Science & Fisheries Management
+                    </p>
+
+                </div>
+
+                <p class="member-description">
+                    Supporting strategic leadership and strengthening
+                    collaboration across the WASMAN community.
+                </p>
+
+            </div>
 
         </div>
 
+
+        <!-- =================================================
+             SECRETARY
+        ================================================== -->
+
         <div class="member">
 
-             <img src="{{asset('pics_vids/dr.kassah.jpeg')}}">
+            <div class="member-image">
 
-            <h3>Dr. Grace Wilson</h3>
+                <img src="{{asset('pics_vids/michelle.jpeg')}}"
+                     alt="Dr. Angela Brown">
 
-            <span>Treasurer</span>
+            </div>
+
+            <div class="member-info">
+
+                <h3>Dr. Angela Brown</h3>
+
+                <span class="member-role">
+                    Secretary
+                </span>
+
+                <div class="member-specialty">
+
+                    <strong>Specialty</strong>
+
+                    <p>
+                        Environmental Research & Coastal Management
+                    </p>
+
+                </div>
+
+                <p class="member-description">
+                    Coordinating network communication, documentation
+                    and administrative activities.
+                </p>
+
+            </div>
 
         </div>
 
+
+        <!-- =================================================
+             TREASURER
+        ================================================== -->
+
         <div class="member">
 
-             <img src="{{asset('pics_vids/dr.huge.jpeg')}}">
+            <div class="member-image">
 
-            <h3>Dr. Rebecca Green</h3>
+                <img src="{{asset('pics_vids/dr.kassah.jpeg')}}"
+                     alt="Dr. Grace Wilson">
 
-            <span>Programs Coordinator</span>
+            </div>
+
+            <div class="member-info">
+
+                <h3>Dr. Grace Wilson</h3>
+
+                <span class="member-role">
+                    Treasurer
+                </span>
+
+                <div class="member-specialty">
+
+                    <strong>Specialty</strong>
+
+                    <p>
+                        Fisheries Science & Blue Economy
+                    </p>
+
+                </div>
+
+                <p class="member-description">
+                    Supporting responsible financial management,
+                    accountability and resource mobilisation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PROGRAMS COORDINATOR
+        ================================================== -->
+
+        <div class="member">
+
+            <div class="member-image">
+
+                <img src="{{asset('pics_vids/dr.huge.jpeg')}}"
+                     alt="Dr. Rebecca Green">
+
+            </div>
+
+            <div class="member-info">
+
+                <h3>Dr. Rebecca Green</h3>
+
+                <span class="member-role">
+                    Programs Coordinator
+                </span>
+
+                <div class="member-specialty">
+
+                    <strong>Specialty</strong>
+
+                    <p>
+                        Climate Resilience & Aquatic Conservation
+                    </p>
+
+                </div>
+
+                <p class="member-description">
+                    Coordinating programmes and initiatives that advance
+                    the objectives and impact of WASMAN.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
-    <!-- Team Values -->
+
+
+    <!-- =====================================================
+         NETWORK MEMBERS
+    ====================================================== -->
+
+    <section class="network-members">
+
+        <div class="section-title network-title">
+
+            <span>OUR COMMUNITY</span>
+
+            <h2>Network Members</h2>
+
+            <p>
+                WASMAN brings together women and professionals from
+                diverse backgrounds who share a commitment to aquatic
+                science, conservation, research and sustainable
+                development.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             NETWORK MEMBERS GRID
+        ================================================== -->
+
+        <div class="members-grid">
+
+
+            <!-- MEMBER 1 -->
+
+            <div class="network-member">
+
+                <div class="network-member-image">
+
+                    <img src="{{asset('pics_vids/member-one.jpg')}}"
+                         alt="Dr. Sarah Mensah">
+
+                </div>
+
+                <div class="network-member-info">
+
+                    <h3>Dr. Sarah Mensah</h3>
+
+                    <span>Aquatic Scientist</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMBER 2 -->
+
+            <div class="network-member">
+
+                <div class="network-member-image">
+
+                    <img src="{{asset('pics_vids/member-two.jpg')}}"
+                         alt="Dr. Linda Owusu">
+
+                </div>
+
+                <div class="network-member-info">
+
+                    <h3>Dr. Linda Owusu</h3>
+
+                    <span>Marine Researcher</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMBER 3 -->
+
+            <div class="network-member">
+
+                <div class="network-member-image">
+
+                    <img src="{{asset('pics_vids/member-three.jpg')}}"
+                         alt="Dr. Mary Boateng">
+
+                </div>
+
+                <div class="network-member-info">
+
+                    <h3>Dr. Mary Boateng</h3>
+
+                    <span>Environmental Scientist</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMBER 4 -->
+
+            <div class="network-member">
+
+                <div class="network-member-image">
+
+                    <img src="{{asset('pics_vids/member-four.jpg')}}"
+                         alt="Dr. Evelyn Asante">
+
+                </div>
+
+                <div class="network-member-info">
+
+                    <h3>Dr. Evelyn Asante</h3>
+
+                    <span>Fisheries Researcher</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMBER 5 -->
+
+            <div class="network-member">
+
+                <div class="network-member-image">
+
+                    <img src="{{asset('pics_vids/member-five.jpg')}}"
+                         alt="Dr. Janet Addo">
+
+                </div>
+
+                <div class="network-member-info">
+
+                    <h3>Dr. Janet Addo</h3>
+
+                    <span>Conservation Specialist</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMBER 6 -->
+
+            <div class="network-member">
+
+                <div class="network-member-image">
+
+                    <img src="{{asset('pics_vids/member-six.jpg')}}"
+                         alt="Dr. Patricia Kusi">
+
+                </div>
+
+                <div class="network-member-info">
+
+                    <h3>Dr. Patricia Kusi</h3>
+
+                    <span>Climate Researcher</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             NETWORK STATISTICS
+        ================================================== -->
+
+        <div class="member-count">
+
+            <div class="count-item">
+
+                <strong>100+</strong>
+
+                <span>Network Members</span>
+
+            </div>
+
+
+            <div class="count-item">
+
+                <strong>10+</strong>
+
+                <span>Disciplines</span>
+
+            </div>
+
+
+            <div class="count-item">
+
+                <strong>5+</strong>
+
+                <span>Countries</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TEAM VALUES
+    ====================================================== -->
 
     <div class="values">
 
+
+        <!-- COLLABORATION -->
+
         <div class="value-box">
 
-            <h3>Collaboration</h3>
+            <div class="value-number">
+                01
+            </div>
+
+            <h3>
+                Collaboration
+            </h3>
 
             <p>
-                Bringing together experts from diverse disciplines to solve
-                complex environmental challenges.
+                Bringing together experts from diverse disciplines to
+                solve complex environmental challenges.
             </p>
 
         </div>
 
+
+        <!-- INNOVATION -->
+
         <div class="value-box">
 
-            <h3>Innovation</h3>
+            <div class="value-number">
+                02
+            </div>
+
+            <h3>
+                Innovation
+            </h3>
 
             <p>
-                Promoting research, creativity and scientific excellence.
+                Promoting research, creativity and scientific excellence
+                in aquatic science and management.
             </p>
 
         </div>
 
+
+        <!-- MENTORSHIP -->
+
         <div class="value-box">
 
-            <h3>Mentorship</h3>
+            <div class="value-number">
+                03
+            </div>
+
+            <h3>
+                Mentorship
+            </h3>
 
             <p>
-                Supporting the next generation of women in aquatic science.
+                Supporting the next generation of women in aquatic
+                science through knowledge sharing and mentorship.
             </p>
 
         </div>
+
 
     </div>
 
-    <!-- Join CTA -->
+
+
+    <!-- =====================================================
+         JOIN TEAM CTA
+    ====================================================== -->
 
     <div class="join-team">
 
-        <h2>Become Part of Our Growing Network</h2>
+        <div class="join-content">
 
-        <p>
-            Together we can protect aquatic ecosystems, empower women,
-            and create a sustainable future.
-        </p>
+            <span>
+                JOIN THE NETWORK
+            </span>
 
-        <a href="#">Become a Member</a>
+            <h2>
+                Become Part of Our Growing Community
+            </h2>
+
+            <p>
+                Together, we can strengthen women's participation in
+                aquatic science, protect our aquatic ecosystems and
+                create a more sustainable future.
+            </p>
+
+            <a href="/become_member">
+                Become a Member
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
 
     </div>
 
 </section>
-   
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+
+    <!-- =====================================================
+         FOOTER NEWSLETTER
+    ====================================================== -->
+
+    <div class="footer-top">
+
+        <div class="footer-newsletter">
+
+            <h2>
+                Join the WASMAN Community
+            </h2>
+
+            <p>
+                Stay informed about our latest research, conservation
+                projects, training programmes, events and opportunities
+                for collaboration.
+            </p>
+
+        </div>
+
+
+        <form class="subscribe-form">
+
+            <input
+                type="email"
+                placeholder="Enter your email address"
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER CONTENT
+    ====================================================== -->
+
+    <div class="footer-content">
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-box">
+
+            <h3>
+                WASMAN
+            </h3>
+
+            <p>
+                Women in Aquatic Science and Management Network (WASMAN)
+                is committed to advancing women's leadership, scientific
+                excellence and collaboration in aquatic science, marine
+                conservation, climate resilience and sustainable blue
+                economy initiatives.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/history">History</a>
+                </li>
+
+                <li>
+                    <a href="/what_we_do">What We Do</a>
+                </li>
+
+                <li>
+                    <a href="/ongoing">Projects</a>
+                </li>
+
+                <li>
+                    <a href="/become_member">Membership</a>
+                </li>
+
+                <li>
+                    <a href="/general_enquiries">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- FOCUS AREAS -->
+
+        <div class="footer-box">
+
+            <h3>
+                Focus Areas
+            </h3>
+
+            <ul>
+
+                <li>
+                    Aquatic Science
+                </li>
+
+                <li>
+                    Marine Protected Areas
+                </li>
+
+                <li>
+                    Blue Economy
+                </li>
+
+                <li>
+                    Climate Resilience
+                </li>
+
+                <li>
+                    Water Conservation
+                </li>
+
+                <li>
+                    Women's Leadership
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-box">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <p>
+                <strong>Email</strong><br>
+                info@wasman.org
+            </p>
+
+            <p>
+                <strong>Phone</strong><br>
+                +233 XX XXX XXXX
+            </p>
+
+            <p>
+                <strong>Location</strong><br>
+                Cape Coast, Ghana
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER BOTTOM
+    ====================================================== -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network
+            (WASMAN). All Rights Reserved.
+        </p>
+
+
+        <div class="social-icons">
+
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
       
     </body>
 

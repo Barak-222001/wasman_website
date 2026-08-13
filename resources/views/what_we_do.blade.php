@@ -133,7 +133,7 @@
                 biodiversity and climate resilience.
             </p>
 
-            <a href="#">Learn More</a>
+            <a href="/publications">Learn More</a>
 
         </div>
 
@@ -294,17 +294,17 @@
 
             <ul>
 
-                <li><a href="#">Home</a></li>
+                <li><a href="/">Home</a></li>
 
-                <li><a href="#">History</a></li>
+                <li><a href="/history">History</a></li>
 
-                <li><a href="#">What We Do</a></li>
+                <li><a href="/what_we_do">What We Do</a></li>
 
-                <li><a href="#">Projects</a></li>
+                <li><a href="/ongoing">Projects</a></li>
 
-                <li><a href="#">Membership</a></li>
+                <li><a href="/become_member">Membership</a></li>
 
-                <li><a href="#">Contact</a></li>
+                <li><a href="/general_enquiries">Contact</a></li>
 
             </ul>
 
@@ -370,13 +370,13 @@
 
         <div class="social-icons">
 
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
 
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
 
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
 
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <!-- <a href="#"><i class="fab fa-x-twitter"></i></a> -->
 
             <a href="#"><i class="fab fa-youtube"></i></a>
 
