@@ -1186,7 +1186,33 @@ img {
     transform: translateY(0);
 }
 
-
+.imgs{
+    width: 1300px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.socials{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 5s;
+}
+.socials a{
+      color: white;
+}
+.socials a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.imgs img{
+    width: 20px;
+}
 /* =========================================================
    RESPONSIVE DESIGN
 ========================================================= */

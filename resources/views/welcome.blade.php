@@ -305,7 +305,7 @@
                     resources.
                 </p>
 
-                <a href="{{ url('/about') }}" class="read-more">
+                <a href="/news" class="read-more">
                     Discover More →
                 </a>
 
@@ -402,7 +402,7 @@
                     and environmental challenges.
                 </div>
 
-                <a href="{{ url('/research') }}" class="gist-link">
+                <a href="/publications" class="gist-link">
                     Explore Research →
                 </a>
 
@@ -427,7 +427,7 @@
                     development opportunities for women and girls.
                 </div>
 
-                <a href="{{ url('/capacity-building') }}" class="gist-link">
+                <a href="/areas_of_interest" class="gist-link">
                     Learn More →
                 </a>
 
@@ -452,7 +452,7 @@
                     of aquatic, coastal and marine resources.
                 </div>
 
-                <a href="{{ url('/activities') }}" class="gist-link">
+                <a href="/what_we_do" class="gist-link">
                     Our Activities →
                 </a>
 
@@ -478,7 +478,7 @@
                     and build meaningful partnerships.
                 </div>
 
-                <a href="{{ url('/network') }}" class="gist-link">
+                <a href="/become_member" class="gist-link">
                     Join the Network →
                 </a>
 
@@ -518,7 +518,7 @@
                 within the WASMaN community.
             </p>
 
-            <a href="{{ url('/join') }}" class="cta-btn">
+            <a href="/become_member" class="cta-btn">
                 Join WASMaN
             </a>
 
@@ -568,23 +568,29 @@
 
         <div class="footer-links">
 
-            <a href="{{ url('/about') }}">
+            <a href="/what_we_do">
                 About Us
             </a>
 
-            <a href="{{ url('/activities') }}">
+            <a href="ongoing_projects">
                 Activities
             </a>
 
-            <a href="{{ url('/research') }}">
+            <a href="/publications">
                 Research
             </a>
 
-            <a href="{{ url('/contact') }}">
+            <a href="general_enquiries">
                 Contact
             </a>
 
         </div>
+
+        <div class="imgs">
+            <div class="socials"><img src="{{ asset('pics_vids/youtube_220211.png') }}"><span><a href="/">@wasman-official</a></span></div>
+            <div class="socials"><img src="{{ asset('pics_vids/linkedin-1.png') }}"><span><a href="/">info@wasman.org</a></span></div>
+            <div class="socials"><img src="{{ asset('pics_vids/globe.png') }}"><span><a href="/">https://wasman.org</a></span></div>
+        </div>  
 
 
     </div>
