@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="{{ asset('css/reports.css') }}">
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 
             
     </head>
@@ -136,6 +138,18 @@
                             <strong>Areas of Interest</strong>
                             <small>Our thematic focus</small>
                         </div>
+                    </a>
+                     <a href="/knowledge_bite">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
                     </a>
 
 
@@ -305,6 +319,30 @@
                             <small>Research opportunities</small>
                         </div>
                     </a>
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
+                    </a>
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
+                    </a>
 
                 </div>
 
@@ -366,400 +404,803 @@
 
 </header>
  
- {{--HERO SECTION  --}}
- <section class="reports-hero">
+ <!-- =====================================================
+                    REPORTS HERO
+====================================================== -->
 
-    <div class="reports-overlay">
+<section class="reports-hero">
 
-        <div class="reports-content">
+    <div class="reports-hero-overlay">
 
-            <span>REPORTS</span>
+        <div class="reports-hero-content">
+
+            <span class="section-kicker">
+                KNOWLEDGE & REPORTING
+            </span>
 
             <h1>
                 Documenting Knowledge,
-                Impact and Progress
+                Measuring Impact &
+                Sharing Progress
             </h1>
 
             <p>
-
-                Explore WASMAN's institutional reports,
-                project assessments, technical documents,
-                and impact reports highlighting our work
-                in aquatic science, conservation and
-                sustainable blue economy development.
-
+                Explore WASMAN's institutional reports, project assessments,
+                technical documents and impact reports that document our
+                contribution to aquatic science, conservation, climate
+                resilience and sustainable development.
             </p>
 
+            <div class="reports-hero-actions">
 
-            <div class="report-search">
+                <a href="#report-library" class="primary-btn">
+                    Explore Reports
+                    <i class="fas fa-arrow-right"></i>
+                </a>
 
-                <input 
-                type="text"
-                placeholder="Search reports...">
-
-
-                <button>
-
-                    Search
-
-                </button>
-
+                <a href="#report-categories" class="secondary-btn">
+                    Browse Categories
+                </a>
 
             </div>
 
         </div>
 
     </div>
+
 </section>
 
-{{-- REPORTS AND OVERVIEW SECTION --}}
+
+<!-- =====================================================
+                REPORT OVERVIEW
+====================================================== -->
+
 <section class="report-overview">
 
+    <div class="overview-container">
 
-    <div class="overview-text">
+        <div class="overview-content">
+
+            <span class="section-kicker">
+                REPORTING & TRANSPARENCY
+            </span>
+
+            <h2>
+                Turning Activities Into
+                Evidence and Knowledge
+            </h2>
+
+            <p>
+                WASMAN documents its research, conservation activities,
+                partnerships, capacity-building programmes and institutional
+                achievements through carefully prepared reports.
+            </p>
+
+            <p>
+                These documents provide researchers, policymakers, development
+                partners, students and communities with reliable information
+                about our activities, lessons learned and environmental impact.
+            </p>
+
+            <a href="#report-library" class="text-link">
+                Explore our report repository
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
 
 
-        <span>
-            REPORTING & TRANSPARENCY
-        </span>
+        <!-- Statistics -->
+
+        <div class="report-statistics">
+
+            <div class="report-stat">
+
+                <div class="stat-icon">
+                    <i class="fas fa-file-lines"></i>
+                </div>
+
+                <h3>50+</h3>
+
+                <span>
+                    Reports Published
+                </span>
+
+            </div>
 
 
-        <h2>
-            Tracking Our Contributions
-            Through Evidence-Based Reporting
-        </h2>
+            <div class="report-stat">
+
+                <div class="stat-icon">
+                    <i class="fas fa-diagram-project"></i>
+                </div>
+
+                <h3>20+</h3>
+
+                <span>
+                    Projects Documented
+                </span>
+
+            </div>
 
 
-        <p>
+            <div class="report-stat">
 
-            WASMAN produces comprehensive reports
-            that document research activities,
-            conservation interventions, partnerships,
-            training programmes and organizational
-            achievements.
+                <div class="stat-icon">
+                    <i class="fas fa-building-columns"></i>
+                </div>
 
-            These reports provide valuable insights
-            for researchers, policymakers, partners
-            and communities working towards sustainable
-            aquatic ecosystems.
+                <h3>15+</h3>
 
-        </p>
+                <span>
+                    Partner Institutions
+                </span>
 
+            </div>
+
+
+            <div class="report-stat">
+
+                <div class="stat-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+
+                <h3>5K+</h3>
+
+                <span>
+                    Document Downloads
+                </span>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-
-    <div class="report-statistics">
-
-
-        <div>
-
-            <h2>
-                50+
-            </h2>
-
-            <span>
-                Reports Published
-            </span>
-
-        </div>
-
-
-
-        <div>
-
-            <h2>
-                20+
-            </h2>
-
-            <span>
-                Projects Documented
-            </span>
-
-        </div>
-
-
-
-        <div>
-
-            <h2>
-                15
-            </h2>
-
-            <span>
-                Partner Institutions
-            </span>
-
-        </div>
-
-
-
-    </div>
-
 
 </section>
-{{-- FEATURED REPORTS SECTION --}}
+
+
+<!-- =====================================================
+                FEATURED REPORT
+====================================================== -->
+
 <section class="featured-report">
 
+    <div class="featured-report-container">
 
-    <div class="report-cover">
+        <div class="featured-report-image">
+
+            <div class="report-image-frame">
+
+                <img
+                    src="{{ asset('pics_vids/report-cover.jpg') }}"
+                    alt="WASMAN Annual Impact Report"
+                >
+
+            </div>
+
+            <div class="document-badge">
+
+                <i class="fas fa-file-pdf"></i>
+
+                <span>
+                    PDF DOCUMENT
+                </span>
+
+            </div>
+
+        </div>
 
 
-        <img src="images/report-cover.jpg">
+        <div class="featured-report-content">
 
+            <span class="section-kicker">
+                FEATURED REPORT
+            </span>
+
+            <h2>
+                WASMAN Annual
+                Impact Report 2026
+            </h2>
+
+            <p>
+                This report presents WASMAN's achievements, research
+                activities, partnerships, capacity-building programmes
+                and contributions toward strengthening women's participation
+                in aquatic science and sustainable environmental management.
+            </p>
+
+
+            <div class="report-meta">
+
+                <div>
+                    <i class="fas fa-calendar"></i>
+
+                    <span>
+                        <strong>Year</strong>
+                        2026
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fas fa-file-alt"></i>
+
+                    <span>
+                        <strong>Type</strong>
+                        Annual Report
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fas fa-book-open"></i>
+
+                    <span>
+                        <strong>Pages</strong>
+                        85 Pages
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="report-actions">
+
+                <a href="#" class="primary-btn">
+
+                    <i class="fas fa-eye"></i>
+                    View Report
+
+                </a>
+
+                <a href="#" class="download-btn">
+
+                    <i class="fas fa-download"></i>
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
+</section>
 
 
-    <div class="report-details">
+<!-- =====================================================
+                REPORT LIBRARY
+====================================================== -->
 
+<section class="report-library" id="report-library">
 
-        <span>
-            FEATURED REPORT
-        </span>
+    <div class="library-heading">
 
+        <div>
 
-        <h2>
+            <span class="section-kicker">
+                REPORT REPOSITORY
+            </span>
 
-            WASMAN Annual Impact Report 2026
+            <h2>
+                Explore Our Reports
+            </h2>
 
-        </h2>
-
+        </div>
 
         <p>
-
-            This report highlights WASMAN's achievements,
-            research activities, partnerships and
-            contributions towards strengthening women's
-            participation in aquatic science and
-            sustainable environmental management.
-
+            Browse reports covering research, conservation,
+            projects, monitoring and institutional activities.
         </p>
 
+    </div>
 
 
-        <div class="report-info">
+    <div class="report-grid">
 
 
-            <span>
-                Year: 2026
-            </span>
+        <!-- REPORT 01 -->
+
+        <article class="report-card">
+
+            <div class="report-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/report1.jpg') }}"
+                    alt="Marine Ecosystem Assessment Report"
+                >
+
+                <span class="report-type">
+                    Technical Report
+                </span>
+
+            </div>
 
 
-            <span>
-                Type: Annual Report
-            </span>
+            <div class="report-card-body">
+
+                <span class="report-date">
+                    June 2026
+                </span>
+
+                <h3>
+                    Marine Ecosystem
+                    Assessment Report
+                </h3>
+
+                <p>
+                    Assessment of aquatic biodiversity,
+                    conservation activities and ecosystem
+                    health indicators.
+                </p>
+
+                <a href="#">
+                    Download Report
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
 
 
-            <span>
-                Pages: 85
-            </span>
+        <!-- REPORT 02 -->
+
+        <article class="report-card">
+
+            <div class="report-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/report2.jpg') }}"
+                    alt="Aquatic Research Report"
+                >
+
+                <span class="report-type">
+                    Research Report
+                </span>
+
+            </div>
 
 
-        </div>
+            <div class="report-card-body">
+
+                <span class="report-date">
+                    May 2026
+                </span>
+
+                <h3>
+                    Aquatic Science
+                    Research Report
+                </h3>
+
+                <p>
+                    Research findings on aquatic ecosystems,
+                    biodiversity and environmental sustainability.
+                </p>
+
+                <a href="#">
+                    Download Report
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
 
 
+        <!-- REPORT 03 -->
 
-        <div class="report-buttons">
+        <article class="report-card">
+
+            <div class="report-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/report3.jpg') }}"
+                    alt="Community Impact Report"
+                >
+
+                <span class="report-type">
+                    Impact Report
+                </span>
+
+            </div>
 
 
-            <a href="#">
-                View Report
-            </a>
+            <div class="report-card-body">
+
+                <span class="report-date">
+                    April 2026
+                </span>
+
+                <h3>
+                    Community Conservation
+                    Impact Report
+                </h3>
+
+                <p>
+                    Documenting community engagement,
+                    environmental education and conservation
+                    outcomes.
+                </p>
+
+                <a href="#">
+                    Download Report
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
 
 
-            <a href="#">
-                Download PDF
-            </a>
+        <!-- REPORT 04 -->
+
+        <article class="report-card">
+
+            <div class="report-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/report4.jpg') }}"
+                    alt="Women Leadership Report"
+                >
+
+                <span class="report-type">
+                    Programme Report
+                </span>
+
+            </div>
 
 
-        </div>
+            <div class="report-card-body">
 
+                <span class="report-date">
+                    March 2026
+                </span>
+
+                <h3>
+                    Women in Aquatic
+                    Science Programme
+                </h3>
+
+                <p>
+                    Highlights from mentorship, leadership
+                    development and capacity-building activities.
+                </p>
+
+                <a href="#">
+                    Download Report
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- REPORT 05 -->
+
+        <article class="report-card">
+
+            <div class="report-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/report5.jpg') }}"
+                    alt="Climate Resilience Report"
+                >
+
+                <span class="report-type">
+                    Climate Report
+                </span>
+
+            </div>
+
+
+            <div class="report-card-body">
+
+                <span class="report-date">
+                    February 2026
+                </span>
+
+                <h3>
+                    Climate Resilience
+                    Assessment
+                </h3>
+
+                <p>
+                    Exploring climate risks, adaptation strategies
+                    and resilience within coastal communities.
+                </p>
+
+                <a href="#">
+                    Download Report
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- REPORT 06 -->
+
+        <article class="report-card">
+
+            <div class="report-card-image">
+
+                <img
+                    src="{{ asset('pics_vids/report6.jpg') }}"
+                    alt="Water Resources Report"
+                >
+
+                <span class="report-type">
+                    Monitoring Report
+                </span>
+
+            </div>
+
+
+            <div class="report-card-body">
+
+                <span class="report-date">
+                    January 2026
+                </span>
+
+                <h3>
+                    Water Resources
+                    Monitoring Report
+                </h3>
+
+                <p>
+                    Monitoring water resources and assessing
+                    environmental conditions across selected areas.
+                </p>
+
+                <a href="#">
+                    Download Report
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </article>
 
     </div>
-</section>
-{{-- REPORTS LIBRARY --}}
-<section class="report-library">
-
-
-<div class="section-title">
-
-
-<span>
-REPORT REPOSITORY
-</span>
-
-
-<h2>
-Latest Reports
-</h2>
-
-
-</div>
-
-
-
-<div class="report-grid">
-
-
-
-<div class="report-card">
-
-
-<img src="images/report1.jpg">
-
-
-<div class="report-body">
-
-
-<span class="report-tag">
-Technical Report
-</span>
-
-
-<h3>
-
-Marine Ecosystem Assessment Report
-
-</h3>
-
-
-<p>
-
-Assessment of aquatic biodiversity,
-conservation activities and ecosystem
-health indicators.
-
-</p>
-
-
-<small>
-Published: June 2026
-</small>
-
-
-<a href="#">
-Download Report →
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-<!-- More cards -->
-
-
-</div>
-
 
 </section>
 
-{{-- REPORTS CATEGORY SECTION --}}
-<section class="report-categories">
+
+<!-- =====================================================
+                REPORT CATEGORIES
+====================================================== -->
+
+<section class="report-categories" id="report-categories">
+
+    <div class="categories-heading">
+
+        <span class="section-kicker">
+            REPORT COLLECTION
+        </span>
+
+        <h2>
+            Browse Reports by Category
+        </h2>
+
+        <p>
+            Find the information you need by exploring
+            our different report collections.
+        </p>
+
+    </div>
 
 
-<div class="section-title">
-
-<span>
-CATEGORIES
-</span>
+    <div class="category-grid">
 
 
-<h2>
-Browse Reports
-</h2>
+        <a href="#" class="category-card">
+
+            <div class="category-icon">
+                <i class="fas fa-building-columns"></i>
+            </div>
+
+            <div>
+                <h3>Annual Reports</h3>
+
+                <span>
+                    Institutional performance
+                </span>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
 
 
-</div>
+        <a href="#" class="category-card">
+
+            <div class="category-icon">
+                <i class="fas fa-water"></i>
+            </div>
+
+            <div>
+                <h3>Technical Reports</h3>
+
+                <span>
+                    Scientific & technical studies
+                </span>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
 
 
+        <a href="#" class="category-card">
 
-<div class="category-boxes">
+            <div class="category-icon">
+                <i class="fas fa-diagram-project"></i>
+            </div>
 
+            <div>
+                <h3>Project Reports</h3>
 
-<div>
+                <span>
+                    Project implementation
+                </span>
+            </div>
 
-📘 Annual Reports
+            <i class="fas fa-arrow-right category-arrow"></i>
 
-</div>
-
-
-<div>
-
-🌊 Technical Reports
-
-</div>
-
-
-<div>
-
-🌱 Project Reports
-
-</div>
+        </a>
 
 
-<div>
+        <a href="#" class="category-card">
 
-📊 Impact Assessments
+            <div class="category-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
 
-</div>
+            <div>
+                <h3>Impact Assessments</h3>
 
+                <span>
+                    Measuring environmental impact
+                </span>
+            </div>
 
-<div>
+            <i class="fas fa-arrow-right category-arrow"></i>
 
-📝 Monitoring Reports
-
-</div>
-
-
-<div>
-
-🏛 Policy Reports
-
-</div>
+        </a>
 
 
-</div>
+        <a href="#" class="category-card">
 
+            <div class="category-icon">
+                <i class="fas fa-chart-column"></i>
+            </div>
+
+            <div>
+                <h3>Monitoring Reports</h3>
+
+                <span>
+                    Tracking progress & outcomes
+                </span>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
+
+
+        <a href="#" class="category-card">
+
+            <div class="category-icon">
+                <i class="fas fa-scale-balanced"></i>
+            </div>
+
+            <div>
+                <h3>Policy Reports</h3>
+
+                <span>
+                    Evidence for policy
+                </span>
+            </div>
+
+            <i class="fas fa-arrow-right category-arrow"></i>
+
+        </a>
+
+    </div>
 
 </section>
 
-{{-- DOWNLOAD CTA SECTION --}}
-<section class="report-download">
+
+<!-- =====================================================
+                IMPACT STRIP
+====================================================== -->
+
+<section class="report-impact">
+
+    <div class="impact-container">
+
+        <div class="impact-intro">
+
+            <span>
+                OUR REPORTING IMPACT
+            </span>
+
+            <h2>
+                Knowledge That Supports
+                Better Decisions
+            </h2>
+
+        </div>
 
 
-<span>
-ACCESS OUR DOCUMENTS
-</span>
+        <div class="impact-stat">
+
+            <strong>250+</strong>
+
+            <span>
+                Citations
+            </span>
+
+        </div>
 
 
-<h2>
+        <div class="impact-stat">
 
-Looking For A Specific Report?
+            <strong>30+</strong>
 
-</h2>
+            <span>
+                Countries Reached
+            </span>
 
-
-<p>
-
-Contact WASMAN for additional reports,
-technical documents and research materials.
-
-</p>
+        </div>
 
 
-<a href="#">
+        <div class="impact-stat">
 
-Request Report
+            <strong>15K+</strong>
 
-</a>
+            <span>
+                Downloads
+            </span>
 
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                REQUEST REPORT CTA
+====================================================== -->
+
+<section class="report-cta">
+
+    <div class="cta-content">
+
+        <span class="section-kicker">
+            NEED MORE INFORMATION?
+        </span>
+
+        <h2>
+            Looking for a Specific Report?
+        </h2>
+
+        <p>
+            Some technical documents and project reports may not yet
+            be available through our online repository. Contact the
+            WASMAN team to request additional research materials.
+        </p>
+
+        <a href="#" class="cta-btn">
+            Request a Report
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </div>
 
 </section>
 

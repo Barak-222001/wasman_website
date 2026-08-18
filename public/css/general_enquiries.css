@@ -1,2011 +1,1594 @@
+/* =========================================================
+   WASMAN GENERAL ENQUIRIES
+   PREMIUM AQUATIC DESIGN
+========================================================= */
 
-/*=========================================================
-              GENERAL ENQUIRY VARIABLES
-=========================================================*/
 
+/* =========================================================
+   ROOT
+========================================================= */
 
-:root{
+:root {
 
-    --primary:#003b5c;
+    --ocean-dark: #063b4c;
+    --ocean-deep: #052f3d;
+    --ocean: #087f82;
 
-    --secondary:#00a896;
+    --teal: #16a89c;
+    --aqua: #61d9ca;
+    --aqua-light: #e8f8f7;
 
-    --light:#f8fbfc;
+    --white: #ffffff;
 
-    --white:#ffffff;
+    --background: #f5fbfc;
+    --soft: #edf7f8;
 
-    --text:#555;
+    --text: #173b4d;
+    --muted: #70858d;
 
-    --shadow:0 18px 45px rgba(0,0,0,.08);
+    --border: #dceced;
 
-    --radius:22px;
+    --shadow:
+        0 20px 55px rgba(6, 59, 76, 0.09);
 
+    --radius: 20px;
 }
 
 
+/* =========================================================
+   RESET
+========================================================= */
 
-/*=========================================================
-              GENERAL ENQUIRY HERO SECTION
-=========================================================*/
-
-
-.enquiry-hero{
-
-
-    min-height:100vh;
-
-
-    background:
-
-
-    linear-gradient(
-
-        rgba(0,45,70,.85),
-
-        rgba(0,45,70,.72)
-
-    ),
-
-
-
-    url(images/enquiry-banner.jpg);
-
-
-
-    background-size:cover;
-
-
-    background-position:center;
-
-
-    background-repeat:no-repeat;
-
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              HERO OVERLAY
-=========================================================*/
-
-
-.enquiry-overlay{
-
-
-    width:100%;
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              HERO CONTENT
-=========================================================*/
-
-
-.enquiry-content{
-
-
-    width:90%;
-
-
-    max-width:1000px;
-
-
-    text-align:center;
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-content span{
-
-
-    display:inline-block;
-
-
-    padding:10px 30px;
-
-
-    background:rgba(255,255,255,.15);
-
-
-    backdrop-filter:blur(12px);
-
-
-    border-radius:50px;
-
-
-    letter-spacing:3px;
-
-
-    font-size:14px;
-
-
-    margin-bottom:30px;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-content h1{
-
-
-    font-size:65px;
-
-
-    line-height:1.15;
-
-
-    margin-bottom:30px;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-content p{
-
-
-    max-width:800px;
-
-
-    margin:auto;
-
-
-    font-size:20px;
-
-
-    line-height:2;
-
-
-    margin-bottom:45px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              HERO BUTTON
-=========================================================*/
-
-
-.enquiry-content a{
-
-
-    display:inline-block;
-
-
-    padding:18px 50px;
-
-
-    background:var(--secondary);
-
-
-    color:white;
-
-
-    text-decoration:none;
-
-
-    border-radius:45px;
-
-
-    font-weight:600;
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-content a:hover{
-
-
-    background:#00857b;
-
-
-    transform:translateY(-5px);
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              ABOUT ENQUIRY SECTION
-=========================================================*/
-
-
-.enquiry-about{
-
-
-    width:90%;
-
-
-    max-width:1300px;
-
-
-    margin:120px auto;
-
-
-
-    display:grid;
-
-
-    grid-template-columns:1fr 1fr;
-
-
-    gap:70px;
-
-
-    align-items:center;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              ABOUT IMAGE
-=========================================================*/
-
-
-.enquiry-image{
-
-
-    overflow:hidden;
-
-
-    border-radius:25px;
-
-
-    box-shadow:var(--shadow);
-
-
-}
-
-
-
-
-
-
-
-.enquiry-image img{
-
-
-    width:100%;
-
-
-    display:block;
-
-
-    transition:.6s;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-image:hover img{
-
-
-    transform:scale(1.08);
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              ABOUT TEXT
-=========================================================*/
-
-
-.enquiry-text span{
-
-
-    color:var(--secondary);
-
-
-    font-weight:600;
-
-
-    letter-spacing:3px;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-text h2{
-
-
-    color:var(--primary);
-
-
-    font-size:48px;
-
-
-    line-height:1.3;
-
-
-    margin:20px 0;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-text p{
-
-
-    color:var(--text);
-
-
-    font-size:17px;
-
-
-    line-height:2;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              SECTION TITLE STYLE
-=========================================================*/
-
-
-.section-title{
-
-
-    text-align:center;
-
-
-    margin-bottom:60px;
-
-
-}
-
-
-
-
-
-
-
-.section-title span{
-
-
-    color:var(--secondary);
-
-
-    font-weight:600;
-
-
-    letter-spacing:3px;
-
-
-}
-
-
-
-
-
-
-
-.section-title h2{
-
-
-    color:var(--primary);
-
-
-    font-size:46px;
-
-
-    margin-top:15px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              PAGE ANIMATION
-=========================================================*/
-
-
-.enquiry-content,
-
-.enquiry-image,
-
-.enquiry-text{
-
-
-    animation:enquiryFade 1s ease forwards;
-
-
-}
-
-
-
-
-
-
-
-@keyframes enquiryFade{
-
-
-from{
-
-
-    opacity:0;
-
-
-    transform:translateY(40px);
-
-
-}
-
-
-
-to{
-
-
-    opacity:1;
-
-
-    transform:translateY(0);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              RESPONSIVE DESIGN
-=========================================================*/
-
-
-@media(max-width:992px){
-
-
-.enquiry-content h1{
-
-
-    font-size:48px;
-
-
-}
-
-
-
-
-.enquiry-about{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-@media(max-width:650px){
-
-
-.enquiry-content h1{
-
-
-    font-size:35px;
-
-
-}
-
-
-
-.enquiry-content p{
-
-
-    font-size:16px;
-
-
-}
-
-
-
-.enquiry-content a{
-
-
-    width:100%;
-
-
-    text-align:center;
-
-
-}
-
-
-
-.enquiry-text h2{
-
-
-    font-size:34px;
-
-
-}
-
-
-
-.section-title h2{
-
-
-    font-size:32px;
-
-
-}
-
-
-}
-
-
-/*=========================================================
-              AREAS OF ENQUIRY SECTION
-=========================================================*/
-
-
-.enquiry-areas{
-
-
-    width:90%;
-
-
-    max-width:1300px;
-
-
-    margin:120px auto;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              ENQUIRY GRID
-=========================================================*/
-
-
-.enquiry-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(3,1fr);
-
-
-    gap:35px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              ENQUIRY CARD
-=========================================================*/
-
-
-.enquiry-card{
-
-
-    background:white;
-
-
-    padding:45px 35px;
-
-
-    border-radius:22px;
-
-
-    box-shadow:var(--shadow);
-
-
-    position:relative;
-
-
-    overflow:hidden;
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-/* TOP ACCENT LINE */
-
-
-.enquiry-card::before{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    top:0;
-
-
-    left:0;
-
-
-    width:100%;
-
-
-    height:6px;
-
-
-    background:var(--secondary);
-
-
-}
-
-
-
-
-
-
-
-.enquiry-card:hover{
-
-
-    transform:translateY(-12px);
-
-
-    box-shadow:0 25px 55px rgba(0,0,0,.15);
-
-
-}
-
-
-
-
-
-
-
-.enquiry-card h3{
-
-
-    color:var(--primary);
-
-
-    font-size:26px;
-
-
-    margin-bottom:18px;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-card p{
-
-
-    color:var(--text);
-
-
-    line-height:1.9;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              WHO CAN CONTACT SECTION
-=========================================================*/
-
-
-.enquiry-users{
-
-
-    width:90%;
-
-
-    max-width:1300px;
-
-
-    margin:120px auto;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              USER GRID
-=========================================================*/
-
-
-.user-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(4,1fr);
-
-
-    gap:30px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              USER CARD
-=========================================================*/
-
-
-.user-grid div{
-
-
-    background:white;
-
-
-    padding:40px 30px;
-
-
-    border-radius:22px;
-
-
-    text-align:center;
-
-
-    box-shadow:var(--shadow);
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-.user-grid div:hover{
-
-
-    transform:translateY(-10px);
-
-
-    background:var(--secondary);
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-
-
-.user-grid h3{
-
-
-    color:var(--primary);
-
-
-    font-size:24px;
-
-
-    margin-bottom:15px;
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-.user-grid div:hover h3{
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-
-
-.user-grid p{
-
-
-    color:var(--text);
-
-
-    line-height:1.8;
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-.user-grid div:hover p{
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              CONTACT CHANNEL SECTION
-=========================================================*/
-
-
-.enquiry-contact{
-
-
-    width:90%;
-
-
-    max-width:1300px;
-
-
-    margin:120px auto;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              CHANNEL GRID
-=========================================================*/
-
-
-.channel-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(3,1fr);
-
-
-    gap:30px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              CHANNEL CARD
-=========================================================*/
-
-
-.channel-grid div{
-
-
-    background:white;
-
-
-    padding:45px 30px;
-
-
-    border-radius:22px;
-
-
-    text-align:center;
-
-
-    box-shadow:var(--shadow);
-
-
-    border-bottom:5px solid var(--secondary);
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-.channel-grid div:hover{
-
-
-    transform:translateY(-10px);
-
-
-}
-
-
-
-
-
-
-
-.channel-grid h3{
-
-
-    color:var(--primary);
-
-
-    font-size:25px;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-
-
-
-
-.channel-grid p{
-
-
-    color:var(--text);
-
-
-    font-size:17px;
-
-
-    line-height:1.8;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              CARD ANIMATION
-=========================================================*/
-
-
-.enquiry-card,
-
-.user-grid div,
-
-.channel-grid div{
-
-
-    animation:cardAppear .8s ease forwards;
-
-
-}
-
-
-
-
-
-
-
-@keyframes cardAppear{
-
-
-from{
-
-
-    opacity:0;
-
-
-    transform:translateY(40px);
-
-
-}
-
-
-
-to{
-
-
-    opacity:1;
-
-
-    transform:translateY(0);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              RESPONSIVE DESIGN
-=========================================================*/
-
-
-@media(max-width:1100px){
-
-
-.enquiry-grid{
-
-
-    grid-template-columns:repeat(2,1fr);
-
-
-}
-
-
-
-.user-grid{
-
-
-    grid-template-columns:repeat(2,1fr);
-
-
-}
-
-
-
-.channel-grid{
-
-
-    grid-template-columns:repeat(2,1fr);
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-@media(max-width:650px){
-
-
-.enquiry-grid,
-
-
-.user-grid,
-
-
-.channel-grid{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-.enquiry-card{
-
-
-    padding:35px 25px;
-
-
-}
-
-
-
-.user-grid div,
-
-
-.channel-grid div{
-
-
-    padding:35px 25px;
-
-
-}
-
-
-
-}
-
-
-/*=========================================================
-              GENERAL ENQUIRY FORM SECTION
-=========================================================*/
-
-
-.enquiry-form{
-
-
-    width:90%;
-
-
-    max-width:1200px;
-
-
-    margin:130px auto;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              FORM CONTAINER
-=========================================================*/
-
-
-.enquiry-form form{
-
-
-    background:white;
-
-
-    padding:60px;
-
-
-    border-radius:30px;
-
-
-    box-shadow:var(--shadow);
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              FORM GRID
-=========================================================*/
-
-
-.enquiry-form .form-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(2,1fr);
-
-
-    gap:25px;
-
-
-    margin-bottom:30px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              INPUT ELEMENTS
-=========================================================*/
-
-
-.enquiry-form input,
-
-.enquiry-form select,
-
-.enquiry-form textarea{
-
-
-    width:100%;
-
-
-    padding:18px 20px;
-
-
-    border:1px solid #d8e5e8;
-
-
-    border-radius:14px;
-
-
-    background:#fcfefe;
-
-
-    font-size:16px;
-
-
-    font-family:inherit;
-
-
-    outline:none;
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              INPUT FOCUS EFFECT
-=========================================================*/
-
-
-.enquiry-form input:focus,
-
-.enquiry-form select:focus,
-
-.enquiry-form textarea:focus{
-
-
-    border-color:var(--secondary);
-
-
-    box-shadow:
-
-
-    0 0 0 4px rgba(0,168,150,.12);
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              MESSAGE FIELD
-=========================================================*/
-
-
-.enquiry-form textarea{
-
-
-    min-height:220px;
-
-
-    resize:vertical;
-
-
-    margin-bottom:35px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              SELECT DROPDOWN
-=========================================================*/
-
-
-.enquiry-form select{
-
-
-    cursor:pointer;
-
-
-    color:#666;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              SUBMIT BUTTON
-=========================================================*/
-
-
-.enquiry-form button{
-
-
-    padding:18px 55px;
-
-
-    background:var(--secondary);
-
-
-    color:white;
-
-
-    border:none;
-
-
-    border-radius:45px;
-
-
-    font-size:17px;
-
-
-    font-weight:600;
-
-
-    cursor:pointer;
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-.enquiry-form button:hover{
-
-
-    background:#00857b;
-
-
-    transform:translateY(-5px);
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              FORM STATUS MESSAGE
-=========================================================*/
-
-
-.enquiry-success{
-
-
-    background:#e8faf5;
-
-
-    color:#00796b;
-
-
-    padding:20px;
-
-
-    border-radius:15px;
-
-
-    text-align:center;
-
-
-    margin-top:25px;
-
-
-}
-
-
-
-
-
-.enquiry-error{
-
-
-    background:#ffeaea;
-
-
-    color:#c0392b;
-
-
-    padding:20px;
-
-
-    border-radius:15px;
-
-
-    text-align:center;
-
-
-    margin-top:25px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              FAQ SECTION
-=========================================================*/
-
-
-.enquiry-faq{
-
-
-    width:90%;
-
-
-    max-width:1300px;
-
-
-    margin:120px auto;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              FAQ GRID
-=========================================================*/
-
-
-.faq-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(3,1fr);
-
-
-    gap:30px;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              FAQ CARDS
-=========================================================*/
-
-
-.faq-grid div{
-
-
-    background:white;
-
-
-    padding:40px 30px;
-
-
-    border-radius:22px;
-
-
-    box-shadow:var(--shadow);
-
-
-    border-left:5px solid var(--secondary);
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-
-
-.faq-grid div:hover{
-
-
-    transform:translateY(-10px);
-
-
-}
-
-
-
-
-
-
-
-.faq-grid h3{
-
-
-    color:var(--primary);
-
-
-    font-size:22px;
-
-
-    line-height:1.5;
-
-
-    margin-bottom:18px;
-
-
-}
-
-
-
-
-
-
-
-.faq-grid p{
-
-
-    color:var(--text);
-
-
-    line-height:1.9;
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-
-
-
-
-
-
-/*=========================================================
-              FINAL PAGE ANIMATION
-=========================================================*/
-
-
-.enquiry-form form,
-
-.faq-grid div{
-
-
-    animation:finalReveal .9s ease forwards;
-
-
+header nav{
+    margin-right: 6%;
 }
-
-
-
 
-
-
-
-@keyframes finalReveal{
-
-
-from{
-
-
-    opacity:0;
-
-
-    transform:translateY(40px);
-
-
+html {
+    scroll-behavior: smooth;
 }
-
-
-
-to{
-
-
-    opacity:1;
 
+body {
+    font-family: 'Instrument Sans', sans-serif;
 
-    transform:translateY(0);
+    background: var(--background);
 
+    color: var(--text);
 
+    line-height: 1.7;
 }
 
-
+img {
+    width: 100%;
+    display: block;
 }
-
-
-
-
-
-
-
-/*=========================================================
-              GLOBAL SMOOTH EFFECTS
-=========================================================*/
 
-
-html{
-
-
-    scroll-behavior:smooth;
-
-
+a {
+    text-decoration: none;
+    color: inherit;
 }
-
-
-
-
 
 button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
 
-a{
+button {
+    cursor: pointer;
+}
 
 
-    transition:.35s ease;
+/* =========================================================
+   HEADER
+========================================================= */
 
+.enquiry-header {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    padding: 20px 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(3, 38, 50, 0.85),
+            transparent
+        );
+}
+
+.header-container {
+
+    width: min(1250px, 92%);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.enquiry-logo img {
+
+    width: 115px;
+
+    height: auto;
+}
+
+.enquiry-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.enquiry-nav a {
+
+    color: rgba(255,255,255,0.88);
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.enquiry-nav a:hover,
+.enquiry-nav a.active {
+
+    color: var(--aqua);
+}
+
+.header-button {
+
+    padding: 11px 22px;
+
+    border-radius: 30px;
+
+    background: var(--teal);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.header-button:hover {
+
+    background: white;
+
+    color: var(--ocean);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.enquiry-hero {
+
+    min-height: 750px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    background-image:
+        url("../pics_vids/four.jpg'");
+
+    background-size: cover;
+
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 39, 53, 0.96),
+            rgba(4, 67, 80, 0.82) 48%,
+            rgba(4, 103, 111, 0.28)
+        );
+}
+
+.hero-container {
+
+    width: min(1250px, 92%);
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-content {
+
+    max-width: 850px;
+
+    padding-top: 80px;
+
+    color: white;
+}
+
+.hero-label {
+
+    display: inline-block;
+
+    color: var(--aqua);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.hero-content h1 strong {
+
+    display: block;
+
+    color: var(--aqua);
+}
+
+.hero-content p {
+
+    max-width: 690px;
+
+    color: rgba(255,255,255,0.86);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 26px;
+
+    border-radius: 40px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.35s ease;
+}
+
+.primary-button {
+
+    background: var(--teal);
+
+    color: white;
+}
+
+.primary-button:hover {
+
+    background: white;
+
+    color: var(--ocean);
+
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    color: white;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+.secondary-button:hover {
+
+    background: white;
+
+    color: var(--ocean);
+}
+
+
+/* Hero floating badge */
+
+.hero-badge {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px 22px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(12px);
+
+    color: white;
+}
+
+.hero-badge > i {
+
+    font-size: 25px;
+
+    color: var(--aqua);
+}
+
+.hero-badge strong,
+.hero-badge span {
+
+    display: block;
+}
+
+.hero-badge strong {
+
+    font-size: 14px;
+}
+
+.hero-badge span {
+
+    font-size: 12px;
+
+    color: rgba(255,255,255,0.7);
+}
+
+
+/* =========================================================
+   GENERAL SECTION LABEL
+========================================================= */
+
+.section-label {
+
+    display: inline-block;
+
+    color: var(--teal);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.section-heading {
+
+    max-width: 750px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--ocean-dark);
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.enquiry-intro {
+
+    padding: 120px 5%;
+
+    background: white;
+}
+
+.intro-container {
+
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.intro-image {
+
+    position: relative;
+}
+
+.intro-image > img {
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    box-shadow: var(--shadow);
+}
+
+.image-caption {
+
+    position: absolute;
+
+    right: -25px;
+
+    bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px 22px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow: 0 15px 40px rgba(6,59,76,0.15);
+}
+
+.image-caption i {
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--aqua-light);
+
+    color: var(--teal);
+}
+
+.image-caption strong,
+.image-caption span {
+
+    display: block;
+}
+
+.image-caption strong {
+
+    font-size: 14px;
+
+    color: var(--ocean-dark);
+}
+
+.image-caption span {
+
+    font-size: 11px;
+
+    color: var(--muted);
+}
+
+.intro-content h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(35px, 4vw, 52px);
+
+    line-height: 1.15;
+
+    color: var(--ocean-dark);
+
+    margin-bottom: 25px;
+}
+
+.intro-content h2 em {
+
+    display: block;
+
+    color: var(--teal);
+
+    font-style: normal;
+}
+
+.intro-content p {
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+.intro-highlights {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+.intro-highlights div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--ocean-dark);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.intro-highlights i {
+
+    color: var(--teal);
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.enquiry-services {
+
+    padding: 120px 5%;
+
+    background: var(--background);
+}
+
+.services-grid {
+
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.service-card {
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    transition: 0.35s ease;
+}
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow);
+
+    border-color: rgba(22,168,156,0.25);
+}
+
+.service-icon {
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: var(--aqua-light);
+
+    color: var(--teal);
+
+    font-size: 22px;
+
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 23px;
+
+    color: var(--ocean-dark);
+
+    margin-bottom: 12px;
+}
+
+.service-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.service-card a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--teal);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.service-card a i {
+
+    transition: 0.3s ease;
+}
+
+.service-card a:hover i {
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   WHO WE SERVE
+========================================================= */
+
+.who-section {
+
+    padding: 120px 5%;
+
+    background: #eaf7f7;
+}
+
+.who-container {
+
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.who-content h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(35px, 4vw, 52px);
+
+    line-height: 1.15;
+
+    color: var(--ocean-dark);
+
+    margin-bottom: 22px;
+}
+
+.who-content p {
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+}
+
+.dark-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 25px;
+
+    border-radius: 40px;
+
+    background: var(--ocean-dark);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.dark-button:hover {
+
+    background: var(--teal);
+
+    transform: translateY(-3px);
+}
+
+.audience-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.audience-card {
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    border: 1px solid #d7eeee;
+
+    transition: 0.3s ease;
+}
+
+.audience-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+.audience-card > i {
+
+    color: var(--teal);
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+}
+
+.audience-card h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--ocean-dark);
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.audience-card p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CONTACT OPTIONS
+========================================================= */
+
+.contact-options {
+
+    padding: 110px 5%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ocean-deep),
+            var(--ocean)
+        );
+}
+
+.section-heading.light h2 {
+
+    color: white;
+}
+
+.section-heading.light p {
+
+    color: rgba(255,255,255,0.7);
+}
+
+.section-heading.light .section-label {
+
+    color: var(--aqua);
+}
+
+.contact-grid {
+
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.contact-card {
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+
+    transform: translateY(-6px);
+
+    background: rgba(255,255,255,0.13);
+}
+
+.contact-icon {
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(97,217,202,0.15);
+
+    color: var(--aqua);
+
+    font-size: 21px;
+}
+
+.contact-card > span {
+
+    color: var(--aqua);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.contact-card h3 {
+
+    margin: 8px 0;
+
+    font-size: 18px;
+}
+
+.contact-card p {
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-section {
+
+    padding: 120px 5%;
+
+    background: var(--background);
+}
+
+.form-container {
+
+    width: min(1150px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.form-intro h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--ocean-dark);
+
+    font-size: clamp(38px, 4vw, 54px);
+
+    line-height: 1.1;
+
+    margin-bottom: 22px;
+}
+
+.form-intro p {
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+}
+
+.form-note {
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: var(--aqua-light);
+
+    border-radius: 12px;
+
+    color: var(--ocean);
+
+    font-size: 12px;
+}
+
+.form-note i {
+
+    color: var(--teal);
+}
+
+
+/* Form box */
+
+.enquiry-form {
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid var(--border);
+}
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--ocean-dark);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #d6e6e8;
+
+    background: #f9fcfc;
+
+    padding: 14px 15px;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    transition: 0.25s ease;
+}
+
+.form-group input,
+.form-group select {
+
+    height: 52px;
+}
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 170px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--teal);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(22,168,156,0.09);
+}
+
+.submit-button {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 16px;
+
+    border-radius: 40px;
+
+    background: var(--ocean);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: 0.3s ease;
+}
+
+.submit-button:hover {
+
+    background: var(--ocean-dark);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(6,59,76,0.18);
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-section {
+
+    padding: 110px 5%;
+
+    background: white;
+}
+
+.faq-container {
+
+    width: min(900px, 100%);
+
+    margin: auto;
+}
+
+.faq-item {
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.faq-question h3 {
+
+    color: var(--ocean-dark);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 20px;
+}
+
+.faq-question span {
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: var(--aqua-light);
+
+    color: var(--teal);
+
+    flex-shrink: 0;
+}
+
+.faq-item p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    max-width: 750px;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+
+    padding: 120px 5%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063b4c,
+            #087f82
+        );
+}
+
+.cta-content {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    color: white;
+}
+
+.cta-content > span {
+
+    color: var(--aqua);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.cta-content h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    line-height: 1.1;
+
+    margin: 18px 0;
+}
+
+.cta-content p {
+
+    color: rgba(255,255,255,0.75);
+
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+}
+
+.cta-content a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 28px;
+
+    border-radius: 40px;
+
+    background: white;
+
+    color: var(--ocean-dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.cta-content a:hover {
+
+    background: var(--aqua);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .enquiry-nav {
+
+        gap: 15px;
+    }
+
+    .enquiry-nav a {
+
+        font-size: 12px;
+    }
+
+    .intro-container,
+    .who-container,
+    .form-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .intro-image {
+
+        max-width: 700px;
+
+        margin: auto;
+    }
+
+    .services-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
 
 }
 
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .enquiry-header {
+
+        position: absolute;
+    }
+
+    .enquiry-nav,
+    .header-button {
+
+        display: none;
+    }
+
+    .header-container {
+
+        justify-content: center;
+    }
+
+    .enquiry-logo img {
+
+        width: 105px;
+    }
 
 
+    /* Hero */
+
+    .enquiry-hero {
+
+        min-height: 680px;
+    }
+
+    .hero-content {
+
+        padding-top: 90px;
+    }
+
+    .hero-content h1 {
+
+        font-size: 44px;
+    }
+
+    .hero-content p {
+
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .primary-button,
+    .secondary-button {
+
+        justify-content: center;
+    }
+
+    .hero-badge {
+
+        display: none;
+    }
 
 
+    /* General */
 
-/*=========================================================
-              CUSTOM SCROLLBAR
-=========================================================*/
+    .enquiry-intro,
+    .enquiry-services,
+    .who-section,
+    .contact-options,
+    .form-section,
+    .faq-section,
+    .final-cta {
+
+        padding: 80px 6%;
+    }
 
 
-::-webkit-scrollbar{
+    /* Intro */
+
+    .intro-image > img {
+
+        height: 350px;
+    }
+
+    .image-caption {
+
+        right: 10px;
+
+        bottom: 15px;
+    }
+
+    .intro-highlights {
+
+        grid-template-columns: 1fr;
+    }
 
 
-    width:10px;
+    /* Services */
 
+    .services-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Audience */
+
+    .audience-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Contact */
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Form */
+
+    .form-container {
+
+        gap: 40px;
+    }
+
+    .enquiry-form {
+
+        padding: 25px 20px;
+    }
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    /* Typography */
+
+    .section-heading {
+
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+
+        font-size: 35px;
+    }
+
+    .form-intro h2 {
+
+        font-size: 40px;
+    }
+
+    .cta-content h2 {
+
+        font-size: 40px;
+    }
 
 }
 
 
+/* =========================================================
+   SMALL PHONES
+========================================================= */
 
+@media (max-width: 420px) {
 
+    .hero-content h1 {
 
+        font-size: 37px;
+    }
 
+    .hero-label {
 
-::-webkit-scrollbar-track{
+        font-size: 10px;
 
+        letter-spacing: 2px;
+    }
 
-    background:#edf7f8;
+    .service-card,
+    .audience-card,
+    .contact-card {
 
-
-}
-
-
-
-
-
-
-
-::-webkit-scrollbar-thumb{
-
-
-    background:var(--secondary);
-
-
-    border-radius:20px;
-
-
-}
-
-
-
-
-
-
-
-::-webkit-scrollbar-thumb:hover{
-
-
-    background:#00857b;
-
-
-}
-
-
-
-
-
-
-
-/*=========================================================
-              RESPONSIVE FORM DESIGN
-=========================================================*/
-
-
-@media(max-width:992px){
-
-
-.enquiry-form form{
-
-
-    padding:40px;
-
-
-}
-
-
-
-.enquiry-form .form-grid{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-.faq-grid{
-
-
-    grid-template-columns:repeat(2,1fr);
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-@media(max-width:650px){
-
-
-.enquiry-form form{
-
-
-    padding:25px;
-
-
-}
-
-
-
-.enquiry-form button{
-
-
-    width:100%;
-
-
-}
-
-
-
-.faq-grid{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-.enquiry-form input,
-
-.enquiry-form select,
-
-.enquiry-form textarea{
-
-
-    font-size:15px;
-
-
-}
-
+        padding: 25px;
+    }
 
 }

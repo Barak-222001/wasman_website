@@ -11,6 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
         <link rel="stylesheet" href="{{ asset('css/header.css') }}">
         <link rel="stylesheet" href="{{ asset('css/research_assistant.css') }}"> 
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
@@ -137,6 +138,18 @@
                             <strong>Areas of Interest</strong>
                             <small>Our thematic focus</small>
                         </div>
+                    </a>
+                     <a href="/knowledge_bite">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
                     </a>
 
 
@@ -306,6 +319,18 @@
                             <small>Research opportunities</small>
                         </div>
                     </a>
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
+                    </a>
 
                 </div>
 
@@ -366,51 +391,61 @@
     </div>
 
 </header>
- {{-- HERO SECTION --}}
- <section class="research-hero">
+{{-- =========================================================
+     RESEARCH ASSISTANCE PAGE
+========================================================= --}}
 
-    <div class="research-overlay">
+{{-- HERO SECTION --}}
+<section class="research-hero">
 
-        <div class="research-content">
+    <div class="research-hero-overlay"></div>
 
-            <span>RESEARCH ASSISTANCE</span>
+    <div class="research-hero-content">
+
+        <div class="research-hero-text">
+
+            <span class="eyebrow">
+                RESEARCH ASSISTANCE
+            </span>
 
             <h1>
-
                 Supporting Research.
-                Advancing Knowledge.
+                <span>Advancing Knowledge.</span>
                 Protecting Aquatic Ecosystems.
-
             </h1>
 
             <p>
-
-                WASMAN provides research support and
-                collaboration opportunities to advance
-                aquatic science, marine conservation,
-                climate research and sustainable blue
-                economy solutions.
-
+                WASMAN connects researchers, students, institutions
+                and environmental professionals with the expertise,
+                networks and field support needed to generate
+                meaningful knowledge for aquatic sustainability.
             </p>
 
+            <div class="research-hero-actions">
 
-            <div class="research-buttons">
-
-                <a href="#request-form">
-
-                    Request Assistance
-
+                <a href="#request-form" class="primary-research-btn">
+                    Request Research Support
+                    <i class="fas fa-arrow-right"></i>
                 </a>
 
-
-                <a href="#services">
-
-                    Explore Services
-
+                <a href="#services" class="secondary-research-btn">
+                    Explore Our Services
                 </a>
 
             </div>
 
+        </div>
+
+        <div class="research-hero-badge">
+
+            <div class="badge-icon">
+                <i class="fas fa-microscope"></i>
+            </div>
+
+            <div>
+                <strong>Knowledge in Action</strong>
+                <span>Research • Innovation • Impact</span>
+            </div>
 
         </div>
 
@@ -418,616 +453,822 @@
 
 </section>
 
-{{-- ABOUT RESEARCH SUPPORT --}}
-<section class="research-about">
 
+{{-- INTRODUCTION / ABOUT RESEARCH --}}
+<section class="research-introduction">
 
-    <div class="research-image">
+    <div class="research-intro-image">
 
-        <img 
-        src="images/research-team.jpg"
-        alt="Aquatic Research">
+        <div class="image-frame">
+
+            <img
+                src="images/research-team.jpg"
+                alt="Researchers conducting aquatic research">
+
+        </div>
+
+        <div class="research-image-card">
+
+            <strong>100+</strong>
+            <span>Researchers Connected</span>
+
+        </div>
 
     </div>
 
 
-    <div class="research-text">
+    <div class="research-intro-content">
 
-        <span>OUR RESEARCH SUPPORT</span>
-
+        <span class="section-label">
+            OUR RESEARCH SUPPORT
+        </span>
 
         <h2>
-
             Building Knowledge Through
-            Collaboration and Innovation
-
+            <span>Collaboration & Innovation</span>
         </h2>
 
-
         <p>
-
-            WASMAN supports researchers, institutions,
-            students and conservation practitioners by
-            facilitating access to expertise, research
-            networks, field support and knowledge-sharing
-            opportunities.
-
+            WASMAN supports researchers, academic institutions,
+            students, conservation practitioners and environmental
+            organizations by creating opportunities for collaboration,
+            technical support and knowledge exchange.
         </p>
 
-
         <p>
-
-            Through collaboration across aquatic science,
-            climate resilience and blue economy fields,
-            WASMAN contributes to evidence-based solutions
-            for sustainable water resource management.
-
+            From field research and data collection to networking,
+            dissemination and scientific collaboration, our goal is
+            to help transform research ideas into knowledge that
+            contributes to healthier aquatic ecosystems.
         </p>
 
+        <div class="research-highlight-list">
+
+            <div>
+                <i class="fas fa-check"></i>
+                <span>Scientific collaboration</span>
+            </div>
+
+            <div>
+                <i class="fas fa-check"></i>
+                <span>Field research support</span>
+            </div>
+
+            <div>
+                <i class="fas fa-check"></i>
+                <span>Research networking</span>
+            </div>
+
+            <div>
+                <i class="fas fa-check"></i>
+                <span>Knowledge dissemination</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{{-- RESEARCH AREAS --}}
+<section class="research-focus">
+
+    <div class="research-section-heading">
+
+        <div>
+
+            <span class="section-label">
+                RESEARCH FOCUS
+            </span>
+
+            <h2>
+                Areas We Support
+            </h2>
+
+        </div>
+
+        <p>
+            Explore the scientific and environmental areas where
+            WASMAN facilitates research collaboration and support.
+        </p>
 
     </div>
 
 
-</section> 
- {{--RESEARCH ASSISTANCE AREAS  --}}
-<section class="research-areas">
+    <div class="research-focus-grid">
+
+        <div class="research-focus-card">
+
+            <div class="focus-number">01</div>
+
+            <div class="focus-icon">
+                <i class="fas fa-water"></i>
+            </div>
+
+            <h3>
+                Marine Conservation
+            </h3>
+
+            <p>
+                Research focused on marine biodiversity,
+                ecosystem protection and conservation strategies.
+            </p>
+
+            <a href="#">
+                Explore Area
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
 
 
-<div class="section-title">
+        <div class="research-focus-card">
 
-<span>RESEARCH AREAS</span>
+            <div class="focus-number">02</div>
 
-<h2>
-Areas We Support
-</h2>
+            <div class="focus-icon">
+                <i class="fas fa-leaf"></i>
+            </div>
 
-</div>
+            <h3>
+                Aquatic Ecology
+            </h3>
 
+            <p>
+                Support for research involving freshwater,
+                coastal and marine ecosystems.
+            </p>
 
+            <a href="#">
+                Explore Area
+                <i class="fas fa-arrow-right"></i>
+            </a>
 
-<div class="research-grid">
-
-
-<div class="research-card">
-
-<h3>
-Marine Conservation
-</h3>
-
-<p>
-
-Research activities focused on marine biodiversity,
-ecosystem protection and conservation strategies.
-
-</p>
-
-</div>
+        </div>
 
 
+        <div class="research-focus-card">
 
-<div class="research-card">
+            <div class="focus-number">03</div>
 
-<h3>
-Aquatic Ecology
-</h3>
+            <div class="focus-icon">
+                <i class="fas fa-temperature-high"></i>
+            </div>
 
-<p>
+            <h3>
+                Climate Change
+            </h3>
 
-Support for studies involving freshwater and
-marine ecosystems.
+            <p>
+                Research examining climate impacts,
+                adaptation and environmental resilience.
+            </p>
 
-</p>
+            <a href="#">
+                Explore Area
+                <i class="fas fa-arrow-right"></i>
+            </a>
 
-</div>
-
-
-
-
-<div class="research-card">
-
-<h3>
-Climate Change
-</h3>
-
-<p>
-
-Research on climate impacts, adaptation and
-environmental resilience.
-
-</p>
-
-</div>
+        </div>
 
 
+        <div class="research-focus-card">
+
+            <div class="focus-number">04</div>
+
+            <div class="focus-icon">
+                <i class="fas fa-globe-africa"></i>
+            </div>
+
+            <h3>
+                Blue Economy
+            </h3>
+
+            <p>
+                Supporting sustainable ocean-based economic
+                research, innovation and livelihoods.
+            </p>
+
+            <a href="#">
+                Explore Area
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
 
 
-<div class="research-card">
+        <div class="research-focus-card">
 
-<h3>
-Blue Economy
-</h3>
+            <div class="focus-number">05</div>
 
-<p>
+            <div class="focus-icon">
+                <i class="fas fa-fish"></i>
+            </div>
 
-Supporting sustainable ocean-based economic
-research and innovation.
+            <h3>
+                Fisheries Research
+            </h3>
 
-</p>
+            <p>
+                Research supporting sustainable fisheries,
+                aquatic livelihoods and resource management.
+            </p>
 
-</div>
+            <a href="#">
+                Explore Area
+                <i class="fas fa-arrow-right"></i>
+            </a>
 
-
-
-<div class="research-card">
-
-<h3>
-Fisheries Research
-</h3>
-
-<p>
-
-Studies supporting sustainable fisheries
-management and livelihoods.
-
-</p>
-
-</div>
+        </div>
 
 
+        <div class="research-focus-card">
 
-<div class="research-card">
+            <div class="focus-number">06</div>
 
-<h3>
-Water Resources
-</h3>
+            <div class="focus-icon">
+                <i class="fas fa-droplet"></i>
+            </div>
 
-<p>
+            <h3>
+                Water Resources
+            </h3>
 
-Research related to water conservation and
-management.
+            <p>
+                Research related to water conservation,
+                quality assessment and sustainable management.
+            </p>
 
-</p>
+            <a href="#">
+                Explore Area
+                <i class="fas fa-arrow-right"></i>
+            </a>
 
-</div>
+        </div>
 
-
-
-</div>
-
+    </div>
 
 </section>
-{{-- SERVICES WE PROVIDE --}}
+
+
+{{-- RESEARCH SERVICES --}}
 <section class="research-services" id="services">
 
+    <div class="services-intro">
 
-<div class="section-title">
+        <span class="section-label">
+            OUR SERVICES
+        </span>
 
-<span>OUR SERVICES</span>
+        <h2>
+            How We Support
+            <span>Researchers</span>
+        </h2>
 
-<h2>
-How We Support Researchers
-</h2>
+        <p>
+            Our research assistance services are designed to
+            support projects from the initial idea through
+            field implementation and knowledge dissemination.
+        </p>
 
-</div>
-
-
-
-<div class="services-grid">
-
-
-<div>
-
-<h3>
-Field Research Support
-</h3>
-
-<p>
-
-Assistance with field activities,
-sample collection and community engagement.
-
-</p>
-
-</div>
+    </div>
 
 
+    <div class="services-list">
 
-<div>
+        <div class="service-item">
 
-<h3>
-Data Collection & Analysis
-</h3>
+            <div class="service-icon">
+                <i class="fas fa-compass"></i>
+            </div>
 
-<p>
+            <div class="service-content">
 
-Support in organizing, processing and
-interpreting research data.
+                <span>01</span>
 
-</p>
+                <h3>
+                    Field Research Support
+                </h3>
 
-</div>
+                <p>
+                    Assistance with field activities,
+                    sample collection, site visits and
+                    community engagement.
+                </p>
 
+            </div>
 
-
-<div>
-
-<h3>
-Research Networking
-</h3>
-
-<p>
-
-Connecting researchers with experts,
-institutions and collaborators.
-
-</p>
-
-</div>
+        </div>
 
 
+        <div class="service-item">
 
-<div>
+            <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
 
-<h3>
-Knowledge Sharing
-</h3>
+            <div class="service-content">
 
-<p>
+                <span>02</span>
 
-Supporting publications, workshops
-and research dissemination.
+                <h3>
+                    Data Collection & Analysis
+                </h3>
 
-</p>
+                <p>
+                    Support with organizing, processing,
+                    interpreting and presenting research data.
+                </p>
 
-</div>
+            </div>
+
+        </div>
 
 
-</div>
+        <div class="service-item">
 
+            <div class="service-icon">
+                <i class="fas fa-people-group"></i>
+            </div>
+
+            <div class="service-content">
+
+                <span>03</span>
+
+                <h3>
+                    Research Networking
+                </h3>
+
+                <p>
+                    Connecting researchers with experts,
+                    institutions and potential collaborators.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-item">
+
+            <div class="service-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+
+            <div class="service-content">
+
+                <span>04</span>
+
+                <h3>
+                    Knowledge Sharing
+                </h3>
+
+                <p>
+                    Supporting publications, workshops,
+                    conferences and research dissemination.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
-{{-- RESEARCH COLLABORATION NETWORK --}}
+
+
+{{-- COLLABORATION NETWORK --}}
 <section class="research-network">
 
+    <div class="network-overlay"></div>
 
-<div class="network-content">
+    <div class="network-container">
 
+        <div class="network-text">
 
-<span>
-COLLABORATION
-</span>
+            <span class="section-label light">
+                RESEARCH COLLABORATION
+            </span>
 
+            <h2>
+                Connecting Researchers
+                Across Aquatic Science
+                Communities
+            </h2>
 
-<h2>
+            <p>
+                WASMAN brings together scientists, academics,
+                students, policymakers and environmental
+                professionals to encourage collaborative research
+                and meaningful knowledge exchange.
+            </p>
 
-Connecting Researchers Across
-Aquatic Science Communities
+            <a href="#request-form" class="network-btn">
+                Start a Collaboration
+                <i class="fas fa-arrow-right"></i>
+            </a>
 
-</h2>
-
-
-<p>
-
-WASMAN brings together scientists,
-academics, students, policymakers and
-environmental professionals to encourage
-collaborative research and knowledge exchange.
-
-</p>
-
-
-
-<div class="network-stats">
-
-
-<div>
-
-<h2>
-100+
-</h2>
-
-<span>
-Researchers
-</span>
-
-</div>
+        </div>
 
 
+        <div class="network-stat-wrapper">
 
-<div>
+            <div class="network-stat">
 
-<h2>
-30+
-</h2>
+                <strong>100+</strong>
+                <span>Researchers</span>
 
-<span>
-Institutions
-</span>
+            </div>
 
-</div>
+            <div class="network-stat">
 
+                <strong>30+</strong>
+                <span>Institutions</span>
 
+            </div>
 
-<div>
+            <div class="network-stat">
 
-<h2>
-50+
-</h2>
+                <strong>50+</strong>
+                <span>Research Projects</span>
 
-<span>
-Research Projects
-</span>
+            </div>
 
-</div>
+        </div>
 
-
-
-</div>
-
-
-</div>
-
+    </div>
 
 </section>
+
+
 {{-- RESEARCH PROCESS --}}
 <section class="research-process">
 
+    <div class="research-section-heading centered">
 
-<div class="section-title">
+        <span class="section-label">
+            HOW IT WORKS
+        </span>
 
-<span>
-HOW IT WORKS
-</span>
+        <h2>
+            Research Assistance Process
+        </h2>
 
-<h2>
-Research Assistance Process
-</h2>
+        <p>
+            Getting research support from WASMAN is simple.
+            Tell us what you need and our team will help connect
+            you with the appropriate support.
+        </p>
 
-</div>
-
-
-
-<div class="process-grid">
-
-
-<div>
-
-<h3>
-1
-</h3>
-
-<p>
-
-Submit your research request.
-
-</p>
-
-</div>
+    </div>
 
 
-<div>
+    <div class="research-process-grid">
 
-<h3>
-2
-</h3>
+        <div class="process-step">
 
-<p>
+            <div class="step-number">
+                01
+            </div>
 
-Request review and assessment.
+            <h3>
+                Submit Request
+            </h3>
 
-</p>
+            <p>
+                Complete the research assistance form
+                with details about your project.
+            </p>
 
-</div>
-
-
-<div>
-
-<h3>
-3
-</h3>
-
-<p>
-
-Connect with appropriate experts.
-
-</p>
-
-</div>
+        </div>
 
 
-<div>
-
-<h3>
-4
-</h3>
-
-<p>
-
-Receive research support.
-
-</p>
-
-</div>
+        <div class="process-line"></div>
 
 
-</div>
+        <div class="process-step">
 
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Request Review
+            </h3>
+
+            <p>
+                Our team reviews your research needs
+                and determines suitable support.
+            </p>
+
+        </div>
+
+
+        <div class="process-line"></div>
+
+
+        <div class="process-step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Expert Connection
+            </h3>
+
+            <p>
+                We connect you with relevant researchers,
+                institutions or specialists.
+            </p>
+
+        </div>
+
+
+        <div class="process-line"></div>
+
+
+        <div class="process-step">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <h3>
+                Research Support
+            </h3>
+
+            <p>
+                Begin your collaboration and receive
+                the appropriate research assistance.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
-{{-- WHO CAN REQUEST SUPPORT --}}
+
+
+{{-- ELIGIBILITY --}}
 <section class="research-eligibility">
 
+    <div class="eligibility-inner">
 
-<div class="section-title">
+        <div class="eligibility-title">
 
-<span>
-ELIGIBILITY
-</span>
+            <span class="section-label">
+                WHO WE SUPPORT
+            </span>
 
-<h2>
-Who We Support
-</h2>
+            <h2>
+                Research Is Stronger
+                When We Work Together
+            </h2>
 
-</div>
+            <p>
+                Our support is available to individuals and
+                organizations working to improve understanding
+                and management of aquatic environments.
+            </p>
 
-
-
-<div class="eligibility-grid">
-
-
-<div>
-Researchers
-</div>
-
-
-<div>
-University Students
-</div>
+        </div>
 
 
-<div>
-Academic Institutions
-</div>
+        <div class="eligibility-items">
 
+            <div>
+                <i class="fas fa-user-graduate"></i>
+                <span>Researchers</span>
+            </div>
 
-<div>
-Government Agencies
-</div>
+            <div>
+                <i class="fas fa-graduation-cap"></i>
+                <span>University Students</span>
+            </div>
 
+            <div>
+                <i class="fas fa-building-columns"></i>
+                <span>Academic Institutions</span>
+            </div>
 
-<div>
-NGOs
-</div>
+            <div>
+                <i class="fas fa-landmark"></i>
+                <span>Government Agencies</span>
+            </div>
 
+            <div>
+                <i class="fas fa-handshake"></i>
+                <span>NGOs</span>
+            </div>
 
-<div>
-Environmental Organizations
-</div>
+            <div>
+                <i class="fas fa-seedling"></i>
+                <span>Environmental Organizations</span>
+            </div>
 
+        </div>
 
-</div>
-
+    </div>
 
 </section>
-{{-- RESEARCH ASSISTANCE REQUEST FORM --}}
-<section 
-class="research-form"
-id="request-form">
 
 
-<div class="section-title">
+{{-- REQUEST FORM --}}
+<section class="research-request" id="request-form">
 
-<span>
-REQUEST SUPPORT
-</span>
+    <div class="request-heading">
 
+        <span class="section-label">
+            REQUEST SUPPORT
+        </span>
 
-<h2>
-Research Assistance Form
-</h2>
+        <h2>
+            Tell Us About Your
+            Research Project
+        </h2>
 
+        <p>
+            Complete the form below and provide as much
+            information as possible about the research
+            support you require.
+        </p>
 
-</div>
-
-
-
-<form>
-
-
-<div class="form-grid">
-
-
-<input 
-type="text"
-placeholder="Full Name"
->
+    </div>
 
 
-<input 
-type="email"
-placeholder="Email Address"
->
+    <div class="request-form-wrapper">
+
+        <form class="research-form">
+
+            <div class="form-row">
+
+                <div class="form-field">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
 
 
+                <div class="form-field">
 
-<input 
-type="text"
-placeholder="Institution / Organization"
->
+                    <label>
+                        Email Address
+                    </label>
 
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        required>
 
+                </div>
 
-<input 
-type="text"
-placeholder="Research Topic"
->
-
-
-
-<select>
-
-<option>
-Research Area
-</option>
-
-<option>
-Marine Conservation
-</option>
-
-<option>
-Aquatic Ecology
-</option>
-
-<option>
-Climate Change
-</option>
-
-<option>
-Blue Economy
-</option>
-
-<option>
-Fisheries
-</option>
-
-</select>
+            </div>
 
 
+            <div class="form-row">
 
-<input 
-type="text"
-placeholder="Expected Research Timeline"
->
+                <div class="form-field">
 
+                    <label>
+                        Institution / Organization
+                    </label>
 
-</div>
+                    <input
+                        type="text"
+                        placeholder="Institution or organization">
 
-
-
-<textarea
-placeholder="
-Describe your research needs and assistance required.
-">
-</textarea>
+                </div>
 
 
+                <div class="form-field">
 
-<input 
-type="file"
->
+                    <label>
+                        Research Topic
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="What is your research about?">
+
+                </div>
+
+            </div>
 
 
+            <div class="form-row">
 
-<button>
+                <div class="form-field">
 
-Submit Request
+                    <label>
+                        Research Area
+                    </label>
 
-</button>
+                    <select>
+
+                        <option>
+                            Select research area
+                        </option>
+
+                        <option>
+                            Marine Conservation
+                        </option>
+
+                        <option>
+                            Aquatic Ecology
+                        </option>
+
+                        <option>
+                            Climate Change
+                        </option>
+
+                        <option>
+                            Blue Economy
+                        </option>
+
+                        <option>
+                            Fisheries
+                        </option>
+
+                        <option>
+                            Water Resources
+                        </option>
+
+                    </select>
+
+                </div>
 
 
+                <div class="form-field">
 
-</form>
+                    <label>
+                        Expected Research Timeline
+                    </label>
 
+                    <input
+                        type="text"
+                        placeholder="e.g. 3 months">
+
+                </div>
+
+            </div>
+
+
+            <div class="form-field full">
+
+                <label>
+                    Describe Your Research Needs
+                </label>
+
+                <textarea
+                    rows="7"
+                    placeholder="Tell us about your research project and the type of assistance you require."></textarea>
+
+            </div>
+
+
+            <div class="form-field full">
+
+                <label>
+                    Upload Supporting Document
+                </label>
+
+                <div class="file-upload">
+
+                    <i class="fas fa-cloud-arrow-up"></i>
+
+                    <span>
+                        Upload proposal or supporting document
+                    </span>
+
+                    <input type="file">
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="research-submit">
+
+                Submit Research Request
+
+                <i class="fas fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+    </div>
 
 </section>
     </body>

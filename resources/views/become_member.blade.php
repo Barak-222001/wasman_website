@@ -11,6 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
         <link rel="stylesheet" href="{{ asset('css/header.css') }}"> 
         <link rel="stylesheet" href="{{ asset('css/become_member.css') }}"> 
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
@@ -138,7 +139,18 @@
                             <small>Our thematic focus</small>
                         </div>
                     </a>
+                     <a href="/knowledge_bite">
 
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
+                    </a>
 
                     <a href="/ongoing_projects">
                         <div class="wasman-dropdown-icon">
@@ -306,6 +318,18 @@
                             <small>Research opportunities</small>
                         </div>
                     </a>
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
+                    </a>
 
                 </div>
 
@@ -366,44 +390,140 @@
     </div>
 
 </header>
- {{-- HERO SECTION  --}}
+ {{-- =========================================================
+     WASMAN MEMBERSHIP PAGE
+========================================================= --}}
+
+{{-- =========================
+     HERO SECTION
+========================= --}}
 <section class="membership-hero">
 
-    <div class="membership-overlay">
+    <div class="membership-hero-overlay"></div>
 
-        <div class="membership-content">
+    <div class="membership-hero-content">
 
-            <span>JOIN WASMAN</span>
+        <span class="membership-eyebrow">
+            JOIN THE WASMAN NETWORK
+        </span>
 
-            <h1>
+        <h1>
+            Connect. Learn. Lead.
+            <strong>Shape the Future of Aquatic Science.</strong>
+        </h1>
 
-                Become Part of a Growing Community
-                of Women in Aquatic Science
+        <p>
+            Become part of a growing community of researchers, students,
+            professionals, policymakers and environmental leaders working
+            together to build healthier aquatic ecosystems and resilient
+            communities.
+        </p>
 
-            </h1>
+        <div class="membership-hero-actions">
+
+            <a href="#membership-categories" class="membership-primary-btn">
+                Become a Member
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="#membership-benefits" class="membership-secondary-btn">
+                Discover the Benefits
+            </a>
+
+        </div>
+
+        <div class="membership-hero-note">
+            <i class="fas fa-users"></i>
+            <span>Join a growing network advancing aquatic science</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+{{-- =========================
+     INTRODUCTION + STATS
+========================= --}}
+<section class="membership-introduction">
+
+    <div class="membership-intro-container">
+
+        <div class="membership-intro-content">
+
+            <span class="section-label">
+                WHY WASMAN?
+            </span>
+
+            <h2>
+                A Network Built Around
+                <span>People, Science & Impact</span>
+            </h2>
 
             <p>
-
-                Join researchers, students, professionals,
-                policymakers and conservation practitioners
-                committed to advancing aquatic science,
-                environmental sustainability and the blue economy.
-
+                WASMAN brings together women and allies working across aquatic
+                science, marine conservation, environmental management,
+                climate resilience and the blue economy.
             </p>
 
-            <div class="membership-buttons">
+            <p>
+                Membership gives you access to a platform where knowledge,
+                experience and ideas can be exchanged while creating
+                opportunities for collaboration, professional growth and
+                leadership.
+            </p>
 
-                <a href="#membership-form">
+            <a href="#membership-benefits" class="text-link">
+                Explore membership benefits
+                <i class="fas fa-arrow-right"></i>
+            </a>
 
-                    Apply Now
+        </div>
 
-                </a>
 
-                <a href="#categories">
+        <div class="membership-stat-panel">
 
-                    Membership Types
+            <div class="membership-stat">
 
-                </a>
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <strong>600+</strong>
+                <span>Members</span>
+
+            </div>
+
+            <div class="membership-stat">
+
+                <div class="stat-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+
+                <strong>25+</strong>
+                <span>Partner Institutions</span>
+
+            </div>
+
+            <div class="membership-stat">
+
+                <div class="stat-icon">
+                    <i class="fas fa-globe-africa"></i>
+                </div>
+
+                <strong>18</strong>
+                <span>Countries</span>
+
+            </div>
+
+            <div class="membership-stat">
+
+                <div class="stat-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+
+                <strong>120+</strong>
+                <span>Mentorship Matches</span>
 
             </div>
 
@@ -413,65 +533,247 @@
 
 </section>
 
-{{-- WHY JOIN WASMAN --}}
-<section class="why-membership">
 
-    <div class="why-content">
+{{-- =========================
+     MEMBERSHIP CATEGORIES
+========================= --}}
+<section class="membership-categories" id="membership-categories">
 
-        <span>WHY JOIN?</span>
+    <div class="membership-section-heading">
+
+        <span>MEMBERSHIP OPTIONS</span>
 
         <h2>
-
-            Empowering Women Through
-            Collaboration and Leadership
-
+            Find Your Place Within WASMAN
         </h2>
 
         <p>
-
-            WASMAN provides opportunities for professional
-            networking, mentorship, collaborative research,
-            leadership development, policy engagement and
-            capacity building. Members become part of a
-            vibrant community working together to protect
-            aquatic ecosystems and promote sustainable
-            development.
-
+            Whether you are beginning your academic journey, building your
+            professional career or leading environmental initiatives,
+            there is a place for you within the network.
         </p>
 
     </div>
 
-    <div class="membership-stats">
 
-        <div>
+    <div class="membership-category-grid">
 
-            <h2>600+</h2>
 
-            <span>Members</span>
+        {{-- STUDENT --}}
+        <article class="membership-card">
+
+            <div class="membership-card-number">
+                01
+            </div>
+
+            <div class="membership-card-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+
+            <h3>
+                Student / Intern
+            </h3>
+
+            <p>
+                For undergraduate and postgraduate students pursuing studies
+                related to aquatic science, marine conservation,
+                environmental management or related disciplines.
+            </p>
+
+            <a href="#">
+                Explore Membership
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+
+        {{-- PROFESSIONAL --}}
+        <article class="membership-card membership-card-featured">
+
+            <div class="membership-popular">
+                POPULAR
+            </div>
+
+            <div class="membership-card-number">
+                02
+            </div>
+
+            <div class="membership-card-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+
+            <h3>
+                Researcher / Professional
+            </h3>
+
+            <p>
+                Designed for researchers, lecturers, consultants, government
+                officers, conservation practitioners and industry professionals.
+            </p>
+
+            <a href="#">
+                Explore Membership
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+
+        {{-- INSTITUTION --}}
+        <article class="membership-card">
+
+            <div class="membership-card-number">
+                03
+            </div>
+
+            <div class="membership-card-icon">
+                <i class="fas fa-university"></i>
+            </div>
+
+            <h3>
+                Institutional Partner
+            </h3>
+
+            <p>
+                For universities, NGOs, research institutes, government
+                agencies and organizations interested in collaborating
+                with WASMAN.
+            </p>
+
+            <a href="#">
+                Explore Partnership
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+{{-- =========================
+     BENEFITS SECTION
+========================= --}}
+<section class="membership-benefits" id="membership-benefits">
+
+    <div class="benefits-image">
+
+        <img
+            src="{{ asset('pics_vids/outreach.jpeg') }}"
+            alt="WASMAN community engagement"
+        >
+
+        <div class="benefits-image-card">
+
+            <i class="fas fa-water"></i>
+
+            <span>
+                Science
+            </span>
+
+            <strong>
+                Meets Impact
+            </strong>
 
         </div>
 
-        <div>
+    </div>
 
-            <h2>25+</h2>
 
-            <span>Partner Institutions</span>
+    <div class="benefits-content">
 
-        </div>
+        <span class="section-label">
+            MEMBERSHIP BENEFITS
+        </span>
 
-        <div>
+        <h2>
+            More Than Membership.
+            <span>A Platform for Growth.</span>
+        </h2>
 
-            <h2>18</h2>
+        <p>
+            WASMAN membership connects you to opportunities that can
+            strengthen your knowledge, professional network and ability
+            to contribute to sustainable aquatic resource management.
+        </p>
 
-            <span>Countries</span>
 
-        </div>
+        <div class="benefit-list">
 
-        <div>
 
-            <h2>120+</h2>
+            <div class="benefit-item">
 
-            <span>Mentorship Matches</span>
+                <div class="benefit-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+
+                <div>
+                    <h3>Professional Networking</h3>
+
+                    <p>
+                        Connect with researchers, professionals,
+                        institutions and environmental leaders.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <div class="benefit-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+
+                <div>
+                    <h3>Mentorship & Capacity Building</h3>
+
+                    <p>
+                        Access mentorship, workshops, training and
+                        opportunities for professional development.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <div class="benefit-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+
+                <div>
+                    <h3>Research Collaboration</h3>
+
+                    <p>
+                        Participate in collaborative research,
+                        field activities and scientific publications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <div class="benefit-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+
+                <div>
+                    <h3>Leadership Opportunities</h3>
+
+                    <p>
+                        Take part in initiatives that influence
+                        aquatic science and environmental management.
+                    </p>
+                </div>
+
+            </div>
 
         </div>
 
@@ -479,132 +781,97 @@
 
 </section>
 
-{{-- MEMBERSHIP CATEGORIES --}}
-<section class="membership-categories" id="categories">
 
-    <div class="section-title">
+{{-- =========================
+     MEMBERSHIP JOURNEY
+========================= --}}
+<section class="membership-journey">
 
-        <span>MEMBERSHIP TYPES</span>
+    <div class="membership-section-heading">
 
-        <h2>Choose the Membership That Fits You</h2>
+        <span>HOW IT WORKS</span>
 
-    </div>
+        <h2>
+            Your Journey Starts Here
+        </h2>
 
-    <div class="category-grid">
-
-        <div class="member-card">
-
-            <h3>Student Intern</h3>
-
-            <p>
-
-                Undergraduate and postgraduate students
-                pursuing studies related to aquatic science,
-                marine conservation or environmental management.
-
-            </p>
-
-        </div>
-
-        <div class="member-card featured">
-
-            <h3>Volunteer</h3>
-
-            <p>
-
-                Researchers, lecturers, consultants,
-                government officers and industry professionals.
-
-            </p>
-
-        </div>
-
-        <div class="member-card">
-
-            <h3>Research Assistant</h3>
-
-            <p>
-
-                Universities, NGOs, research institutes,
-                government agencies and private organizations.
-
-            </p>
-
-        </div>
+        <p>
+            Becoming part of WASMAN is simple. Follow these four steps
+            and begin your journey with the network.
+        </p>
 
     </div>
 
-</section>
 
-{{-- MEMBERSHIP BENEFITS --}}
-<section class="membership-benefits">
+    <div class="journey-wrapper">
 
-    <div class="section-title">
 
-        <span>BENEFITS</span>
+        <div class="journey-line"></div>
 
-        <h2>Why Members Choose WASMAN</h2>
 
-    </div>
+        <div class="journey-step">
 
-    <div class="benefits-grid">
+            <div class="journey-number">
+                01
+            </div>
 
-        <div class="benefit-card">
-
-            🌍
-
-            <h3>Networking</h3>
+            <h3>
+                Apply
+            </h3>
 
             <p>
-
-                Connect with professionals and researchers
-                across Africa and beyond.
-
+                Complete the online membership application.
             </p>
 
         </div>
 
-        <div class="benefit-card">
 
-            🎓
+        <div class="journey-step">
 
-            <h3>Capacity Building</h3>
+            <div class="journey-number">
+                02
+            </div>
+
+            <h3>
+                Review
+            </h3>
 
             <p>
-
-                Access training, workshops and mentorship
-                programmes.
-
+                Your application is reviewed by the WASMAN team.
             </p>
 
         </div>
 
-        <div class="benefit-card">
 
-            📚
+        <div class="journey-step">
 
-            <h3>Research Collaboration</h3>
+            <div class="journey-number">
+                03
+            </div>
+
+            <h3>
+                Welcome
+            </h3>
 
             <p>
-
-                Participate in collaborative research
-                and publications.
-
+                Receive confirmation and your membership details.
             </p>
 
         </div>
 
-        <div class="benefit-card">
 
-            🌊
+        <div class="journey-step">
 
-            <h3>Leadership</h3>
+            <div class="journey-number">
+                04
+            </div>
+
+            <h3>
+                Engage
+            </h3>
 
             <p>
-
-                Contribute to initiatives that strengthen
-                aquatic science and environmental management.
-
+                Participate in WASMAN activities and opportunities.
             </p>
 
         </div>
@@ -613,142 +880,170 @@
 
 </section>
 
-{{-- MEMBERSHIP JOURNEY --}}
-<section class="membership-process">
 
-    <div class="section-title">
-
-        <span>HOW TO JOIN</span>
-
-        <h2>Your Membership Journey</h2>
-
-    </div>
-
-    <div class="process-grid">
-
-        <div>
-
-            <h3>1</h3>
-
-            <p>Complete the online application.</p>
-
-        </div>
-
-        <div>
-
-            <h3>2</h3>
-
-            <p>Application review by WASMAN.</p>
-
-        </div>
-
-        <div>
-
-            <h3>3</h3>
-
-            <p>Receive approval and welcome email.</p>
-
-        </div>
-
-        <div>
-
-            <h3>4</h3>
-
-            <p>Begin participating in WASMAN activities.</p>
-
-        </div>
-
-    </div>
-
-</section>
-{{-- ELIGIBILTY --}}
+{{-- =========================
+     WHO CAN JOIN
+========================= --}}
 <section class="membership-eligibility">
 
-    <div class="section-title">
+    <div class="eligibility-container">
 
-        <span>ELIGIBILITY</span>
+        <div class="eligibility-content">
 
-        <h2>Who Can Become a Member?</h2>
+            <span class="section-label">
+                WHO CAN JOIN?
+            </span>
 
-    </div>
+            <h2>
+                A Community Open to
+                <span>People Who Care</span>
+            </h2>
 
-    <div class="eligibility-grid">
+            <p>
+                WASMAN welcomes individuals and institutions committed
+                to advancing aquatic science, environmental sustainability
+                and inclusive leadership.
+            </p>
 
-        <div>✔ Students</div>
+        </div>
 
-        <div>✔ Researchers</div>
 
-        <div>✔ Academics</div>
+        <div class="eligibility-list">
 
-        <div>✔ NGOs</div>
+            <div>
+                <i class="fas fa-check"></i>
+                Students
+            </div>
 
-        <div>✔ Government Agencies</div>
+            <div>
+                <i class="fas fa-check"></i>
+                Researchers
+            </div>
 
-        <div>✔ Private Sector Professionals</div>
+            <div>
+                <i class="fas fa-check"></i>
+                Academics
+            </div>
+
+            <div>
+                <i class="fas fa-check"></i>
+                NGOs & Civil Society
+            </div>
+
+            <div>
+                <i class="fas fa-check"></i>
+                Government Agencies
+            </div>
+
+            <div>
+                <i class="fas fa-check"></i>
+                Private Sector Professionals
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
-{{-- FAQ --}}
+
+{{-- =========================
+     FAQ
+========================= --}}
 <section class="membership-faq">
 
-    <div class="section-title">
+    <div class="membership-section-heading">
 
-        <span>FAQ</span>
+        <span>QUESTIONS?</span>
 
-        <h2>Frequently Asked Questions</h2>
+        <h2>
+            Frequently Asked Questions
+        </h2>
 
     </div>
 
-    <div class="faq-container">
+
+    <div class="faq-grid">
+
 
         <div class="faq-item">
 
-            <h3>
+            <div class="faq-question">
 
-                Is membership open internationally?
+                <h3>
+                    Is WASMAN membership open internationally?
+                </h3>
 
-            </h3>
+                <i class="fas fa-plus"></i>
+
+            </div>
 
             <p>
-
-                Yes. WASMAN welcomes members from all countries.
-
+                Yes. WASMAN welcomes members from different countries
+                who share an interest in aquatic science, conservation
+                and sustainable development.
             </p>
 
         </div>
 
+
         <div class="faq-item">
 
-            <h3>
+            <div class="faq-question">
 
-                Is there a membership fee?
+                <h3>
+                    Can students become members?
+                </h3>
 
-            </h3>
+                <i class="fas fa-plus"></i>
+
+            </div>
 
             <p>
-
-                Membership fees, where applicable,
-                will be communicated during registration.
-
+                Absolutely. Students are encouraged to join the network
+                and participate in learning, mentorship and networking
+                opportunities.
             </p>
 
         </div>
 
+
         <div class="faq-item">
 
-            <h3>
+            <div class="faq-question">
 
-                Can students become members?
+                <h3>
+                    Is there a membership fee?
+                </h3>
 
-            </h3>
+                <i class="fas fa-plus"></i>
+
+            </div>
 
             <p>
+                Membership fees, where applicable, will be communicated
+                during the registration process.
+            </p>
 
-                Absolutely. Students are encouraged
-                to participate actively.
+        </div>
 
+
+        <div class="faq-item">
+
+            <div class="faq-question">
+
+                <h3>
+                    What can members participate in?
+                </h3>
+
+                <i class="fas fa-plus"></i>
+
+            </div>
+
+            <p>
+                Members can participate in research, workshops,
+                conferences, mentorship, networking, outreach and
+                other WASMAN initiatives.
             </p>
 
         </div>
@@ -757,31 +1052,37 @@
 
 </section>
 
-{{-- FINAL CTA --}}
-<section class="membership-cta" id="membership-form">
 
-    <span>JOIN THE NETWORK</span>
+{{-- =========================
+     FINAL CTA
+========================= --}}
+<section class="membership-final-cta">
 
-    <h2>
+    <div class="cta-overlay"></div>
 
-        Become a WASMAN Member Today
+    <div class="membership-cta-content">
 
-    </h2>
+        <span>
+            YOUR NEXT CHAPTER STARTS HERE
+        </span>
 
-    <p>
+        <h2>
+            Become Part of Something
+            <strong>Meaningful.</strong>
+        </h2>
 
-        Join a diverse network of women and allies
-        committed to advancing aquatic science,
-        sustainable resource management and
-        environmental stewardship.
+        <p>
+            Join a network of people working together to advance
+            aquatic science, empower women and create sustainable
+            solutions for our oceans, rivers, lakes and communities.
+        </p>
 
-    </p>
+        <a href="#" class="cta-button">
+            Start Your Membership Application
+            <i class="fas fa-arrow-right"></i>
+        </a>
 
-    <a href="#">
-
-        Start Your Membership Application
-
-    </a>
+    </div>
 
 </section>
       

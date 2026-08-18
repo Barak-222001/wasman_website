@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="{{ asset('css/completed.css') }}"> 
 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="stylesheet" href="css/style.css">
 
             
@@ -138,7 +139,18 @@
                             <small>Our thematic focus</small>
                         </div>
                     </a>
+                     <a href="/knowledge_bite">
 
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
+                    </a>
 
                     <a href="/ongoing_projects">
                         <div class="wasman-dropdown-icon">
@@ -305,6 +317,18 @@
                             <strong>Research Assistant</strong>
                             <small>Research opportunities</small>
                         </div>
+                    </a>
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
                     </a>
 
                 </div>

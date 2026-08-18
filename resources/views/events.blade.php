@@ -11,6 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
         <link rel="stylesheet" href="{{ asset('css/header.css') }}">
         <link rel="stylesheet" href="{{ asset('css/events.css') }}"> 
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
@@ -138,7 +139,18 @@
                             <small>Our thematic focus</small>
                         </div>
                     </a>
+                     <a href="/knowledge_bite">
 
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
+                    </a>
 
                     <a href="/ongoing_projects">
                         <div class="wasman-dropdown-icon">
@@ -306,6 +318,18 @@
                             <small>Research opportunities</small>
                         </div>
                     </a>
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
+                    </a>
 
                 </div>
 
@@ -366,322 +390,781 @@
     </div>
 
 </header>
-{{-- HERO SECTION --}}
-<section class="events-hero">
+<!-- =========================================================
+                    EVENTS PAGE
+========================================================= -->
 
-    <div class="events-overlay">
+<section class="wasman-events-page">
 
-        <div class="events-content">
+    <!-- =====================================================
+                         HERO
+    ====================================================== -->
 
-            <span>EVENTS</span>
+    <section class="events-hero">
+
+        <div class="events-hero-overlay"></div>
+
+        <div class="events-hero-content">
+
+            <span class="eyebrow">
+                <i class="fas fa-calendar-alt"></i>
+                WASMAN EVENTS
+            </span>
 
             <h1>
                 Connecting Women Through
-                Learning, Collaboration and Action
+                <strong>Learning, Collaboration & Action</strong>
             </h1>
 
             <p>
-
-                Explore WASMAN's conferences, workshops,
-                seminars, training programmes, webinars
-                and networking events designed to promote
-                leadership in aquatic science and sustainable
-                environmental management.
-
+                Explore conferences, workshops, seminars, training programmes,
+                webinars and networking events designed to promote leadership,
+                scientific exchange and sustainable aquatic resource management.
             </p>
 
-            <a href="#upcoming-events" class="event-btn">
-
-                View Upcoming Events
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-{{-- ABOUT SECTION --}}
-<section class="events-intro">
-
-    <div class="intro-text">
-
-        <span>OUR EVENTS</span>
-
-        <h2>
-
-            Bringing Together Women
-            Transforming Aquatic Science
-
-        </h2>
-
-        <p>
-
-            WASMAN organizes conferences, technical workshops,
-            mentorship programmes, policy dialogues, networking
-            forums and community outreach activities that strengthen
-            collaboration among researchers, practitioners,
-            students and institutions.
-
-            Every event is designed to promote innovation,
-            knowledge exchange and leadership for sustainable
-            management of aquatic ecosystems.
-
-        </p>
-
-    </div>
-
-    <div class="event-stats">
-
-        <div>
-
-            <h2>40+</h2>
-
-            <span>Events Hosted</span>
-
-        </div>
-
-        <div>
-
-            <h2>3,000+</h2>
-
-            <span>Participants</span>
-
-        </div>
-
-        <div>
-
-            <h2>18</h2>
-
-            <span>Countries Reached</span>
-
-        </div>
-
-        <div>
-
-            <h2>60+</h2>
-
-            <span>Expert Speakers</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-{{-- FEATURED EVENTS --}}
-
-<section class="featured-event">
-
-    <div class="featured-event-image">
-
-        <img src="images/featured-event.jpg" alt="Featured Event">
-
-    </div>
-
-    <div class="featured-event-content">
-
-        <span>FEATURED EVENT</span>
-
-        <h2>
-
-            WASMAN International
-            Blue Economy Conference 2027
-
-        </h2>
-
-        <p>
-
-            Join researchers, policymakers,
-            conservation practitioners and students
-            for three days of discussions, networking,
-            keynote presentations and practical sessions
-            on advancing women in aquatic science and
-            sustainable blue economy development.
-
-        </p>
-
-        <div class="event-meta">
-
-            <span>📅 14–16 March 2027</span>
-
-            <span>📍 Accra, Ghana</span>
-
-            <span>👥 500 Participants</span>
-
-        </div>
-
-        <div class="event-actions">
-
-            <a href="#">Register Now</a>
-
-            <a href="#">Learn More</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-{{-- UPCOMING EVENTS --}}
-<section class="upcoming-events" id="upcoming-events">
-
-    <div class="section-title">
-
-        <span>UPCOMING</span>
-
-        <h2>Upcoming Events</h2>
-
-    </div>
-
-    <div class="events-grid">
-
-        <div class="event-card">
-
-            <img src="images/event1.jpg" alt="Workshop">
-
-            <div class="event-card-body">
-
-                <span class="event-tag">
-
-                    Workshop
-
-                </span>
-
-                <h3>
-
-                    Coastal Restoration Workshop
-
-                </h3>
-
-                <p>
-
-                    Hands-on training on ecosystem restoration,
-                    biodiversity conservation and community engagement.
-
-                </p>
-
-                <small>
-
-                    📅 20 April 2027
-
-                </small>
-
-                <a href="#">
-
-                    Register →
-
+            <div class="events-hero-buttons">
+
+                <a href="#upcoming-events" class="primary-event-btn">
+                    Explore Upcoming Events
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="#event-categories" class="secondary-event-btn">
+                    Explore Categories
                 </a>
 
             </div>
 
         </div>
 
-        <!-- Repeat additional event cards -->
+        <div class="hero-scroll">
 
-    </div>
+            <span>SCROLL TO EXPLORE</span>
 
-</section>
+            <i class="fas fa-chevron-down"></i>
 
-{{-- EVENTS CATEGORIES --}}
+        </div>
 
-<section class="event-categories">
+    </section>
 
-    <div class="section-title">
 
-        <span>CATEGORIES</span>
+    <!-- =====================================================
+                     EVENTS INTRODUCTION
+    ====================================================== -->
 
-        <h2>Explore Our Events</h2>
+    <section class="events-overview">
 
-    </div>
+        <div class="events-overview-container">
 
-    <div class="category-grid">
+            <div class="overview-text">
 
-        <div>🎓 Conferences</div>
+                <span class="section-label">
+                    OUR EVENTS
+                </span>
 
-        <div>🧪 Workshops</div>
-
-        <div>💻 Webinars</div>
-
-        <div>🤝 Networking</div>
-
-        <div>🌍 Community Outreach</div>
-
-        <div>🎯 Mentorship</div>
-
-    </div>
-
-</section>
-
-{{-- PAST EVENTS --}}
-<section class="past-events">
-
-    <div class="section-title">
-
-        <span>HIGHLIGHTS</span>
-
-        <h2>Past Events</h2>
-
-    </div>
-
-    <div class="past-events-grid">
-
-        <div class="past-card">
-
-            <img src="images/past1.jpg" alt="Past Event">
-
-            <div class="past-content">
-
-                <h3>
-
-                    Women in Marine Science Symposium
-
-                </h3>
+                <h2>
+                    Creating Spaces Where
+                    <span>Ideas Become Action</span>
+                </h2>
 
                 <p>
-
-                    Researchers, students and industry leaders
-                    shared innovations in marine conservation
-                    and aquatic research.
-
+                    WASMAN organizes conferences, technical workshops,
+                    mentorship programmes, policy dialogues, networking
+                    forums and community outreach activities that bring
+                    together researchers, practitioners, students,
+                    policymakers and institutions.
                 </p>
+
+                <p>
+                    Every event creates an opportunity to exchange knowledge,
+                    build meaningful partnerships and strengthen women's
+                    leadership in aquatic science and environmental management.
+                </p>
+
+                <a href="#upcoming-events" class="text-link">
+                    Discover our events
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <!-- Statistics -->
+
+            <div class="event-statistics">
+
+                <div class="event-stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>40+</h3>
+                        <p>Events Hosted</p>
+                    </div>
+
+                </div>
+
+
+                <div class="event-stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+
+                    <div>
+                        <h3>3,000+</h3>
+                        <p>Participants</p>
+                    </div>
+
+                </div>
+
+
+                <div class="event-stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+
+                    <div>
+                        <h3>18</h3>
+                        <p>Countries Reached</p>
+                    </div>
+
+                </div>
+
+
+                <div class="event-stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+
+                    <div>
+                        <h3>60+</h3>
+                        <p>Expert Speakers</p>
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-        <!-- Repeat additional cards -->
+    </section>
 
-    </div>
 
-</section>
+    <!-- =====================================================
+                     FEATURED EVENT
+    ====================================================== -->
 
-{{-- CALL TO ACTIION --}}
+    <section class="featured-event-section">
 
-<section class="join-event">
+        <div class="featured-event-container">
 
-    <span>BE PART OF THE MOVEMENT</span>
+            <div class="featured-event-image">
 
-    <h2>
+                <img
+                    src="{{ asset('pics_vids/featured-event.jpg') }}"
+                    alt="WASMAN International Blue Economy Conference">
 
-        Join Our Next Event
+                <div class="featured-date">
 
-    </h2>
+                    <span>MAR</span>
+                    <strong>14</strong>
+                    <small>2027</small>
 
-    <p>
+                </div>
 
-        Become part of a growing network of women
-        advancing aquatic science, conservation and
-        sustainable development across Africa and beyond.
+            </div>
 
-    </p>
 
-    <a href="#">
+            <div class="featured-event-content">
 
-        Register for Upcoming Events
+                <span class="section-label">
+                    FEATURED EVENT
+                </span>
 
-    </a>
+                <h2>
+                    WASMAN International
+                    <span>Blue Economy Conference 2027</span>
+                </h2>
+
+                <p>
+                    Join researchers, policymakers, conservation practitioners
+                    and students for three days of discussions, networking,
+                    keynote presentations and practical sessions focused on
+                    advancing women in aquatic science and sustainable blue
+                    economy development.
+                </p>
+
+
+                <div class="featured-event-details">
+
+                    <div>
+
+                        <i class="fas fa-calendar-alt"></i>
+
+                        <div>
+                            <small>DATE</small>
+                            <strong>14–16 March 2027</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fas fa-map-marker-alt"></i>
+
+                        <div>
+                            <small>LOCATION</small>
+                            <strong>Accra, Ghana</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fas fa-users"></i>
+
+                        <div>
+                            <small>EXPECTED</small>
+                            <strong>500 Participants</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="featured-event-buttons">
+
+                    <a href="#" class="primary-event-btn">
+                        Register Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#" class="outline-event-btn">
+                        View Event Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                     UPCOMING EVENTS
+    ====================================================== -->
+
+    <section class="upcoming-events" id="upcoming-events">
+
+        <div class="events-section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    WHAT'S COMING UP
+                </span>
+
+                <h2>
+                    Upcoming Events
+                </h2>
+
+            </div>
+
+            <a href="#" class="view-all-events">
+                View All Events
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="events-card-grid">
+
+
+            <!-- EVENT 1 -->
+
+            <article class="event-card">
+
+                <div class="event-card-image">
+
+                    <img
+                        src="{{ asset('pics_vids/event1.jpg') }}"
+                        alt="Coastal Restoration Workshop">
+
+                    <span class="event-type">
+                        Workshop
+                    </span>
+
+                </div>
+
+                <div class="event-card-content">
+
+                    <div class="event-card-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        20 April 2027
+                    </div>
+
+                    <h3>
+                        Coastal Restoration Workshop
+                    </h3>
+
+                    <p>
+                        Hands-on training on ecosystem restoration,
+                        biodiversity conservation and community engagement.
+                    </p>
+
+                    <div class="event-card-footer">
+
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Cape Coast, Ghana
+                        </span>
+
+                        <a href="#">
+                            Register
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EVENT 2 -->
+
+            <article class="event-card">
+
+                <div class="event-card-image">
+
+                    <img
+                        src="{{ asset('pics_vids/webinar.jpg') }}"
+                        alt="Women in Aquatic Science Webinar">
+
+                    <span class="event-type webinar">
+                        Webinar
+                    </span>
+
+                </div>
+
+                <div class="event-card-content">
+
+                    <div class="event-card-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        15 May 2027
+                    </div>
+
+                    <h3>
+                        Women in Aquatic Science Webinar
+                    </h3>
+
+                    <p>
+                        An interactive online discussion with experts
+                        working across aquatic science and conservation.
+                    </p>
+
+                    <div class="event-card-footer">
+
+                        <span>
+                            <i class="fas fa-video"></i>
+                            Online Event
+                        </span>
+
+                        <a href="#">
+                            Register
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EVENT 3 -->
+
+            <article class="event-card">
+
+                <div class="event-card-image">
+
+                    <img
+                        src="{{ asset('pics_vids/training.jpg') }}"
+                        alt="Aquatic Research Training">
+
+                    <span class="event-type training">
+                        Training
+                    </span>
+
+                </div>
+
+                <div class="event-card-content">
+
+                    <div class="event-card-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        10 June 2027
+                    </div>
+
+                    <h3>
+                        Aquatic Research Methods Training
+                    </h3>
+
+                    <p>
+                        Practical training on research methods, field
+                        data collection and scientific analysis.
+                    </p>
+
+                    <div class="event-card-footer">
+
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Accra, Ghana
+                        </span>
+
+                        <a href="#">
+                            Register
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EVENT 4 -->
+
+            <article class="event-card">
+
+                <div class="event-card-image">
+
+                    <img
+                        src="{{ asset('pics_vids/networking.jpg') }}"
+                        alt="Women Leadership Forum">
+
+                    <span class="event-type networking">
+                        Networking
+                    </span>
+
+                </div>
+
+                <div class="event-card-content">
+
+                    <div class="event-card-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        22 July 2027
+                    </div>
+
+                    <h3>
+                        Women Leadership Networking Forum
+                    </h3>
+
+                    <p>
+                        Connect, collaborate and build partnerships that
+                        strengthen women's leadership in aquatic science.
+                    </p>
+
+                    <div class="event-card-footer">
+
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Takoradi, Ghana
+                        </span>
+
+                        <a href="#">
+                            Register
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                     EVENT CATEGORIES
+    ====================================================== -->
+
+    <section class="event-categories" id="event-categories">
+
+        <div class="categories-heading">
+
+            <span class="section-label">
+                FIND YOUR INTEREST
+            </span>
+
+            <h2>
+                Explore Our Events
+            </h2>
+
+            <p>
+                From scientific conferences to community outreach,
+                discover opportunities that connect you with people,
+                ideas and knowledge.
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <a href="#" class="category-card">
+
+                <div class="category-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <div>
+                    <h3>Conferences</h3>
+                    <p>Knowledge exchange and scientific dialogue.</p>
+                </div>
+
+                <i class="fas fa-arrow-right category-arrow"></i>
+
+            </a>
+
+
+            <a href="#" class="category-card">
+
+                <div class="category-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+
+                <div>
+                    <h3>Workshops</h3>
+                    <p>Practical learning and technical training.</p>
+                </div>
+
+                <i class="fas fa-arrow-right category-arrow"></i>
+
+            </a>
+
+
+            <a href="#" class="category-card">
+
+                <div class="category-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+
+                <div>
+                    <h3>Webinars</h3>
+                    <p>Connect and learn from anywhere.</p>
+                </div>
+
+                <i class="fas fa-arrow-right category-arrow"></i>
+
+            </a>
+
+
+            <a href="#" class="category-card">
+
+                <div class="category-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+
+                <div>
+                    <h3>Networking</h3>
+                    <p>Build meaningful professional connections.</p>
+                </div>
+
+                <i class="fas fa-arrow-right category-arrow"></i>
+
+            </a>
+
+
+            <a href="#" class="category-card">
+
+                <div class="category-icon">
+                    <i class="fas fa-globe-africa"></i>
+                </div>
+
+                <div>
+                    <h3>Community Outreach</h3>
+                    <p>Taking knowledge and action to communities.</p>
+                </div>
+
+                <i class="fas fa-arrow-right category-arrow"></i>
+
+            </a>
+
+
+            <a href="#" class="category-card">
+
+                <div class="category-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+
+                <div>
+                    <h3>Mentorship</h3>
+                    <p>Supporting the next generation of leaders.</p>
+                </div>
+
+                <i class="fas fa-arrow-right category-arrow"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                         PAST EVENTS
+    ====================================================== -->
+
+    <section class="past-events">
+
+        <div class="events-section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    EVENT HIGHLIGHTS
+                </span>
+
+                <h2>
+                    Moments From Our Past Events
+                </h2>
+
+            </div>
+
+            <a href="#" class="view-all-events">
+                View Gallery
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="past-events-grid">
+
+
+            <article class="past-event-card large">
+
+                <img
+                    src="{{ asset('pics_vids/past1.jpg') }}"
+                    alt="Women in Marine Science Symposium">
+
+                <div class="past-event-overlay">
+
+                    <span>SYMPOSIUM</span>
+
+                    <h3>
+                        Women in Marine Science Symposium
+                    </h3>
+
+                    <p>
+                        Researchers, students and industry leaders
+                        sharing innovations in marine conservation.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="past-event-card">
+
+                <img
+                    src="{{ asset('pics_vids/past2.jpg') }}"
+                    alt="Blue Economy Dialogue">
+
+                <div class="past-event-overlay">
+
+                    <span>DIALOGUE</span>
+
+                    <h3>
+                        Blue Economy Policy Dialogue
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <article class="past-event-card">
+
+                <img
+                    src="{{ asset('pics_vids/past3.jpg') }}"
+                    alt="Coastal Outreach">
+
+                <div class="past-event-overlay">
+
+                    <span>OUTREACH</span>
+
+                    <h3>
+                        Coastal Community Outreach
+                    </h3>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                         CTA
+    ====================================================== -->
+
+    <section class="join-event">
+
+        <div class="join-event-decoration"></div>
+
+        <div class="join-event-content">
+
+            <span class="section-label">
+                BE PART OF THE MOVEMENT
+            </span>
+
+            <h2>
+                Your Ideas. Your Voice.
+                <span>Your Impact.</span>
+            </h2>
+
+            <p>
+                Become part of a growing network of women advancing aquatic
+                science, conservation and sustainable development across
+                Africa and beyond.
+            </p>
+
+            <div class="join-event-buttons">
+
+                <a href="#" class="primary-event-btn">
+                    Register for an Upcoming Event
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="#" class="cta-outline-btn">
+                    Become a Member
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </section>
 

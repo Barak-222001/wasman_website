@@ -14,9 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="{{ asset('css/header.css')}}">
-        <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 >  
 
             
@@ -150,7 +148,18 @@
                         </div>
 
                     </a>
+                    <a href="/knowledge_bite">
 
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
+                    </a>
 
                     <a href="/ongoing_projects">
 
@@ -337,6 +346,19 @@
                         <div>
                             <strong>Research Assistant</strong>
                             <small>Work with our researchers</small>
+                        </div>
+
+                    </a>
+
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
                         </div>
 
                     </a>
@@ -881,7 +903,7 @@
         </div>
 
         <div class="imgs">
-            <div class="socials"><img src="{{ asset('pics_vids/youtube_220211.png') }}"><span><a href="/">@wasman-official</a></span></div>
+            <div class="socials"><img src="{{ asset('pics_vids/youtube_220211.png') }}"><span><a href="https://youtube.com/@wasman-official?si=tnqgaMX7BBCAEcsC">@wasman-official</a></span></div>
             <div class="socials"><img src="{{ asset('pics_vids/linkedin-1.png') }}"><span><a href="/">info@wasman.org</a></span></div>
             <div class="socials"><img src="{{ asset('pics_vids/globe.png') }}"><span><a href="/">https://wasman.org</a></span></div>
         </div>  

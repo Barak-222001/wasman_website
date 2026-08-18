@@ -1,1279 +1,1708 @@
-/*=========================================================
-                VOLUNTEER PAGE VARIABLES
-=========================================================*/
+/* =========================================================
+   VOLUNTEER PAGE
+   WASMAN AQUATIC DESIGN SYSTEM
+========================================================= */
 
-:root{
+:root {
 
-    --primary:#003b5c;
-    --secondary:#00a896;
-    --light:#f8fbfc;
-    --white:#ffffff;
-    --text:#555;
-    --shadow:0 18px 45px rgba(0,0,0,.08);
-    --radius:22px;
+    --ocean-dark: #062f3f;
+    --ocean-deep: #043c50;
+    --ocean-blue: #087e9b;
+    --aqua: #13a8b8;
+    --seafoam: #dff7f3;
+    --light-blue: #eef9fb;
+    --white: #ffffff;
+    --text-dark: #12313d;
+    --text-light: #647985;
+    --border: #dcecef;
+
+}
+header nav{
+    margin-right:6%
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.volunteer-hero *,
+.volunteer-introduction *,
+.volunteer-impact *,
+.volunteer-opportunities *,
+.skills-section *,
+.volunteer-journey *,
+.volunteer-application *,
+.volunteer-final-cta * {
+    box-sizing: border-box;
+}
+
+.volunteer-hero a,
+.volunteer-introduction a,
+.volunteer-opportunities a,
+.volunteer-application a,
+.volunteer-final-cta a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.volunteer-hero {
+
+    position: relative;
+
+    min-height: 760px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        url("../pics_vids/mountain.jpeg");
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    overflow: hidden;
 
 }
 
-/*=========================================================
-                VOLUNTEER HERO
-=========================================================*/
 
-.volunteer-hero{
+.volunteer-hero-overlay {
 
-    min-height:100vh;
+    position: absolute;
+
+    inset: 0;
 
     background:
-    linear-gradient(
-        rgba(0,45,70,.82),
-        rgba(0,45,70,.70)
-    ),
-    url(images/volunteer-banner.jpg);
+        linear-gradient(
+            90deg,
+            rgba(3, 35, 48, .94) 0%,
+            rgba(4, 52, 67, .80) 48%,
+            rgba(3, 35, 48, .25) 100%
+        );
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+}
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
 
-}
+.volunteer-hero-content {
+
+    position: relative;
 
-/*=========================================================
-                HERO OVERLAY
-=========================================================*/
+    z-index: 2;
 
-.volunteer-overlay{
+    width: min(1200px, 90%);
 
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    margin: auto;
 
+    color: var(--white);
+
+    padding: 100px 0 70px;
+
 }
+
 
-/*=========================================================
-                HERO CONTENT
-=========================================================*/
+.hero-label {
 
-.volunteer-content{
+    display: flex;
 
-    width:90%;
-    max-width:950px;
+    align-items: center;
 
-    text-align:center;
+    gap: 12px;
 
-    color:white;
+    font-size: 13px;
 
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #8ee8e4;
+
+    margin-bottom: 25px;
+
 }
+
+
+.hero-label span {
 
-.volunteer-content span{
+    width: 38px;
 
-    display:inline-block;
+    height: 2px;
 
-    padding:10px 28px;
+    background: #8ee8e4;
 
-    background:rgba(255,255,255,.15);
+}
+
+
+.volunteer-hero h1 {
 
-    backdrop-filter:blur(10px);
+    max-width: 780px;
 
-    border-radius:50px;
+    font-size: clamp(48px, 6vw, 82px);
 
-    letter-spacing:3px;
+    line-height: 1.03;
 
-    font-size:14px;
+    font-weight: 600;
 
-    margin-bottom:28px;
+    margin: 0 0 28px;
 
+    letter-spacing: -2px;
+
 }
 
-.volunteer-content h1{
 
-    font-size:64px;
+.volunteer-hero h1 strong {
 
-    line-height:1.2;
+    display: block;
 
-    margin-bottom:30px;
+    color: #72d9d7;
 
+    font-weight: 600;
+
 }
 
-.volunteer-content p{
 
-    max-width:760px;
+.volunteer-hero-content > p {
 
-    margin:auto;
+    max-width: 680px;
 
-    line-height:2;
+    color: rgba(255,255,255,.82);
 
-    font-size:20px;
+    font-size: 18px;
 
-    margin-bottom:45px;
+    line-height: 1.8;
 
-}
+    margin-bottom: 38px;
 
-/*=========================================================
-                HERO BUTTONS
-=========================================================*/
+}
 
-.volunteer-buttons{
 
-    display:flex;
+.volunteer-hero-actions {
 
-    justify-content:center;
+    display: flex;
 
-    gap:20px;
+    flex-wrap: wrap;
 
-    flex-wrap:wrap;
+    gap: 15px;
 
 }
 
-.volunteer-buttons a{
 
-    text-decoration:none;
+.primary-volunteer-btn,
+.secondary-volunteer-btn {
 
-    padding:18px 40px;
+    display: inline-flex;
 
-    border-radius:40px;
+    align-items: center;
 
-    font-weight:600;
+    justify-content: center;
 
-    transition:.35s;
+    gap: 20px;
 
-}
+    padding: 16px 25px;
 
-.volunteer-buttons a:first-child{
+    border-radius: 5px;
 
-    background:var(--secondary);
+    font-weight: 700;
 
-    color:white;
+    transition: .3s ease;
 
 }
+
 
-.volunteer-buttons a:first-child:hover{
+.primary-volunteer-btn {
 
-    background:#00857b;
+    background: #72d9d7;
 
-    transform:translateY(-5px);
+    color: var(--ocean-dark);
 
 }
 
-.volunteer-buttons a:last-child{
 
-    border:2px solid white;
+.primary-volunteer-btn:hover {
 
-    color:white;
+    transform: translateY(-3px);
 
+    background: var(--white);
+
 }
 
-.volunteer-buttons a:last-child:hover{
 
-    background:white;
+.primary-volunteer-btn span {
 
-    color:var(--primary);
+    font-size: 20px;
 
 }
 
-/*=========================================================
-                WHY VOLUNTEER
-=========================================================*/
 
-.why-volunteer{
+.secondary-volunteer-btn {
 
-    width:90%;
+    color: var(--white);
 
-    max-width:1300px;
+    border: 1px solid rgba(255,255,255,.45);
 
-    margin:120px auto;
+}
 
-    display:grid;
 
-    grid-template-columns:1fr 1fr;
+.secondary-volunteer-btn:hover {
 
-    gap:70px;
+    background: rgba(255,255,255,.1);
 
-    align-items:center;
+    border-color: var(--white);
 
 }
 
-/*=========================================================
-                IMAGE
-=========================================================*/
 
-.volunteer-image{
+.hero-mini-info {
 
-    overflow:hidden;
+    display: flex;
 
-    border-radius:25px;
+    gap: 45px;
 
-    box-shadow:var(--shadow);
+    margin-top: 65px;
 
 }
 
-.volunteer-image img{
 
-    width:100%;
+.hero-mini-info div {
 
-    display:block;
+    padding-left: 20px;
 
-    transition:.6s;
+    border-left: 1px solid rgba(255,255,255,.3);
 
 }
+
 
-.volunteer-image:hover img{
+.hero-mini-info strong {
 
-    transform:scale(1.08);
+    display: block;
 
+    font-size: 26px;
+
 }
 
-/*=========================================================
-                TEXT CONTENT
-=========================================================*/
 
-.volunteer-text span{
+.hero-mini-info span {
 
-    color:var(--secondary);
+    display: block;
 
-    font-weight:600;
+    color: rgba(255,255,255,.65);
 
-    letter-spacing:3px;
+    font-size: 12px;
 
+    margin-top: 4px;
+
 }
+
+
+.hero-scroll {
+
+    position: absolute;
+
+    bottom: 35px;
 
-.volunteer-text h2{
+    right: 5%;
 
-    font-size:48px;
+    z-index: 2;
 
-    color:var(--primary);
+    color: rgba(255,255,255,.65);
 
-    margin:20px 0;
+    font-size: 10px;
 
-    line-height:1.3;
+    letter-spacing: 2px;
 
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
 }
 
-.volunteer-text p{
 
-    color:var(--text);
+.hero-scroll i {
 
-    line-height:2;
+    width: 40px;
 
-    margin-bottom:30px;
+    height: 1px;
 
+    background: rgba(255,255,255,.6);
+
 }
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
 
-/*=========================================================
-                FEATURE LIST
-=========================================================*/
+.volunteer-introduction {
 
-.volunteer-text ul{
+    width: min(1200px, 90%);
 
-    list-style:none;
+    margin: 0 auto;
 
-    padding:0;
+    padding: 120px 0;
 
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+
+}
+
+
+.volunteer-intro-image {
+
+    position: relative;
+
 }
 
-.volunteer-text li{
 
-    margin-bottom:18px;
+.volunteer-intro-image img {
 
-    padding-left:35px;
+    width: 100%;
 
-    position:relative;
+    height: 550px;
 
-    color:#444;
+    object-fit: cover;
 
+    display: block;
+
 }
+
+
+.image-caption {
 
-.volunteer-text li::before{
+    position: absolute;
 
-    content:"✔";
+    left: 25px;
 
-    position:absolute;
+    bottom: 25px;
 
-    left:0;
+    background: rgba(4,47,63,.94);
 
-    color:var(--secondary);
+    color: white;
 
-    font-weight:bold;
+    padding: 22px 25px;
 
+    width: 250px;
+
 }
+
+
+.image-caption span {
 
-/*=========================================================
-                SECTION TITLE
-=========================================================*/
+    color: #72d9d7;
 
-.section-title{
+    font-size: 10px;
 
-    text-align:center;
+    letter-spacing: 2px;
 
-    margin-bottom:60px;
+    font-weight: 700;
 
 }
 
-.section-title span{
 
-    color:var(--secondary);
+.image-caption p {
 
-    letter-spacing:3px;
+    margin: 8px 0 0;
 
-    font-weight:600;
+    font-size: 13px;
 
+    line-height: 1.5;
+
 }
+
+
+.section-label {
 
-.section-title h2{
+    color: var(--ocean-blue);
 
-    color:var(--primary);
+    font-size: 12px;
 
-    font-size:46px;
+    font-weight: 800;
 
-    margin-top:15px;
+    letter-spacing: 2.5px;
 
 }
 
-/*=========================================================
-                RESPONSIVE
-=========================================================*/
 
-@media(max-width:992px){
+.volunteer-intro-content h2 {
 
-.why-volunteer{
+    color: var(--ocean-dark);
 
-    grid-template-columns:1fr;
+    font-size: clamp(38px, 4vw, 58px);
 
+    line-height: 1.08;
+
+    margin: 20px 0;
+
 }
+
 
-.volunteer-content h1{
+.volunteer-intro-content h2 span,
+.skills-content h2 span,
+.section-heading h2 span {
 
-    font-size:48px;
+    color: var(--ocean-blue);
 
 }
+
+
+.volunteer-intro-content > p {
+
+    color: var(--text-light);
 
+    line-height: 1.85;
+
+    font-size: 16px;
+
 }
 
-@media(max-width:650px){
 
-.volunteer-content h1{
+.volunteer-check-list {
 
-    font-size:34px;
+    margin: 30px 0;
 
 }
+
+
+.volunteer-check-list div {
+
+    display: flex;
+
+    align-items: center;
 
-.volunteer-content p{
+    gap: 15px;
 
-    font-size:16px;
+    margin: 14px 0;
 
 }
+
+
+.volunteer-check-list span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 25px;
 
-.volunteer-buttons{
+    height: 25px;
 
-    flex-direction:column;
+    border-radius: 50%;
 
+    background: var(--seafoam);
+
+    color: var(--ocean-blue);
+
+    font-weight: bold;
+
 }
 
-.volunteer-buttons a{
 
-    width:100%;
+.volunteer-check-list p {
 
-    text-align:center;
+    margin: 0;
 
+    color: var(--text-dark);
+
 }
+
+
+.text-link {
 
-.volunteer-text h2{
+    color: var(--ocean-blue);
 
-    font-size:34px;
+    font-weight: 700;
 
+    display: inline-flex;
+
+    gap: 12px;
+
+    align-items: center;
+
 }
 
-.section-title h2{
 
-    font-size:32px;
+.text-link span {
 
+    transition: .3s;
+
 }
+
+
+.text-link:hover span {
 
+    transform: translateX(5px);
+
 }
 
-/*=========================================================
-                VOLUNTEER OPPORTUNITIES
-=========================================================*/
 
-.volunteer-opportunities{
+/* =========================================================
+   IMPACT
+========================================================= */
 
-    width:90%;
+.volunteer-impact {
 
-    max-width:1300px;
+    background: var(--ocean-dark);
 
-    margin:120px auto;
+    color: white;
 
-}
+    padding: 85px 5%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.7fr;
+
+    align-items: center;
+
+    gap: 80px;
 
+}
 
 
-/*=========================================================
-                OPPORTUNITY GRID
-=========================================================*/
+.impact-heading span {
 
-.opportunity-grid{
+    color: #72d9d7;
 
-    display:grid;
+    font-size: 11px;
 
-    grid-template-columns:repeat(4,1fr);
+    letter-spacing: 2px;
 
-    gap:30px;
+    font-weight: 700;
 
 }
+
+
+.impact-heading h2 {
+
+    max-width: 430px;
+
+    font-size: 40px;
+
+    line-height: 1.15;
 
+    margin: 15px 0 0;
 
+}
 
-/*=========================================================
-                VOLUNTEER CARD
-=========================================================*/
 
-.volunteer-card{
+.impact-stat-grid {
 
-    background:white;
+    display: grid;
 
-    padding:45px 30px;
+    grid-template-columns: repeat(4, 1fr);
 
-    border-radius:22px;
+}
 
-    box-shadow:var(--shadow);
 
-    position:relative;
+.impact-stat {
 
-    overflow:hidden;
+    padding: 20px 25px;
 
-    transition:.35s;
+    border-left: 1px solid rgba(255,255,255,.18);
 
 }
 
 
+.impact-stat strong {
 
-.volunteer-card::before{
+    display: block;
 
-    content:"";
+    font-size: 42px;
 
-    position:absolute;
+    color: #72d9d7;
 
-    top:0;
+}
 
-    left:0;
 
-    width:100%;
+.impact-stat span {
 
-    height:6px;
+    color: rgba(255,255,255,.65);
 
-    background:var(--secondary);
+    font-size: 13px;
 
 }
 
 
+/* =========================================================
+   OPPORTUNITIES
+========================================================= */
 
-.volunteer-card:hover{
+.volunteer-opportunities {
 
-    transform:translateY(-12px);
+    padding: 120px 5%;
 
-    box-shadow:0 25px 55px rgba(0,0,0,.15);
+    background: #f7fbfc;
 
 }
+
+
+.section-heading {
+
+    max-width: 1200px;
 
+    margin: 0 auto 55px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: end;
+
+}
 
 
-.volunteer-card h3{
+.section-heading h2 {
 
-    color:var(--primary);
+    font-size: 52px;
 
-    font-size:25px;
+    line-height: 1.08;
 
-    line-height:1.4;
+    color: var(--ocean-dark);
 
-    margin-bottom:18px;
+    margin: 17px 0 0;
 
 }
 
 
+.section-heading > p {
 
-.volunteer-card p{
+    color: var(--text-light);
 
-    color:var(--text);
+    line-height: 1.8;
 
-    line-height:1.8;
+    margin: 0;
 
 }
 
 
+.opportunity-grid {
 
-/*=========================================================
-                VOLUNTEER IMPACT SECTION
-=========================================================*/
+    width: min(1200px, 100%);
 
-.volunteer-impact{
+    margin: auto;
 
-    width:90%;
+    display: grid;
 
-    max-width:1300px;
+    grid-template-columns: repeat(4, 1fr);
 
-    margin:120px auto;
+    gap: 18px;
 
 }
 
 
+.opportunity-card {
 
-/*=========================================================
-                IMPACT GRID
-=========================================================*/
+    position: relative;
 
-.impact-grid{
+    background: white;
 
-    display:grid;
+    border: 1px solid var(--border);
 
-    grid-template-columns:repeat(4,1fr);
+    padding: 38px 28px;
 
-    gap:30px;
+    min-height: 350px;
 
-}
+    transition: .35s ease;
 
+}
 
 
-/*=========================================================
-                IMPACT CARD
-=========================================================*/
+.opportunity-card:hover {
 
-.impact-grid div{
+    transform: translateY(-8px);
 
-    background:white;
+    box-shadow: 0 20px 45px rgba(5,55,70,.1);
 
-    padding:45px 25px;
+}
 
-    border-radius:22px;
 
-    text-align:center;
+.featured-opportunity {
 
-    box-shadow:var(--shadow);
+    background: var(--ocean-dark);
 
-    transition:.35s;
+    color: white;
 
 }
+
+
+.opportunity-number {
+
+    font-size: 12px;
 
+    color: var(--ocean-blue);
 
+    font-weight: 800;
 
-.impact-grid div:hover{
+}
+
+
+.featured-opportunity .opportunity-number {
 
-    transform:translateY(-10px);
+    color: #72d9d7;
 
 }
+
+
+.opportunity-icon {
+
+    font-size: 34px;
 
+    margin: 35px 0 20px;
 
+}
 
-.impact-grid h2{
 
-    font-size:50px;
+.opportunity-card h3 {
 
-    color:var(--secondary);
+    font-size: 22px;
 
-    margin-bottom:15px;
+    margin-bottom: 15px;
 
 }
+
+
+.opportunity-card p {
 
+    color: var(--text-light);
 
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
 
-.impact-grid span{
 
-    color:#666;
+.featured-opportunity p {
 
-    font-size:16px;
+    color: rgba(255,255,255,.68);
 
 }
 
 
+.opportunity-card a {
 
-/*=========================================================
-                SKILLS SECTION
-=========================================================*/
+    position: absolute;
 
-.skills-needed{
+    bottom: 30px;
 
-    width:90%;
+    color: var(--ocean-blue);
 
-    max-width:1300px;
+    font-size: 13px;
 
-    margin:120px auto;
+    font-weight: 700;
 
 }
+
+
+.featured-opportunity a {
+
+    color: #72d9d7;
+
+}
+
 
+/* =========================================================
+   SKILLS
+========================================================= */
 
+.skills-section {
 
-/*=========================================================
-                SKILLS GRID
-=========================================================*/
+    width: min(1200px, 90%);
 
-.skills-grid{
+    margin: auto;
 
-    display:grid;
+    padding: 120px 0;
 
-    grid-template-columns:repeat(4,1fr);
+    display: grid;
 
-    gap:25px;
+    grid-template-columns: .8fr 1.2fr;
 
+    gap: 100px;
+
 }
+
+
+.skills-content h2 {
 
+    color: var(--ocean-dark);
 
+    font-size: 50px;
 
-/*=========================================================
-                SKILL CARDS
-=========================================================*/
+    line-height: 1.08;
 
-.skills-grid div{
+    margin: 18px 0;
 
-    background:white;
+}
 
-    padding:35px 20px;
 
-    border-radius:18px;
+.skills-content p {
 
-    text-align:center;
+    color: var(--text-light);
 
-    font-size:20px;
+    line-height: 1.8;
+
+}
 
-    font-weight:600;
 
-    color:var(--primary);
+.skills-list {
 
-    box-shadow:var(--shadow);
+    display: grid;
 
-    transition:.35s;
+    grid-template-columns: repeat(2, 1fr);
 
-    position:relative;
+    border-top: 1px solid var(--border);
 
 }
 
 
+.skill-item {
 
-/* Accent line */
+    display: flex;
 
-.skills-grid div::before{
+    align-items: center;
 
-    content:"";
+    gap: 25px;
 
-    position:absolute;
+    padding: 24px 10px;
 
-    top:0;
+    border-bottom: 1px solid var(--border);
 
-    left:0;
+    transition: .3s;
 
-    width:100%;
+}
+
+
+.skill-item:nth-child(odd) {
 
-    height:5px;
+    border-right: 1px solid var(--border);
 
-    background:var(--secondary);
+    padding-right: 25px;
 
 }
+
+
+.skill-item span {
+
+    color: var(--aqua);
 
+    font-size: 11px;
 
+    font-weight: 700;
 
-.skills-grid div:hover{
+}
+
+
+.skill-item h3 {
 
-    background:var(--secondary);
+    font-size: 16px;
 
-    color:white;
+    color: var(--ocean-dark);
 
-    transform:translateY(-8px);
+    margin: 0;
 
 }
+
+
+.skill-item:hover {
+
+    padding-left: 18px;
 
+    background: var(--light-blue);
 
+}
 
-/*=========================================================
-                VOLUNTEER JOURNEY
-=========================================================*/
 
-.volunteer-process{
+/* =========================================================
+   JOURNEY
+========================================================= */
 
-    width:90%;
+.volunteer-journey {
 
-    max-width:1300px;
+    background: var(--light-blue);
 
-    margin:120px auto;
+    padding: 110px 5%;
 
 }
 
 
+.centered {
 
-/*=========================================================
-                PROCESS GRID
-=========================================================*/
+    display: block;
 
-.volunteer-process .process-grid{
+    text-align: center;
 
-    display:grid;
+    max-width: 700px;
+
+}
 
-    grid-template-columns:repeat(4,1fr);
 
-    gap:30px;
+.centered h2 {
 
-    position:relative;
+    font-size: 50px;
 
 }
 
 
+.centered p {
 
-/* Timeline line */
+    margin: 20px auto 0;
 
-.volunteer-process .process-grid::before{
+    max-width: 600px;
 
-    content:"";
+}
 
-    position:absolute;
 
-    top:55px;
+.journey-wrapper {
 
-    left:8%;
+    width: min(1100px, 100%);
 
-    width:84%;
+    margin: 80px auto 0;
 
-    height:4px;
+    display: grid;
 
-    background:#dcefee;
+    grid-template-columns: repeat(4, 1fr);
 
-    z-index:0;
+    position: relative;
 
 }
+
+
+.journey-line {
 
+    position: absolute;
 
+    top: 31px;
 
-/*=========================================================
-                PROCESS CARDS
-=========================================================*/
+    left: 12%;
 
-.volunteer-process .process-grid div{
+    right: 12%;
 
-    background:white;
+    height: 1px;
 
-    padding:45px 30px;
+    background: #aad8dc;
 
-    border-radius:22px;
+}
 
-    text-align:center;
 
-    box-shadow:var(--shadow);
+.journey-step {
 
-    position:relative;
+    position: relative;
 
-    z-index:2;
+    text-align: center;
 
-    transition:.35s;
+    padding: 0 20px;
 
 }
 
 
+.step-circle {
 
-.volunteer-process .process-grid div:hover{
+    position: relative;
 
-    transform:translateY(-10px);
+    z-index: 2;
 
-}
+    width: 64px;
+
+    height: 64px;
 
+    margin: auto;
 
+    border-radius: 50%;
 
-/*=========================================================
-                PROCESS NUMBER
-=========================================================*/
+    display: flex;
 
-.volunteer-process .process-grid h3{
+    align-items: center;
 
-    width:80px;
+    justify-content: center;
 
-    height:80px;
+    background: var(--ocean-dark);
 
-    margin:0 auto 25px;
+    color: #72d9d7;
 
-    background:var(--secondary);
+    font-weight: 700;
 
-    color:white;
+    border: 7px solid var(--light-blue);
 
-    display:flex;
+    box-shadow: 0 0 0 1px #aad8dc;
 
-    justify-content:center;
+}
 
-    align-items:center;
 
-    border-radius:50%;
+.journey-step h3 {
 
-    font-size:32px;
+    color: var(--ocean-dark);
 
+    margin: 25px 0 10px;
+
 }
 
 
+.journey-step p {
 
-.volunteer-process .process-grid p{
+    color: var(--text-light);
 
-    color:var(--text);
+    font-size: 13px;
 
-    line-height:1.8;
+    line-height: 1.6;
 
 }
-
 
 
-/*=========================================================
-                RESPONSIVE DESIGN
-=========================================================*/
+/* =========================================================
+   APPLICATION
+========================================================= */
 
-@media(max-width:1100px){
+.volunteer-application {
 
-.opportunity-grid{
+    padding: 120px 5%;
 
-    grid-template-columns:repeat(2,1fr);
+    background: white;
 
 }
+
+
+.application-wrapper {
+
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
 
-.impact-grid{
+    gap: 80px;
 
-    grid-template-columns:repeat(2,1fr);
+    align-items: start;
 
 }
 
-.skills-grid{
 
-    grid-template-columns:repeat(2,1fr);
+.application-intro {
 
+    padding-top: 30px;
+
 }
+
+
+.application-intro h2 {
 
-.volunteer-process .process-grid{
+    color: var(--ocean-dark);
 
-    grid-template-columns:repeat(2,1fr);
+    font-size: 55px;
 
+    line-height: 1.05;
+
+    margin: 20px 0;
+
 }
+
 
+.application-intro h2 span {
 
-.volunteer-process .process-grid::before{
+    display: block;
 
-    display:none;
+    color: var(--ocean-blue);
 
 }
 
+
+.application-intro > p {
+
+    color: var(--text-light);
+
+    line-height: 1.8;
+
 }
 
 
+.application-note {
 
-@media(max-width:650px){
+    display: flex;
 
-.opportunity-grid,
+    gap: 15px;
 
-.impact-grid,
+    margin-top: 40px;
 
-.skills-grid,
+    padding: 20px;
 
-.volunteer-process .process-grid{
+    background: var(--light-blue);
 
-    grid-template-columns:1fr;
+    border-left: 3px solid var(--aqua);
 
 }
 
 
-.volunteer-card h3{
+.application-note span {
 
-    font-size:23px;
+    font-size: 22px;
 
 }
 
 
-.impact-grid h2{
+.application-note p {
 
-    font-size:40px;
+    margin: 0;
 
-}
+    color: var(--text-dark);
+
+    font-size: 13px;
 
+    line-height: 1.6;
 
-.volunteer-process .process-grid h3{
+}
 
-    width:65px;
 
-    height:65px;
+.volunteer-form-container {
 
-    font-size:26px;
+    background: var(--ocean-dark);
 
+    padding: 45px;
+
 }
+
+
+.form-header {
+
+    color: white;
+
+    margin-bottom: 30px;
 
 }
 
-/*=========================================================
-                VOLUNTEER APPLICATION SECTION
-=========================================================*/
 
-.volunteer-form{
+.form-header span {
 
-    width:90%;
+    color: #72d9d7;
 
-    max-width:1200px;
+    font-size: 10px;
 
-    margin:130px auto;
+    font-weight: 700;
 
+    letter-spacing: 2px;
+
 }
+
+
+.form-header h3 {
 
+    font-size: 30px;
 
+    margin: 10px 0 0;
 
-/*=========================================================
-                FORM CONTAINER
-=========================================================*/
+}
 
-.volunteer-form form{
 
-    background:white;
+.volunteer-form .form-row {
 
-    padding:60px;
+    display: grid;
 
-    border-radius:30px;
+    grid-template-columns: 1fr 1fr;
 
-    box-shadow:var(--shadow);
+    gap: 18px;
 
 }
 
 
+.form-group {
 
-/*=========================================================
-                FORM GRID
-=========================================================*/
+    margin-bottom: 20px;
 
-.volunteer-form .form-grid{
+}
 
-    display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+.form-group label {
 
-    gap:25px;
+    display: block;
 
-    margin-bottom:30px;
+    color: rgba(255,255,255,.8);
 
-}
+    font-size: 12px;
 
+    margin-bottom: 8px;
 
+}
 
-/*=========================================================
-                INPUT FIELDS
-=========================================================*/
 
 .volunteer-form input,
-
 .volunteer-form select,
+.volunteer-form textarea {
 
-.volunteer-form textarea{
+    width: 100%;
 
-    width:100%;
+    border: 1px solid rgba(255,255,255,.18);
 
-    padding:18px 20px;
+    background: rgba(255,255,255,.07);
 
-    border:1px solid #d9e5e8;
+    color: white;
 
-    border-radius:14px;
+    padding: 14px 15px;
 
-    font-size:16px;
+    outline: none;
 
-    font-family:inherit;
+    font-family: inherit;
 
-    outline:none;
+    font-size: 13px;
 
-    background:#fcfefe;
-
-    transition:.35s;
+    border-radius: 3px;
 
 }
 
 
+.volunteer-form input::placeholder,
+.volunteer-form textarea::placeholder {
 
-/*=========================================================
-                INPUT FOCUS
-=========================================================*/
+    color: rgba(255,255,255,.4);
+
+}
+
 
 .volunteer-form input:focus,
-
 .volunteer-form select:focus,
+.volunteer-form textarea:focus {
 
-.volunteer-form textarea:focus{
-
-    border-color:var(--secondary);
-
-    box-shadow:
-
-    0 0 0 4px rgba(0,168,150,.12);
+    border-color: #72d9d7;
 
 }
 
 
+.volunteer-form select option {
 
-/*=========================================================
-                TEXTAREA
-=========================================================*/
-
-.volunteer-form textarea{
-
-    min-height:190px;
-
-    resize:vertical;
-
-    margin-bottom:30px;
+    color: var(--ocean-dark);
 
 }
 
 
+.volunteer-form textarea {
 
-/*=========================================================
-                DATE INPUT
-=========================================================*/
-
-.volunteer-form input[type="date"]{
-
-    color:#666;
+    resize: vertical;
 
 }
 
 
+.submit-volunteer {
 
-/*=========================================================
-                SUBMIT BUTTON
-=========================================================*/
+    border: none;
 
-.volunteer-form button{
+    background: #72d9d7;
 
-    padding:18px 50px;
+    color: var(--ocean-dark);
 
-    background:var(--secondary);
+    padding: 16px 24px;
 
-    border:none;
+    font-weight: 800;
 
-    border-radius:40px;
+    cursor: pointer;
 
-    color:white;
+    display: flex;
 
-    font-size:17px;
+    align-items: center;
 
-    font-weight:600;
+    justify-content: center;
 
-    cursor:pointer;
+    gap: 25px;
 
-    transition:.35s;
+    width: 100%;
 
-}
-
-
-
-.volunteer-form button:hover{
-
-    background:#00857b;
-
-    transform:translateY(-5px);
+    transition: .3s;
 
 }
 
 
+.submit-volunteer:hover {
 
-/*=========================================================
-                FORM PLACEHOLDER
-=========================================================*/
-
-.volunteer-form ::placeholder{
-
-    color:#8b989c;
+    background: white;
 
 }
 
 
+/* =========================================================
+   FINAL CTA
+========================================================= */
 
-/*=========================================================
-                SUCCESS MESSAGE STYLE
-=========================================================*/
+.volunteer-final-cta {
 
-.form-success{
+    position: relative;
 
-    background:#e7faf5;
+    min-height: 450px;
 
-    color:#00796b;
+    display: flex;
 
-    padding:20px;
+    align-items: center;
 
-    border-radius:15px;
+    justify-content: center;
 
-    margin-top:25px;
+    text-align: center;
 
-    text-align:center;
+    padding: 80px 5%;
 
-}
+    color: white;
 
+    background:
+        linear-gradient(
+            rgba(3,43,57,.91),
+            rgba(3,43,57,.91)
+        ),
+        url("images/volunteer-cta.jpg");
 
+    background-size: cover;
 
-/*=========================================================
-                ANIMATION EFFECTS
-=========================================================*/
-
-.volunteer-card,
-
-.impact-grid div,
-
-.skills-grid div,
-
-.volunteer-process .process-grid div,
-
-.volunteer-form form{
-
-    animation:volunteerReveal .8s ease forwards;
+    background-position: center;
 
 }
 
 
+.cta-content {
 
-@keyframes volunteerReveal{
+    max-width: 750px;
 
-    from{
+}
 
-        opacity:0;
 
-        transform:translateY(40px);
+.cta-content > span {
+
+    color: #72d9d7;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.cta-content h2 {
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    margin: 20px 0;
+
+}
+
+
+.cta-content h2 strong {
+
+    color: #72d9d7;
+
+    display: block;
+
+}
+
+
+.cta-content p {
+
+    color: rgba(255,255,255,.7);
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+}
+
+
+.cta-content a {
+
+    display: inline-flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+    background: #72d9d7;
+
+    color: var(--ocean-dark);
+
+    padding: 16px 25px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+.cta-content a:hover {
+
+    background: white;
+
+}
+
+
+.cta-content a span {
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .volunteer-introduction,
+    .skills-section,
+    .application-wrapper {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
 
     }
 
 
-    to{
+    .volunteer-impact {
 
-        opacity:1;
+        grid-template-columns: 1fr;
 
-        transform:translateY(0);
+        gap: 45px;
+
+    }
+
+
+    .opportunity-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .section-heading {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
 
     }
 
 }
 
 
+@media (max-width: 750px) {
 
-/*=========================================================
-                IMAGE EFFECTS
-=========================================================*/
+    .volunteer-hero {
 
-.volunteer-image img{
+        min-height: 680px;
 
-    transition:.6s ease;
+    }
+
+
+    .volunteer-hero h1 {
+
+        font-size: 46px;
+
+    }
+
+
+    .hero-mini-info {
+
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .hero-scroll {
+
+        display: none;
+
+    }
+
+
+    .volunteer-introduction,
+    .skills-section,
+    .volunteer-application {
+
+        padding: 80px 0;
+
+    }
+
+
+    .volunteer-intro-image img {
+
+        height: 400px;
+
+    }
+
+
+    .impact-stat-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+    }
+
+
+    .impact-stat {
+
+        border-left: none;
+
+        border-bottom: 1px solid rgba(255,255,255,.15);
+
+        padding: 20px 0;
+
+    }
+
+
+    .opportunity-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .section-heading h2,
+    .skills-content h2,
+    .centered h2,
+    .application-intro h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .skills-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .skill-item:nth-child(odd) {
+
+        border-right: none;
+
+        padding-right: 10px;
+
+    }
+
+
+    .journey-wrapper {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .journey-line {
+
+        top: 30px;
+
+        bottom: 30px;
+
+        left: 50%;
+
+        right: auto;
+
+        width: 1px;
+
+        height: auto;
+
+    }
+
+
+    .journey-step {
+
+        background: var(--light-blue);
+
+        position: relative;
+
+    }
+
+
+    .volunteer-form-container {
+
+        padding: 28px 20px;
+
+    }
+
+
+    .volunteer-form .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
 
 }
 
 
+@media (max-width: 480px) {
 
-.volunteer-image:hover img{
+    .volunteer-hero-content > p {
 
-    transform:scale(1.08);
+        font-size: 15px;
 
-}
+    }
 
 
+    .volunteer-hero-actions {
 
-/*=========================================================
-                GLOBAL BUTTON EFFECTS
-=========================================================*/
+        flex-direction: column;
 
-button,
-a{
+        align-items: stretch;
 
-    transition:.35s ease;
+    }
 
-}
 
+    .primary-volunteer-btn,
+    .secondary-volunteer-btn {
 
+        width: 100%;
 
-/*=========================================================
-                SMOOTH PAGE SCROLL
-=========================================================*/
+    }
 
-html{
 
-    scroll-behavior:smooth;
+    .hero-mini-info {
 
-}
+        margin-top: 40px;
 
+    }
 
 
-/*=========================================================
-                CUSTOM SCROLLBAR
-=========================================================*/
+    .impact-heading h2 {
 
-::-webkit-scrollbar{
+        font-size: 32px;
 
-    width:10px;
+    }
 
-}
 
+    .impact-stat strong {
 
+        font-size: 32px;
 
-::-webkit-scrollbar-track{
+    }
 
-    background:#edf7f8;
 
-}
+    .image-caption {
 
+        left: 15px;
 
+        bottom: 15px;
 
-::-webkit-scrollbar-thumb{
-
-    background:var(--secondary);
-
-    border-radius:20px;
-
-}
-
-
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#00857b;
-
-}
-
-
-
-/*=========================================================
-                RESPONSIVE FORM DESIGN
-=========================================================*/
-
-@media(max-width:992px){
-
-.volunteer-form form{
-
-    padding:40px;
-
-}
-
-
-.volunteer-form .form-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-}
-
-
-
-@media(max-width:650px){
-
-.volunteer-form form{
-
-    padding:25px;
-
-}
-
-
-.volunteer-form button{
-
-    width:100%;
-
-}
-
-
-.volunteer-form input,
-
-.volunteer-form select,
-
-.volunteer-form textarea{
-
-    font-size:15px;
-
-}
+    }
 
 }

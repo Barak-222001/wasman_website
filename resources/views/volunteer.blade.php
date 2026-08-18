@@ -11,6 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
         <link rel="stylesheet" href="{{ asset('css/header.css') }}"> 
         <link rel="stylesheet" href="{{ asset('css/volunteer.css') }}"> 
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
@@ -137,6 +138,18 @@
                             <strong>Areas of Interest</strong>
                             <small>Our thematic focus</small>
                         </div>
+                    </a>
+                     <a href="/knowledge_bite">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
                     </a>
 
 
@@ -306,6 +319,18 @@
                             <small>Research opportunities</small>
                         </div>
                     </a>
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
+                    </a>
 
                 </div>
 
@@ -366,158 +391,460 @@
     </div>
 
 </header>
-{{-- HERO SECTION --}}
+{{-- =========================================================
+     VOLUNTEER HERO
+========================================================= --}}
 <section class="volunteer-hero">
 
-    <div class="volunteer-overlay">
+    <div class="volunteer-hero-overlay"></div>
 
-        <div class="volunteer-content">
+    <div class="volunteer-hero-content">
 
-            <span>VOLUNTEER WITH WASMAN</span>
+        <div class="hero-label">
+            <span></span>
+            VOLUNTEER WITH WASMAN
+        </div>
 
-            <h1>
+        <h1>
+            Your Passion Can Help
+            <strong>Protect Our Waters.</strong>
+        </h1>
 
-                Be the Change.
-                Protect Our Waters.
-                Inspire Communities.
+        <p>
+            Join a growing community of people working together to
+            protect aquatic ecosystems, support coastal communities
+            and promote environmental sustainability.
+        </p>
 
-            </h1>
+        <div class="volunteer-hero-actions">
 
-            <p>
+            <a href="#application" class="primary-volunteer-btn">
+                Become a Volunteer
+                <span>→</span>
+            </a>
 
-                Join a growing network of passionate volunteers
-                committed to marine conservation, environmental
-                education, climate action and sustainable aquatic
-                resource management.
+            <a href="#opportunities" class="secondary-volunteer-btn">
+                Explore Opportunities
+            </a>
 
-            </p>
+        </div>
 
-            <div class="volunteer-buttons">
+        <div class="hero-mini-info">
 
-                <a href="#application">
+            <div>
+                <strong>350+</strong>
+                <span>Volunteers</span>
+            </div>
 
-                    Become a Volunteer
+            <div>
+                <strong>20</strong>
+                <span>Regions</span>
+            </div>
 
-                </a>
-
-                <a href="#opportunities">
-
-                    Explore Opportunities
-
-                </a>
-
+            <div>
+                <strong>120+</strong>
+                <span>Projects</span>
             </div>
 
         </div>
 
     </div>
 
+    <div class="hero-scroll">
+        <span>SCROLL TO EXPLORE</span>
+        <i></i>
+    </div>
+
 </section>
-{{-- WHY VOLUNTEER --}}
-<section class="why-volunteer">
 
-    <div class="volunteer-image">
 
-        <img src="images/volunteer-team.jpg" alt="Volunteer Team">
+{{-- =========================================================
+     INTRODUCTION / WHY VOLUNTEER
+========================================================= --}}
+<section class="volunteer-introduction">
+
+    <div class="volunteer-intro-image">
+
+        <img src="images/volunteer-team.jpg"
+             alt="WASMAN volunteers working together">
+
+        <div class="image-caption">
+            <span>WASMAN COMMUNITY</span>
+            <p>People creating meaningful environmental change.</p>
+        </div>
 
     </div>
 
-    <div class="volunteer-text">
 
-        <span>MAKE AN IMPACT</span>
+    <div class="volunteer-intro-content">
+
+        <span class="section-label">MAKE AN IMPACT</span>
 
         <h2>
-
-            Together We Can
-            Protect Aquatic Ecosystems
-
+            Small Actions.
+            <span>Meaningful Change.</span>
         </h2>
 
         <p>
-
-            Volunteers are the heartbeat of WASMAN. Whether
-            you're participating in coastal clean-ups,
-            supporting community outreach, assisting research
-            activities or promoting environmental awareness,
-            your contribution helps create healthier aquatic
-            ecosystems and stronger coastal communities.
-
+            Volunteers are an important part of WASMAN's work.
+            From supporting community education and conservation
+            activities to assisting research and public awareness
+            campaigns, every contribution helps strengthen aquatic
+            ecosystems and coastal communities.
         </p>
 
-        <ul>
+        <div class="volunteer-check-list">
 
-            <li>Environmental conservation activities</li>
+            <div>
+                <span>✓</span>
+                <p>Support aquatic conservation initiatives</p>
+            </div>
 
-            <li>Community outreach programmes</li>
+            <div>
+                <span>✓</span>
+                <p>Participate in community outreach</p>
+            </div>
 
-            <li>Educational campaigns</li>
+            <div>
+                <span>✓</span>
+                <p>Support research and field activities</p>
+            </div>
 
-            <li>Research support</li>
+            <div>
+                <span>✓</span>
+                <p>Promote environmental awareness</p>
+            </div>
 
-            <li>Event coordination</li>
+        </div>
 
-        </ul>
+        <a href="#opportunities" class="text-link">
+            Discover how you can contribute
+            <span>→</span>
+        </a>
 
     </div>
 
 </section>
- {{-- VOLUNTEER OPPORTUNITIES --}}
-<section class="volunteer-opportunities" id="opportunities">
 
-    <div class="section-title">
 
-        <span>OPPORTUNITIES</span>
+{{-- =========================================================
+     IMPACT STATISTICS
+========================================================= --}}
+<section class="volunteer-impact">
 
-        <h2>Volunteer Roles</h2>
+    <div class="impact-heading">
+
+        <span>OUR COLLECTIVE IMPACT</span>
+
+        <h2>
+            Together, We Are Making
+            A Difference
+        </h2>
 
     </div>
 
+    <div class="impact-stat-grid">
+
+        <div class="impact-stat">
+            <strong>350+</strong>
+            <span>Active Volunteers</span>
+        </div>
+
+        <div class="impact-stat">
+            <strong>120</strong>
+            <span>Community Projects</span>
+        </div>
+
+        <div class="impact-stat">
+            <strong>50+</strong>
+            <span>Beach Clean-ups</span>
+        </div>
+
+        <div class="impact-stat">
+            <strong>20</strong>
+            <span>Regions Reached</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     VOLUNTEER OPPORTUNITIES
+========================================================= --}}
+<section class="volunteer-opportunities" id="opportunities">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">OPPORTUNITIES</span>
+
+            <h2>
+                Find Your Place
+                <span>in the Movement</span>
+            </h2>
+        </div>
+
+        <p>
+            Whether you are a student, researcher, creative,
+            environmental enthusiast or community advocate,
+            there is a place for your skills and passion.
+        </p>
+
+    </div>
+
+
     <div class="opportunity-grid">
 
-        <div class="volunteer-card">
+        <article class="opportunity-card">
+
+            <div class="opportunity-number">01</div>
+
+            <div class="opportunity-icon">
+                🌊
+            </div>
 
             <h3>Community Outreach</h3>
 
             <p>
-
-                Help educate communities on aquatic conservation.
-
+                Help educate communities about aquatic
+                conservation and sustainable resource use.
             </p>
 
-        </div>
+            <a href="#application">
+                Join This Area →
+            </a>
 
-        <div class="volunteer-card">
+        </article>
 
-            <h3>Research Assistant</h3>
+
+        <article class="opportunity-card featured-opportunity">
+
+            <div class="opportunity-number">02</div>
+
+            <div class="opportunity-icon">
+                🔬
+            </div>
+
+            <h3>Research Support</h3>
 
             <p>
-
-                Support data collection and field activities.
-
+                Assist researchers with field activities,
+                data collection and environmental studies.
             </p>
 
-        </div>
+            <a href="#application">
+                Join This Area →
+            </a>
 
-        <div class="volunteer-card">
+        </article>
 
-            <h3>Event Volunteer</h3>
 
-            <p>
+        <article class="opportunity-card">
 
-                Assist with conferences and workshops.
+            <div class="opportunity-number">03</div>
 
-            </p>
-
-        </div>
-
-        <div class="volunteer-card">
+            <div class="opportunity-icon">
+                🎥
+            </div>
 
             <h3>Media & Communications</h3>
 
             <p>
+                Help tell environmental stories through
+                photography, design, video and digital media.
+            </p>
 
-                Support storytelling and digital engagement.
+            <a href="#application">
+                Join This Area →
+            </a>
 
+        </article>
+
+
+        <article class="opportunity-card">
+
+            <div class="opportunity-number">04</div>
+
+            <div class="opportunity-icon">
+                🤝
+            </div>
+
+            <h3>Event Support</h3>
+
+            <p>
+                Support conferences, workshops, training
+                programmes and community events.
+            </p>
+
+            <a href="#application">
+                Join This Area →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     SKILLS SECTION
+========================================================= --}}
+<section class="skills-section">
+
+    <div class="skills-content">
+
+        <span class="section-label">
+            YOUR SKILLS MATTER
+        </span>
+
+        <h2>
+            Bring Your Skills.
+            <span>Make An Impact.</span>
+        </h2>
+
+        <p>
+            You don't need to be a marine scientist to contribute.
+            WASMAN welcomes people with different skills, experiences
+            and interests.
+        </p>
+
+    </div>
+
+
+    <div class="skills-list">
+
+        <div class="skill-item">
+            <span>01</span>
+            <h3>Marine Science</h3>
+        </div>
+
+        <div class="skill-item">
+            <span>02</span>
+            <h3>Research</h3>
+        </div>
+
+        <div class="skill-item">
+            <span>03</span>
+            <h3>Photography</h3>
+        </div>
+
+        <div class="skill-item">
+            <span>04</span>
+            <h3>Graphic Design</h3>
+        </div>
+
+        <div class="skill-item">
+            <span>05</span>
+            <h3>Teaching</h3>
+        </div>
+
+        <div class="skill-item">
+            <span>06</span>
+            <h3>GIS & Data</h3>
+        </div>
+
+        <div class="skill-item">
+            <span>07</span>
+            <h3>Communications</h3>
+        </div>
+
+        <div class="skill-item">
+            <span>08</span>
+            <h3>Fundraising</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     VOLUNTEER JOURNEY
+========================================================= --}}
+<section class="volunteer-journey">
+
+    <div class="section-heading centered">
+
+        <span class="section-label">
+            HOW IT WORKS
+        </span>
+
+        <h2>
+            Your Volunteer Journey
+        </h2>
+
+        <p>
+            Getting involved is simple. Take the first step
+            and begin contributing to meaningful environmental
+            initiatives.
+        </p>
+
+    </div>
+
+
+    <div class="journey-wrapper">
+
+        <div class="journey-line"></div>
+
+
+        <div class="journey-step">
+
+            <div class="step-circle">
+                01
+            </div>
+
+            <h3>Apply</h3>
+
+            <p>
+                Complete the volunteer application form.
+            </p>
+
+        </div>
+
+
+        <div class="journey-step">
+
+            <div class="step-circle">
+                02
+            </div>
+
+            <h3>Orientation</h3>
+
+            <p>
+                Learn about WASMAN and our volunteer activities.
+            </p>
+
+        </div>
+
+
+        <div class="journey-step">
+
+            <div class="step-circle">
+                03
+            </div>
+
+            <h3>Choose</h3>
+
+            <p>
+                Select an activity or area that matches your interests.
+            </p>
+
+        </div>
+
+
+        <div class="journey-step">
+
+            <div class="step-circle">
+                04
+            </div>
+
+            <h3>Make an Impact</h3>
+
+            <p>
+                Start contributing to projects and communities.
             </p>
 
         </div>
@@ -525,208 +852,246 @@
     </div>
 
 </section>
-{{-- IMPACT SECTION --}}
-<section class="volunteer-impact">
 
-    <div class="section-title">
 
-        <span>OUR IMPACT</span>
+{{-- =========================================================
+     APPLICATION SECTION
+========================================================= --}}
+<section class="volunteer-application" id="application">
 
-        <h2>Volunteers Making a Difference</h2>
+    <div class="application-wrapper">
 
-    </div>
+        <div class="application-intro">
 
-    <div class="impact-grid">
+            <span class="section-label">
+                JOIN THE MOVEMENT
+            </span>
 
-        <div>
+            <h2>
+                Ready to Make
+                <span>A Difference?</span>
+            </h2>
 
-            <h2>350+</h2>
+            <p>
+                Complete the form and tell us how you would
+                like to contribute. Our team will review your
+                application and get in touch with you.
+            </p>
 
-            <span>Active Volunteers</span>
+            <div class="application-note">
+
+                <span>🌱</span>
+
+                <p>
+                    Every volunteer contribution, big or small,
+                    helps create healthier aquatic ecosystems.
+                </p>
+
+            </div>
 
         </div>
 
-        <div>
 
-            <h2>120</h2>
+        <div class="volunteer-form-container">
 
-            <span>Community Projects</span>
+            <form class="volunteer-form">
 
-        </div>
+                <div class="form-header">
 
-        <div>
+                    <span>VOLUNTEER APPLICATION</span>
 
-            <h2>50+</h2>
+                    <h3>
+                        Let's Get Started
+                    </h3>
 
-            <span>Beach Clean-ups</span>
+                </div>
 
-        </div>
 
-        <div>
+                <div class="form-row">
 
-            <h2>20</h2>
+                    <div class="form-group">
 
-            <span>Regions Reached</span>
+                        <label>Full Name</label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Phone Number</label>
+
+                        <input
+                            type="tel"
+                            placeholder="Enter your phone number"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Country</label>
+
+                        <input
+                            type="text"
+                            placeholder="Your country"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Volunteer Area</label>
+
+                        <select>
+
+                            <option>
+                                Select an area
+                            </option>
+
+                            <option>
+                                Community Outreach
+                            </option>
+
+                            <option>
+                                Research Support
+                            </option>
+
+                            <option>
+                                Conservation
+                            </option>
+
+                            <option>
+                                Media & Communications
+                            </option>
+
+                            <option>
+                                Event Support
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Availability</label>
+
+                        <select>
+
+                            <option>
+                                Select availability
+                            </option>
+
+                            <option>
+                                Weekdays
+                            </option>
+
+                            <option>
+                                Weekends
+                            </option>
+
+                            <option>
+                                Flexible
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Why would you like to volunteer with WASMAN?
+                    </label>
+
+                    <textarea
+                        rows="6"
+                        placeholder="Tell us about your interests, skills and motivation..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-volunteer"
+                >
+
+                    Submit Application
+
+                    <span>→</span>
+
+                </button>
+
+            </form>
 
         </div>
 
     </div>
 
 </section>
-{{-- SKILLS WE NEED --}}
-<section class="skills-needed">
 
-    <div class="section-title">
 
-        <span>YOUR SKILLS MATTER</span>
+{{-- =========================================================
+     FINAL CTA
+========================================================= --}}
+<section class="volunteer-final-cta">
 
-        <h2>Ways You Can Contribute</h2>
+    <div class="cta-content">
 
-    </div>
+        <span>
+            BE PART OF THE CHANGE
+        </span>
 
-    <div class="skills-grid">
+        <h2>
+            The Ocean Needs
+            <strong>People Like You.</strong>
+        </h2>
 
-        <div>Marine Science</div>
+        <p>
+            Together, we can build healthier aquatic ecosystems,
+            stronger communities and a more sustainable future.
+        </p>
 
-        <div>Photography</div>
-
-        <div>Graphic Design</div>
-
-        <div>Research</div>
-
-        <div>Teaching</div>
-
-        <div>GIS</div>
-
-        <div>Communications</div>
-
-        <div>Fundraising</div>
-
-    </div>
-
-</section>
-{{-- VOLUNTEER JOURNEY --}}
-<section class="volunteer-process">
-
-    <div class="section-title">
-
-        <span>HOW IT WORKS</span>
-
-        <h2>Volunteer Journey</h2>
+        <a href="#application">
+            Become a WASMAN Volunteer
+            <span>→</span>
+        </a>
 
     </div>
-
-    <div class="process-grid">
-
-        <div>
-
-            <h3>1</h3>
-
-            <p>Submit application.</p>
-
-        </div>
-
-        <div>
-
-            <h3>2</h3>
-
-            <p>Volunteer orientation.</p>
-
-        </div>
-
-        <div>
-
-            <h3>3</h3>
-
-            <p>Choose your activity.</p>
-
-        </div>
-
-        <div>
-
-            <h3>4</h3>
-
-            <p>Start making an impact.</p>
-
-        </div>
-
-    </div>
-
-</section>
-
-{{-- APPLICATION FORM --}}
-<section class="volunteer-form" id="application">
-
-    <div class="section-title">
-
-        <span>JOIN US</span>
-
-        <h2>Volunteer Application</h2>
-
-    </div>
-
-    <form>
-
-        <div class="form-grid">
-
-            <input type="text" placeholder="Full Name" required>
-
-            <input type="email" placeholder="Email Address" required>
-
-            <input type="tel" placeholder="Phone Number">
-
-            <input type="text" placeholder="Country">
-
-            <select>
-
-                <option>
-
-                    Preferred Volunteer Area
-
-                </option>
-
-                <option>
-
-                    Community Outreach
-
-                </option>
-
-                <option>
-
-                    Research
-
-                </option>
-
-                <option>
-
-                    Conservation
-
-                </option>
-
-                <option>
-
-                    Communications
-
-                </option>
-
-            </select>
-
-            <input type="date">
-
-        </div>
-
-        <textarea
-            rows="6"
-            placeholder="Tell us why you would like to volunteer with WASMAN."
-        ></textarea>
-
-        <button>
-
-            Become a Volunteer
-
-        </button>
-
-    </form>
 
 </section>
       

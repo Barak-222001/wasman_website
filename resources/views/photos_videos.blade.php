@@ -11,6 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
         <link rel="stylesheet" href="{{ asset('css/header.css') }}"> 
         <link rel="stylesheet" href="{{ asset('css/photos_videos.css') }}"> 
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
@@ -137,6 +138,18 @@
                             <strong>Areas of Interest</strong>
                             <small>Our thematic focus</small>
                         </div>
+                    </a>
+                     <a href="/knowledge_bite">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
                     </a>
 
 
@@ -306,6 +319,18 @@
                             <small>Research opportunities</small>
                         </div>
                     </a>
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
+                    </a>
 
                 </div>
 
@@ -367,99 +392,119 @@
 
 </header>
 
- {{-- HERO SECTION --}}
+ {{-- =========================================================
+                PHOTO & VIDEO GALLERY
+========================================================= --}}
+
 <section class="media-hero">
 
-    <div class="media-overlay">
+    <div class="media-hero-bg"></div>
 
-        <div class="media-content">
+    <div class="media-hero-overlay"></div>
 
-            <span>PHOTO & VIDEO GALLERY</span>
+    <div class="media-hero-content">
 
-            <h1>
+        <span class="media-eyebrow">
+            PHOTO & VIDEO GALLERY
+        </span>
 
-                Capturing Our Journey
-                Towards Sustainable Oceans
+        <h1>
+            Capturing the People,
+            Science & Stories Behind
+            Our Impact
+        </h1>
 
-            </h1>
+        <p>
+            Explore memorable moments from WASMAN's research,
+            conservation activities, conferences, community
+            programmes and partnerships across aquatic
+            ecosystems.
+        </p>
 
-            <p>
+        <div class="media-hero-actions">
 
-                Explore memorable moments from WASMAN's
-                conferences, workshops, research expeditions,
-                community outreach programmes, conservation
-                initiatives and networking events.
-
-            </p>
-
-            <a href="#gallery" class="gallery-btn">
-
+            <a href="#photo-gallery" class="media-primary-btn">
                 Explore Gallery
+            </a>
 
+            <a href="#video-gallery" class="media-secondary-btn">
+                Watch Videos
             </a>
 
         </div>
 
     </div>
 
+    <div class="media-scroll-indicator">
+        <span></span>
+        Scroll to explore
+    </div>
+
 </section>
 
-{{-- INTRODUCTION SECTION --}}
-<section class="gallery-intro">
 
-    <div class="gallery-text">
+{{-- =========================================================
+                    GALLERY INTRO
+========================================================= --}}
 
-        <span>OUR STORIES</span>
+<section class="media-introduction">
+
+    <div class="media-intro-content">
+
+        <span class="section-label">
+            OUR VISUAL STORY
+        </span>
 
         <h2>
-
-            Every Picture Tells
-            A Story Of Impact
-
+            More Than Images.
+            <span>Stories of Change.</span>
         </h2>
 
         <p>
+            Every photograph and video captured by WASMAN tells a story
+            about people, science, collaboration and environmental action.
+            Our visual archive brings together the experiences that shape
+            our work in aquatic science and sustainable development.
+        </p>
 
-            Our gallery showcases the people, partnerships,
-            research activities and conservation initiatives
-            that define WASMAN. These moments reflect our
-            commitment to empowering women in aquatic science,
-            promoting environmental stewardship and advancing
-            sustainable development.
-
+        <p>
+            From coastal communities and research expeditions to
+            conferences, workshops and conservation initiatives, these
+            moments document our journey and the people driving change.
         </p>
 
     </div>
 
-    <div class="gallery-stats">
 
-        <div>
+    <div class="media-stat-grid">
 
-            <h2>500+</h2>
+        <div class="media-stat">
+
+            <strong>500+</strong>
 
             <span>Photos</span>
 
         </div>
 
-        <div>
+        <div class="media-stat">
 
-            <h2>80+</h2>
+            <strong>80+</strong>
 
             <span>Videos</span>
 
         </div>
 
-        <div>
+        <div class="media-stat">
 
-            <h2>40+</h2>
+            <strong>40+</strong>
 
             <span>Events Covered</span>
 
         </div>
 
-        <div>
+        <div class="media-stat">
 
-            <h2>15</h2>
+            <strong>15</strong>
 
             <span>Countries</span>
 
@@ -469,237 +514,526 @@
 
 </section>
 
-{{-- FEATURED GALLERY --}}
-<section class="featured-gallery">
 
-    <div class="featured-image">
 
-        <img src="images/featured-gallery.jpg" alt="Featured Gallery">
+{{-- =========================================================
+                FEATURED COLLECTION
+========================================================= --}}
+
+<section class="media-featured">
+
+    <div class="featured-media-image">
+
+        <img
+            src="{{ asset('pics_vids/featured-gallery.jpg') }}"
+            alt="Women conducting aquatic research"
+        >
+
+        <div class="image-tag">
+            FEATURED COLLECTION
+        </div>
 
     </div>
 
-    <div class="featured-content">
 
-        <span>FEATURED COLLECTION</span>
+    <div class="featured-media-content">
+
+        <span class="section-label">
+            FEATURED COLLECTION
+        </span>
 
         <h2>
-
             Women Leading
             Marine Conservation
-
         </h2>
 
         <p>
-
-            A visual collection highlighting women scientists,
-            students and coastal communities working together
-            to restore marine ecosystems and promote sustainable
-            aquatic resource management.
-
+            A visual collection celebrating women scientists,
+            students, researchers and coastal communities working
+            together to restore aquatic ecosystems and promote
+            sustainable resource management.
         </p>
 
-        <a href="#">
+        <div class="featured-details">
 
-            View Collection →
+            <div>
+                <strong>24</strong>
+                <span>Photographs</span>
+            </div>
 
+            <div>
+                <strong>06</strong>
+                <span>Videos</span>
+            </div>
+
+            <div>
+                <strong>08</strong>
+                <span>Communities</span>
+            </div>
+
+        </div>
+
+        <a href="#" class="dark-btn">
+            View Collection
+            <span>→</span>
         </a>
 
     </div>
 
 </section>
 
-{{-- PHOTO GALLERY --}}
-<section class="photo-gallery" id="gallery">
 
-    <div class="section-title">
 
-        <span>PHOTOS</span>
+{{-- =========================================================
+                    PHOTO GALLERY
+========================================================= --}}
 
-        <h2>Latest Photo Gallery</h2>
+<section class="photo-gallery-section" id="photo-gallery">
+
+    <div class="media-section-heading">
+
+        <div>
+
+            <span class="section-label">
+                PHOTO STORIES
+            </span>
+
+            <h2>
+                Moments Worth Remembering
+            </h2>
+
+        </div>
+
+        <p>
+            A glimpse into our field activities, research,
+            partnerships, training programmes and community
+            engagement.
+        </p>
 
     </div>
 
-    <div class="photo-grid">
 
-        <img src="images/photo1.jpg" alt="Photo">
+    <div class="photo-masonry">
 
-        <img src="images/photo2.jpg" alt="Photo">
+        <div class="photo-item photo-large">
 
-        <img src="images/photo3.jpg" alt="Photo">
+            <img
+                src="{{ asset('pics_vids/photo1.jpg') }}"
+                alt="WASMAN field activity"
+            >
 
-        <img src="images/photo4.jpg" alt="Photo">
+            <div class="photo-caption">
+                <span>FIELDWORK</span>
+                <h3>Research Beyond the Laboratory</h3>
+            </div>
 
-        <img src="images/photo5.jpg" alt="Photo">
+        </div>
 
-        <img src="images/photo6.jpg" alt="Photo">
 
-        <img src="images/photo7.jpg" alt="Photo">
+        <div class="photo-item">
 
-        <img src="images/photo8.jpg" alt="Photo">
+            <img
+                src="{{ asset('pics_vids/photo2.jpg') }}"
+                alt="Aquatic research"
+            >
+
+            <div class="photo-caption">
+                <span>RESEARCH</span>
+                <h3>Exploring Aquatic Ecosystems</h3>
+            </div>
+
+        </div>
+
+
+        <div class="photo-item">
+
+            <img
+                src="{{ asset('pics_vids/photo3.jpg') }}"
+                alt="Community engagement"
+            >
+
+            <div class="photo-caption">
+                <span>COMMUNITY</span>
+                <h3>Working With Coastal Communities</h3>
+            </div>
+
+        </div>
+
+
+        <div class="photo-item">
+
+            <img
+                src="{{ asset('pics_vids/photo4.jpg') }}"
+                alt="Women researchers"
+            >
+
+            <div class="photo-caption">
+                <span>LEADERSHIP</span>
+                <h3>Women Driving Scientific Change</h3>
+            </div>
+
+        </div>
+
+
+        <div class="photo-item photo-wide">
+
+            <img
+                src="{{ asset('pics_vids/photo5.jpg') }}"
+                alt="WASMAN workshop"
+            >
+
+            <div class="photo-caption">
+                <span>CAPACITY BUILDING</span>
+                <h3>Learning, Sharing and Growing Together</h3>
+            </div>
+
+        </div>
+
+
+        <div class="photo-item">
+
+            <img
+                src="{{ asset('pics_vids/photo6.jpg') }}"
+                alt="Marine conservation"
+            >
+
+            <div class="photo-caption">
+                <span>CONSERVATION</span>
+                <h3>Protecting Our Blue Future</h3>
+            </div>
+
+        </div>
+
+
+        <div class="photo-item">
+
+            <img
+                src="{{ asset('pics_vids/photo7.jpg') }}"
+                alt="Aquatic science event"
+            >
+
+            <div class="photo-caption">
+                <span>EVENTS</span>
+                <h3>Connecting Minds and Ideas</h3>
+            </div>
+
+        </div>
+
+
+        <div class="photo-item">
+
+            <img
+                src="{{ asset('pics_vids/photo8.jpg') }}"
+                alt="Women in aquatic science"
+            >
+
+            <div class="photo-caption">
+                <span>WASMAN</span>
+                <h3>Building the Network</h3>
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
-{{-- VIDEO GALLERY  --}}
-<section class="video-gallery">
-    <div class="section-title">
 
-        <span>VIDEOS</span>
 
-        <h2>Featured Videos</h2>
+{{-- =========================================================
+                    VIDEO SECTION
+========================================================= --}}
+
+<section class="video-gallery-section" id="video-gallery">
+
+    <div class="video-heading">
+
+        <span class="section-label">
+            VIDEO STORIES
+        </span>
+
+        <h2>
+            Watch Our Work in Action
+        </h2>
+
+        <p>
+            Discover the people, places and projects behind
+            WASMAN through our collection of videos.
+        </p>
 
     </div>
+
 
     <div class="video-grid">
 
-        <div class="video-card">
 
-            <img src="images/video1.jpg" alt="Video Thumbnail">
+        <div class="video-card video-featured">
 
-            <div class="play-button">
+            <div class="video-thumbnail">
 
-                ▶
+                <img
+                    src="{{ asset('pics_vids/video1.jpg') }}"
+                    alt="WASMAN Annual Conference"
+                >
+
+                <button class="play-button">
+                    ▶
+                </button>
+
+                <span class="video-duration">
+                    04:32
+                </span>
 
             </div>
 
-            <h3>
+            <div class="video-information">
 
-                WASMAN Annual Conference Highlights
+                <span>
+                    FEATURED VIDEO
+                </span>
 
-            </h3>
+                <h3>
+                    WASMAN Annual Conference Highlights
+                </h3>
+
+                <p>
+                    A look at conversations, collaborations
+                    and experiences from our annual gathering.
+                </p>
+
+            </div>
 
         </div>
 
+
         <div class="video-card">
 
-            <img src="images/video2.jpg" alt="Video Thumbnail">
+            <div class="video-thumbnail">
 
-            <div class="play-button">
+                <img
+                    src="{{ asset('pics_vids/video2.jpg') }}"
+                    alt="Coastal restoration"
+                >
 
-                ▶
+                <button class="play-button">
+                    ▶
+                </button>
+
+                <span class="video-duration">
+                    06:18
+                </span>
 
             </div>
 
-            <h3>
+            <div class="video-information">
 
-                Coastal Restoration Documentary
+                <span>
+                    CONSERVATION
+                </span>
 
-            </h3>
+                <h3>
+                    Restoring Our Coastal Ecosystems
+                </h3>
+
+            </div>
 
         </div>
 
+
         <div class="video-card">
 
-            <img src="images/video3.jpg" alt="Video Thumbnail">
+            <div class="video-thumbnail">
 
-            <div class="play-button">
+                <img
+                    src="{{ asset('pics_vids/video3.jpg') }}"
+                    alt="Women in aquatic science"
+                >
 
-                ▶
+                <button class="play-button">
+                    ▶
+                </button>
+
+                <span class="video-duration">
+                    08:45
+                </span>
 
             </div>
 
-            <h3>
+            <div class="video-information">
 
-                Women in Aquatic Science Webinar
+                <span>
+                    LEADERSHIP
+                </span>
 
-            </h3>
+                <h3>
+                    Women in Aquatic Science
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+{{-- =========================================================
+                    JOURNEY
+========================================================= --}}
+
+<section class="media-journey">
+
+    <div class="journey-heading">
+
+        <span class="section-label">
+            OUR JOURNEY
+        </span>
+
+        <h2>
+            Moments Through the Years
+        </h2>
+
+    </div>
+
+
+    <div class="journey-line">
+
+
+        <div class="journey-item">
+
+            <div class="journey-year">
+                2023
+            </div>
+
+            <div class="journey-dot"></div>
+
+            <div class="journey-content">
+
+                <h3>
+                    Community Outreach
+                </h3>
+
+                <p>
+                    Launch of community engagement and
+                    environmental education programmes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-item">
+
+            <div class="journey-year">
+                2024
+            </div>
+
+            <div class="journey-dot"></div>
+
+            <div class="journey-content">
+
+                <h3>
+                    Regional Collaboration
+                </h3>
+
+                <p>
+                    Expansion of workshops, networking and
+                    women leadership programmes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-item">
+
+            <div class="journey-year">
+                2025
+            </div>
+
+            <div class="journey-dot"></div>
+
+            <div class="journey-content">
+
+                <h3>
+                    Research Missions
+                </h3>
+
+                <p>
+                    International collaborations and
+                    aquatic research activities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-item">
+
+            <div class="journey-year">
+                2026
+            </div>
+
+            <div class="journey-dot"></div>
+
+            <div class="journey-content">
+
+                <h3>
+                    Expanding Our Impact
+                </h3>
+
+                <p>
+                    New partnerships, conservation projects
+                    and growing scientific networks.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
-{{-- TIMELINE SECTION --}}
-<section class="media-timeline">
 
-    <div class="section-title">
 
-        <span>OUR JOURNEY</span>
 
-        <h2>Moments Through the Years</h2>
+{{-- =========================================================
+                    MEDIA CTA
+========================================================= --}}
 
-    </div>
+<section class="media-cta">
 
-    <div class="timeline-grid">
+    <div class="media-cta-overlay"></div>
 
-        <div class="timeline-card">
+    <div class="media-cta-content">
 
-            <h3>2023</h3>
+        <span>
+            SHARE YOUR STORY
+        </span>
 
-            <p>
+        <h2>
+            Help Us Capture
+            the WASMAN Journey
+        </h2>
 
-                Launch of community outreach initiatives.
+        <p>
+            Were you part of a WASMAN activity, research mission,
+            workshop or community programme? Share your photographs
+            and videos and help us document the impact of our network.
+        </p>
 
-            </p>
-
-        </div>
-
-        <div class="timeline-card">
-
-            <h3>2024</h3>
-
-            <p>
-
-                Regional workshops and leadership programmes.
-
-            </p>
-
-        </div>
-
-        <div class="timeline-card">
-
-            <h3>2025</h3>
-
-            <p>
-
-                International collaborations and research missions.
-
-            </p>
-
-        </div>
-
-        <div class="timeline-card">
-
-            <h3>2026</h3>
-
-            <p>
-
-                Expanded partnerships and conservation projects.
-
-            </p>
-
-        </div>
+        <a href="#">
+            Submit Your Media
+            <span>→</span>
+        </a>
 
     </div>
-
-</section>
-
-{{-- SHARE CTA --}}
-
-<section class="share-media">
-
-    <span>SHARE YOUR EXPERIENCE</span>
-
-    <h2>
-
-        Help Tell The WASMAN Story
-
-    </h2>
-
-    <p>
-
-        Have photographs or videos from a WASMAN activity?
-        Share your memorable moments and contribute to our
-        growing gallery of impact.
-
-    </p>
-
-    <a href="#">
-
-        Submit Your Media
-
-    </a>
 
 </section>
    

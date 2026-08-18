@@ -1,1635 +1,1527 @@
+/* =========================================================
+   RESEARCH ASSISTANCE PAGE
+========================================================= */
 
-/*=========================================================
-              RESEARCH ASSISTANCE VARIABLES
-=========================================================*/
+:root {
 
-:root{
+    --research-navy: #063b4c;
+    --research-deep: #042b38;
+    --research-ocean: #087f8c;
+    --research-teal: #11a7a0;
+    --research-aqua: #7bd7d0;
 
-    --primary:#003b5c;
-    --secondary:#00a896;
-    --light:#f8fbfc;
-    --white:#ffffff;
-    --text:#555;
-    --shadow:0 18px 45px rgba(0,0,0,.08);
-    --radius:22px;
+    --research-sand: #e9c46a;
+    --research-light: #f3faf9;
+    --research-white: #ffffff;
 
-}
+    --research-text: #28434b;
+    --research-muted: #6c8187;
 
-
-/*=========================================================
-                  RESEARCH HERO SECTION
-=========================================================*/
-
-
-.research-hero{
-
-    min-height:100vh;
-
-    background:
-
-    linear-gradient(
-        rgba(0,43,68,.85),
-        rgba(0,43,68,.72)
-    ),
-
-    url(images/research-banner.jpg);
-
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+    --research-border: #dbe9e7;
 
 }
 
 
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-/*=========================================================
-                  HERO OVERLAY
-=========================================================*/
+.research-hero,
+.research-introduction,
+.research-focus,
+.research-services,
+.research-network,
+.research-process,
+.research-eligibility,
+.research-request {
 
+    font-family: "Poppins", sans-serif;
 
-.research-overlay{
+}
 
-    width:100%;
+.research-introduction,
+.research-focus,
+.research-services,
+.research-process,
+.research-eligibility,
+.research-request {
 
-    display:flex;
+    padding: 100px 8%;
 
-    justify-content:center;
+}
 
-    align-items:center;
+header nav{
+    margin-right: 6%;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.research-hero {
+
+    min-height: 700px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        url("../pics_vids/report.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow: hidden;
 
 }
 
 
+.research-hero-overlay {
 
-/*=========================================================
-                  HERO CONTENT
-=========================================================*/
-
-
-.research-content{
-
-    width:90%;
-
-    max-width:1000px;
-
-    text-align:center;
-
-    color:white;
-
-}
-
-
-
-.research-content span{
-
-
-    display:inline-block;
-
-
-    padding:10px 30px;
-
+    position: absolute;
+    inset: 0;
 
     background:
+        linear-gradient(
+            90deg,
+            rgba(3, 35, 46, .94),
+            rgba(4, 52, 65, .78),
+            rgba(4, 52, 65, .25)
+        );
 
-    rgba(255,255,255,.15);
-
-
-
-    backdrop-filter:blur(12px);
+}
 
 
-    border-radius:50px;
+.research-hero-content {
 
+    position: relative;
 
-    letter-spacing:3px;
+    width: 84%;
 
+    max-width: 1250px;
 
-    font-size:14px;
+    margin: auto;
 
+    display: flex;
 
-    margin-bottom:30px;
+    align-items: flex-end;
 
+    justify-content: space-between;
 
 }
-
-
 
 
-.research-content h1{
+.research-hero-text {
 
+    max-width: 760px;
 
-    font-size:65px;
+}
 
 
-    line-height:1.15;
+.eyebrow {
 
+    display: inline-flex;
 
-    margin-bottom:30px;
+    padding: 8px 15px;
 
+    border-left: 3px solid var(--research-sand);
 
-}
+    color: var(--research-sand);
 
+    font-size: 13px;
 
+    font-weight: 700;
 
+    letter-spacing: 3px;
 
-.research-content p{
+}
 
 
-    max-width:800px;
+.research-hero h1 {
 
+    color: white;
 
-    margin:auto;
+    font-size: clamp(42px, 5vw, 72px);
 
+    line-height: 1.08;
 
-    font-size:20px;
+    margin: 22px 0;
 
+    font-weight: 700;
 
-    line-height:2;
+}
 
 
-    margin-bottom:45px;
+.research-hero h1 span {
 
+    color: var(--research-aqua);
 
 }
-
-
 
 
-/*=========================================================
-                  HERO BUTTONS
-=========================================================*/
+.research-hero p {
 
+    color: rgba(255,255,255,.82);
 
-.research-buttons{
+    max-width: 680px;
 
+    line-height: 1.9;
 
-    display:flex;
+    font-size: 16px;
 
+}
 
-    justify-content:center;
 
+.research-hero-actions {
 
-    gap:20px;
+    display: flex;
 
+    gap: 15px;
 
-    flex-wrap:wrap;
+    margin-top: 35px;
 
+    flex-wrap: wrap;
 
 }
-
-
 
-.research-buttons a{
 
+.primary-research-btn,
+.secondary-research-btn {
 
-    text-decoration:none;
+    padding: 15px 24px;
 
+    text-decoration: none;
 
-    padding:18px 45px;
+    border-radius: 5px;
 
+    font-weight: 600;
 
-    border-radius:40px;
+    transition: .3s ease;
 
+}
 
-    font-weight:600;
 
+.primary-research-btn {
 
-    transition:.35s;
+    background: var(--research-teal);
 
+    color: white;
 
 }
 
 
+.primary-research-btn:hover {
 
-/* Primary Button */
+    background: white;
 
+    color: var(--research-navy);
 
-.research-buttons a:first-child{
+    transform: translateY(-3px);
 
-
-    background:var(--secondary);
+}
 
 
-    color:white;
+.primary-research-btn i,
+.network-btn i {
 
+    margin-left: 10px;
 
 }
 
 
+.secondary-research-btn {
 
-.research-buttons a:first-child:hover{
+    border: 1px solid rgba(255,255,255,.5);
 
+    color: white;
 
-    background:#00857b;
+}
 
 
-    transform:translateY(-5px);
+.secondary-research-btn:hover {
 
+    background: white;
 
-}
+    color: var(--research-navy);
 
+}
 
 
+.research-hero-badge {
 
-/* Secondary Button */
+    display: flex;
 
+    gap: 14px;
 
-.research-buttons a:last-child{
+    align-items: center;
 
+    padding: 20px;
 
-    color:white;
+    background: rgba(255,255,255,.1);
 
+    border: 1px solid rgba(255,255,255,.2);
 
-    border:2px solid white;
+    backdrop-filter: blur(10px);
 
+    color: white;
 
 }
 
 
+.badge-icon {
 
-.research-buttons a:last-child:hover{
+    width: 50px;
 
+    height: 50px;
 
-    background:white;
+    display: grid;
 
+    place-items: center;
 
-    color:var(--primary);
+    background: var(--research-teal);
 
+    color: white;
 
-}
+    font-size: 20px;
 
+}
 
 
+.research-hero-badge strong {
 
+    display: block;
 
-/*=========================================================
-                  RESEARCH ABOUT SECTION
-=========================================================*/
+}
 
 
-.research-about{
+.research-hero-badge span {
 
+    display: block;
 
-    width:90%;
+    margin-top: 5px;
 
+    color: rgba(255,255,255,.65);
 
-    max-width:1300px;
+    font-size: 12px;
 
+}
 
-    margin:120px auto;
 
+/* =========================================================
+   INTRODUCTION
+========================================================= */
 
+.research-introduction {
 
-    display:grid;
+    display: grid;
 
+    grid-template-columns: .9fr 1.1fr;
 
-    grid-template-columns:1fr 1fr;
+    gap: 90px;
 
+    align-items: center;
 
-    gap:70px;
+}
 
 
-    align-items:center;
+.research-intro-image {
 
+    position: relative;
 
 }
-
-
 
 
+.image-frame {
 
-/*=========================================================
-                  RESEARCH IMAGE
-=========================================================*/
+    position: relative;
 
+    padding: 12px;
 
-.research-image{
+    background: var(--research-light);
 
+}
 
-    overflow:hidden;
 
+.image-frame img {
 
-    border-radius:25px;
+    width: 100%;
 
+    height: 520px;
 
-    box-shadow:var(--shadow);
+    object-fit: cover;
 
+    display: block;
 
 }
 
 
+.research-image-card {
 
-.research-image img{
+    position: absolute;
 
+    right: -25px;
 
-    width:100%;
+    bottom: 35px;
 
+    padding: 22px 28px;
 
-    display:block;
+    background: var(--research-navy);
 
+    color: white;
 
-    transition:.6s;
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
 
-
 }
-
 
 
-.research-image:hover img{
+.research-image-card strong {
 
+    display: block;
 
-    transform:scale(1.08);
+    font-size: 32px;
 
+    color: var(--research-aqua);
 
 }
 
 
+.research-image-card span {
 
+    font-size: 13px;
 
-/*=========================================================
-                  RESEARCH TEXT
-=========================================================*/
-
-
-.research-text span{
+}
 
 
-    color:var(--secondary);
+.section-label {
 
+    display: inline-block;
 
-    font-weight:600;
+    color: var(--research-ocean);
 
+    font-size: 12px;
 
-    letter-spacing:3px;
+    letter-spacing: 2.5px;
 
+    font-weight: 700;
 
 }
-
-
-
 
-.research-text h2{
 
+.research-intro-content h2 {
 
-    color:var(--primary);
+    color: var(--research-navy);
 
+    font-size: 44px;
 
-    font-size:48px;
+    line-height: 1.15;
 
+    margin: 15px 0 25px;
 
-    line-height:1.3;
+}
 
 
-    margin:20px 0;
+.research-intro-content h2 span {
 
+    color: var(--research-ocean);
 
 }
 
 
+.research-intro-content p {
 
+    color: var(--research-muted);
 
-.research-text p{
+    line-height: 1.9;
 
+    margin-bottom: 18px;
 
-    color:var(--text);
-
+}
 
-    line-height:2;
 
+.research-highlight-list {
 
-    font-size:17px;
+    display: grid;
 
+    grid-template-columns: 1fr 1fr;
 
-    margin-bottom:20px;
+    gap: 15px;
 
+    margin-top: 30px;
 
 }
-
-
-
 
-/*=========================================================
-                  SECTION TITLES
-=========================================================*/
 
+.research-highlight-list div {
 
-.section-title{
+    display: flex;
 
+    align-items: center;
 
-    text-align:center;
+    gap: 10px;
 
+    color: var(--research-text);
 
-    margin-bottom:60px;
+    font-size: 14px;
 
-
 }
-
-
 
-.section-title span{
 
+.research-highlight-list i {
 
-    color:var(--secondary);
+    color: var(--research-teal);
 
+}
 
-    letter-spacing:3px;
 
+/* =========================================================
+   RESEARCH FOCUS
+========================================================= */
 
-    font-weight:600;
+.research-focus {
 
+    background: var(--research-light);
 
 }
-
-
-
-.section-title h2{
 
 
-    color:var(--primary);
+.research-section-heading {
 
+    display: flex;
 
-    font-size:46px;
+    justify-content: space-between;
 
+    align-items: flex-end;
 
-    margin-top:15px;
+    gap: 40px;
 
+    margin-bottom: 50px;
 
 }
 
 
+.research-section-heading h2 {
 
+    font-size: 42px;
 
-/*=========================================================
-                  RESPONSIVE DESIGN
-=========================================================*/
+    color: var(--research-navy);
 
+    margin: 10px 0 0;
 
-@media(max-width:992px){
+}
 
 
-.research-content h1{
+.research-section-heading p {
 
+    max-width: 450px;
 
-    font-size:48px;
+    color: var(--research-muted);
 
+    line-height: 1.8;
 
 }
-
-
 
-.research-about{
 
+.research-focus-grid {
 
-    grid-template-columns:1fr;
-
-
-}
+    display: grid;
 
+    grid-template-columns: repeat(3,1fr);
 
+    gap: 22px;
 
 }
 
 
+.research-focus-card {
 
+    position: relative;
 
+    padding: 35px;
 
-@media(max-width:650px){
+    background: white;
 
+    border: 1px solid var(--research-border);
 
-.research-content h1{
+    overflow: hidden;
 
+    transition: .35s ease;
 
-    font-size:34px;
-
-
 }
 
 
+.research-focus-card:hover {
 
-.research-content p{
+    transform: translateY(-8px);
 
+    box-shadow: 0 20px 45px rgba(6,59,76,.12);
 
-    font-size:16px;
+}
 
 
-}
+.focus-number {
 
+    position: absolute;
 
+    right: 25px;
 
-.research-buttons{
+    top: 20px;
 
+    font-size: 40px;
 
-    flex-direction:column;
+    font-weight: 700;
 
+    color: #edf5f4;
 
 }
 
 
+.focus-icon {
 
-.research-buttons a{
+    width: 58px;
 
+    height: 58px;
 
-    width:100%;
+    display: grid;
 
+    place-items: center;
 
-    text-align:center;
+    background: #e5f7f5;
 
+    color: var(--research-ocean);
 
-}
+    font-size: 22px;
 
+    margin-bottom: 25px;
 
+}
 
-.research-text h2{
 
+.research-focus-card h3 {
 
-    font-size:32px;
+    color: var(--research-navy);
 
+    font-size: 21px;
 
 }
 
 
+.research-focus-card p {
 
-.section-title h2{
+    color: var(--research-muted);
 
+    line-height: 1.7;
 
-    font-size:32px;
+    font-size: 14px;
 
-
 }
 
 
+.research-focus-card a {
 
-}
+    display: inline-block;
 
-/*=========================================================
-                RESEARCH AREAS SECTION
-=========================================================*/
+    margin-top: 15px;
 
-.research-areas{
+    color: var(--research-ocean);
 
-    width:90%;
+    text-decoration: none;
 
-    max-width:1300px;
+    font-weight: 600;
 
-    margin:120px auto;
+    font-size: 13px;
 
 }
-
-
-
-/*=========================================================
-                RESEARCH GRID
-=========================================================*/
-
-.research-grid{
 
-    display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+.research-focus-card a i {
 
-    gap:35px;
+    margin-left: 7px;
 
 }
 
 
+/* =========================================================
+   SERVICES
+========================================================= */
 
-/*=========================================================
-                RESEARCH CARD
-=========================================================*/
+.research-services {
 
-.research-card{
+    display: grid;
 
-    background:white;
+    grid-template-columns: .8fr 1.2fr;
 
-    padding:45px 35px;
+    gap: 80px;
 
-    border-radius:22px;
-
-    box-shadow:var(--shadow);
-
-    position:relative;
-
-    overflow:hidden;
-
-    transition:.35s;
-
 }
-
-
 
-.research-card::before{
 
-    content:"";
+.services-intro h2 {
 
-    position:absolute;
+    color: var(--research-navy);
 
-    top:0;
+    font-size: 44px;
 
-    left:0;
+    line-height: 1.15;
 
-    width:100%;
+    margin: 15px 0;
 
-    height:6px;
-
-    background:var(--secondary);
-
 }
-
 
 
-.research-card:hover{
+.services-intro h2 span {
 
-    transform:translateY(-12px);
+    color: var(--research-ocean);
 
-    box-shadow:0 25px 55px rgba(0,0,0,.15);
-
 }
-
-
 
-.research-card h3{
 
-    color:var(--primary);
+.services-intro p {
 
-    font-size:26px;
+    color: var(--research-muted);
 
-    margin-bottom:18px;
+    line-height: 1.9;
 
 }
 
 
+.services-list {
 
-.research-card p{
+    display: grid;
 
-    color:var(--text);
+    grid-template-columns: 1fr 1fr;
 
-    line-height:1.9;
+    gap: 18px;
 
 }
 
 
+.service-item {
 
-/*=========================================================
-                RESEARCH SERVICES SECTION
-=========================================================*/
+    padding: 30px;
 
-.research-services{
+    background: var(--research-light);
 
-    width:90%;
+    border: 1px solid var(--research-border);
 
-    max-width:1300px;
+    transition: .3s;
 
-    margin:120px auto;
-
 }
-
-
 
-/*=========================================================
-                SERVICES GRID
-=========================================================*/
 
-.services-grid{
+.service-item:hover {
 
-    display:grid;
+    background: var(--research-navy);
 
-    grid-template-columns:repeat(4,1fr);
+    color: white;
 
-    gap:30px;
-
 }
 
 
+.service-icon {
 
-/*=========================================================
-                SERVICE CARD
-=========================================================*/
+    color: var(--research-teal);
 
-.services-grid div{
+    font-size: 25px;
 
-    background:white;
+}
 
-    padding:45px 30px;
 
-    border-radius:22px;
+.service-content span {
 
-    text-align:center;
+    display: block;
 
-    box-shadow:var(--shadow);
+    margin-top: 20px;
 
-    transition:.35s;
+    color: var(--research-sand);
 
-}
+    font-size: 12px;
 
+}
 
 
-.services-grid div:hover{
+.service-content h3 {
 
-    transform:translateY(-10px);
+    color: var(--research-navy);
 
 }
-
-
 
-.services-grid h3{
 
-    color:var(--primary);
+.service-item:hover h3 {
 
-    font-size:23px;
+    color: white;
 
-    margin-bottom:20px;
-
 }
 
 
+.service-content p {
 
-.services-grid p{
+    color: var(--research-muted);
 
-    color:var(--text);
+    line-height: 1.7;
 
-    line-height:1.8;
+    font-size: 14px;
 
 }
 
 
+.service-item:hover p {
 
-/*=========================================================
-                RESEARCH NETWORK SECTION
-=========================================================*/
+    color: rgba(255,255,255,.7);
 
-.research-network{
+}
 
-    width:90%;
 
-    max-width:1300px;
+/* =========================================================
+   NETWORK
+========================================================= */
 
-    margin:120px auto;
+.research-network {
 
-    padding:80px;
+    position: relative;
 
-    border-radius:35px;
+    padding: 110px 8%;
 
-    background:
+    background-image:
+        url("../images/research-network.jpg");
 
-    linear-gradient(
-        135deg,
-        var(--primary),
-        #005f73
-    );
+    background-size: cover;
 
-    color:white;
+    background-position: center;
 
 }
 
 
+.network-overlay {
 
-/*=========================================================
-                NETWORK CONTENT
-=========================================================*/
+    position: absolute;
 
-.network-content{
+    inset: 0;
 
-    text-align:center;
+    background: rgba(3,40,51,.91);
 
 }
-
 
 
-.network-content span{
+.network-container {
 
-    color:#8ff2df;
+    position: relative;
 
-    letter-spacing:3px;
+    max-width: 1200px;
 
-    font-weight:600;
+    margin: auto;
 
-}
-
-
+    display: grid;
 
-.network-content h2{
+    grid-template-columns: 1.2fr .8fr;
 
-    font-size:45px;
+    gap: 80px;
 
-    line-height:1.3;
+    align-items: center;
 
-    margin:20px auto;
-
-    max-width:850px;
-
 }
-
-
 
-.network-content p{
 
-    max-width:850px;
+.section-label.light {
 
-    margin:auto;
+    color: var(--research-aqua);
 
-    line-height:2;
-
-    font-size:17px;
-
-    color:#e6f3f5;
-
 }
 
 
+.network-text h2 {
 
-/*=========================================================
-                NETWORK STATISTICS
-=========================================================*/
+    color: white;
 
-.network-stats{
+    font-size: 48px;
 
-    margin-top:50px;
+    line-height: 1.15;
 
-    display:grid;
+    margin: 15px 0 25px;
 
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
 }
-
 
 
-.network-stats div{
+.network-text p {
 
-    background:
+    color: rgba(255,255,255,.72);
 
-    rgba(255,255,255,.12);
+    line-height: 1.9;
 
-    padding:35px;
+    max-width: 650px;
 
-    border-radius:20px;
-
-    backdrop-filter:blur(10px);
-
 }
-
-
-
-.network-stats h2{
-
-    color:#8ff2df;
 
-    font-size:45px;
 
-    margin-bottom:10px;
+.network-btn {
 
-}
+    display: inline-block;
 
+    margin-top: 25px;
 
+    padding: 15px 23px;
 
-.network-stats span{
+    background: var(--research-teal);
 
-    color:white;
+    color: white;
 
-    letter-spacing:0;
+    text-decoration: none;
 
 }
-
-
 
-/*=========================================================
-                RESEARCH PROCESS
-=========================================================*/
 
-.research-process{
+.network-stat-wrapper {
 
-    width:90%;
+    display: grid;
 
-    max-width:1300px;
+    grid-template-columns: 1fr;
 
-    margin:120px auto;
+    gap: 15px;
 
 }
 
 
+.network-stat {
 
-/*=========================================================
-                PROCESS GRID
-=========================================================*/
+    padding: 28px;
 
-.research-process .process-grid{
+    border: 1px solid rgba(255,255,255,.2);
 
-    display:grid;
+    background: rgba(255,255,255,.06);
 
-    grid-template-columns:repeat(4,1fr);
+    backdrop-filter: blur(8px);
 
-    gap:30px;
-
-    position:relative;
-
 }
-
 
 
-/* Connecting line */
+.network-stat strong {
 
-.research-process .process-grid::before{
+    display: block;
 
-    content:"";
+    color: var(--research-aqua);
 
-    position:absolute;
+    font-size: 38px;
 
-    top:55px;
-
-    left:8%;
-
-    width:84%;
+}
 
-    height:4px;
 
-    background:#dcefee;
+.network-stat span {
 
-    z-index:0;
+    color: rgba(255,255,255,.7);
 
 }
 
 
+/* =========================================================
+   PROCESS
+========================================================= */
 
-/*=========================================================
-                PROCESS CARDS
-=========================================================*/
+.research-process {
 
-.research-process .process-grid div{
+    background: white;
 
-    background:white;
-
-    padding:45px 30px;
+}
 
-    border-radius:22px;
 
-    text-align:center;
+.research-section-heading.centered {
 
-    box-shadow:var(--shadow);
+    display: block;
 
-    position:relative;
+    text-align: center;
 
-    z-index:2;
+    max-width: 700px;
 
-    transition:.35s;
+    margin: 0 auto 65px;
 
 }
 
 
+.research-section-heading.centered h2 {
 
-.research-process .process-grid div:hover{
+    margin-bottom: 15px;
 
-    transform:translateY(-10px);
-
 }
-
 
 
-/*=========================================================
-                PROCESS NUMBER
-=========================================================*/
+.research-section-heading.centered p {
 
-.research-process .process-grid h3{
+    max-width: 650px;
 
-    width:80px;
+    margin: auto;
 
-    height:80px;
-
-    margin:0 auto 25px;
+}
 
-    border-radius:50%;
 
-    display:flex;
+.research-process-grid {
 
-    justify-content:center;
+    display: flex;
 
-    align-items:center;
+    align-items: flex-start;
 
-    background:var(--secondary);
+    justify-content: center;
 
-    color:white;
+    max-width: 1200px;
 
-    font-size:32px;
+    margin: auto;
 
 }
-
 
 
-.research-process .process-grid p{
+.process-step {
 
-    color:var(--text);
+    width: 220px;
 
-    line-height:1.8;
+    text-align: center;
 
 }
 
 
+.step-number {
 
-/*=========================================================
-                RESPONSIVE DESIGN
-=========================================================*/
+    width: 65px;
 
-@media(max-width:1100px){
+    height: 65px;
 
+    display: grid;
 
-.research-grid{
+    place-items: center;
 
-    grid-template-columns:repeat(2,1fr);
+    margin: auto;
 
-}
+    border-radius: 50%;
 
+    background: var(--research-navy);
 
+    color: var(--research-aqua);
 
-.services-grid{
+    font-weight: 700;
 
-    grid-template-columns:repeat(2,1fr);
-
 }
 
 
+.process-step h3 {
 
-.research-process .process-grid{
+    color: var(--research-navy);
 
-    grid-template-columns:repeat(2,1fr);
+    margin-top: 20px;
 
 }
-
 
 
-.research-process .process-grid::before{
+.process-step p {
 
-    display:none;
+    color: var(--research-muted);
 
-}
+    font-size: 14px;
 
+    line-height: 1.6;
 
 }
-
-
 
-@media(max-width:650px){
 
+.process-line {
 
-.research-grid,
+    height: 2px;
 
-.services-grid,
+    flex: 1;
 
-.network-stats,
+    margin-top: 32px;
 
-.research-process .process-grid{
+    background: var(--research-border);
 
-    grid-template-columns:1fr;
-
 }
 
 
+/* =========================================================
+   ELIGIBILITY
+========================================================= */
 
-.research-network{
+.research-eligibility {
 
-    padding:45px 25px;
+    background: var(--research-light);
 
 }
 
 
+.eligibility-inner {
 
-.network-content h2{
+    display: grid;
 
-    font-size:32px;
+    grid-template-columns: .8fr 1.2fr;
 
-}
+    gap: 80px;
 
+    align-items: center;
 
+}
 
-.research-process .process-grid h3{
 
-    width:65px;
+.eligibility-title h2 {
 
-    height:65px;
+    color: var(--research-navy);
 
-    font-size:25px;
+    font-size: 42px;
 
-}
+    line-height: 1.2;
 
+    margin: 15px 0;
 
 }
-
-
-/*=========================================================
-            WHO CAN REQUEST SUPPORT SECTION
-=========================================================*/
 
-.research-eligibility{
 
-    width:90%;
+.eligibility-title p {
 
-    max-width:1300px;
+    color: var(--research-muted);
 
-    margin:120px auto;
+    line-height: 1.8;
 
 }
 
 
+.eligibility-items {
 
-/*=========================================================
-            ELIGIBILITY GRID
-=========================================================*/
+    display: grid;
 
-.eligibility-grid{
+    grid-template-columns: 1fr 1fr;
 
-    display:grid;
+    gap: 15px;
 
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
 }
-
 
 
-/*=========================================================
-            ELIGIBILITY CARDS
-=========================================================*/
+.eligibility-items div {
 
-.eligibility-grid div{
+    display: flex;
 
-    background:white;
+    align-items: center;
 
-    padding:35px 25px;
+    gap: 15px;
 
-    border-radius:20px;
+    padding: 22px;
 
-    text-align:center;
+    background: white;
 
-    font-size:20px;
+    border: 1px solid var(--research-border);
 
-    font-weight:600;
+    color: var(--research-navy);
 
-    color:var(--primary);
+    font-weight: 600;
 
-    box-shadow:var(--shadow);
-
-    position:relative;
-
-    transition:.35s;
-
 }
 
 
+.eligibility-items i {
 
-.eligibility-grid div::before{
+    color: var(--research-teal);
 
-    content:"";
+    font-size: 20px;
 
-    position:absolute;
-
-    top:0;
+}
 
-    left:0;
 
-    width:100%;
+/* =========================================================
+   REQUEST FORM
+========================================================= */
 
-    height:5px;
+.research-request {
 
-    background:var(--secondary);
+    background: #f8fcfb;
 
 }
 
 
+.request-heading {
 
-.eligibility-grid div:hover{
+    max-width: 700px;
 
-    background:var(--secondary);
+    margin: 0 auto 45px;
 
-    color:white;
+    text-align: center;
 
-    transform:translateY(-10px);
-
 }
-
 
 
-/*=========================================================
-            RESEARCH REQUEST FORM SECTION
-=========================================================*/
+.request-heading h2 {
 
-.research-form{
+    color: var(--research-navy);
 
-    width:90%;
+    font-size: 44px;
 
-    max-width:1200px;
+    line-height: 1.15;
 
-    margin:130px auto;
+    margin: 15px 0;
 
 }
 
 
+.request-heading p {
 
-/*=========================================================
-            FORM CONTAINER
-=========================================================*/
+    color: var(--research-muted);
 
-.research-form form{
+    line-height: 1.8;
 
-    background:white;
-
-    padding:60px;
-
-    border-radius:30px;
-
-    box-shadow:var(--shadow);
-
 }
 
 
+.request-form-wrapper {
 
-/*=========================================================
-            FORM GRID
-=========================================================*/
+    max-width: 1000px;
 
-.research-form .form-grid{
+    margin: auto;
 
-    display:grid;
+    padding: 45px;
 
-    grid-template-columns:repeat(2,1fr);
+    background: white;
 
-    gap:25px;
+    border: 1px solid var(--research-border);
 
-    margin-bottom:30px;
+    box-shadow: 0 20px 50px rgba(6,59,76,.07);
 
 }
-
-
 
-/*=========================================================
-            INPUT ELEMENTS
-=========================================================*/
 
-.research-form input,
+.research-form {
 
-.research-form select,
+    display: flex;
 
-.research-form textarea{
+    flex-direction: column;
 
-    width:100%;
+    gap: 22px;
 
-    padding:18px 20px;
-
-    border:1px solid #d9e5e8;
-
-    border-radius:14px;
+}
 
-    font-size:16px;
 
-    font-family:inherit;
+.form-row {
 
-    background:#fcfefe;
+    display: grid;
 
-    outline:none;
+    grid-template-columns: 1fr 1fr;
 
-    transition:.35s;
+    gap: 22px;
 
 }
 
 
+.form-field {
 
-/*=========================================================
-            INPUT FOCUS
-=========================================================*/
+    display: flex;
 
-.research-form input:focus,
+    flex-direction: column;
 
-.research-form select:focus,
+    gap: 8px;
 
-.research-form textarea:focus{
+}
 
-    border-color:var(--secondary);
 
-    box-shadow:
+.form-field.full {
 
-    0 0 0 4px rgba(0,168,150,.12);
+    width: 100%;
 
 }
-
-
 
-/*=========================================================
-            RESEARCH DESCRIPTION FIELD
-=========================================================*/
 
-.research-form textarea{
+.form-field label {
 
-    min-height:200px;
+    color: var(--research-navy);
 
-    resize:vertical;
+    font-size: 13px;
 
-    margin-bottom:30px;
+    font-weight: 600;
 
 }
 
 
+.form-field input,
+.form-field select,
+.form-field textarea {
 
-/*=========================================================
-            FILE UPLOAD
-=========================================================*/
+    width: 100%;
 
-.research-form input[type="file"]{
+    box-sizing: border-box;
 
-    border:2px dashed #b8d9d5;
+    padding: 15px;
 
-    padding:25px;
+    border: 1px solid var(--research-border);
 
-    background:#f8fcfc;
+    outline: none;
 
-    cursor:pointer;
+    background: #fbfdfd;
 
-    margin-bottom:35px;
+    color: var(--research-text);
 
-}
-
-
+    font-family: inherit;
 
-/*=========================================================
-            SUBMIT BUTTON
-=========================================================*/
+    transition: .3s;
 
-.research-form button{
+}
 
-    padding:18px 50px;
 
-    background:var(--secondary);
+.form-field textarea {
 
-    color:white;
+    resize: vertical;
 
-    border:none;
+}
 
-    border-radius:45px;
 
-    font-size:17px;
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
 
-    font-weight:600;
+    border-color: var(--research-teal);
 
-    cursor:pointer;
+    background: white;
 
-    transition:.35s;
+    box-shadow: 0 0 0 3px rgba(17,167,160,.08);
 
 }
-
 
 
-.research-form button:hover{
+.file-upload {
 
-    background:#00857b;
+    position: relative;
 
-    transform:translateY(-5px);
+    min-height: 100px;
 
-}
-
-
+    border: 2px dashed var(--research-border);
 
-/*=========================================================
-            FORM SUCCESS MESSAGE
-=========================================================*/
+    display: flex;
 
-.research-success{
+    align-items: center;
 
-    background:#e8faf5;
+    justify-content: center;
 
-    color:#00796b;
+    flex-direction: column;
 
-    padding:20px;
+    gap: 8px;
 
-    border-radius:15px;
+    color: var(--research-muted);
 
-    text-align:center;
+    overflow: hidden;
 
-    margin-top:25px;
-
 }
-
 
 
-/*=========================================================
-            PLACEHOLDER STYLING
-=========================================================*/
+.file-upload i {
 
-.research-form ::placeholder{
+    font-size: 25px;
 
-    color:#89979b;
+    color: var(--research-teal);
 
 }
-
-
 
-/*=========================================================
-            ANIMATION EFFECTS
-=========================================================*/
 
-.research-card,
+.file-upload input {
 
-.services-grid div,
+    position: absolute;
 
-.eligibility-grid div,
+    inset: 0;
 
-.network-stats div,
+    opacity: 0;
 
-.research-process .process-grid div,
+    cursor: pointer;
 
-.research-form form{
-
-    animation:researchFade .8s ease forwards;
-
 }
-
-
-
-@keyframes researchFade{
-
 
-from{
 
-    opacity:0;
+.research-submit {
 
-    transform:translateY(40px);
+    align-self: flex-start;
 
-}
+    padding: 16px 28px;
 
+    border: none;
 
+    background: var(--research-navy);
 
-to{
+    color: white;
 
-    opacity:1;
+    font-family: inherit;
 
-    transform:translateY(0);
+    font-weight: 600;
 
-}
+    cursor: pointer;
 
+    transition: .3s;
 
 }
-
 
 
-/*=========================================================
-            IMAGE TRANSITION
-=========================================================*/
+.research-submit:hover {
 
-.research-image img{
+    background: var(--research-teal);
 
-    transition:.6s ease;
-
 }
-
 
 
-.research-image:hover img{
+.research-submit i {
 
-    transform:scale(1.08);
+    margin-left: 10px;
 
 }
 
 
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-/*=========================================================
-            GLOBAL SMOOTH EFFECTS
-=========================================================*/
+@media (max-width: 1000px) {
 
-html{
+    .research-hero-content,
+    .research-introduction,
+    .research-services,
+    .network-container,
+    .eligibility-inner {
 
-    scroll-behavior:smooth;
+        grid-template-columns: 1fr;
 
-}
+    }
 
 
+    .research-hero-content {
 
-button,
+        display: block;
 
-a{
+    }
 
-    transition:.35s ease;
 
-}
+    .research-hero-badge {
 
+        display: none;
 
+    }
 
-/*=========================================================
-            CUSTOM SCROLL BAR
-=========================================================*/
 
-::-webkit-scrollbar{
+    .research-focus-grid {
 
-    width:10px;
+        grid-template-columns: 1fr 1fr;
 
-}
+    }
 
 
+    .research-section-heading {
 
-::-webkit-scrollbar-track{
+        display: block;
 
-    background:#edf7f8;
+    }
 
-}
 
+    .research-section-heading p {
 
+        margin-top: 20px;
 
-::-webkit-scrollbar-thumb{
+    }
 
-    background:var(--secondary);
 
-    border-radius:20px;
+    .research-services {
 
-}
+        gap: 50px;
 
+    }
 
+}
 
-::-webkit-scrollbar-thumb:hover{
 
-    background:#00857b;
+@media (max-width: 700px) {
 
-}
+    .research-introduction,
+    .research-focus,
+    .research-services,
+    .research-process,
+    .research-eligibility,
+    .research-request {
 
+        padding: 70px 5%;
 
+    }
 
-/*=========================================================
-            RESPONSIVE DESIGN
-=========================================================*/
 
+    .research-hero {
 
-@media(max-width:992px){
+        min-height: 650px;
 
+    }
 
-.eligibility-grid{
 
-    grid-template-columns:repeat(2,1fr);
+    .research-hero-content {
 
-}
+        width: 90%;
 
+    }
 
 
-.research-form form{
+    .research-hero h1 {
 
-    padding:40px;
+        font-size: 42px;
 
-}
+    }
 
 
+    .research-focus-grid,
+    .services-list,
+    .research-highlight-list,
+    .eligibility-items,
+    .form-row {
 
-.research-form .form-grid{
+        grid-template-columns: 1fr;
 
-    grid-template-columns:1fr;
+    }
 
-}
 
+    .research-intro-content h2,
+    .services-intro h2,
+    .network-text h2,
+    .eligibility-title h2,
+    .request-heading h2 {
 
+        font-size: 34px;
 
-}
+    }
 
 
+    .image-frame img {
 
-@media(max-width:650px){
+        height: 380px;
 
+    }
 
-.eligibility-grid{
 
-    grid-template-columns:1fr;
+    .research-image-card {
 
-}
+        right: 10px;
 
+    }
 
 
-.research-form form{
+    .research-process-grid {
 
-    padding:25px;
+        flex-direction: column;
 
-}
+        align-items: center;
 
+        gap: 30px;
 
+    }
 
-.research-form button{
 
-    width:100%;
+    .process-line {
 
-}
+        width: 2px;
 
+        height: 40px;
 
+        flex: none;
 
-.research-form input,
+        margin: 0;
 
-.research-form select,
+    }
 
-.research-form textarea{
 
-    font-size:15px;
+    .request-form-wrapper {
 
-}
+        padding: 25px 18px;
 
+    }
 
 }

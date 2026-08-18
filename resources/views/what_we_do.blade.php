@@ -137,6 +137,18 @@
                             <small>Our thematic focus</small>
                         </div>
                     </a>
+                     <a href="/knowledge_bite">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+                            <strong>Knowledge Bite</strong>
+                            <small>view updates</small>
+                        </div>
+
+                    </a>
 
 
                     <a href="/ongoing_projects">
@@ -304,6 +316,19 @@
                             <strong>Research Assistant</strong>
                             <small>Research opportunities</small>
                         </div>
+                    </a>
+                    
+                    <a href="/partner_with_us">
+
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+
+                        <div>
+                            <strong>Partner with us</strong>
+                            <small>collaborate with our network</small>
+                        </div>
+
                     </a>
 
                 </div>

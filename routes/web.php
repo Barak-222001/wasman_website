@@ -24,9 +24,9 @@ Route::get('/partners',function (){
     return view ('partners');
 });
 
-Route::get('/what_we_do',function (){
-    return view ('what_we_do');
-});
+// Route::get('/what_we_do',function (){
+//     return view ('what_we_do');
+// });
 
 Route::get('/areas_of_interest',function (){
     return view ('areas_of_interest');
@@ -82,4 +82,12 @@ Route::get('/leave_message',function (){
 
 Route::get('/general_enquiries',function (){
     return view ('general_enquiries');
+});
+
+
+Route::get('/knowledge_bite',function(){
+    return view ('knowledge_bite');
+});
+Route::get('/partner_with_us',function(){
+    return view ('partner_with_us');
 });
