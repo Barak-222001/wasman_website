@@ -16,7 +16,8 @@ header nav{
             rgba(3, 42, 58, 0.68),
             rgba(3, 42, 58, 0.25)
         ),
-        url("../images/partner-hero.jpg") center/cover no-repeat;
+        url("../pics_vids/IMG-20260709-WA0043.jpg") center/cover no-repeat;
+        background-attachment: fixed;
 
     display: flex;
     align-items: center;

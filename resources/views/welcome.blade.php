@@ -424,7 +424,6 @@
 ========================================================= --}}
 
 <section class="hero-banner">
-   <i class="fa-solid fa-landmark"></i>
 </section>
 
 
@@ -574,6 +573,9 @@
 
             <div class="swiper-pagination"></div>
 
+        </div>
+        <div class="section-label kk">
+            <a href="/knowledge_bite">Explore more <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>

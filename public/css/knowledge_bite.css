@@ -87,8 +87,9 @@ header nav{
             rgba(3, 39, 51, 0.65),
             rgba(3, 39, 51, 0.25)
         ),
-        url("../images/knowledge-hero.jpg")
+        url("../pics_vids/Gemini_Generated_Image_8ojeff8ojeff8oje.png")
         center/cover no-repeat;
+        background-attachment: fixed;
 
     position: relative;
     display: flex;

@@ -109,6 +109,7 @@ img {
     align-items: center;
     overflow: hidden;
     background-image: url(../pics_vids/home_page_banner.png);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -200,11 +201,20 @@ img {
 /* =========================================================
    KNOWLEDGE SECTION
 ========================================================= */
-
+.kk{
+    cursor: pointer;
+    font-size: 10pt;
+}
+.kk:hover{
+    text-decoration: underline;
+}
+.kk a{
+    color: rgb(24, 119, 143);
+    text-decoration: none;
+    color: none;
+}
 .knowledge-section {
-    padding: 110px 0;
-
-
+    padding: 40px 0;
 }
 
 
@@ -533,10 +543,11 @@ img {
 .who_we_are {
     position: relative;
 
-    padding: 120px 0;
-
+    padding: 10px 0;
+    margin-top: -2%;
     background: var(--white);
-    height: 800px;
+    height: 700px;
+    background-color: rgba(165, 165, 5, 0.068);
 }
 
 .who_we_are::before {
