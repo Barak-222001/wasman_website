@@ -1,5 +1,5 @@
 header nav{
-    margin-right: 6%;
+    margin-right: 10%;
 }
 
 /* =========================================================
@@ -59,7 +59,7 @@ header nav{
             rgba(10, 137, 139, 0.45),
             rgba(212, 107, 91, 0.25)
         ),
-        url("../pics_vids/conference.jpeg");
+        url("../pics_vids/comp.png");
 
     background-size: cover;
     background-position: center;
@@ -634,7 +634,7 @@ header nav{
             rgba(4, 111, 120, .92),
             rgba(222, 112, 91, .80)
         ),
-        url("../pics_vids/conference.jpeg");
+        url("../pics_vids/outreach.jpeg");
 
     background-size: cover;
     background-position: center;

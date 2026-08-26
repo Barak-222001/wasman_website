@@ -91,3 +91,15 @@ Route::get('/knowledge_bite',function(){
 Route::get('/partner_with_us',function(){
     return view ('partner_with_us');
 });
+
+
+Route::get('/mytest', function () {
+    $servicesList = [
+        'Web Development',
+        'UI/UX Design',
+        'SEO Optimization',
+        'Content Writing'
+    ];
+
+    return view('mytest', ['mytest' => $servicesList]);
+});

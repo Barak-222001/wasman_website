@@ -37,7 +37,7 @@
         sans-serif;
 }
 header nav{
-    margin-right: 6%;
+    margin-right: 10%;
 }
 
 
@@ -86,7 +86,7 @@ header nav{
             rgba(7, 143, 150, 0.45),
             rgba(229, 128, 107, 0.35)
         ),
-        url("../pics_vids/conference.jpeg");
+        url("../pics_vids/publ.png");
 
     background-size: cover;
     background-position: center;

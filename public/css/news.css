@@ -1,3 +1,7 @@
+
+header nav{
+    margin-right: 10%;
+}
 /* =====================================================
    WASMAN NEWS PAGE
 ===================================================== */
@@ -27,7 +31,7 @@
             rgba(0, 118, 126, .72),
             rgba(215, 112, 92, .42)
         ),
-        url("../images/news-hero.jpg") center/cover no-repeat;
+        url("../pics_vids/news.png") center/cover no-repeat;
 
     overflow: hidden;
 }

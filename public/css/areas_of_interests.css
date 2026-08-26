@@ -43,7 +43,7 @@
 
 /* HEADER */
 header nav{
-    margin-right: 6%;
+    margin-right: 10%;
 }
 /* =========================================================
    GLOBAL SECTION LABEL
@@ -97,7 +97,7 @@ header nav{
             rgba(16,143,145,0.48),
             rgba(213,105,88,0.55)
         ),
-        url("../pics_vids/outreach.jpeg")
+        url("../pics_vids/areas_of_int_hero.png")
         center / cover no-repeat;
 
     display:

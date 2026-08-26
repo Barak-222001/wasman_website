@@ -1,5 +1,5 @@
 header nav{
-    margin-right: 6%;
+    margin-right: 10%;
 }
 /* =====================================================
    PROJECTS PAGE
@@ -30,7 +30,7 @@ header nav{
             rgba(21, 144, 139, .55),
             rgba(229, 128, 107, .35)
         ),
-        url("../pics_vids/one.jpg");
+        url("../pics_vids/ongoing.png");
 
     background-size: cover;
     background-position: center;
@@ -762,11 +762,11 @@ header nav{
     background:
         linear-gradient(
             110deg,
-            rgba(3,53,67,.92),
-            rgba(7,143,150,.76),
-            rgba(229,128,107,.58)
+            rgba(2, 32, 41, 0.92),
+            rgba(3, 55, 58, 0.76),
+            rgba(85, 47, 40, 0.58)
         ),
-        url("../pics_vids/conference.jpeg");
+        url("../pics_vids/tog.png");
 
     background-size: cover;
     background-position: center;

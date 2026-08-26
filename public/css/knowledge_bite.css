@@ -18,7 +18,7 @@
     --shadow: 0 15px 45px rgba(4, 45, 58, 0.10);
 }
 header nav{
-    margin-right: 6%;
+    margin-right: 10%;
 }
 
 
@@ -87,7 +87,7 @@ header nav{
             rgba(3, 39, 51, 0.65),
             rgba(3, 39, 51, 0.25)
         ),
-        url("../pics_vids/Gemini_Generated_Image_8ojeff8ojeff8oje.png")
+        url("../pics_vids/know.png")
         center/cover no-repeat;
         background-attachment: fixed;
 
@@ -324,9 +324,11 @@ header nav{
 /* =========================================================
    KNOWLEDGE CARDS
 ========================================================= */
-
+.cont{
+   margin-right: 15%;
+}
 .latest-knowledge {
-    background: #f7fbfc;
+        background: #f7fbfc;
 }
 
 .knowledge-grid {

@@ -251,12 +251,6 @@ header .wasman-brand img{
 
     position: absolute;
 
-    /*
-       Keep the dropdown close to the parent.
-       This prevents the submenu from disappearing
-       while moving the mouse toward it.
-    */
-
     top:
         calc(100% + 5px);
 
@@ -677,10 +671,54 @@ header .wasman-brand img{
 
 
 /* =========================================================
-   MOBILE / TABLET NAVIGATION
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .wasman-header-inner {
+
+        padding:
+            0 3%;
+    }
+
+
+    .wasman-brand img {
+
+        width:
+            125px;
+    }
+
+
+    .wasman-nav {
+
+        gap:
+            4px;
+    }
+
+
+    .wasman-nav-item {
+
+        padding:
+            0 10px;
+
+        font-size:
+            11px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   RIGHT-SIDE HAMBURGER NAVIGATION
 ========================================================= */
 
 @media (max-width: 950px) {
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     .wasman-main-header {
 
@@ -699,6 +737,10 @@ header .wasman-brand img{
     }
 
 
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
     .wasman-brand img {
 
         width:
@@ -706,16 +748,68 @@ header .wasman-brand img{
     }
 
 
-    /* Show mobile button */
+    /* =====================================================
+       HAMBURGER BUTTON
+    ===================================================== */
 
     .wasman-menu-btn {
 
         display:
             flex;
+
+        flex-shrink:
+            0;
+
+        width:
+            43px;
+
+        height:
+            43px;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border:
+            1px solid
+            rgba(255,255,255,0.20);
+
+        border-radius:
+            12px;
+
+        background:
+            rgba(255,255,255,0.10);
+
+        color:
+            #ffffff;
+
+        font-size:
+            17px;
+
+        cursor:
+            pointer;
+
+        transition:
+            all 0.3s ease;
     }
 
 
-    /* Mobile navigation */
+    .wasman-menu-btn:hover {
+
+        background:
+            rgba(255,255,255,0.20);
+
+        transform:
+            translateY(-2px);
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION CONTAINER
+       OPENS FROM THE RIGHT
+    ===================================================== */
 
     .wasman-nav {
 
@@ -723,22 +817,31 @@ header .wasman-brand img{
             absolute;
 
         top:
-            100%;
+            calc(100% + 10px);
+
+        right:
+            5%;
 
         left:
-            0;
+            auto;
 
         width:
-            100%;
+            310px;
+
+        max-width:
+            calc(100vw - 30px);
 
         max-height:
-            calc(100vh - 75px);
+            calc(100vh - 95px);
 
         overflow-y:
             auto;
 
+        overflow-x:
+            visible;
+
         padding:
-            15px 5% 25px;
+            12px;
 
         display:
             flex;
@@ -747,7 +850,10 @@ header .wasman-brand img{
             column;
 
         align-items:
-            stretch;
+            flex-end;
+
+        justify-content:
+            flex-start;
 
         gap:
             7px;
@@ -760,9 +866,16 @@ header .wasman-brand img{
                 #d97868
             );
 
+        border:
+            1px solid
+            rgba(255,255,255,0.12);
+
+        border-radius:
+            18px;
+
         box-shadow:
-            0 20px 45px
-            rgba(2,48,60,0.25);
+            0 20px 50px
+            rgba(2,48,60,0.30);
 
         opacity:
             0;
@@ -774,14 +887,22 @@ header .wasman-brand img{
             none;
 
         transform:
-            translateY(-10px);
+            translateY(-10px)
+            translateX(10px);
 
         transition:
-            all 0.3s ease;
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
+
+        z-index:
+            10000;
     }
 
 
-    /* Open mobile navigation */
+    /* =====================================================
+       OPEN NAVIGATION
+    ===================================================== */
 
     .wasman-nav.w-nav-open {
 
@@ -795,22 +916,644 @@ header .wasman-brand img{
             auto;
 
         transform:
-            translateY(0);
+            translateY(0)
+            translateX(0);
     }
 
 
-    /* Mobile nav items */
+    /* =====================================================
+       MAIN NAVIGATION ITEM
+    ===================================================== */
 
     .wasman-nav-item {
+
+        width:
+            210px;
+
+        max-width:
+            100%;
+
+        min-height:
+            46px;
+
+        padding:
+            0 15px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+
+        border-radius:
+            12px;
+
+        font-size:
+            13px;
+
+        box-sizing:
+            border-box;
+    }
+
+
+    .wasman-nav-item:hover {
+
+        transform:
+            none;
+
+        box-shadow:
+            none;
+    }
+
+
+    /* =====================================================
+       NORMAL LINK ALIGNMENT
+    ===================================================== */
+
+    .wasman-nav >
+    .wasman-nav-item {
+
+        align-self:
+            flex-end;
+    }
+
+
+    /* =====================================================
+       DROPDOWN WRAPPER
+    ===================================================== */
+
+    .wasman-nav-dropdown {
+
+        position:
+            relative;
+
+        width:
+            210px;
+
+        max-width:
+            100%;
+
+        display:
+            flex;
+
+        justify-content:
+            flex-end;
+
+        align-items:
+            center;
+    }
+
+
+    /* =====================================================
+       DROPDOWN BUTTON
+    ===================================================== */
+
+    .wasman-nav-dropdown >
+    .wasman-dropdown-btn {
+
+        width:
+            100%;
+    }
+
+
+    /* =====================================================
+       MOBILE SUBMENU
+       OPENS TO THE LEFT OF THE TAB
+    ===================================================== */
+
+    .wasman-nav-dropdown
+    .wasman-dropdown-menu {
+
+        position:
+            absolute;
+
+        top:
+            50%;
+
+        right:
+            calc(100% + 10px);
+
+        left:
+            auto;
+
+        width:
+            245px;
+
+        max-width:
+            245px;
+
+        max-height:
+            calc(100vh - 110px);
+
+        overflow-y:
+            auto;
+
+        margin:
+            0;
+
+        padding:
+            8px;
+
+        box-sizing:
+            border-box;
+
+        background:
+            #ffffff;
+
+        border:
+            1px solid
+            rgba(8,127,140,0.12);
+
+        border-radius:
+            15px;
+
+        box-shadow:
+            0 18px 45px
+            rgba(2,51,64,0.25);
+
+        display:
+            block;
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        pointer-events:
+            none;
+
+        transform:
+            translateY(-50%)
+            translateX(10px);
+
+        transition:
+            opacity 0.22s ease,
+            visibility 0.22s ease,
+            transform 0.22s ease;
+
+        z-index:
+            10001;
+    }
+
+
+    /* =====================================================
+       OPEN SUBMENU
+    ===================================================== */
+
+    .wasman-nav-dropdown.w-dropdown-open
+    .wasman-dropdown-menu {
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        pointer-events:
+            auto;
+
+        transform:
+            translateY(-50%)
+            translateX(0);
+    }
+
+
+    /* =====================================================
+       REMOVE DESKTOP DROPDOWN ARROW / BRIDGE
+    ===================================================== */
+
+    .wasman-dropdown-menu::before,
+    .wasman-dropdown-menu::after {
+
+        display:
+            none;
+    }
+
+
+    /* =====================================================
+       SUBMENU LINKS
+    ===================================================== */
+
+    .wasman-dropdown-menu a {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            10px;
 
         width:
             100%;
 
         min-height:
-            48px;
+            54px;
+
+        padding:
+            8px;
+
+        box-sizing:
+            border-box;
+
+        border-radius:
+            10px;
+
+        color:
+            #234f59;
+
+        text-decoration:
+            none;
+
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+    }
+
+
+    .wasman-dropdown-menu a:hover {
+
+        background:
+            linear-gradient(
+                90deg,
+                #e7f8f5,
+                #fff0ec
+            );
+
+        transform:
+            translateX(3px);
+    }
+
+
+    /* =====================================================
+       SUBMENU ICON
+    ===================================================== */
+
+    .wasman-dropdown-icon {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        flex-shrink:
+            0;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border-radius:
+            10px;
+
+        background:
+            #e6f7f5;
+
+        color:
+            #087f8c;
+
+        font-size:
+            13px;
+    }
+
+
+    /* =====================================================
+       SUBMENU TEXT
+    ===================================================== */
+
+    .wasman-dropdown-menu strong {
+
+        display:
+            block;
+
+        color:
+            #174c57;
+
+        font-size:
+            11px;
+
+        font-weight:
+            700;
+    }
+
+
+    .wasman-dropdown-menu small {
+
+        display:
+            block;
+
+        margin-top:
+            2px;
+
+        color:
+            #82969b;
+
+        font-size:
+            9px;
+    }
+
+
+    /* =====================================================
+       CONTACT TAB
+    ===================================================== */
+
+    .wasman-contact {
+
+        width:
+            210px;
+    }
+
+
+    .wasman-contact
+    .wasman-dropdown-menu {
+
+        width:
+            245px;
+    }
+
+
+    /* =====================================================
+       SCROLLBAR
+    ===================================================== */
+
+    .wasman-nav::-webkit-scrollbar,
+    .wasman-dropdown-menu::-webkit-scrollbar {
+
+        width:
+            5px;
+    }
+
+
+    .wasman-nav::-webkit-scrollbar-thumb,
+    .wasman-dropdown-menu::-webkit-scrollbar-thumb {
+
+        background:
+            rgba(255,255,255,0.25);
+
+        border-radius:
+            10px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   RIGHT SIDE NAVIGATION
+========================================================= */
+
+@media (max-width: 950px) {
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .wasman-main-header {
+
+        min-height:
+            75px;
+
+        overflow:
+            visible;
+    }
+
+
+    .wasman-header-inner {
+
+        min-height:
+            75px;
+
+        padding:
+            0 5%;
+
+        overflow:
+            visible;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .wasman-brand img {
+
+        width:
+            115px;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+    ===================================================== */
+
+    .wasman-menu-btn {
+
+        display:
+            flex;
+
+        flex-shrink:
+            0;
+
+        width:
+            43px;
+
+        height:
+            43px;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border:
+            1px solid
+            rgba(255,255,255,0.20);
+
+        border-radius:
+            12px;
+
+        background:
+            rgba(255,255,255,0.10);
+
+        color:
+            #ffffff;
+
+        font-size:
+            17px;
+
+        cursor:
+            pointer;
+
+        transition:
+            all 0.3s ease;
+    }
+
+
+    .wasman-menu-btn:hover {
+
+        background:
+            rgba(255,255,255,0.20);
+
+        transform:
+            translateY(-2px);
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION PANEL
+    ===================================================== */
+
+    .wasman-nav {
+
+        position:
+            absolute;
+
+        top:
+            calc(100% + 10px);
+
+        right:
+            5%;
+
+        left:
+            auto;
+
+        width:
+            300px;
+
+        max-width:
+            calc(100vw - 30px);
+
+        /*
+         * IMPORTANT:
+         * Do NOT use overflow:hidden or overflow:auto here.
+         * The submenus need to extend outside this panel.
+         */
+
+        overflow:
+            visible;
+
+        padding:
+            12px;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-end;
+
+        justify-content:
+            flex-start;
+
+        gap:
+            7px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #043b4c,
+                #087f8c,
+                #d97868
+            );
+
+        border:
+            1px solid
+            rgba(255,255,255,0.12);
+
+        border-radius:
+            18px;
+
+        box-shadow:
+            0 20px 50px
+            rgba(2,48,60,0.30);
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        pointer-events:
+            none;
+
+        transform:
+            translateY(-10px)
+            translateX(10px);
+
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
+
+        z-index:
+            10000;
+    }
+
+
+    /* =====================================================
+       OPEN NAVIGATION
+    ===================================================== */
+
+    .wasman-nav.w-nav-open {
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        pointer-events:
+            auto;
+
+        transform:
+            translateY(0)
+            translateX(0);
+    }
+
+
+    /* =====================================================
+       MAIN NAVIGATION BUTTONS
+    ===================================================== */
+
+    .wasman-nav-item {
+
+        width:
+            205px;
+
+        max-width:
+            100%;
+
+        min-height:
+            46px;
+
+        padding:
+            0 15px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
 
         justify-content:
             space-between;
+
+        box-sizing:
+            border-box;
 
         border-radius:
             12px;
@@ -830,46 +1573,139 @@ header .wasman-brand img{
     }
 
 
-    /* Mobile dropdown wrapper */
+    /* =====================================================
+       DROPDOWN WRAPPER
+    ===================================================== */
 
     .wasman-nav-dropdown {
+
+        position:
+            relative;
+
+        width:
+            205px;
+
+        max-width:
+            100%;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            flex-end;
+    }
+
+
+    /* =====================================================
+       DROPDOWN BUTTON
+    ===================================================== */
+
+    .wasman-nav-dropdown >
+    .wasman-dropdown-btn {
 
         width:
             100%;
     }
 
 
-    /* Mobile dropdown */
+    /* =====================================================
+       SUBMENU
+       POSITIONED TO THE LEFT OF THE TAB
+    ===================================================== */
 
+    .wasman-nav-dropdown
     .wasman-dropdown-menu {
 
         position:
-            static;
+            absolute;
+
+        top:
+            50%;
+
+        right:
+            calc(100% + 12px);
+
+        left:
+            auto;
 
         width:
-            100%;
+            245px;
 
-        margin-top:
-            5px;
+        min-width:
+            245px;
+
+        max-width:
+            245px;
+
+        margin:
+            0;
 
         padding:
-            5px;
+            8px;
+
+        box-sizing:
+            border-box;
 
         background:
-            rgba(0,45,55,0.35);
+            #ffffff;
 
         border:
             1px solid
-            rgba(255,255,255,0.10);
+            rgba(8,127,140,0.12);
 
         border-radius:
-            12px;
+            15px;
 
         box-shadow:
-            none;
+            0 18px 45px
+            rgba(2,51,64,0.28);
+
+        /*
+         * Hide it initially.
+         */
 
         display:
+            block;
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        pointer-events:
             none;
+
+        /*
+         * Small animation from the right.
+         */
+
+        transform:
+            translateY(-50%)
+            translateX(12px);
+
+        transition:
+            opacity 0.22s ease,
+            visibility 0.22s ease,
+            transform 0.22s ease;
+
+        z-index:
+            99999;
+    }
+
+
+    /* =====================================================
+       SHOW SUBMENU
+    ===================================================== */
+
+    .wasman-nav-dropdown.w-dropdown-open
+    .wasman-dropdown-menu {
+
+        display:
+            block;
 
         opacity:
             1;
@@ -881,11 +1717,14 @@ header .wasman-brand img{
             auto;
 
         transform:
-            none;
+            translateY(-50%)
+            translateX(0);
     }
 
 
-    /* Remove desktop arrow */
+    /* =====================================================
+       REMOVE DESKTOP ARROW
+    ===================================================== */
 
     .wasman-dropdown-menu::before,
     .wasman-dropdown-menu::after {
@@ -895,77 +1734,148 @@ header .wasman-brand img{
     }
 
 
-    /* Open mobile dropdown */
-
-    .wasman-nav-dropdown.w-dropdown-open
-    .wasman-dropdown-menu {
-
-        display:
-            block;
-    }
-
-
-    /* Mobile dropdown links */
+    /* =====================================================
+       SUBMENU LINKS
+    ===================================================== */
 
     .wasman-dropdown-menu a {
 
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            10px;
+
+        width:
+            100%;
+
+        min-height:
+            52px;
+
+        padding:
+            8px;
+
+        box-sizing:
+            border-box;
+
+        border-radius:
+            10px;
+
+        text-decoration:
+            none;
+
         color:
-            #ffffff;
-    }
+            #234f59;
 
-
-    .wasman-dropdown-menu strong {
-
-        color:
-            #ffffff;
-    }
-
-
-    .wasman-dropdown-menu small {
-
-        color:
-            #b9d9dc;
-    }
-
-
-    .wasman-dropdown-icon {
-
-        background:
-            rgba(255,255,255,0.10);
-
-        color:
-            #9be2df;
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease;
     }
 
 
     .wasman-dropdown-menu a:hover {
 
         background:
-            rgba(255,255,255,0.10);
+            linear-gradient(
+                90deg,
+                #e7f8f5,
+                #fff0ec
+            );
 
         transform:
-            none;
+            translateX(3px);
     }
 
 
-    .wasman-dropdown-menu a:hover
+    /* =====================================================
+       SUBMENU ICON
+    ===================================================== */
+
     .wasman-dropdown-icon {
 
+        width:
+            36px;
+
+        height:
+            36px;
+
+        flex-shrink:
+            0;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border-radius:
+            10px;
+
         background:
-            #ffffff;
+            #e6f7f5;
 
         color:
             #087f8c;
+
+        font-size:
+            13px;
     }
 
 
-    /* Mobile contact */
+    /* =====================================================
+       SUBMENU TITLE
+    ===================================================== */
 
-    .wasman-contact
-    .wasman-nav-item {
+    .wasman-dropdown-menu strong {
 
-        background:
-            rgba(224,121,102,0.80);
+        display:
+            block;
+
+        color:
+            #174c57;
+
+        font-size:
+            11px;
+
+        font-weight:
+            700;
+    }
+
+
+    /* =====================================================
+       SUBMENU DESCRIPTION
+    ===================================================== */
+
+    .wasman-dropdown-menu small {
+
+        display:
+            block;
+
+        margin-top:
+            2px;
+
+        color:
+            #82969b;
+
+        font-size:
+            9px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .wasman-contact {
+
+        width:
+            205px;
     }
 
 
@@ -973,7 +1883,10 @@ header .wasman-brand img{
     .wasman-dropdown-menu {
 
         width:
-            100%;
+            245px;
+
+        min-width:
+            245px;
     }
 
 }
@@ -989,6 +1902,9 @@ header .wasman-brand img{
 
         min-height:
             68px;
+
+        overflow:
+            visible;
     }
 
 
@@ -996,6 +1912,12 @@ header .wasman-brand img{
 
         min-height:
             68px;
+
+        padding:
+            0 4%;
+
+        overflow:
+            visible;
     }
 
 
@@ -1013,13 +1935,141 @@ header .wasman-brand img{
 
         height:
             40px;
+
+        font-size:
+            16px;
     }
 
 
+    /* =====================================================
+       MOBILE NAV
+    ===================================================== */
+
     .wasman-nav {
 
+        top:
+            calc(100% + 8px);
+
+        right:
+            4%;
+
+        width:
+            280px;
+
+        max-width:
+            calc(100vw - 24px);
+
         padding:
-            12px 4% 20px;
+            10px;
+
+        border-radius:
+            16px;
+    }
+
+
+    /* =====================================================
+       MOBILE TABS
+    ===================================================== */
+
+    .wasman-nav-item {
+
+        width:
+            190px;
+
+        min-height:
+            44px;
+
+        font-size:
+            12px;
+    }
+
+
+    .wasman-nav-dropdown {
+
+        width:
+            190px;
+    }
+
+
+    .wasman-contact {
+
+        width:
+            190px;
+    }
+
+
+    /* =====================================================
+       MOBILE SUBMENUS
+    ===================================================== */
+
+    .wasman-nav-dropdown
+    .wasman-dropdown-menu {
+
+        right:
+            calc(100% + 8px);
+
+        width:
+            220px;
+
+        min-width:
+            220px;
+
+        max-width:
+            220px;
+    }
+
+
+    .wasman-contact
+    .wasman-dropdown-menu {
+
+        width:
+            220px;
+
+        min-width:
+            220px;
+    }
+
+
+    .wasman-dropdown-menu a {
+
+        min-height:
+            48px;
+
+        padding:
+            7px;
+
+        gap:
+            8px;
+    }
+
+
+    .wasman-dropdown-icon {
+
+        width:
+            32px;
+
+        height:
+            32px;
+
+        border-radius:
+            8px;
+
+        font-size:
+            12px;
+    }
+
+
+    .wasman-dropdown-menu strong {
+
+        font-size:
+            10px;
+    }
+
+
+    .wasman-dropdown-menu small {
+
+        font-size:
+            8.5px;
     }
 
 }
@@ -1051,10 +2101,932 @@ header .wasman-brand img{
     }
 
 
+    .wasman-nav {
+
+        right:
+            8px;
+
+        width:
+            250px;
+
+        max-width:
+            calc(100vw - 16px);
+
+        padding:
+            8px;
+    }
+
+
     .wasman-nav-item {
+
+        width:
+            165px;
+
+        font-size:
+            11px;
+    }
+
+
+    .wasman-nav-dropdown {
+
+        width:
+            165px;
+    }
+
+
+    .wasman-contact {
+
+        width:
+            165px;
+    }
+
+
+    .wasman-nav-dropdown
+    .wasman-dropdown-menu {
+
+        right:
+            calc(100% + 6px);
+
+        width:
+            190px;
+
+        min-width:
+            190px;
+
+        max-width:
+            190px;
+    }
+
+
+    .wasman-contact
+    .wasman-dropdown-menu {
+
+        width:
+            190px;
+
+        min-width:
+            190px;
+    }
+
+}
+/* =========================================================
+   TABLET / MOBILE
+   RIGHT SIDE NAVIGATION
+========================================================= */
+
+@media (max-width: 950px) {
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .wasman-main-header {
+
+        min-height:
+            75px;
+
+        overflow:
+            visible;
+    }
+
+
+    .wasman-header-inner {
+
+        min-height:
+            75px;
+
+        padding:
+            0 5%;
+
+        overflow:
+            visible;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .wasman-brand img {
+
+        width:
+            115px;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+    ===================================================== */
+
+    .wasman-menu-btn {
+
+        display:
+            flex;
+
+        flex-shrink:
+            0;
+
+        width:
+            43px;
+
+        height:
+            43px;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border:
+            1px solid
+            rgba(255,255,255,0.20);
+
+        border-radius:
+            12px;
+
+        background:
+            rgba(255,255,255,0.10);
+
+        color:
+            #ffffff;
+
+        font-size:
+            17px;
+
+        cursor:
+            pointer;
+
+        transition:
+            all 0.3s ease;
+    }
+
+
+    .wasman-menu-btn:hover {
+
+        background:
+            rgba(255,255,255,0.20);
+
+        transform:
+            translateY(-2px);
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION PANEL
+    ===================================================== */
+
+    .wasman-nav {
+
+        position:
+            absolute;
+
+        top:
+            calc(100% + 10px);
+
+        right:
+            5%;
+
+        left:
+            auto;
+
+        width:
+            300px;
+
+        max-width:
+            calc(100vw - 30px);
+
+        /*
+         * IMPORTANT:
+         * Do NOT use overflow:hidden or overflow:auto here.
+         * The submenus need to extend outside this panel.
+         */
+
+        overflow:
+            visible;
+
+        padding:
+            12px;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-end;
+
+        justify-content:
+            flex-start;
+
+        gap:
+            7px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #043b4c,
+                #087f8c,
+                #d97868
+            );
+
+        border:
+            1px solid
+            rgba(255,255,255,0.12);
+
+        border-radius:
+            18px;
+
+        box-shadow:
+            0 20px 50px
+            rgba(2,48,60,0.30);
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        pointer-events:
+            none;
+
+        transform:
+            translateY(-10px)
+            translateX(10px);
+
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
+
+        z-index:
+            10000;
+    }
+
+
+    /* =====================================================
+       OPEN NAVIGATION
+    ===================================================== */
+
+    .wasman-nav.w-nav-open {
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        pointer-events:
+            auto;
+
+        transform:
+            translateY(0)
+            translateX(0);
+    }
+
+
+    /* =====================================================
+       MAIN NAVIGATION BUTTONS
+    ===================================================== */
+
+    .wasman-nav-item {
+
+        width:
+            205px;
+
+        max-width:
+            100%;
+
+        min-height:
+            46px;
+
+        padding:
+            0 15px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+
+        box-sizing:
+            border-box;
+
+        border-radius:
+            12px;
+
+        font-size:
+            13px;
+    }
+
+
+    .wasman-nav-item:hover {
+
+        transform:
+            none;
+
+        box-shadow:
+            none;
+    }
+
+
+    /* =====================================================
+       DROPDOWN WRAPPER
+    ===================================================== */
+
+    .wasman-nav-dropdown {
+
+        position:
+            relative;
+
+        width:
+            205px;
+
+        max-width:
+            100%;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            flex-end;
+    }
+
+
+    /* =====================================================
+       DROPDOWN BUTTON
+    ===================================================== */
+
+    .wasman-nav-dropdown >
+    .wasman-dropdown-btn {
+
+        width:
+            100%;
+    }
+
+
+    /* =====================================================
+       SUBMENU
+       POSITIONED TO THE LEFT OF THE TAB
+    ===================================================== */
+
+    .wasman-nav-dropdown
+    .wasman-dropdown-menu {
+
+        position:
+            absolute;
+
+        top:
+            50%;
+
+        right:
+            calc(100% + 12px);
+
+        left:
+            auto;
+
+        width:
+            245px;
+
+        min-width:
+            245px;
+
+        max-width:
+            245px;
+
+        margin:
+            0;
+
+        padding:
+            8px;
+
+        box-sizing:
+            border-box;
+
+        background:
+            #ffffff;
+
+        border:
+            1px solid
+            rgba(8,127,140,0.12);
+
+        border-radius:
+            15px;
+
+        box-shadow:
+            0 18px 45px
+            rgba(2,51,64,0.28);
+
+        /*
+         * Hide it initially.
+         */
+
+        display:
+            block;
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        pointer-events:
+            none;
+
+        /*
+         * Small animation from the right.
+         */
+
+        transform:
+            translateY(-50%)
+            translateX(12px);
+
+        transition:
+            opacity 0.22s ease,
+            visibility 0.22s ease,
+            transform 0.22s ease;
+
+        z-index:
+            99999;
+    }
+
+
+    /* =====================================================
+       SHOW SUBMENU
+    ===================================================== */
+
+    .wasman-nav-dropdown.w-dropdown-open
+    .wasman-dropdown-menu {
+
+        display:
+            block;
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        pointer-events:
+            auto;
+
+        transform:
+            translateY(-50%)
+            translateX(0);
+    }
+
+
+    /* =====================================================
+       REMOVE DESKTOP ARROW
+    ===================================================== */
+
+    .wasman-dropdown-menu::before,
+    .wasman-dropdown-menu::after {
+
+        display:
+            none;
+    }
+
+
+    /* =====================================================
+       SUBMENU LINKS
+    ===================================================== */
+
+    .wasman-dropdown-menu a {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            10px;
+
+        width:
+            100%;
+
+        min-height:
+            52px;
+
+        padding:
+            8px;
+
+        box-sizing:
+            border-box;
+
+        border-radius:
+            10px;
+
+        text-decoration:
+            none;
+
+        color:
+            #234f59;
+
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+    }
+
+
+    .wasman-dropdown-menu a:hover {
+
+        background:
+            linear-gradient(
+                90deg,
+                #e7f8f5,
+                #fff0ec
+            );
+
+        transform:
+            translateX(3px);
+    }
+
+
+    /* =====================================================
+       SUBMENU ICON
+    ===================================================== */
+
+    .wasman-dropdown-icon {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        flex-shrink:
+            0;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border-radius:
+            10px;
+
+        background:
+            #e6f7f5;
+
+        color:
+            #087f8c;
+
+        font-size:
+            13px;
+    }
+
+
+    /* =====================================================
+       SUBMENU TITLE
+    ===================================================== */
+
+    .wasman-dropdown-menu strong {
+
+        display:
+            block;
+
+        color:
+            #174c57;
+
+        font-size:
+            11px;
+
+        font-weight:
+            700;
+    }
+
+
+    /* =====================================================
+       SUBMENU DESCRIPTION
+    ===================================================== */
+
+    .wasman-dropdown-menu small {
+
+        display:
+            block;
+
+        margin-top:
+            2px;
+
+        color:
+            #82969b;
+
+        font-size:
+            9px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .wasman-contact {
+
+        width:
+            205px;
+    }
+
+
+    .wasman-contact
+    .wasman-dropdown-menu {
+
+        width:
+            245px;
+
+        min-width:
+            245px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .wasman-main-header {
+
+        min-height:
+            68px;
+
+        overflow:
+            visible;
+    }
+
+
+    .wasman-header-inner {
+
+        min-height:
+            68px;
+
+        padding:
+            0 4%;
+
+        overflow:
+            visible;
+    }
+
+
+    .wasman-brand img {
+
+        width:
+            105px;
+    }
+
+
+    .wasman-menu-btn {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        font-size:
+            16px;
+    }
+
+
+    /* =====================================================
+       MOBILE NAV
+    ===================================================== */
+
+    .wasman-nav {
+
+        top:
+            calc(100% + 8px);
+
+        right:
+            4%;
+
+        width:
+            280px;
+
+        max-width:
+            calc(100vw - 24px);
+
+        padding:
+            10px;
+
+        border-radius:
+            16px;
+    }
+
+
+    /* =====================================================
+       MOBILE TABS
+    ===================================================== */
+
+    .wasman-nav-item {
+
+        width:
+            190px;
+
+        min-height:
+            44px;
 
         font-size:
             12px;
+    }
+
+
+    .wasman-nav-dropdown {
+
+        width:
+            190px;
+    }
+
+
+    .wasman-contact {
+
+        width:
+            190px;
+    }
+
+
+    /* =====================================================
+       MOBILE SUBMENUS
+    ===================================================== */
+
+    .wasman-nav-dropdown
+    .wasman-dropdown-menu {
+
+        right:
+            calc(100% + 8px);
+
+        width:
+            220px;
+
+        min-width:
+            220px;
+
+        max-width:
+            220px;
+    }
+
+
+    .wasman-contact
+    .wasman-dropdown-menu {
+
+        width:
+            220px;
+
+        min-width:
+            220px;
+    }
+
+
+    .wasman-dropdown-menu a {
+
+        min-height:
+            48px;
+
+        padding:
+            7px;
+
+        gap:
+            8px;
+    }
+
+
+    .wasman-dropdown-icon {
+
+        width:
+            32px;
+
+        height:
+            32px;
+
+        border-radius:
+            8px;
+
+        font-size:
+            12px;
+    }
+
+
+    .wasman-dropdown-menu strong {
+
+        font-size:
+            10px;
+    }
+
+
+    .wasman-dropdown-menu small {
+
+        font-size:
+            8.5px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .wasman-brand img {
+
+        width:
+            95px;
+    }
+
+
+    .wasman-menu-btn {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        font-size:
+            15px;
+    }
+
+
+    .wasman-nav {
+
+        right:
+            8px;
+
+        width:
+            250px;
+
+        max-width:
+            calc(100vw - 16px);
+
+        padding:
+            8px;
+    }
+
+
+    .wasman-nav-item {
+
+        width:
+            165px;
+
+        font-size:
+            11px;
+    }
+
+
+    .wasman-nav-dropdown {
+
+        width:
+            165px;
+    }
+
+
+    .wasman-contact {
+
+        width:
+            165px;
+    }
+
+
+    .wasman-nav-dropdown
+    .wasman-dropdown-menu {
+
+        right:
+            calc(100% + 6px);
+
+        width:
+            190px;
+
+        min-width:
+            190px;
+
+        max-width:
+            190px;
+    }
+
+
+    .wasman-contact
+    .wasman-dropdown-menu {
+
+        width:
+            190px;
+
+        min-width:
+            190px;
     }
 
 }
