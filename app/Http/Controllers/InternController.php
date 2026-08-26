@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class InternController extends Controller
+{
+    public function create()
+    {
+        return view('intern');
+    }
+
+    public function store(Request $request)
+{
+    $validated = $request->validate([
+        'fullName' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'phoneNumber' => 'required|string|max:20',
+        'institution' => 'required|string|max:255',
+        'program' => 'required|string',
+        'area' => 'required|string',
+        'reason' => 'required|string|max:1000',
+
+        'document' => 'required|file|mimes:pdf,doc,docx|max:5120',
+    ]);
+
+$documentPath = $request
+    ->file('document')
+    ->store('intern_documents', 'public');
+
+dd($documentPath);}
+}

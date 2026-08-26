@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\InternController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -93,13 +95,10 @@ Route::get('/partner_with_us',function(){
 });
 
 
-Route::get('/mytest', function () {
-    $servicesList = [
-        'Web Development',
-        'UI/UX Design',
-        'SEO Optimization',
-        'Content Writing'
-    ];
 
-    return view('mytest', ['mytest' => $servicesList]);
-});
+
+
+Route::get('/intern', [InternController::class, 'create']);
+
+
+Route::post('/intern', [InternController::class, 'store']);

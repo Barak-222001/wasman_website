@@ -734,7 +734,9 @@
 
     <div class="application-form-wrapper">
 
-        <form>
+        <form  action="/intern" method="POST" enctype="multipart/form-data">
+
+             @csrf
 
             <div class="form-row">
 
@@ -742,11 +744,11 @@
 
                     <label>Full Name</label>
 
-                    <input
-                        type="text"
-                        placeholder="Enter your full name"
-                        required
-                    >
+    <input type="text"placeholder="Enter your full name"  name="fullName"  value="{{ old('fullName') }}">
+
+    @error('fullName')
+    <p style="color: red;">{{ $message }}</p>
+    @enderror
 
                 </div>
 
@@ -755,11 +757,11 @@
 
                     <label>Email Address</label>
 
-                    <input
-                        type="email"
-                        placeholder="Enter your email"
-                        required
-                    >
+<input type="email" placeholder="Enter your email" required name="email"  value="{{ old('email') }}">
+   
+    @error('email')
+    <p style="color: red;">{{ $message }}</p>
+    @enderror
 
                 </div>
 
@@ -775,8 +777,11 @@
                     <input
                         type="tel"
                         placeholder="Enter your phone number"
-                        required
+                        required name="phoneNumber"  value="{{ old('phoneNumber') }}"
                     >
+    @error('phoneNumber')
+    <p style="color: red;">{{ $message }}</p>
+    @enderror
 
                 </div>
 
@@ -788,7 +793,11 @@
                     <input
                         type="text"
                         placeholder="Your institution"
+                        name="institution"  value="{{ old('institution') }}"
                     >
+    @error('institution')
+    <p style="color: red;">{{ $message }}</p>
+    @enderror
 
                 </div>
 
@@ -804,7 +813,11 @@
                     <input
                         type="text"
                         placeholder="e.g. BSc. Environmental Science"
+                        name="program"  value="{{ old('program') }}"
                     >
+    @error('program')
+    <p style="color: red;">{{ $message }}</p>
+    @enderror
 
                 </div>
 
@@ -813,30 +826,44 @@
 
                     <label>Preferred Internship Area</label>
 
-                    <select required>
+                    <select required name="area">
 
                         <option value="">
                             Select an area
                         </option>
 
-                        <option>Marine Research</option>
+                        <option value="Marine Research" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                            Marine Research
+                         </option>
 
-                        <option>Blue Economy</option>
+                        <option value="Blue Economy" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                            Blue Economy
+                         </option>
+                         
+                         <option value="Water Resources" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                            Water Resources
+                         </option>
 
-                        <option>Climate Change</option>
+                         <option value="Communications" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                            Communications
+                         </option>
 
-                        <option>Water Resources</option>
-
-                        <option>Communications</option>
-
-                        <option>GIS & Data Analysis</option>
-
+                         <option value="GIS & Data Analysis" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                           GIS & Data Analysis
+                         </option>
+                         
+                         <option value="Blue Economy" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                            Blue Economy
+                         </option>
                     </select>
+
+    @error('area')
+    <p style="color: red;">{{ $message }}</p>
+    @enderror
 
                 </div>
 
             </div>
-
 
             <div class="form-field">
 
@@ -847,7 +874,12 @@
                 <textarea
                     rows="6"
                     placeholder="Tell us about your interests, goals and what you hope to learn..."
+                    name="reason"  value="{{ old('reason') }}"
                 ></textarea>
+
+    @error('reason')
+    <p style="color: red;">{{ $message }}</p>
+    @enderror
 
             </div>
 
@@ -866,19 +898,20 @@
 
                 </div>
 
-                <input type="file">
+                <input type="file" name="document" required>
+    @error('document')
+    <p style="color: red;">{{ $message }}</p>
+    @enderror
 
             </div>
 
-
-            <button type="submit" class="application-submit">
+                <button type="submit" class="application-submit">
 
                 Submit Application
 
                 <i class="fas fa-arrow-right"></i>
 
             </button>
-
         </form>
 
     </div>
