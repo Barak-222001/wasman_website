@@ -91,7 +91,7 @@
         <div class="image-frame">
 
             <img
-                src="images/research-team.jpg"
+                src="../pics_vids/wac.png"
                 alt="Researchers conducting aquatic research">
 
         </div>

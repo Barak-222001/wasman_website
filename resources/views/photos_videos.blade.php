@@ -153,7 +153,7 @@
     <div class="featured-media-image">
 
         <img
-            src="{{ asset('pics_vids/featured-gallery.jpg') }}"
+            src="{{ asset('../pics_vids/fc.png') }}"
             alt="Women conducting aquatic research"
         >
 
@@ -533,7 +533,7 @@
         <div class="journey-item">
 
             <div class="journey-year">
-                2023
+                2025
             </div>
 
             <div class="journey-dot"></div>
@@ -557,7 +557,7 @@
         <div class="journey-item">
 
             <div class="journey-year">
-                2024
+                Early 2026
             </div>
 
             <div class="journey-dot"></div>
@@ -581,7 +581,7 @@
         <div class="journey-item">
 
             <div class="journey-year">
-                2025
+                Mid 2026
             </div>
 
             <div class="journey-dot"></div>
@@ -605,7 +605,7 @@
         <div class="journey-item">
 
             <div class="journey-year">
-                2026
+                Late 2026
             </div>
 
             <div class="journey-dot"></div>

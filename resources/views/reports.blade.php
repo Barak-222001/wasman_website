@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+        <title>WASMaN</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -42,7 +42,7 @@
             </h1>
 
             <p>
-                Explore WASMAN's institutional reports, project assessments,
+                Explore WASMaN's institutional reports, project assessments,
                 technical documents and impact reports that document our
                 contribution to aquatic science, conservation, climate
                 resilience and sustainable development.
@@ -88,7 +88,7 @@
             </h2>
 
             <p>
-                WASMAN documents its research, conservation activities,
+                WASMaN documents its research, conservation activities,
                 partnerships, capacity-building programmes and institutional
                 achievements through carefully prepared reports.
             </p>
@@ -190,8 +190,8 @@
             <div class="report-image-frame">
 
                 <img
-                    src="{{ asset('pics_vids/report-cover.jpg') }}"
-                    alt="WASMAN Annual Impact Report"
+                    src="{{ asset('../pics_vids/rp.png') }}"
+                    alt="WASMaN Annual Impact Report"
                 >
 
             </div>
@@ -216,12 +216,12 @@
             </span>
 
             <h2>
-                WASMAN Annual
+                WASMaN Annual
                 Impact Report 2026
             </h2>
 
             <p>
-                This report presents WASMAN's achievements, research
+                This report presents WASMaN's achievements, research
                 activities, partnerships, capacity-building programmes
                 and contributions toward strengthening women's participation
                 in aquatic science and sustainable environmental management.
@@ -323,7 +323,7 @@
             <div class="report-card-image">
 
                 <img
-                    src="{{ asset('pics_vids/report1.jpg') }}"
+                    src="{{ asset('../pics_vids/me.png') }}"
                     alt="Marine Ecosystem Assessment Report"
                 >
 
@@ -368,8 +368,8 @@
             <div class="report-card-image">
 
                 <img
-                    src="{{ asset('pics_vids/report2.jpg') }}"
-                    alt="Aquatic Research Report"
+                    src="{{ asset('../pics_vids/as.png') }}"
+                    alt="Marine Ecosystem Assessment Report"
                 >
 
                 <span class="report-type">
@@ -411,9 +411,9 @@
 
             <div class="report-card-image">
 
-                <img
-                    src="{{ asset('pics_vids/report3.jpg') }}"
-                    alt="Community Impact Report"
+                 <img
+                    src="{{ asset('../pics_vids/cs.png') }}"
+                    alt="Marine Ecosystem Assessment Report"
                 >
 
                 <span class="report-type">
@@ -456,10 +456,11 @@
 
             <div class="report-card-image">
 
-                <img
-                    src="{{ asset('pics_vids/report4.jpg') }}"
-                    alt="Women Leadership Report"
+                 <img
+                    src="{{ asset('../pics_vids/wqs.png') }}"
+                    alt="Marine Ecosystem Assessment Report"
                 >
+
 
                 <span class="report-type">
                     Programme Report
@@ -501,8 +502,8 @@
             <div class="report-card-image">
 
                 <img
-                    src="{{ asset('pics_vids/report5.jpg') }}"
-                    alt="Climate Resilience Report"
+                    src="{{ asset('../pics_vids/csa.png') }}"
+                    alt="Marine Ecosystem Assessment Report"
                 >
 
                 <span class="report-type">
@@ -545,8 +546,8 @@
             <div class="report-card-image">
 
                 <img
-                    src="{{ asset('pics_vids/report6.jpg') }}"
-                    alt="Water Resources Report"
+                    src="{{ asset('../pics_vids/wrm.png') }}"
+                    alt="Marine Ecosystem Assessment Report"
                 >
 
                 <span class="report-type">
@@ -809,7 +810,7 @@
         <p>
             Some technical documents and project reports may not yet
             be available through our online repository. Contact the
-            WASMAN team to request additional research materials.
+            WASMaN team to request additional research materials.
         </p>
 
         <a href="#" class="cta-btn">

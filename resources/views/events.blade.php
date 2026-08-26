@@ -41,7 +41,7 @@
 
             <span class="eyebrow">
                 <i class="fas fa-calendar-alt"></i>
-                WASMAN EVENTS
+                WASMaN EVENTS
             </span>
 
             <h1>
@@ -101,7 +101,7 @@
                 </h2>
 
                 <p>
-                    WASMAN organizes conferences, technical workshops,
+                    WASMaN organizes conferences, technical workshops,
                     mentorship programmes, policy dialogues, networking
                     forums and community outreach activities that bring
                     together researchers, practitioners, students,
@@ -199,8 +199,8 @@
             <div class="featured-event-image">
 
                 <img
-                    src="{{ asset('pics_vids/featured-event.jpg') }}"
-                    alt="WASMAN International Blue Economy Conference">
+                    src="{{ asset('pics_vids/wi.png') }}"
+                    alt="WASMaN International Blue Economy Conference">
 
                 <div class="featured-date">
 
@@ -220,7 +220,7 @@
                 </span>
 
                 <h2>
-                    WASMAN International
+                    WASMaN International
                     <span>Blue Economy Conference 2027</span>
                 </h2>
 
@@ -331,8 +331,8 @@
                 <div class="event-card-image">
 
                     <img
-                        src="{{ asset('pics_vids/event1.jpg') }}"
-                        alt="Coastal Restoration Workshop">
+                    src="{{ asset('pics_vids/rw.png') }}"
+                    alt="WASMaN International Blue Economy Conference">
 
                     <span class="event-type">
                         Workshop
@@ -381,9 +381,9 @@
 
                 <div class="event-card-image">
 
-                    <img
-                        src="{{ asset('pics_vids/webinar.jpg') }}"
-                        alt="Women in Aquatic Science Webinar">
+                      <img
+                    src="{{ asset('pics_vids/ww.png') }}"
+                    alt="WASMaN International Blue Economy Conference">
 
                     <span class="event-type webinar">
                         Webinar
@@ -432,9 +432,9 @@
 
                 <div class="event-card-image">
 
-                    <img
-                        src="{{ asset('pics_vids/training.jpg') }}"
-                        alt="Aquatic Research Training">
+                     <img
+                    src="{{ asset('pics_vids/rm.png') }}"
+                    alt="WASMaN International Blue Economy Conference">
 
                     <span class="event-type training">
                         Training
@@ -484,8 +484,8 @@
                 <div class="event-card-image">
 
                     <img
-                        src="{{ asset('pics_vids/networking.jpg') }}"
-                        alt="Women Leadership Forum">
+                    src="{{ asset('pics_vids/wla.png') }}"
+                    alt="WASMaN International Blue Economy Conference">
 
                     <span class="event-type networking">
                         Networking
@@ -694,7 +694,7 @@
             <article class="past-event-card large">
 
                 <img
-                    src="{{ asset('pics_vids/past1.jpg') }}"
+                    src="{{ asset('../pics_vids/sm.png') }}"
                     alt="Women in Marine Science Symposium">
 
                 <div class="past-event-overlay">
@@ -718,7 +718,7 @@
             <article class="past-event-card">
 
                 <img
-                    src="{{ asset('pics_vids/past2.jpg') }}"
+                    src="{{ asset('../pics_vids/dl.png') }}"
                     alt="Blue Economy Dialogue">
 
                 <div class="past-event-overlay">
@@ -736,9 +736,9 @@
 
             <article class="past-event-card">
 
-                <img
-                    src="{{ asset('pics_vids/past3.jpg') }}"
-                    alt="Coastal Outreach">
+               <img
+                    src="{{ asset('../pics_vids/ot.png') }}"
+                    alt="Blue Economy Dialogue">
 
                 <div class="past-event-overlay">
 

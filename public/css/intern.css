@@ -29,7 +29,7 @@ header nav{
     align-items: center;
     overflow: hidden;
 
-    background:url("../pics_vids/dolphin.jpg");
+    background:url("../pics_vids/hl.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -608,7 +608,7 @@ header nav{
             rgba(3,36,50,.55),
             rgba(3,36,50,.65)
         ),
-        url("../images/intern-placement.jpg")
+        url("../pics_vids/wf.png")
         center / cover no-repeat;
 
     display: flex;

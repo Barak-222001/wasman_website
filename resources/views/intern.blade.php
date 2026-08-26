@@ -82,12 +82,12 @@
 
     <div class="intern-intro-image">
 
-        <img src="images/intern-intro.jpg"
-             alt="WASMAN internship field experience">
+        <img src="../pics_vids/mri.png"
+             alt="WASMaN internship field experience">
 
         <div class="experience-card">
 
-            <span>WASMAN EXPERIENCE</span>
+            <span>WASMaN EXPERIENCE</span>
 
             <h3>
                 Learn beyond
@@ -109,7 +109,7 @@
     <div class="intern-intro-content">
 
         <div class="section-label">
-            WHY WASMAN?
+            WHY WASMaN?
         </div>
 
         <h2>
@@ -118,7 +118,7 @@
         </h2>
 
         <p>
-            WASMAN internships provide young professionals with an
+            WASMaN internships provide young professionals with an
             opportunity to move beyond theoretical learning and engage
             directly with research, conservation, community development
             and environmental management.
@@ -460,7 +460,7 @@
     <div class="benefits-heading">
 
         <span class="section-label">
-            THE WASMAN EXPERIENCE
+            THE WASMaN EXPERIENCE
         </span>
 
         <h2>
@@ -710,7 +710,7 @@
 
         <h2>
             Start Your
-            WASMAN Journey
+            WASMaN Journey
         </h2>
 
         <p>
@@ -841,7 +841,7 @@
             <div class="form-field">
 
                 <label>
-                    Why would you like to intern with WASMAN?
+                    Why would you like to intern with WASMaN?
                 </label>
 
                 <textarea

@@ -34,7 +34,7 @@
 
         <div class="hero-label">
             <span></span>
-            VOLUNTEER WITH WASMAN
+            VOLUNTEER WITH WASMaN
         </div>
 
         <h1>
@@ -97,11 +97,11 @@
 
     <div class="volunteer-intro-image">
 
-        <img src="images/volunteer-team.jpg"
-             alt="WASMAN volunteers working together">
+        <img src="../pics_vids/mi.png"
+             alt="WASMaN volunteers working together">
 
         <div class="image-caption">
-            <span>WASMAN COMMUNITY</span>
+            <span>WASMaN COMMUNITY</span>
             <p>People creating meaningful environmental change.</p>
         </div>
 
@@ -118,7 +118,7 @@
         </h2>
 
         <p>
-            Volunteers are an important part of WASMAN's work.
+            Volunteers are an important part of WASMaN's work.
             From supporting community education and conservation
             activities to assisting research and public awareness
             campaigns, every contribution helps strengthen aquatic
@@ -234,7 +234,7 @@
             <div class="opportunity-number">01</div>
 
             <div class="opportunity-icon">
-                🌊
+                
             </div>
 
             <h3>Community Outreach</h3>
@@ -339,7 +339,7 @@
 
         <p>
             You don't need to be a marine scientist to contribute.
-            WASMAN welcomes people with different skills, experiences
+            WASMaN welcomes people with different skills, experiences
             and interests.
         </p>
 
@@ -446,7 +446,7 @@
             <h3>Orientation</h3>
 
             <p>
-                Learn about WASMAN and our volunteer activities.
+                Learn about WASMaN and our volunteer activities.
             </p>
 
         </div>
@@ -666,7 +666,7 @@
                 <div class="form-group">
 
                     <label>
-                        Why would you like to volunteer with WASMAN?
+                        Why would you like to volunteer with WASMaN?
                     </label>
 
                     <textarea
@@ -719,7 +719,7 @@
         </p>
 
         <a href="#application">
-            Become a WASMAN Volunteer
+            Become a WASMaN Volunteer
             <span>→</span>
         </a>
 

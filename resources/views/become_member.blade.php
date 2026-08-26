@@ -23,7 +23,7 @@
 @include('components.heading')
 
  {{-- =========================================================
-     WASMAN MEMBERSHIP PAGE
+     WASMaN MEMBERSHIP PAGE
 ========================================================= --}}
 
 {{-- =========================
@@ -36,7 +36,7 @@
     <div class="membership-hero-content">
 
         <span class="membership-eyebrow">
-            JOIN THE WASMAN NETWORK
+            JOIN THE WASMaN NETWORK
         </span>
 
         <h1>
@@ -84,7 +84,7 @@
         <div class="membership-intro-content">
 
             <span class="section-label">
-                WHY WASMAN?
+                WHY WASMaN?
             </span>
 
             <h2>
@@ -93,7 +93,7 @@
             </h2>
 
             <p>
-                WASMAN brings together women and allies working across aquatic
+                WASMaN brings together women and allies working across aquatic
                 science, marine conservation, environmental management,
                 climate resilience and the blue economy.
             </p>
@@ -176,7 +176,7 @@
         <span>MEMBERSHIP OPTIONS</span>
 
         <h2>
-            Find Your Place Within WASMAN
+            Find Your Place Within WASMaN
         </h2>
 
         <p>
@@ -270,7 +270,7 @@
             <p>
                 For universities, NGOs, research institutes, government
                 agencies and organizations interested in collaborating
-                with WASMAN.
+                with WASMaN.
             </p>
 
             <a href="#">
@@ -293,8 +293,8 @@
     <div class="benefits-image">
 
         <img
-            src="{{ asset('pics_vids/outreach.jpeg') }}"
-            alt="WASMAN community engagement"
+            src="{{ asset('pics_vids/bf.png') }}"
+            alt="WASMaN community engagement"
         >
 
         <div class="benefits-image-card">
@@ -326,7 +326,7 @@
         </h2>
 
         <p>
-            WASMAN membership connects you to opportunities that can
+            WASMaN membership connects you to opportunities that can
             strengthen your knowledge, professional network and ability
             to contribute to sustainable aquatic resource management.
         </p>
@@ -428,7 +428,7 @@
         </h2>
 
         <p>
-            Becoming part of WASMAN is simple. Follow these four steps
+            Becoming part of WASMaN is simple. Follow these four steps
             and begin your journey with the network.
         </p>
 
@@ -469,7 +469,7 @@
             </h3>
 
             <p>
-                Your application is reviewed by the WASMAN team.
+                Your application is reviewed by the WASMaN team.
             </p>
 
         </div>
@@ -503,7 +503,7 @@
             </h3>
 
             <p>
-                Participate in WASMAN activities and opportunities.
+                Participate in WASMaN activities and opportunities.
             </p>
 
         </div>
@@ -532,7 +532,7 @@
             </h2>
 
             <p>
-                WASMAN welcomes individuals and institutions committed
+                WASMaN welcomes individuals and institutions committed
                 to advancing aquatic science, environmental sustainability
                 and inclusive leadership.
             </p>
@@ -603,7 +603,7 @@
             <div class="faq-question">
 
                 <h3>
-                    Is WASMAN membership open internationally?
+                    Is WASMaN membership open internationally?
                 </h3>
 
                 <i class="fas fa-plus"></i>
@@ -611,7 +611,7 @@
             </div>
 
             <p>
-                Yes. WASMAN welcomes members from different countries
+                Yes. WASMaN welcomes members from different countries
                 who share an interest in aquatic science, conservation
                 and sustainable development.
             </p>
@@ -675,7 +675,7 @@
             <p>
                 Members can participate in research, workshops,
                 conferences, mentorship, networking, outreach and
-                other WASMAN initiatives.
+                other WASMaN initiatives.
             </p>
 
         </div>

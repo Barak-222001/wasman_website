@@ -12,7 +12,7 @@
        
         <link rel="stylesheet" href="{{ asset('css/partner_with_us.css') }}"> 
         <link rel="stylesheet" href="css/style.css">
->  
+
 
             
     </head>
@@ -30,7 +30,7 @@
 
         <div class="partner-hero-content">
 
-            <span>PARTNER WITH WASMAN</span>
+            <span>PARTNER WITH WASMaN</span>
 
             <h1>
                 Together, We Can Shape
@@ -39,7 +39,7 @@
             </h1>
 
             <p>
-                Join WASMAN in building meaningful partnerships
+                Join WASMaN in building meaningful partnerships
                 that advance aquatic science, empower women,
                 strengthen communities and promote sustainable
                 blue economy development across Africa and beyond.
@@ -70,8 +70,8 @@
     <div class="partner-intro-image">
 
         <img
-            src="images/partnership-team.jpg"
-            alt="WASMAN Partnership Team"
+            src="../pics_vids/st.png"
+            alt="WASMaN Partnership Team"
         >
 
     </div>
@@ -87,7 +87,7 @@
         </h2>
 
         <p>
-            WASMAN believes that lasting solutions to aquatic
+            WASMaN believes that lasting solutions to aquatic
             and environmental challenges require collaboration
             across institutions, communities, governments,
             researchers and the private sector.
@@ -166,7 +166,7 @@
         <span>OUR PARTNERS</span>
 
         <h2>
-            Who Can Partner With WASMAN?
+            Who Can Partner With WASMaN?
         </h2>
 
         <p>
@@ -421,7 +421,7 @@
         </h2>
 
         <p>
-            Partnering with WASMAN gives organizations an
+            Partnering with WASMaN gives organizations an
             opportunity to contribute to meaningful initiatives
             while connecting with a growing network of experts,
             researchers, communities and institutions.
@@ -690,8 +690,8 @@
     <div class="featured-partnership-image">
 
         <img
-            src="images/featured-partnership.jpg"
-            alt="WASMAN Collaboration"
+            src="../pics_vids/dd.png"
+            alt="WASMaN Collaboration"
         >
 
     </div>
@@ -730,12 +730,12 @@
         <span>START A CONVERSATION</span>
 
         <h2>
-            Partner With WASMAN
+            Partner With WASMaN
         </h2>
 
         <p>
             Tell us about your organization and how you
-            would like to collaborate with WASMAN.
+            would like to collaborate with WASMaN.
         </p>
 
     </div>
@@ -832,13 +832,13 @@
     </h2>
 
     <p>
-        Join WASMAN in advancing aquatic science,
+        Join WASMaN in advancing aquatic science,
         empowering women and creating sustainable
         solutions for communities and ecosystems.
     </p>
 
     <a href="#partnership-form">
-        Become a WASMAN Partner
+        Become a WASMaN Partner
     </a>
 
 </section>
