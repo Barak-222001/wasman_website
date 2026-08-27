@@ -107,3 +107,22 @@ Route::get('/intern', [InternController::class, 'create']);
 Route::post('/intern', [InternController::class, 'store']);
 
 Route::get('/admin', [AdminController::class, 'index']);
+
+Route::get(
+    '/admin/applications/{application}/cv',
+    [AdminController::class, 'downloadCv']
+);
+
+
+Route::get(
+    '/admin/applications/{application}/edit',
+    [AdminController::class, 'edit']
+);
+Route::put(
+    '/admin/applications/{application}',
+    [AdminController::class, 'update']
+);
+Route::delete(
+    '/admin/applications/{application}',
+    [AdminController::class, 'destroy']
+);

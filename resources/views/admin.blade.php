@@ -10,6 +10,7 @@
             <th>CV</th>
             <th>Phone</th>
             <th>Reason</th>
+            <th>Action</th>
         </tr>
     </thead>
 
@@ -30,7 +31,6 @@
 
                 <td>
                     <a href="/admin/applications/{{ $application->id }}/cv">
-                        
                         Download CV
                     </a>
                 </td>
@@ -39,16 +39,51 @@
 
                 <td>{{ $application->reason }}</td>
 
+                <td>
+                    <a href="/admin/applications/{{ $application->id }}/edit">
+                        Edit
+                    </a>
+
+                    <form action="/admin/applications/{{ $application->id }}"
+                        method="POST">
+
+                        @csrf
+                        @method('DELETE')
+
+                        <button type="submit">
+                            Delete
+                        </button>
+
+                    </form>
+
+                </td>
+
             </tr>
 
         @empty
         <tr>
-            <td colspan="8">
+            <td colspan="9">
                 No internship applications found.
             </td>
         </tr>
         @endforelse
 
     </tbody>
+
+    @if(session('success'))
+
+    <div style="
+        padding: 15px;
+        margin-bottom: 20px;
+        background: #d1e7dd;
+        color: #0f5132;
+        border: 1px solid #badbcc;
+    ">
+
+        {{ session('success') }}
+
+    </div>
+
+@endif
 
 </table>
