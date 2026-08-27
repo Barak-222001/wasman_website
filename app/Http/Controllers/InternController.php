@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\InternApplication;
 
 class InternController extends Controller
 {
@@ -29,5 +30,20 @@ $documentPath = $request
     ->file('document')
     ->store('intern_documents', 'public');
 
-dd($documentPath);}
+// map table names with the name values provided by html
+InternApplication::create([
+        'full_name' => $validated['fullName'],
+        'email' => $validated['email'],
+        'phone_number' => $validated['phoneNumber'],
+        'institution' => $validated['institution'],
+        'program' => $validated['program'],
+        'area' => $validated['area'],
+        'reason' => $validated['reason'],
+        'document' => $documentPath,
+    ]);
+
+    return redirect('/intern#application-form')
+    ->with('success', 'Application submitted successfully.');
+
+}
 }

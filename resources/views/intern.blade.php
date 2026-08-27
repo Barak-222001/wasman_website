@@ -733,8 +733,18 @@
 
 
     <div class="application-form-wrapper">
+<!-- <p>
+    Session test:
+    {{ session('success') ?? 'NO SUCCESS MESSAGE FOUND' }}
+</p> -->
 
-        <form  action="/intern" method="POST" enctype="multipart/form-data">
+@if(session('success'))
+    <div class="success-message">
+        {{ session('success') }}
+    </div>
+@endif
+
+<form  action="/intern" method="POST" enctype="multipart/form-data">
 
              @csrf
 

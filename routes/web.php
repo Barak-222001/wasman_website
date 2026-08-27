@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\InternController;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -94,11 +95,15 @@ Route::get('/partner_with_us',function(){
     return view ('partner_with_us');
 });
 
+Route::get(
+    '/admin/applications/{application}/cv',
+    [AdminController::class, 'downloadCv']
+);
 
 
 
 
 Route::get('/intern', [InternController::class, 'create']);
-
-
 Route::post('/intern', [InternController::class, 'store']);
+
+Route::get('/admin', [AdminController::class, 'index']);
