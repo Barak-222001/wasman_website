@@ -124,21 +124,21 @@
             </a>
 
 
+<a
+    href="{{ route('admin.research-assistants') }}"
+    class="sidebar-link {{ request()->routeIs('admin.research-assistants') || request()->routeIs('research-assistants.*') ? 'active' : '' }}"
+>
 
-            <a
-                href="#"
-                class="sidebar-link disabled-link"
-            >
+    <span class="nav-icon">
+        ✦
+    </span>
 
-                <span class="nav-icon">
-                    ✦
-                </span>
+    <span>
+        Research Assistants
+    </span>
 
-                <span>
-                    Research Assistants
-                </span>
-
-            </a>
+</a>
+            
 
 
         </nav>

@@ -1525,3 +1525,93 @@ header nav{
     }
 
 }
+
+/* =========================================================
+   LARAVEL RESEARCH ASSISTANCE FORM MESSAGES
+========================================================= */
+
+.research-success-message {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-bottom: 22px;
+    padding: 15px 18px;
+
+    border: 1px solid #b9e3d5;
+    border-radius: 8px;
+
+    background: #edf9f5;
+
+    color: #17654f;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+.research-error-message {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-bottom: 22px;
+    padding: 15px 18px;
+
+    border: 1px solid #efc5c5;
+    border-radius: 8px;
+
+    background: #fff4f4;
+
+    color: #a23d3d;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+.research-error-message strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+
+.research-error-message ul {
+    margin: 0;
+
+    padding-left: 20px;
+}
+
+
+.research-error-message li {
+    margin-bottom: 4px;
+}
+
+
+.research-field-error {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #b54848;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+.research-file-note {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #7d9097;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}

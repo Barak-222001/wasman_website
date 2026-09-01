@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\InternController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ResearchAssistantController;
 
 use App\Http\Controllers\VolunteerController;
 
@@ -170,6 +171,41 @@ Route::middleware('auth')->group(function () {
 
 });
 
+
+// RESEARCH CONTROLLER
+Route::get(
+    '/admin/research-assistants',
+    [AdminController::class, 'researchAssistants']
+)->name('admin.research-assistants');
+
+
+Route::get(
+    '/admin/research-assistants/{application}/document',
+    [AdminController::class, 'downloadResearchDocument']
+)->name('research-assistants.document');
+
+
+Route::get(
+    '/admin/research-assistants/{application}/edit',
+    [AdminController::class, 'editResearchAssistant']
+)->name('research-assistants.edit');
+
+
+Route::put(
+    '/admin/research-assistants/{application}',
+    [AdminController::class, 'updateResearchAssistant']
+)->name('research-assistants.update');
+
+
+Route::delete(
+    '/admin/research-assistants/{application}',
+    [AdminController::class, 'destroyResearchAssistant']
+)->name('research-assistants.destroy');
+
+
+
+
+
 Route::get('/login', [AuthController::class, 'showLogin'])
     ->name('login');
 
@@ -186,3 +222,16 @@ Route::post(
     '/volunteer',
     [VolunteerController::class, 'store']
 )->name('volunteer.store');
+
+
+// RESEARCH ASSISTANT
+
+Route::get('/research_assistant', function () {
+    return view('research_assistant');
+})->name('research-assistant');
+
+
+Route::post(
+    '/research_assistant',
+    [ResearchAssistantController::class, 'store']
+)->name('research-assistant.store');

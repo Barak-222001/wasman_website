@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 use App\Models\InternApplication;
 use App\Models\VolunteerApplication;
+use App\Models\ResearchAssistantApplication;
 
 
 use Illuminate\Http\Request;
@@ -251,6 +252,219 @@ public function destroyVolunteer(VolunteerApplication $volunteer)
         ->with(
             'success',
             'Volunteer application deleted successfully.'
+        );
+}
+
+/*
+|--------------------------------------------------------------------------
+| RESEARCH ASSISTANCE APPLICATIONS
+|--------------------------------------------------------------------------
+*/
+
+public function researchAssistants(Request $request)
+{
+    $search = $request->input('search');
+    $area = $request->input('area');
+    $sort = $request->input('sort', 'newest');
+
+
+    $applications = ResearchAssistantApplication::query()
+
+        ->when($search, function ($query, $search) {
+
+            $query->where(function ($q) use ($search) {
+
+                $q->where('full_name', 'like', "%{$search}%")
+                    ->orWhere('email', 'like', "%{$search}%")
+                    ->orWhere('institution', 'like', "%{$search}%")
+                    ->orWhere('research_topic', 'like', "%{$search}%")
+                    ->orWhere('research_area', 'like', "%{$search}%");
+
+            });
+
+        })
+
+        ->when($area, function ($query, $area) {
+
+            $query->where('research_area', $area);
+
+        })
+
+        ->when(
+            $sort === 'oldest',
+
+            function ($query) {
+                $query->oldest();
+            },
+
+            function ($query) {
+                $query->latest();
+            }
+        )
+
+        ->paginate(10)
+
+        ->withQueryString();
+
+
+    $totalResearchRequests = ResearchAssistantApplication::count();
+
+
+    $documentsUploaded = ResearchAssistantApplication::whereNotNull(
+        'document'
+    )->count();
+
+
+    $researchAreaStats = ResearchAssistantApplication::selectRaw(
+            'research_area, COUNT(*) as total'
+        )
+        ->groupBy('research_area')
+        ->pluck('total', 'research_area');
+
+
+    $researchMonthlyStats = ResearchAssistantApplication::selectRaw(
+            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+        )
+        ->groupBy('month')
+        ->orderBy('month')
+        ->pluck('total', 'month');
+
+
+    return view('admin-research-assistants', [
+        'applications' => $applications,
+        'totalResearchRequests' => $totalResearchRequests,
+        'documentsUploaded' => $documentsUploaded,
+        'researchAreaStats' => $researchAreaStats,
+        'researchMonthlyStats' => $researchMonthlyStats,
+    ]);
+}
+
+
+public function downloadResearchDocument(
+    ResearchAssistantApplication $application
+) {
+    if (
+        !$application->document ||
+        !Storage::disk('public')->exists($application->document)
+    ) {
+        abort(404);
+    }
+
+
+    return Storage::disk('public')->download(
+        $application->document
+    );
+}
+
+
+public function editResearchAssistant(
+    ResearchAssistantApplication $application
+) {
+    return view('edit-research-assistant-application', [
+        'application' => $application,
+    ]);
+}
+
+
+public function updateResearchAssistant(
+    Request $request,
+    ResearchAssistantApplication $application
+) {
+    $validated = $request->validate([
+
+        'fullName' => 'required|string|max:255',
+
+        'email' => 'required|email|max:255',
+
+        'institution' => 'nullable|string|max:255',
+
+        'researchTopic' => 'required|string|max:255',
+
+        'researchArea' => 'required|string|max:255',
+
+        'timeline' => 'nullable|string|max:255',
+
+        'researchNeeds' => 'required|string|max:2000',
+
+        'document' => 'nullable|file|mimes:pdf,doc,docx|max:5120',
+
+    ]);
+
+
+    $documentPath = $application->document;
+
+
+    if ($request->hasFile('document')) {
+
+        if ($application->document) {
+
+            Storage::disk('public')->delete(
+                $application->document
+            );
+
+        }
+
+
+        $documentPath = $request
+            ->file('document')
+            ->store(
+                'research_assistant_documents',
+                'public'
+            );
+
+    }
+
+
+    $application->update([
+
+        'full_name' => $validated['fullName'],
+
+        'email' => $validated['email'],
+
+        'institution' => $validated['institution'] ?? null,
+
+        'research_topic' => $validated['researchTopic'],
+
+        'research_area' => $validated['researchArea'],
+
+        'timeline' => $validated['timeline'] ?? null,
+
+        'research_needs' => $validated['researchNeeds'],
+
+        'document' => $documentPath,
+
+    ]);
+
+
+    return redirect()
+        ->route('admin.research-assistants')
+        ->with(
+            'success',
+            'Research assistance request updated successfully.'
+        );
+}
+
+
+public function destroyResearchAssistant(
+    ResearchAssistantApplication $application
+) {
+    if ($application->document) {
+
+        Storage::disk('public')->delete(
+            $application->document
+        );
+
+    }
+
+
+    $application->delete();
+
+
+    return redirect()
+        ->route('admin.research-assistants')
+        ->with(
+            'success',
+            'Research assistance request deleted successfully.'
         );
 }
 
