@@ -6,6 +6,8 @@ use App\Http\Controllers\InternController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 
+use App\Http\Controllers\VolunteerController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -135,9 +137,52 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])
         ->name('logout');
 
+  
+    /*
+|--------------------------------------------------------------------------
+| VOLUNTEER ADMIN ROUTES
+|--------------------------------------------------------------------------
+*/
+
+
+    Route::get(
+        '/admin/volunteers',
+        [AdminController::class, 'volunteers']
+    )->name('admin.volunteers');
+
+
+    Route::get(
+        '/admin/volunteers/{volunteer}/edit',
+        [AdminController::class, 'editVolunteer']
+    )->name('volunteers.edit');
+
+
+    Route::put(
+        '/admin/volunteers/{volunteer}',
+        [AdminController::class, 'updateVolunteer']
+    )->name('volunteers.update');
+
+
+    Route::delete(
+        '/admin/volunteers/{volunteer}',
+        [AdminController::class, 'destroyVolunteer']
+    )->name('volunteers.destroy');
+
 });
 
 Route::get('/login', [AuthController::class, 'showLogin'])
     ->name('login');
 
 Route::post('/login', [AuthController::class, 'login']);
+
+
+
+// VOLUNTEER
+Route::get('/volunteer', function () {
+    return view('volunteer');
+});
+
+Route::post(
+    '/volunteer',
+    [VolunteerController::class, 'store']
+)->name('volunteer.store');

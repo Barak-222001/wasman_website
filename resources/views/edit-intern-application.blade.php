@@ -1,122 +1,279 @@
-<h1>Edit Internship Application</h1>
+@extends('layouts.admin')
 
-<form  action="{{ route('applications.update', $application) }}" method="POST"
-    method="POST"
->
-  
+@section('title', 'Edit Application')
 
-    @csrf
-    @method('PUT')
+@section('content')
 
+<div class="edit-page-wrap">
 
-    <label>Full Name</label>
+    <div class="edit-page-header">
 
-    <input
-        type="text"
-        name="fullName"
-        value="{{ old('fullname',$application->full_name) }}"
-    >
-@error('fullName')
-    <p style="color: red;">
-        {{ $message }}
-    </p>
-@enderror
+        <div>
+            <span class="section-kicker">
+                Application Management
+            </span>
 
-    <br><br>
+            <h2>
+                Edit Internship Application
+            </h2>
 
+            <p>
+                Update the applicant information below and save your changes.
+            </p>
+        </div>
 
-    <label>Email</label>
+        <a
+            href="{{ route('admin.dashboard') }}"
+            class="back-dashboard-btn"
+        >
+            Back to Dashboard
+        </a>
 
-    <input
-        type="email"
-        name="email"
-        value="{{ old('email',$application->email) }}"
-    >
-@error('email')
-    <p style="color: red;">
-        {{ $message }}
-    </p>
-@enderror
-
-    <br><br>
+    </div>
 
 
-    <label>Phone Number</label>
+    <div class="edit-card">
 
-    <input
-        type="text"
-        name="phoneNumber"
-        value="{{ old('phoneNumber', $application->phone_number) }}"
-    >
-@error('phoneNumber')
-    <p style="color: red;">
-        {{ $message }}
-    </p>
-@enderror
+        <div class="edit-card-header">
 
-    <br><br>
+            <div class="edit-applicant-avatar">
 
+                {{ strtoupper(substr($application->full_name, 0, 1)) }}
 
-    <label>Institution</label>
+            </div>
 
-    <input
-        type="text"
-        name="institution"
-        value="{{ old('institution',$application->institution) }}"
-    >
-@error('institution')
-    <p style="color: red;">
-        {{ $message }}
-    </p>
-@enderror
+            <div>
 
-    <br><br>
+                <h3>
+                    {{ $application->full_name }}
+                </h3>
+
+                <p>
+                    {{ $application->email }}
+                </p>
+
+            </div>
+
+        </div>
 
 
-    <label>Program</label>
-    
-    <input
-        type="text"
-        name="program"
-        value="{{ old('progam',$application->program) }}"
-    >
-@error('program')
-    <p style="color: red;">
-        {{ $message }}
-    </p>
-@enderror
+        @if ($errors->any())
 
-    <br><br>
+            <div class="edit-error-box">
 
+                <strong>
+                    Please correct the following:
+                </strong>
 
-    <label>Area</label>
-    <input
-        type="text"
-        name="area"
-        value="{{ old('area', $application->area) }}"
-    >
-@error('area')
-    <p style="color: red;">
-        {{ $message }}
-    </p>
-@enderror
+                <ul>
 
-    <br><br>
+                    @foreach ($errors->all() as $error)
+
+                        <li>
+                            {{ $error }}
+                        </li>
+
+                    @endforeach
+
+                </ul>
+
+            </div>
+
+        @endif
 
 
-    <label>Reason</label>
-    <textarea name="reason">{{ old('reason', $application->reason) }}</textarea>
-@error('reason')
-    <p style="color: red;">
-        {{ $message }}
-    </p>
-@enderror
+        <form
+            action="{{ route('applications.update', $application) }}"
+            method="POST"
+            class="edit-form"
+        >
 
-    <br><br>
+            @csrf
+            @method('PUT')
 
 
-    <button type="submit">
-        Update Application
-    </button>
+            <div class="edit-form-grid">
 
-</form>
+
+                <div class="edit-field">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        value="{{ old('fullName', $application->full_name) }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="edit-field">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value="{{ old('email', $application->email) }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="edit-field">
+
+                    <label for="phoneNumber">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="phoneNumber"
+                        name="phoneNumber"
+                        value="{{ old('phoneNumber', $application->phone_number) }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="edit-field">
+
+                    <label for="institution">
+                        Institution
+                    </label>
+
+                    <input
+                        type="text"
+                        id="institution"
+                        name="institution"
+                        value="{{ old('institution', $application->institution) }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="edit-field">
+
+                    <label for="program">
+                        Program
+                    </label>
+
+                    <input
+                        type="text"
+                        id="program"
+                        name="program"
+                        value="{{ old('program', $application->program) }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="edit-field">
+
+                    <label for="area">
+                        Area of Interest
+                    </label>
+
+                    <select
+                        id="area"
+                        name="area"
+                        required
+                    >
+
+                        <option
+                            value="Marine Research"
+                            {{ old('area', $application->area) == 'Marine Research' ? 'selected' : '' }}
+                        >
+                            Marine Research
+                        </option>
+
+                        <option
+                            value="Blue Economy"
+                            {{ old('area', $application->area) == 'Blue Economy' ? 'selected' : '' }}
+                        >
+                            Blue Economy
+                        </option>
+
+                        <option
+                            value="Water Resources"
+                            {{ old('area', $application->area) == 'Water Resources' ? 'selected' : '' }}
+                        >
+                            Water Resources
+                        </option>
+
+                        <option
+                            value="Communication"
+                            {{ old('area', $application->area) == 'Communication' ? 'selected' : '' }}
+                        >
+                            Communication
+                        </option>
+
+                        <option
+                            value="GIS & Data Analysis"
+                            {{ old('area', $application->area) == 'GIS & Data Analysis' ? 'selected' : '' }}
+                        >
+                            GIS & Data Analysis
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="edit-field edit-field-full">
+
+                    <label for="reason">
+                        Reason for Application
+                    </label>
+
+                    <textarea
+                        id="reason"
+                        name="reason"
+                        rows="6"
+                        required
+                    >{{ old('reason', $application->reason) }}</textarea>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="edit-form-actions">
+
+                <a
+                    href="{{ route('admin.dashboard') }}"
+                    class="edit-cancel-btn"
+                >
+                    Cancel
+                </a>
+
+                <button
+                    type="submit"
+                    class="edit-save-btn"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+@endsection
