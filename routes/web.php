@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\InternController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -106,23 +107,37 @@ Route::get(
 Route::get('/intern', [InternController::class, 'create']);
 Route::post('/intern', [InternController::class, 'store']);
 
-Route::get('/admin', [AdminController::class, 'index']);
+Route::middleware('auth')->group(function () {
 
-Route::get(
-    '/admin/applications/{application}/cv',
-    [AdminController::class, 'downloadCv']
-);
+    Route::get('/admin', [AdminController::class, 'index'])
+        ->name('admin.dashboard');
 
+    Route::get(
+        '/admin/applications/{application}/edit',
+        [AdminController::class, 'edit']
+    )->name('applications.edit');
 
-Route::get(
-    '/admin/applications/{application}/edit',
-    [AdminController::class, 'edit']
-);
-Route::put(
-    '/admin/applications/{application}',
-    [AdminController::class, 'update']
-);
-Route::delete(
-    '/admin/applications/{application}',
-    [AdminController::class, 'destroy']
-);
+    Route::put(
+        '/admin/applications/{application}',
+        [AdminController::class, 'update']
+    )->name('applications.update');
+
+    Route::delete(
+        '/admin/applications/{application}',
+        [AdminController::class, 'destroy']
+    )->name('applications.destroy');
+
+    Route::get(
+        '/admin/applications/{application}/cv',
+        [AdminController::class, 'downloadCv']
+    )->name('applications.cv');
+
+    Route::post('/logout', [AuthController::class, 'logout'])
+        ->name('logout');
+
+});
+
+Route::get('/login', [AuthController::class, 'showLogin'])
+    ->name('login');
+
+Route::post('/login', [AuthController::class, 'login']);

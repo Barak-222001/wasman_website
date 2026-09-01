@@ -10,12 +10,37 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
- public function index()
+ public function index(Request $request)
     {
-        $applications = InternApplication::all();
+        $search = $request->input('search');
+        $area = $request->input('area');
+        $sort = $request->input('sort', 'newest');
+        
+        $applications = InternApplication::query()
+        ->when($search, function ($query, $search) {
+            $query->where('full_name', 'like', "%{$search}%")
+                ->orWhere('email', 'like', "%{$search}%")
+                ->orWhere('institution', 'like', "%{$search}%")
+                ->orWhere('program', 'like', "%{$search}%")
+                ->orWhere('area', 'like', "%{$search}%");
+        })
+        ->when($area, function ($query, $area) {
+            $query->where('area', $area);
+            })
+        ->when($sort === 'oldest', function ($query) {
+            $query->oldest();
+            }, function ($query) {
+            $query->latest();
+})
+
+        ->paginate(10)
+        ->withQueryString();
+
+        $totalApplications = InternApplication::count();
 
         return view('admin', [
-            'applications' => $applications
+            'applications' => $applications,
+            'totalApplications' => $totalApplications
         ]);
     }
 
@@ -29,13 +54,18 @@ public function downloadCv(InternApplication $application)
 
 public function destroy(InternApplication $application)
     {
-        Storage::disk('public')
-            ->delete($application->document);
+        // Storage::disk('public')
+        //     ->delete($application->document);
+
+        if ($application->document) {
+            Storage::disk('public')->delete($application->document);
+            }
 
         $application->delete();
 
-        return redirect('/admin')
-            ->with('success', 'Application deleted successfully.');
+        return redirect()
+        ->route('admin.dashboard')
+        ->with('success', 'Application deleted successfully.');
     }
 public function edit(InternApplication $application)
     {
@@ -66,8 +96,9 @@ public function update(Request $request, InternApplication $application)
             'reason' => $validated['reason'],
         ]);
 
-    return redirect('/admin')
-        ->with('success', 'Application updated successfully.');
+    return redirect()
+    ->route('admin.dashboard')
+    ->with('success', 'Application updated successfully.');
 }
 
 }

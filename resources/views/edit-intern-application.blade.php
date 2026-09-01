@@ -1,9 +1,9 @@
 <h1>Edit Internship Application</h1>
 
-<form
-    action="/admin/applications/{{ $application->id }}"
+<form  action="{{ route('applications.update', $application) }}" method="POST"
     method="POST"
 >
+  
 
     @csrf
     @method('PUT')
