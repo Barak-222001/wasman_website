@@ -101,7 +101,7 @@
 
             <p>
 
-                WASMAN connects researchers, students, institutions
+                WASMaN connects researchers, students, institutions
                 and environmental professionals with the expertise,
                 networks and field support needed to generate
                 meaningful knowledge for aquatic sustainability.
@@ -237,7 +237,7 @@
 
         <p>
 
-            WASMAN supports researchers, academic institutions,
+            WASMaN supports researchers, academic institutions,
             students, conservation practitioners and environmental
             organizations by creating opportunities for collaboration,
             technical support and knowledge exchange.
@@ -346,7 +346,7 @@
         <p>
 
             Explore the scientific and environmental areas where
-            WASMAN facilitates research collaboration and support.
+            WASMaN facilitates research collaboration and support.
 
         </p>
 
@@ -892,7 +892,7 @@
 
             <p>
 
-                WASMAN brings together scientists, academics,
+                WASMaN brings together scientists, academics,
                 students, policymakers and environmental
                 professionals to encourage collaborative research
                 and meaningful knowledge exchange.
@@ -994,7 +994,7 @@
 
         <p>
 
-            Getting research support from WASMAN is simple.
+            Getting research support from WASMaN is simple.
             Tell us what you need and our team will help connect
             you with the appropriate support.
 

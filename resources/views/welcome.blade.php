@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+    <title>WASMaN | Women in Aquatic Science & Management</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-       
-        <link rel="stylesheet" href="{{ asset('css/welcome.css') }}"> 
-        <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
-        <link rel="stylesheet" href="css/style.css">              
-    </head>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
 
-    <body>
- @include('components.heading')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+@include('components.heading')
+
+
 {{-- =========================================================
-     HERO / LANDING IMAGE
+     MAIN HERO — PRESERVED
 ========================================================= --}}
 
 <section class="hero-banner">
 </section>
 
 
-
 {{-- =========================================================
-     KNOWLEDGE BITE
+     INTRO / KNOWLEDGE
 ========================================================= --}}
 
 <section class="knowledge-section reveal">
 
     <div class="section-container">
 
-        <div class="section-label">
-            KNOWLEDGE & AWARENESS
-        </div>
+        <div class="section-heading-row">
 
-        <div class="section-title">
-            Knowledge Bite
+            <div>
+
+                <span class="section-label">
+                    KNOWLEDGE & AWARENESS
+                </span>
+
+                <h2 class="section-title">
+                    Knowledge Bite
+                </h2>
+
+            </div>
+
+            <a href="/knowledge_bite" class="section-link">
+                Explore Knowledge
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
         </div>
 
 
@@ -47,67 +63,76 @@
 
             <div class="swiper-wrapper">
 
+                <div class="swiper-slide knowledge-card knowledge-card-primary">
 
-                {{-- =========================
-                     SLIDE 1
-                ========================== --}}
+                    <div class="knowledge-card-content">
 
-                <div class="swiper-slide" id="one">
-
-                    <div class="knowledge-inner">
-
-                        <div class="head">
-                            Knowledge Bite
+                        <div class="knowledge-icon">
+                            <i class="fa-solid fa-book-open-reader"></i>
                         </div>
 
-                        <div class="content">
+                        <span class="knowledge-kicker">
+                            Women In Science
+                        </span>
 
+                        <h3>
+                            Knowledge Bite
+                        </h3>
+
+                        <p>
                             Women in aquatic science are making a difference.
                             Through research, mentorship and community engagement,
                             WASMaN members are promoting the sustainable management
                             of aquatic resources and inspiring more girls and women
-                            to pursue careers in science and environmental
-                            conservation.
-
-                        </div>
+                            to pursue careers in science and environmental conservation.
+                        </p>
 
                     </div>
 
                 </div>
 
 
+                <div class="swiper-slide knowledge-card knowledge-card-light">
 
-                {{-- =========================
-                     SLIDE 2
-                ========================== --}}
+                    <div class="knowledge-card-content">
 
-                <div class="swiper-slide">
+                        <div class="knowledge-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
 
-                    <div id="two">
-
-                        <span class="slide-heading">
+                        <span class="knowledge-kicker">
                             Did You Know?
                         </span>
 
+                        <h3>
+                            Coastal Ecosystems Matter
+                        </h3>
 
-                        <div id="Child">
+                        <div class="fact-grid">
 
-                            <p>
-                                Mangrove forests can store up to four times
-                                more carbon per hectare than tropical
-                                rainforests.
-                            </p>
+                            <div class="fact-item">
+                                <i class="fa-solid fa-leaf"></i>
+                                <p>
+                                    Mangrove forests can store up to four times
+                                    more carbon per hectare than tropical rainforests.
+                                </p>
+                            </div>
 
-                            <p>
-                                Healthy coastal ecosystems help reduce
-                                the impact of storm surges and coastal
-                                erosion.
-                            </p>
+                            <div class="fact-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <p>
+                                    Healthy coastal ecosystems help reduce the
+                                    impact of storm surges and coastal erosion.
+                                </p>
+                            </div>
 
-                            <p>
-                                Plastic waste can remain in marine
-                                environments for hundreds of years.
-                            </p>
+                            <div class="fact-item">
+                                <i class="fa-solid fa-recycle"></i>
+                                <p>
+                                    Plastic waste can remain in marine environments
+                                    for hundreds of years.
+                                </p>
+                            </div>
 
                         </div>
 
@@ -116,43 +141,47 @@
                 </div>
 
 
+                <div class="swiper-slide knowledge-card knowledge-card-soft">
 
-                {{-- =========================
-                     SLIDE 3
-                ========================== --}}
+                    <div class="knowledge-card-content">
 
-                <div class="swiper-slide" id="three">
-
-                    <div class="lists-container">
-
-                        <div class="headere" id="header">
-                            Why WASMaN's Activities Matter
+                        <div class="knowledge-icon">
+                            <i class="fa-solid fa-water"></i>
                         </div>
 
+                        <span class="knowledge-kicker">
+                            Why Our Work Matters
+                        </span>
 
-                        <div class="lists  " id="listss">
+                        <h3>
+                            Why WASMaN's Activities Matter
+                        </h3>
 
-                            <ul>
+                        <div class="matter-list">
 
-                                <li>
-                                    WASMaN helps increase the participation
-                                    and leadership of women in aquatic science
-                                    and resource management.
-                                </li>
+                            <div class="matter-item">
+                                <span>01</span>
+                                <p>
+                                    WASMaN helps increase the participation and leadership
+                                    of women in aquatic science and resource management.
+                                </p>
+                            </div>
 
-                                <li>
-                                    The network provides a platform for
-                                    professionals, researchers and students
-                                    to collaborate and exchange ideas.
-                                </li>
+                            <div class="matter-item">
+                                <span>02</span>
+                                <p>
+                                    The network provides a platform for professionals,
+                                    researchers and students to collaborate and exchange ideas.
+                                </p>
+                            </div>
 
-                                <li>
-                                    Research and outreach activities contribute
-                                    to the sustainable management of fisheries,
-                                    coastal and marine resources.
-                                </li>
-
-                            </ul>
+                            <div class="matter-item">
+                                <span>03</span>
+                                <p>
+                                    Research and outreach activities contribute to sustainable
+                                    management of fisheries, coastal and marine resources.
+                                </p>
+                            </div>
 
                         </div>
 
@@ -162,24 +191,15 @@
 
             </div>
 
-
-            {{-- SWIPER CONTROLS --}}
-
             <div class="swiper-button-prev"></div>
-
             <div class="swiper-button-next"></div>
-
             <div class="swiper-pagination"></div>
 
-        </div>
-        <div class="section-label kk">
-            <a href="/knowledge_bite">Explore more <i class="fas fa-arrow-right"></i></a>
         </div>
 
     </div>
 
 </section>
-
 
 
 {{-- =========================================================
@@ -190,21 +210,17 @@
 
     <div class="section-container">
 
-        <div class="section-label">
-            ABOUT WASMaN
-        </div>
+        <div class="who-layout">
 
-        <div class="heading">
-            Who We Are
-        </div>
+            <div class="who-copy">
 
+                <span class="section-label">
+                    ABOUT WASMaN
+                </span>
 
-        <div class="who-content">
-
-
-            {{-- LEFT CONTENT --}}
-
-            <div class="who-text">
+                <h2 class="section-title">
+                    Who We Are
+                </h2>
 
                 <p>
                     The Women in Aquatic Science and Management Network
@@ -221,21 +237,23 @@
                     resources.
                 </p>
 
-                <a href="/news" class="read-more">
-                    Discover More →
+                <a href="/news" class="primary-link-button">
+                    Discover More
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
 
 
-            {{-- RIGHT CONTENT --}}
+            <div class="who-feature-grid">
 
-            <div class="who-highlight">
+                <article class="who-feature-card">
 
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
 
-                <div class="highlight-box">
-
-                    <span class="highlight-number">
+                    <span class="feature-number">
                         01
                     </span>
 
@@ -248,13 +266,16 @@
                         in aquatic science and management.
                     </p>
 
-                </div>
+                </article>
 
 
+                <article class="who-feature-card">
 
-                <div class="highlight-box">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
 
-                    <span class="highlight-number">
+                    <span class="feature-number">
                         02
                     </span>
 
@@ -267,8 +288,7 @@
                         in aquatic resource management.
                     </p>
 
-                </div>
-
+                </article>
 
             </div>
 
@@ -277,7 +297,6 @@
     </div>
 
 </section>
-
 
 
 {{-- =========================================================
@@ -288,118 +307,139 @@
 
     <div class="section-container">
 
-        <div class="section-label">
-            WHAT WE DO
-        </div>
+        <div class="section-heading-row">
 
-        <div class="section-title">
-            Our Focus Areas
+            <div>
+
+                <span class="section-label">
+                    WHAT WE DO
+                </span>
+
+                <h2 class="section-title">
+                    Our Focus Areas
+                </h2>
+
+            </div>
+
+            <p class="section-intro">
+                Our work brings together research, leadership,
+                sustainability and collaboration to strengthen
+                aquatic science and management.
+            </p>
+
         </div>
 
 
         <div class="focus-grid">
 
+            <article class="focus-card">
 
-            {{-- RESEARCH --}}
-
-            <div class="gists">
-
-                <div class="gist-icon">
-                    <i class="fas fa-flask">🔍</i>
+                <div class="focus-icon">
+                    <i class="fa-solid fa-microscope"></i>
                 </div>
 
-                <div class="gist_heading">
+                <span class="focus-number">
+                    01
+                </span>
+
+                <h3>
                     Research & Innovation
-                </div>
+                </h3>
 
-                <div class="gist_content">
+                <p>
                     Promoting quality, inclusive research that integrates
                     scientific and indigenous knowledge to address aquatic
                     and environmental challenges.
-                </div>
+                </p>
 
-                <a href="/publications" class="gist-link">
-                    Explore Research →
+                <a href="/publications">
+                    Explore Research
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
-            </div>
+            </article>
 
 
+            <article class="focus-card">
 
-            {{-- CAPACITY BUILDING --}}
-
-            <div class="gists">
-
-                <div class="gist-icon">
-                    <i class="fas fa-users">📲</i>
+                <div class="focus-icon">
+                    <i class="fa-solid fa-user-group"></i>
                 </div>
 
-                <div class="gist_heading">
+                <span class="focus-number">
+                    02
+                </span>
+
+                <h3>
                     Capacity Building & Mentorship
-                </div>
+                </h3>
 
-                <div class="gist_content">
+                <p>
                     Delivering training, mentorship and professional
                     development opportunities for women and girls.
-                </div>
+                </p>
 
-                <a href="/areas_of_interest" class="gist-link">
-                    Learn More →
+                <a href="/areas_of_interest">
+                    Learn More
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
-            </div>
+            </article>
 
 
+            <article class="focus-card">
 
-            {{-- SUSTAINABILITY --}}
-
-            <div class="gists">
-
-                <div class="gist-icon">
-                    <i class="fas fa-water">⛵</i>
+                <div class="focus-icon">
+                    <i class="fa-solid fa-water"></i>
                 </div>
 
-                <div class="gist_heading">
+                <span class="focus-number">
+                    03
+                </span>
+
+                <h3>
                     Sustainable Aquatic Resources
-                </div>
+                </h3>
 
-                <div class="gist_content">
+                <p>
                     Supporting sustainable management and conservation
                     of aquatic, coastal and marine resources.
-                </div>
+                </p>
 
-                <a href="/what_we_do" class="gist-link">
-                    Our Activities →
+                <a href="/what_we_do">
+                    Our Activities
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
-            </div>
+            </article>
 
 
+            <article class="focus-card">
 
-            {{-- COLLABORATION --}}
-
-            <div class="gists">
-
-                <div class="gist-icon">
-                    <i class="fas fa-handshake">🛜</i>
+                <div class="focus-icon">
+                    <i class="fa-solid fa-handshake-angle"></i>
                 </div>
 
-                <div class="gist_heading">
+                <span class="focus-number">
+                    04
+                </span>
+
+                <h3>
                     Collaboration & Networking
-                </div>
+                </h3>
 
-                <div class="gist_content">
+                <p>
                     Connecting professionals, researchers, students,
                     institutions and communities to exchange knowledge
                     and build meaningful partnerships.
-                </div>
+                </p>
 
-                <a href="/become_member" class="gist-link">
-                    Join the Network →
+                <a href="/become_member">
+                    Join the Network
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
-            </div>
-
+            </article>
 
         </div>
 
@@ -408,9 +448,8 @@
 </section>
 
 
-
 {{-- =========================================================
-     CALL TO ACTION
+     CTA
 ========================================================= --}}
 
 <section class="cta-section reveal">
@@ -419,9 +458,9 @@
 
         <div class="cta-content">
 
-            <div class="section-label">
+            <span class="section-label">
                 BE PART OF THE CHANGE
-            </div>
+            </span>
 
             <h2>
                 Together, We Can Shape the Future
@@ -436,6 +475,7 @@
 
             <a href="/become_member" class="cta-btn">
                 Join WASMaN
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
 
         </div>
@@ -443,7 +483,6 @@
     </div>
 
 </section>
-
 
 
 {{-- =========================================================
@@ -454,41 +493,39 @@
 
     <div class="sub_sections">
 
+        <div class="footer-brand">
 
-        <div class="copyright_area">
+            <h3>
+                Women in Aquatic Science and Management Network
+            </h3>
 
             <p>
-                <strong>
-                    Women in Aquatic Science and Management Network
-                    (WASMaN)
-                </strong>
+                Advancing women, science and sustainable aquatic resource management.
             </p>
 
-            <p>
-                Ghana, West Africa
-            </p>
+            <div class="footer-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Ghana, West Africa</span>
+            </div>
 
-            <p>
-                <a href="{{ url('/') }}">
-                    wasman.org
-                </a>
-            </p>
-
-            <p>
+            <div class="footer-copyright">
                 &copy; 2026 WASMaN. All rights reserved.
-            </p>
+            </div>
 
         </div>
 
 
+        <div class="footer-column">
 
-        <div class="footer-links">
+            <h4>
+                Quick Links
+            </h4>
 
             <a href="/what_we_do">
                 About Us
             </a>
 
-            <a href="ongoing_projects">
+            <a href="/ongoing_projects">
                 Activities
             </a>
 
@@ -496,32 +533,45 @@
                 Research
             </a>
 
-            <a href="general_enquiries">
+            <a href="/general_enquiries">
                 Contact
             </a>
 
         </div>
 
-        <div class="imgs">
-            <div class="socials"><img src="{{ asset('pics_vids/youtube_220211.png') }}"><span><a href="https://youtube.com/@wasman-official?si=tnqgaMX7BBCAEcsC">@wasman-official</a></span></div>
-            <div class="socials"><img src="{{ asset('pics_vids/linkedin-1.png') }}"><span><a href="/">info@wasman.org</a></span></div>
-            <div class="socials"><img src="{{ asset('pics_vids/globe.png') }}"><span><a href="/">https://wasman.org</a></span></div>
-        </div>  
 
+        <div class="footer-column">
+
+            <h4>
+                Connect
+            </h4>
+
+            <a href="https://youtube.com/@wasman-official?si=tnqgaMX7BBCAEcsC">
+                <i class="fa-brands fa-youtube"></i>
+                @wasman-official
+            </a>
+
+            <a href="mailto:info@wasman.org">
+                <i class="fa-solid fa-envelope"></i>
+                info@wasman.org
+            </a>
+
+            <a href="{{ url('/') }}">
+                <i class="fa-solid fa-globe"></i>
+                wasman.org
+            </a>
+
+        </div>
 
     </div>
 
 </footer>
-```
-
-      
-    </body>
 
 
-     <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
-     <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
-     <script src="{{ asset('created_js/carousel.js') }}"></script>
-     <script src="{{ asset('created_js/animation.js') }}"></script>
-   
+<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
+<script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('created_js/carousel.js') }}"></script>
+<script src="{{ asset('created_js/animation.js') }}"></script>
 
+</body>
 </html>

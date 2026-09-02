@@ -6,6 +6,11 @@ use App\Http\Controllers\InternController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ResearchAssistantController;
+use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\AdminOverviewController;
+use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\GeneralEnquiryController;
+
 
 use App\Http\Controllers\VolunteerController;
 
@@ -112,8 +117,23 @@ Route::post('/intern', [InternController::class, 'store']);
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/admin', [AdminController::class, 'index'])
-        ->name('admin.dashboard');
+    // Route::get('/admin', [AdminController::class, 'index'])
+    //     ->name('admin.dashboard');
+
+
+// ADMIN OVERVIEW CONTROLLER
+Route::get(
+    '/admin',
+    [AdminOverviewController::class, 'index']
+)->name('admin.dashboard');
+
+
+Route::get(
+    '/admin/internships',
+    [AdminController::class, 'index']
+)->name('admin.internships');
+
+// INTERNSHIP CONTROLLER
 
     Route::get(
         '/admin/applications/{application}/edit',
@@ -169,10 +189,8 @@ Route::middleware('auth')->group(function () {
         [AdminController::class, 'destroyVolunteer']
     )->name('volunteers.destroy');
 
-});
 
-
-// RESEARCH CONTROLLER
+    // RESEARCH CONTROLLER
 Route::get(
     '/admin/research-assistants',
     [AdminController::class, 'researchAssistants']
@@ -202,8 +220,112 @@ Route::delete(
     [AdminController::class, 'destroyResearchAssistant']
 )->name('research-assistants.destroy');
 
+// PARTNER WITH US
+Route::get(
+    '/admin/partners',
+    [AdminController::class, 'partners']
+)->name('admin.partners');
 
 
+Route::get(
+    '/admin/partners/{partner}/edit',
+    [AdminController::class, 'editPartner']
+)->name('partners.edit');
+
+
+Route::put(
+    '/admin/partners/{partner}',
+    [AdminController::class, 'updatePartner']
+)->name('partners.update');
+
+
+Route::delete(
+    '/admin/partners/{partner}',
+    [AdminController::class, 'destroyPartner']
+)->name('partners.destroy');
+
+// PARTNER WITH US
+Route::get(
+    '/admin/partners',
+    [AdminController::class, 'partners']
+)->name('admin.partners');
+
+
+Route::get(
+    '/admin/partners/{partner}/edit',
+    [AdminController::class, 'editPartner']
+)->name('partners.edit');
+
+
+Route::put(
+    '/admin/partners/{partner}',
+    [AdminController::class, 'updatePartner']
+)->name('partners.update');
+
+
+Route::delete(
+    '/admin/partners/{partner}',
+    [AdminController::class, 'destroyPartner']
+)->name('partners.destroy');
+
+/*
+|--------------------------------------------------------------------------
+| Messages
+|--------------------------------------------------------------------------
+*/
+
+Route::get(
+    '/admin/messages',
+    [AdminController::class, 'messages']
+)->name('admin.messages');
+
+
+Route::get(
+    '/admin/messages/{message}',
+    [AdminController::class, 'showMessage']
+)->name('messages.show');
+
+
+Route::get(
+    '/admin/messages/{message}/attachment',
+    [AdminController::class, 'downloadMessageAttachment']
+)->name('messages.attachment');
+
+
+Route::delete(
+    '/admin/messages/{message}',
+    [AdminController::class, 'destroyMessage']
+)->name('messages.destroy');
+
+/*
+|--------------------------------------------------------------------------
+| General Enquiries
+|--------------------------------------------------------------------------
+*/
+
+Route::get(
+    '/admin/general-enquiries',
+    [AdminController::class, 'generalEnquiries']
+)->name('admin.general-enquiries');
+
+
+Route::get(
+    '/admin/general-enquiries/{enquiry}',
+    [AdminController::class, 'showGeneralEnquiry']
+)->name('general-enquiries.show');
+
+
+Route::delete(
+    '/admin/general-enquiries/{enquiry}',
+    [AdminController::class, 'destroyGeneralEnquiry']
+)->name('general-enquiries.destroy');
+
+// add here
+
+
+});
+
+// INTERN
 
 
 Route::get('/login', [AuthController::class, 'showLogin'])
@@ -235,3 +357,36 @@ Route::post(
     '/research_assistant',
     [ResearchAssistantController::class, 'store']
 )->name('research-assistant.store');
+
+// PARTNER WITH US
+Route::get('/partner_with_us', function () {
+
+    return view('partner_with_us');
+
+})->name('partner-with-us');
+
+
+Route::post(
+    '/partner_with_us',
+    [PartnerController::class, 'store']
+)->name('partner.store');
+
+// LEAVE MESSAGE
+Route::get('/leave_message', function () {
+    return view('leave_message');
+})->name('leave-message');
+
+Route::post(
+    '/leave_message',
+    [ContactMessageController::class, 'store']
+)->name('messages.store');
+
+// GENERAL ENQUIRIES
+Route::get('/general_enquiries', function () {
+    return view('general_enquiries');
+})->name('general-enquiries');
+
+Route::post(
+    '/general_enquiries',
+    [GeneralEnquiryController::class, 'store']
+)->name('general-enquiries.store');

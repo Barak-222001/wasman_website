@@ -1,63 +1,41 @@
 /* =========================================================
-   WASMAN HISTORY PAGE
-   PREMIUM AQUATIC / INSTITUTIONAL DESIGN
-   ========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
-
-
-/* =========================================================
-   ROOT VARIABLES
+   WASMaN HISTORY PAGE
+   Premium editorial aquatic redesign
 ========================================================= */
 
 :root {
+    --ocean-deep: #052f43;
+    --ocean-dark: #073e54;
+    --ocean: #087f9c;
+    --teal: #18a7b5;
+    --mint: #4fd2c4;
 
-    /* Primary Aquatic Palette */
-    --ocean-deep: #063b5c;
-    --ocean: #087ea4;
-    --ocean-light: #0da9c4;
+    --seafoam: #e8f8f5;
+    --mist: #f1f9fa;
+    --ice: #f8fbfc;
 
-    --aqua: #13c4c8;
-    --turquoise: #20d5c5;
-
-    /* Environmental Colors */
-    --seafoam: #dff8f3;
-    --mist: #edf9fb;
-    --ice: #f5fcfd;
-
-    /* Base */
     --white: #ffffff;
 
-    /* Typography */
-    --heading: #10364a;
-    --text: #536b78;
-    --muted: #7b909a;
+    --heading: #183746;
+    --text: #536d78;
+    --muted: #82959d;
 
-    /* Borders */
-    --border: rgba(8, 126, 164, 0.11);
+    --border: rgba(8,127,156,0.12);
 
-    /* Shadows */
-    --shadow-small:
-        0 8px 25px rgba(4, 59, 88, 0.07);
+    --shadow-soft: 0 12px 34px rgba(5,47,67,0.07);
+    --shadow-medium: 0 22px 52px rgba(5,47,67,0.11);
+    --shadow-large: 0 32px 80px rgba(5,47,67,0.15);
 
-    --shadow-medium:
-        0 18px 45px rgba(4, 59, 88, 0.11);
+    --radius-sm: 14px;
+    --radius-md: 22px;
+    --radius-lg: 30px;
 
-    --shadow-large:
-        0 30px 75px rgba(4, 59, 88, 0.15);
-
-    /* Radius */
-    --radius-small: 12px;
-    --radius-medium: 20px;
-    --radius-large: 30px;
-
-    /* Transition */
-    --transition: all 0.4s ease;
+    --transition: all 0.34s ease;
 }
 
 
 /* =========================================================
-   GLOBAL RESET
+   RESET / TYPOGRAPHY
 ========================================================= */
 
 * {
@@ -71,9 +49,7 @@ html {
 }
 
 body {
-    margin: 0;
-
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope', sans-serif;
 
     color: var(--text);
 
@@ -82,6 +58,8 @@ body {
     line-height: 1.8;
 
     overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -96,63 +74,52 @@ a {
 h1,
 h2,
 h3 {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 
 /* =========================================================
-   MAIN HISTORY BACKGROUND
+   MAIN PAGE
 ========================================================= */
 
 .history-section {
-
     position: relative;
 
     background:
         radial-gradient(
-            circle at 5% 10%,
-            rgba(32, 213, 197, 0.09),
-            transparent 25%
+            circle at 4% 10%,
+            rgba(79,210,196,0.10),
+            transparent 24%
         ),
-
         radial-gradient(
             circle at 95% 50%,
-            rgba(8, 126, 164, 0.06),
-            transparent 30%
+            rgba(8,127,156,0.06),
+            transparent 28%
         ),
-
-        #f8fcfd;
+        #f9fcfd;
 
     overflow: hidden;
 }
 
-
-/* =========================================================
-   DECORATIVE AQUATIC ELEMENTS
-========================================================= */
-
 .history-section::before {
-
     content: "";
 
     position: absolute;
 
-    width: 500px;
-    height: 500px;
+    width: 480px;
+    height: 480px;
 
-    top: 350px;
+    top: 330px;
     left: -300px;
 
     border-radius: 50%;
 
-    border: 1px solid rgba(19, 196, 200, 0.12);
+    border: 1px solid rgba(79,210,196,0.14);
 
     pointer-events: none;
 }
 
-
 .history-section::after {
-
     content: "";
 
     position: absolute;
@@ -160,29 +127,22 @@ h3 {
     width: 350px;
     height: 350px;
 
-    right: -200px;
-    top: 900px;
+    right: -190px;
+    top: 930px;
 
     border-radius: 50%;
 
-    background:
-        rgba(19, 196, 200, 0.05);
+    background: rgba(79,210,196,0.05);
 
     pointer-events: none;
 }
 
-
-/* =========================================================
-   HISTORY CONTAINER
-========================================================= */
-
 .history {
-
     width: min(1200px, 90%);
 
     margin: auto;
 
-    padding: 120px 0 130px;
+    padding: 105px 0 125px;
 
     position: relative;
 
@@ -191,49 +151,53 @@ h3 {
 
 
 /* =========================================================
-   PAGE INTRODUCTION
+   HISTORY HERO
 ========================================================= */
 
-.title {
+.history-hero {
+    display: grid;
 
-    max-width: 900px;
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(240px, 0.5fr);
 
-    margin: 0 auto 110px;
+    gap: 60px;
 
-    text-align: center;
+    align-items: end;
+
+    margin-bottom: 110px;
+
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid var(--border);
 }
 
+.history-hero-copy {
+    max-width: 850px;
+}
 
-/* =========================================================
-   TITLE LABEL
-========================================================= */
-
-.title span {
-
+.eyebrow {
     display: inline-flex;
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
     margin-bottom: 18px;
 
     color: var(--ocean);
 
-    font-size: 12px;
+    font-size: 0.72rem;
 
     font-weight: 800;
 
-    letter-spacing: 2.5px;
+    letter-spacing: 0.18em;
 }
 
-
-.title span::before,
-.title span::after {
-
+.eyebrow::before {
     content: "";
 
-    width: 35px;
+    width: 30px;
     height: 2px;
 
     border-radius: 10px;
@@ -241,105 +205,122 @@ h3 {
     background:
         linear-gradient(
             90deg,
-            var(--aqua),
+            var(--mint),
             var(--ocean)
         );
 }
 
-
-/* =========================================================
-   MAIN PAGE TITLE
-========================================================= */
-
-.title h1 {
-
-    margin: 0 auto 25px;
-
+.history-hero h1 {
     max-width: 900px;
 
-    font-size:
-        clamp(36px, 5vw, 62px);
-
-    line-height: 1.12;
-
-    font-weight: 800;
-
-    letter-spacing: -2px;
-
     color: var(--ocean-deep);
+
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    letter-spacing: -0.035em;
 }
 
+.history-hero h1 span {
+    color: var(--ocean);
+}
 
-/* =========================================================
-   INTRODUCTION TEXT
-========================================================= */
+.history-hero p {
+    max-width: 730px;
 
-.title p {
-
-    max-width: 720px;
-
-    margin: auto;
-
-    font-size: 17px;
-
-    line-height: 1.9;
+    margin-top: 24px;
 
     color: var(--text);
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+}
+
+.history-hero-mark {
+    min-height: 180px;
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: var(--radius-md);
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--ocean-deep),
+            var(--ocean)
+        );
+
+    box-shadow: var(--shadow-medium);
+}
+
+.history-hero-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.12);
+
+    color: #73ded3;
+
+    font-size: 1.1rem;
+}
+
+.history-hero-mark span {
+    color: rgba(255,255,255,0.80);
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
 }
 
 
 /* =========================================================
-   HISTORY ROW
+   HISTORY ROWS
 ========================================================= */
 
 .history-row {
-
     display: grid;
 
     grid-template-columns:
         minmax(0, 1fr)
         minmax(0, 1fr);
 
-    gap: 80px;
+    gap: 78px;
 
     align-items: center;
 
-    margin-bottom: 120px;
+    margin-bottom: 115px;
 
     position: relative;
 }
 
-
-/* =========================================================
-   REVERSE ROW
-========================================================= */
-
-.history-row.reverse {
-
-    direction: rtl;
+.history-row:last-child {
+    margin-bottom: 0;
 }
 
-.history-row.reverse > * {
-
-    direction: ltr;
+.history-row.reverse .history-image-wrap {
+    order: 2;
 }
 
-
-/* =========================================================
-   HISTORY IMAGE
-========================================================= */
-
-.history-image {
-
-    position: relative;
-
-    height: 440px;
-
-    border-radius: var(--radius-large);
-
-    overflow: visible;
-
-    box-shadow: var(--shadow-large);
+.history-row.reverse .history-content {
+    order: 1;
 }
 
 
@@ -347,407 +328,285 @@ h3 {
    IMAGE
 ========================================================= */
 
-.history-image img {
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    border-radius: var(--radius-large);
-
-    transition:
-        transform 0.7s ease,
-        filter 0.7s ease;
+.history-image-wrap {
+    position: relative;
 }
 
+.history-image {
+    position: relative;
 
-/* =========================================================
-   IMAGE HOVER
-========================================================= */
+    height: 440px;
 
-.history-row:hover .history-image img {
+    border-radius: var(--radius-lg);
 
-    transform: scale(1.035);
+    overflow: hidden;
 
-    filter: saturate(1.08);
+    box-shadow: var(--shadow-large);
 }
-
-
-/* =========================================================
-   IMAGE AQUATIC FRAME
-========================================================= */
 
 .history-image::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    top: 18px;
-    left: 18px;
-
-    border-radius: var(--radius-large);
-
-    border:
-        2px solid
-        rgba(19, 196, 200, 0.35);
-
-    z-index: -1;
-
-    transition: var(--transition);
-}
-
-
-.history-row:hover .history-image::before {
-
-    top: 12px;
-    left: 12px;
-
-    border-color:
-        rgba(8, 126, 164, 0.45);
-}
-
-
-/* =========================================================
-   IMAGE GRADIENT
-========================================================= */
-
-.history-image::after {
-
     content: "";
 
     position: absolute;
 
     inset: 0;
 
-    border-radius: var(--radius-large);
+    z-index: 1;
 
     background:
         linear-gradient(
             180deg,
-            transparent 55%,
-            rgba(3, 55, 82, 0.18)
+            transparent 48%,
+            rgba(5,47,67,0.35)
         );
 
     pointer-events: none;
 }
 
+.history-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.history-row:hover .history-image img {
+    transform: scale(1.045);
+
+    filter: saturate(1.05);
+}
+
+.image-badge {
+    position: absolute;
+
+    left: 22px;
+    bottom: 22px;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 10px 14px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.92);
+
+    color: var(--ocean-deep);
+
+    font-size: 0.76rem;
+
+    font-weight: 800;
+
+    box-shadow: 0 8px 24px rgba(5,47,67,0.14);
+}
+
+.image-badge i {
+    color: var(--teal);
+}
+
 
 /* =========================================================
-   HISTORY CONTENT CARD
+   CONTENT CARD
 ========================================================= */
 
 .history-content {
-
     position: relative;
 
-    padding: 45px;
+    padding: 42px;
+
+    border-radius: var(--radius-md);
 
     background:
-        rgba(255, 255, 255, 0.88);
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.97),
+            rgba(248,252,253,0.97)
+        );
 
-    border:
-        1px solid
-        rgba(8, 126, 164, 0.09);
+    border: 1px solid var(--border);
 
-    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-soft);
 
-    box-shadow: var(--shadow-small);
-
-    backdrop-filter: blur(8px);
+    overflow: hidden;
 
     transition: var(--transition);
 }
 
-
-/* =========================================================
-   CONTENT HOVER
-========================================================= */
-
-.history-row:hover .history-content {
-
-    transform: translateY(-6px);
-
-    box-shadow: var(--shadow-medium);
-
-    border-color:
-        rgba(19, 196, 200, 0.20);
-}
-
-
-/* =========================================================
-   CONTENT AQUATIC ACCENT
-========================================================= */
-
 .history-content::before {
-
     content: "";
 
     position: absolute;
 
-    width: 5px;
-
-    height: 65px;
-
     left: 0;
+    top: 40px;
 
-    top: 45px;
+    width: 4px;
+    height: 70px;
 
-    border-radius:
-        0 8px 8px 0;
+    border-radius: 0 8px 8px 0;
 
     background:
         linear-gradient(
             180deg,
-            var(--aqua),
+            var(--mint),
             var(--ocean)
         );
 }
 
+.history-row:hover .history-content {
+    transform: translateY(-6px);
 
-/* =========================================================
-   HISTORY HEADINGS
-========================================================= */
+    box-shadow: var(--shadow-medium);
 
-.history-content h2 {
+    border-color: rgba(24,167,181,0.22);
+}
 
-    margin-bottom: 22px;
+.content-number {
+    position: absolute;
 
-    padding-left: 10px;
+    top: 22px;
+    right: 25px;
 
-    color: var(--ocean-deep);
+    color: rgba(8,127,156,0.09);
 
-    font-size:
-        clamp(25px, 3vw, 34px);
+    font-size: 3.8rem;
 
     font-weight: 800;
 
-    line-height: 1.25;
-
-    letter-spacing: -0.8px;
+    line-height: 1;
 }
 
+.content-icon {
+    width: 50px;
+    height: 50px;
 
-/* =========================================================
-   HISTORY PARAGRAPHS
-========================================================= */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+    border-radius: 15px;
+
+    background: var(--seafoam);
+
+    color: var(--ocean);
+
+    font-size: 1rem;
+}
+
+.content-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--teal);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+.history-content h2 {
+    max-width: 520px;
+
+    margin-bottom: 20px;
+
+    color: var(--ocean-deep);
+
+    font-size: clamp(1.8rem, 3vw, 2.45rem);
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.02em;
+}
 
 .history-content p {
-
-    font-size: 15px;
-
-    line-height: 1.9;
+    margin-bottom: 17px;
 
     color: var(--text);
 
-    margin-bottom: 18px;
+    font-size: 0.92rem;
+
+    line-height: 1.9;
 }
 
-
 .history-content p:last-child {
-
     margin-bottom: 0;
 }
 
 
 /* =========================================================
-   SECTION NUMBER / WATERMARK
-========================================================= */
-
-.history-row:nth-of-type(2) .history-content::after {
-
-    content: "01";
-
-    position: absolute;
-
-    right: 25px;
-    top: 20px;
-
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 65px;
-
-    font-weight: 800;
-
-    color:
-        rgba(8, 126, 164, 0.035);
-
-    pointer-events: none;
-}
-
-
-.history-row:nth-of-type(3) .history-content::after {
-
-    content: "02";
-
-    position: absolute;
-
-    right: 25px;
-    top: 20px;
-
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 65px;
-
-    font-weight: 800;
-
-    color:
-        rgba(8, 126, 164, 0.035);
-
-    pointer-events: none;
-}
-
-
-.history-row:nth-of-type(4) .history-content::after {
-
-    content: "03";
-
-    position: absolute;
-
-    right: 25px;
-    top: 20px;
-
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 65px;
-
-    font-weight: 800;
-
-    color:
-        rgba(8, 126, 164, 0.035);
-
-    pointer-events: none;
-}
-
-
-.history-row:nth-of-type(5) .history-content::after {
-
-    content: "04";
-
-    position: absolute;
-
-    right: 25px;
-    top: 20px;
-
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 65px;
-
-    font-weight: 800;
-
-    color:
-        rgba(8, 126, 164, 0.035);
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   SUBTLE DIVIDER BETWEEN HISTORY SECTIONS
-========================================================= */
-
-.history-row:not(:last-child)::after {
-
-    content: "";
-
-    position: absolute;
-
-    bottom: -60px;
-
-    left: 50%;
-
-    width: 1px;
-
-    height: 30px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            var(--aqua),
-            transparent
-        );
-
-    opacity: 0.45;
-}
-
-
-/* =========================================================
-   PREMIUM AQUATIC FOOTER
+   FOOTER
 ========================================================= */
 
 .footer {
-
     position: relative;
+
+    padding: 82px 0 0;
+
+    color: rgba(255,255,255,0.76);
 
     background:
         linear-gradient(
             135deg,
-            #063b5c 0%,
-            #075f7a 45%,
-            #078c9b 100%
+            #042d42 0%,
+            #07586b 55%,
+            #087f8d 100%
         );
-
-    color:
-        rgba(255, 255, 255, 0.78);
-
-    padding: 90px 0 0;
 
     overflow: hidden;
 }
 
-
-/* =========================================================
-   FOOTER DECORATIVE CIRCLES
-========================================================= */
-
 .footer::before {
-
     content: "";
 
     position: absolute;
 
-    width: 450px;
-    height: 450px;
+    width: 430px;
+    height: 430px;
 
     right: -220px;
     top: -250px;
 
     border-radius: 50%;
 
-    border:
-        1px solid
-        rgba(90, 239, 222, 0.18);
+    border: 1px solid rgba(79,210,196,0.18);
 }
 
-
 .footer::after {
-
     content: "";
 
     position: absolute;
 
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
 
     left: -170px;
-    bottom: -180px;
+    bottom: -170px;
 
     border-radius: 50%;
 
-    background:
-        rgba(32, 213, 197, 0.08);
+    background: rgba(79,210,196,0.07);
 }
 
-
-/* =========================================================
-   FOOTER CONTAINER
-========================================================= */
-
 .footer-container {
+    position: relative;
+
+    z-index: 2;
 
     width: min(1200px, 90%);
 
@@ -756,69 +615,56 @@ h3 {
     display: grid;
 
     grid-template-columns:
-        1.5fr
-        1fr
+        1.45fr
+        0.8fr
         1fr
         1fr;
 
-    gap: 60px;
-
-    position: relative;
-
-    z-index: 2;
+    gap: 52px;
 }
-
-
-/* =========================================================
-   FOOTER COLUMNS
-========================================================= */
 
 .footer-column {
-
     position: relative;
 }
 
+.footer-brand-mark {
+    width: 48px;
+    height: 48px;
 
-/* =========================================================
-   FOOTER BRAND
-========================================================= */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.10);
+
+    color: var(--mint);
+}
 
 .footer-column h2 {
+    margin-bottom: 16px;
 
-    margin-bottom: 20px;
+    color: var(--white);
 
-    color:
-        #ffffff;
+    font-size: 1.8rem;
 
-    font-size: 28px;
-
-    font-weight: 800;
-
-    letter-spacing: 1px;
+    font-weight: 600;
 }
-
-
-/* =========================================================
-   FOOTER HEADINGS
-========================================================= */
 
 .footer-column h3 {
+    margin-bottom: 22px;
 
-    position: relative;
+    color: var(--white);
 
-    margin-bottom: 25px;
+    font-size: 1.05rem;
 
-    color:
-        #ffffff;
-
-    font-size: 17px;
-
-    font-weight: 700;
+    font-weight: 600;
 }
 
-
 .footer-column h3::after {
-
     content: "";
 
     display: block;
@@ -826,153 +672,130 @@ h3 {
     width: 30px;
     height: 2px;
 
-    margin-top: 9px;
+    margin-top: 8px;
 
     border-radius: 10px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #20d5c5,
-            #72f5e2
-        );
+    background: var(--mint);
 }
-
-
-/* =========================================================
-   FOOTER TEXT
-========================================================= */
 
 .footer-column p {
+    color: rgba(255,255,255,0.68);
 
-    font-size: 13px;
+    font-size: 0.8rem;
 
-    line-height: 1.9;
-
-    color:
-        rgba(255, 255, 255, 0.72);
-
-    margin-bottom: 18px;
+    line-height: 1.85;
 }
-
-
-/* =========================================================
-   FOOTER LISTS
-========================================================= */
 
 .footer-column ul {
-
     list-style: none;
-
-    padding: 0;
-
-    margin: 0;
 }
-
 
 .footer-column li {
+    margin-bottom: 10px;
 
-    margin-bottom: 11px;
+    color: rgba(255,255,255,0.68);
 
-    font-size: 13px;
-
-    color:
-        rgba(255, 255, 255, 0.68);
+    font-size: 0.8rem;
 }
-
-
-/* =========================================================
-   FOOTER LINKS
-========================================================= */
 
 .footer-column li a {
+    color: rgba(255,255,255,0.68);
 
-    position: relative;
-
-    color:
-        rgba(255, 255, 255, 0.68);
-
-    transition:
-        all 0.4s ease;
+    transition: var(--transition);
 }
-
-
-.footer-column li a::before {
-
-    content: "→";
-
-    position: absolute;
-
-    left: -18px;
-
-    opacity: 0;
-
-    color:
-        #20d5c5;
-
-    transition:
-        all 0.4s ease;
-}
-
 
 .footer-column li a:hover {
+    color: var(--mint);
 
-    color:
-        #ffffff;
-
-    padding-left: 18px;
+    padding-left: 4px;
 }
 
+.focus-list li {
+    display: flex;
+    align-items: center;
 
-.footer-column li a:hover::before {
-
-    opacity: 1;
+    gap: 9px;
 }
 
+.focus-list i {
+    width: 15px;
 
-/* =========================================================
-   CONTACT INFORMATION
-========================================================= */
+    color: var(--mint);
 
-.footer-column strong {
-
-    color:
-        #ffffff;
-
-    font-weight: 600;
+    font-size: 0.72rem;
 }
 
+.contact-item {
+    display: flex;
 
-/* =========================================================
-   FOOTER LINE
-========================================================= */
+    gap: 12px;
 
-.footer hr {
+    margin-bottom: 17px;
+}
 
+.contact-item > i {
+    width: 34px;
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.09);
+
+    color: var(--mint);
+
+    font-size: 0.8rem;
+}
+
+.contact-item span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: rgba(255,255,255,0.45);
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+.contact-item a,
+.contact-item p {
+    color: rgba(255,255,255,0.76);
+
+    font-size: 0.78rem;
+}
+
+.footer-divider {
     width: min(1200px, 90%);
 
-    margin:
-        70px auto 0;
+    height: 1px;
 
-    border: 0;
+    margin: 62px auto 0;
 
-    border-top:
-        1px solid
-        rgba(255, 255, 255, 0.15);
+    background: rgba(255,255,255,0.14);
 }
 
-
-/* =========================================================
-   FOOTER BOTTOM
-========================================================= */
-
 .footer-bottom {
+    position: relative;
+
+    z-index: 2;
 
     width: min(1200px, 90%);
 
     margin: auto;
 
-    padding: 25px 0;
+    padding: 24px 0;
 
     display: flex;
 
@@ -983,34 +806,19 @@ h3 {
     gap: 30px;
 }
 
-
 .footer-bottom p {
+    color: rgba(255,255,255,0.48);
 
-    margin: 0;
-
-    color:
-        rgba(255, 255, 255, 0.50);
-
-    font-size: 12px;
+    font-size: 0.72rem;
 }
-
-
-/* =========================================================
-   SOCIAL LINKS
-========================================================= */
 
 .social-links {
-
     display: flex;
 
-    align-items: center;
-
-    gap: 10px;
+    gap: 9px;
 }
 
-
 .social-links a {
-
     width: 38px;
     height: 38px;
 
@@ -1021,259 +829,131 @@ h3 {
 
     border-radius: 50%;
 
-    color:
-        rgba(255, 255, 255, 0.78);
+    color: rgba(255,255,255,0.80);
 
-    background:
-        rgba(255, 255, 255, 0.09);
+    background: rgba(255,255,255,0.08);
 
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255,255,255,0.10);
 
-    transition:
-        all 0.4s ease;
+    transition: var(--transition);
 }
-
-
-/* =========================================================
-   SOCIAL HOVER
-========================================================= */
 
 .social-links a:hover {
+    color: var(--ocean-deep);
 
-    color:
-        #063b5c;
+    background: var(--mint);
 
-    background:
-        #20d5c5;
+    border-color: var(--mint);
 
-    border-color:
-        #20d5c5;
-
-    transform:
-        translateY(-5px);
-
-    box-shadow:
-        0 10px 25px
-        rgba(32, 213, 197, 0.25);
+    transform: translateY(-4px);
 }
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
-    .history {
-
-        padding-top: 90px;
+    .history-hero {
+        grid-template-columns: 1fr;
     }
 
-    .title {
-
-        margin-bottom: 80px;
+    .history-hero-mark {
+        max-width: 320px;
     }
 
     .history-row {
-
         gap: 45px;
-
-        margin-bottom: 90px;
     }
 
     .history-image {
-
-        height: 380px;
+        height: 390px;
     }
 
     .history-content {
-
-        padding: 35px;
+        padding: 34px;
     }
 
     .footer-container {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 45px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================= */
-
-@media (max-width: 750px) {
+@media (max-width: 760px) {
 
     .history {
-
         width: 90%;
 
-        padding:
-            75px 0
-            80px;
+        padding: 80px 0 90px;
     }
 
+    .history-hero {
+        margin-bottom: 75px;
 
-    /* Intro */
-
-    .title {
-
-        margin-bottom: 70px;
+        padding-bottom: 42px;
     }
 
-    .title h1 {
-
-        font-size: 36px;
-
-        letter-spacing: -1px;
+    .history-hero h1 {
+        font-size: 2.6rem;
     }
-
-    .title p {
-
-        font-size: 15px;
-    }
-
-
-    /* History rows */
 
     .history-row,
     .history-row.reverse {
+        grid-template-columns: 1fr;
 
-        display: flex;
+        gap: 32px;
 
-        flex-direction: column;
-
-        gap: 35px;
-
-        margin-bottom: 75px;
-
-        direction: ltr;
+        margin-bottom: 72px;
     }
 
-
-    /* Image */
+    .history-row.reverse .history-image-wrap,
+    .history-row.reverse .history-content {
+        order: initial;
+    }
 
     .history-image {
-
-        width: 100%;
-
-        height: 300px;
+        height: 310px;
     }
-
-
-    .history-image::before {
-
-        top: 10px;
-        left: 10px;
-    }
-
-
-    /* Content */
 
     .history-content {
-
-        width: 100%;
-
-        padding: 32px 28px;
-    }
-
-    .history-content h2 {
-
-        font-size: 25px;
-
-        padding-left: 5px;
-    }
-
-    .history-content p {
-
-        font-size: 14px;
-
-        line-height: 1.85;
-    }
-
-
-    /* Footer */
-
-    .footer {
-
-        padding-top: 70px;
+        padding: 30px 26px;
     }
 
     .footer-container {
-
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 38px;
     }
 
     .footer-bottom {
-
         flex-direction: column;
 
         text-align: center;
-
-        padding:
-            25px 0 30px;
-    }
-
-    .social-links {
-
-        justify-content: center;
     }
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+@media (max-width: 460px) {
 
-@media (max-width: 450px) {
-
-    .title h1 {
-
-        font-size: 31px;
+    .history-hero h1 {
+        font-size: 2.15rem;
     }
 
-    .title span {
-
-        font-size: 10px;
-
-        letter-spacing: 2px;
-    }
-
-    .title span::before,
-    .title span::after {
-
-        width: 20px;
+    .history-hero p {
+        font-size: 0.92rem;
     }
 
     .history-image {
-
-        height: 260px;
+        height: 255px;
     }
 
     .history-content {
-
-        padding: 28px 22px;
+        padding: 27px 22px;
     }
 
     .history-content h2 {
-
-        font-size: 22px;
-    }
-
-    .footer-container {
-
-        width: 88%;
-    }
-
-    .footer-bottom {
-
-        width: 88%;
+        font-size: 1.65rem;
     }
 }

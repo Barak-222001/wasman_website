@@ -43,7 +43,7 @@
         </h1>
 
         <p>
-            Explore memorable moments from WASMAN's research,
+            Explore memorable moments from WASMaN's research,
             conservation activities, conferences, community
             programmes and partnerships across aquatic
             ecosystems.
@@ -89,7 +89,7 @@
         </h2>
 
         <p>
-            Every photograph and video captured by WASMAN tells a story
+            Every photograph and video captured by WASMaN tells a story
             about people, science, collaboration and environmental action.
             Our visual archive brings together the experiences that shape
             our work in aquatic science and sustainable development.
@@ -247,7 +247,7 @@
 
             <img
                 src="{{ asset('pics_vids/photo1.jpg') }}"
-                alt="WASMAN field activity"
+                alt="WASMaN field activity"
             >
 
             <div class="photo-caption">
@@ -307,7 +307,7 @@
 
             <img
                 src="{{ asset('pics_vids/photo5.jpg') }}"
-                alt="WASMAN workshop"
+                alt="WASMaN workshop"
             >
 
             <div class="photo-caption">
@@ -356,7 +356,7 @@
             >
 
             <div class="photo-caption">
-                <span>WASMAN</span>
+                <span>WASMaN</span>
                 <h3>Building the Network</h3>
             </div>
 
@@ -386,7 +386,7 @@
 
         <p>
             Discover the people, places and projects behind
-            WASMAN through our collection of videos.
+            WASMaN through our collection of videos.
         </p>
 
     </div>
@@ -401,7 +401,7 @@
 
                 <img
                     src="{{ asset('pics_vids/video1.jpg') }}"
-                    alt="WASMAN Annual Conference"
+                    alt="WASMaN Annual Conference"
                 >
 
                 <button class="play-button">
@@ -421,7 +421,7 @@
                 </span>
 
                 <h3>
-                    WASMAN Annual Conference Highlights
+                    WASMaN Annual Conference Highlights
                 </h3>
 
                 <p>
@@ -647,11 +647,11 @@
 
         <h2>
             Help Us Capture
-            the WASMAN Journey
+            the WASMaN Journey
         </h2>
 
         <p>
-            Were you part of a WASMAN activity, research mission,
+            Were you part of a WASMaN activity, research mission,
             workshop or community programme? Share your photographs
             and videos and help us document the impact of our network.
         </p>

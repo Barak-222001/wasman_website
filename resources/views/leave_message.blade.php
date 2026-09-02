@@ -49,7 +49,7 @@
             <p>
                 Whether you have a question, research idea,
                 collaboration opportunity or simply want to
-                connect with WASMAN, our team is ready to listen.
+                connect with WASMaN, our team is ready to listen.
             </p>
 
             <div class="message-hero-actions">
@@ -94,8 +94,8 @@
         <div class="connect-image">
 
             <img
-                src="{{ asset('images/contact-team.jpg') }}"
-                alt="WASMAN Team">
+                src="{{ asset('../pics_vids/cc.png') }}"
+                alt="WASMaN Team">
 
             <div class="image-caption">
 
@@ -104,7 +104,7 @@
                 </div>
 
                 <div>
-                    <span>CONNECT WITH WASMAN</span>
+                    <span>CONNECT WITH WASMaN</span>
                     <strong>Ideas. People. Impact.</strong>
                 </div>
 
@@ -125,7 +125,7 @@
             </h2>
 
             <p>
-                WASMAN believes meaningful change begins with
+                WASMaN believes meaningful change begins with
                 communication, collaboration and shared knowledge.
                 We welcome researchers, students, communities,
                 organizations and partners to connect with us.
@@ -251,7 +251,7 @@
             </h3>
 
             <p>
-                Questions about WASMAN, our programmes,
+                Questions about WASMaN, our programmes,
                 activities and organizational work.
             </p>
 
@@ -360,12 +360,12 @@
             </span>
 
             <h2>
-                Reach WASMAN Directly
+                Reach WASMaN Directly
             </h2>
 
             <p>
                 Prefer to contact us directly? You can reach
-                the WASMAN team through the channels below.
+                the WASMaN team through the channels below.
             </p>
 
         </div>
@@ -391,7 +391,7 @@
                     </h3>
 
                     <p>
-                        WASMAN Headquarters<br>
+                        WASMaN Headquarters<br>
                         University / Research Centre Address<br>
                         Cape Coast, Ghana
                     </p>
@@ -526,7 +526,48 @@
         {{-- FORM --}}
         <div class="message-form-container">
 
-            <form>
+            @if(session('success'))
+
+                <div class="message-success">
+                    {{ session('success') }}
+                </div>
+
+            @endif
+
+
+            @if($errors->any())
+
+                <div class="message-errors">
+
+                    <strong>
+                        Please correct the following:
+                    </strong>
+
+                    <ul>
+
+                        @foreach($errors->all() as $error)
+
+                            <li>
+                                {{ $error }}
+                            </li>
+
+                        @endforeach
+
+                    </ul>
+
+                </div>
+
+            @endif
+
+
+            <form
+                action="{{ route('messages.store') }}"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+
+                @csrf
+
 
                 <div class="form-grid">
 
@@ -542,11 +583,22 @@
 
                             <input
                                 id="full-name"
+                                name="fullName"
                                 type="text"
+                                value="{{ old('fullName') }}"
                                 placeholder="Enter your full name"
-                                required>
+                                required
+                            >
 
                         </div>
+
+                        @error('fullName')
+
+                            <span class="form-error">
+                                {{ $message }}
+                            </span>
+
+                        @enderror
 
                     </div>
 
@@ -563,11 +615,22 @@
 
                             <input
                                 id="email"
+                                name="email"
                                 type="email"
+                                value="{{ old('email') }}"
                                 placeholder="Enter your email"
-                                required>
+                                required
+                            >
 
                         </div>
+
+                        @error('email')
+
+                            <span class="form-error">
+                                {{ $message }}
+                            </span>
+
+                        @enderror
 
                     </div>
 
@@ -584,10 +647,21 @@
 
                             <input
                                 id="phone"
+                                name="phoneNumber"
                                 type="tel"
-                                placeholder="+233 XXX XXX XXX">
+                                value="{{ old('phoneNumber') }}"
+                                placeholder="+233 XXX XXX XXX"
+                            >
 
                         </div>
+
+                        @error('phoneNumber')
+
+                            <span class="form-error">
+                                {{ $message }}
+                            </span>
+
+                        @enderror
 
                     </div>
 
@@ -602,33 +676,55 @@
 
                             <i class="fas fa-layer-group"></i>
 
-                            <select id="category">
+                            <select
+                                id="category"
+                                name="category"
+                                required
+                            >
 
-                                <option>
+                                <option value="">
                                     Select a category
                                 </option>
 
-                                <option>
+                                <option
+                                    value="General Inquiry"
+                                    {{ old('category') == 'General Inquiry' ? 'selected' : '' }}
+                                >
                                     General Inquiry
                                 </option>
 
-                                <option>
+                                <option
+                                    value="Research Collaboration"
+                                    {{ old('category') == 'Research Collaboration' ? 'selected' : '' }}
+                                >
                                     Research Collaboration
                                 </option>
 
-                                <option>
+                                <option
+                                    value="Partnership"
+                                    {{ old('category') == 'Partnership' ? 'selected' : '' }}
+                                >
                                     Partnership
                                 </option>
 
-                                <option>
+                                <option
+                                    value="Membership"
+                                    {{ old('category') == 'Membership' ? 'selected' : '' }}
+                                >
                                     Membership
                                 </option>
 
-                                <option>
+                                <option
+                                    value="Internship"
+                                    {{ old('category') == 'Internship' ? 'selected' : '' }}
+                                >
                                     Internship
                                 </option>
 
-                                <option>
+                                <option
+                                    value="Volunteer"
+                                    {{ old('category') == 'Volunteer' ? 'selected' : '' }}
+                                >
                                     Volunteer
                                 </option>
 
@@ -636,12 +732,21 @@
 
                         </div>
 
+                        @error('category')
+
+                            <span class="form-error">
+                                {{ $message }}
+                            </span>
+
+                        @enderror
+
                     </div>
 
                 </div>
 
 
                 {{-- SUBJECT --}}
+
                 <div class="form-group">
 
                     <label for="subject">
@@ -654,15 +759,27 @@
 
                         <input
                             id="subject"
+                            name="subject"
                             type="text"
-                            placeholder="What would you like to discuss?">
+                            value="{{ old('subject') }}"
+                            placeholder="What would you like to discuss?"
+                        >
 
                     </div>
+
+                    @error('subject')
+
+                        <span class="form-error">
+                            {{ $message }}
+                        </span>
+
+                    @enderror
 
                 </div>
 
 
                 {{-- MESSAGE --}}
+
                 <div class="form-group">
 
                     <label for="message">
@@ -673,16 +790,27 @@
 
                         <textarea
                             id="message"
+                            name="message"
                             rows="7"
                             placeholder="Write your message here..."
-                            required></textarea>
+                            required
+                        >{{ old('message') }}</textarea>
 
                     </div>
+
+                    @error('message')
+
+                        <span class="form-error">
+                            {{ $message }}
+                        </span>
+
+                    @enderror
 
                 </div>
 
 
                 {{-- ATTACHMENT --}}
+
                 <div class="file-area">
 
                     <div class="file-icon">
@@ -702,7 +830,19 @@
                             PDF, DOC, DOCX or other supporting documents
                         </small>
 
-                        <input type="file">
+                        <input
+                            type="file"
+                            name="attachment"
+                            accept=".pdf,.doc,.docx"
+                        >
+
+                        @error('attachment')
+
+                            <span class="form-error">
+                                {{ $message }}
+                            </span>
+
+                        @enderror
 
                     </div>
 
@@ -710,9 +850,11 @@
 
 
                 {{-- SUBMIT --}}
+
                 <button
                     type="submit"
-                    class="message-submit-btn">
+                    class="message-submit-btn"
+                >
 
                     Send Message
 
@@ -757,7 +899,7 @@
             <div>
 
                 <h3>
-                    How long does WASMAN take to respond?
+                    How long does WASMaN take to respond?
                 </h3>
 
                 <p>
@@ -779,7 +921,7 @@
             <div>
 
                 <h3>
-                    Can organizations partner with WASMAN?
+                    Can organizations partner with WASMaN?
                 </h3>
 
                 <p>
@@ -802,7 +944,7 @@
             <div>
 
                 <h3>
-                    Can students contact WASMAN?
+                    Can students contact WASMaN?
                 </h3>
 
                 <p>
@@ -825,7 +967,7 @@
             <div>
 
                 <h3>
-                    Can I contact WASMAN about membership?
+                    Can I contact WASMaN about membership?
                 </h3>
 
                 <p>

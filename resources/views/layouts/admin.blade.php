@@ -10,15 +10,21 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>@yield('title', 'Dashboard') | WASMAN Admin</title>
+    <title>@yield('title', 'Dashboard') | WASMaN Admin</title>
 
 
-    {{-- WASMAN ADMIN STYLESHEET --}}
+    {{-- WASMaN ADMIN STYLESHEET --}}
 
     <link
         rel="stylesheet"
         href="{{ asset('css/admin.css') }}"
     >
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
     @stack('styles')
 
 </head>
@@ -49,7 +55,7 @@
             <div>
 
                 <h2>
-                    WASMAN
+                    WASMaN
                 </h2>
 
                 <p>
@@ -75,10 +81,12 @@
         <nav class="sidebar-nav">
 
 
-                <a
-                    href="{{ route('admin.dashboard') }}"
-                    class="sidebar-link"
-                >
+            {{-- OVERVIEW --}}
+
+            <a
+                href="{{ route('admin.dashboard') }}"
+                class="sidebar-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"
+            >
 
                 <span class="nav-icon">
                     ◫
@@ -92,9 +100,11 @@
 
 
 
-                    <a
-                href="{{ route('admin.dashboard') }}"
-                class="sidebar-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"
+            {{-- INTERNSHIPS --}}
+
+            <a
+                href="{{ route('admin.internships') }}"
+                class="sidebar-link {{ request()->routeIs('admin.internships') || request()->routeIs('applications.*') ? 'active' : '' }}"
             >
 
                 <span class="nav-icon">
@@ -107,6 +117,9 @@
 
             </a>
 
+
+
+            {{-- VOLUNTEERS --}}
 
             <a
                 href="{{ route('admin.volunteers') }}"
@@ -124,21 +137,72 @@
             </a>
 
 
-<a
-    href="{{ route('admin.research-assistants') }}"
-    class="sidebar-link {{ request()->routeIs('admin.research-assistants') || request()->routeIs('research-assistants.*') ? 'active' : '' }}"
->
 
-    <span class="nav-icon">
-        ✦
-    </span>
+            {{-- RESEARCH ASSISTANTS --}}
 
-    <span>
-        Research Assistants
+            <a
+                href="{{ route('admin.research-assistants') }}"
+                class="sidebar-link {{ request()->routeIs('admin.research-assistants') || request()->routeIs('research-assistants.*') ? 'active' : '' }}"
+            >
+
+                <span class="nav-icon">
+                    ✦
+                </span>
+
+                <span>
+                    Research Assistants
+                </span>
+
+            </a>
+
+
+
+            {{-- PARTNERSHIPS --}}
+
+            <a
+                href="{{ route('admin.partners') }}"
+                class="sidebar-link {{ request()->routeIs('admin.partners') || request()->routeIs('partners.*') ? 'active' : '' }}"
+            >
+
+                <span class="nav-icon">
+                    ♢
+                </span>
+
+                <span>
+                    Partnerships
+                </span>
+
+            </a>
+
+            <a
+        href="{{ route('admin.messages') }}"
+        class="sidebar-link {{ request()->routeIs('admin.messages') || request()->routeIs('messages.*') ? 'active' : '' }}"
+    >
+
+        <span class="nav-icon">
+            ✉
+        </span>
+
+        <span>
+            Messages
     </span>
 
 </a>
-            
+
+<a
+    href="{{ route('admin.general-enquiries') }}"
+    class="sidebar-link {{ request()->routeIs('admin.general-enquiries') || request()->routeIs('general-enquiries.*') ? 'active' : '' }}"
+>
+
+    <span class="nav-icon">
+        <i class="fa-solid fa-circle-question"></i>
+    </span>
+
+    <span>
+        General Enquiries
+    </span>
+
+</a>
 
 
         </nav>
@@ -224,7 +288,7 @@
             <div>
 
                 <p class="topbar-label">
-                    WASMAN Administration
+                    WASMaN Administration
                 </p>
 
 
@@ -285,7 +349,15 @@
 </div>
 
 
+
+{{-- ============================================
+    CHART.JS
+============================================= --}}
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+{{-- PAGE-SPECIFIC SCRIPTS --}}
 
 @stack('scripts')
 

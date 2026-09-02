@@ -741,73 +741,207 @@
     </div>
 
 
-    <form>
+    @if (session('success'))
+
+        <div class="partner-success-message">
+            {{ session('success') }}
+        </div>
+
+    @endif
+
+
+    @if ($errors->any())
+
+        <div class="partner-error-message">
+
+            <strong>
+                Please correct the following:
+            </strong>
+
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+
+        </div>
+
+    @endif
+
+
+    <form
+        action="{{ route('partner.store') }}"
+        method="POST"
+        class="partner-form"
+    >
+
+        @csrf
+
 
         <div class="form-grid">
 
-            <input
-                type="text"
-                placeholder="Organization Name"
-                required
-            >
 
-            <input
-                type="text"
-                placeholder="Contact Person"
-                required
-            >
+            <div class="partner-form-field">
 
-            <input
-                type="email"
-                placeholder="Email Address"
-                required
-            >
+                <input
+                    type="text"
+                    id="organizationName"
+                    name="organizationName"
+                    value="{{ old('organizationName') }}"
+                    placeholder="Organization Name"
+                    required
+                >
 
-            <input
-                type="tel"
-                placeholder="Phone Number"
-            >
+                @error('organizationName')
+                    <small class="partner-field-error">
+                        {{ $message }}
+                    </small>
+                @enderror
 
-            <input
-                type="text"
-                placeholder="Country"
-            >
+            </div>
 
-            <select required>
 
-                <option>
-                    Partnership Type
-                </option>
+            <div class="partner-form-field">
 
-                <option>
-                    Strategic Partnership
-                </option>
+                <input
+                    type="text"
+                    id="contactPerson"
+                    name="contactPerson"
+                    value="{{ old('contactPerson') }}"
+                    placeholder="Contact Person"
+                    required
+                >
 
-                <option>
-                    Research Collaboration
-                </option>
+                @error('contactPerson')
+                    <small class="partner-field-error">
+                        {{ $message }}
+                    </small>
+                @enderror
 
-                <option>
-                    Programme Support
-                </option>
+            </div>
 
-                <option>
-                    Sponsorship
-                </option>
 
-                <option>
-                    Other
-                </option>
+            <div class="partner-form-field">
 
-            </select>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value="{{ old('email') }}"
+                    placeholder="Email Address"
+                    required
+                >
+
+                @error('email')
+                    <small class="partner-field-error">
+                        {{ $message }}
+                    </small>
+                @enderror
+
+            </div>
+
+
+            <div class="partner-form-field">
+
+                <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    value="{{ old('phoneNumber') }}"
+                    placeholder="Phone Number"
+                >
+
+                @error('phoneNumber')
+                    <small class="partner-field-error">
+                        {{ $message }}
+                    </small>
+                @enderror
+
+            </div>
+
+
+            <div class="partner-form-field">
+
+                <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    value="{{ old('country') }}"
+                    placeholder="Country"
+                >
+
+                @error('country')
+                    <small class="partner-field-error">
+                        {{ $message }}
+                    </small>
+                @enderror
+
+            </div>
+
+
+            <div class="partner-form-field">
+
+                <select
+                    id="partnershipType"
+                    name="partnershipType"
+                    required
+                >
+
+                    <option value="">
+                        Partnership Type
+                    </option>
+
+                    <option value="Strategic Partnership" {{ old('partnershipType') == 'Strategic Partnership' ? 'selected' : '' }}>
+                        Strategic Partnership
+                    </option>
+
+                    <option value="Research Collaboration" {{ old('partnershipType') == 'Research Collaboration' ? 'selected' : '' }}>
+                        Research Collaboration
+                    </option>
+
+                    <option value="Programme Support" {{ old('partnershipType') == 'Programme Support' ? 'selected' : '' }}>
+                        Programme Support
+                    </option>
+
+                    <option value="Sponsorship" {{ old('partnershipType') == 'Sponsorship' ? 'selected' : '' }}>
+                        Sponsorship
+                    </option>
+
+                    <option value="Other" {{ old('partnershipType') == 'Other' ? 'selected' : '' }}>
+                        Other
+                    </option>
+
+                </select>
+
+                @error('partnershipType')
+                    <small class="partner-field-error">
+                        {{ $message }}
+                    </small>
+                @enderror
+
+            </div>
+
 
         </div>
 
 
-        <textarea
-            rows="7"
-            placeholder="Tell us about your organization and the partnership opportunity you would like to explore."
-        ></textarea>
+        <div class="partner-form-field full">
+
+            <textarea
+                id="partnershipMessage"
+                name="partnershipMessage"
+                rows="7"
+                placeholder="Tell us about your organization and the partnership opportunity you would like to explore."
+                required
+            >{{ old('partnershipMessage') }}</textarea>
+
+            @error('partnershipMessage')
+                <small class="partner-field-error">
+                    {{ $message }}
+                </small>
+            @enderror
+
+        </div>
 
 
         <button type="submit">

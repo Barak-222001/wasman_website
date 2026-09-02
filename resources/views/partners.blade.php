@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>WASMaN</title>
+    <title>WASMaN | Our Partners</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-   
-        <link rel="stylesheet" href="{{ asset('css/partners.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="{{ asset('css/header.css')}}">
-       
-    </head>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
 
-    <body>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        
+    <link rel="stylesheet" href="{{ asset('css/partners.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-<!-- =========================================================
-     WASMaN HEADER
-========================================================= -->
+<body>
 
 @include('components.heading')
 
+
 <section class="partners">
 
-    <!-- Hero -->
+    {{-- PAGE INTRO --}}
+    <section class="partners-hero">
 
-    <div class="partners-header">
+        <div class="partners-hero-copy">
 
-        <span>OUR PARTNERS</span>
+            <span class="eyebrow">
+                OUR PARTNERS
+            </span>
 
-        <h1>Building Strong Partnerships for Sustainable Impact</h1>
+            <h1>
+                Building Strong Partnerships
+                <span>for Sustainable Impact</span>
+            </h1>
 
-        <p>
-            WASMaN collaborates with institutions, organizations, governments,
-            development partners and communities that share our commitment to
-            advancing aquatic science, marine conservation, climate resilience
-            and women's leadership.
-        </p>
+            <p>
+                WASMaN collaborates with institutions, organizations, governments,
+                development partners and communities that share our commitment to
+                advancing aquatic science, marine conservation, climate resilience
+                and women's leadership.
+            </p>
 
-    </div>
+        </div>
 
-    <!-- Why Partner -->
 
-    <div class="partnership-story">
+        <div class="partners-hero-card">
+
+            <div class="hero-icon">
+                <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+
+            <strong>
+                Collaboration • Innovation • Impact
+            </strong>
+
+            <p>
+                Working together to strengthen research, conservation,
+                leadership and resilient aquatic communities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    {{-- WHY PARTNERSHIPS MATTER --}}
+    <section class="partnership-story">
 
         <div class="story-content">
 
-            <h2>Why Partnerships Matter</h2>
+            <span class="section-label">
+                WHY WE COLLABORATE
+            </span>
+
+            <h2>
+                Why Partnerships Matter
+            </h2>
 
             <p>
                 Addressing today's environmental challenges requires collective
@@ -67,147 +95,472 @@
                 working across aquatic science and environmental management.
             </p>
 
+
+            <div class="story-highlights">
+
+                <div class="story-highlight">
+                    <i class="fa-solid fa-flask-vial"></i>
+                    <span>Research</span>
+                </div>
+
+                <div class="story-highlight">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Capacity</span>
+                </div>
+
+                <div class="story-highlight">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Networks</span>
+                </div>
+
+            </div>
+
         </div>
+
 
         <div class="story-image">
 
-             <img src="{{asset('pics_vids/why_part.png
-             ')}}">
+            <img
+                src="{{ asset('pics_vids/why_part.png') }}"
+                alt="WASMaN partnership and collaboration"
+            >
+
+            <div class="image-badge">
+                <i class="fa-solid fa-link"></i>
+                <span>Collaboration in Action</span>
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-    <!-- Partner Logos -->
 
-    <div class="partner-section">
+    {{-- STRATEGIC PARTNERS --}}
+    <section class="partner-section">
 
-        <h2>Our Strategic Partners</h2>
+        <div class="section-heading-row">
 
-        <p>
-            We are proud to collaborate with organizations that support our
-            vision for sustainable aquatic resource management.
-        </p>
+            <div>
+
+                <span class="section-label">
+                    STRATEGIC RELATIONSHIPS
+                </span>
+
+                <h2>
+                    Our Strategic Partners
+                </h2>
+
+            </div>
+
+            <p>
+                We are proud to collaborate with organizations that support our
+                vision for sustainable aquatic resource management.
+            </p>
+
+        </div>
+
 
         <div class="logo-grid">
 
-            <div class="logo-card">
-                <img src="images/logo1.png">
-                <h3>Partner Name</h3>
-                <span>Research Institution</span>
-            </div>
+            <article class="logo-card">
 
-            <div class="logo-card">
-                <img src="images/logo2.png">
-                <h3>Partner Name</h3>
-                <span>NGO</span>
-            </div>
+                <div class="logo-image">
+                    <img src="{{ asset('images/logo1.png') }}" alt="Partner logo">
+                </div>
 
-            <div class="logo-card">
-                <img src="images/logo3.png">
-                <h3>Partner Name</h3>
-                <span>Government Agency</span>
-            </div>
+                <h3>
+                    Partner Name
+                </h3>
 
-            <div class="logo-card">
-                <img src="images/logo4.png">
-                <h3>Partner Name</h3>
-                <span>University</span>
-            </div>
+                <span>
+                    Research Institution
+                </span>
 
-            <div class="logo-card">
-                <img src="images/logo5.png">
-                <h3>Partner Name</h3>
-                <span>Development Partner</span>
-            </div>
+            </article>
 
-            <div class="logo-card">
-                <img src="images/logo6.png">
-                <h3>Partner Name</h3>
-                <span>Private Sector</span>
-            </div>
+
+            <article class="logo-card">
+
+                <div class="logo-image">
+                    <img src="{{ asset('images/logo2.png') }}" alt="Partner logo">
+                </div>
+
+                <h3>
+                    Partner Name
+                </h3>
+
+                <span>
+                    NGO
+                </span>
+
+            </article>
+
+
+            <article class="logo-card">
+
+                <div class="logo-image">
+                    <img src="{{ asset('images/logo3.png') }}" alt="Partner logo">
+                </div>
+
+                <h3>
+                    Partner Name
+                </h3>
+
+                <span>
+                    Government Agency
+                </span>
+
+            </article>
+
+
+            <article class="logo-card">
+
+                <div class="logo-image">
+                    <img src="{{ asset('images/logo4.png') }}" alt="Partner logo">
+                </div>
+
+                <h3>
+                    Partner Name
+                </h3>
+
+                <span>
+                    University
+                </span>
+
+            </article>
+
+
+            <article class="logo-card">
+
+                <div class="logo-image">
+                    <img src="{{ asset('images/logo5.png') }}" alt="Partner logo">
+                </div>
+
+                <h3>
+                    Partner Name
+                </h3>
+
+                <span>
+                    Development Partner
+                </span>
+
+            </article>
+
+
+            <article class="logo-card">
+
+                <div class="logo-image">
+                    <img src="{{ asset('images/logo6.png') }}" alt="Partner logo">
+                </div>
+
+                <h3>
+                    Partner Name
+                </h3>
+
+                <span>
+                    Private Sector
+                </span>
+
+            </article>
 
         </div>
 
-    </div>
+    </section>
 
-    <!-- Partnership Areas -->
 
-    <div class="partnership-areas">
+    {{-- PARTNERSHIP AREAS --}}
+    <section class="partnership-areas-section">
 
-        <div class="area">
+        <div class="section-heading-row">
 
-            <div class="icon">🔬</div>
+            <div>
 
-            <h3>Research Collaboration</h3>
+                <span class="section-label">
+                    HOW WE PARTNER
+                </span>
+
+                <h2>
+                    Partnership Areas
+                </h2>
+
+            </div>
 
             <p>
-                Joint scientific research and innovation.
+                Our partnerships are designed around practical areas where
+                collaboration can produce measurable scientific, environmental
+                and social impact.
             </p>
 
         </div>
 
-        <div class="area">
 
-            <div class="icon">🌊</div>
+        <div class="partnership-areas">
 
-            <h3>Marine Conservation</h3>
+            <article class="area">
 
-            <p>
-                Protecting aquatic ecosystems together.
-            </p>
+                <span class="area-number">
+                    01
+                </span>
+
+                <div class="icon">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+
+                <h3>
+                    Research Collaboration
+                </h3>
+
+                <p>
+                    Joint scientific research, knowledge exchange and innovation.
+                </p>
+
+            </article>
+
+
+            <article class="area">
+
+                <span class="area-number">
+                    02
+                </span>
+
+                <div class="icon">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+
+                <h3>
+                    Marine Conservation
+                </h3>
+
+                <p>
+                    Protecting aquatic ecosystems through coordinated action.
+                </p>
+
+            </article>
+
+
+            <article class="area">
+
+                <span class="area-number">
+                    03
+                </span>
+
+                <div class="icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <h3>
+                    Capacity Building
+                </h3>
+
+                <p>
+                    Training, mentorship, professional development and scholarships.
+                </p>
+
+            </article>
+
+
+            <article class="area">
+
+                <span class="area-number">
+                    04
+                </span>
+
+                <div class="icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <h3>
+                    Policy & Advocacy
+                </h3>
+
+                <p>
+                    Supporting evidence-informed and sustainable environmental policies.
+                </p>
+
+            </article>
 
         </div>
 
-        <div class="area">
+    </section>
 
-            <div class="icon">🎓</div>
 
-            <h3>Capacity Building</h3>
+    {{-- CTA --}}
+    <section class="partner-cta">
+
+        <div class="partner-cta-content">
+
+            <span>
+                WORK WITH WASMaN
+            </span>
+
+            <h2>
+                Interested in Partnering With WASMaN?
+            </h2>
 
             <p>
-                Training, mentorship and scholarships.
+                Join our growing network of institutions and organizations working
+                towards healthy aquatic ecosystems and empowered women leaders.
             </p>
+
+            <a href="/partner_with_us">
+                Become a Partner
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
         </div>
 
-        <div class="area">
 
-            <div class="icon">🤝</div>
+        <div class="partner-cta-visual">
 
-            <h3>Policy & Advocacy</h3>
+            <div class="cta-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
 
-            <p>
-                Influencing sustainable environmental policies.
-            </p>
+            <strong>
+                Strong Partnerships.
+                Greater Impact.
+            </strong>
 
         </div>
 
-    </div>
-
-    <!-- CTA -->
-
-    <div class="partner-cta">
-
-        <h2>Interested in Partnering With WASMaN?</h2>
-
-        <p>
-            Join our growing network of institutions and organizations working
-            towards healthy aquatic ecosystems and empowered women leaders.
-        </p>
-
-        <a href="/become_member">Become a Partner</a>
-
-    </div>
+    </section>
 
 </section>
-      
-    </body>
 
 
-     <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
-     <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
-     <script src="{{ asset('created_js/carousel.js') }}"></script>
-   
+<footer class="footer">
 
+    <div class="footer-container">
+
+        <div class="footer-column footer-brand">
+
+            <div class="footer-brand-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <h2>
+                WASMaN
+            </h2>
+
+            <p>
+                Women in Aquatic Science and Management Network advances
+                women's leadership, scientific excellence and collaboration
+                for sustainable aquatic resource management.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/history">History</a></li>
+                <li><a href="/what_we_do">What We Do</a></li>
+                <li><a href="/ongoing">Projects</a></li>
+                <li><a href="/become_member">Membership</a></li>
+                <li><a href="/general_enquiries">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Focus Areas
+            </h3>
+
+            <ul class="focus-list">
+                <li><i class="fa-solid fa-microscope"></i> Aquatic Science</li>
+                <li><i class="fa-solid fa-water"></i> Marine Conservation</li>
+                <li><i class="fa-solid fa-chart-line"></i> Blue Economy</li>
+                <li><i class="fa-solid fa-cloud-sun"></i> Climate Resilience</li>
+                <li><i class="fa-solid fa-droplet"></i> Water Conservation</li>
+                <li><i class="fa-solid fa-user-tie"></i> Women's Leadership</li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+
+                <div>
+                    <span>Email</span>
+                    <a href="mailto:info@wasman.org">
+                        info@wasman.org
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+
+                <div>
+                    <span>Phone</span>
+                    <p>+233 XX XXX XXXX</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+                    <span>Location</span>
+                    <p>Cape Coast, Ghana</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-divider"></div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div class="social-links">
+
+            <a href="#" aria-label="Website">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
+<script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('created_js/carousel.js') }}"></script>
+
+</body>
 </html>

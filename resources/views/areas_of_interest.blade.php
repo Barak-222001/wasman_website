@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+    <title>WASMaN | Areas of Interest</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/areas_of_interests.css') }}"> 
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
 
-            
-    </head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <body>
+    <link rel="stylesheet" href="{{ asset('css/areas_of_interests.css') }}">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-        {{-- header and nav section --}}
+<body>
 
 @include('components.heading')
 
-<!-- =========================================================
-     AREAS OF INTEREST
-========================================================= -->
 
 <section class="wasman-interests">
 
-
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
-
+    {{-- HERO --}}
     <section class="interest-hero">
 
         <div class="interest-hero-overlay">
@@ -45,16 +37,33 @@
 
                 <h1>
                     Advancing Science for Healthy Waters,
-                    Thriving Ecosystems & Resilient Communities
+                    <span>Thriving Ecosystems & Resilient Communities</span>
                 </h1>
 
                 <p>
-                    WASMAN brings together science, innovation, leadership
+                    WASMaN brings together science, innovation, leadership
                     and community action to promote sustainable aquatic
                     ecosystems and climate-resilient communities.
                 </p>
 
-                <div class="interest-hero-line"></div>
+                <div class="interest-hero-meta">
+
+                    <div>
+                        <i class="fa-solid fa-microscope"></i>
+                        <span>Science</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Conservation</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Leadership</span>
+                    </div>
+
+                </div>
 
             </div>
 
@@ -63,18 +72,14 @@
     </section>
 
 
-
-    <!-- =====================================================
-         INTRODUCTION
-    ====================================================== -->
-
+    {{-- INTRODUCTION --}}
     <section class="interest-intro">
 
         <div class="intro-image">
 
             <img
                 src="{{ asset('pics_vids/outreach.jpeg') }}"
-                alt="WASMAN community outreach"
+                alt="WASMaN community outreach"
             >
 
             <div class="intro-image-badge">
@@ -102,10 +107,8 @@
                 Leadership & Collaboration
             </h2>
 
-            <div class="title-line"></div>
-
             <p>
-                WASMAN brings together scientists, students, researchers,
+                WASMaN brings together scientists, students, researchers,
                 conservation practitioners, policymakers and development
                 partners who are committed to improving the sustainable
                 management of aquatic ecosystems.
@@ -124,7 +127,7 @@
             <div class="intro-highlights">
 
                 <div>
-                    <i class="fa-solid fa-flask"></i>
+                    <i class="fa-solid fa-flask-vial"></i>
                     <span>Research</span>
                 </div>
 
@@ -145,13 +148,8 @@
     </section>
 
 
-
-    <!-- =====================================================
-         CORE AREAS
-    ====================================================== -->
-
+    {{-- CORE AREAS --}}
     <section class="core-interest-section">
-
 
         <div class="interest-section-heading">
 
@@ -172,19 +170,14 @@
         </div>
 
 
-
-        <!-- 01 -->
-
         <article class="interest-block">
 
             <div class="interest-text">
 
-                <div class="interest-number">
-                    01
-                </div>
+                <span class="interest-number">01</span>
 
                 <div class="interest-icon">
-                    <i class="fa-solid fa-flask"></i>
+                    <i class="fa-solid fa-microscope"></i>
                 </div>
 
                 <span class="interest-category">
@@ -197,7 +190,7 @@
 
                 <p>
                     Scientific knowledge is the foundation of sustainable
-                    aquatic resource management. WASMAN promotes research
+                    aquatic resource management. WASMaN promotes research
                     that enhances our understanding of freshwater,
                     estuarine and marine ecosystems.
                 </p>
@@ -224,8 +217,9 @@
                     alt="Aquatic science research"
                 >
 
-                <div class="image-number">
-                    01
+                <div class="image-label">
+                    <span>01</span>
+                    <strong>Science & Research</strong>
                 </div>
 
             </div>
@@ -233,18 +227,13 @@
         </article>
 
 
-
-        <!-- 02 -->
-
         <article class="interest-block reverse">
 
             <div class="interest-text">
 
-                <div class="interest-number">
-                    02
-                </div>
+                <span class="interest-number">02</span>
 
-                <div class="interest-icon coral">
+                <div class="interest-icon">
                     <i class="fa-solid fa-cloud-sun"></i>
                 </div>
 
@@ -263,7 +252,7 @@
                 </p>
 
                 <p>
-                    WASMAN promotes climate adaptation, watershed management,
+                    WASMaN promotes climate adaptation, watershed management,
                     pollution control, flood resilience, groundwater
                     protection and water conservation.
                 </p>
@@ -279,13 +268,13 @@
             <div class="interest-image">
 
                 <img
-                    src="{{ asset('pics_vids/clim_wat.png
-                    ') }}"
+                    src="{{ asset('pics_vids/clim_wat.png') }}"
                     alt="Climate and water sustainability"
                 >
 
-                <div class="image-number">
-                    02
+                <div class="image-label">
+                    <span>02</span>
+                    <strong>Climate & Water</strong>
                 </div>
 
             </div>
@@ -293,16 +282,11 @@
         </article>
 
 
-
-        <!-- 03 -->
-
         <article class="interest-block">
 
             <div class="interest-text">
 
-                <div class="interest-number">
-                    03
-                </div>
+                <span class="interest-number">03</span>
 
                 <div class="interest-icon">
                     <i class="fa-solid fa-earth-africa"></i>
@@ -317,7 +301,7 @@
                 </h2>
 
                 <p>
-                    WASMAN recognizes the blue economy as a powerful pathway
+                    WASMaN recognizes the blue economy as a powerful pathway
                     for sustainable development and inclusive economic
                     growth.
                 </p>
@@ -339,13 +323,13 @@
             <div class="interest-image">
 
                 <img
-                    src="{{ asset('pics_vids/blue_eco.png
-                    ') }}"
+                    src="{{ asset('pics_vids/blue_eco.png') }}"
                     alt="Blue economy and coastal development"
                 >
 
-                <div class="image-number">
-                    03
+                <div class="image-label">
+                    <span>03</span>
+                    <strong>Blue Economy</strong>
                 </div>
 
             </div>
@@ -353,19 +337,14 @@
         </article>
 
 
-
-        <!-- 04 -->
-
         <article class="interest-block reverse">
 
             <div class="interest-text">
 
-                <div class="interest-number">
-                    04
-                </div>
+                <span class="interest-number">04</span>
 
-                <div class="interest-icon coral">
-                    <i class="fa-solid fa-person-dress"></i>
+                <div class="interest-icon">
+                    <i class="fa-solid fa-user-tie"></i>
                 </div>
 
                 <span class="interest-category">
@@ -377,14 +356,14 @@
                 </h2>
 
                 <p>
-                    Empowering women remains at the heart of WASMAN's mission.
+                    Empowering women remains at the heart of WASMaN's mission.
                     We create pathways for professional growth, scientific
                     excellence and leadership.
                 </p>
 
                 <p>
                     Through mentorship, networking, leadership development,
-                    scholarships and collaborative research, WASMAN nurtures
+                    scholarships and collaborative research, WASMaN nurtures
                     the next generation of female scientists and innovators.
                 </p>
 
@@ -403,8 +382,9 @@
                     alt="Women in aquatic science"
                 >
 
-                <div class="image-number">
-                    04
+                <div class="image-label">
+                    <span>04</span>
+                    <strong>Women & Leadership</strong>
                 </div>
 
             </div>
@@ -412,16 +392,11 @@
         </article>
 
 
-
-        <!-- 05 -->
-
         <article class="interest-block">
 
             <div class="interest-text">
 
-                <div class="interest-number">
-                    05
-                </div>
+                <span class="interest-number">05</span>
 
                 <div class="interest-icon">
                     <i class="fa-solid fa-people-group"></i>
@@ -442,7 +417,7 @@
                 </p>
 
                 <p>
-                    WASMAN facilitates public education campaigns,
+                    WASMaN facilitates public education campaigns,
                     stakeholder dialogues, community outreach and
                     collaborative conservation initiatives.
                 </p>
@@ -462,8 +437,9 @@
                     alt="Community engagement"
                 >
 
-                <div class="image-number">
-                    05
+                <div class="image-label">
+                    <span>05</span>
+                    <strong>Community & Partnerships</strong>
                 </div>
 
             </div>
@@ -473,11 +449,7 @@
     </section>
 
 
-
-    <!-- =====================================================
-         THEMATIC AREAS
-    ====================================================== -->
-
+    {{-- THEMATIC AREAS --}}
     <section class="thematic-section">
 
         <div class="thematic-title">
@@ -491,7 +463,7 @@
             </h2>
 
             <p>
-                Beyond our core programmes, WASMAN remains committed to
+                Beyond our core programmes, WASMaN remains committed to
                 addressing emerging environmental issues through
                 multidisciplinary research, innovation and strategic
                 partnerships.
@@ -502,8 +474,7 @@
 
         <div class="thematic-grid">
 
-
-            <div class="theme-card">
+            <article class="theme-card">
 
                 <div class="theme-icon">
                     <i class="fa-solid fa-fish"></i>
@@ -521,11 +492,10 @@
                     and livelihoods.
                 </p>
 
-            </div>
+            </article>
 
 
-
-            <div class="theme-card">
+            <article class="theme-card">
 
                 <div class="theme-icon">
                     <i class="fa-solid fa-tree"></i>
@@ -543,11 +513,10 @@
                     resilience.
                 </p>
 
-            </div>
+            </article>
 
 
-
-            <div class="theme-card">
+            <article class="theme-card">
 
                 <div class="theme-icon">
                     <i class="fa-solid fa-droplet"></i>
@@ -564,11 +533,10 @@
                     and sustainable freshwater management.
                 </p>
 
-            </div>
+            </article>
 
 
-
-            <div class="theme-card">
+            <article class="theme-card">
 
                 <div class="theme-icon">
                     <i class="fa-solid fa-fish-fins"></i>
@@ -585,11 +553,10 @@
                     monitoring and ecosystem-based management.
                 </p>
 
-            </div>
+            </article>
 
 
-
-            <div class="theme-card">
+            <article class="theme-card">
 
                 <div class="theme-icon">
                     <i class="fa-solid fa-book-open"></i>
@@ -606,14 +573,13 @@
                     outreach and public engagement programmes.
                 </p>
 
-            </div>
+            </article>
 
 
-
-            <div class="theme-card">
+            <article class="theme-card">
 
                 <div class="theme-icon">
-                    <i class="fa-solid fa-microscope"></i>
+                    <i class="fa-solid fa-flask-vial"></i>
                 </div>
 
                 <span>06</span>
@@ -627,19 +593,14 @@
                     support sustainable aquatic resource management.
                 </p>
 
-            </div>
-
+            </article>
 
         </div>
 
     </section>
 
 
-
-    <!-- =====================================================
-         IMPACT
-    ====================================================== -->
-
+    {{-- IMPACT --}}
     <section class="impact-section">
 
         <div class="impact-header">
@@ -654,7 +615,7 @@
 
             <p>
                 Every project, partnership and initiative undertaken by
-                WASMAN contributes to stronger scientific knowledge,
+                WASMaN contributes to stronger scientific knowledge,
                 healthier aquatic ecosystems and empowered women.
             </p>
 
@@ -662,7 +623,6 @@
 
 
         <div class="impact-grid">
-
 
             <div class="impact-card">
 
@@ -684,11 +644,10 @@
             </div>
 
 
-
             <div class="impact-card">
 
                 <div class="impact-icon">
-                    <i class="fa-solid fa-flask"></i>
+                    <i class="fa-solid fa-flask-vial"></i>
                 </div>
 
                 <h2>35+</h2>
@@ -703,7 +662,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="impact-card">
@@ -726,7 +684,6 @@
             </div>
 
 
-
             <div class="impact-card">
 
                 <div class="impact-icon">
@@ -746,17 +703,12 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
-
-    <!-- =====================================================
-         FEATURE BANNER
-    ====================================================== -->
-
+    {{-- FEATURE BANNER --}}
     <section class="interest-banner">
 
         <div class="banner-overlay">
@@ -787,62 +739,167 @@
     </section>
 
 
-
-    <!-- =====================================================
-         CTA
-    ====================================================== -->
-
+    {{-- CTA --}}
     <section class="cta-section">
 
-        <span class="section-label">
-            GET INVOLVED
-        </span>
+        <div class="cta-inner">
 
-        <h2>
-            Be Part of the Change
-        </h2>
+            <span class="section-label">
+                GET INVOLVED
+            </span>
 
-        <p>
-            Whether you are a researcher, student, policymaker,
-            conservation practitioner or development partner, your
-            expertise and passion can help build a more sustainable
-            future for aquatic ecosystems.
-        </p>
+            <h2>
+                Be Part of the Change
+            </h2>
 
+            <p>
+                Whether you are a researcher, student, policymaker,
+                conservation practitioner or development partner, your
+                expertise and passion can help build a more sustainable
+                future for aquatic ecosystems.
+            </p>
 
-        <div class="cta-buttons">
+            <div class="cta-buttons">
 
-            <a href="/become_member">
-                Become a Member
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
+                <a href="/become_member">
+                    Become a Member
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-            <a href="/partner_with_us" class="outline-btn">
-                Partner With Us
-                <i class="fa-solid fa-handshake"></i>
-            </a>
+                <a href="/partner_with_us" class="outline-btn">
+                    Partner With Us
+                    <i class="fa-solid fa-handshake"></i>
+                </a>
+
+            </div>
 
         </div>
 
     </section>
 
-
 </section>
 
 
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<footer class="footer">
 
- 
-   
-      
-    </body>
+    <div class="footer-container">
+
+        <div class="footer-column footer-brand">
+
+            <div class="footer-brand-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <h2>WASMaN</h2>
+
+            <p>
+                Women in Aquatic Science and Management Network advances
+                women's leadership, scientific excellence and collaboration
+                for sustainable aquatic resource management.
+            </p>
+
+        </div>
 
 
-     <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
-     <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
-     <script src="{{ asset('created_js/carousel.js') }}"></script>
-   
+        <div class="footer-column">
 
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/history">History</a></li>
+                <li><a href="/what_we_do">What We Do</a></li>
+                <li><a href="/ongoing">Projects</a></li>
+                <li><a href="/become_member">Membership</a></li>
+                <li><a href="/general_enquiries">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Focus Areas</h3>
+
+            <ul class="focus-list">
+                <li><i class="fa-solid fa-microscope"></i> Aquatic Science</li>
+                <li><i class="fa-solid fa-water"></i> Marine Conservation</li>
+                <li><i class="fa-solid fa-chart-line"></i> Blue Economy</li>
+                <li><i class="fa-solid fa-cloud-sun"></i> Climate Resilience</li>
+                <li><i class="fa-solid fa-droplet"></i> Water Conservation</li>
+                <li><i class="fa-solid fa-user-tie"></i> Women's Leadership</li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <span>Email</span>
+                    <a href="mailto:info@wasman.org">info@wasman.org</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <span>Phone</span>
+                    <p>+233 XX XXX XXXX</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <span>Location</span>
+                    <p>Cape Coast, Ghana</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-divider"></div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div class="social-links">
+
+            <a href="#" aria-label="Website">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
+<script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('created_js/carousel.js') }}"></script>
+
+</body>
 </html>

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+        <title>WASMaN</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,7 +23,7 @@
 @include('components.heading')
 
  <!-- =====================================================
-     WASMAN NEWS & MEDIA PAGE
+     WASMaN NEWS & MEDIA PAGE
 ===================================================== -->
 
 <section class="wasman-news-page">
@@ -38,7 +38,7 @@
 
         <div class="news-hero-content">
 
-            <span class="eyebrow">WASMAN NEWSROOM</span>
+            <span class="eyebrow">WASMaN NEWSROOM</span>
 
             <h1>
                 Stories, Discoveries & Updates
@@ -90,7 +90,7 @@
             </h2>
 
             <p>
-                WASMAN's newsroom brings together stories from our research,
+                WASMaN's newsroom brings together stories from our research,
                 conservation programmes, community engagements, partnerships
                 and events. We share knowledge and experiences that inspire
                 action for healthier aquatic ecosystems and stronger
@@ -140,7 +140,7 @@
 
             <img
                 src="../pics_vids/sl.png"
-                alt="WASMAN coastal restoration initiative">
+                alt="WASMaN coastal restoration initiative">
 
             <div class="featured-badge">
                 FEATURED STORY
@@ -161,7 +161,7 @@
             </h2>
 
             <p>
-                WASMAN researchers, students and coastal communities have
+                WASMaN researchers, students and coastal communities have
                 joined forces to strengthen ecosystem restoration while
                 creating opportunities for women to participate in
                 environmental leadership and conservation.
@@ -253,7 +253,7 @@
                     </h3>
 
                     <p>
-                        WASMAN researchers have released new findings
+                        WASMaN researchers have released new findings
                         highlighting opportunities for improved marine
                         ecosystem conservation.
                     </p>
@@ -374,7 +374,7 @@
 
             <p>
                 Stay connected with upcoming conferences, workshops,
-                training programmes and other WASMAN activities.
+                training programmes and other WASMaN activities.
             </p>
 
         </div>
@@ -405,7 +405,7 @@
                     </span>
 
                     <h3>
-                        WASMAN Annual Conference
+                        WASMaN Annual Conference
                     </h3>
 
                     <p>
@@ -568,7 +568,7 @@
                 <img src="../pics_vids/gal6.png" alt="">
                 <div class="media-overlay">
                     <i class="fas fa-camera"></i>
-                    <span>WASMAN Activities</span>
+                    <span>WASMaN Activities</span>
                 </div>
             </div>
 
@@ -592,7 +592,7 @@
         </span>
 
         <h2>
-            Never Miss a WASMAN Update
+            Never Miss a WASMaN Update
         </h2>
 
         <p>
@@ -629,7 +629,7 @@
 
         <div class="footer-column footer-about">
 
-            <h2>WASMAN</h2>
+            <h2>WASMaN</h2>
 
             <p>
                 Women in Aquatic Science and Management Network is dedicated
@@ -744,7 +744,7 @@
 
         <p>
             © 2026 Women in Aquatic Science and Management Network
-            (WASMAN). All Rights Reserved.
+            (WASMaN). All Rights Reserved.
         </p>
 
     </div>

@@ -49,7 +49,7 @@
             </h1>
 
             <p>
-                Need information about WASMAN's programmes,
+                Need information about WASMaN's programmes,
                 membership, research, partnerships or
                 environmental initiatives? Our team is ready
                 to connect you with the right information.
@@ -115,8 +115,8 @@
         <div class="intro-image">
 
             <img
-                src="{{ asset('images/enquiry-team.jpg') }}"
-                alt="WASMAN Support Team"
+                src="{{ asset('../pics_vids/en.png') }}"
+                alt="WASMaN Support Team"
             >
 
 
@@ -145,7 +145,7 @@
         <div class="intro-content">
 
             <span class="section-label">
-                CONNECT WITH WASMAN
+                CONNECT WITH WASMaN
             </span>
 
             <h2>
@@ -154,7 +154,7 @@
             </h2>
 
             <p>
-                The WASMAN enquiry desk serves as a first
+                The WASMaN enquiry desk serves as a first
                 point of contact for individuals, organizations,
                 researchers, students and partners seeking
                 information about our work.
@@ -261,7 +261,7 @@
             </h3>
 
             <p>
-                Questions about joining WASMAN,
+                Questions about joining WASMaN,
                 membership benefits and registration.
             </p>
 
@@ -358,7 +358,7 @@
 
             <p>
                 Explore opportunities for institutions
-                and organizations to work with WASMAN.
+                and organizations to work with WASMaN.
             </p>
 
             <a href="#enquiry-form">
@@ -382,7 +382,7 @@
 
             <p>
                 Questions about conferences, events,
-                reports and WASMAN publications.
+                reports and WASMaN publications.
             </p>
 
             <a href="/events">
@@ -420,7 +420,7 @@
             </h2>
 
             <p>
-                WASMAN welcomes questions and enquiries
+                WASMaN welcomes questions and enquiries
                 from individuals and organizations interested
                 in aquatic science, environmental conservation,
                 research and sustainable development.
@@ -430,7 +430,7 @@
                 href="#enquiry-form"
                 class="dark-button"
             >
-                Talk To WASMAN
+                Talk To WASMaN
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
 
@@ -527,7 +527,7 @@
         </span>
 
         <h2>
-            Reach WASMAN Directly
+            Reach WASMaN Directly
         </h2>
 
         <p>
@@ -580,7 +580,7 @@
 
             <p>
                 Speak directly with the
-                WASMAN support team.
+                WASMaN support team.
             </p>
 
         </div>
@@ -598,7 +598,7 @@
             </span>
 
             <h3>
-                WASMAN Secretariat
+                WASMaN Secretariat
             </h3>
 
             <p>
@@ -660,9 +660,44 @@
 
 
 
+        {{-- Backend route will be connected when we build the General Enquiries module. --}}
+        @if(session('success'))
+
+            <div class="form-success">
+                {{ session('success') }}
+            </div>
+
+        @endif
+
+
+        @if($errors->any())
+
+            <div class="form-errors">
+
+                <strong>
+                    Please correct the following:
+                </strong>
+
+                <ul>
+
+                    @foreach($errors->all() as $error)
+
+                        <li>
+                            {{ $error }}
+                        </li>
+
+                    @endforeach
+
+                </ul>
+
+            </div>
+
+        @endif
+
+
         <form
             class="enquiry-form"
-            action="#"
+             action="{{ route('general-enquiries.store') }}"
             method="POST"
         >
 
@@ -673,32 +708,54 @@
 
                 <div class="form-group">
 
-                    <label>
+                    <label for="full-name">
                         Full Name
                     </label>
 
                     <input
+                        id="full-name"
                         type="text"
-                        name="name"
+                        name="full_name"
+                        value="{{ old('full_name') }}"
                         placeholder="Enter your full name"
+                        autocomplete="name"
                         required
                     >
+
+                    @error('full_name')
+
+                        <span class="form-error">
+                            {{ $message }}
+                        </span>
+
+                    @enderror
 
                 </div>
 
 
                 <div class="form-group">
 
-                    <label>
+                    <label for="email">
                         Email Address
                     </label>
 
                     <input
+                        id="email"
                         type="email"
                         name="email"
+                        value="{{ old('email') }}"
                         placeholder="Enter your email"
+                        autocomplete="email"
                         required
                     >
+
+                    @error('email')
+
+                        <span class="form-error">
+                            {{ $message }}
+                        </span>
+
+                    @enderror
 
                 </div>
 
@@ -709,26 +766,38 @@
 
                 <div class="form-group">
 
-                    <label>
+                    <label for="phone-number">
                         Phone Number
                     </label>
 
                     <input
+                        id="phone-number"
                         type="tel"
-                        name="phone"
+                        name="phone_number"
+                        value="{{ old('phone_number') }}"
                         placeholder="+233 XXX XXX XXX"
+                        autocomplete="tel"
                     >
+
+                    @error('phone_number')
+
+                        <span class="form-error">
+                            {{ $message }}
+                        </span>
+
+                    @enderror
 
                 </div>
 
 
                 <div class="form-group">
 
-                    <label>
+                    <label for="enquiry-type">
                         Enquiry Type
                     </label>
 
                     <select
+                        id="enquiry-type"
                         name="enquiry_type"
                         required
                     >
@@ -737,35 +806,64 @@
                             Select enquiry type
                         </option>
 
-                        <option>
+                        <option
+                            value="Membership"
+                            {{ old('enquiry_type') === 'Membership' ? 'selected' : '' }}
+                        >
                             Membership
                         </option>
 
-                        <option>
+                        <option
+                            value="Research Support"
+                            {{ old('enquiry_type') === 'Research Support' ? 'selected' : '' }}
+                        >
                             Research Support
                         </option>
 
-                        <option>
+                        <option
+                            value="Partnership"
+                            {{ old('enquiry_type') === 'Partnership' ? 'selected' : '' }}
+                        >
                             Partnership
                         </option>
 
-                        <option>
+                        <option
+                            value="Internship"
+                            {{ old('enquiry_type') === 'Internship' ? 'selected' : '' }}
+                        >
                             Internship
                         </option>
 
-                        <option>
+                        <option
+                            value="Volunteer"
+                            {{ old('enquiry_type') === 'Volunteer' ? 'selected' : '' }}
+                        >
                             Volunteer
                         </option>
 
-                        <option>
+                        <option
+                            value="Events & Publications"
+                            {{ old('enquiry_type') === 'Events & Publications' ? 'selected' : '' }}
+                        >
                             Events & Publications
                         </option>
 
-                        <option>
+                        <option
+                            value="General Inquiry"
+                            {{ old('enquiry_type') === 'General Inquiry' ? 'selected' : '' }}
+                        >
                             General Inquiry
                         </option>
 
                     </select>
+
+                    @error('enquiry_type')
+
+                        <span class="form-error">
+                            {{ $message }}
+                        </span>
+
+                    @enderror
 
                 </div>
 
@@ -774,16 +872,25 @@
 
             <div class="form-group">
 
-                <label>
+                <label for="enquiry-message">
                     Your Message
                 </label>
 
                 <textarea
+                    id="enquiry-message"
                     name="message"
                     rows="7"
                     placeholder="Write your enquiry here..."
                     required
-                ></textarea>
+                >{{ old('message') }}</textarea>
+
+                @error('message')
+
+                    <span class="form-error">
+                        {{ $message }}
+                    </span>
+
+                @enderror
 
             </div>
 
@@ -838,7 +945,7 @@
             <div class="faq-question">
 
                 <h3>
-                    How can I join WASMAN?
+                    How can I join WASMaN?
                 </h3>
 
                 <span>
@@ -849,7 +956,7 @@
 
             <p>
                 You can apply through the membership
-                section of the WASMAN website.
+                section of the WASMaN website.
             </p>
 
         </div>
@@ -861,7 +968,7 @@
             <div class="faq-question">
 
                 <h3>
-                    Does WASMAN support student research?
+                    Does WASMaN support student research?
                 </h3>
 
                 <span>
@@ -885,7 +992,7 @@
             <div class="faq-question">
 
                 <h3>
-                    Can organizations partner with WASMAN?
+                    Can organizations partner with WASMaN?
                 </h3>
 
                 <span>
@@ -895,7 +1002,7 @@
             </div>
 
             <p>
-                Yes. WASMAN welcomes institutions
+                Yes. WASMaN welcomes institutions
                 and organizations working towards
                 aquatic conservation and sustainable
                 blue economy development.
@@ -910,7 +1017,7 @@
             <div class="faq-question">
 
                 <h3>
-                    Can I volunteer with WASMAN?
+                    Can I volunteer with WASMaN?
                 </h3>
 
                 <span>
@@ -968,16 +1075,9 @@
 </section>
 
 
-
-</body>
-
-</html>
-    </body>
-
-
-     <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
+<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
-   
 
+</body>
 </html>

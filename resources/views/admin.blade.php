@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 
-@section('title', 'Admin Dashboard')
+@section('title', 'Internship Applications')
 
 
 
@@ -20,7 +20,7 @@
 
 
         <span class="hero-kicker">
-            WASMAN Administration
+            WASMaN Administration
         </span>
 
 
@@ -30,9 +30,9 @@
 
 
         <p>
-            Manage internship applications, review applicant
+            Review internship applications, manage applicant
             information and keep track of submissions from one
-            central dashboard.
+            dedicated internship management page.
         </p>
 
 
@@ -286,7 +286,7 @@
     ============================================= --}}
 
     <form
-        action="{{ route('admin.dashboard') }}"
+        action="{{ route('admin.internships') }}"
         method="GET"
         class="premium-filter-form"
     >
@@ -448,7 +448,7 @@
 
 
             <a
-                href="{{ route('admin.dashboard') }}"
+                href="{{ route('admin.internships') }}"
                 class="premium-btn premium-btn-clear"
             >
                 Clear

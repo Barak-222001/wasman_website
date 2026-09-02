@@ -9,7 +9,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Admin Login | WASMAN</title>
+    <title>Admin Login | WASMaN</title>
 
     <link
         rel="stylesheet"
@@ -25,7 +25,7 @@
 
             <div class="login-brand">
 
-                <h1>WASMAN</h1>
+                <h1>WASMaN</h1>
 
                 <p>
                     Administration Portal

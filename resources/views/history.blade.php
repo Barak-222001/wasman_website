@@ -1,164 +1,319 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>WASMaN</title>
+    <title>WASMaN | Our History</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/history.css') }}"> 
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
 
-            
-    </head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <body>
+    <link rel="stylesheet" href="{{ asset('css/history.css') }}">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-        {{-- header and nav section --}}
+<body>
 
 @include('components.heading')
 
 
 <section class="history-section">
 
-    <section class="history">
+    <div class="history">
 
-    <div class="title">
-        <span>OUR HISTORY</span>
-        <h1>Women in Aquatic Science and Management Network (WASMaN)</h1>
-        <p>
-            Empowering women to lead scientific innovation, conservation,
-            climate resilience and sustainable aquatic resource management.
-        </p>
+        {{-- PAGE INTRO --}}
+        <div class="history-hero">
+
+            <div class="history-hero-copy">
+
+                <span class="eyebrow">
+                    OUR HISTORY
+                </span>
+
+                <h1>
+                    Women in Aquatic Science and Management Network
+                    <span>(WASMaN)</span>
+                </h1>
+
+                <p>
+                    Empowering women to lead scientific innovation, conservation,
+                    climate resilience and sustainable aquatic resource management.
+                </p>
+
+            </div>
+
+
+            <div class="history-hero-mark">
+
+                <div class="history-hero-icon">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+
+                <span>
+                    Women • Science • Leadership
+                </span>
+
+            </div>
+
+        </div>
+
+
+        {{-- ORGANIZATION OVERVIEW --}}
+        <section class="history-row">
+
+            <div class="history-image-wrap">
+
+                <div class="history-image">
+
+                    <img
+                        src="{{ asset('pics_vids/conference.jpeg') }}"
+                        alt="WASMaN conference and professional gathering"
+                    >
+
+                    <div class="image-badge">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Our Network</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <article class="history-content">
+
+                <span class="content-number">
+                    01
+                </span>
+
+                <div class="content-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <span class="content-label">
+                    WHO WE ARE
+                </span>
+
+                <h2>
+                    Organization Overview
+                </h2>
+
+                <p>
+                    The Women in Aquatic Science and Management Network (WASMaN) is a
+                    professional network dedicated to advancing women's participation,
+                    leadership and excellence in aquatic sciences, marine conservation,
+                    fisheries, climate resilience and the blue economy.
+                </p>
+
+                <p>
+                    The network serves as a platform that connects researchers,
+                    professionals, students, policymakers and environmental advocates
+                    who are committed to protecting aquatic ecosystems while promoting
+                    sustainable development.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        {{-- WHAT IS WASMAN --}}
+        <section class="history-row reverse">
+
+            <div class="history-image-wrap">
+
+                <div class="history-image">
+
+                    <img
+                        src="{{ asset('pics_vids/what_is_wasman.jpg') }}"
+                        alt="Women working in aquatic science and management"
+                    >
+
+                    <div class="image-badge">
+                        <i class="fa-solid fa-people-group"></i>
+                        <span>Community</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <article class="history-content">
+
+                <span class="content-number">
+                    02
+                </span>
+
+                <div class="content-icon">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+
+                <span class="content-label">
+                    OUR IDENTITY
+                </span>
+
+                <h2>
+                    What is WASMaN?
+                </h2>
+
+                <p>
+                    WASMaN is an inclusive community where women collaborate, mentor,
+                    conduct research, share knowledge and build partnerships that
+                    strengthen aquatic science and environmental management.
+                </p>
+
+                <p>
+                    Through training programmes, networking opportunities, research,
+                    advocacy and outreach, the network contributes to marine protected
+                    areas, sustainable fisheries, biodiversity conservation, water
+                    security and the responsible growth of the blue economy.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        {{-- INSPIRATION --}}
+        <section class="history-row">
+
+            <div class="history-image-wrap">
+
+                <div class="history-image">
+
+                    <img
+                        src="{{ asset('pics_vids/what_inspired.jpg') }}"
+                        alt="Women inspired by aquatic science and conservation"
+                    >
+
+                    <div class="image-badge">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Inspiration</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <article class="history-content">
+
+                <span class="content-number">
+                    03
+                </span>
+
+                <div class="content-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <span class="content-label">
+                    WHY IT BEGAN
+                </span>
+
+                <h2>
+                    What Inspired the Establishment of WASMaN?
+                </h2>
+
+                <p>
+                    WASMaN was inspired by the need to create greater opportunities for
+                    women whose contributions to aquatic sciences and environmental
+                    management often remain underrepresented despite their expertise and
+                    impact.
+                </p>
+
+                <p>
+                    Increasing challenges such as climate change, marine pollution,
+                    biodiversity loss and water insecurity demonstrated the importance
+                    of building a strong network where women can collaborate, innovate,
+                    mentor future leaders and influence policy.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        {{-- PURPOSE --}}
+        <section class="history-row reverse">
+
+            <div class="history-image-wrap">
+
+                <div class="history-image">
+
+                    <img
+                        src="{{ asset('pics_vids/what_creation_ofwasman.jpg') }}"
+                        alt="Women collaborating in science and sustainability"
+                    >
+
+                    <div class="image-badge">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>Purpose</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <article class="history-content">
+
+                <span class="content-number">
+                    04
+                </span>
+
+                <div class="content-icon">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+
+                <span class="content-label">
+                    OUR PURPOSE
+                </span>
+
+                <h2>
+                    Why WASMaN Was Created
+                </h2>
+
+                <p>
+                    WASMaN was established to empower women through mentorship,
+                    leadership development, scientific collaboration and professional
+                    networking while encouraging innovation in aquatic science and
+                    environmental sustainability.
+                </p>
+
+                <p>
+                    The network also seeks to inspire future generations of women to
+                    pursue careers in aquatic sciences and become leaders in protecting
+                    marine and freshwater ecosystems for sustainable development.
+                </p>
+
+            </article>
+
+        </section>
+
     </div>
 
-    <!-- Organization Overview -->
-    <div class="history-row">
-
-        <div class="history-image">
-            <img src="{{asset('pics_vids/conference.jpeg')}}">
-        </div>
-
-        <div class="history-content">
-            <h2>Organization Overview</h2>
-
-            <p>
-                The Women in Aquatic Science and Management Network (WASMaN) is a
-                professional network dedicated to advancing women's participation,
-                leadership and excellence in aquatic sciences, marine conservation,
-                fisheries, climate resilience and the blue economy.
-            </p>
-
-            <p>
-                The network serves as a platform that connects researchers,
-                professionals, students, policymakers and environmental advocates
-                who are committed to protecting aquatic ecosystems while promoting
-                sustainable development.
-            </p>
-
-        </div>
-
-    </div>
+</section>
 
 
-    <!-- What is WASMaN -->
-    <div class="history-row reverse">
-
-        <div class="history-image">
-            <img src="{{asset('pics_vids/what_is_wasman.jpg')}}">
-        </div>
-
-        <div class="history-content">
-            <h2>What is WASMaN?</h2>
-
-            <p>
-                WASMaN is an inclusive community where women collaborate, mentor,
-                conduct research, share knowledge and build partnerships that
-                strengthen aquatic science and environmental management.
-            </p>
-
-            <p>
-                Through training programmes, networking opportunities, research,
-                advocacy and outreach, the network contributes to marine protected
-                areas, sustainable fisheries, biodiversity conservation, water
-                security and the responsible growth of the blue economy.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- Inspiration -->
-    <div class="history-row">
-
-        <div class="history-image">
-            <img src="{{asset('pics_vids/what_inspired.jpg')}}">
-        </div>
-
-        <div class="history-content">
-
-            <h2>What Inspired the Establishment of WASMaN?</h2>
-
-            <p>
-                WASMaN was inspired by the need to create greater opportunities for
-                women whose contributions to aquatic sciences and environmental
-                management often remain underrepresented despite their expertise and
-                impact.
-            </p>
-
-            <p>
-                Increasing challenges such as climate change, marine pollution,
-                biodiversity loss and water insecurity demonstrated the importance
-                of building a strong network where women can collaborate, innovate,
-                mentor future leaders and influence policy.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- Purpose -->
-    <div class="history-row reverse">
-
-        <div class="history-image">
-            <img src="{{asset('pics_vids/what_creation_ofwasman.jpg')}}">
-        </div>
-
-        <div class="history-content">
-
-            <h2>Why WASMaN Was Created</h2>
-
-            <p>
-                WASMaN was established to empower women through mentorship,
-                leadership development, scientific collaboration and professional
-                networking while encouraging innovation in aquatic science and
-                environmental sustainability.
-            </p>
-
-            <p>
-                The network also seeks to inspire future generations of women to
-                pursue careers in aquatic sciences and become leaders in protecting
-                marine and freshwater ecosystems for sustainable development.
-            </p>
-
-        </div>
-
-    </div>
-    
-</section> 
-  
 <footer class="footer">
 
     <div class="footer-container">
 
-        <!-- About -->
-        <div class="footer-column">
-            <h2>WASMaN</h2>
+
+        <div class="footer-column footer-brand">
+
+            <div class="footer-brand-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <h2>
+                WASMaN
+            </h2>
 
             <p>
                 The Women in Aquatic Science and Management Network (WASMaN)
@@ -166,11 +321,15 @@
                 collaboration and innovation in aquatic science, marine
                 conservation, climate resilience and the blue economy.
             </p>
+
         </div>
 
-        <!-- Quick Links -->
+
         <div class="footer-column">
-            <h3>Quick Links</h3>
+
+            <h3>
+                Quick Links
+            </h3>
 
             <ul>
                 <li><a href="/">Home</a></li>
@@ -184,60 +343,83 @@
 
         </div>
 
-        <!-- Focus Areas -->
+
         <div class="footer-column">
 
-            <h3>Focus Areas</h3>
+            <h3>
+                Focus Areas
+            </h3>
 
-            <ul>
-                <li>Aquatic Science</li>
-                <li>Marine Protected Areas</li>
-                <li>Blue Economy</li>
-                <li>Climate Change</li>
-                <li>Water Conservation</li>
-                <li>Research & Innovation</li>
+            <ul class="focus-list">
+                <li><i class="fa-solid fa-microscope"></i> Aquatic Science</li>
+                <li><i class="fa-solid fa-water"></i> Marine Protected Areas</li>
+                <li><i class="fa-solid fa-chart-line"></i> Blue Economy</li>
+                <li><i class="fa-solid fa-cloud-sun"></i> Climate Change</li>
+                <li><i class="fa-solid fa-droplet"></i> Water Conservation</li>
+                <li><i class="fa-solid fa-flask"></i> Research & Innovation</li>
             </ul>
 
         </div>
 
-        <!-- Contact -->
+
         <div class="footer-column">
 
-            <h3>Contact Us</h3>
+            <h3>
+                Contact Us
+            </h3>
 
-            <p><strong>Email:</strong><br>
-            info@wasman.org</p>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <span>Email</span>
+                    <a href="mailto:info@wasman.org">info@wasman.org</a>
+                </div>
+            </div>
 
-            <p><strong>Phone:</strong><br>
-            +233 XX XXX XXXX</p>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <span>Phone</span>
+                    <p>+233 XX XXX XXXX</p>
+                </div>
+            </div>
 
-            <p><strong>Location:</strong><br>
-            Cape Coast, Ghana</p>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <span>Location</span>
+                    <p>Cape Coast, Ghana</p>
+                </div>
+            </div>
 
         </div>
 
     </div>
 
-    <hr>
+
+    <div class="footer-divider"></div>
+
 
     <div class="footer-bottom">
 
         <p>
-            © 2026 Women in Aquatic Science and Management Network (WASMaN). All Rights Reserved.
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
         </p>
 
         <div class="social-links">
 
-            <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
-             <a href="#"><i class="fa-solid fa-globe"></i></a>
+            <a href="#" aria-label="Website">
+                <i class="fa-solid fa-globe"></i>
+            </a>
 
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
 
-            <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
-
-            <!-- <a href="#"><i class="fab fa-x-twitter"></i></a> -->
-
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
 
         </div>
 
@@ -245,19 +427,10 @@
 
 </footer>
 
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
- 
-   
-      
-    </body>
+<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
+<script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('created_js/carousel.js') }}"></script>
 
-
-     <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
-     <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
-     <script src="{{ asset('created_js/carousel.js') }}"></script>
-   
-
+</body>
 </html>

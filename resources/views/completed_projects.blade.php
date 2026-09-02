@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+    <title>WASMaN | Completed Projects</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/completed.css') }}"> 
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
 
-        <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-            
-    </head>
+    <link rel="stylesheet" href="{{ asset('css/completed.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-
-        {{-- header and nav section --}}
+<body>
 
 @include('components.heading')
 
-<!-- =========================================================
-     COMPLETED PROJECTS PAGE
-========================================================= -->
 
 <section class="completed-projects-page">
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
-
+    {{-- HERO --}}
     <section class="completed-hero">
 
         <div class="completed-hero-overlay">
 
             <div class="completed-hero-content">
 
-                <span class="eyebrow">COMPLETED PROJECTS</span>
+                <span class="eyebrow">
+                    <i class="fa-solid fa-circle-check"></i>
+                    COMPLETED PROJECTS
+                </span>
 
                 <h1>
                     Turning Research Into
-                    <strong>Lasting Impact</strong>
+                    <span>Lasting Impact</span>
                 </h1>
 
                 <p>
@@ -55,14 +50,14 @@
 
                 <div class="completed-hero-actions">
 
-                    <a href="#" class="primary-btn">
+                    <a href="#success-story" class="primary-btn">
                         Explore Success Stories
-                        <i class="fas fa-arrow-right"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
 
-                    <a href="#" class="secondary-btn">
-                        Download Reports
-                        <i class="fas fa-file-pdf"></i>
+                    <a href="#completed-projects" class="secondary-btn">
+                        View Completed Projects
+                        <i class="fa-solid fa-folder-open"></i>
                     </a>
 
                 </div>
@@ -74,15 +69,14 @@
     </section>
 
 
-    <!-- =====================================================
-         LEGACY / IMPACT SNAPSHOT
-    ====================================================== -->
-
+    {{-- LEGACY --}}
     <section class="legacy-section">
 
         <div class="legacy-intro">
 
-            <span class="section-label">OUR LEGACY</span>
+            <span class="section-label">
+                OUR LEGACY
+            </span>
 
             <h2>
                 Projects That Continue
@@ -91,7 +85,7 @@
 
             <p>
                 Successful projects should create value long after
-                implementation ends. WASMAN's completed initiatives
+                implementation ends. WASMaN's completed initiatives
                 have generated scientific knowledge, strengthened
                 partnerships, supported communities and contributed
                 to sustainable aquatic resource management.
@@ -111,7 +105,7 @@
             <div class="legacy-stat">
 
                 <div class="stat-icon">
-                    <i class="fas fa-check-double"></i>
+                    <i class="fa-solid fa-check-double"></i>
                 </div>
 
                 <h3>30+</h3>
@@ -124,7 +118,7 @@
             <div class="legacy-stat">
 
                 <div class="stat-icon">
-                    <i class="fas fa-users"></i>
+                    <i class="fa-solid fa-users"></i>
                 </div>
 
                 <h3>18</h3>
@@ -137,7 +131,7 @@
             <div class="legacy-stat">
 
                 <div class="stat-icon">
-                    <i class="fas fa-globe-africa"></i>
+                    <i class="fa-solid fa-earth-africa"></i>
                 </div>
 
                 <h3>7</h3>
@@ -150,7 +144,7 @@
             <div class="legacy-stat">
 
                 <div class="stat-icon">
-                    <i class="fas fa-book-open"></i>
+                    <i class="fa-solid fa-book-open"></i>
                 </div>
 
                 <h3>50+</h3>
@@ -164,21 +158,24 @@
     </section>
 
 
-    <!-- =====================================================
-         FEATURED SUCCESS STORY
-    ====================================================== -->
-
-    <section class="success-section">
+    {{-- FEATURED SUCCESS STORY --}}
+    <section class="success-section" id="success-story">
 
         <div class="success-image">
 
             <img
-                src="{{ asset('../pics_vids/res.png') }}"
-                alt="WASMAN conservation project">
+                src="{{ asset('pics_vids/res.png') }}"
+                alt="WASMaN conservation project"
+            >
 
             <div class="success-tag">
-                <i class="fas fa-award"></i>
+                <i class="fa-solid fa-award"></i>
                 Featured Success Story
+            </div>
+
+            <div class="success-image-caption">
+                <i class="fa-solid fa-seedling"></i>
+                Mangrove Restoration
             </div>
 
         </div>
@@ -186,7 +183,7 @@
 
         <div class="success-content">
 
-            <span class="section-label">
+            <span class="section-label dark-label">
                 FEATURED SUCCESS STORY
             </span>
 
@@ -197,7 +194,7 @@
 
             <p>
                 Working with local communities, researchers and
-                conservation partners, WASMAN supported the restoration
+                conservation partners, WASMaN supported the restoration
                 of degraded mangrove habitats while strengthening
                 community participation in environmental management.
             </p>
@@ -209,26 +206,25 @@
                 environmental education.
             </p>
 
-
             <div class="success-results">
 
                 <div>
-                    <i class="fas fa-leaf"></i>
+                    <i class="fa-solid fa-leaf"></i>
                     <span>45 hectares restored</span>
                 </div>
 
                 <div>
-                    <i class="fas fa-user-graduate"></i>
+                    <i class="fa-solid fa-user-graduate"></i>
                     <span>300 women trained</span>
                 </div>
 
                 <div>
-                    <i class="fas fa-water"></i>
+                    <i class="fa-solid fa-water"></i>
                     <span>12 coastal communities engaged</span>
                 </div>
 
                 <div>
-                    <i class="fas fa-calendar-check"></i>
+                    <i class="fa-solid fa-calendar-check"></i>
                     <span>Completed in 2025</span>
                 </div>
 
@@ -239,11 +235,8 @@
     </section>
 
 
-    <!-- =====================================================
-         COMPLETED PROJECTS INTRO
-    ====================================================== -->
-
-    <section class="completed-heading">
+    {{-- COMPLETED PROJECTS HEADING --}}
+    <section class="completed-heading" id="completed-projects">
 
         <span class="section-label">
             OUR PROJECT PORTFOLIO
@@ -256,32 +249,27 @@
 
         <p>
             Browse selected projects that demonstrate the breadth
-            of WASMAN's work across aquatic science, conservation,
+            of WASMaN's work across aquatic science, conservation,
             climate resilience and women's empowerment.
         </p>
 
     </section>
 
 
-    <!-- =====================================================
-         PROJECT CARDS
-    ====================================================== -->
-
+    {{-- COMPLETED PROJECT CARDS --}}
     <section class="completed-project-grid">
-
-
-        <!-- PROJECT 1 -->
 
         <article class="completed-project-card">
 
             <div class="completed-card-image">
 
                 <img
-                    src="{{ asset('../pics_vids/wq.png') }}"
-                    alt="Water quality assessment">
+                    src="{{ asset('pics_vids/wq.png') }}"
+                    alt="Water quality assessment"
+                >
 
                 <span class="completed-badge">
-                    <i class="fas fa-check-circle"></i>
+                    <i class="fa-solid fa-circle-check"></i>
                     Completed
                 </span>
 
@@ -291,7 +279,7 @@
             <div class="completed-card-content">
 
                 <span class="project-category">
-                    <i class="fas fa-flask"></i>
+                    <i class="fa-solid fa-flask-vial"></i>
                     Research
                 </span>
 
@@ -305,30 +293,28 @@
                     evidence to support sustainable water management.
                 </p>
 
-
                 <div class="project-details">
 
                     <div>
-                        <i class="fas fa-calendar"></i>
+                        <i class="fa-regular fa-calendar"></i>
                         <span>2023 – 2025</span>
                     </div>
 
                     <div>
-                        <i class="fas fa-location-dot"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                         <span>Ghana</span>
                     </div>
 
                     <div>
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fa-solid fa-chart-line"></i>
                         <span>Policy recommendations adopted</span>
                     </div>
 
                 </div>
 
-
                 <a href="#" class="project-link">
                     View Project
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
@@ -336,18 +322,17 @@
         </article>
 
 
-        <!-- PROJECT 2 -->
-
         <article class="completed-project-card">
 
             <div class="completed-card-image">
 
                 <img
-                    src="{{ asset('../pics_vids/mq.png') }}"
-                    alt="Marine biodiversity survey">
+                    src="{{ asset('pics_vids/mq.png') }}"
+                    alt="Marine biodiversity survey"
+                >
 
                 <span class="completed-badge">
-                    <i class="fas fa-check-circle"></i>
+                    <i class="fa-solid fa-circle-check"></i>
                     Completed
                 </span>
 
@@ -357,7 +342,7 @@
             <div class="completed-card-content">
 
                 <span class="project-category">
-                    <i class="fas fa-fish"></i>
+                    <i class="fa-solid fa-fish-fins"></i>
                     Conservation
                 </span>
 
@@ -371,30 +356,28 @@
                     scientific understanding and conservation.
                 </p>
 
-
                 <div class="project-details">
 
                     <div>
-                        <i class="fas fa-calendar"></i>
+                        <i class="fa-regular fa-calendar"></i>
                         <span>2022 – 2024</span>
                     </div>
 
                     <div>
-                        <i class="fas fa-location-dot"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                         <span>Gulf of Guinea</span>
                     </div>
 
                     <div>
-                        <i class="fas fa-book"></i>
+                        <i class="fa-solid fa-book"></i>
                         <span>Scientific publications</span>
                     </div>
 
                 </div>
 
-
                 <a href="#" class="project-link">
                     View Project
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
@@ -402,18 +385,17 @@
         </article>
 
 
-        <!-- PROJECT 3 -->
-
         <article class="completed-project-card">
 
             <div class="completed-card-image">
 
                 <img
-                    src="{{ asset('../pics_vids/wb.png') }}"
-                    alt="Women in blue economy">
+                    src="{{ asset('pics_vids/wb.png') }}"
+                    alt="Women in blue economy"
+                >
 
                 <span class="completed-badge">
-                    <i class="fas fa-check-circle"></i>
+                    <i class="fa-solid fa-circle-check"></i>
                     Completed
                 </span>
 
@@ -423,7 +405,7 @@
             <div class="completed-card-content">
 
                 <span class="project-category">
-                    <i class="fas fa-venus"></i>
+                    <i class="fa-solid fa-user-tie"></i>
                     Women's Empowerment
                 </span>
 
@@ -437,30 +419,28 @@
                     mentorship and sustainable livelihood development.
                 </p>
 
-
                 <div class="project-details">
 
                     <div>
-                        <i class="fas fa-calendar"></i>
+                        <i class="fa-regular fa-calendar"></i>
                         <span>2023 – 2025</span>
                     </div>
 
                     <div>
-                        <i class="fas fa-location-dot"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                         <span>West Africa</span>
                     </div>
 
                     <div>
-                        <i class="fas fa-seedling"></i>
+                        <i class="fa-solid fa-seedling"></i>
                         <span>Sustainable livelihoods</span>
                     </div>
 
                 </div>
 
-
                 <a href="#" class="project-link">
                     View Project
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
@@ -470,10 +450,7 @@
     </section>
 
 
-    <!-- =====================================================
-         IMPACT GALLERY
-    ====================================================== -->
-
+    {{-- IMPACT GALLERY --}}
     <section class="impact-gallery-section">
 
         <div class="gallery-heading">
@@ -498,26 +475,30 @@
 
             <div class="gallery-item large">
                 <img
-                    src="{{ asset('../pics_vids/one.jpg') }}"
-                    alt="WASMAN field activity">
+                    src="{{ asset('pics_vids/one.jpg') }}"
+                    alt="WASMaN field activity"
+                >
             </div>
 
             <div class="gallery-item">
                 <img
-                    src="{{ asset('../pics_vids/six.jpeg') }}"
-                    alt="Community engagement">
+                    src="{{ asset('pics_vids/six.jpeg') }}"
+                    alt="Community engagement"
+                >
             </div>
 
             <div class="gallery-item">
                 <img
-                    src="{{ asset('../pics_vids/five.jpg') }}"
-                    alt="Aquatic research">
+                    src="{{ asset('pics_vids/five.jpg') }}"
+                    alt="Aquatic research"
+                >
             </div>
 
             <div class="gallery-item wide">
                 <img
-                    src="{{ asset('../pics_vids/conference.jpeg') }}"
-                    alt="Environmental conservation">
+                    src="{{ asset('pics_vids/conference.jpeg') }}"
+                    alt="Environmental conservation"
+                >
             </div>
 
         </div>
@@ -525,17 +506,20 @@
     </section>
 
 
-    <!-- =====================================================
-         LESSONS / LEGACY
-    ====================================================== -->
-
+    {{-- LESSONS --}}
     <section class="lessons-section">
 
         <div class="lessons-image">
 
             <img
                 src="{{ asset('pics_vids/pro.png') }}"
-                alt="WASMAN community outreach">
+                alt="WASMaN community outreach"
+            >
+
+            <div class="lessons-image-badge">
+                <i class="fa-solid fa-lightbulb"></i>
+                Lessons That Guide Future Action
+            </div>
 
         </div>
 
@@ -557,13 +541,12 @@
                 action.
             </p>
 
-
             <div class="lesson-list">
 
                 <div class="lesson-item">
 
                     <div class="lesson-icon">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fa-solid fa-lightbulb"></i>
                     </div>
 
                     <div>
@@ -581,7 +564,7 @@
                 <div class="lesson-item">
 
                     <div class="lesson-icon">
-                        <i class="fas fa-people-group"></i>
+                        <i class="fa-solid fa-people-group"></i>
                     </div>
 
                     <div>
@@ -599,7 +582,7 @@
                 <div class="lesson-item">
 
                     <div class="lesson-icon">
-                        <i class="fas fa-recycle"></i>
+                        <i class="fa-solid fa-recycle"></i>
                     </div>
 
                     <div>
@@ -620,15 +603,14 @@
     </section>
 
 
-    <!-- =====================================================
-         LOOKING AHEAD
-    ====================================================== -->
-
+    {{-- CTA --}}
     <section class="completed-cta">
 
         <div class="cta-content">
 
-            <span>LOOKING AHEAD</span>
+            <span class="section-label dark-label">
+                LOOKING AHEAD
+            </span>
 
             <h2>
                 Every Success Becomes
@@ -643,13 +625,14 @@
 
             <div class="cta-buttons">
 
-                <a href="#" class="cta-primary">
+                <a href="/ongoing" class="cta-primary">
                     View Ongoing Projects
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
-                <a href="#" class="cta-outline">
-                    Partner With WASMAN
+                <a href="/partner_with_us" class="cta-outline">
+                    Partner With WASMaN
+                    <i class="fa-solid fa-handshake"></i>
                 </a>
 
             </div>
@@ -661,12 +644,126 @@
 </section>
 
 
-    </body>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column footer-brand">
+
+            <div class="footer-brand-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <h2>WASMaN</h2>
+
+            <p>
+                Women in Aquatic Science and Management Network advances
+                women's leadership, scientific excellence and collaboration
+                for sustainable aquatic resource management.
+            </p>
+
+        </div>
 
 
-     <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
-     <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
-     <script src="{{ asset('created_js/carousel.js') }}"></script>
-   
+        <div class="footer-column">
 
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/history">History</a></li>
+                <li><a href="/what_we_do">What We Do</a></li>
+                <li><a href="/ongoing">Projects</a></li>
+                <li><a href="/become_member">Membership</a></li>
+                <li><a href="/general_enquiries">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Focus Areas</h3>
+
+            <ul class="focus-list">
+                <li><i class="fa-solid fa-microscope"></i> Aquatic Science</li>
+                <li><i class="fa-solid fa-water"></i> Marine Conservation</li>
+                <li><i class="fa-solid fa-chart-line"></i> Blue Economy</li>
+                <li><i class="fa-solid fa-cloud-sun"></i> Climate Resilience</li>
+                <li><i class="fa-solid fa-droplet"></i> Water Conservation</li>
+                <li><i class="fa-solid fa-user-tie"></i> Women's Leadership</li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <span>Email</span>
+                    <a href="mailto:info@wasman.org">info@wasman.org</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <span>Phone</span>
+                    <p>+233 XX XXX XXXX</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <span>Location</span>
+                    <p>Cape Coast, Ghana</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-divider"></div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div class="social-links">
+
+            <a href="#" aria-label="Website">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
+<script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('created_js/carousel.js') }}"></script>
+
+</body>
 </html>
