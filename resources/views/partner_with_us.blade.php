@@ -4,14 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+        <title>WASMaN | Partner With Us</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
+        <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
        
-        <link rel="stylesheet" href="{{ asset('css/partner_with_us.css') }}"> 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/partner_with_us.css') }}">
 
 
             
@@ -70,7 +71,7 @@
     <div class="partner-intro-image">
 
         <img
-            src="../pics_vids/st.png"
+            src="{{ asset('pics_vids/st.png') }}"
             alt="WASMaN Partnership Team"
         >
 
@@ -159,7 +160,7 @@
 
 
 {{-- WHO WE PARTNER WITH --}}
-<section class="partner-types">
+<section class="partner-types" id="partner-types">
 
     <div class="section-title">
 
@@ -501,7 +502,7 @@
 
 
 {{-- PARTNERSHIP MODELS --}}
-<section class="partnership-models">
+<section class="partnership-models" id="partnership-models">
 
     <div class="section-title">
 
@@ -593,7 +594,7 @@
 
 
 {{-- PARTNERSHIP PROCESS --}}
-<section class="partner-process">
+<section class="partner-process" id="partner-process">
 
     <div class="section-title">
 
@@ -690,7 +691,7 @@
     <div class="featured-partnership-image">
 
         <img
-            src="../pics_vids/dd.png"
+            src="{{ asset('pics_vids/dd.png') }}"
             alt="WASMaN Collaboration"
         >
 
@@ -741,39 +742,78 @@
     </div>
 
 
-    @if (session('success'))
+    <div class="partner-form-layout">
 
-        <div class="partner-success-message">
-            {{ session('success') }}
+        <div class="partner-form-intro">
+
+            <span class="partner-form-label">
+                PARTNERSHIP REQUEST
+            </span>
+
+            <h3>
+                Tell Us How You Would Like To Collaborate
+            </h3>
+
+            <p>
+                Share a few details about your organization and the type of
+                partnership you would like to explore with WASMaN.
+            </p>
+
+            <div class="partner-form-note">
+                <i class="fa-solid fa-circle-info"></i>
+
+                <span>
+                    Please provide accurate contact information so our team
+                    can follow up with you.
+                </span>
+            </div>
+
         </div>
 
-    @endif
+
+        <div class="partner-form-column">
+
+            @if (session('success'))
+
+                <div class="partner-success-message">
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+                        {{ session('success') }}
+                    </div>
+                </div>
+
+            @endif
 
 
-    @if ($errors->any())
+            @if ($errors->any())
 
-        <div class="partner-error-message">
+                <div class="partner-error-message">
 
-            <strong>
-                Please correct the following:
-            </strong>
+                    <div class="partner-error-heading">
+                        <i class="fa-solid fa-circle-exclamation"></i>
 
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+                        <strong>
+                            Please correct the following:
+                        </strong>
+                    </div>
 
-        </div>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
 
-    @endif
+                </div>
+
+            @endif
 
 
-    <form
-        action="{{ route('partner.store') }}"
-        method="POST"
-        class="partner-form"
-    >
+            <form
+                action="{{ route('partner.store') }}"
+                method="POST"
+                class="partner-form"
+            >
 
         @csrf
 
@@ -948,7 +988,11 @@
             Submit Partnership Request
         </button>
 
-    </form>
+            </form>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -979,13 +1023,168 @@
 
 
       
-    </body>
+
+<footer class="partner-premium-footer">
+
+    <div class="partner-footer-top">
+
+        <div class="partner-footer-brand">
+
+            <div class="partner-footer-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
+            </div>
+
+        </div>
+
+        <div class="partner-footer-tags">
+            <span>Research</span>
+            <span>Partnerships</span>
+            <span>Communities</span>
+            <span>Impact</span>
+        </div>
+
+    </div>
 
 
-     <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
+    <div class="partner-footer-main">
+
+        <div class="partner-footer-about">
+
+            <p>
+                WASMaN builds partnerships that connect institutions,
+                communities, researchers, governments and the private sector
+                around aquatic science, sustainability and inclusive development.
+            </p>
+
+            <div class="partner-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="partner-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/ongoing_projects">Ongoing Projects</a>
+            <a href="/completed_projects">Completed Projects</a>
+        </div>
+
+
+        <div class="partner-footer-links">
+            <h3>Partnerships</h3>
+            <a href="#partner-types">Who We Partner With</a>
+            <a href="#partnership-areas">Collaboration Areas</a>
+            <a href="#partnership-models">Partnership Models</a>
+            <a href="#partner-process">How It Works</a>
+            <a href="#partnership-form">Start a Partnership</a>
+        </div>
+
+
+        <div class="partner-footer-links">
+            <h3>Get Involved</h3>
+            <a href="/become_member">Become a Member</a>
+            <a href="/intern">Internships</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/research_assistant">Research Assistance</a>
+            <a href="/events">Events</a>
+        </div>
+
+
+        <div class="partner-footer-contact">
+            <h3>Connect</h3>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@wasman.org</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cape Coast, Ghana</span>
+            </div>
+
+            <a href="/general_enquiries" class="partner-footer-enquiry">
+                General Enquiries
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="partner-footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+     
+{{-- =========================================================
+     AFTER SUBMISSION: RETURN USER TO THE PARTNERSHIP FORM
+========================================================= --}}
+@if(session('success') || $errors->any())
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const partnershipFormSection = document.getElementById('partnership-form');
+
+        if (!partnershipFormSection) {
+            return;
+        }
+
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(
+                null,
+                document.title,
+                window.location.pathname + window.location.search + '#partnership-form'
+            );
+        } else {
+            window.location.hash = 'partnership-form';
+        }
+
+        requestAnimationFrame(function () {
+            const headerOffset = 85;
+            const formTop =
+                partnershipFormSection.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerOffset;
+
+            window.scrollTo({
+                top: formTop,
+                left: 0,
+                behavior: 'auto'
+            });
+        });
+    });
+</script>
+@endif
+
+<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
      <script src="{{ asset('created_js/animation.js') }}"></script>
+    </body>
    
 
 </html>

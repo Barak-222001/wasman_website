@@ -23,23 +23,19 @@
     >
 
     <link
-        href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600"
+        href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700"
         rel="stylesheet"
     >
 
 
-    <!-- Research Assistance CSS -->
-    <link
-        rel="stylesheet"
-        href="{{ asset('css/research_assistant.css') }}"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     <!-- Main Website CSS -->
-    <link
-        rel="stylesheet"
-        href="{{ asset('css/style.css') }}"
-    >
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <!-- Research Assistance CSS -->
+    <link rel="stylesheet" href="{{ asset('css/research_assistant.css') }}">
 
 
 </head>
@@ -189,7 +185,7 @@
 
 
             <img
-                src="../pics_vids/wac.png"
+                src="{{ asset('pics_vids/wac.png') }}"
                 alt="Researchers conducting aquatic research"
             >
 
@@ -317,7 +313,7 @@
      RESEARCH AREAS
 ========================================================= --}}
 
-<section class="research-focus">
+<section class="research-focus" id="research-focus">
 
 
     <div class="research-section-heading">
@@ -972,7 +968,7 @@
      RESEARCH PROCESS
 ========================================================= --}}
 
-<section class="research-process">
+<section class="research-process" id="research-process">
 
 
     <div class="research-section-heading centered">
@@ -1139,7 +1135,7 @@
      ELIGIBILITY
 ========================================================= --}}
 
-<section class="research-eligibility">
+<section class="research-eligibility" id="research-eligibility">
 
 
     <div class="eligibility-inner">
@@ -1265,112 +1261,137 @@
 >
 
 
-    <div class="request-heading">
+    <div class="research-request-layout">
 
 
-        <span class="section-label">
+        <div class="request-heading">
 
-            REQUEST SUPPORT
+            <span class="section-label">
 
-        </span>
+                REQUEST SUPPORT
 
-
-        <h2>
-
-            Tell Us About Your
-            Research Project
-
-        </h2>
+            </span>
 
 
-        <p>
+            <h2>
 
-            Complete the form below and provide as much
-            information as possible about the research
-            support you require.
+                Tell Us About Your
+                Research Project
 
-        </p>
-
-
-    </div>
+            </h2>
 
 
+            <p>
 
-    <div class="request-form-wrapper">
+                Complete the form and tell us the kind of research
+                assistance you need. Our team will review your request
+                and connect you with the most appropriate support.
 
-
-
-        {{-- =================================================
-             SUCCESS MESSAGE
-        ================================================== --}}
-
-        @if (session('success'))
+            </p>
 
 
-            <div class="research-success-message">
+            <div class="research-request-note">
 
-                {{ session('success') }}
+                <i class="fa-solid fa-circle-info"></i>
+
+                <span>
+                    Provide accurate project and contact details so we can
+                    respond to your request effectively.
+                </span>
 
             </div>
 
-
-        @endif
-
-
-
-        {{-- =================================================
-             VALIDATION ERRORS
-        ================================================== --}}
-
-        @if ($errors->any())
-
-
-            <div class="research-error-message">
-
-
-                <strong>
-
-                    Please correct the following:
-
-                </strong>
-
-
-                <ul>
-
-
-                    @foreach ($errors->all() as $error)
-
-
-                        <li>
-
-                            {{ $error }}
-
-                        </li>
-
-
-                    @endforeach
-
-
-                </ul>
-
-
-            </div>
-
-
-        @endif
+        </div>
 
 
 
-        {{-- =================================================
-             FORM
-        ================================================== --}}
+        <div class="research-form-column">
 
-        <form
-            class="research-form"
-            action="{{ route('research-assistant.store') }}"
-            method="POST"
-            enctype="multipart/form-data"
-        >
+
+
+            {{-- =================================================
+                 SUCCESS MESSAGE
+            ================================================== --}}
+
+            @if (session('success'))
+
+
+                <div class="research-success-message">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+                        {{ session('success') }}
+                    </div>
+
+                </div>
+
+
+            @endif
+
+
+
+            {{-- =================================================
+                 VALIDATION ERRORS
+            ================================================== --}}
+
+            @if ($errors->any())
+
+
+                <div class="research-error-message">
+
+
+                    <div class="research-error-heading">
+
+                        <i class="fa-solid fa-circle-exclamation"></i>
+
+                        <strong>
+
+                            Please correct the following:
+
+                        </strong>
+
+                    </div>
+
+
+                    <ul>
+
+
+                        @foreach ($errors->all() as $error)
+
+
+                            <li>
+
+                                {{ $error }}
+
+                            </li>
+
+
+                        @endforeach
+
+
+                    </ul>
+
+
+                </div>
+
+
+            @endif
+
+
+
+            <div class="request-form-wrapper">
+
+                {{-- =================================================
+                     FORM
+                ================================================== --}}
+
+                <form
+                    class="research-form"
+                    action="{{ route('research-assistant.store') }}"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
 
 
             @csrf
@@ -1837,14 +1858,134 @@
             </button>
 
 
-        </form>
+                </form>
 
+            </div>
+
+        </div>
 
     </div>
 
 
 </section>
 
+
+
+
+<footer class="research-premium-footer">
+
+    <div class="research-footer-top">
+
+        <div class="research-footer-brand">
+
+            <div class="research-footer-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
+            </div>
+
+        </div>
+
+        <div class="research-footer-tags">
+            <span>Research</span>
+            <span>Collaboration</span>
+            <span>Innovation</span>
+            <span>Knowledge</span>
+        </div>
+
+    </div>
+
+
+    <div class="research-footer-main">
+
+        <div class="research-footer-about">
+
+            <p>
+                WASMaN supports researchers, students, institutions and
+                environmental professionals through collaboration, field
+                support, technical assistance and knowledge exchange.
+            </p>
+
+            <div class="research-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="research-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/ongoing_projects">Ongoing Projects</a>
+            <a href="/completed_projects">Completed Projects</a>
+        </div>
+
+
+        <div class="research-footer-links">
+            <h3>Research Support</h3>
+            <a href="#research-focus">Research Areas</a>
+            <a href="#services">Services</a>
+            <a href="#research-process">How It Works</a>
+            <a href="#request-form">Request Support</a>
+            <a href="/publications">Publications</a>
+        </div>
+
+
+        <div class="research-footer-links">
+            <h3>Get Involved</h3>
+            <a href="/become_member">Become a Member</a>
+            <a href="/partner_with_us">Partner With Us</a>
+            <a href="/intern">Internships</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/events">Events</a>
+        </div>
+
+
+        <div class="research-footer-contact">
+            <h3>Connect</h3>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@wasman.org</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cape Coast, Ghana</span>
+            </div>
+
+            <a href="/general_enquiries" class="research-footer-enquiry">
+                General Enquiries
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="research-footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
 
 
 {{-- =========================================================
@@ -1866,6 +2007,46 @@
 ></script>
 
 
+
+
+{{-- =========================================================
+     AFTER SUBMISSION: RETURN USER TO THE RESEARCH FORM
+========================================================= --}}
+@if(session('success') || $errors->any())
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const researchFormSection = document.getElementById('request-form');
+
+        if (!researchFormSection) {
+            return;
+        }
+
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(
+                null,
+                document.title,
+                window.location.pathname + window.location.search + '#request-form'
+            );
+        } else {
+            window.location.hash = 'request-form';
+        }
+
+        requestAnimationFrame(function () {
+            const headerOffset = 85;
+            const formTop =
+                researchFormSection.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerOffset;
+
+            window.scrollTo({
+                top: formTop,
+                left: 0,
+                behavior: 'auto'
+            });
+        });
+    });
+</script>
+@endif
 
 </body>
 

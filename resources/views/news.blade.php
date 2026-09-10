@@ -4,14 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>WASMaN</title>
+        <title>WASMaN | News & Media</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/news.css') }}"> 
+        <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/news.css') }}">
 
             
     </head>
@@ -139,7 +140,7 @@
         <div class="featured-news-image">
 
             <img
-                src="../pics_vids/sl.png"
+                src="{{ asset('pics_vids/sl.png') }}"
                 alt="WASMaN coastal restoration initiative">
 
             <div class="featured-badge">
@@ -232,7 +233,7 @@
                 <div class="news-card-image">
 
                     <img
-                        src="../pics_vids/ns.png"
+                        src="{{ asset('pics_vids/ns.png') }}"
                         alt="Marine biodiversity research">
 
                     <span class="news-tag">
@@ -275,7 +276,7 @@
                 <div class="news-card-image">
 
                     <img
-                        src="../pics_vids/en.png"
+                        src="{{ asset('pics_vids/en.png') }}"
                         alt="Women in aquatic science">
 
                     <span class="news-tag">
@@ -317,7 +318,7 @@
                 <div class="news-card-image">
 
                     <img
-                        src="../pics_vids/cc.png"
+                        src="{{ asset('pics_vids/cc.png') }}"
                         alt="Women in aquatic science">
 
                     <span class="news-tag">
@@ -500,7 +501,7 @@
          MEDIA HIGHLIGHTS
     ================================================== -->
 
-    <section class="media-highlights">
+    <section class="media-highlights" id="media-highlights">
 
         <div class="news-section-heading">
 
@@ -525,7 +526,7 @@
         <div class="media-grid">
 
             <div class="media-item large">
-                <img src="../pics_vids/gal1.png" alt="">
+                <img src="{{ asset('pics_vids/gal1.png') }}" alt="">
                 <div class="media-overlay">
                     <i class="fas fa-camera"></i>
                     <span>Field Research</span>
@@ -533,7 +534,7 @@
             </div>
 
             <div class="media-item">
-                <img src="../pics_vids/gal2.png" alt="">
+                <img src="{{ asset('pics_vids/gal2.png') }}" alt="">
                 <div class="media-overlay">
                     <i class="fas fa-camera"></i>
                     <span>Community Engagement</span>
@@ -541,7 +542,7 @@
             </div>
 
             <div class="media-item">
-                <img src="../pics_vids/gal3.png" alt="">
+                <img src="{{ asset('pics_vids/gal3.png') }}" alt="">
                 <div class="media-overlay">
                     <i class="fas fa-camera"></i>
                     <span>Marine Conservation</span>
@@ -549,7 +550,7 @@
             </div>
 
             <div class="media-item">
-                <img src="../pics_vids/gal4.png" alt="">
+                <img src="{{ asset('pics_vids/gal4.png') }}" alt="">
                 <div class="media-overlay">
                     <i class="fas fa-camera"></i>
                     <span>Women in Science</span>
@@ -557,7 +558,7 @@
             </div>
 
             <div class="media-item">
-                <img src="../pics_vids/gal5.png" alt="">
+                <img src="{{ asset('pics_vids/gal5.png') }}" alt="">
                 <div class="media-overlay">
                     <i class="fas fa-camera"></i>
                     <span>Training Programme</span>
@@ -565,7 +566,7 @@
             </div>
 
             <div class="media-item large">
-                <img src="../pics_vids/gal6.png" alt="">
+                <img src="{{ asset('pics_vids/gal6.png') }}" alt="">
                 <div class="media-overlay">
                     <i class="fas fa-camera"></i>
                     <span>WASMaN Activities</span>
@@ -623,140 +624,83 @@
                      FOOTER
 ====================================================== -->
 
-<footer class="footer">
 
-    <div class="footer-container">
-
-        <div class="footer-column footer-about">
-
-            <h2>WASMaN</h2>
-
-            <p>
-                Women in Aquatic Science and Management Network is dedicated
-                to advancing women's participation in aquatic science,
-                marine conservation, blue economy initiatives, climate
-                resilience and sustainable water resource management.
-            </p>
-
-            <div class="social-icons">
-
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fab fa-youtube"></i>
-                </a>
-
+<footer class="news-premium-footer">
+    <div class="news-footer-top">
+        <div class="news-footer-brand">
+            <div class="news-footer-mark"><i class="fa-solid fa-water"></i></div>
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
             </div>
-
         </div>
-
-
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-
-                <li><a href="/">Home</a></li>
-                <li><a href="/history">About Us</a></li>
-                <li><a href="/what_we_do">What We Do</a></li>
-                <li><a href="/team">Our Team</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/publications">Publications</a></li>
-
-            </ul>
-
+        <div class="news-footer-tags">
+            <span>Science</span><span>Leadership</span><span>Conservation</span><span>Community</span>
         </div>
+    </div>
 
-
-        <div class="footer-column">
-
-            <h3>Contact Us</h3>
-
-            <ul class="contact-info">
-
-                <li>
-                    <i class="fas fa-map-marker-alt"></i>
-                    Cape Coast, Ghana
-                </li>
-
-                <li>
-                    <i class="fas fa-phone"></i>
-                    +233 XX XXX XXXX
-                </li>
-
-                <li>
-                    <i class="fas fa-envelope"></i>
-                    info@wasman.org
-                </li>
-
-                <li>
-                    <i class="fas fa-globe"></i>
-                    www.wasman.org
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h3>Newsletter</h3>
-
+    <div class="news-footer-main">
+        <div class="news-footer-about">
             <p>
-                Subscribe to receive updates about our research,
-                events, publications and conservation activities.
+                Connecting women scientists, researchers, professionals and communities
+                to advance aquatic science, sustainable resource management and
+                environmental leadership.
             </p>
-
-            <form class="footer-form">
-
-                <input
-                    type="email"
-                    placeholder="Your email address">
-
-                <button type="submit">
-                    Subscribe
-                </button>
-
-            </form>
-
+            <div class="news-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
         </div>
 
+        <div class="news-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/projects">Projects</a>
+            <a href="/publications">Publications</a>
+        </div>
+
+        <div class="news-footer-links">
+            <h3>Get Involved</h3>
+            <a href="/become_member">Membership</a>
+            <a href="/partner_with_us">Partner With Us</a>
+            <a href="/intern">Internships</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/research_assistant">Research Assistance</a>
+        </div>
+
+        <div class="news-footer-links">
+            <h3>Newsroom</h3>
+            <a href="#latest-news">Latest Stories</a>
+            <a href="#events">Events</a>
+            <a href="#media-highlights">Media Highlights</a>
+            <a href="/publications">Research & Publications</a>
+        </div>
+
+        <div class="news-footer-contact">
+            <h3>Connect</h3>
+            <div><i class="fa-solid fa-envelope"></i><span>info@wasman.org</span></div>
+            <div><i class="fa-solid fa-location-dot"></i><span>Cape Coast, Ghana</span></div>
+            <a class="news-footer-enquiry" href="/general_enquiries">
+                General Enquiries <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
 
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Women in Aquatic Science and Management Network
-            (WASMaN). All Rights Reserved.
-        </p>
-
+    <div class="news-footer-bottom">
+        <p>© 2026 Women in Aquatic Science and Management Network (WASMaN). All Rights Reserved.</p>
+        <div><a href="#">Privacy</a><a href="#">Terms</a></div>
     </div>
-
 </footer>
-
-    </body>
 
 
      <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
+    </body>
    
 
 </html>

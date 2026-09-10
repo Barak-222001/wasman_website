@@ -6,10 +6,11 @@
     <div class="wasman-header-inner">
 
         <!-- LOGO -->
-        <a href="/" class="wasman-brand">
+            <a href="/" class="wasman-brand" aria-label="WASMaN Home">
             <img
                 src="{{ asset('pics_vids/logo.png') }}"
-                alt="WASMAN Logo"
+                alt="WASMaN Logo"
+                class="wasman-logo"
             >
         </a>
 

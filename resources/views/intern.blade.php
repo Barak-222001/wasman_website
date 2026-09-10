@@ -4,15 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+        <title>WASMaN | Internship Programme</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/intern.css') }}"> 
-
+        <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/intern.css') }}">
 
             
     </head>
@@ -82,7 +82,7 @@
 
     <div class="intern-intro-image">
 
-        <img src="../pics_vids/mri.png"
+        <img src="{{ asset('pics_vids/mri.png') }}"
              alt="WASMaN internship field experience">
 
         <div class="experience-card">
@@ -455,7 +455,7 @@
 
 
 {{-- BENEFITS --}}
-<section class="intern-benefits-section">
+<section class="intern-benefits-section" id="intern-benefits">
 
     <div class="benefits-heading">
 
@@ -865,7 +865,7 @@
                             Select an area
                         </option>
 
-                        <option value="Marine Research" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                        <option value="Marine Research" {{ old('area') == 'Marine Research' ? 'selected' : '' }}>
                             Marine Research
                          </option>
 
@@ -873,15 +873,15 @@
                             Blue Economy
                          </option>
                          
-                         <option value="Water Resources" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                         <option value="Water Resources" {{ old('area') == 'Water Resources' ? 'selected' : '' }}>
                             Water Resources
                          </option>
 
-                         <option value="Communications" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                         <option value="Communications" {{ old('area') == 'Communications' ? 'selected' : '' }}>
                             Communications
                          </option>
 
-                         <option value="GIS & Data Analysis" {{ old('area') == 'Blue Economy' ? 'selected' : '' }}>
+                         <option value="GIS & Data Analysis" {{ old('area') == 'GIS & Data Analysis' ? 'selected' : '' }}>
                            GIS & Data Analysis
                          </option>
                          
@@ -907,8 +907,8 @@
                 <textarea
                     rows="6"
                     placeholder="Tell us about your interests, goals and what you hope to learn..."
-                    name="reason"  value="{{ old('reason') }}"
-                ></textarea>
+                    name="reason"
+                >{{ old('reason') }}</textarea>
 
     @error('reason')
     <p style="color: red;">{{ $message }}</p>
@@ -979,12 +979,127 @@
     </div>
 
 </section>
-    </body>
+
+<footer class="intern-premium-footer">
+
+    <div class="intern-footer-top">
+
+        <div class="intern-footer-brand">
+
+            <div class="intern-footer-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
+            </div>
+
+        </div>
+
+        <div class="intern-footer-tags">
+            <span>Research</span>
+            <span>Mentorship</span>
+            <span>Field Experience</span>
+            <span>Impact</span>
+        </div>
+
+    </div>
+
+
+    <div class="intern-footer-main">
+
+        <div class="intern-footer-about">
+
+            <p>
+                WASMaN gives emerging professionals practical opportunities to
+                learn, contribute and grow within aquatic science, conservation,
+                environmental management and sustainable development.
+            </p>
+
+            <div class="intern-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="intern-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/ongoing_projects">Ongoing Projects</a>
+            <a href="/completed_projects">Completed Projects</a>
+        </div>
+
+
+        <div class="intern-footer-links">
+            <h3>Internships</h3>
+            <a href="#opportunities">Opportunities</a>
+            <a href="#intern-benefits">Benefits</a>
+            <a href="#application-form">Apply Now</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/research_assistant">Research Assistance</a>
+        </div>
+
+
+        <div class="intern-footer-links">
+            <h3>Knowledge</h3>
+            <a href="/publications">Publications</a>
+            <a href="/knowledge_bite">Knowledge Bites</a>
+            <a href="/events">Events</a>
+            <a href="/news">News & Media</a>
+            <a href="/photos_videos">Photo & Video Gallery</a>
+        </div>
+
+
+        <div class="intern-footer-contact">
+            <h3>Connect</h3>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@wasman.org</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cape Coast, Ghana</span>
+            </div>
+
+            <a href="/general_enquiries" class="intern-footer-enquiry">
+                General Enquiries
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="intern-footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
 
 
      <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
+    </body>
    
 
 </html>

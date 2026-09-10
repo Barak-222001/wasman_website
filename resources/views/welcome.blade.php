@@ -65,7 +65,7 @@
 
                 <div class="swiper-slide knowledge-card knowledge-card-primary">
 
-                    <div class="knowledge-card-content">
+                    <!-- <div class="knowledge-card-content">
 
                         <div class="knowledge-icon">
                             <i class="fa-solid fa-book-open-reader"></i>
@@ -87,14 +87,16 @@
                             to pursue careers in science and environmental conservation.
                         </p>
 
-                    </div>
+                    </div> -->
+<img src="{{ asset('pics_vids/kn1.svg') }}" alt="WASMaN Logo" class="wasman-logo">
+
 
                 </div>
 
 
                 <div class="swiper-slide knowledge-card knowledge-card-light">
 
-                    <div class="knowledge-card-content">
+                    <!-- <div class="knowledge-card-content">
 
                         <div class="knowledge-icon">
                             <i class="fa-solid fa-lightbulb"></i>
@@ -136,14 +138,15 @@
 
                         </div>
 
-                    </div>
+                    </div> -->
+<img src="{{ asset('pics_vids/kn2.png') }}" alt="WASMaN Logo" class="wasman-logo">
 
                 </div>
 
 
                 <div class="swiper-slide knowledge-card knowledge-card-soft">
 
-                    <div class="knowledge-card-content">
+                    <!-- <div class="knowledge-card-content">
 
                         <div class="knowledge-icon">
                             <i class="fa-solid fa-water"></i>
@@ -185,7 +188,9 @@
 
                         </div>
 
-                    </div>
+                    </div> -->
+<img src="{{ asset('pics_vids/kn3.png') }}" alt="WASMaN Logo" class="wasman-logo">
+
 
                 </div>
 

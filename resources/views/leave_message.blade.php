@@ -4,15 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+        <title>WASMaN | Leave a Message</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/leave_message.css') }}"> 
-
+        <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/leave_message.css') }}">
 
             
     </head>
@@ -94,7 +94,7 @@
         <div class="connect-image">
 
             <img
-                src="{{ asset('../pics_vids/cc.png') }}"
+                src="{{ asset('pics_vids/cc.png') }}"
                 alt="WASMaN Team">
 
             <div class="image-caption">
@@ -214,7 +214,7 @@
 
 
 {{-- MESSAGE CATEGORIES --}}
-<section class="message-categories">
+<section class="message-categories" id="message-categories">
 
     <div class="section-title centered">
 
@@ -524,12 +524,16 @@
 
 
         {{-- FORM --}}
-        <div class="message-form-container">
+        <div class="message-form-column">
 
             @if(session('success'))
 
                 <div class="message-success">
-                    {{ session('success') }}
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+                        {{ session('success') }}
+                    </div>
                 </div>
 
             @endif
@@ -539,9 +543,13 @@
 
                 <div class="message-errors">
 
-                    <strong>
-                        Please correct the following:
-                    </strong>
+                    <div class="message-errors-heading">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+
+                        <strong>
+                            Please correct the following:
+                        </strong>
+                    </div>
 
                     <ul>
 
@@ -560,11 +568,13 @@
             @endif
 
 
-            <form
-                action="{{ route('messages.store') }}"
-                method="POST"
-                enctype="multipart/form-data"
-            >
+            <div class="message-form-container">
+
+                <form
+                    action="{{ route('messages.store') }}"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
 
                 @csrf
 
@@ -862,7 +872,9 @@
 
                 </button>
 
-            </form>
+                </form>
+
+            </div>
 
         </div>
 
@@ -872,7 +884,7 @@
 
 
 {{-- FAQ --}}
-<section class="message-faq">
+<section class="message-faq" id="message-faq">
 
     <div class="section-title centered">
 
@@ -1018,12 +1030,167 @@
 
 </section>
       
-    </body>
+
+<footer class="message-premium-footer">
+
+    <div class="message-footer-top">
+
+        <div class="message-footer-brand">
+
+            <div class="message-footer-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
+            </div>
+
+        </div>
+
+        <div class="message-footer-tags">
+            <span>Connect</span>
+            <span>Collaborate</span>
+            <span>Research</span>
+            <span>Impact</span>
+        </div>
+
+    </div>
 
 
-     <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
+    <div class="message-footer-main">
+
+        <div class="message-footer-about">
+
+            <p>
+                WASMaN welcomes questions, ideas and opportunities for
+                collaboration from researchers, students, communities,
+                institutions and partners.
+            </p>
+
+            <div class="message-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="message-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/ongoing_projects">Ongoing Projects</a>
+            <a href="/completed_projects">Completed Projects</a>
+        </div>
+
+
+        <div class="message-footer-links">
+            <h3>Contact</h3>
+            <a href="#message-categories">Message Categories</a>
+            <a href="#contact-information">Contact Details</a>
+            <a href="#message-form">Leave a Message</a>
+            <a href="#message-faq">FAQs</a>
+            <a href="/general_enquiries">General Enquiries</a>
+        </div>
+
+
+        <div class="message-footer-links">
+            <h3>Get Involved</h3>
+            <a href="/become_member">Become a Member</a>
+            <a href="/partner_with_us">Partner With Us</a>
+            <a href="/intern">Internships</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/research_assistant">Research Assistance</a>
+        </div>
+
+
+        <div class="message-footer-contact">
+            <h3>Connect</h3>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@wasman.org</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cape Coast, Ghana</span>
+            </div>
+
+            <a href="#message-form" class="message-footer-enquiry">
+                Send a Message
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="message-footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+     
+{{-- =========================================================
+     AFTER SUBMISSION: RETURN USER TO THE MESSAGE FORM
+========================================================= --}}
+@if(session('success') || $errors->any())
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const messageFormSection = document.getElementById('message-form');
+
+        if (!messageFormSection) {
+            return;
+        }
+
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(
+                null,
+                document.title,
+                window.location.pathname + window.location.search + '#message-form'
+            );
+        } else {
+            window.location.hash = 'message-form';
+        }
+
+        requestAnimationFrame(function () {
+            const headerOffset = 85;
+            const formTop =
+                messageFormSection.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerOffset;
+
+            window.scrollTo({
+                top: formTop,
+                left: 0,
+                behavior: 'auto'
+            });
+        });
+    });
+</script>
+@endif
+
+<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
+    </body>
    
 
 </html>

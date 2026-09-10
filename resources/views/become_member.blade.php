@@ -4,14 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+        <title>WASMaN | Membership</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/become_member.css') }}"> 
+        <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/become_member.css') }}">
 
             
     </head>
@@ -582,7 +583,7 @@
 {{-- =========================
      FAQ
 ========================= --}}
-<section class="membership-faq">
+<section class="membership-faq" id="membership-faq">
 
     <div class="membership-section-heading">
 
@@ -685,6 +686,77 @@
 </section>
 
 
+
+<section class="membership-application" id="membership-application">
+
+    <div class="membership-application-inner">
+
+        <div class="membership-application-copy">
+
+            <span class="section-label">
+                READY TO JOIN?
+            </span>
+
+            <h2>
+                Start Your WASMaN
+                Membership Journey
+            </h2>
+
+            <p>
+                Select the membership path that best reflects your current
+                stage and submit your interest. The WASMaN team can then guide
+                you through the appropriate membership process.
+            </p>
+
+            <div class="application-notes">
+
+                <div>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Students & Interns</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-microscope"></i>
+                    <span>Researchers & Professionals</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>Institutions & Partners</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="membership-application-card">
+
+            <div class="application-card-icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+
+            <h3>
+                Membership Enquiry
+            </h3>
+
+            <p>
+                Use our enquiry form to express interest in joining WASMaN
+                and receive information about the next steps.
+            </p>
+
+            <a href="/general_enquiries">
+                Begin Membership Enquiry
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 {{-- =========================
      FINAL CTA
 ========================= --}}
@@ -709,7 +781,7 @@
             solutions for our oceans, rivers, lakes and communities.
         </p>
 
-        <a href="#" class="cta-button">
+        <a href="#membership-application" class="cta-button">
             Start Your Membership Application
             <i class="fas fa-arrow-right"></i>
         </a>
@@ -718,12 +790,127 @@
 
 </section>
       
-    </body>
+
+<footer class="membership-premium-footer">
+
+    <div class="membership-footer-top">
+
+        <div class="membership-footer-brand">
+
+            <div class="membership-footer-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
+            </div>
+
+        </div>
+
+        <div class="membership-footer-tags">
+            <span>Connect</span>
+            <span>Learn</span>
+            <span>Lead</span>
+            <span>Collaborate</span>
+        </div>
+
+    </div>
+
+
+    <div class="membership-footer-main">
+
+        <div class="membership-footer-about">
+
+            <p>
+                WASMaN connects women scientists, students, professionals,
+                institutions and allies committed to advancing aquatic science,
+                sustainability and inclusive leadership.
+            </p>
+
+            <div class="membership-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="membership-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/ongoing_projects">Ongoing Projects</a>
+            <a href="/completed_projects">Completed Projects</a>
+        </div>
+
+
+        <div class="membership-footer-links">
+            <h3>Membership</h3>
+            <a href="#membership-categories">Membership Options</a>
+            <a href="#membership-benefits">Benefits</a>
+            <a href="#membership-application">How to Join</a>
+            <a href="/partner_with_us">Institutional Partnership</a>
+            <a href="#membership-faq">FAQs</a>
+        </div>
+
+
+        <div class="membership-footer-links">
+            <h3>Get Involved</h3>
+            <a href="/intern">Internships</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/research_assistant">Research Assistance</a>
+            <a href="/events">Events</a>
+            <a href="/publications">Publications</a>
+        </div>
+
+
+        <div class="membership-footer-contact">
+            <h3>Connect</h3>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@wasman.org</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cape Coast, Ghana</span>
+            </div>
+
+            <a href="/general_enquiries" class="membership-footer-enquiry">
+                General Enquiries
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="membership-footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
 
 
      <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
+    </body>
    
 
 </html>

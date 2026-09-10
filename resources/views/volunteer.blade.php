@@ -17,33 +17,22 @@
           href="https://fonts.bunny.net">
 
     <link
-        href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600"
+        href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700"
         rel="stylesheet"
     />
 
 
-    <!-- Volunteer CSS -->
-
-    <link
-        rel="stylesheet"
-        href="{{ asset('css/volunteer.css') }}"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     <!-- Swiper CSS -->
-
-    <link
-        rel="stylesheet"
-        href="{{ asset('css/swiper-bundle.min.css') }}"
-    >
-
+    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
 
     <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    <link
-        rel="stylesheet"
-        href="{{ asset('css/style.css') }}"
-    >
+    <!-- Volunteer CSS -->
+    <link rel="stylesheet" href="{{ asset('css/volunteer.css') }}">
 
 </head>
 
@@ -111,7 +100,7 @@
 
                 Become a Volunteer
 
-                <span>→</span>
+                <span class="volunteer-arrow-icon"><i class="fa-solid fa-arrow-right"></i></span>
 
             </a>
 
@@ -203,7 +192,7 @@
 
 
         <img
-            src="../pics_vids/mi.png"
+            src="{{ asset('pics_vids/mi.png') }}"
             alt="WASMaN volunteers working together"
         >
 
@@ -260,9 +249,7 @@
 
             <div>
 
-                <span>
-                    ✓
-                </span>
+                <span class="volunteer-check-icon"><i class="fa-solid fa-circle-check"></i></span>
 
                 <p>
                     Support aquatic conservation initiatives
@@ -273,9 +260,7 @@
 
             <div>
 
-                <span>
-                    ✓
-                </span>
+                <span class="volunteer-check-icon"><i class="fa-solid fa-circle-check"></i></span>
 
                 <p>
                     Participate in community outreach
@@ -286,9 +271,7 @@
 
             <div>
 
-                <span>
-                    ✓
-                </span>
+                <span class="volunteer-check-icon"><i class="fa-solid fa-circle-check"></i></span>
 
                 <p>
                     Support research and field activities
@@ -299,9 +282,7 @@
 
             <div>
 
-                <span>
-                    ✓
-                </span>
+                <span class="volunteer-check-icon"><i class="fa-solid fa-circle-check"></i></span>
 
                 <p>
                     Promote environmental awareness
@@ -320,9 +301,7 @@
 
             Discover how you can contribute
 
-            <span>
-                →
-            </span>
+            <span class="volunteer-arrow-icon"><i class="fa-solid fa-arrow-right"></i></span>
 
         </a>
 
@@ -481,9 +460,7 @@
             </div>
 
 
-            <div class="opportunity-icon">
-
-            </div>
+            <div class="opportunity-icon"><i class="fa-solid fa-people-group"></i></div>
 
 
             <h3>
@@ -501,7 +478,7 @@
 
             <a href="#application">
 
-                Join This Area →
+                Join This Area <i class="fa-solid fa-arrow-right volunteer-link-icon"></i>
 
             </a>
 
@@ -518,11 +495,7 @@
             </div>
 
 
-            <div class="opportunity-icon">
-
-                🔬
-
-            </div>
+            <div class="opportunity-icon"><i class="fa-solid fa-microscope"></i></div>
 
 
             <h3>
@@ -540,7 +513,7 @@
 
             <a href="#application">
 
-                Join This Area →
+                Join This Area <i class="fa-solid fa-arrow-right volunteer-link-icon"></i>
 
             </a>
 
@@ -557,11 +530,7 @@
             </div>
 
 
-            <div class="opportunity-icon">
-
-                🎥
-
-            </div>
+            <div class="opportunity-icon"><i class="fa-solid fa-photo-film"></i></div>
 
 
             <h3>
@@ -579,7 +548,7 @@
 
             <a href="#application">
 
-                Join This Area →
+                Join This Area <i class="fa-solid fa-arrow-right volunteer-link-icon"></i>
 
             </a>
 
@@ -596,11 +565,7 @@
             </div>
 
 
-            <div class="opportunity-icon">
-
-                🤝
-
-            </div>
+            <div class="opportunity-icon"><i class="fa-solid fa-calendar-days"></i></div>
 
 
             <h3>
@@ -618,7 +583,7 @@
 
             <a href="#application">
 
-                Join This Area →
+                Join This Area <i class="fa-solid fa-arrow-right volunteer-link-icon"></i>
 
             </a>
 
@@ -637,7 +602,7 @@
      SKILLS SECTION
 ========================================================= --}}
 
-<section class="skills-section">
+<section class="skills-section" id="skills">
 
 
     <div class="skills-content">
@@ -792,7 +757,7 @@
      VOLUNTEER JOURNEY
 ========================================================= --}}
 
-<section class="volunteer-journey">
+<section class="volunteer-journey" id="volunteer-journey">
 
 
     <div class="section-heading centered">
@@ -991,9 +956,7 @@
             <div class="application-note">
 
 
-                <span>
-                    🌱
-                </span>
+                <span class="application-note-icon"><i class="fa-solid fa-seedling"></i></span>
 
 
                 <p>
@@ -1023,7 +986,11 @@
 
                 <div class="volunteer-success-message">
 
-                    {{ session('success') }}
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+                        {{ session('success') }}
+                    </div>
 
                 </div>
 
@@ -1038,11 +1005,17 @@
                 <div class="volunteer-error-message">
 
 
-                    <strong>
+                    <div class="volunteer-error-heading">
 
-                        Please correct the following:
+                        <i class="fa-solid fa-circle-exclamation"></i>
 
-                    </strong>
+                        <strong>
+
+                            Please correct the following:
+
+                        </strong>
+
+                    </div>
 
 
                     <ul>
@@ -1482,11 +1455,7 @@
                     Submit Application
 
 
-                    <span>
-
-                        →
-
-                    </span>
+                    <span class="volunteer-arrow-icon"><i class="fa-solid fa-arrow-right"></i></span>
 
 
                 </button>
@@ -1545,9 +1514,7 @@
 
             Become a WASMaN Volunteer
 
-            <span>
-                →
-            </span>
+            <span class="volunteer-arrow-icon"><i class="fa-solid fa-arrow-right"></i></span>
 
         </a>
 
@@ -1557,6 +1524,123 @@
 
 </section>
 
+
+
+
+<footer class="volunteer-premium-footer">
+
+    <div class="volunteer-footer-top">
+
+        <div class="volunteer-footer-brand">
+
+            <div class="volunteer-footer-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
+            </div>
+
+        </div>
+
+        <div class="volunteer-footer-tags">
+            <span>Community</span>
+            <span>Conservation</span>
+            <span>Research</span>
+            <span>Action</span>
+        </div>
+
+    </div>
+
+
+    <div class="volunteer-footer-main">
+
+        <div class="volunteer-footer-about">
+
+            <p>
+                WASMaN welcomes volunteers who want to contribute their time,
+                skills and ideas to aquatic conservation, research, community
+                engagement and environmental awareness.
+            </p>
+
+            <div class="volunteer-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="volunteer-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/ongoing_projects">Ongoing Projects</a>
+            <a href="/completed_projects">Completed Projects</a>
+        </div>
+
+
+        <div class="volunteer-footer-links">
+            <h3>Volunteer</h3>
+            <a href="#opportunities">Opportunities</a>
+            <a href="#skills">Skills</a>
+            <a href="#volunteer-journey">How It Works</a>
+            <a href="#application">Apply Now</a>
+            <a href="/intern">Internships</a>
+        </div>
+
+
+        <div class="volunteer-footer-links">
+            <h3>Knowledge</h3>
+            <a href="/publications">Publications</a>
+            <a href="/knowledge_bite">Knowledge Bites</a>
+            <a href="/events">Events</a>
+            <a href="/news">News & Media</a>
+            <a href="/photos_videos">Photo & Video Gallery</a>
+        </div>
+
+
+        <div class="volunteer-footer-contact">
+            <h3>Connect</h3>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@wasman.org</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cape Coast, Ghana</span>
+            </div>
+
+            <a href="/general_enquiries" class="volunteer-footer-enquiry">
+                General Enquiries
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="volunteer-footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
 
 
 {{-- =========================================================
@@ -1577,6 +1661,46 @@
     src="{{ asset('created_js/carousel.js') }}">
 </script>
 
+
+
+{{-- =========================================================
+     AFTER SUBMISSION: RETURN USER TO THE VOLUNTEER FORM
+========================================================= --}}
+@if(session('success') || $errors->any())
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const volunteerFormSection = document.getElementById('application');
+
+        if (!volunteerFormSection) {
+            return;
+        }
+
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(
+                null,
+                document.title,
+                window.location.pathname + window.location.search + '#application'
+            );
+        } else {
+            window.location.hash = 'application';
+        }
+
+        requestAnimationFrame(function () {
+            const headerOffset = 85;
+            const formTop =
+                volunteerFormSection.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerOffset;
+
+            window.scrollTo({
+                top: formTop,
+                left: 0,
+                behavior: 'auto'
+            });
+        });
+    });
+</script>
+@endif
 
 </body>
 

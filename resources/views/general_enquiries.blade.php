@@ -4,15 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+        <title>WASMaN | General Enquiries</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/general_enquiries.css') }}"> 
-
+        <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
         <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/general_enquiries.css') }}">
 
             
     </head>
@@ -115,7 +115,7 @@
         <div class="intro-image">
 
             <img
-                src="{{ asset('../pics_vids/en.png') }}"
+                src="{{ asset('pics_vids/en.png') }}"
                 alt="WASMaN Support Team"
             >
 
@@ -227,7 +227,7 @@
      ENQUIRY SERVICES
 ========================================================= --}}
 
-<section class="enquiry-services">
+<section class="enquiry-services" id="enquiry-services">
 
     <div class="section-heading">
 
@@ -403,7 +403,7 @@
      WHO WE SERVE
 ========================================================= --}}
 
-<section class="who-section">
+<section class="who-section" id="who-we-support">
 
     <div class="who-container">
 
@@ -660,46 +660,55 @@
 
 
 
-        {{-- Backend route will be connected when we build the General Enquiries module. --}}
-        @if(session('success'))
+                <div class="enquiry-form-column">
 
-            <div class="form-success">
-                {{ session('success') }}
-            </div>
+            @if(session('success'))
 
-        @endif
+                <div class="form-success">
+                    <i class="fa-solid fa-circle-check"></i>
 
+                    <div>
+                        {{ session('success') }}
+                    </div>
+                </div>
 
-        @if($errors->any())
-
-            <div class="form-errors">
-
-                <strong>
-                    Please correct the following:
-                </strong>
-
-                <ul>
-
-                    @foreach($errors->all() as $error)
-
-                        <li>
-                            {{ $error }}
-                        </li>
-
-                    @endforeach
-
-                </ul>
-
-            </div>
-
-        @endif
+            @endif
 
 
-        <form
-            class="enquiry-form"
-             action="{{ route('general-enquiries.store') }}"
-            method="POST"
-        >
+            @if($errors->any())
+
+                <div class="form-errors">
+
+                    <div class="form-errors-heading">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+
+                        <strong>
+                            Please correct the following:
+                        </strong>
+                    </div>
+
+                    <ul>
+
+                        @foreach($errors->all() as $error)
+
+                            <li>
+                                {{ $error }}
+                            </li>
+
+                        @endforeach
+
+                    </ul>
+
+                </div>
+
+            @endif
+
+
+            <form
+                class="enquiry-form"
+                action="{{ route('general-enquiries.store') }}"
+                method="POST"
+            >
 
             @csrf
 
@@ -906,7 +915,9 @@
 
             </button>
 
-        </form>
+            </form>
+
+        </div>
 
     </div>
 
@@ -918,7 +929,7 @@
      FAQ
 ========================================================= --}}
 
-<section class="faq-section">
+<section class="faq-section" id="enquiry-faq">
 
     <div class="section-heading">
 
@@ -1074,6 +1085,166 @@
 
 </section>
 
+
+
+<footer class="enquiry-premium-footer">
+
+    <div class="enquiry-footer-top">
+
+        <div class="enquiry-footer-brand">
+
+            <div class="enquiry-footer-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
+            </div>
+
+        </div>
+
+        <div class="enquiry-footer-tags">
+            <span>Questions</span>
+            <span>Support</span>
+            <span>Connections</span>
+            <span>Impact</span>
+        </div>
+
+    </div>
+
+
+    <div class="enquiry-footer-main">
+
+        <div class="enquiry-footer-about">
+
+            <p>
+                WASMaN helps individuals, researchers, students, communities
+                and organizations connect with the right information, people
+                and opportunities across our network.
+            </p>
+
+            <div class="enquiry-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="enquiry-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/ongoing_projects">Ongoing Projects</a>
+            <a href="/completed_projects">Completed Projects</a>
+        </div>
+
+
+        <div class="enquiry-footer-links">
+            <h3>Enquiries</h3>
+            <a href="#enquiry-services">Areas of Enquiry</a>
+            <a href="#who-we-support">Who We Support</a>
+            <a href="#contact-options">Contact Options</a>
+            <a href="#enquiry-form">Submit an Enquiry</a>
+            <a href="#enquiry-faq">FAQs</a>
+        </div>
+
+
+        <div class="enquiry-footer-links">
+            <h3>Get Involved</h3>
+            <a href="/become_member">Become a Member</a>
+            <a href="/partner_with_us">Partner With Us</a>
+            <a href="/intern">Internships</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/research_assistant">Research Assistance</a>
+        </div>
+
+
+        <div class="enquiry-footer-contact">
+            <h3>Connect</h3>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@wasman.org</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cape Coast, Ghana</span>
+            </div>
+
+            <a href="#enquiry-form" class="enquiry-footer-action">
+                Send an Enquiry
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="enquiry-footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+{{-- =========================================================
+     AFTER SUBMISSION: RETURN USER TO THE ENQUIRY FORM
+========================================================= --}}
+@if(session('success') || $errors->any())
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const enquiryFormSection = document.getElementById('enquiry-form');
+
+        if (!enquiryFormSection) {
+            return;
+        }
+
+        // Keep the form location in the browser URL after submission.
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(
+                null,
+                document.title,
+                window.location.pathname + window.location.search + '#enquiry-form'
+            );
+        } else {
+            window.location.hash = 'enquiry-form';
+        }
+
+        // Move directly back to the form so the success/error message
+        // is immediately visible without the user scrolling manually.
+        requestAnimationFrame(function () {
+            const headerOffset = 85;
+            const formTop =
+                enquiryFormSection.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerOffset;
+
+            window.scrollTo({
+                top: formTop,
+                left: 0,
+                behavior: 'auto'
+            });
+        });
+    });
+</script>
+@endif
 
 <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>

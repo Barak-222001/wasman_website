@@ -92,7 +92,7 @@ img {
 .hero-banner {
     position: relative;
     width: 100%;
-    min-height: 650px;
+    min-height: 760px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -256,35 +256,40 @@ img {
 }
 
 .swiper-slide {
-    min-height: 420px;
+   
 
     border-radius: var(--radius-lg);
 
     overflow: hidden;
 }
+.swiper-slide img{
+    width: 100%;
+    height: 80%;
+}
 
 .knowledge-card {
     position: relative;
 
-    box-shadow: var(--shadow-medium);
+   
 }
 
 .knowledge-card-primary {
-    background:
+    /* background:
         linear-gradient(
             135deg,
             #063247,
             #087f9c
-        );
+        ); */
 }
 
 .knowledge-card-light {
-    background:
+    /* background:
         linear-gradient(
             145deg,
             #edf9f8,
             #e6f4f7
-        );
+        ); */
+        background-color: transparent;
 }
 
 .knowledge-card-soft {
@@ -477,8 +482,8 @@ img {
 
 .swiper-button-prev,
 .swiper-button-next {
-    width: 46px !important;
-    height: 46px !important;
+    width: 40px !important;
+    height: 40px !important;
 
     border-radius: 50%;
 
@@ -487,6 +492,7 @@ img {
     box-shadow: var(--shadow-medium);
 
     transition: var(--transition);
+    padding: 1%;
 }
 
 .swiper-button-prev::after,
@@ -500,6 +506,12 @@ img {
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
     background: var(--blue);
+    color: white;
+}
+.swiper-button-prev:active,
+.swiper-button-next:active {
+    background: rgb(197, 230, 245);
+    color: white;
 }
 
 .swiper-button-prev:hover::after,

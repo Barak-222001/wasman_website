@@ -4,13 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>wasman</title>
+        <title>WASMaN | Photo & Video Gallery</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <link rel="stylesheet" href="{{ asset('css/photos_videos.css') }}"> 
+        <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|playfair-display:500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/photos_videos.css') }}">
 
             
     </head>
@@ -153,7 +154,7 @@
     <div class="featured-media-image">
 
         <img
-            src="{{ asset('../pics_vids/fc.png') }}"
+            src="{{ asset('pics_vids/fc.png') }}"
             alt="Women conducting aquatic research"
         >
 
@@ -666,12 +667,127 @@
 </section>
    
       
-    </body>
+
+<footer class="media-premium-footer">
+
+    <div class="media-footer-top">
+
+        <div class="media-footer-brand">
+
+            <div class="media-footer-mark">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+                <h2>WASMaN</h2>
+                <span>Women in Aquatic Science and Management Network</span>
+            </div>
+
+        </div>
+
+        <div class="media-footer-tags">
+            <span>People</span>
+            <span>Science</span>
+            <span>Stories</span>
+            <span>Impact</span>
+        </div>
+
+    </div>
+
+
+    <div class="media-footer-main">
+
+        <div class="media-footer-about">
+
+            <p>
+                WASMaN documents the people, places, research and partnerships
+                shaping aquatic science, conservation and women's leadership
+                across Africa and beyond.
+            </p>
+
+            <div class="media-footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+
+        <div class="media-footer-links">
+            <h3>Explore</h3>
+            <a href="/">Home</a>
+            <a href="/history">About WASMaN</a>
+            <a href="/team">Our Team</a>
+            <a href="/ongoing_projects">Ongoing Projects</a>
+            <a href="/completed_projects">Completed Projects</a>
+        </div>
+
+
+        <div class="media-footer-links">
+            <h3>Media</h3>
+            <a href="#photo-gallery">Photo Gallery</a>
+            <a href="#video-gallery">Video Stories</a>
+            <a href="/news">News & Media</a>
+            <a href="/events">Events</a>
+            <a href="/publications">Publications</a>
+        </div>
+
+
+        <div class="media-footer-links">
+            <h3>Get Involved</h3>
+            <a href="/become_member">Become a Member</a>
+            <a href="/partner_with_us">Partner With Us</a>
+            <a href="/intern">Internships</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/research_assistant">Research Assistance</a>
+        </div>
+
+
+        <div class="media-footer-contact">
+            <h3>Connect</h3>
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@wasman.org</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cape Coast, Ghana</span>
+            </div>
+
+            <a href="/general_enquiries" class="media-footer-enquiry">
+                General Enquiries
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="media-footer-bottom">
+
+        <p>
+            © 2026 Women in Aquatic Science and Management Network (WASMaN).
+            All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
 
 
      <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
+    </body>
    
 
 </html>
