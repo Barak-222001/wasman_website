@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 use App\Models\InternApplication;
 use App\Models\VolunteerApplication;
 use App\Models\ResearchAssistantApplication;
@@ -15,6 +16,19 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+
+    /**
+     * Return the correct SQL expression for grouping records by month.
+     *
+     * Local development uses SQLite, while Laravel Cloud production uses MySQL.
+     */
+    private function monthExpression(): string
+    {
+        return DB::connection()->getDriverName() === 'sqlite'
+            ? "strftime('%Y-%m', created_at)"
+            : "DATE_FORMAT(created_at, '%Y-%m')";
+    }
+
  public function index(Request $request)
     {
         $search = $request->input('search');
@@ -50,7 +64,7 @@ class AdminController extends Controller
 
         // CHART 2
         $monthlyStats = InternApplication::selectRaw(
-                "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+                "{$this->monthExpression()} as month, COUNT(*) as total"
             )
             ->groupBy('month')
             ->orderBy('month')
@@ -186,7 +200,7 @@ public function volunteers(Request $request)
 
 
     $volunteerMonthlyStats = VolunteerApplication::selectRaw(
-            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+            "{$this->monthExpression()} as month, COUNT(*) as total"
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -326,7 +340,7 @@ public function researchAssistants(Request $request)
 
 
     $researchMonthlyStats = ResearchAssistantApplication::selectRaw(
-            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+            "{$this->monthExpression()} as month, COUNT(*) as total"
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -537,7 +551,7 @@ public function partners(Request $request)
 
 
     $partnerMonthlyStats = PartnerApplication::selectRaw(
-            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+            "{$this->monthExpression()} as month, COUNT(*) as total"
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -731,7 +745,7 @@ public function messages(Request $request)
     |--------------------------------------------------------------------------
     */
     $monthlyStats = ContactMessage::selectRaw(
-        "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+        "{$this->monthExpression()} as month, COUNT(*) as total"
     )
         ->groupBy('month')
         ->orderBy('month')
@@ -951,7 +965,7 @@ public function generalEnquiries(Request $request)
     */
 
     $monthlyStats = GeneralEnquiry::selectRaw(
-        "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+        "{$this->monthExpression()} as month, COUNT(*) as total"
     )
         ->groupBy('month')
         ->orderBy('month')
