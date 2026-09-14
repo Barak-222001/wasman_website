@@ -6,23 +6,27 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->string('name')->after('id');
+            $table->string('email')->unique()->after('name');
+            $table->timestamp('email_verified_at')->nullable()->after('email');
+            $table->string('password')->after('email_verified_at');
+            $table->rememberToken()->after('password');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn([
+                'name',
+                'email',
+                'email_verified_at',
+                'password',
+                'remember_token',
+            ]);
         });
     }
 };
