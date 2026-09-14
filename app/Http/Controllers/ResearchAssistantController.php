@@ -7,6 +7,18 @@ use Illuminate\Http\Request;
 
 class ResearchAssistantController extends Controller
 {
+
+    /**
+     * Use Laravel Cloud object storage in production
+     * and the public disk during local development.
+     */
+    private function storageDisk(): string
+    {
+        return app()->environment('production')
+            ? 'private'
+            : 'public';
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -39,7 +51,7 @@ class ResearchAssistantController extends Controller
                 ->file('document')
                 ->store(
                     'research_assistant_documents',
-                    'public'
+                    $this->storageDisk()
                 );
 
         }

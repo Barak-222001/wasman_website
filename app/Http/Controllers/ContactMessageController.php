@@ -7,6 +7,18 @@ use Illuminate\Http\Request;
 
 class ContactMessageController extends Controller
 {
+
+    /**
+     * Use Laravel Cloud object storage in production
+     * and the public disk during local development.
+     */
+    private function storageDisk(): string
+    {
+        return app()->environment('production')
+            ? 'private'
+            : 'public';
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -44,7 +56,7 @@ class ContactMessageController extends Controller
                 ->file('attachment')
                 ->store(
                     'contact_message_attachments',
-                    'public'
+                    $this->storageDisk()
                 );
 
         }

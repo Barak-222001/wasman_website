@@ -29,6 +29,18 @@ class AdminController extends Controller
             : "DATE_FORMAT(created_at, '%Y-%m')";
     }
 
+
+    /**
+     * Use Laravel Cloud object storage in production
+     * and the public disk during local development.
+     */
+    private function storageDisk(): string
+    {
+        return app()->environment('production')
+            ? 'private'
+            : 'public';
+    }
+
  public function index(Request $request)
     {
         $search = $request->input('search');
@@ -82,17 +94,17 @@ public function downloadCv(InternApplication $application)
     {
         // route model binding
         
-        return Storage::disk('public')
+        return Storage::disk($this->storageDisk())
             ->download($application->document);
     }
 
 public function destroy(InternApplication $application)
     {
-        // Storage::disk('public')
+        // Storage::disk($this->storageDisk())
         //     ->delete($application->document);
 
         if ($application->document) {
-            Storage::disk('public')->delete($application->document);
+            Storage::disk($this->storageDisk())->delete($application->document);
             }
 
         $application->delete();
@@ -362,13 +374,13 @@ public function downloadResearchDocument(
 ) {
     if (
         !$application->document ||
-        !Storage::disk('public')->exists($application->document)
+        !Storage::disk($this->storageDisk())->exists($application->document)
     ) {
         abort(404);
     }
 
 
-    return Storage::disk('public')->download(
+    return Storage::disk($this->storageDisk())->download(
         $application->document
     );
 }
@@ -415,7 +427,7 @@ public function updateResearchAssistant(
 
         if ($application->document) {
 
-            Storage::disk('public')->delete(
+            Storage::disk($this->storageDisk())->delete(
                 $application->document
             );
 
@@ -426,7 +438,7 @@ public function updateResearchAssistant(
             ->file('document')
             ->store(
                 'research_assistant_documents',
-                'public'
+                $this->storageDisk()
             );
 
     }
@@ -467,7 +479,7 @@ public function destroyResearchAssistant(
 ) {
     if ($application->document) {
 
-        Storage::disk('public')->delete(
+        Storage::disk($this->storageDisk())->delete(
             $application->document
         );
 
@@ -790,12 +802,12 @@ public function downloadMessageAttachment(ContactMessage $message)
 {
     if (
         !$message->attachment ||
-        !Storage::disk('public')->exists($message->attachment)
+        !Storage::disk($this->storageDisk())->exists($message->attachment)
     ) {
         abort(404, 'Attachment not found.');
     }
 
-    return Storage::disk('public')->download(
+    return Storage::disk($this->storageDisk())->download(
         $message->attachment
     );
 }
@@ -811,9 +823,9 @@ public function destroyMessage(ContactMessage $message)
 {
     if (
         $message->attachment &&
-        Storage::disk('public')->exists($message->attachment)
+        Storage::disk($this->storageDisk())->exists($message->attachment)
     ) {
-        Storage::disk('public')->delete(
+        Storage::disk($this->storageDisk())->delete(
             $message->attachment
         );
     }

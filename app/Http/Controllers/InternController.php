@@ -7,6 +7,18 @@ use App\Models\InternApplication;
 
 class InternController extends Controller
 {
+
+    /**
+     * Use Laravel Cloud object storage in production
+     * and the public disk during local development.
+     */
+    private function storageDisk(): string
+    {
+        return app()->environment('production')
+            ? 'private'
+            : 'public';
+    }
+
     public function create()
     {
         return view('intern');
@@ -28,7 +40,7 @@ class InternController extends Controller
 
 $documentPath = $request
     ->file('document')
-    ->store('intern_documents', 'public');
+    ->store('intern_documents', $this->storageDisk());
 
 // map table names with the name values provided by html
 InternApplication::create([
