@@ -6,11 +6,29 @@ use App\Models\InternApplication;
 use App\Models\VolunteerApplication;
 use App\Models\ResearchAssistantApplication;
 use App\Models\PartnerApplication;
+use Illuminate\Support\Facades\DB;
 
 class AdminOverviewController extends Controller
 {
     public function index()
     {
+        /*
+        |--------------------------------------------------------------------------
+        | DETECT DATABASE DRIVER
+        |--------------------------------------------------------------------------
+        |
+        | Local development uses SQLite.
+        | Laravel Cloud production uses MySQL.
+        |
+        */
+
+        $databaseDriver = DB::connection()->getDriverName();
+
+        $monthExpression = $databaseDriver === 'sqlite'
+            ? "strftime('%Y-%m', created_at)"
+            : "DATE_FORMAT(created_at, '%Y-%m')";
+
+
         /*
         |--------------------------------------------------------------------------
         | TOTAL COUNTS
@@ -59,7 +77,7 @@ class AdminOverviewController extends Controller
         */
 
         $internshipMonthly = InternApplication::selectRaw(
-                "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+                "{$monthExpression} as month, COUNT(*) as total"
             )
             ->groupBy('month')
             ->orderBy('month')
@@ -73,7 +91,7 @@ class AdminOverviewController extends Controller
         */
 
         $volunteerMonthly = VolunteerApplication::selectRaw(
-                "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+                "{$monthExpression} as month, COUNT(*) as total"
             )
             ->groupBy('month')
             ->orderBy('month')
@@ -87,7 +105,7 @@ class AdminOverviewController extends Controller
         */
 
         $researchMonthly = ResearchAssistantApplication::selectRaw(
-                "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+                "{$monthExpression} as month, COUNT(*) as total"
             )
             ->groupBy('month')
             ->orderBy('month')
@@ -101,7 +119,7 @@ class AdminOverviewController extends Controller
         */
 
         $partnerMonthly = PartnerApplication::selectRaw(
-                "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+                "{$monthExpression} as month, COUNT(*) as total"
             )
             ->groupBy('month')
             ->orderBy('month')
