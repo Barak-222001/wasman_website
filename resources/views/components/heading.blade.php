@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="{{ asset('css/header.css')}}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 <header class="wasman-main-header">
 
     <div class="wasman-header-inner">
@@ -8,9 +6,13 @@
         <!-- LOGO -->
             <a href="/" class="wasman-brand" aria-label="WASMaN Home">
             <img
-                src="{{ asset('pics_vids/logo.png') }}"
+                src="{{ asset('pics_vids/logo_header.webp') }}"
                 alt="WASMaN Logo"
                 class="wasman-logo"
+                width="512"
+                height="512"
+                decoding="async"
+                fetchpriority="high"
             >
         </a>
 
