@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WASMaN advances women in aquatic science and management through research, mentorship, capacity building, community engagement and sustainable aquatic resource management.">
+
+    <link rel="preload" as="image" href="{{ asset('pics_vids/home_page_banner.webp') }}" type="image/webp" media="(min-width: 651px)" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('pics_vids/home_page_banner_mobile.webp') }}" type="image/webp" media="(max-width: 650px)" fetchpriority="high">
 
     <title>WASMaN | Women in Aquatic Science & Management</title>
 
@@ -13,13 +17,14 @@
 
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
 
 @include('components.heading')
 
+<main id="main-content">
 
 {{-- =========================================================
      MAIN HERO — PRESERVED
@@ -88,7 +93,7 @@
                         </p>
 
                     </div> -->
-<img src="{{ asset('pics_vids/kn1.svg') }}" alt="WASMaN Logo" class="wasman-logo">
+<img src="{{ asset('pics_vids/kn1.svg') }}" alt="WASMaN knowledge and awareness graphic" class="wasman-logo" loading="lazy" decoding="async">
 
 
                 </div>
@@ -139,7 +144,10 @@
                         </div>
 
                     </div> -->
-<img src="{{ asset('pics_vids/kn2.png') }}" alt="WASMaN Logo" class="wasman-logo">
+<picture>
+    <source media="(max-width: 650px)" srcset="{{ asset('pics_vids/kn2_mobile.webp') }}" type="image/webp">
+    <img src="{{ asset('pics_vids/kn2.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+</picture>
 
                 </div>
 
@@ -189,7 +197,10 @@
                         </div>
 
                     </div> -->
-<img src="{{ asset('pics_vids/kn3.png') }}" alt="WASMaN Logo" class="wasman-logo">
+<picture>
+    <source media="(max-width: 650px)" srcset="{{ asset('pics_vids/kn3_mobile.webp') }}" type="image/webp">
+    <img src="{{ asset('pics_vids/kn3.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+</picture>
 
 
                 </div>
@@ -489,6 +500,8 @@
 
 </section>
 
+
+</main>
 
 {{-- =========================================================
      FOOTER
