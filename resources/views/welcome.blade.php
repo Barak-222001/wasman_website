@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="WASMaN advances women in aquatic science and management through research, mentorship, capacity building, community engagement and sustainable aquatic resource management.">
 
-    <link rel="preload" as="image" href="{{ asset('pics_vids/home_page_banner.webp') }}" type="image/webp" media="(min-width: 651px)" fetchpriority="high">
-    <link rel="preload" as="image" href="{{ asset('pics_vids/home_page_banner_mobile.webp') }}" type="image/webp" media="(max-width: 650px)" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ versioned_asset('pics_vids/home_page_banner.webp') }}" type="image/webp" media="(min-width: 651px)" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ versioned_asset('pics_vids/home_page_banner_mobile.webp') }}" type="image/webp" media="(max-width: 650px)" fetchpriority="high">
 
     <title>WASMaN | Women in Aquatic Science & Management</title>
 
@@ -32,12 +32,10 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </noscript>
 
-    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
-    <link rel="preload" href="{{ asset('css/swiper-bundle.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}"></noscript>
+    <link rel="stylesheet" href="{{ versioned_asset('css/welcome.css') }}">
+    <link rel="preload" href="{{ versioned_asset('css/swiper-bundle.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ versioned_asset('css/swiper-bundle.min.css') }}"></noscript>
 
-    <link rel="preload" href="{{ asset('css/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ asset('css/style.css') }}"></noscript>
 </head>
 
 <body>
@@ -113,7 +111,7 @@
                         </p>
 
                     </div> -->
-<img src="{{ asset('pics_vids/kn1.svg') }}" alt="WASMaN knowledge and awareness graphic" class="wasman-logo" loading="lazy" decoding="async">
+<img src="{{ versioned_asset('pics_vids/kn1.svg') }}" alt="WASMaN knowledge and awareness graphic" class="wasman-logo" loading="lazy" decoding="async">
 
 
                 </div>
@@ -165,8 +163,8 @@
 
                     </div> -->
 <picture>
-    <source media="(max-width: 650px)" srcset="{{ asset('pics_vids/kn2_mobile.webp') }}" type="image/webp">
-    <img src="{{ asset('pics_vids/kn2.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/kn2_mobile.webp') }}" type="image/webp">
+    <img src="{{ versioned_asset('pics_vids/kn2.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
 </picture>
 
                 </div>
@@ -218,8 +216,8 @@
 
                     </div> -->
 <picture>
-    <source media="(max-width: 650px)" srcset="{{ asset('pics_vids/kn3_mobile.webp') }}" type="image/webp">
-    <img src="{{ asset('pics_vids/kn3.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/kn3_mobile.webp') }}" type="image/webp">
+    <img src="{{ versioned_asset('pics_vids/kn3.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
 </picture>
 
 
@@ -606,10 +604,10 @@
 </footer>
 
 
-<script src="{{ asset('created_js/list_hover_background.js') }}"></script>
-<script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
-<script src="{{ asset('created_js/carousel.js') }}"></script>
-<script src="{{ asset('created_js/animation.js') }}"></script>
+<script src="{{ versioned_asset('created_js/list_hover_background.js') }}"></script>
+<script src="{{ versioned_asset('created_js/swiper-bundle.min.js') }}"></script>
+<script src="{{ versioned_asset('created_js/carousel.js') }}"></script>
+<script src="{{ versioned_asset('created_js/animation.js') }}"></script>
 
 </body>
 </html>
