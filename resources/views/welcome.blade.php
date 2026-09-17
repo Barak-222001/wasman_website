@@ -49,6 +49,19 @@
 ========================================================= --}}
 
 <section class="hero-banner">
+    <picture class="hero-picture">
+        <source
+            media="(max-width: 650px)"
+            srcset="{{ versioned_asset('pics_vids/home_page_banner_mobile.webp') }}"
+            type="image/webp">
+        <img
+            src="{{ versioned_asset('pics_vids/home_page_banner.webp') }}"
+            alt="WASMaN — Women in Aquatic Science and Management Network"
+            class="hero-image"
+            fetchpriority="high"
+            loading="eager"
+            decoding="async">
+    </picture>
 </section>
 
 
