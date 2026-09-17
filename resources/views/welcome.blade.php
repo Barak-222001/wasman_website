@@ -49,19 +49,45 @@
 ========================================================= --}}
 
 <section class="hero-banner">
-    <picture class="hero-picture">
-        <source
-            media="(max-width: 650px)"
-            srcset="{{ versioned_asset('pics_vids/home_page_banner_mobile.webp') }}"
-            type="image/webp">
-        <img
-            src="{{ versioned_asset('pics_vids/home_page_banner.webp') }}"
-            alt="WASMaN — Women in Aquatic Science and Management Network"
-            class="hero-image"
-            fetchpriority="high"
-            loading="eager"
-            decoding="async">
-    </picture>
+   
+
+ <div class="swiper mySwiper">
+
+            <div class="swiper-wrapper">
+            
+            <div class="swiper-slide knowledge-card knowledge-card-light">
+                <picture>
+                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/home_page_banner_mobile.webp') }}" type="image/webp">
+                    <img src="{{ versioned_asset('pics_vids/home_page_banner_mobile.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+                </picture>
+            </div>
+
+            <div class="swiper-slide knowledge-card knowledge-card-light">
+                <picture>
+                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/kn2_mobile.webp') }}" type="image/webp">
+                    <img src="{{ versioned_asset('pics_vids/kn2.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+                </picture>
+            </div>
+
+            <div class="swiper-slide knowledge-card knowledge-card-soft">
+                <picture>
+                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/kn3_mobile.webp') }}" type="image/webp">
+                    <img src="{{ versioned_asset('pics_vids/kn3.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+                </picture>
+            </div>
+
+            </div>
+
+            <div class="swiper-button-prev"><</div>
+            <div class="swiper-button-next">></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+
+
+
+
 </section>
 
 
@@ -95,155 +121,12 @@
         </div>
 
 
-        <div class="swiper mySwiper">
+       
 
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide knowledge-card knowledge-card-primary">
-
-                    <!-- <div class="knowledge-card-content">
-
-                        <div class="knowledge-icon">
-                            <i class="fa-solid fa-book-open-reader"></i>
-                        </div>
-
-                        <span class="knowledge-kicker">
-                            Women In Science
-                        </span>
-
-                        <h3>
-                            Knowledge Bite
-                        </h3>
-
-                        <p>
-                            Women in aquatic science are making a difference.
-                            Through research, mentorship and community engagement,
-                            WASMaN members are promoting the sustainable management
-                            of aquatic resources and inspiring more girls and women
-                            to pursue careers in science and environmental conservation.
-                        </p>
-
-                    </div> -->
-<img src="{{ versioned_asset('pics_vids/kn1.svg') }}" alt="WASMaN knowledge and awareness graphic" class="wasman-logo" loading="lazy" decoding="async">
-
-
-                </div>
-
-
-                <div class="swiper-slide knowledge-card knowledge-card-light">
-
-                    <!-- <div class="knowledge-card-content">
-
-                        <div class="knowledge-icon">
-                            <i class="fa-solid fa-lightbulb"></i>
-                        </div>
-
-                        <span class="knowledge-kicker">
-                            Did You Know?
-                        </span>
-
-                        <h3>
-                            Coastal Ecosystems Matter
-                        </h3>
-
-                        <div class="fact-grid">
-
-                            <div class="fact-item">
-                                <i class="fa-solid fa-leaf"></i>
-                                <p>
-                                    Mangrove forests can store up to four times
-                                    more carbon per hectare than tropical rainforests.
-                                </p>
-                            </div>
-
-                            <div class="fact-item">
-                                <i class="fa-solid fa-shield-halved"></i>
-                                <p>
-                                    Healthy coastal ecosystems help reduce the
-                                    impact of storm surges and coastal erosion.
-                                </p>
-                            </div>
-
-                            <div class="fact-item">
-                                <i class="fa-solid fa-recycle"></i>
-                                <p>
-                                    Plastic waste can remain in marine environments
-                                    for hundreds of years.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div> -->
-<picture>
-    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/kn2_mobile.webp') }}" type="image/webp">
-    <img src="{{ versioned_asset('pics_vids/kn2.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
-</picture>
-
-                </div>
-
-
-                <div class="swiper-slide knowledge-card knowledge-card-soft">
-
-                    <!-- <div class="knowledge-card-content">
-
-                        <div class="knowledge-icon">
-                            <i class="fa-solid fa-water"></i>
-                        </div>
-
-                        <span class="knowledge-kicker">
-                            Why Our Work Matters
-                        </span>
-
-                        <h3>
-                            Why WASMaN's Activities Matter
-                        </h3>
-
-                        <div class="matter-list">
-
-                            <div class="matter-item">
-                                <span>01</span>
-                                <p>
-                                    WASMaN helps increase the participation and leadership
-                                    of women in aquatic science and resource management.
-                                </p>
-                            </div>
-
-                            <div class="matter-item">
-                                <span>02</span>
-                                <p>
-                                    The network provides a platform for professionals,
-                                    researchers and students to collaborate and exchange ideas.
-                                </p>
-                            </div>
-
-                            <div class="matter-item">
-                                <span>03</span>
-                                <p>
-                                    Research and outreach activities contribute to sustainable
-                                    management of fisheries, coastal and marine resources.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div> -->
-<picture>
-    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/kn3_mobile.webp') }}" type="image/webp">
-    <img src="{{ versioned_asset('pics_vids/kn3.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
-</picture>
-
-
-                </div>
-
-            </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
-
-        </div>
-
+        <div class="swiper-slide knowledge-card knowledge-card-primary">
+            <img src="{{ versioned_asset('pics_vids/kn1.svg') }}" alt="WASMaN knowledge and awareness graphic" class="wasman-logo" loading="lazy" decoding="async">
+        </div>        
+        
     </div>
 
 </section>
