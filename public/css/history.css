@@ -187,7 +187,7 @@ h3 {
 
     color: var(--ocean);
 
-    font-size: 0.72rem;
+    font-size: 16pt;
 
     font-weight: 800;
 
@@ -241,13 +241,14 @@ h3 {
 }
 
 .history-hero-mark {
-    min-height: 180px;
+    min-height: 300px;
+    width: 300px;
 
     padding: 28px;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     border-radius: var(--radius-md);
 
@@ -511,7 +512,7 @@ h3 {
 
     color: var(--teal);
 
-    font-size: 0.68rem;
+    font-size: 16pt;
 
     font-weight: 800;
 
@@ -537,9 +538,9 @@ h3 {
 .history-content p {
     margin-bottom: 17px;
 
-    color: var(--text);
+    color: rgb(44, 44, 44);
 
-    font-size: 0.92rem;
+    font-size: 16pt;
 
     line-height: 1.9;
 }

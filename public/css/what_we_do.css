@@ -68,7 +68,7 @@ input {
     display: inline-block;
     margin-bottom: 18px;
     color: #079b9a;
-    font-size: 13px;
+    font-size: 16pt;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -172,8 +172,8 @@ input {
 }
 
 .featured-text p {
-    color: #647b81;
-    font-size: 16px;
+    color: #232424;
+    font-size: 16pt;
     line-height: 1.9;
     margin-bottom: 30px;
 }

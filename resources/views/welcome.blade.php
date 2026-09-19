@@ -124,7 +124,7 @@
        
 
         <div class="swiper-slide knowledge-card knowledge-card-primary">
-            <img src="{{ versioned_asset('pics_vids/kn1.svg') }}" alt="WASMaN knowledge and awareness graphic" class="wasman-logo" loading="lazy" decoding="async">
+            <img src="{{ versioned_asset('pics_vids/kn.webp') }}" alt="WASMaN knowledge and awareness graphic" class="wasman-logo" loading="lazy" decoding="async">
         </div>        
         
     </div>
@@ -251,11 +251,11 @@
 
             </div>
 
-            <p class="section-intro">
+            <!-- <p class="section-intro">
                 Our work brings together research, leadership,
                 sustainability and collaboration to strengthen
                 aquatic science and management.
-            </p>
+            </p> -->
 
         </div>
 
@@ -283,7 +283,7 @@
                 </p>
 
                 <a href="/publications">
-                    Explore Research
+                    Explore
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
@@ -310,7 +310,7 @@
                 </p>
 
                 <a href="/areas_of_interest">
-                    Learn More
+                    Explore
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
@@ -337,7 +337,7 @@
                 </p>
 
                 <a href="/what_we_do">
-                    Our Activities
+                    Explore
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
@@ -365,7 +365,7 @@
                 </p>
 
                 <a href="/become_member">
-                    Join the Network
+                   Explore
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 

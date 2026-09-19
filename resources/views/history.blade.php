@@ -54,7 +54,7 @@
                 </div>
 
                 <span>
-                    Women • Science • Leadership
+                    timeline
                 </span>
 
             </div>
@@ -162,16 +162,11 @@
                 </h2>
 
                 <p>
-                    WASMaN is an inclusive community where women collaborate, mentor,
-                    conduct research, share knowledge and build partnerships that
-                    strengthen aquatic science and environmental management.
+                   WASMaN is an inclusive professional network that empowers women and girls through mentorship, leadership development, research collaboration, knowledge sharing and professional networking. 
                 </p>
 
                 <p>
-                    Through training programmes, networking opportunities, research,
-                    advocacy and outreach, the network contributes to marine protected
-                    areas, sustainable fisheries, biodiversity conservation, water
-                    security and the responsible growth of the blue economy.
+                   It promotes innovation in aquatic science and environmental management while inspiring future generations to protect marine and freshwater ecosystems and contribute to sustainable development.
                 </p>
 
             </article>
@@ -239,7 +234,7 @@
 
 
         {{-- PURPOSE --}}
-        <section class="history-row reverse">
+        <!-- <section class="history-row reverse">
 
             <div class="history-image-wrap">
 
@@ -293,7 +288,7 @@
 
             </article>
 
-        </section>
+        </section> -->
 
     </div>
 

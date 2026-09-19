@@ -49,22 +49,13 @@
         </div>
 
 
-        <div class="partners-hero-card">
 
             <div class="hero-icon">
                 <i class="fa-solid fa-handshake-angle"></i>
             </div>
 
-            <strong>
-                Collaboration • Innovation • Impact
-            </strong>
+            
 
-            <p>
-                Working together to strengthen research, conservation,
-                leadership and resilient aquatic communities.
-            </p>
-
-        </div>
 
     </section>
 
@@ -82,7 +73,7 @@
                 Why Partnerships Matter
             </h2>
 
-            <p>
+            <p class="why">
                 Addressing today's environmental challenges requires collective
                 action. Through strategic partnerships, WASMaN brings together
                 knowledge, innovation, resources and expertise to create lasting
@@ -94,36 +85,13 @@
                 improve policy engagement and create opportunities for women
                 working across aquatic science and environmental management.
             </p>
-
-
-            <div class="story-highlights">
-
-                <div class="story-highlight">
-                    <i class="fa-solid fa-flask-vial"></i>
-                    <span>Research</span>
-                </div>
-
-                <div class="story-highlight">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Capacity</span>
-                </div>
-
-                <div class="story-highlight">
-                    <i class="fa-solid fa-people-group"></i>
-                    <span>Networks</span>
-                </div>
-
-            </div>
-
         </div>
 
 
         <div class="story-image">
 
-            <img
-                src="{{ asset('pics_vids/why_part.png') }}"
-                alt="WASMaN partnership and collaboration"
-            >
+            <i class="fa-solid fa-people-group"></i>
+
 
             <div class="image-badge">
                 <i class="fa-solid fa-link"></i>

@@ -28,11 +28,11 @@
         <span>WHAT WE DO</span>
         <h1>Driving Change Through Science, Collaboration and Innovation</h1>
 
-        <p>
+        <!-- <p>
             WASMaN promotes sustainable management of aquatic resources by
             empowering women through research, leadership, innovation,
             advocacy and environmental stewardship.
-        </p>
+        </p> -->
     </div>
 
     <!-- Featured Area -->
@@ -56,12 +56,77 @@
             <a href="/publications">Learn More</a>
 
         </div>
+        
 
     </div>
 
+    <div class="featured-card">   
+        <div class="featured-text">
+
+            <h2>Capacity Building & Mentorship</h2>
+
+            <p>
+                Workshops, mentorship programmes and leadership development for women in aquatic science.
+            </p>
+
+            <a href="/publications">Learn More</a>
+
+        </div>
+
+         <div class="featured-image">
+             <img src="{{asset('pics_vids/capa_build.jpg')}}">
+        </div>
+        
+
+    </div>
+
+    <div class="featured-card">
+
+        <div class="featured-image">
+             <img src="{{asset('pics_vids/policy_advo.png')}}">
+        </div>
+
+        <div class="featured-text">
+
+            <h2>Policy & Advocacy</h2>
+
+            <p>
+                Influencing environmental policies that promote sustainable water and marine resource management.
+            </p>
+
+            <a href="/publications">Learn More</a>
+
+        </div>
+        
+
+    </div>
+
+     <div class="featured-card">   
+        <div class="featured-text">
+
+            <h2>Collaboration & Network</h2>
+
+            <p>
+                Collaborating with universities, governments and international organizations to maximize impact.
+            </p>
+
+            <a href="/publications">Learn More</a>
+
+        </div>
+
+         <div class="featured-image">
+             <img src="{{asset('pics_vids/stra_part.png')}}">
+        </div>
+        
+
+    </div>
+
+
+    
+
     <!-- Activities -->
 
-    <div class="activities">
+    <!-- <div class="activities">
 
         <div class="activity">
 
@@ -102,7 +167,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
     <!-- Banner -->
 
@@ -114,7 +179,7 @@
 
     <!-- More Activities -->
 
-    <div class="activities">
+    <!-- <div class="activities">
 
         <div class="activity">
 
@@ -155,7 +220,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
 </section>
 <!-- ================= FOOTER ================= -->

@@ -147,7 +147,7 @@ img {
 
     color: var(--blue);
 
-    font-size: 0.70rem;
+    font-size: 0.99rem;
     font-weight: 800;
 
     letter-spacing: 0.18em;
@@ -577,9 +577,9 @@ img {
 
     margin-top: 20px;
 
-    color: var(--text);
+    color: black;
 
-    font-size: 0.98rem;
+    font-size: 18pt;
 
     line-height: 1.95;
 }
@@ -696,9 +696,9 @@ img {
 }
 
 .who-feature-card p {
-    color: var(--text);
+    color: black;
 
-    font-size: 0.88rem;
+    font-size: 0.99rem;
 
     line-height: 1.75;
 }
@@ -816,7 +816,7 @@ img {
 
     color: #a9bec5;
 
-    font-size: 0.72rem;
+    font-size: 0.98rem;
 
     font-weight: 800;
 }
@@ -828,7 +828,7 @@ img {
 
     color: var(--navy);
 
-    font-size: 1.23rem;
+    font-size: 18pt;
 
     font-weight: 600;
 
@@ -838,9 +838,9 @@ img {
 .focus-card p {
     flex: 1;
 
-    color: var(--text);
+    color: black;
 
-    font-size: 0.87rem;
+    font-size: 16pt;
 
     line-height: 1.8;
 }

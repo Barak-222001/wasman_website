@@ -47,7 +47,7 @@
 
         </div>
 
-        <div class="team-hero-card">
+        <!-- <div class="team-hero-card">
 
             <div class="hero-icon">
                 <i class="fa-solid fa-users-viewfinder"></i>
@@ -62,7 +62,7 @@
                 conservation and sustainable development.
             </p>
 
-        </div>
+        </div> -->
 
     </section>
 
@@ -79,14 +79,13 @@
                 </span>
 
                 <h2>
-                    Executive Committee
+                    Leadership Committee
                 </h2>
 
             </div>
 
             <p>
-                Our Executive Committee provides strategic direction and
-                coordinates the activities, programmes and growth of WASMaN.
+            The Leadership Committee provides strategic direction and oversight for WASMaN. It guides the Network’s policies, programmes and partnerships, supports resource mobilisation, and ensures that activities align with WASMaN’s mission, values and long-term goals.
             </p>
 
         </div>
@@ -297,7 +296,7 @@
             <div>
 
                 <span class="section-label">
-                    OUR COMMUNITY
+                    Our Operational Team
                 </span>
 
                 <h2>
@@ -307,9 +306,7 @@
             </div>
 
             <p>
-                WASMaN brings together women and professionals from
-                diverse backgrounds who share a commitment to aquatic
-                science, conservation, research and sustainable development.
+                The Network Secretariat is the operational arm of WASMaN, responsible for coordinating programmes, administration, communications, research, partnerships and member engagement. It supports the Network’s leadership, implements approved activities and ensures the effective day-to-day functioning of WASMaN
             </p>
 
         </div>
