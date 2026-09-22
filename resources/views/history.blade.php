@@ -47,22 +47,110 @@
             </div>
 
 
-            <div class="history-hero-mark">
-
-                <div class="history-hero-icon">
-                    <i class="fa-solid fa-water"></i>
+            <div class="history-hero-mark journey-carousel" aria-label="WASMaN's Journey">
+                <div class="journey-header">
+                    <div class="history-hero-icon">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <div>
+                        <span class="journey-kicker">OUR TIMELINE</span>
+                        <h2>WASMaN’s Journey</h2>
+                    </div>
                 </div>
 
-                <span>
-                    timeline
-                </span>
+                <div class="journey-slides">
+                    <article class="journey-slide is-active">
+                        <span class="journey-year">2022</span>
+                        <p>WASMaN idea conceived</p>
+                    </article>
+                    <article class="journey-slide">
+                        <span class="journey-year">2023</span>
+                        <p>Team created to develop the idea</p>
+                    </article>
+                    <article class="journey-slide">
+                        <span class="journey-year">2024</span>
+                        <p>Network registration process initiated</p>
+                    </article>
+                    <article class="journey-slide">
+                        <span class="journey-year">2025</span>
+                        <p>Network fully registered and obtained legal status</p>
+                    </article>
+                    <article class="journey-slide">
+                        <span class="journey-year">2026</span>
+                        <p>Official launch of WASMaN</p>
+                    </article>
+                </div>
 
+                <div class="journey-footer">
+                    <button class="journey-arrow journey-prev" type="button" aria-label="Previous milestone">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <div class="journey-dots" aria-label="Timeline navigation">
+                        <button class="journey-dot is-active" type="button" aria-label="Show 2022 milestone"></button>
+                        <button class="journey-dot" type="button" aria-label="Show 2023 milestone"></button>
+                        <button class="journey-dot" type="button" aria-label="Show 2024 milestone"></button>
+                        <button class="journey-dot" type="button" aria-label="Show 2025 milestone"></button>
+                        <button class="journey-dot" type="button" aria-label="Show 2026 milestone"></button>
+                    </div>
+
+                    <button class="journey-arrow journey-next" type="button" aria-label="Next milestone">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
 
         </div>
 
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.journey-carousel');
+            if (!carousel) return;
 
-        {{-- ORGANIZATION OVERVIEW --}}
+            const slides = Array.from(carousel.querySelectorAll('.journey-slide'));
+            const dots = Array.from(carousel.querySelectorAll('.journey-dot'));
+            const prev = carousel.querySelector('.journey-prev');
+            const next = carousel.querySelector('.journey-next');
+            let current = 0;
+            let timer;
+
+            function showSlide(index) {
+                current = (index + slides.length) % slides.length;
+                slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+                dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
+            }
+
+            function restart() {
+                clearInterval(timer);
+                timer = setInterval(() => showSlide(current + 1), 4500);
+            }
+
+            prev.addEventListener('click', function () {
+                showSlide(current - 1);
+                restart();
+            });
+
+            next.addEventListener('click', function () {
+                showSlide(current + 1);
+                restart();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function () {
+                    showSlide(index);
+                    restart();
+                });
+            });
+
+            carousel.addEventListener('mouseenter', () => clearInterval(timer));
+            carousel.addEventListener('mouseleave', restart);
+
+            showSlide(0);
+            restart();
+        });
+        </script>
+
+{{-- ORGANIZATION OVERVIEW --}}
         <section class="history-row">
 
             <div class="history-image-wrap">
