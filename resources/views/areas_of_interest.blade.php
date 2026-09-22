@@ -439,7 +439,7 @@
 
                 <div class="image-label">
                     <span>05</span>
-                    <strong>Community & Partnerships</strong>
+                    <strong>Community Outreach and Extension</strong>
                 </div>
 
             </div>
