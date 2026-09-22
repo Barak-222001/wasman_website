@@ -109,7 +109,7 @@
 
             <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Michelle Naa Kordei Clottey Sackey" data-name="Dr. Michelle Naa Kordei Clottey Sackey" data-role="Vice President" data-specialty="Fisheries Science &amp; Coastal Resource Sustainability" data-image="{{ asset('pics_vids/michelle_clottey.jpeg') }}" data-bio="Dr. Michelle Naa Kordei Clottey Sackey is a Ghanaian fisheries scientist and lecturer at the University of Cape Coast, Ghana. Her work focuses on fish biology, stock assessment, fisheries management, and coastal resource sustainability, with a strong commitment to translating science into practical solutions for fisheries-dependent communities. Michelle is passionate about mentoring young women in science, advancing inclusive ocean governance, and amplifying women’s voices in aquatic and environmental sciences. Beyond the lab and lecture hall, she enjoys cooking, swimming, and engaging in outreach that inspires the next generation of women in STEM.">
                 <div class="member-image">
-                    <img src="{{ asset('pics_vids/michelle_clottey.jpeg') }}" alt="Dr. Michelle Naa Kordei Clottey Sackey">
+                    <img src="{{ asset('pics_vids/michelle.jpeg') }}" alt="Dr. Michelle Naa Kordei Clottey Sackey">
                     <div class="member-badge"><i class="fa-solid fa-people-arrows"></i> Vice President</div>
                 </div>
                 <div class="member-info">
