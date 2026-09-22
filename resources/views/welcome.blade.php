@@ -328,12 +328,15 @@
                 </span>
 
                 <h3>
-                    Sustainable Aquatic Resources
+                    Policy & Advocacy
                 </h3>
 
                 <p>
-                    Supporting sustainable management and conservation
-                    of aquatic, coastal and marine resources.
+                    Encourage the recognition of women’s professional skills, and advocate for equal 
+                    opportunities with male scientists in the region 
+                    Celebrate the achievements of women in aquatic systems management. 
+                    Influence national, regional, and international policies trajectory on aquatic science and 
+                    management. 
                 </p>
 
                 <a href="/what_we_do">

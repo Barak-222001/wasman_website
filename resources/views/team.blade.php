@@ -151,7 +151,7 @@
 
             <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Elizabeth Effah" data-name="Dr. Elizabeth Effah" data-role="Programmes Coordinator" data-specialty="Coastal Management, Pollution &amp; Climate Adaptation" data-image="{{ asset('pics_vids/dr.huge.jpeg') }}" data-bio="Dr. Effah is a coastal management specialist with an interest in the conservation and management of coastal and marine water bodies, pollution studies in the coastal environment, particularly effects of elevated heavy metals, microbes and other solid wastes on the coastal environment and possible restoration measures and climate change and adaptation in coastal areas. She is also passionate about capacity building and is a co-founder of WASMaN. She holds a PhD degree in Integrated Coastal Zone Management, an MPhil degree in Integrated Coastal Zone Management, and a BSc in Fisheries and Aquatic Science.">
                 <div class="member-image">
-                    <img src="{{ asset('pics_vids/dr.huge.jpeg') }}" alt="Dr. Elizabeth Effah">
+                    <img src="{{ asset('pics_vids/effah.jpg') }}" alt="Dr. Elizabeth Effah">
                     <div class="member-badge"><i class="fa-solid fa-diagram-project"></i> Programmes Coordinator</div>
                 </div>
                 <div class="member-info">
