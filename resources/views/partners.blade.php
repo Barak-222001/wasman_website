@@ -275,11 +275,11 @@
                 </div>
 
                 <h3>
-                    Research Collaboration
+                    Research & Innovation
                 </h3>
 
                 <p>
-                    Joint scientific research, knowledge exchange and innovation.
+                    Research funding opportunities, including scholarships, can be posted and searched.                 
                 </p>
 
             </article>
@@ -296,11 +296,11 @@
                 </div>
 
                 <h3>
-                    Marine Conservation
+                     Capacity Building & Mentorship 
                 </h3>
 
                 <p>
-                    Protecting aquatic ecosystems through coordinated action.
+                     Information gathering and sharing of learning resources
                 </p>
 
             </article>
@@ -317,11 +317,11 @@
                 </div>
 
                 <h3>
-                    Capacity Building
+                    Policy & Advocacy
                 </h3>
 
                 <p>
-                    Training, mentorship, professional development and scholarships.
+                    Celebrate the achievements of women in aquatic systems management. 
                 </p>
 
             </article>
@@ -338,11 +338,11 @@
                 </div>
 
                 <h3>
-                    Policy & Advocacy
+                    Collaboration & Networking
                 </h3>
 
                 <p>
-                    Supporting evidence-informed and sustainable environmental policies.
+                    Promote issues of relevance to women experts/ scientists in Ghana and beyond. 
                 </p>
 
             </article>
