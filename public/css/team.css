@@ -618,6 +618,7 @@ h3 {
 
 .network-members {
     position: relative;
+    /* height: 300px; */
 
     z-index: 2;
 
@@ -642,9 +643,14 @@ h3 {
 .network-heading {
     margin-bottom: 55px;
 }
+.network-heading p,.leadership-section p,.values-section p {
+    font-size: 13pt;
+    color: rgb(27, 26, 26);
+}
 
 .members-grid {
     max-width: 1200px;
+    /* height: 300px; */
 
     margin: 0 auto;
 
@@ -656,6 +662,7 @@ h3 {
 }
 
 .network-member {
+    height: 200px;
     position: relative;
 
     display: flex;
@@ -686,37 +693,44 @@ h3 {
 .network-member-image {
     flex: 0 0 78px;
 
-    width: 78px;
-    height: 78px;
+    width: 50%;
+    height: 100%;
 
     overflow: hidden;
 
-    border-radius: 50%;
 
-    border: 3px solid rgba(79,210,196,0.18);
+    /* border: 3px solid rgba(79,210,196,0.18); */
+     /* background-color: #f90505; */
 }
 
 .network-member-image img {
     width: 100%;
-    height: 100%;
-
+    height: 60%;
+    border-radius: 50%; 
+    border: 3px solid rgba(79,210,196,0.18);
     object-fit: cover;
+   
 }
-
+.network-member-info{
+    width: 50%;
+    height: 100%;
+    /* background-color: #e0f905; */
+}
 .network-member-info h3 {
     margin-bottom: 4px;
 
-    color: var(--ocean-deep);
+    color: black;
 
-    font-size: 1rem;
+    font-size: 16pt;
 
     font-weight: 600;
 }
 
 .network-member-info span {
-    color: var(--muted);
+    color: rgba(2, 26, 57, 0.751);
 
-    font-size: 0.72rem;
+    font-size: 12pt;
+    font-weight: 700;
 }
 
 .member-mini-icon {
@@ -1044,6 +1058,7 @@ h3 {
 }
 
 .join-visual {
+    width: 300px;
     position: relative;
 
     z-index: 2;
@@ -1056,18 +1071,19 @@ h3 {
 
     flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,0.08);
+    /* background: rgba(172, 169, 169, 0.61); */
 
-    border: 1px solid rgba(255,255,255,0.10);
+    border: 1px solid rgba(255, 255, 255, 0.393);
 }
 
-.join-icon {
-    width: 50px;
-    height: 50px;
+.join-visual {
+    width: 300px;
+    height: 200px;
 
     display: flex;
 
@@ -1075,10 +1091,10 @@ h3 {
     justify-content: center;
 
     border-radius: 14px;
+    font-size: 150pt;
+    /* background: rgba(255,255,255,0.10); */
 
-    background: rgba(255,255,255,0.10);
-
-    color: var(--mint);
+    color: white;
 }
 
 .join-visual span {
@@ -1693,3 +1709,33 @@ h3 {
         font-size: 2.2rem;
     }
 }
+
+
+/* =========================================================
+   LEADERSHIP BIO POPUP
+   Added without changing the existing team-page layout
+========================================================= */
+.leadership-card { cursor: pointer; }
+.leadership-card:focus-visible { outline: 3px solid var(--mint); outline-offset: 5px; }
+.bio-card-hint { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; color: var(--ocean); font-size: .74rem; font-weight: 800; }
+.bio-card-hint i { font-size: .68rem; }
+body.modal-open { overflow: hidden; }
+.leader-modal { position: fixed; inset: 0; z-index: 100000; display: flex; align-items: center; justify-content: center; padding: 30px; visibility: hidden; opacity: 0; transition: opacity .25s ease, visibility .25s ease; }
+.leader-modal.is-open { visibility: visible; opacity: 1; }
+.leader-modal-backdrop { position: absolute; inset: 0; background: rgba(3, 29, 42, .78); backdrop-filter: blur(7px); }
+.leader-modal-dialog { position: relative; z-index: 2; width: min(1050px, 96vw); max-height: 88vh; overflow: auto; border-radius: 28px; background: #fff; box-shadow: 0 35px 100px rgba(0,0,0,.30); transform: translateY(18px) scale(.985); transition: transform .28s ease; }
+.leader-modal.is-open .leader-modal-dialog { transform: translateY(0) scale(1); }
+.leader-modal-close { position: absolute; top: 18px; right: 18px; z-index: 5; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,255,255,.94); color: var(--ocean-deep); box-shadow: 0 8px 25px rgba(5,47,67,.15); cursor: pointer; font-size: 1.05rem; }
+.leader-modal-layout { display: grid; grid-template-columns: minmax(300px, .8fr) minmax(0, 1.2fr); min-height: 590px; }
+.leader-modal-photo { position: relative; min-height: 590px; overflow: hidden; background: var(--seafoam); }
+.leader-modal-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.leader-modal-photo::after { content: ''; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(5,47,67,.70)); pointer-events: none; }
+.leader-modal-role { position: absolute; left: 24px; bottom: 24px; z-index: 2; padding: 10px 16px; border-radius: 50px; background: rgba(255,255,255,.95); color: var(--ocean-deep); font-size: .78rem; font-weight: 800; }
+.leader-modal-content { padding: 58px 52px 48px; }
+.leader-modal-eyebrow { display: inline-block; margin-bottom: 12px; color: var(--teal); font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
+.leader-modal-content h2 { margin: 0 0 13px; color: var(--ocean-deep); font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3vw, 3rem); line-height: 1.12; }
+.leader-modal-specialty { display: inline-block; margin-bottom: 27px; padding: 8px 12px; border-radius: 10px; background: var(--seafoam); color: var(--ocean); font-size: .78rem; font-weight: 700; }
+.leader-modal-bio p { margin: 0 0 18px; color: #344f5b; font-size: .94rem; line-height: 1.85; }
+.leader-modal-bio p:last-child { margin-bottom: 0; }
+@media (max-width: 800px) { .leader-modal { padding: 16px; } .leader-modal-dialog { max-height: 92vh; border-radius: 22px; } .leader-modal-layout { grid-template-columns: 1fr; } .leader-modal-photo { min-height: 330px; height: 42vh; } .leader-modal-content { padding: 36px 26px 34px; } .leader-modal-close { top: 12px; right: 12px; } }
+@media (max-width: 480px) { .leader-modal { padding: 8px; } .leader-modal-dialog { width: 100%; max-height: 95vh; border-radius: 18px; } .leader-modal-photo { min-height: 280px; height: 36vh; } .leader-modal-content { padding: 30px 20px; } .leader-modal-content h2 { font-size: 1.85rem; } }

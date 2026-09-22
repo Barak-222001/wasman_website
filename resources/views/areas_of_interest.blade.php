@@ -36,11 +36,11 @@
                 </div>
 
                 <h1>
-                    Advancing Science for Healthy Waters,
-                    <span>Thriving Ecosystems & Resilient Communities</span>
+                    Sustaining our Waters, ,
+                    <span>Empowering Generations</span>
                 </h1>
 
-                <p>
+                <!-- <p>
                     WASMaN brings together science, innovation, leadership
                     and community action to promote sustainable aquatic
                     ecosystems and climate-resilient communities.
@@ -63,7 +63,7 @@
                         <span>Leadership</span>
                     </div>
 
-                </div>
+                </div> -->
 
             </div>
 
@@ -98,11 +98,11 @@
 
         <div class="intro-content">
 
-            <span class="section-label">
+            <!-- <span class="section-label">
                 OUR FOCUS
-            </span>
+            </span> -->
 
-            <h2>
+            <!-- <h2>
                 Creating Impact Through Science,
                 Leadership & Collaboration
             </h2>
@@ -141,7 +141,7 @@
                     <span>Leadership</span>
                 </div>
 
-            </div>
+            </div> -->
 
         </div>
 
@@ -154,7 +154,7 @@
         <div class="interest-section-heading">
 
             <span class="section-label">
-                WHAT DRIVES OUR WORK
+                What Our Work is About
             </span>
 
             <h2>
@@ -242,7 +242,7 @@
                 </span>
 
                 <h2>
-                    Climate & Water Sustainability
+                    Climate & Water Resources Management
                 </h2>
 
                 <p>
@@ -407,7 +407,7 @@
                 </span>
 
                 <h2>
-                    Community Engagement & Partnerships
+                    Community Outreach & Extension
                 </h2>
 
                 <p>
@@ -450,15 +450,15 @@
 
 
     {{-- THEMATIC AREAS --}}
-    <section class="thematic-section">
+    <!-- <section class="thematic-section">
 
         <div class="thematic-title">
 
-            <span class="section-label">
+            <!-- <span class="section-label">
                 OUR THEMATIC FOCUS
-            </span>
+            </span> -->
 
-            <h2>
+            <!-- <h2>
                 Key Areas We Continue to Advance
             </h2>
 
@@ -467,9 +467,9 @@
                 addressing emerging environmental issues through
                 multidisciplinary research, innovation and strategic
                 partnerships.
-            </p>
+            </p> -->
 
-        </div>
+        <!-- </div>
 
 
         <div class="thematic-grid">
@@ -597,7 +597,7 @@
 
         </div>
 
-    </section>
+    </section>  -->
 
 
     {{-- IMPACT --}}
@@ -720,9 +720,7 @@
                 </span>
 
                 <h2>
-                    Healthy Waters.
-                    Empowered Women.
-                    Sustainable Communities.
+                   A leading network of women in aquatic science & management driving inclusive leadership & sustainable growth across Africa’s blue economy
                 </h2>
 
                 <p>

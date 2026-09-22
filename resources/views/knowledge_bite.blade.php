@@ -138,420 +138,209 @@
 
     </section>
 
-
-    {{-- FEATURED KNOWLEDGE --}}
-    <section class="featured-knowledge">
-
-        <div class="featured-knowledge-image">
-
-            <img
-                src="{{ asset('pics_vids/fut.png') }}"
-                alt="Blue carbon coastal ecosystem"
-            >
-
-            <span class="featured-label">
-                FEATURED
-            </span>
-
-            <div class="featured-image-caption">
-                <i class="fa-solid fa-leaf"></i>
-                <span>Blue Carbon & Coastal Resilience</span>
-            </div>
-
-        </div>
-
-
-        <div class="featured-knowledge-content">
-
-            <span class="section-label dark-label">
-                KNOWLEDGE SPOTLIGHT
-            </span>
-
-            <h2>
-                The Future of Blue Carbon:
-                Why Coastal Ecosystems Matter
-            </h2>
-
-            <p>
-                Discover how mangroves, seagrass meadows and
-                salt marshes contribute to climate mitigation,
-                coastal protection and ecosystem resilience.
-            </p>
-
-            <div class="knowledge-meta">
-
-                <span>
-                    <i class="fa-regular fa-calendar"></i>
-                    August 2026
-                </span>
-
-                <span>
-                    <i class="fa-solid fa-water"></i>
-                    Climate & Oceans
-                </span>
-
-                <span>
-                    <i class="fa-regular fa-clock"></i>
-                    5 min read
-                </span>
-
-            </div>
-
-            <div class="featured-actions">
-
-                <a href="#">
-                    Read Knowledge Bite
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-                <a href="resources/blue-carbon.pdf" download class="outline-action">
-                    Download Brief
-                    <i class="fa-solid fa-download"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    {{-- LATEST KNOWLEDGE BITES --}}
-    <section class="latest-knowledge" id="latest-bites">
-
+    {{-- =========================================================
+         LATEST KNOWLEDGE BITE
+         Update this featured block whenever a new weekly bite arrives.
+    ========================================================== --}}
+    <section class="latest-knowledge-bite" id="latest-bite">
         <div class="content-container">
-
-            <div class="section-title">
-
-                <span class="section-label">
-                    LATEST INSIGHTS
-                </span>
-
-                <h2>
-                    Explore Knowledge Bites
-                </h2>
-
-                <p>
-                    Short and accessible insights covering
-                    important developments in aquatic science
-                    and environmental management.
-                </p>
-
+            <div class="latest-bite-heading">
+                <span class="section-label">LATEST KNOWLEDGE BITE</span>
+                <h2>This Week's Knowledge Bite</h2>
+                <p>The most recent WASMaN knowledge resource, featured separately for quick access.</p>
             </div>
 
+            <article class="latest-bite-card">
+                <div class="latest-bite-photo">
+                    <img src="{{ asset('pics_vids/knowledge-bites/wetlands.webp') }}"
+                         alt="Wetlands: A Quietly Disappearing Flood Defence Asset">
+                    <span class="latest-badge">
+                        <i class="fa-solid fa-bolt"></i> Latest
+                    </span>
+                </div>
 
-            <div class="knowledge-grid">
+                <div class="latest-bite-content">
+                    <span class="current-bite-category">Wetlands & Climate Resilience</span>
 
-                <article class="knowledge-card">
+                    <h3>Wetlands: A Quietly Disappearing Flood Defence Asset</h3>
 
-                    <div class="knowledge-card-image">
-
-                        <img src="{{ asset('pics_vids/under.png') }}" alt="Marine heatwaves">
-
-                        <span>
-                            CLIMATE
-                        </span>
-
+                    <div class="latest-bite-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 6 July 2026</span>
+                        <span><i class="fa-solid fa-water"></i> Wetlands</span>
                     </div>
 
-                    <div class="knowledge-card-body">
+                    <p>
+                        Wetlands are areas where water covers the land permanently or seasonally,
+                        including marshes, swamps, lagoons, floodplains, mangroves and estuaries.
+                        This Knowledge Bite highlights their importance as natural flood-defence
+                        assets, the pressures driving wetland loss, and the need for protection,
+                        restoration, stronger enforcement and community participation.
+                    </p>
 
-                        <small>
-                            AUGUST 2026
-                        </small>
+                    <div class="latest-bite-actions">
+                        <a class="bite-read-button"
+                           href="{{ route('knowledge-bites.read', 'wetlands') }}"
+                           target="_blank" rel="noopener">
+                            <i class="fa-regular fa-eye"></i> Read Knowledge Bite
+                        </a>
 
-                        <h3>
-                            Understanding Marine Heatwaves
-                        </h3>
-
-                        <p>
-                            Learn how rising ocean temperatures
-                            affect marine ecosystems, fisheries
-                            and coastal communities.
-                        </p>
-
-                        <div class="knowledge-card-footer">
-
-                            <a href="#">
-                                Read More
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                            <a
-                                href="resources/marine-heatwaves.pdf"
-                                download
-                                class="download-link"
-                            >
-                                <i class="fa-solid fa-file-pdf"></i>
-                                PDF
-                            </a>
-
-                        </div>
-
+                        <a class="bite-download-button"
+                           href="{{ route('knowledge-bites.download', 'wetlands') }}">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </a>
                     </div>
-
-                </article>
-
-
-                <article class="knowledge-card">
-
-                    <div class="knowledge-card-image">
-
-                        <img src="{{ asset('pics_vids/grow.png') }}" alt="Marine plastic pollution">
-
-                        <span>
-                            POLLUTION
-                        </span>
-
-                    </div>
-
-                    <div class="knowledge-card-body">
-
-                        <small>
-                            JULY 2026
-                        </small>
-
-                        <h3>
-                            The Growing Challenge of Marine Plastics
-                        </h3>
-
-                        <p>
-                            Exploring new research and emerging
-                            approaches to reducing plastic pollution
-                            in aquatic ecosystems.
-                        </p>
-
-                        <div class="knowledge-card-footer">
-
-                            <a href="#">
-                                Read More
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                            <a
-                                href="resources/marine-plastics.pdf"
-                                download
-                                class="download-link"
-                            >
-                                <i class="fa-solid fa-file-pdf"></i>
-                                PDF
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="knowledge-card">
-
-                    <div class="knowledge-card-image">
-
-                        <img src="{{ asset('pics_vids/new.png') }}" alt="Mangrove restoration">
-
-                        <span>
-                            CONSERVATION
-                        </span>
-
-                    </div>
-
-                    <div class="knowledge-card-body">
-
-                        <small>
-                            JULY 2026
-                        </small>
-
-                        <h3>
-                            New Approaches to Mangrove Restoration
-                        </h3>
-
-                        <p>
-                            Discover innovative approaches being
-                            used to restore mangrove ecosystems
-                            and strengthen coastal resilience.
-                        </p>
-
-                        <div class="knowledge-card-footer">
-
-                            <a href="#">
-                                Read More
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                            <a
-                                href="resources/mangrove-restoration.pdf"
-                                download
-                                class="download-link"
-                            >
-                                <i class="fa-solid fa-file-pdf"></i>
-                                PDF
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="knowledge-card">
-
-                    <div class="knowledge-card-image">
-
-                        <img src="{{ asset('pics_vids/emer.png') }}" alt="Blue economy">
-
-                        <span>
-                            BLUE ECONOMY
-                        </span>
-
-                    </div>
-
-                    <div class="knowledge-card-body">
-
-                        <small>
-                            JUNE 2026
-                        </small>
-
-                        <h3>
-                            Emerging Opportunities in the Blue Economy
-                        </h3>
-
-                        <p>
-                            Explore how innovation and sustainable
-                            ocean-based industries are creating new
-                            opportunities for coastal communities.
-                        </p>
-
-                        <div class="knowledge-card-footer">
-
-                            <a href="#">
-                                Read More
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                            <a
-                                href="resources/blue-economy.pdf"
-                                download
-                                class="download-link"
-                            >
-                                <i class="fa-solid fa-file-pdf"></i>
-                                PDF
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="knowledge-card">
-
-                    <div class="knowledge-card-image">
-
-                        <img src="{{ asset('pics_vids/build.png') }}" alt="Sustainable fisheries">
-
-                        <span>
-                            FISHERIES
-                        </span>
-
-                    </div>
-
-                    <div class="knowledge-card-body">
-
-                        <small>
-                            JUNE 2026
-                        </small>
-
-                        <h3>
-                            Building More Sustainable Fisheries
-                        </h3>
-
-                        <p>
-                            New approaches to fisheries management
-                            are creating opportunities for healthier
-                            ecosystems and stronger livelihoods.
-                        </p>
-
-                        <div class="knowledge-card-footer">
-
-                            <a href="#">
-                                Read More
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                            <a
-                                href="resources/sustainable-fisheries.pdf"
-                                download
-                                class="download-link"
-                            >
-                                <i class="fa-solid fa-file-pdf"></i>
-                                PDF
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="knowledge-card">
-
-                    <div class="knowledge-card-image">
-
-                        <img src="{{ asset('pics_vids/tech.png') }}" alt="Ocean technology">
-
-                        <span>
-                            TECHNOLOGY
-                        </span>
-
-                    </div>
-
-                    <div class="knowledge-card-body">
-
-                        <small>
-                            MAY 2026
-                        </small>
-
-                        <h3>
-                            Technology Transforming Ocean Research
-                        </h3>
-
-                        <p>
-                            From satellite monitoring to underwater
-                            sensors, technology is changing how
-                            aquatic ecosystems are studied.
-                        </p>
-
-                        <div class="knowledge-card-footer">
-
-                            <a href="#">
-                                Read More
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                            <a
-                                href="resources/ocean-technology.pdf"
-                                download
-                                class="download-link"
-                            >
-                                <i class="fa-solid fa-file-pdf"></i>
-                                PDF
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
+                </div>
+            </article>
         </div>
-
     </section>
+
+    {{-- =========================================================
+         PREVIOUS KNOWLEDGE BITES
+         When a new weekly bite is published, move the former latest
+         item into this archive.
+    ========================================================== --}}
+    <section class="previous-knowledge-bites" id="previous-bites">
+        <div class="content-container">
+            <div class="section-title previous-bites-heading">
+                <span class="section-label">PREVIOUS KNOWLEDGE BITES</span>
+                <h2>Explore Earlier Knowledge Bites</h2>
+                <p>
+                    Browse previous WASMaN knowledge resources on endangered marine species,
+                    aquatic biodiversity and ocean conservation.
+                </p>
+            </div>
+
+            <div class="current-bites-grid">
+
+                <article class="current-bite-card">
+                    <div class="current-bite-photo">
+                        <img src="{{ asset('pics_vids/knowledge-bites/smalltooth-sawfish.webp') }}"
+                             alt="Smalltooth Sawfish" loading="lazy">
+                    </div>
+                    <div class="current-bite-body">
+                        <span class="current-bite-category">World Oceans Day 2026 · Issue 3</span>
+                        <h3>Smalltooth Sawfish</h3>
+                        <div class="current-bite-date">
+                            <i class="fa-regular fa-calendar"></i> 22 June 2026
+                        </div>
+                        <p>
+                            Meet the critically endangered smalltooth sawfish, its ecological
+                            importance, major threats and the conservation actions needed to
+                            protect the species.
+                        </p>
+                        <div class="current-bite-actions">
+                            <a class="bite-read-button"
+                               href="{{ route('knowledge-bites.read', 'smalltooth-sawfish') }}"
+                               target="_blank" rel="noopener">
+                                <i class="fa-regular fa-eye"></i> Read Knowledge Bite
+                            </a>
+                            <a class="bite-download-button"
+                               href="{{ route('knowledge-bites.download', 'smalltooth-sawfish') }}">
+                                <i class="fa-solid fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="current-bite-card">
+                    <div class="current-bite-photo">
+                        <img src="{{ asset('pics_vids/knowledge-bites/leatherback-sea-turtle.webp') }}"
+                             alt="Leatherback Sea Turtle" loading="lazy">
+                    </div>
+                    <div class="current-bite-body">
+                        <span class="current-bite-category">World Oceans Day 2026 · Issue 2</span>
+                        <h3>Leatherback Sea Turtle</h3>
+                        <div class="current-bite-date">
+                            <i class="fa-regular fa-calendar"></i> 18 June 2026
+                        </div>
+                        <p>
+                            Discover the world's largest living sea turtle, its role in marine
+                            ecosystems, its distribution and the pressures facing populations
+                            across West Africa.
+                        </p>
+                        <div class="current-bite-actions">
+                            <a class="bite-read-button"
+                               href="{{ route('knowledge-bites.read', 'leatherback-sea-turtle') }}"
+                               target="_blank" rel="noopener">
+                                <i class="fa-regular fa-eye"></i> Read Knowledge Bite
+                            </a>
+                            <a class="bite-download-button"
+                               href="{{ route('knowledge-bites.download', 'leatherback-sea-turtle') }}">
+                                <i class="fa-solid fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="current-bite-card">
+                    <div class="current-bite-photo">
+                        <img src="{{ asset('pics_vids/knowledge-bites/scalloped-hammerhead.webp') }}"
+                             alt="The Scalloped Hammerhead Shark" loading="lazy">
+                    </div>
+                    <div class="current-bite-body">
+                        <span class="current-bite-category">World Oceans Day 2026 · Issue 1</span>
+                        <h3>The Scalloped Hammerhead Shark</h3>
+                        <div class="current-bite-date">
+                            <i class="fa-regular fa-calendar"></i> 1 June 2026
+                        </div>
+                        <p>
+                            Learn why the scalloped hammerhead shark matters to marine food webs
+                            and ocean health, the pressures driving its decline and the
+                            conservation measures needed.
+                        </p>
+                        <div class="current-bite-actions">
+                            <a class="bite-read-button"
+                               href="{{ route('knowledge-bites.read', 'scalloped-hammerhead') }}"
+                               target="_blank" rel="noopener">
+                                <i class="fa-regular fa-eye"></i> Read Knowledge Bite
+                            </a>
+                            <a class="bite-download-button"
+                               href="{{ route('knowledge-bites.download', 'scalloped-hammerhead') }}">
+                                <i class="fa-solid fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="current-bite-card">
+                    <div class="current-bite-photo">
+                        <img src="{{ asset('pics_vids/knowledge-bites/aquatic-biodiversity.webp') }}"
+                             alt="Aquatic Biodiversity Conservation: A Call to Collective Action" loading="lazy">
+                    </div>
+                    <div class="current-bite-body">
+                        <span class="current-bite-category">Aquatic Biodiversity</span>
+                        <h3>Aquatic Biodiversity Conservation: A Call to Collective Action</h3>
+                        <div class="current-bite-date">
+                            <i class="fa-regular fa-calendar"></i> 25 May 2026
+                        </div>
+                        <p>
+                            Explore why aquatic biodiversity matters to food systems, livelihoods,
+                            climate resilience and the blue economy, and the conservation actions
+                            needed.
+                        </p>
+                        <div class="current-bite-actions">
+                            <a class="bite-read-button"
+                               href="{{ route('knowledge-bites.read', 'aquatic-biodiversity') }}"
+                               target="_blank" rel="noopener">
+                                <i class="fa-regular fa-eye"></i> Read Knowledge Bite
+                            </a>
+                            <a class="bite-download-button"
+                               href="{{ route('knowledge-bites.download', 'aquatic-biodiversity') }}">
+                                <i class="fa-solid fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
 
 
     {{-- KNOWLEDGE CATEGORIES --}}
@@ -562,7 +351,7 @@
             <div class="section-title">
 
                 <span class="section-label">
-                    EXPLORE TOPICS
+                    EXPLORE ALL KNOWLEDGE BITES
                 </span>
 
                 <h2>
@@ -1045,6 +834,7 @@
 <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
 <script src="{{ asset('created_js/carousel.js') }}"></script>
 <script src="{{ asset('created_js/animation.js') }}"></script>
+
 
 </body>
 </html>

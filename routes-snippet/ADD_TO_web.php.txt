@@ -1,0 +1,10 @@
+<?php
+// Add these lines to routes/web.php
+
+use App\Http\Controllers\KnowledgeBiteController;
+
+Route::get('/knowledge-bites/{slug}/read', [KnowledgeBiteController::class, 'read'])
+    ->name('knowledge-bites.read');
+
+Route::get('/knowledge-bites/{slug}/download', [KnowledgeBiteController::class, 'download'])
+    ->name('knowledge-bites.download');

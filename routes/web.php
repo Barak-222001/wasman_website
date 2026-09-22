@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\KnowledgeBiteController;
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\InternController;
@@ -390,3 +392,9 @@ Route::post(
     '/general_enquiries',
     [GeneralEnquiryController::class, 'store']
 )->name('general-enquiries.store');
+
+Route::get('/knowledge-bites/{slug}/read', [KnowledgeBiteController::class, 'read'])
+    ->name('knowledge-bites.read');
+
+Route::get('/knowledge-bites/{slug}/download', [KnowledgeBiteController::class, 'download'])
+    ->name('knowledge-bites.download');

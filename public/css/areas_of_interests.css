@@ -4,8 +4,8 @@
 ========================================================= */
 
 :root {
-    --ocean-deep: #052f43;
-    --ocean-dark: #073e54;
+    --ocean-deep: #000000;
+    --ocean-dark: #031922;
     --ocean: #087f9c;
     --teal: #18a7b5;
     --mint: #4fd2c4;
@@ -17,7 +17,7 @@
     --white: #ffffff;
 
     --heading: #183746;
-    --text: #536d78;
+    --text: #02090c;
     --muted: #82959d;
 
     --border: rgba(8,127,156,0.12);
@@ -31,6 +31,7 @@
     --radius-lg: 30px;
 
     --transition: all 0.34s ease;
+    /* var(--ocean-deep) */
 }
 
 
@@ -91,7 +92,7 @@ h3 {
 
     color: var(--teal);
 
-    font-size: 0.7rem;
+    font-size: 16pt;
     font-weight: 800;
 
     letter-spacing: 0.16em;
@@ -174,7 +175,7 @@ h3 {
 
     color: #a7e5df;
 
-    font-size: 0.72rem;
+    font-size:16pt;
 
     font-weight: 800;
 
@@ -188,7 +189,7 @@ h3 {
 
     color: var(--white);
 
-    font-size: clamp(3rem, 5vw, 4.7rem);
+    font-size: clamp(4rem, 5vw, 4.7rem);
 
     font-weight: 600;
 
@@ -257,31 +258,26 @@ h3 {
 ========================================================= */
 
 .interest-intro {
-    width: min(1180px, 90%);
-
-    margin: 110px auto;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 0.95fr)
-        minmax(0, 1.05fr);
-
-    gap: 75px;
+    width: 100%;
+    height: 80vh;
+    margin: 10px auto;
 
     align-items: center;
 }
 
 .intro-image {
     position: relative;
-
-    height: 500px;
+    width:100%;
+    height:100%;
 
     border-radius: var(--radius-lg);
 
     overflow: hidden;
 
     box-shadow: var(--shadow-large);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-image::after {
@@ -291,18 +287,18 @@ h3 {
 
     inset: 0;
 
-    background:
+    /* background:
         linear-gradient(
             180deg,
             transparent 55%,
             rgba(5,47,67,0.36)
-        );
+        ); */
 
     pointer-events: none;
 }
 
 .intro-image img {
-    width: 100%;
+    width: 80%;
     height: 100%;
 
     object-fit: cover;
@@ -310,6 +306,7 @@ h3 {
     object-position: center;
 
     transition: transform 0.6s ease;
+    border-radius: 30px;
 }
 
 .intro-image:hover img {
@@ -573,7 +570,7 @@ h3 {
 
     color: var(--teal);
 
-    font-size: 0.66rem;
+    font-size: 15pt;
 
     font-weight: 800;
 
@@ -587,7 +584,7 @@ h3 {
 
     color: var(--ocean-deep);
 
-    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-size: clamp(3rem, 3vw, 2.8rem);
 
     font-weight: 600;
 
@@ -599,7 +596,7 @@ h3 {
 
     color: var(--text);
 
-    font-size: 0.82rem;
+    font-size: 13ptrem;
 
     line-height: 1.82;
 }
@@ -905,7 +902,7 @@ h3 {
 .impact-header p {
     color: rgba(255,255,255,0.72);
 
-    font-size: 0.86rem;
+    font-size: 1rem;
 
     line-height: 1.8;
 }
@@ -981,7 +978,7 @@ h3 {
 
     font-family: 'Manrope', sans-serif;
 
-    font-size: 0.78rem;
+    font-size: 1.5rem;
 
     font-weight: 700;
 }
@@ -989,7 +986,7 @@ h3 {
 .impact-card p {
     color: rgba(255,255,255,0.65);
 
-    font-size: 0.7rem;
+    font-size: 1rem;
 
     line-height: 1.7;
 }
@@ -1032,6 +1029,7 @@ h3 {
 
 .banner-text .section-label {
     color: #a8e2dd;
+    font-size: 16pt;
 }
 
 .banner-text h2 {
@@ -1053,7 +1051,7 @@ h3 {
 
     color: rgba(255,255,255,0.78);
 
-    font-size: 0.88rem;
+    font-size: 1.5rem;
 
     line-height: 1.8;
 }
@@ -1099,7 +1097,7 @@ h3 {
 
     color: var(--text);
 
-    font-size: 0.88rem;
+    font-size: 1.5rem;
 
     line-height: 1.8;
 }

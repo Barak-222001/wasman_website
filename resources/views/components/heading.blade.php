@@ -146,7 +146,8 @@
                     </a>
 
 
-                    <a href="/ongoing_projects">
+     <!-- FROZEN --><!-- FROZEN --> <!-- FROZEN --> <!-- FROZEN --> <!-- FROZEN -->
+                    <!-- <a href="/ongoing_projects">
 
                         <div class="wasman-dropdown-icon">
                             <i class="fas fa-spinner"></i>
@@ -157,10 +158,10 @@
                             <small>Current initiatives</small>
                         </div>
 
-                    </a>
+                    </a> -->
 
 
-                    <a href="/completed_projects">
+                    <!-- <a href="/completed_projects">
 
                         <div class="wasman-dropdown-icon">
                             <i class="fas fa-circle-check"></i>
@@ -171,10 +172,10 @@
                             <small>Our achievements</small>
                         </div>
 
-                    </a>
+                    </a> -->
 
 
-                    <a href="/publications">
+                    <!-- <a href="/publications">
 
                         <div class="wasman-dropdown-icon">
                             <i class="fas fa-book-open"></i>
@@ -185,7 +186,7 @@
                             <small>Research and knowledge</small>
                         </div>
 
-                    </a>
+                    </a> -->
 
                 </div>
 
@@ -199,12 +200,14 @@
                     type="button"
                     class="wasman-nav-item wasman-dropdown-btn"
                 >
-                    <span>News & Media</span>
+                   
+               
+                <span>News & Media</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
 
-
-                <div class="wasman-dropdown-menu">
+ <!-- FROZEN --> <!-- FROZEN --> <!-- FROZEN --> <!-- FROZEN --> <!-- FROZEN -->
+                <!-- <div class="wasman-dropdown-menu">
 
                     <a href="/news">
 
@@ -261,7 +264,7 @@
 
                     </a>
 
-                </div>
+                </div> -->
 
             </div>
 

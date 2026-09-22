@@ -646,7 +646,10 @@ h3 {
 
     text-transform: uppercase;
 }
-
+.partner-section p, .partnership-areas-section p{
+    font-size: 14pt;
+    color: rgb(20, 20, 20);
+}
 
 /* =========================================================
    PARTNERSHIP AREAS
@@ -757,9 +760,9 @@ h3 {
 }
 
 .area p {
-    color: var(--text);
+    color: black;
 
-    font-size: 0.82rem;
+    font-size: 13pt;
 
     line-height: 1.75;
 }

@@ -18,8 +18,8 @@
     --white: #ffffff;
 
     --heading: #183746;
-    --text: #536d78;
-    --muted: #82959d;
+    --text: #000000;
+    --muted: #070707;
 
     --border: rgba(8,127,156,0.12);
 
@@ -62,7 +62,9 @@ body {
 
     -webkit-font-smoothing: antialiased;
 }
-
+/* p{
+    font-size:18pt
+} */
 img {
     width: 100%;
     display: block;
@@ -91,6 +93,10 @@ h3 {
     width: min(1200px, 88%);
     margin: auto;
 }
+ /* pp{
+    font-size:1.2rem;
+} */
+
 
 
 /* =========================================================
@@ -116,7 +122,7 @@ h3 {
 
     color: var(--teal);
 
-    font-size: 0.7rem;
+    font-size: 1rem;
 
     font-weight: 800;
 
@@ -188,7 +194,7 @@ h3 {
             rgba(4,59,76,0.68),
             rgba(8,127,156,0.26)
         ),
-        url("../pics_vids/know.png")
+        url("../pics_vids/knbh.png")
         center / cover no-repeat;
 
     background-attachment: fixed;
@@ -217,7 +223,7 @@ h3 {
 
     color: #9de6df;
 
-    font-size: 0.72rem;
+    font-size: 1rem;
 
     font-weight: 800;
 
@@ -226,6 +232,7 @@ h3 {
     text-transform: uppercase;
 }
 
+
 .knowledge-content h1 {
     max-width: 920px;
 
@@ -233,7 +240,7 @@ h3 {
 
     color: var(--white);
 
-    font-size: clamp(3.2rem, 6vw, 5rem);
+    font-size: clamp(3.5rem, 6vw, 5rem);
 
     font-weight: 600;
 
@@ -253,7 +260,7 @@ h3 {
 
     color: rgba(255,255,255,0.82);
 
-    font-size: 1rem;
+    font-size: 1.5rem;
 
     line-height: 1.9;
 }
@@ -342,7 +349,7 @@ h3 {
 
     color: var(--text);
 
-    font-size: 0.92rem;
+    font-size: 1.2rem;
 
     line-height: 1.9;
 }
@@ -561,7 +568,7 @@ h3 {
 
     color: rgba(255,255,255,0.70);
 
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 
     line-height: 1.8;
 }
@@ -1617,5 +1624,559 @@ h3 {
 
     .resource-download {
         grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   CURRENT KNOWLEDGE BITES — DOCUMENT LIBRARY
+========================================================= */
+.current-knowledge-bites {
+    padding: 110px 0;
+    background: linear-gradient(180deg, #f7fbfc 0%, #ffffff 100%);
+}
+
+.current-bites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.current-bite-card {
+    display: grid;
+    grid-template-columns: minmax(210px, .72fr) minmax(0, 1.28fr);
+    min-height: 390px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.current-bite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.current-bite-preview {
+    position: relative;
+    width: 100%;
+    min-height: 390px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: #e9f3f5;
+    cursor: pointer;
+}
+
+.current-bite-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform .45s ease;
+}
+
+.current-bite-card:hover .current-bite-preview img {
+    transform: scale(1.025);
+}
+
+.preview-overlay {
+    position: absolute;
+    inset: auto 16px 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 14px;
+    border-radius: 999px;
+    color: #fff;
+    background: rgba(5, 47, 67, .90);
+    font-size: .75rem;
+    font-weight: 800;
+    backdrop-filter: blur(8px);
+}
+
+.current-bite-body {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.current-bite-category {
+    margin-bottom: 10px;
+    color: var(--teal);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.current-bite-body h3 {
+    margin-bottom: 10px;
+    color: var(--ocean-deep);
+    font-size: 1.55rem;
+    line-height: 1.25;
+}
+
+.current-bite-date {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 15px;
+    color: #58707c;
+    font-size: .74rem;
+    font-weight: 700;
+}
+
+.current-bite-date i { color: var(--teal); }
+
+.current-bite-body p {
+    margin-bottom: 24px;
+    color: var(--text);
+    font-size: .82rem;
+    line-height: 1.75;
+}
+
+.current-bite-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: auto;
+}
+
+.bite-read-button,
+.bite-download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 15px;
+    border-radius: 999px;
+    font: inherit;
+    font-size: .72rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.bite-read-button {
+    border: 0;
+    color: #fff;
+    background: var(--ocean-deep);
+}
+
+.bite-download-button {
+    border: 1px solid rgba(8,127,156,.18);
+    color: var(--ocean-deep);
+    background: var(--seafoam);
+}
+
+.bite-read-button:hover,
+.bite-download-button:hover {
+    transform: translateY(-2px);
+}
+
+/* In-page PDF reader */
+body.knowledge-reader-open { overflow: hidden; }
+
+.knowledge-reader {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.knowledge-reader.is-open { display: flex; }
+
+.knowledge-reader-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 25, 36, .82);
+    backdrop-filter: blur(7px);
+}
+
+.knowledge-reader-dialog {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 96vw);
+    height: min(90vh, 900px);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 30px 90px rgba(0,0,0,.28);
+}
+
+.knowledge-reader-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 22px;
+    color: #fff;
+    background: linear-gradient(135deg, #052f43, #087f9c);
+}
+
+.knowledge-reader-header span {
+    display: block;
+    margin-bottom: 3px;
+    color: #9de6df;
+    font-size: .6rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.knowledge-reader-header h2 {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.knowledge-reader-close {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(255,255,255,.09);
+    cursor: pointer;
+}
+
+.knowledge-reader-frame-wrap {
+    min-height: 0;
+    background: #e8eef0;
+}
+
+.knowledge-reader-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #fff;
+}
+
+.knowledge-reader-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 13px 18px;
+    border-top: 1px solid var(--border);
+    background: #fff;
+}
+
+.knowledge-reader-footer a,
+.knowledge-reader-footer button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font: inherit;
+    font-size: .72rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.knowledge-reader-footer a {
+    color: #fff;
+    background: var(--ocean-deep);
+}
+
+.knowledge-reader-footer button {
+    border: 1px solid var(--border);
+    color: var(--ocean-deep);
+    background: var(--seafoam);
+}
+
+@media (max-width: 1050px) {
+    .current-bites-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .current-knowledge-bites { padding: 78px 0; }
+
+    .current-bite-card { grid-template-columns: 1fr; }
+
+    .current-bite-preview {
+        min-height: 0;
+        aspect-ratio: 4 / 5.45;
+    }
+
+    .current-bite-body { padding: 24px; }
+
+    .knowledge-reader { padding: 8px; }
+
+    .knowledge-reader-dialog {
+        width: 100%;
+        height: 94vh;
+        border-radius: 16px;
+    }
+
+    .knowledge-reader-header { padding: 14px 15px; }
+
+    .knowledge-reader-header h2 { font-size: 1rem; }
+
+    .knowledge-reader-footer {
+        justify-content: stretch;
+    }
+
+    .knowledge-reader-footer a,
+    .knowledge-reader-footer button {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+/* Reliable PDF reading/download links */
+.current-bite-preview,
+.bite-read-button,
+.bite-download-button {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   FINAL CURRENT KNOWLEDGE BITE CARDS
+   Normal topic images — PDFs are opened only by the buttons.
+========================================================= */
+.current-bite-card {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+}
+
+.current-bite-photo {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #e9f3f5;
+}
+
+.current-bite-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .45s ease;
+}
+
+.current-bite-card:hover .current-bite-photo img {
+    transform: scale(1.035);
+}
+
+.current-bite-body {
+    min-height: 330px;
+}
+
+.current-bite-actions {
+    margin-top: auto;
+}
+
+.bite-read-button,
+.bite-download-button {
+    text-decoration: none !important;
+}
+
+@media (min-width: 1051px) {
+    .current-bites-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .current-bite-body {
+        min-height: 0;
+    }
+}
+
+
+/* =========================================================
+   LATEST KNOWLEDGE BITE — WEEKLY FEATURE
+========================================================= */
+.latest-knowledge-bite {
+    padding: 105px 0 80px;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(24, 167, 181, .10), transparent 28%),
+        linear-gradient(180deg, #f7fbfc 0%, #ffffff 100%);
+}
+
+.latest-bite-heading {
+    max-width: 760px;
+    margin-bottom: 34px;
+}
+
+.latest-bite-heading h2 {
+    margin: 10px 0 12px;
+    color: var(--ocean-deep);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 3.15rem);
+    line-height: 1.1;
+}
+
+.latest-bite-heading p {
+    max-width: 680px;
+    color: var(--text);
+    line-height: 1.75;
+}
+
+.latest-bite-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    overflow: hidden;
+    border: 1px solid rgba(8, 127, 156, .14);
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 22px 60px rgba(6, 30, 44, .11);
+}
+
+.latest-bite-photo {
+    position: relative;
+    min-height: 470px;
+    overflow: hidden;
+    background: #dcecef;
+}
+
+.latest-bite-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.latest-badge {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 999px;
+    color: #fff;
+    background: rgba(6, 30, 44, .90);
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+}
+
+.latest-badge i {
+    color: #8fe1d8;
+}
+
+.latest-bite-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(32px, 5vw, 58px);
+}
+
+.latest-bite-content h3 {
+    margin: 9px 0 16px;
+    color: var(--ocean-deep);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    line-height: 1.12;
+}
+
+.latest-bite-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 22px;
+    color: #58707c;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.latest-bite-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.latest-bite-meta i {
+    color: var(--teal);
+}
+
+.latest-bite-content > p {
+    margin-bottom: 30px;
+    color: var(--text);
+    font-size: .92rem;
+    line-height: 1.85;
+}
+
+.latest-bite-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.previous-knowledge-bites {
+    padding: 85px 0 110px;
+    background: #fff;
+}
+
+.previous-bites-heading {
+    margin-bottom: 38px;
+}
+
+/* Keep archive cards compact and clearly secondary to the weekly feature */
+.previous-knowledge-bites .current-bite-card {
+    box-shadow: 0 12px 34px rgba(6, 30, 44, .07);
+}
+
+.previous-knowledge-bites .current-bite-photo {
+    aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 900px) {
+    .latest-bite-card {
+        grid-template-columns: 1fr;
+    }
+
+    .latest-bite-photo {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 600px) {
+    .latest-knowledge-bite {
+        padding: 75px 0 55px;
+    }
+
+    .previous-knowledge-bites {
+        padding: 60px 0 80px;
+    }
+
+    .latest-bite-card {
+        border-radius: 20px;
+    }
+
+    .latest-bite-content {
+        padding: 27px 22px 30px;
+    }
+
+    .latest-bite-content h3 {
+        font-size: 1.85rem;
+    }
+
+    .latest-bite-actions {
+        flex-direction: column;
+    }
+
+    .latest-bite-actions .bite-read-button,
+    .latest-bite-actions .bite-download-button {
+        width: 100%;
     }
 }
