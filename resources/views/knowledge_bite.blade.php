@@ -450,169 +450,97 @@
                 </h2>
 
                 <p>
-                    Access downloadable briefs, fact sheets,
-                    reports and other resources for further
-                    reading, research and learning.
+                    Download WASMaN Knowledge Bites for further reading,
+                    research, learning and conservation awareness.
                 </p>
 
             </div>
 
-
             <div class="resource-grid">
 
                 <div class="resource-card">
-
-                    <div class="resource-icon">
-                        <i class="fa-solid fa-file-lines"></i>
-                    </div>
-
-                    <div class="resource-info">
-
-                        <span>
-                            RESEARCH BRIEF
-                        </span>
-
-                        <h3>
-                            Understanding Marine Heatwaves
-                        </h3>
-
-                        <p>
-                            A concise overview of marine heatwaves,
-                            their impacts and emerging responses.
-                        </p>
-
-                        <small>
-                            PDF • 2.4 MB
-                        </small>
-
-                    </div>
-
-                    <a
-                        href="resources/marine-heatwaves.pdf"
-                        download
-                        class="resource-download"
-                    >
-                        Download
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-
-                </div>
-
-
-                <div class="resource-card">
-
-                    <div class="resource-icon">
-                        <i class="fa-solid fa-file-circle-check"></i>
-                    </div>
-
-                    <div class="resource-info">
-
-                        <span>
-                            FACT SHEET
-                        </span>
-
-                        <h3>
-                            Blue Carbon Ecosystems
-                        </h3>
-
-                        <p>
-                            Key facts about mangroves, seagrasses
-                            and coastal carbon storage.
-                        </p>
-
-                        <small>
-                            PDF • 1.8 MB
-                        </small>
-
-                    </div>
-
-                    <a
-                        href="resources/blue-carbon.pdf"
-                        download
-                        class="resource-download"
-                    >
-                        Download
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-
-                </div>
-
-
-                <div class="resource-card">
-
                     <div class="resource-icon">
                         <i class="fa-solid fa-file-pdf"></i>
                     </div>
-
                     <div class="resource-info">
-
-                        <span>
-                            REPORT
-                        </span>
-
-                        <h3>
-                            Coastal Ecosystem Outlook
-                        </h3>
-
-                        <p>
-                            A resource exploring emerging trends
-                            affecting coastal ecosystems.
-                        </p>
-
-                        <small>
-                            PDF • 4.2 MB
-                        </small>
-
+                        <span>KNOWLEDGE BITE</span>
+                        <h3>Wetlands: A Quietly Disappearing Flood Defence Asset</h3>
+                        <p>Explore the importance of wetlands for flood defence, ecosystem resilience and conservation.</p>
+                        <small>PDF • 6 July 2026</small>
                     </div>
-
-                    <a
-                        href="resources/coastal-outlook.pdf"
-                        download
-                        class="resource-download"
-                    >
-                        Download
+                    <a href="{{ route('knowledge-bites.download', 'wetlands') }}"
+                       class="resource-download">
+                        Download PDF
                         <i class="fa-solid fa-download"></i>
                     </a>
-
                 </div>
 
-
                 <div class="resource-card">
-
                     <div class="resource-icon">
-                        <i class="fa-solid fa-book"></i>
+                        <i class="fa-solid fa-file-pdf"></i>
                     </div>
-
                     <div class="resource-info">
-
-                        <span>
-                            GUIDE
-                        </span>
-
-                        <h3>
-                            Introduction to Sustainable Fisheries
-                        </h3>
-
-                        <p>
-                            A practical resource for understanding
-                            sustainable fisheries management.
-                        </p>
-
-                        <small>
-                            PDF • 3.1 MB
-                        </small>
-
+                        <span>KNOWLEDGE BITE</span>
+                        <h3>Smalltooth Sawfish</h3>
+                        <p>Learn about the Smalltooth Sawfish and the conservation challenges facing this distinctive aquatic species.</p>
+                        <small>PDF • 22 June 2026</small>
                     </div>
-
-                    <a
-                        href="resources/sustainable-fisheries-guide.pdf"
-                        download
-                        class="resource-download"
-                    >
-                        Download
+                    <a href="{{ route('knowledge-bites.download', 'smalltooth-sawfish') }}"
+                       class="resource-download">
+                        Download PDF
                         <i class="fa-solid fa-download"></i>
                     </a>
+                </div>
 
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-info">
+                        <span>KNOWLEDGE BITE</span>
+                        <h3>Leatherback Sea Turtle</h3>
+                        <p>Discover the Leatherback Sea Turtle and why protecting marine habitats is essential for its conservation.</p>
+                        <small>PDF • 18 June 2026</small>
+                    </div>
+                    <a href="{{ route('knowledge-bites.download', 'leatherback-sea-turtle') }}"
+                       class="resource-download">
+                        Download PDF
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-info">
+                        <span>KNOWLEDGE BITE</span>
+                        <h3>The Scalloped Hammerhead Shark</h3>
+                        <p>Explore the ecology and conservation significance of the Scalloped Hammerhead Shark.</p>
+                        <small>PDF • 1 June 2026</small>
+                    </div>
+                    <a href="{{ route('knowledge-bites.download', 'scalloped-hammerhead') }}"
+                       class="resource-download">
+                        Download PDF
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-info">
+                        <span>KNOWLEDGE BITE</span>
+                        <h3>Aquatic Biodiversity Conservation: A Call to Collective Action</h3>
+                        <p>Learn why collective action is vital for protecting aquatic biodiversity and sustaining healthy ecosystems.</p>
+                        <small>PDF • 25 May 2026</small>
+                    </div>
+                    <a href="{{ route('knowledge-bites.download', 'aquatic-biodiversity') }}"
+                       class="resource-download">
+                        Download PDF
+                        <i class="fa-solid fa-download"></i>
+                    </a>
                 </div>
 
             </div>
