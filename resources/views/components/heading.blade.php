@@ -296,8 +296,11 @@
 
                     </a>
 
+                    
+                    <!-- FROZEN --><!-- FROZEN --><!-- FROZEN --><!-- FROZEN --><!-- FROZEN --> 
+                    
 
-                    <a href="/intern">
+                    <!-- <a href="/intern">
 
                         <div class="wasman-dropdown-icon">
                             <i class="fas fa-graduation-cap"></i>
@@ -336,7 +339,7 @@
                             <small>Work with our researchers</small>
                         </div>
 
-                    </a>
+                    </a> -->
 
 
                     <a href="/partner_with_us">
