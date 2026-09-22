@@ -1779,3 +1779,182 @@ body.modal-open { overflow: hidden; }
     font-family: 'Playfair Display', serif;
     font-weight: 600;
 }
+
+/* =========================================================
+   NETWORK SECRETARIAT — REDESIGNED MEMBER CARDS
+   Larger portraits, cleaner hierarchy, premium aquatic style
+========================================================= */
+.members-grid {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.network-member {
+    position: relative;
+    height: auto;
+    min-height: 285px;
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.97);
+    border: 1px solid rgba(8,127,156,0.12);
+    box-shadow: 0 14px 38px rgba(5,47,67,0.08);
+    transition: transform .34s ease, box-shadow .34s ease, border-color .34s ease;
+}
+
+.network-member::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    z-index: 5;
+    background: linear-gradient(90deg, var(--ocean), var(--teal), var(--mint));
+}
+
+.network-member:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 24px 55px rgba(5,47,67,0.13);
+    border-color: rgba(24,167,181,0.26);
+}
+
+.network-member-image {
+    position: relative;
+    width: 210px;
+    height: 100%;
+    min-height: 285px;
+    flex: none;
+    overflow: hidden;
+    background: #e8f5f4;
+}
+
+.network-member-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 65%, rgba(5,47,67,.18));
+    pointer-events: none;
+}
+
+.network-member-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 285px;
+    border: 0;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: center 18%;
+    transition: transform .5s ease;
+}
+
+.network-member:hover .network-member-image img {
+    transform: scale(1.035);
+}
+
+.network-member-info {
+    position: relative;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    padding: 38px 34px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.network-member-info::before {
+    content: "SECRETARIAT";
+    display: inline-flex;
+    align-self: flex-start;
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--seafoam);
+    color: var(--ocean);
+    font-family: 'Manrope', sans-serif;
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.network-member-info h3 {
+    margin: 0 0 10px;
+    color: var(--ocean-deep);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.network-member-info span {
+    display: block;
+    color: #405b68;
+    font-family: 'Manrope', sans-serif;
+    font-size: .88rem;
+    font-weight: 700;
+    line-height: 1.65;
+}
+
+.member-mini-icon {
+    position: absolute;
+    right: 24px;
+    bottom: 22px;
+    top: auto;
+    color: rgba(8,127,156,0.11);
+    font-size: 2.2rem;
+}
+
+@media (max-width: 1050px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+        max-width: 760px;
+    }
+
+    .network-member {
+        grid-template-columns: 230px minmax(0, 1fr);
+    }
+
+    .network-member-image {
+        width: 230px;
+    }
+}
+
+@media (max-width: 620px) {
+    .network-member {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .network-member-image {
+        width: 100%;
+        height: 320px;
+        min-height: 320px;
+    }
+
+    .network-member-image img {
+        min-height: 320px;
+        object-position: center 15%;
+    }
+
+    .network-member-info {
+        padding: 27px 24px 32px;
+    }
+
+    .network-member-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .member-mini-icon {
+        right: 20px;
+        bottom: 18px;
+        font-size: 1.8rem;
+    }
+}
