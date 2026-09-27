@@ -51,28 +51,28 @@
 <section class="hero-banner">
    
 
- <div class="swiper mySwiper">
+        <div class="swiper mySwiper hero-swiper">
 
             <div class="swiper-wrapper">
             
-            <div class="swiper-slide knowledge-card knowledge-card-light">
+            <div class="swiper-slide hero-slide knowledge-card knowledge-card-light">
                 <picture>
                     <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/home_page_banner_mobile.webp') }}" type="image/webp">
-                    <img src="{{ versioned_asset('pics_vids/home_page_banner_mobile.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+                    <img src="{{ versioned_asset('pics_vids/home_page_banner.webp') }}" alt="WASMaN — Women in Aquatic Science and Management Network" class="wasman-logo" fetchpriority="high" decoding="async" width="1400" height="788">
                 </picture>
             </div>
 
-            <div class="swiper-slide knowledge-card knowledge-card-light">
+            <div class="swiper-slide hero-slide knowledge-card knowledge-card-light">
                 <picture>
-                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/kn2_mobile.webp') }}" type="image/webp">
-                    <img src="{{ versioned_asset('pics_vids/knw.png') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/knw.webp') }}" type="image/webp">
+                    <img src="{{ versioned_asset('pics_vids/knw.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
                 </picture>
             </div>
 
-            <div class="swiper-slide knowledge-card knowledge-card-soft">
+            <div class="swiper-slide hero-slide knowledge-card knowledge-card-soft">
                 <picture>
-                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/kn3_mobile.webp') }}" type="image/webp">
-                    <img src="{{ versioned_asset('pics_vids/knw2.png') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/knw2.webp') }}" type="image/webp">
+                    <img src="{{ versioned_asset('pics_vids/knw2.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
                 </picture>
             </div>
 

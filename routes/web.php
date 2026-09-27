@@ -398,3 +398,27 @@ Route::get('/knowledge-bites/{slug}/read', [KnowledgeBiteController::class, 'rea
 
 Route::get('/knowledge-bites/{slug}/download', [KnowledgeBiteController::class, 'download'])
     ->name('knowledge-bites.download');
+
+// =============================================
+// WHAT WE DO - DETAIL PAGES
+// =============================================
+
+Route::view(
+    '/what-we-do/research-scientific-innovation',
+    'what-we-do.research'
+)->name('what-we-do.research');
+
+Route::view(
+    '/what-we-do/capacity-building-mentorship',
+    'what-we-do.capacity'
+)->name('what-we-do.capacity');
+
+Route::view(
+    '/what-we-do/policy-advocacy',
+    'what-we-do.policy'
+)->name('what-we-do.policy');
+
+Route::view(
+    '/what-we-do/collaboration-network',
+    'what-we-do.collaboration'
+)->name('what-we-do.collaboration');

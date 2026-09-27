@@ -93,7 +93,7 @@
 
         <div class="team-grid">
 
-            <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Alberta Ama Sagoe" data-name="Dr. Alberta Ama Sagoe" data-role="President" data-specialty="Aquatic Science &amp; Environmental Management" data-image="{{ asset('pics_vids/dr.alberta.jpeg') }}" data-bio="Dr. Sagoe is a Ghanaian coastal and marine resources management professional whose work focuses on inclusive and sustainable management of oceans and coastal resources. With a career spanning research, policy development, and international collaboration, she has become a leading voice in advancing Africa’s blue economy and promoting inclusive participation in aquatic science and management.\n\nDr. Sagoe holds a PhD in Integrated Coastal Zone Management and a double master’s degree in Marine Spatial Planning and Governance and Sustainable Development. Her academic and professional work has centered on addressing the complex environmental and governance challenges affecting coastal communities and marine ecosystems across West Africa. Through her research and policy engagement, she has contributed to efforts that promote sustainable ocean use and responsible coastal development – including the designation of Ghana’s first Marine Protected Area, development of Africa’s first continental strategy on gender mainstreaming in aquatic biodiversity conservation, and development of blue economy strategies and investment plans for Nigeria and Guinea Bissau.\n\nBeyond her policy and research contributions, Dr. Sagoe is a passionate advocate for expanding opportunities for women and young people in coastal and marine sectors. She has consistently encouraged greater participation of girls and young women in science, technology, and blue economy careers, recognizing their vital role in building a sustainable “blue” Africa.">
+            <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Alberta Ama Sagoe" data-name="Dr. Alberta Ama Sagoe" data-role="President" data-specialty="Aquatic Science &amp; Environmental Management" data-image="{{ asset('pics_vids/dr.alberta.jpeg') }}" data-bio="Dr. Sagoe is a Ghanaian coastal and marine resources management professional whose work focuses on inclusive and sustainable management of oceans and coastal resources. With a career spanning research, policy development, and international collaboration, she has become a leading voice in advancing Africa’s blue economy and promoting inclusive participation in aquatic science and management.Dr. Sagoe holds a PhD in Integrated Coastal Zone Management and a double master’s degree in Marine Spatial Planning and Governance and Sustainable Development. Her academic and professional work has centered on addressing the complex environmental and governance challenges affecting coastal communities and marine ecosystems across West Africa. Through her research and policy engagement, she has contributed to efforts that promote sustainable ocean use and responsible coastal development – including the designation of Ghana’s first Marine Protected Area, development of Africa’s first continental strategy on gender mainstreaming in aquatic biodiversity conservation, and development of blue economy strategies and investment plans for Nigeria and Guinea Bissau.Beyond her policy and research contributions, Dr. Sagoe is a passionate advocate for expanding opportunities for women and young people in coastal and marine sectors. She has consistently encouraged greater participation of girls and young women in science, technology, and blue economy careers, recognizing their vital role in building a sustainable “blue” Africa.">
                 <div class="member-image">
                     <img src="{{ asset('pics_vids/dr.alberta.jpeg') }}" alt="Dr. Alberta Ama Sagoe">
                     <div class="member-badge"><i class="fa-solid fa-crown"></i> President</div>
@@ -107,7 +107,7 @@
                 </div>
             </article>
 
-            <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Michelle Naa Kordei Clottey Sackey" data-name="Dr. Michelle Naa Kordei Clottey Sackey" data-role="Vice President" data-specialty="Fisheries Science &amp; Coastal Resource Sustainability" data-image="{{ asset('pics_vids/michelle_clottey.jpeg') }}" data-bio="Dr. Michelle Naa Kordei Clottey Sackey is a Ghanaian fisheries scientist and lecturer at the University of Cape Coast, Ghana. Her work focuses on fish biology, stock assessment, fisheries management, and coastal resource sustainability, with a strong commitment to translating science into practical solutions for fisheries-dependent communities. Michelle is passionate about mentoring young women in science, advancing inclusive ocean governance, and amplifying women’s voices in aquatic and environmental sciences. Beyond the lab and lecture hall, she enjoys cooking, swimming, and engaging in outreach that inspires the next generation of women in STEM.">
+            <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Michelle Naa Kordei Clottey Sackey" data-name="Dr. Michelle Naa Kordei Clottey Sackey" data-role="Vice President" data-specialty="Fisheries Science &amp; Coastal Resource Sustainability" data-image="{{ asset('pics_vids/michelle.jpeg') }}" data-bio="Dr. Michelle Naa Kordei Clottey Sackey is a Ghanaian fisheries scientist and lecturer at the University of Cape Coast, Ghana. Her work focuses on fish biology, stock assessment, fisheries management, and coastal resource sustainability, with a strong commitment to translating science into practical solutions for fisheries-dependent communities. Michelle is passionate about mentoring young women in science, advancing inclusive ocean governance, and amplifying women’s voices in aquatic and environmental sciences. Beyond the lab and lecture hall, she enjoys cooking, swimming, and engaging in outreach that inspires the next generation of women in STEM.">
                 <div class="member-image">
                     <img src="{{ asset('pics_vids/michelle.jpeg') }}" alt="Dr. Michelle Naa Kordei Clottey Sackey">
                     <div class="member-badge"><i class="fa-solid fa-people-arrows"></i> Vice President</div>
@@ -121,7 +121,7 @@
                 </div>
             </article>
 
-            <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Jemimah Etornam Kassah" data-name="Dr. Jemimah Etornam Kassah" data-role="Treasurer" data-specialty="Fisheries Science, Aquaculture &amp; Conservation" data-image="{{ asset('pics_vids/michelle.jpeg') }}" data-bio="Dr. Kassah is a passionate conservation enthusiast, fisheries scientist, aquaculture professional and lecturer at the Department of Biology Education of the University of Education, Winneba in Ghana. She holds a PhD (Fisheries Science) from the University of Cape Coast, Ghana, MSc. (Sustainable Coastal Development) from the Norwegian University of Science and Technology (Trondheim, Norway); and a BSc. (Oceanography and Fisheries) from the University of Ghana. With over 14 years of experience in fisheries and aquaculture, she is actively involved in fisheries research, aquaculture consultancy, public relations (environmental issues) and volunteer work.\n\nDr. Kassah is passionate about conservation issues and loves to communicate this via public and social media platforms whenever she gets the chance. Her research interests include tropical fisheries biology, climate change, Blue Justice, fisheries oceanography and biodiversity conservation. She has also had the opportunity to present at and facilitate at both local and internal conferences; as well as publish relevant scientific contributions to literature as an early career scientist. She is also a private consultant in Ghana’s fisheries and aquaculture spaces; catering to donor agencies, corporate clients and private start-ups. She reads storybooks, cooks and dances for leisure.">
+            <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Jemimah Etornam Kassah" data-name="Dr. Jemimah Etornam Kassah" data-role="Treasurer" data-specialty="Fisheries Science, Aquaculture &amp; Conservation" data-image="{{ asset('pics_vids/kassaho.jpeg') }}" data-bio="Dr. Kassah is a passionate conservation enthusiast, fisheries scientist, aquaculture professional and lecturer at the Department of Biology Education of the University of Education, Winneba in Ghana. She holds a PhD (Fisheries Science) from the University of Cape Coast, Ghana, MSc. (Sustainable Coastal Development) from the Norwegian University of Science and Technology (Trondheim, Norway); and a BSc. (Oceanography and Fisheries) from the University of Ghana. With over 14 years of experience in fisheries and aquaculture, she is actively involved in fisheries research, aquaculture consultancy, public relations (environmental issues) and volunteer work.Dr. Kassah is passionate about conservation issues and loves to communicate this via public and social media platforms whenever she gets the chance. Her research interests include tropical fisheries biology, climate change, Blue Justice, fisheries oceanography and biodiversity conservation. She has also had the opportunity to present at and facilitate at both local and internal conferences; as well as publish relevant scientific contributions to literature as an early career scientist. She is also a private consultant in Ghana’s fisheries and aquaculture spaces; catering to donor agencies, corporate clients and private start-ups. She reads storybooks, cooks and dances for leisure.">
                 <div class="member-image">
                     <img src="{{ asset('pics_vids/kassaho.jpeg') }}" alt="Dr. Jemimah Etornam Kassah">
                     <div class="member-badge"><i class="fa-solid fa-coins"></i> Treasurer</div>
@@ -135,7 +135,7 @@
                 </div>
             </article>
 
-            <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Rahmat Quaigrane Duker" data-name="Dr. Rahmat Quaigrane Duker" data-role="Secretary" data-specialty="Aquatic Ecology, Water Quality &amp; Ecotoxicology" data-image="{{ asset('pics_vids/dr.kassah.jpeg') }}" data-bio="Dr. Rahmat Quaigrane Duker is a Ghanaian lecturer and researcher at the University of Environment and Sustainable Development, Somanya, Ghana and also serves as the Country (Ghana) Coordinator for Blue Resources Research and Policy Institute. She holds a PhD in Oceanography and Limnology (Ghana) and MSc in Environmental Sciences (Netherlands). Her research expertise spanning aquatic ecology, water quality management, aquatic pollution and ecotoxicology. Prior to her academic career, Dr. Duker worked with the Centre for Environmental Impact Analysis, where she led projects focused on minimising the environmental impacts of illegal gold mining on the environment. Her current work combines science, policy, and community engagement to promote sustainable use and restoration of aquatic ecosystems. With the passion and commitment towards education, environmental stewardship, and inclusive development, Dr. Duker continues to mentor young minds. She also engages and contributes to regional and international dialogues on water sustainability and blue economy innovation.">
+            <article class="member leadership-card" tabindex="0" role="button" aria-label="View full biography of Dr. Rahmat Quaigrane Duker" data-name="Dr. Rahmat Quaigrane Duker" data-role="Secretary" data-specialty="Aquatic Ecology, Water Quality &amp; Ecotoxicology" data-image="{{ asset('pics_vids/rahmat.jpeg') }}" data-bio="Dr. Rahmat Quaigrane Duker is a Ghanaian lecturer and researcher at the University of Environment and Sustainable Development, Somanya, Ghana and also serves as the Country (Ghana) Coordinator for Blue Resources Research and Policy Institute. She holds a PhD in Oceanography and Limnology (Ghana) and MSc in Environmental Sciences (Netherlands). Her research expertise spanning aquatic ecology, water quality management, aquatic pollution and ecotoxicology. Prior to her academic career, Dr. Duker worked with the Centre for Environmental Impact Analysis, where she led projects focused on minimising the environmental impacts of illegal gold mining on the environment. Her current work combines science, policy, and community engagement to promote sustainable use and restoration of aquatic ecosystems. With the passion and commitment towards education, environmental stewardship, and inclusive development, Dr. Duker continues to mentor young minds. She also engages and contributes to regional and international dialogues on water sustainability and blue economy innovation.">
                 <div class="member-image">
                     <img src="{{ asset('pics_vids/rahmat.jpeg') }}" alt="Dr. Rahmat Quaigrane Duker">
                     <div class="member-badge"><i class="fa-solid fa-file-lines"></i> Secretary</div>
@@ -195,7 +195,9 @@
         <div class="members-grid">
 
         
-            <article class="network-member">
+            <article class="network-member secretariat-card" tabindex="0" role="button" aria-label="View full biography of Gertrude Tibu" data-section="NETWORK SECRETARIAT" data-name="Gertrude Tibu" data-role="Administration & Membership Officer" data-specialty="Freshwater & Coastal Ecosystems • Administration" data-image="{{ asset('pics_vids/tibu.jpeg') }}" data-bio="Gertrude Tibu serves as the Administrative Officer of the WASMaN Secretariat. She is an early-career aquatic scientist with experience in freshwater and coastal ecosystem research, fisheries, biodiversity assessment, water quality and environmental data analysis. She holds a BSc in Fisheries and Aquatic Sciences from the University of Cape Coast, Ghana, and has experience as a Teaching Assistant in the Department of Fisheries and Aquatic Sciences.
+
+Within WASMaN, Gertrude coordinates administrative operations including records and membership management, meetings, correspondence, events, resources, scheduling and reporting. Her role supports efficient coordination, communication and member engagement across the Network. She is particularly committed to strengthening the visibility and participation of women in aquatic science and management.">
 
                 <div class="network-member-image">
                     <img src="{{ asset('pics_vids/tibu.jpeg') }}" alt="Dr. Linda Owusu">
@@ -203,14 +205,17 @@
 
                 <div class="network-member-info">
                     <h3>Gertrude Tibu</h3>
-                    <span>Administrative Officer</span>
+                    <span>Administration &amp; Membership Officer</span>
+                                    <span class="secretariat-bio-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i> View profile</span>
                 </div>
 
                 <i class="fa-solid fa-fish-fins member-mini-icon"></i>
 
             </article>
 
-            <article class="network-member">
+            <article class="network-member secretariat-card" tabindex="0" role="button" aria-label="View full biography of Faustina Sarpong" data-section="NETWORK SECRETARIAT" data-name="Faustina Sarpong" data-role="Acting Network Coordinator · Research & Capacity Development" data-specialty="Fisheries • Aquaculture • Molecular Genetics" data-image="{{ asset('pics_vids/fausty.png') }}" data-bio="Faustina Sarpong serves as the Research and Capacity Development Officer and Acting Network Coordinator of the WASMaN Secretariat. She is a fisheries and aquaculture researcher with experience in aquatic science, molecular genetics, research coordination and capacity development. She holds a BSc in Fisheries Science and is pursuing an MPhil in Aquaculture at the University of Ghana, where her research investigates the genetic diversity of tilapia populations in the Volta Lake following the 2023 Akosombo Dam spillage.
+
+Within WASMaN, Faustina supports research development, training programmes, knowledge exchange, professional development and coordination of network activities. She contributes to creating opportunities for collaboration and capacity building, particularly for women working in aquatic sciences and management.">
 
                 <div class="network-member-image">
                     <img src="{{ asset('pics_vids/fausty.png') }}" alt="Dr. Sarah Mensah">
@@ -218,14 +223,17 @@
 
                 <div class="network-member-info">
                     <h3>Faustina Sarpong</h3>
-                    <span>Research and Capacity Development Officer and Acting Network Coordinator</span>
+                    <span>Acting Network Coordinator<br><small>Research &amp; Capacity Development</small></span>
+                                    <span class="secretariat-bio-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i> View profile</span>
                 </div>
 
                 <i class="fa-solid fa-water member-mini-icon"></i>
 
             </article>
 
-            <article class="network-member">
+            <article class="network-member secretariat-card" tabindex="0" role="button" aria-label="View full biography of Cindy Owusu" data-section="NETWORK SECRETARIAT" data-name="Cindy Owusu" data-role="Communications & Public Relations Officer" data-specialty="Advocacy • Media Relations • Environmental Communication" data-image="{{ asset('pics_vids/cindy.jpeg') }}" data-bio="Cindy Owusu serves as the Public Relations Officer of the WASMaN Secretariat. She is an Assistant Administrator in radio with experience in advocacy, public relations and environmental communication. She holds a Bachelor's degree in Geography and Economics and is an MPhil candidate in Blue Economy. She has also contributed to advocacy initiatives focused on community engagement and environmental awareness.
+
+Within WASMaN, Cindy supports internal and external communications, media relations and the promotion of Network activities. Through strategic communication and public engagement, she contributes to WASMaN's efforts to increase environmental awareness and advance the Network's mission.">
 
                 <div class="network-member-image">
                     <img src="{{ asset('pics_vids/cindy.jpeg') }}" alt="Dr. Mary Boateng">
@@ -233,7 +241,8 @@
 
                 <div class="network-member-info">
                     <h3>Cindy Owusu</h3>
-                    <span>Public Relations Officer</span>
+                    <span>Communications &amp; Public Relations Officer</span>
+                                    <span class="secretariat-bio-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i> View profile</span>
                 </div>
 
                 <i class="fa-solid fa-seedling member-mini-icon"></i>
@@ -241,7 +250,9 @@
             </article>
 
 
-            <article class="network-member">
+            <article class="network-member secretariat-card" tabindex="0" role="button" aria-label="View full biography of Sarkwah Ohene Barak" data-section="NETWORK SECRETARIAT" data-name="Sarkwah Ohene Barak" data-role="Digital Systems & IT Support Officer" data-specialty="Web Development • Digital Platforms • IT Systems" data-image="{{ asset('pics_vids/ohene.png') }}" data-bio="Sarkwah Ohene Barak serves as the Digital Systems and IT Support Officer of the WASMaN Secretariat. He is a works at the Centre for Coastal Management, University of Cape Coast, working with the DataHub Management Section. He holds a BSc in Computer Science and has expertise in programming, website development and digital systems support. His final-year project involved developing a sign language interpretation application.
+
+Within WASMaN, he supports the management, security and improvement of the Network's digital platforms, website, virtual activities and IT systems, helping to maintain reliable digital infrastructure for the Network's programmes and communications.">
 
                 <div class="network-member-image">
                     <img src="{{ asset('pics_vids/ohene.png') }}" alt="Dr. Evelyn Asante">
@@ -249,7 +260,8 @@
 
                 <div class="network-member-info">
                     <h3>Sarkwah Ohene Barak</h3>
-                    <span>Digital Systems and IT Support Officer</span>
+                    <span>Digital Systems &amp; IT Support Officer</span>
+                                    <span class="secretariat-bio-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i> View profile</span>
                 </div>
 
                 <i class="fa-solid fa-microscope member-mini-icon"></i>
@@ -476,7 +488,7 @@
                 <div class="leader-modal-role" id="leaderModalRole"></div>
             </div>
             <div class="leader-modal-content">
-                <span class="leader-modal-eyebrow">LEADERSHIP COMMITTEE</span>
+                <span class="leader-modal-eyebrow" id="leaderModalEyebrow">LEADERSHIP COMMITTEE</span>
                 <h2 id="leaderModalName"></h2>
                 <div class="leader-modal-specialty" id="leaderModalSpecialty"></div>
                 <div class="leader-modal-bio" id="leaderModalBio"></div>
@@ -659,17 +671,19 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('leaderBioModal');
-    const cards = document.querySelectorAll('.leadership-card');
+    const cards = document.querySelectorAll('.leadership-card, .secretariat-card');
     const closeButtons = modal.querySelectorAll('[data-close-modal]');
     const image = document.getElementById('leaderModalImage');
     const name = document.getElementById('leaderModalName');
     const role = document.getElementById('leaderModalRole');
     const specialty = document.getElementById('leaderModalSpecialty');
     const bio = document.getElementById('leaderModalBio');
+    const eyebrow = document.getElementById('leaderModalEyebrow');
     let lastFocused = null;
 
     function openModal(card) {
         lastFocused = card;
+        eyebrow.textContent = card.dataset.section || (card.classList.contains('secretariat-card') ? 'NETWORK SECRETARIAT' : 'LEADERSHIP COMMITTEE');
         image.src = card.dataset.image;
         image.alt = card.dataset.name;
         name.textContent = card.dataset.name;

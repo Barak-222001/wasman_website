@@ -139,53 +139,49 @@
     </section>
 
     {{-- =========================================================
-         LATEST KNOWLEDGE BITE
-         Update this featured block whenever a new weekly bite arrives.
+         LATEST KNOWLEDGE BITE — FISHERIES VALUE CHAIN SERIES
     ========================================================== --}}
     <section class="latest-knowledge-bite" id="latest-bite">
         <div class="content-container">
             <div class="latest-bite-heading">
                 <span class="section-label">LATEST KNOWLEDGE BITE</span>
-                <h2>This Week's Knowledge Bite</h2>
-                <p>The most recent WASMaN knowledge resource, featured separately for quick access.</p>
+                <h2>Fisheries Value Chain Series</h2>
+                <p>The newest release in WASMaN's five-part series, presented from the latest issue backwards.</p>
             </div>
 
             <article class="latest-bite-card">
                 <div class="latest-bite-photo">
-                    <img src="{{ asset('pics_vids/knowledge-bites/wetlands.webp') }}"
-                         alt="Wetlands: A Quietly Disappearing Flood Defence Asset">
+                    <img src="{{ asset('pics_vids/knowledge-bites/fisheries/part-5.webp') }}"
+                         alt="Fisheries Value Chain Part 5">
                     <span class="latest-badge">
-                        <i class="fa-solid fa-bolt"></i> Latest
+                        <i class="fa-solid fa-bolt"></i> Latest · Part 5
                     </span>
                 </div>
 
                 <div class="latest-bite-content">
-                    <span class="current-bite-category">Wetlands & Climate Resilience</span>
-
-                    <h3>Wetlands: A Quietly Disappearing Flood Defence Asset</h3>
+                    <span class="current-bite-category">Fisheries &amp; Aquaculture · Part 5 of 5</span>
+                    <h3>The Fisheries Sector: From Catch to Consumer — Part 5</h3>
 
                     <div class="latest-bite-meta">
-                        <span><i class="fa-regular fa-calendar"></i> 6 July 2026</span>
-                        <span><i class="fa-solid fa-water"></i> Wetlands</span>
+                        <span><i class="fa-regular fa-calendar"></i> 21 September 2026</span>
+                        <span><i class="fa-solid fa-fish"></i> Consumption &amp; Circular Opportunities</span>
                     </div>
 
                     <p>
-                        Wetlands are areas where water covers the land permanently or seasonally,
-                        including marshes, swamps, lagoons, floodplains, mangroves and estuaries.
-                        This Knowledge Bite highlights their importance as natural flood-defence
-                        assets, the pressures driving wetland loss, and the need for protection,
-                        restoration, stronger enforcement and community participation.
+                        The final part of the series explores responsible fish consumption and the safe
+                        recovery of fish by-products. It highlights how a circular fisheries value chain
+                        can reduce waste while creating opportunities from fish meal, fish oil, organic
+                        fertilizer, leather, collagen and gelatin.
                     </p>
 
                     <div class="latest-bite-actions">
                         <a class="bite-read-button"
-                           href="{{ route('knowledge-bites.read', 'wetlands') }}"
+                           href="{{ route('knowledge-bites.read', 'cat-fisheries-value-chain-5') }}"
                            target="_blank" rel="noopener">
                             <i class="fa-regular fa-eye"></i> Read Knowledge Bite
                         </a>
-
                         <a class="bite-download-button"
-                           href="{{ route('knowledge-bites.download', 'wetlands') }}">
+                           href="{{ route('knowledge-bites.download', 'cat-fisheries-value-chain-5') }}">
                             <i class="fa-solid fa-download"></i> Download PDF
                         </a>
                     </div>
@@ -195,244 +191,197 @@
     </section>
 
     {{-- =========================================================
-         PREVIOUS KNOWLEDGE BITES
-         When a new weekly bite is published, move the former latest
-         item into this archive.
+         PREVIOUS KNOWLEDGE BITES — NEWEST TO OLDEST
     ========================================================== --}}
     <section class="previous-knowledge-bites" id="previous-bites">
         <div class="content-container">
             <div class="section-title previous-bites-heading">
                 <span class="section-label">PREVIOUS KNOWLEDGE BITES</span>
-                <h2>Explore Earlier Knowledge Bites</h2>
+                <h2>Earlier Fisheries &amp; Aquaculture Knowledge Bites</h2>
                 <p>
-                    Browse previous WASMaN knowledge resources on endangered marine species,
-                    aquatic biodiversity and ocean conservation.
+                    Continue through the fisheries value chain series from Part 4 back to Part 1,
+                    followed by the earlier Aquaculture and IUU Fishing Knowledge Bites.
                 </p>
             </div>
 
+            @php
+                $fisheriesPreviousBites = [
+                    [
+                        'part' => 'Part 4 of 5',
+                        'title' => 'The Fisheries Sector: From Catch to Consumer — Part 4',
+                        'date' => '14 September 2026',
+                        'topic' => 'Transport, Distribution & Marketing',
+                        'slug' => 'cat-fisheries-value-chain-4',
+                        'image' => 'pics_vids/knowledge-bites/fisheries/part-4.webp',
+                        'summary' => 'Part 4 examines the phase that connects fish products to profitable markets, covering transport, distribution, cold-chain services, wholesale, retail and digital fish marketing.'
+                    ],
+                    [
+                        'part' => 'Part 3 of 5',
+                        'title' => 'The Fisheries Sector: From Catch to Consumer — Part 3',
+                        'date' => '7 September 2026',
+                        'topic' => 'Handling, Processing & Packaging',
+                        'slug' => 'cat-fisheries-value-chain-3',
+                        'image' => 'pics_vids/knowledge-bites/fisheries/part-3.webp',
+                        'summary' => 'Part 3 focuses on handling, processing and packaging after harvest, showing how these activities preserve fish quality, improve food safety, reduce losses and create higher-value products.'
+                    ],
+                    [
+                        'part' => 'Part 2 of 5',
+                        'title' => 'The Fisheries Sector: From Catch to Consumer — Part 2',
+                        'date' => '30 August 2026',
+                        'topic' => 'Fish Production & Harvesting',
+                        'slug' => 'cat-fisheries-value-chain-2',
+                        'image' => 'pics_vids/knowledge-bites/fisheries/part-2.webp',
+                        'summary' => 'Part 2 explores where fish enters the value chain through capture fisheries and aquaculture, including responsible harvesting, farm management, water quality, fisheries monitoring and production services.'
+                    ],
+                    [
+                        'part' => 'Part 1 of 5',
+                        'title' => 'The Fisheries Sector: From Catch to Consumer — Part 1',
+                        'date' => '24 August 2026',
+                        'topic' => 'Pre-Harvest',
+                        'slug' => 'cat-fisheries-value-chain-1',
+                        'image' => 'pics_vids/knowledge-bites/fisheries/part-1.webp',
+                        'summary' => 'Part 1 introduces the fisheries value chain and explores the pre-harvest stage, including inputs, equipment, finance, technical services, feed, fingerlings, fishing gear and cold-storage support.'
+                    ],
+                    [
+                        'part' => 'Knowledge Bite',
+                        'title' => 'Aquaculture and Africa’s Growing Demand for Fish',
+                        'date' => '10 August 2026',
+                        'topic' => 'Aquaculture',
+                        'slug' => 'cat-aquaculture',
+                        'image' => 'pics_vids/knowledge-bites/fisheries/aquaculture.webp',
+                        'summary' => 'This Knowledge Bite explains aquaculture and its potential to help meet Africa’s growing demand for aquatic foods while complementing responsible management of capture fisheries.'
+                    ],
+                    [
+                        'part' => 'Knowledge Bite',
+                        'title' => 'Illegal, Unreported and Unregulated Fishing',
+                        'date' => '18 May 2026',
+                        'topic' => 'IUU Fishing',
+                        'slug' => 'cat-iuu-fishing',
+                        'image' => 'pics_vids/knowledge-bites/fisheries/iuu-fishing.webp',
+                        'summary' => 'This Knowledge Bite explains the hidden faces of IUU fishing, including how illegal practices can occur at different levels of fisheries and affect fish stocks, livelihoods and the wider fisheries value chain.'
+                    ],
+                ];
+            @endphp
+
             <div class="current-bites-grid">
-
-                <article class="current-bite-card">
-                    <div class="current-bite-photo">
-                        <img src="{{ asset('pics_vids/knowledge-bites/smalltooth-sawfish.webp') }}"
-                             alt="Smalltooth Sawfish" loading="lazy">
-                    </div>
-                    <div class="current-bite-body">
-                        <span class="current-bite-category">World Oceans Day 2026 · Issue 3</span>
-                        <h3>Smalltooth Sawfish</h3>
-                        <div class="current-bite-date">
-                            <i class="fa-regular fa-calendar"></i> 22 June 2026
+                @foreach($fisheriesPreviousBites as $bite)
+                    <article class="current-bite-card">
+                        <div class="current-bite-photo">
+                            <img src="{{ asset($bite['image']) }}"
+                                 alt="{{ $bite['title'] }}" loading="lazy">
                         </div>
-                        <p>
-                            Meet the critically endangered smalltooth sawfish, its ecological
-                            importance, major threats and the conservation actions needed to
-                            protect the species.
-                        </p>
-                        <div class="current-bite-actions">
-                            <a class="bite-read-button"
-                               href="{{ route('knowledge-bites.read', 'smalltooth-sawfish') }}"
-                               target="_blank" rel="noopener">
-                                <i class="fa-regular fa-eye"></i> Read Knowledge Bite
-                            </a>
-                            <a class="bite-download-button"
-                               href="{{ route('knowledge-bites.download', 'smalltooth-sawfish') }}">
-                                <i class="fa-solid fa-download"></i> Download PDF
-                            </a>
+                        <div class="current-bite-body">
+                            <span class="current-bite-category">Fisheries &amp; Aquaculture · {{ $bite['part'] }}</span>
+                            <h3>{{ $bite['title'] }}</h3>
+                            <div class="current-bite-date">
+                                <i class="fa-regular fa-calendar"></i> {{ $bite['date'] }}
+                            </div>
+                            <p>{{ $bite['summary'] }}</p>
+                            <div class="current-bite-actions">
+                                <a class="bite-read-button"
+                                   href="{{ route('knowledge-bites.read', $bite['slug']) }}"
+                                   target="_blank" rel="noopener">
+                                    <i class="fa-regular fa-eye"></i> Read Knowledge Bite
+                                </a>
+                                <a class="bite-download-button"
+                                   href="{{ route('knowledge-bites.download', $bite['slug']) }}">
+                                    <i class="fa-solid fa-download"></i> Download PDF
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </article>
-
-                <article class="current-bite-card">
-                    <div class="current-bite-photo">
-                        <img src="{{ asset('pics_vids/knowledge-bites/leatherback-sea-turtle.webp') }}"
-                             alt="Leatherback Sea Turtle" loading="lazy">
-                    </div>
-                    <div class="current-bite-body">
-                        <span class="current-bite-category">World Oceans Day 2026 · Issue 2</span>
-                        <h3>Leatherback Sea Turtle</h3>
-                        <div class="current-bite-date">
-                            <i class="fa-regular fa-calendar"></i> 18 June 2026
-                        </div>
-                        <p>
-                            Discover the world's largest living sea turtle, its role in marine
-                            ecosystems, its distribution and the pressures facing populations
-                            across West Africa.
-                        </p>
-                        <div class="current-bite-actions">
-                            <a class="bite-read-button"
-                               href="{{ route('knowledge-bites.read', 'leatherback-sea-turtle') }}"
-                               target="_blank" rel="noopener">
-                                <i class="fa-regular fa-eye"></i> Read Knowledge Bite
-                            </a>
-                            <a class="bite-download-button"
-                               href="{{ route('knowledge-bites.download', 'leatherback-sea-turtle') }}">
-                                <i class="fa-solid fa-download"></i> Download PDF
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="current-bite-card">
-                    <div class="current-bite-photo">
-                        <img src="{{ asset('pics_vids/knowledge-bites/scalloped-hammerhead.webp') }}"
-                             alt="The Scalloped Hammerhead Shark" loading="lazy">
-                    </div>
-                    <div class="current-bite-body">
-                        <span class="current-bite-category">World Oceans Day 2026 · Issue 1</span>
-                        <h3>The Scalloped Hammerhead Shark</h3>
-                        <div class="current-bite-date">
-                            <i class="fa-regular fa-calendar"></i> 1 June 2026
-                        </div>
-                        <p>
-                            Learn why the scalloped hammerhead shark matters to marine food webs
-                            and ocean health, the pressures driving its decline and the
-                            conservation measures needed.
-                        </p>
-                        <div class="current-bite-actions">
-                            <a class="bite-read-button"
-                               href="{{ route('knowledge-bites.read', 'scalloped-hammerhead') }}"
-                               target="_blank" rel="noopener">
-                                <i class="fa-regular fa-eye"></i> Read Knowledge Bite
-                            </a>
-                            <a class="bite-download-button"
-                               href="{{ route('knowledge-bites.download', 'scalloped-hammerhead') }}">
-                                <i class="fa-solid fa-download"></i> Download PDF
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="current-bite-card">
-                    <div class="current-bite-photo">
-                        <img src="{{ asset('pics_vids/knowledge-bites/aquatic-biodiversity.webp') }}"
-                             alt="Aquatic Biodiversity Conservation: A Call to Collective Action" loading="lazy">
-                    </div>
-                    <div class="current-bite-body">
-                        <span class="current-bite-category">Aquatic Biodiversity</span>
-                        <h3>Aquatic Biodiversity Conservation: A Call to Collective Action</h3>
-                        <div class="current-bite-date">
-                            <i class="fa-regular fa-calendar"></i> 25 May 2026
-                        </div>
-                        <p>
-                            Explore why aquatic biodiversity matters to food systems, livelihoods,
-                            climate resilience and the blue economy, and the conservation actions
-                            needed.
-                        </p>
-                        <div class="current-bite-actions">
-                            <a class="bite-read-button"
-                               href="{{ route('knowledge-bites.read', 'aquatic-biodiversity') }}"
-                               target="_blank" rel="noopener">
-                                <i class="fa-regular fa-eye"></i> Read Knowledge Bite
-                            </a>
-                            <a class="bite-download-button"
-                               href="{{ route('knowledge-bites.download', 'aquatic-biodiversity') }}">
-                                <i class="fa-solid fa-download"></i> Download PDF
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
-
-
-
-
-
-
 
 
     {{-- KNOWLEDGE CATEGORIES --}}
-    <section class="knowledge-categories">
-
+    <section class="knowledge-categories" id="browse-knowledge">
         <div class="content-container">
-
             <div class="section-title">
-
-                <span class="section-label">
-                    EXPLORE ALL KNOWLEDGE BITES
-                </span>
-
-                <h2>
-                    Browse Knowledge Areas
-                </h2>
-
+                <span class="section-label">EXPLORE ALL KNOWLEDGE BITES</span>
+                <h2>Browse Knowledge Areas</h2>
+                <p>Select a category to jump directly to its resources, where every document can be read online or downloaded.</p>
             </div>
-
-
             <div class="knowledge-category-grid">
-
-                <a href="#">
-                    <div class="category-icon">
-                        <i class="fa-solid fa-water"></i>
-                    </div>
-                    <strong>Marine Science</strong>
-                    <small>Research & discoveries</small>
-                </a>
-
-                <a href="#">
-                    <div class="category-icon">
-                        <i class="fa-solid fa-fish-fins"></i>
-                    </div>
-                    <strong>Fisheries</strong>
-                    <small>Trends & management</small>
-                </a>
-
-                <a href="#">
-                    <div class="category-icon">
-                        <i class="fa-solid fa-seedling"></i>
-                    </div>
-                    <strong>Conservation</strong>
-                    <small>Ecosystems & restoration</small>
-                </a>
-
-                <a href="#">
-                    <div class="category-icon">
-                        <i class="fa-solid fa-cloud-sun"></i>
-                    </div>
-                    <strong>Climate Change</strong>
-                    <small>Climate & resilience</small>
-                </a>
-
-                <a href="#">
-                    <div class="category-icon">
-                        <i class="fa-solid fa-anchor"></i>
-                    </div>
-                    <strong>Blue Economy</strong>
-                    <small>Ocean-based development</small>
-                </a>
-
-                <a href="#">
-                    <div class="category-icon">
-                        <i class="fa-solid fa-droplet"></i>
-                    </div>
-                    <strong>Water Resources</strong>
-                    <small>Freshwater & coastal systems</small>
-                </a>
-
-                <a href="#">
-                    <div class="category-icon">
-                        <i class="fa-solid fa-microscope"></i>
-                    </div>
-                    <strong>Research & Innovation</strong>
-                    <small>Emerging technologies</small>
-                </a>
-
-                <a href="#">
-                    <div class="category-icon">
-                        <i class="fa-solid fa-scale-balanced"></i>
-                    </div>
-                    <strong>Policy & Governance</strong>
-                    <small>Policies & regulations</small>
-                </a>
-
+                <a href="#aquatic-conservation"><div class="category-icon"><i class="fa-solid fa-seedling"></i></div><strong>Aquatic Conservation</strong><small>5 knowledge bites</small></a>
+                <a href="#ocean-governance"><div class="category-icon"><i class="fa-solid fa-scale-balanced"></i></div><strong>Ocean Governance</strong><small>2 knowledge bites</small></a>
+                <a href="#blue-economy"><div class="category-icon"><i class="fa-solid fa-anchor"></i></div><strong>Blue Economy</strong><small>3 knowledge bites</small></a>
+                <a href="#climate-change"><div class="category-icon"><i class="fa-solid fa-cloud-sun"></i></div><strong>Climate Change</strong><small>2 knowledge bites</small></a>
+                <a href="#fisheries-aquaculture"><div class="category-icon"><i class="fa-solid fa-fish-fins"></i></div><strong>Fisheries &amp; Aquaculture</strong><small>7 knowledge bites</small></a>
             </div>
-
         </div>
-
     </section>
 
+    {{-- CATEGORY RESOURCE LIBRARY --}}
+    <section class="category-library" id="category-library">
+        <div class="content-container">
+            <div class="section-title">
+                <span class="section-label">KNOWLEDGE BITE LIBRARY</span>
+                <h2>Read and Download by Category</h2>
+                <p>The documents below follow the folder categories supplied for the WASMaN Knowledge Bite library.</p>
+            </div>
+
+@php
+$knowledgeCategories = [
+    'aquatic-conservation' => ['title'=>'Aquatic Conservation','icon'=>'fa-seedling','files'=>[
+        ['title'=>'Wetlands Conservation','slug'=>'cat-wetlands-conservation','file'=>'Monday Knowledge Bite_Wetlands Conservation.pdf'],
+        ['title'=>'June Special Issue 1','slug'=>'cat-june-special-issue-1','file'=>'Monday Knowledge Bite_June Special Issue 1.pdf'],
+        ['title'=>'June Special Issue 2','slug'=>'cat-june-special-issue-2','file'=>'Monday Knowledge Bite_June Special Issue 2.pdf'],
+        ['title'=>'June Special Issue 3','slug'=>'cat-june-special-issue-3','file'=>'Monday Knowledge Bite_June Special Issue 3.pdf'],
+        ['title'=>'Aquatic Biodiversity','slug'=>'cat-aquatic-biodiversity','file'=>'Monday Knowledge Bite_Aquatic Biodiversity.pdf'],
+    ]],
+    'ocean-governance' => ['title'=>'Ocean Governance','icon'=>'fa-scale-balanced','files'=>[
+        ['title'=>'Marine Spatial Planning (MSP)','slug'=>'cat-msp','file'=>'Monday Knowledge Bite_MSP.pdf'],
+        ['title'=>'Integrated/Inclusive Economic Zone (IEZ)','slug'=>'cat-iez','file'=>'Monday Knowledge Bite_IEZ.pdf'],
+    ]],
+    'blue-economy' => ['title'=>'Blue Economy','icon'=>'fa-anchor','folder'=>'Blue Economy_','files'=>[
+        ['title'=>'Blue Economy Progress','slug'=>'cat-blue-economy-progress','file'=>'Monday Knowledge Bite_Blue Economy Progress.pdf'],
+        ['title'=>'Blue Careers','slug'=>'cat-blue-careers','file'=>'Monday Knowledge Bites_Blue Careers.pdf'],
+        ['title'=>'Blue Economy','slug'=>'cat-blue-economy','file'=>'Monday Knowledge Bite_Blue Economy.pdf'],
+    ]],
+    'climate-change' => ['title'=>'Climate Change','icon'=>'fa-cloud-sun','files'=>[
+        ['title'=>'Coastal Erosion','slug'=>'cat-coastal-erosion','file'=>'Coastal Erosion.pdf'],
+        ['title'=>'Climate Change','slug'=>'cat-climate-change','file'=>'Monday Knowledge Bite_Climate Change.pdf'],
+    ]],
+    'fisheries-aquaculture' => ['title'=>'Fisheries & Aquaculture','icon'=>'fa-fish-fins','files'=>[
+        ['title'=>'IUU Fishing','slug'=>'cat-iuu-fishing','file'=>'Monday Knowledge Bite_IUU Fishing.pdf'],
+        ['title'=>'Fisheries Value Chain – Part 1','slug'=>'cat-fisheries-value-chain-1','file'=>'Fisheries Value Chain Part 1.pdf'],
+        ['title'=>'Fisheries Value Chain – Part 2','slug'=>'cat-fisheries-value-chain-2','file'=>'Fisheries Value Chain Part 2.pdf'],
+        ['title'=>'Fisheries Value Chain – Part 3','slug'=>'cat-fisheries-value-chain-3','file'=>'Fisheries Value Chain Part 3.pdf'],
+        ['title'=>'Fisheries Value Chain – Part 4','slug'=>'cat-fisheries-value-chain-4','file'=>'Fisheries Value Chain Part 4.pdf'],
+        ['title'=>'Fisheries Value Chain – Part 5','slug'=>'cat-fisheries-value-chain-5','file'=>'Fisheries Value Chain Part 5.pdf'],
+        ['title'=>'Aquaculture','slug'=>'cat-aquaculture','file'=>'Monday Knowledge Bite_Aquaculture.pdf'],
+    ]],
+];
+@endphp
+
+            @foreach($knowledgeCategories as $slug => $category)
+                @php $folder = $category['folder'] ?? $category['title']; @endphp
+                <section class="kb-category-section" id="{{ $slug }}">
+                    <div class="kb-category-heading">
+                        <div class="kb-category-heading-icon"><i class="fa-solid {{ $category['icon'] }}"></i></div>
+                        <div><span>KNOWLEDGE AREA</span><h3>{{ $category['title'] }}</h3><p>{{ count($category['files']) }} resources available</p></div>
+                        <a href="#browse-knowledge">Back to categories <i class="fa-solid fa-arrow-up"></i></a>
+                    </div>
+                    <div class="kb-document-grid">
+                        @foreach($category['files'] as $document)
+                            @php $documentSlug = $document['slug']; @endphp
+                            <article class="kb-document-card">
+                                <div class="kb-document-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                                <div class="kb-document-info"><span>WASMaN KNOWLEDGE BITE</span><h4>{{ $document['title'] }}</h4><p>{{ $category['title'] }}</p></div>
+                                <div class="kb-document-actions">
+                                    <a href="{{ route('knowledge-bites.read', $documentSlug) }}" target="_blank" rel="noopener" class="kb-read"><i class="fa-regular fa-eye"></i> Read</a>
+                                    <a href="{{ route('knowledge-bites.download', $documentSlug) }}" class="kb-download"><i class="fa-solid fa-download"></i> Download</a>
+                                </div>
+                            </article>
+                        @endforeach
+                    </div>
+                </section>
+            @endforeach
+        </div>
+    </section>
 
     {{-- RESOURCE HUB --}}
     <section class="resource-hub" id="resources">

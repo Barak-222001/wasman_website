@@ -92,9 +92,29 @@ img {
 .hero-banner {
     position: relative;
     width: 100%;
-    min-height: 560px;
+    height: clamp(360px, 48vw, 620px);
+    min-height: 0;
     overflow: hidden;
    
+}
+
+.hero-banner .swiper,
+.hero-banner .swiper-wrapper,
+.hero-banner .swiper-slide,
+.hero-banner picture,
+.hero-banner img {
+    height: 100%;
+}
+
+.hero-banner picture {
+    display: block;
+    width: 100%;
+}
+
+.hero-banner .swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-picture {
@@ -110,7 +130,7 @@ img {
     width: 100%;
     height: 100%;
     max-width: none;
-    /* object-fit: cover; */
+    object-fit: cover;
     object-position: center;
     display: block;
 }
@@ -265,14 +285,14 @@ img {
    
 }
 
-.knowledge-card-primary {
-    /* background:
+/* .knowledge-card-primary {
+    background:
         linear-gradient(
             135deg,
             #063247,
             #087f9c
-        ); */
-}
+        );
+} */
 
 .knowledge-card-light {
     /* background:
@@ -1172,7 +1192,22 @@ img {
 @media (max-width: 650px) {
 
     .hero-banner {
-        min-height: 420px;
+        height: clamp(300px, 72vw, 430px);
+        min-height: 0;
+    }
+
+    .hero-banner .swiper,
+    .hero-banner .swiper-wrapper,
+    .hero-banner .swiper-slide,
+    .hero-banner picture,
+    .hero-banner img {
+        height: 100%;
+    }
+
+    .hero-banner img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .knowledge-section,
@@ -1205,5 +1240,424 @@ img {
 
     .cta-content h2 {
         font-size: 2.4rem;
+    }
+}
+
+
+/* =========================================================
+   HERO VIEWPORT FIT — header + carousel stay within first screen
+========================================================= */
+.hero-banner {
+    height: calc(100svh - 92px);
+    max-height: 680px;
+    min-height: 420px;
+    background: #ffffff;
+}
+
+.hero-banner .mySwiper {
+    height: 100%;
+    padding: 0;
+}
+
+.hero-banner .swiper-wrapper,
+.hero-banner .swiper-slide,
+.hero-banner .swiper-slide picture {
+    width: 100%;
+    height: 100%;
+}
+
+/* Keep the complete first banner visible, including its logo. */
+.hero-banner .swiper-slide:first-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+/* Other hero banners continue to fill the carousel cleanly. */
+.hero-banner .swiper-slide:not(:first-child) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+@media (max-width: 650px) {
+    .hero-banner {
+        height: calc(100svh - 76px);
+        min-height: 320px;
+        max-height: 560px;
+    }
+
+    .hero-banner .swiper-slide:first-child img {
+        object-fit: contain;
+    }
+}
+
+
+/* =========================================================
+   FINAL HERO CAROUSEL FIX
+   - header + hero fit the first viewport
+   - slide widths remain stable forward/backward
+   - first banner is fully visible (no logo cropping)
+========================================================= */
+.hero-banner {
+    height: calc(100vh - 88px);
+    min-height: 0 !important;
+    max-height: calc(100vh - 88px);
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.hero-banner .swiper,
+.hero-banner .swiper-wrapper,
+.hero-banner .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-banner .swiper {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.hero-banner .swiper-wrapper {
+    align-items: stretch;
+}
+
+.hero-banner .swiper-slide {
+    flex-shrink: 0 !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.hero-banner .swiper-slide picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-banner .swiper-slide img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+/* Preserve the entire first banner, including the WASMaN logo */
+.hero-banner .swiper-slide:first-child img {
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+/* Other hero slides fill their frame consistently */
+.hero-banner .swiper-slide:not(:first-child) img {
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+
+@media (max-width: 650px) {
+    .hero-banner {
+        height: calc(100svh - 76px);
+        min-height: 0 !important;
+        max-height: calc(100svh - 76px);
+    }
+}
+
+
+/* =========================================================
+   WASMaN HOME HERO — FINAL STABLE SWIPER FIX
+   Swiper owns slide width. Images always fill that width.
+========================================================= */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: calc(100svh - 88px);
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.hero-banner .hero-swiper {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.hero-banner .hero-swiper .swiper-wrapper {
+    height: 100%;
+    align-items: stretch;
+}
+
+/*
+ IMPORTANT:
+ Do not use min-width:100% / max-width:100% !important here.
+ Swiper writes the correct pixel width to every original and looped slide.
+*/
+.hero-banner .hero-swiper .hero-slide {
+    height: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.hero-banner .hero-swiper .hero-slide picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-banner .hero-swiper .hero-slide img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    object-position: center center !important;
+
+    /*
+      'fill' keeps the COMPLETE banner artwork visible while still occupying
+      the full carousel width and height. This prevents the first-slide logo
+      from being cropped and prevents the apparent narrowing caused by contain.
+    */
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+.hero-banner .swiper-button-prev,
+.hero-banner .swiper-button-next {
+    z-index: 10;
+}
+
+.hero-banner .swiper-pagination {
+    z-index: 10;
+}
+
+@media (max-width: 650px) {
+    .hero-banner {
+        height: calc(100svh - 76px);
+    }
+}
+
+
+/* All hero banners are now fully visible without cropping. */
+.hero-banner .hero-swiper .hero-slide,
+.hero-banner .hero-swiper .hero-slide picture {
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   FINAL HERO SIZE — SHORTER CAROUSEL, ZERO IMAGE CROPPING
+========================================================= */
+
+/* Desktop */
+.hero-banner {
+    width: 100%;
+    height: clamp(430px, 62vh, 610px) !important;
+    min-height: 0 !important;
+    max-height: 610px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #ffffff;
+}
+
+.hero-banner .hero-swiper,
+.hero-banner .hero-swiper .swiper-wrapper,
+.hero-banner .hero-swiper .hero-slide,
+.hero-banner .hero-swiper .hero-slide picture {
+    height: 100% !important;
+}
+
+.hero-banner .hero-swiper .hero-slide picture {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* Preserve every banner in full: no cropping on any slide */
+.hero-banner .hero-swiper .hero-slide img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+    .hero-banner {
+        height: clamp(390px, 56vh, 520px) !important;
+        max-height: 520px !important;
+    }
+}
+
+/* Phones */
+@media (max-width: 650px) {
+    .hero-banner {
+        height: clamp(330px, 48svh, 430px) !important;
+        max-height: 430px !important;
+    }
+
+    .hero-banner .hero-swiper .hero-slide img {
+        object-fit: contain !important;
+    }
+}
+
+
+/* =========================================================
+   COMPACT HERO — FINAL HEIGHT OVERRIDE
+   Much shorter on desktop while preserving full images.
+========================================================= */
+
+.hero-banner {
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+}
+
+.hero-banner .hero-swiper,
+.hero-banner .hero-swiper .swiper-wrapper,
+.hero-banner .hero-swiper .hero-slide,
+.hero-banner .hero-swiper .hero-slide picture {
+    height: 420px !important;
+}
+
+.hero-banner .hero-swiper .hero-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+/* Medium/laptop screens */
+@media (max-width: 1200px) {
+    .hero-banner,
+    .hero-banner .hero-swiper,
+    .hero-banner .hero-swiper .swiper-wrapper,
+    .hero-banner .hero-swiper .hero-slide,
+    .hero-banner .hero-swiper .hero-slide picture {
+        height: 380px !important;
+        min-height: 380px !important;
+        max-height: 380px !important;
+    }
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+    .hero-banner,
+    .hero-banner .hero-swiper,
+    .hero-banner .hero-swiper .swiper-wrapper,
+    .hero-banner .hero-swiper .hero-slide,
+    .hero-banner .hero-swiper .hero-slide picture {
+        height: 340px !important;
+        min-height: 340px !important;
+        max-height: 340px !important;
+    }
+}
+
+/* Phones */
+@media (max-width: 520px) {
+    .hero-banner,
+    .hero-banner .hero-swiper,
+    .hero-banner .hero-swiper .swiper-wrapper,
+    .hero-banner .hero-swiper .hero-slide,
+    .hero-banner .hero-swiper .hero-slide picture {
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+    }
+}
+
+
+/* =========================================================
+   HERO — FULL VIEWPORT WIDTH + BALANCED TALLER HEIGHT
+   Full banner width, no side white gaps, no image cropping.
+========================================================= */
+.hero-banner {
+    width: 100vw !important;
+    max-width: none !important;
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #ffffff;
+}
+
+.hero-banner .hero-swiper,
+.hero-banner .hero-swiper .swiper-wrapper,
+.hero-banner .hero-swiper .hero-slide,
+.hero-banner .hero-swiper .hero-slide picture {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.hero-banner .hero-swiper .hero-slide picture {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*
+ Full width without cropping:
+ image stretches to the carousel frame rather than being cropped.
+*/
+.hero-banner .hero-swiper .hero-slide img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: fill !important;
+    object-position: center center !important;
+    margin: 0 !important;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+    .hero-banner {
+        height: 470px !important;
+        min-height: 470px !important;
+        max-height: 470px !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    .hero-banner {
+        height: 410px !important;
+        min-height: 410px !important;
+        max-height: 410px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+    .hero-banner {
+        height: 340px !important;
+        min-height: 340px !important;
+        max-height: 340px !important;
     }
 }

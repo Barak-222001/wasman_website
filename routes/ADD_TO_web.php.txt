@@ -1,0 +1,5 @@
+// WASMaN — What We Do detail pages
+Route::view('/what-we-do/research-scientific-innovation', 'what-we-do.research')->name('what-we-do.research');
+Route::view('/what-we-do/capacity-building-mentorship', 'what-we-do.capacity')->name('what-we-do.capacity');
+Route::view('/what-we-do/policy-advocacy', 'what-we-do.policy')->name('what-we-do.policy');
+Route::view('/what-we-do/collaboration-network', 'what-we-do.collaboration')->name('what-we-do.collaboration');

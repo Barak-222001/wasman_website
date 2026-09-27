@@ -53,7 +53,7 @@
                 biodiversity and climate resilience.
             </p>
 
-            <a href="/publications">Learn More</a>
+            <a href="{{ route('what-we-do.research') }}">Learn More</a>
 
         </div>
         
@@ -69,12 +69,12 @@
                 Workshops, mentorship programmes and leadership development for women in aquatic science.
             </p>
 
-            <a href="/publications">Learn More</a>
+            <a href="{{ route('what-we-do.capacity') }}">Learn More</a>
 
         </div>
 
          <div class="featured-image">
-             <img src="{{asset('pics_vids/capa_build.jpg')}}">
+             <img src="{{asset('pics_vids/what_we_do/capacity-fieldwork.png')}}">
         </div>
         
 
@@ -83,7 +83,7 @@
     <div class="featured-card">
 
         <div class="featured-image">
-             <img src="{{asset('pics_vids/policy_advo.png')}}">
+             <img src="{{asset('pics_vids/what_we_do/big2.jpg')}}">
         </div>
 
         <div class="featured-text">
@@ -94,7 +94,7 @@
                 Influencing environmental policies that promote sustainable water and marine resource management.
             </p>
 
-            <a href="/publications">Learn More</a>
+            <a href="{{ route('what-we-do.policy') }}">Learn More</a>
 
         </div>
         
@@ -110,12 +110,12 @@
                 Collaborating with universities, governments and international organizations to maximize impact.
             </p>
 
-            <a href="/publications">Learn More</a>
+            <a href="{{ route('what-we-do.collaboration') }}">Learn More</a>
 
         </div>
 
          <div class="featured-image">
-             <img src="{{asset('pics_vids/stra_part.png')}}">
+             <img src="{{asset('pics_vids/what_we_do/collaboration-network.png')}}">
         </div>
         
 

@@ -2180,3 +2180,81 @@ body.knowledge-reader-open { overflow: hidden; }
         width: 100%;
     }
 }
+
+/* =========================================================
+   CATEGORY-BASED KNOWLEDGE BITE LIBRARY
+========================================================= */
+.category-library { padding: 105px 0; background: #f6fbfb; scroll-margin-top: 110px; }
+.kb-category-section { margin: 0 0 72px; padding-top: 22px; scroll-margin-top: 105px; }
+.kb-category-heading { display:grid; grid-template-columns:64px 1fr auto; gap:18px; align-items:center; margin-bottom:24px; padding:22px 24px; border-radius:20px; background:linear-gradient(135deg,var(--ocean-deep),#075f70); box-shadow:var(--shadow-soft); }
+.kb-category-heading-icon { width:56px; height:56px; display:flex; align-items:center; justify-content:center; border-radius:16px; color:var(--ocean-deep); background:var(--mint); font-size:1.25rem; }
+.kb-category-heading span { color:#9de6df; font-size:.62rem; font-weight:800; letter-spacing:.12em; }
+.kb-category-heading h3 { color:#fff; font-size:1.75rem; line-height:1.2; }
+.kb-category-heading p { color:rgba(255,255,255,.7); font-size:.75rem; }
+.kb-category-heading > a { color:#fff; font-size:.72rem; font-weight:800; padding:9px 13px; border:1px solid rgba(255,255,255,.2); border-radius:50px; }
+.kb-document-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.kb-document-card { display:grid; grid-template-columns:52px 1fr; gap:16px; padding:22px; border-radius:18px; background:#fff; border:1px solid var(--border); box-shadow:0 8px 24px rgba(5,47,67,.05); transition:var(--transition); }
+.kb-document-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-soft); }
+.kb-document-icon { width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:13px; background:var(--seafoam); color:var(--ocean); font-size:1.2rem; }
+.kb-document-info span { color:var(--teal); font-size:.58rem; font-weight:800; letter-spacing:.1em; }
+.kb-document-info h4 { margin:3px 0; color:var(--ocean-deep); font-family:'Playfair Display',serif; font-size:1.05rem; line-height:1.35; }
+.kb-document-info p { color:var(--muted); font-size:.7rem; }
+.kb-document-actions { grid-column:1/-1; display:flex; gap:9px; padding-top:13px; border-top:1px solid var(--border); }
+.kb-document-actions a { display:inline-flex; align-items:center; gap:7px; padding:9px 15px; border-radius:50px; font-size:.7rem; font-weight:800; }
+.kb-read { background:var(--ocean-deep); color:#fff; }
+.kb-download { background:var(--seafoam); color:var(--ocean-deep); border:1px solid var(--border); }
+@media(max-width:800px){ .kb-document-grid{grid-template-columns:1fr}.kb-category-heading{grid-template-columns:54px 1fr}.kb-category-heading>a{grid-column:1/-1;width:max-content}.category-library{padding:75px 0} }
+
+
+/* Fisheries & Aquaculture series card artwork */
+.latest-bite-photo img,
+.current-bite-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   FISHERIES KNOWLEDGE BITE CARD IMAGE — COVER/FILL FIX
+   Images occupy the complete dedicated image area.
+========================================================= */
+.latest-bite-photo,
+.current-bite-photo {
+    overflow: hidden !important;
+    background: #eef4f6;
+}
+
+.latest-bite-photo img,
+.current-bite-photo img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    background: transparent !important;
+}
+
+
+/* FINAL clean Fisheries card artwork */
+.latest-bite-photo {
+    overflow: hidden !important;
+    background: #eaf3f5;
+}
+.current-bite-photo {
+    overflow: hidden !important;
+    background: #eaf3f5;
+    aspect-ratio: 5 / 3;
+}
+.latest-bite-photo img,
+.current-bite-photo img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}

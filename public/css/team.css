@@ -1958,3 +1958,25 @@ body.modal-open { overflow: hidden; }
         font-size: 1.8rem;
     }
 }
+
+
+/* Secretariat portfolio refinements */
+.network-member-info span {
+    display: block;
+    line-height: 1.35;
+}
+.network-member-info span small {
+    display: block;
+    margin-top: 3px;
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: rgba(2, 26, 57, 0.62);
+}
+
+
+/* Secretariat profile interaction */
+.secretariat-card { cursor: pointer; }
+.secretariat-card:focus-visible { outline: 3px solid rgba(24,167,181,.35); outline-offset: 4px; }
+.secretariat-bio-hint { margin-top: 16px; display: inline-flex !important; align-items: center; gap: 7px; color: var(--ocean) !important; font-size: .72rem !important; font-weight: 800 !important; letter-spacing: .02em; }
+.secretariat-bio-hint i { font-size: .68rem; }
+.secretariat-card:hover .secretariat-bio-hint { transform: translateX(3px); }
