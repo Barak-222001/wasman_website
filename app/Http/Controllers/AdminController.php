@@ -3,44 +3,17 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\DB;
 use App\Models\InternApplication;
 use App\Models\VolunteerApplication;
 use App\Models\ResearchAssistantApplication;
 use App\Models\PartnerApplication;
-use App\Models\ContactMessage;
-use App\Models\GeneralEnquiry;
+use App\Models\MembershipApplication;
 
 
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-
-    /**
-     * Return the correct SQL expression for grouping records by month.
-     *
-     * Local development uses SQLite, while Laravel Cloud production uses MySQL.
-     */
-    private function monthExpression(): string
-    {
-        return DB::connection()->getDriverName() === 'sqlite'
-            ? "strftime('%Y-%m', created_at)"
-            : "DATE_FORMAT(created_at, '%Y-%m')";
-    }
-
-
-    /**
-     * Use Laravel Cloud object storage in production
-     * and the public disk during local development.
-     */
-    private function storageDisk(): string
-    {
-        return app()->environment('production')
-            ? 'private'
-            : 'public';
-    }
-
  public function index(Request $request)
     {
         $search = $request->input('search');
@@ -76,7 +49,7 @@ class AdminController extends Controller
 
         // CHART 2
         $monthlyStats = InternApplication::selectRaw(
-                "{$this->monthExpression()} as month, COUNT(*) as total"
+                "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
             )
             ->groupBy('month')
             ->orderBy('month')
@@ -94,17 +67,17 @@ public function downloadCv(InternApplication $application)
     {
         // route model binding
         
-        return Storage::disk($this->storageDisk())
+        return Storage::disk('public')
             ->download($application->document);
     }
 
 public function destroy(InternApplication $application)
     {
-        // Storage::disk($this->storageDisk())
+        // Storage::disk('public')
         //     ->delete($application->document);
 
         if ($application->document) {
-            Storage::disk($this->storageDisk())->delete($application->document);
+            Storage::disk('public')->delete($application->document);
             }
 
         $application->delete();
@@ -212,7 +185,7 @@ public function volunteers(Request $request)
 
 
     $volunteerMonthlyStats = VolunteerApplication::selectRaw(
-            "{$this->monthExpression()} as month, COUNT(*) as total"
+            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -352,7 +325,7 @@ public function researchAssistants(Request $request)
 
 
     $researchMonthlyStats = ResearchAssistantApplication::selectRaw(
-            "{$this->monthExpression()} as month, COUNT(*) as total"
+            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -374,13 +347,13 @@ public function downloadResearchDocument(
 ) {
     if (
         !$application->document ||
-        !Storage::disk($this->storageDisk())->exists($application->document)
+        !Storage::disk('public')->exists($application->document)
     ) {
         abort(404);
     }
 
 
-    return Storage::disk($this->storageDisk())->download(
+    return Storage::disk('public')->download(
         $application->document
     );
 }
@@ -427,7 +400,7 @@ public function updateResearchAssistant(
 
         if ($application->document) {
 
-            Storage::disk($this->storageDisk())->delete(
+            Storage::disk('public')->delete(
                 $application->document
             );
 
@@ -438,7 +411,7 @@ public function updateResearchAssistant(
             ->file('document')
             ->store(
                 'research_assistant_documents',
-                $this->storageDisk()
+                'public'
             );
 
     }
@@ -479,7 +452,7 @@ public function destroyResearchAssistant(
 ) {
     if ($application->document) {
 
-        Storage::disk($this->storageDisk())->delete(
+        Storage::disk('public')->delete(
             $application->document
         );
 
@@ -563,7 +536,7 @@ public function partners(Request $request)
 
 
     $partnerMonthlyStats = PartnerApplication::selectRaw(
-            "{$this->monthExpression()} as month, COUNT(*) as total"
+            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -661,384 +634,72 @@ public function destroyPartner(
 }
 
 
-// LEAVE MESSAGE
-public function messages(Request $request)
-{
-    $query = ContactMessage::query();
-
-    /*
-    |--------------------------------------------------------------------------
-    | Search
-    |--------------------------------------------------------------------------
-    */
-    if ($request->filled('search')) {
-        $search = $request->search;
-
-        $query->where(function ($q) use ($search) {
-            $q->where('full_name', 'like', "%{$search}%")
-                ->orWhere('email', 'like', "%{$search}%")
-                ->orWhere('phone_number', 'like', "%{$search}%")
-                ->orWhere('subject', 'like', "%{$search}%")
-                ->orWhere('message', 'like', "%{$search}%");
-        });
-    }
-
-    /*
-    |--------------------------------------------------------------------------
-    | Category Filter
-    |--------------------------------------------------------------------------
-    */
-    if ($request->filled('category')) {
-        $query->where('category', $request->category);
-    }
-
-    /*
-    |--------------------------------------------------------------------------
-    | Read / Unread Filter
-    |--------------------------------------------------------------------------
-    */
-    if ($request->filled('status')) {
-
-        if ($request->status === 'read') {
-            $query->where('is_read', true);
-        }
-
-        if ($request->status === 'unread') {
-            $query->where('is_read', false);
-        }
-    }
-
-    /*
-    |--------------------------------------------------------------------------
-    | Sorting
-    |--------------------------------------------------------------------------
-    */
-    if ($request->sort === 'oldest') {
-        $query->oldest();
-    } else {
-        $query->latest();
-    }
-
-    /*
-    |--------------------------------------------------------------------------
-    | Pagination
-    |--------------------------------------------------------------------------
-    */
-    $messages = $query
-        ->paginate(10)
-        ->withQueryString();
-
-    /*
-    |--------------------------------------------------------------------------
-    | Statistics
-    |--------------------------------------------------------------------------
-    */
-    $totalMessages = ContactMessage::count();
-
-    $unreadMessages = ContactMessage::where('is_read', false)->count();
-
-    $readMessages = ContactMessage::where('is_read', true)->count();
-
-    /*
-    |--------------------------------------------------------------------------
-    | Messages by Category
-    |--------------------------------------------------------------------------
-    */
-    $categoryStats = ContactMessage::selectRaw(
-        'category, COUNT(*) as total'
-    )
-        ->groupBy('category')
-        ->orderByDesc('total')
-        ->get();
-
-    /*
-    |--------------------------------------------------------------------------
-    | Messages by Month - SQLite
-    |--------------------------------------------------------------------------
-    */
-    $monthlyStats = ContactMessage::selectRaw(
-        "{$this->monthExpression()} as month, COUNT(*) as total"
-    )
-        ->groupBy('month')
-        ->orderBy('month')
-        ->get();
-
-    return view('admin-messages', compact(
-        'messages',
-        'totalMessages',
-        'unreadMessages',
-        'readMessages',
-        'categoryStats',
-        'monthlyStats'
-    ));
-}
-
 
 /*
 |--------------------------------------------------------------------------
-| View Individual Message
+| MEMBERSHIP APPLICATIONS
 |--------------------------------------------------------------------------
 */
-
-public function showMessage(ContactMessage $message)
+public function memberships(Request $request)
 {
-    if (!$message->is_read) {
-        $message->update([
-            'is_read' => true
-        ]);
-    }
+    $search = $request->input('search');
+    $joinAs = $request->input('join_as');
+    $status = $request->input('status');
+    $sort = $request->input('sort', 'newest');
 
-    return view('admin-message-show', compact('message'));
-}
-
-
-/*
-|--------------------------------------------------------------------------
-| Download Message Attachment
-|--------------------------------------------------------------------------
-*/
-
-public function downloadMessageAttachment(ContactMessage $message)
-{
-    if (
-        !$message->attachment ||
-        !Storage::disk($this->storageDisk())->exists($message->attachment)
-    ) {
-        abort(404, 'Attachment not found.');
-    }
-
-    return Storage::disk($this->storageDisk())->download(
-        $message->attachment
-    );
-}
-
-
-/*
-|--------------------------------------------------------------------------
-| Delete Message
-|--------------------------------------------------------------------------
-*/
-
-public function destroyMessage(ContactMessage $message)
-{
-    if (
-        $message->attachment &&
-        Storage::disk($this->storageDisk())->exists($message->attachment)
-    ) {
-        Storage::disk($this->storageDisk())->delete(
-            $message->attachment
-        );
-    }
-
-    $message->delete();
-
-    return redirect()
-        ->route('admin.messages')
-        ->with(
-            'success',
-            'Message deleted successfully.'
-        );
-}
-
-/*
-|--------------------------------------------------------------------------
-| GENERAL ENQUIRIES
-|--------------------------------------------------------------------------
-*/
-
-public function generalEnquiries(Request $request)
-{
-    $query = GeneralEnquiry::query();
-
-    /*
-    |--------------------------------------------------------------------------
-    | Search
-    |--------------------------------------------------------------------------
-    */
-
-    if ($request->filled('search')) {
-
-        $search = $request->search;
-
-        $query->where(function ($q) use ($search) {
-
-            $q->where('full_name', 'like', "%{$search}%")
-                ->orWhere('email', 'like', "%{$search}%")
-                ->orWhere('phone_number', 'like', "%{$search}%")
-                ->orWhere('enquiry_type', 'like', "%{$search}%")
-                ->orWhere('message', 'like', "%{$search}%");
-
-        });
-    }
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Enquiry Type Filter
-    |--------------------------------------------------------------------------
-    */
-
-    if ($request->filled('enquiry_type')) {
-
-        $query->where(
-            'enquiry_type',
-            $request->enquiry_type
-        );
-    }
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Read / Unread Filter
-    |--------------------------------------------------------------------------
-    */
-
-    if ($request->filled('status')) {
-
-        if ($request->status === 'read') {
-
-            $query->where('is_read', true);
-
-        }
-
-        if ($request->status === 'unread') {
-
-            $query->where('is_read', false);
-
-        }
-    }
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Sort
-    |--------------------------------------------------------------------------
-    */
-
-    if ($request->sort === 'oldest') {
-
-        $query->oldest();
-
-    } else {
-
-        $query->latest();
-
-    }
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Pagination
-    |--------------------------------------------------------------------------
-    */
-
-    $enquiries = $query
-        ->paginate(10)
-        ->withQueryString();
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Summary Statistics
-    |--------------------------------------------------------------------------
-    */
-
-    $totalEnquiries = GeneralEnquiry::count();
-
-    $unreadEnquiries = GeneralEnquiry::where(
-        'is_read',
-        false
-    )->count();
-
-    $readEnquiries = GeneralEnquiry::where(
-        'is_read',
-        true
-    )->count();
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Enquiries by Type
-    |--------------------------------------------------------------------------
-    */
-
-    $typeStats = GeneralEnquiry::selectRaw(
-        'enquiry_type, COUNT(*) as total'
-    )
-        ->groupBy('enquiry_type')
-        ->orderByDesc('total')
-        ->get();
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Enquiries by Month - SQLite
-    |--------------------------------------------------------------------------
-    */
-
-    $monthlyStats = GeneralEnquiry::selectRaw(
-        "{$this->monthExpression()} as month, COUNT(*) as total"
-    )
-        ->groupBy('month')
-        ->orderBy('month')
-        ->get();
-
-
-    return view(
-        'admin-general-enquiries',
-        compact(
-            'enquiries',
-            'totalEnquiries',
-            'unreadEnquiries',
-            'readEnquiries',
-            'typeStats',
-            'monthlyStats'
+    $memberships = MembershipApplication::query()
+        ->when($search, function ($query, $search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('full_name', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%")
+                  ->orWhere('phone', 'like', "%{$search}%")
+                  ->orWhere('institution', 'like', "%{$search}%")
+                  ->orWhere('expertise', 'like', "%{$search}%");
+            });
+        })
+        ->when($joinAs, fn ($query, $joinAs) => $query->where('join_as', $joinAs))
+        ->when($status, fn ($query, $status) => $query->where('status', $status))
+        ->when(
+            $sort === 'oldest',
+            fn ($query) => $query->oldest(),
+            fn ($query) => $query->latest()
         )
-    );
+        ->paginate(10)
+        ->withQueryString();
+
+    return view('admin.memberships', [
+        'memberships' => $memberships,
+        'totalMemberships' => MembershipApplication::count(),
+        'pendingMemberships' => MembershipApplication::where('status', 'Pending')->count(),
+        'approvedMemberships' => MembershipApplication::where('status', 'Approved')->count(),
+    ]);
 }
 
-
-/*
-|--------------------------------------------------------------------------
-| View Individual Enquiry
-|--------------------------------------------------------------------------
-*/
-
-public function showGeneralEnquiry(
-    GeneralEnquiry $enquiry
-) {
-    if (!$enquiry->is_read) {
-
-        $enquiry->update([
-            'is_read' => true,
-        ]);
-    }
-
-    return view(
-        'admin-general-enquiry-show',
-        compact('enquiry')
-    );
+public function showMembership(MembershipApplication $membership)
+{
+    return view('admin.membership-show', compact('membership'));
 }
 
+public function updateMembershipStatus(Request $request, MembershipApplication $membership)
+{
+    $validated = $request->validate([
+        'status' => 'required|in:Pending,Approved,Declined',
+    ]);
 
-/*
-|--------------------------------------------------------------------------
-| Delete General Enquiry
-|--------------------------------------------------------------------------
-*/
-
-public function destroyGeneralEnquiry(
-    GeneralEnquiry $enquiry
-) {
-    $enquiry->delete();
+    $membership->update($validated);
 
     return redirect()
-        ->route('admin.general-enquiries')
-        ->with(
-            'success',
-            'General enquiry deleted successfully.'
-        );
+        ->route('admin.memberships.show', $membership)
+        ->with('success', 'Membership application status updated successfully.');
 }
 
+public function destroyMembership(MembershipApplication $membership)
+{
+    $membership->delete();
+
+    return redirect()
+        ->route('admin.memberships')
+        ->with('success', 'Membership application deleted successfully.');
+}
 
 }

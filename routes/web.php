@@ -12,6 +12,7 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\AdminOverviewController;
 use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\GeneralEnquiryController;
+use App\Http\Controllers\MembershipController;
 
 
 use App\Http\Controllers\VolunteerController;
@@ -324,6 +325,19 @@ Route::delete(
 
 // add here
 
+// MEMBERSHIP ROUTES
+
+Route::get('/admin/memberships', [AdminController::class, 'memberships'])
+    ->name('admin.memberships');
+
+Route::get('/admin/memberships/{membership}', [AdminController::class, 'showMembership'])
+    ->name('admin.memberships.show');
+
+Route::patch('/admin/memberships/{membership}/status', [AdminController::class, 'updateMembershipStatus'])
+    ->name('admin.memberships.status');
+
+Route::delete('/admin/memberships/{membership}', [AdminController::class, 'destroyMembership'])
+    ->name('admin.memberships.destroy');
 
 });
 
@@ -422,3 +436,6 @@ Route::view(
     '/what-we-do/collaboration-network',
     'what-we-do.collaboration'
 )->name('what-we-do.collaboration');
+
+Route::post('/become_member', [MembershipController::class, 'store'])
+    ->name('membership.store');

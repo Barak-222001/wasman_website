@@ -46,15 +46,14 @@
         </h1>
 
         <p>
-            Become part of a growing community of researchers, students,
-            professionals, policymakers and environmental leaders working
-            together to build healthier aquatic ecosystems and resilient
-            communities.
+            Become part of WASMaN's professional network advancing the participation,
+            visibility and leadership of women in aquatic science and management
+            through research, capacity development, advocacy, networking and partnerships.
         </p>
 
         <div class="membership-hero-actions">
 
-            <a href="#membership-categories" class="membership-primary-btn">
+            <a href="#membership-application" class="membership-primary-btn">
                 Become a Member
                 <i class="fas fa-arrow-right"></i>
             </a>
@@ -94,16 +93,15 @@
             </h2>
 
             <p>
-                WASMaN brings together women and allies working across aquatic
-                science, marine conservation, environmental management,
-                climate resilience and the blue economy.
+                WASMaN provides a professional platform for women in aquatic science
+                and management to connect, collaborate, strengthen their
+                professional development and contribute to Africa's blue economy.
             </p>
 
             <p>
-                Membership gives you access to a platform where knowledge,
-                experience and ideas can be exchanged while creating
-                opportunities for collaboration, professional growth and
-                leadership.
+                The Network supports knowledge exchange, networking, research,
+                professional development, mentoring, advocacy and opportunities
+                for members to participate in WASMaN programmes and activities.
             </p>
 
             <a href="#membership-benefits" class="text-link">
@@ -117,47 +115,27 @@
         <div class="membership-stat-panel">
 
             <div class="membership-stat">
-
-                <div class="stat-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-
-                <strong>600+</strong>
-                <span>Members</span>
-
+                <div class="stat-icon"><i class="fas fa-flask"></i></div>
+                <strong>Research</strong>
+                <span>Knowledge generation & innovation</span>
             </div>
 
             <div class="membership-stat">
-
-                <div class="stat-icon">
-                    <i class="fas fa-building"></i>
-                </div>
-
-                <strong>25+</strong>
-                <span>Partner Institutions</span>
-
+                <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <strong>Capacity</strong>
+                <span>Professional development & mentoring</span>
             </div>
 
             <div class="membership-stat">
-
-                <div class="stat-icon">
-                    <i class="fas fa-globe-africa"></i>
-                </div>
-
-                <strong>18</strong>
-                <span>Countries</span>
-
+                <div class="stat-icon"><i class="fas fa-bullhorn"></i></div>
+                <strong>Advocacy</strong>
+                <span>Visibility, representation & engagement</span>
             </div>
 
             <div class="membership-stat">
-
-                <div class="stat-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-
-                <strong>120+</strong>
-                <span>Mentorship Matches</span>
-
+                <div class="stat-icon"><i class="fas fa-people-group"></i></div>
+                <strong>Network</strong>
+                <span>Collaboration & partnerships</span>
             </div>
 
         </div>
@@ -168,121 +146,92 @@
 
 
 {{-- =========================
-     MEMBERSHIP CATEGORIES
+     MEMBERSHIP PROCESS
 ========================= --}}
 <section class="membership-categories" id="membership-categories">
 
     <div class="membership-section-heading">
-
-        <span>MEMBERSHIP OPTIONS</span>
+        <span>BECOMING A MEMBER</span>
 
         <h2>
             Find Your Place Within WASMaN
         </h2>
 
         <p>
-            Whether you are beginning your academic journey, building your
-            professional career or leading environmental initiatives,
-            there is a place for you within the network.
+            WASMaN's Secretariat manages member registration, onboarding,
+            membership records, renewals and routine member communication.
+            The reviewed Secretariat Manual refers to membership categories,
+            but it does not define or name separate membership classes.
+            Your appropriate membership category can therefore be confirmed
+            by WASMaN during registration.
         </p>
-
     </div>
-
 
     <div class="membership-category-grid">
 
-
-        {{-- STUDENT --}}
         <article class="membership-card">
-
-            <div class="membership-card-number">
-                01
-            </div>
-
+            <div class="membership-card-number">01</div>
             <div class="membership-card-icon">
-                <i class="fas fa-graduation-cap"></i>
+                <i class="fa-solid fa-file-signature"></i>
             </div>
 
-            <h3>
-                Student / Intern
-            </h3>
+            <h3>Register Your Interest</h3>
 
             <p>
-                For undergraduate and postgraduate students pursuing studies
-                related to aquatic science, marine conservation,
-                environmental management or related disciplines.
+                Express your interest in joining WASMaN and provide the
+                information required for the Secretariat to create and
+                maintain an accurate membership record.
             </p>
 
-            <a href="#">
-                Explore Membership
+            <a href="#membership-application">
+                Start Membership Enquiry
                 <i class="fas fa-arrow-right"></i>
             </a>
-
         </article>
 
-
-        {{-- PROFESSIONAL --}}
         <article class="membership-card membership-card-featured">
-
-            <div class="membership-popular">
-                POPULAR
-            </div>
-
-            <div class="membership-card-number">
-                02
-            </div>
-
+            <div class="membership-popular">MEMBER SUPPORT</div>
+            <div class="membership-card-number">02</div>
             <div class="membership-card-icon">
-                <i class="fas fa-flask"></i>
+                <i class="fa-solid fa-user-check"></i>
             </div>
 
-            <h3>
-                Researcher / Professional
-            </h3>
+            <h3>Complete Onboarding</h3>
 
             <p>
-                Designed for researchers, lecturers, consultants, government
-                officers, conservation practitioners and industry professionals.
+                The Secretariat supports registration and onboarding and
+                keeps the membership database updated with the relevant
+                membership category, professional affiliation, contact
+                details and membership status.
             </p>
 
-            <a href="#">
-                Explore Membership
+            <a href="#membership-journey">
+                See How It Works
                 <i class="fas fa-arrow-right"></i>
             </a>
-
         </article>
 
-
-        {{-- INSTITUTION --}}
         <article class="membership-card">
-
-            <div class="membership-card-number">
-                03
-            </div>
-
+            <div class="membership-card-number">03</div>
             <div class="membership-card-icon">
-                <i class="fas fa-university"></i>
+                <i class="fa-solid fa-people-group"></i>
             </div>
 
-            <h3>
-                Institutional Partner
-            </h3>
+            <h3>Engage in the Network</h3>
 
             <p>
-                For universities, NGOs, research institutes, government
-                agencies and organizations interested in collaborating
-                with WASMaN.
+                Members receive updates, professional-development
+                opportunities and avenues to participate in WASMaN's
+                research, learning, networking and other activities.
             </p>
 
-            <a href="#">
-                Explore Partnership
+            <a href="#membership-benefits">
+                Explore Member Opportunities
                 <i class="fas fa-arrow-right"></i>
             </a>
-
         </article>
 
     </div>
-
 </section>
 
 
@@ -418,165 +367,83 @@
 {{-- =========================
      MEMBERSHIP JOURNEY
 ========================= --}}
-<section class="membership-journey">
+<section class="membership-journey" id="membership-journey">
 
     <div class="membership-section-heading">
+        <span>HOW MEMBERSHIP WORKS</span>
 
-        <span>HOW IT WORKS</span>
-
-        <h2>
-            Your Journey Starts Here
-        </h2>
+        <h2>Your Membership Journey</h2>
 
         <p>
-            Becoming part of WASMaN is simple. Follow these four steps
-            and begin your journey with the network.
+            The Secretariat supports the membership process from registration
+            and onboarding through active engagement and renewal.
         </p>
-
     </div>
-
 
     <div class="journey-wrapper">
-
-
         <div class="journey-line"></div>
 
-
         <div class="journey-step">
-
-            <div class="journey-number">
-                01
-            </div>
-
-            <h3>
-                Apply
-            </h3>
-
-            <p>
-                Complete the online membership application.
-            </p>
-
+            <div class="journey-number">01</div>
+            <h3>Register</h3>
+            <p>Submit your membership interest and relevant details to WASMaN.</p>
         </div>
 
-
         <div class="journey-step">
-
-            <div class="journey-number">
-                02
-            </div>
-
-            <h3>
-                Review
-            </h3>
-
-            <p>
-                Your application is reviewed by the WASMaN team.
-            </p>
-
+            <div class="journey-number">02</div>
+            <h3>Onboard</h3>
+            <p>The Secretariat supports your onboarding and records your membership information.</p>
         </div>
 
-
         <div class="journey-step">
-
-            <div class="journey-number">
-                03
-            </div>
-
-            <h3>
-                Welcome
-            </h3>
-
-            <p>
-                Receive confirmation and your membership details.
-            </p>
-
+            <div class="journey-number">03</div>
+            <h3>Engage</h3>
+            <p>Receive updates and take part in professional-development and Network opportunities.</p>
         </div>
 
-
         <div class="journey-step">
-
-            <div class="journey-number">
-                04
-            </div>
-
-            <h3>
-                Engage
-            </h3>
-
-            <p>
-                Participate in WASMaN activities and opportunities.
-            </p>
-
+            <div class="journey-number">04</div>
+            <h3>Renew</h3>
+            <p>The Secretariat coordinates membership renewals and keeps membership status current.</p>
         </div>
-
     </div>
-
 </section>
 
 
 {{-- =========================
-     WHO CAN JOIN
+     WHO THE NETWORK SERVES
 ========================= --}}
 <section class="membership-eligibility">
 
     <div class="eligibility-container">
 
         <div class="eligibility-content">
-
-            <span class="section-label">
-                WHO CAN JOIN?
-            </span>
+            <span class="section-label">WHO IS WASMaN FOR?</span>
 
             <h2>
-                A Community Open to
-                <span>People Who Care</span>
+                Women Advancing
+                <span>Aquatic Science & Management</span>
             </h2>
 
             <p>
-                WASMaN welcomes individuals and institutions committed
-                to advancing aquatic science, environmental sustainability
-                and inclusive leadership.
+                WASMaN is a professional platform dedicated to strengthening
+                the participation, visibility and leadership of women in
+                aquatic science and management. The Network advances this
+                mission through research, capacity development, advocacy,
+                networking and partnerships.
             </p>
-
         </div>
 
-
         <div class="eligibility-list">
-
-            <div>
-                <i class="fas fa-check"></i>
-                Students
-            </div>
-
-            <div>
-                <i class="fas fa-check"></i>
-                Researchers
-            </div>
-
-            <div>
-                <i class="fas fa-check"></i>
-                Academics
-            </div>
-
-            <div>
-                <i class="fas fa-check"></i>
-                NGOs & Civil Society
-            </div>
-
-            <div>
-                <i class="fas fa-check"></i>
-                Government Agencies
-            </div>
-
-            <div>
-                <i class="fas fa-check"></i>
-                Private Sector Professionals
-            </div>
-
+            <div><i class="fas fa-check"></i> Aquatic Science</div>
+            <div><i class="fas fa-check"></i> Aquatic Management</div>
+            <div><i class="fas fa-check"></i> Research & Knowledge</div>
+            <div><i class="fas fa-check"></i> Professional Development</div>
+            <div><i class="fas fa-check"></i> Advocacy & Leadership</div>
+            <div><i class="fas fa-check"></i> Networking & Collaboration</div>
         </div>
 
     </div>
-
 </section>
 
 
@@ -586,171 +453,319 @@
 <section class="membership-faq" id="membership-faq">
 
     <div class="membership-section-heading">
-
         <span>QUESTIONS?</span>
-
-        <h2>
-            Frequently Asked Questions
-        </h2>
-
+        <h2>Frequently Asked Questions</h2>
     </div>
-
 
     <div class="faq-grid">
 
-
         <div class="faq-item">
-
             <div class="faq-question">
-
-                <h3>
-                    Is WASMaN membership open internationally?
-                </h3>
-
+                <h3>Who manages WASMaN membership?</h3>
                 <i class="fas fa-plus"></i>
-
             </div>
-
             <p>
-                Yes. WASMaN welcomes members from different countries
-                who share an interest in aquatic science, conservation
-                and sustainable development.
+                Membership administration is handled through the Secretariat.
+                The Administrative Officer supports registration, onboarding,
+                renewals, membership records and routine member communication.
             </p>
-
         </div>
 
-
         <div class="faq-item">
-
             <div class="faq-question">
-
-                <h3>
-                    Can students become members?
-                </h3>
-
+                <h3>What information is kept in the membership database?</h3>
                 <i class="fas fa-plus"></i>
-
             </div>
-
             <p>
-                Absolutely. Students are encouraged to join the network
-                and participate in learning, mentorship and networking
-                opportunities.
+                The Manual identifies membership category, professional
+                affiliation, contact details and membership status as key
+                information maintained in the membership database.
             </p>
-
         </div>
 
-
         <div class="faq-item">
-
             <div class="faq-question">
-
-                <h3>
-                    Is there a membership fee?
-                </h3>
-
+                <h3>What opportunities are available to members?</h3>
                 <i class="fas fa-plus"></i>
-
             </div>
-
             <p>
-                Membership fees, where applicable, will be communicated
-                during the registration process.
+                Members are to receive regular updates, professional-development
+                opportunities and avenues for participation in WASMaN activities.
             </p>
-
         </div>
 
-
         <div class="faq-item">
-
             <div class="faq-question">
-
-                <h3>
-                    What can members participate in?
-                </h3>
-
+                <h3>What membership categories can I choose from?</h3>
                 <i class="fas fa-plus"></i>
-
             </div>
-
             <p>
-                Members can participate in research, workshops,
-                conferences, mentorship, networking, outreach and
-                other WASMaN initiatives.
+                The reviewed Secretariat Manual records a member's membership
+                category but does not define the official category names.
+                WASMaN can therefore confirm the appropriate category during
+                registration rather than presenting unapproved categories here.
             </p>
-
         </div>
 
     </div>
-
 </section>
 
 
 
-<section class="membership-application" id="membership-application">
+<section class="membership-application membership-form-section" id="membership-application">
 
-    <div class="membership-application-inner">
+    <div class="membership-form-shell">
 
-        <div class="membership-application-copy">
+        <div class="membership-form-heading">
+            <span class="section-label">READY TO JOIN?</span>
 
-            <span class="section-label">
-                READY TO JOIN?
-            </span>
-
-            <h2>
-                Start Your WASMaN
-                Membership Journey
-            </h2>
+            <h2>WASMaN Membership Application</h2>
 
             <p>
-                Select the membership path that best reflects your current
-                stage and submit your interest. The WASMaN team can then guide
-                you through the appropriate membership process.
+                Complete the form below to express your interest in joining the
+                Women in Aquatic Science and Management Network (WASMaN).
+                The Secretariat will use the information provided for membership
+                registration, onboarding and official communication.
             </p>
-
-            <div class="application-notes">
-
-                <div>
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Students & Interns</span>
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-microscope"></i>
-                    <span>Researchers & Professionals</span>
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-building-columns"></i>
-                    <span>Institutions & Partners</span>
-                </div>
-
-            </div>
-
         </div>
 
+        @if(session('success'))
+            <div class="membership-form-alert membership-form-success" role="status">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>{{ session('success') }}</span>
+            </div>
+        @endif
 
-        <div class="membership-application-card">
+        @if($errors->any())
+            <div class="membership-form-alert membership-form-errors" role="alert">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div>
+                    <strong>Please correct the following:</strong>
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @endif
 
-            <div class="application-card-icon">
-                <i class="fa-solid fa-user-plus"></i>
+        <form class="wasman-membership-form" action="{{ route('membership.store') }}" method="POST">
+            @csrf
+
+            <div class="membership-form-block">
+                <div class="membership-form-block-title">
+                    <span>01</span>
+                    <div>
+                        <h3>Personal Information</h3>
+                        <p>Tell us who you are and how we can contact you.</p>
+                    </div>
+                </div>
+
+                <div class="membership-form-grid">
+
+                    <div class="membership-field membership-field-full">
+                        <label for="full_name">Full Name <span>*</span></label>
+                        <input type="text" id="full_name" name="full_name" value="{{ old('full_name') }}" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="membership-field">
+                        <label for="date_of_birth">Date of Birth <span>*</span></label>
+                        <input type="date" id="date_of_birth" name="date_of_birth" value="{{ old('date_of_birth') }}" required>
+                    </div>
+
+                    <div class="membership-field">
+                        <label for="gender">Gender <span>*</span></label>
+                        <select id="gender" name="gender" required>
+                            <option value="" selected disabled>Select gender</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <!-- <option value="Prefer not to say">Prefer not to say</option>
+                            <option value="Other">Other</option> -->
+                        </select>
+                    </div>
+
+                    <div class="membership-field">
+                        <label for="phone">Phone Number <span>*</span></label>
+                        <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" placeholder="+233..." required>
+                    </div>
+
+                    <div class="membership-field">
+                        <label for="email">Email Address <span>*</span></label>
+                        <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="membership-field membership-field-full">
+                        <label for="address">Postal Address / Location <span>*</span></label>
+                        <input type="text" id="address" name="address" value="{{ old('address') }}" placeholder="Postal address, town/city and country" required>
+                    </div>
+
+                </div>
             </div>
 
-            <h3>
-                Membership Enquiry
-            </h3>
+            <div class="membership-form-block">
+                <div class="membership-form-block-title">
+                    <span>02</span>
+                    <div>
+                        <h3>Professional & Academic Information</h3>
+                        <p>Help us understand your current background and area of interest.</p>
+                    </div>
+                </div>
 
-            <p>
-                Use our enquiry form to express interest in joining WASMaN
-                and receive information about the next steps.
-            </p>
+                <div class="membership-form-grid">
 
-            <a href="/general_enquiries">
-                Begin Membership Enquiry
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
+                    <div class="membership-field">
+                        <label for="occupation">Current Occupation / Position <span>*</span></label>
+                        <input type="text" id="occupation" name="occupation" value="{{ old('occupation') }}" placeholder="e.g. Student, Lecturer, Researcher" required>
+                    </div>
 
-        </div>
+                    <div class="membership-field">
+                        <label for="institution">Institution / Organisation <span>*</span></label>
+                        <input type="text" id="institution" name="institution" value="{{ old('institution') }}" placeholder="Enter institution or organisation" required>
+                    </div>
+
+                    <div class="membership-field">
+                        <label for="expertise">Area of Expertise / Study <span>*</span></label>
+                        <input type="text" id="expertise" name="expertise" value="{{ old('expertise') }}" placeholder="Your field or area of study" required>
+                    </div>
+
+                    <div class="membership-field">
+                        <label for="education">Highest Level of Education <span>*</span></label>
+                        <select id="education" name="education" required>
+                            <option value="" selected disabled>Select level</option>
+                            <option value="Secondary">Secondary / High School</option>
+                            <option value="Certificate">Certificate</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="Bachelor's">Bachelor's Degree</option>
+                            <option value="Master's">Master's Degree</option>
+                            <option value="Doctorate">Doctorate / PhD</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="membership-form-block">
+                <div class="membership-form-block-title">
+                    <span>03</span>
+                    <div>
+                        <h3>Join Us</h3>
+                        <p>Select the option that best describes how you are joining WASMaN.</p>
+                    </div>
+                </div>
+
+                <div class="join-option-grid">
+
+                    <label class="join-option-card">
+                        <input type="radio" name="join_as" value="Student" {{ old('join_as') === 'Student' ? 'checked' : '' }} required>
+                        <span class="join-option-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <strong>Student</strong>
+                        <small>For applicants currently pursuing an academic programme.</small>
+                    </label>
+
+                    <label class="join-option-card">
+                        <input type="radio" name="join_as" value="Staff" {{ old('join_as') === 'Staff' ? 'checked' : '' }} required>
+                        <span class="join-option-icon"><i class="fa-solid fa-briefcase"></i></span>
+                        <strong>Staff</strong>
+                        <small>For staff and professionals working within relevant institutions or organisations.</small>
+                    </label>
+
+                    <label class="join-option-card">
+                        <input type="radio" name="join_as" value="Volunteer" {{ old('join_as') === 'Volunteer' ? 'checked' : '' }} required>
+                        <span class="join-option-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                        <strong>Volunteer</strong>
+                        <small>For applicants interested in contributing time and skills to Network activities.</small>
+                    </label>
+
+                    <label class="join-option-card">
+                        <input type="radio" name="join_as" value="Other" {{ old('join_as') === 'Other' ? 'checked' : '' }} required>
+                        <span class="join-option-icon"><i class="fa-solid fa-user-plus"></i></span>
+                        <strong>Other</strong>
+                        <small>Select this if the options above do not describe you.</small>
+                    </label>
+
+                </div>
+
+                <div class="membership-field membership-other-field">
+                    <label for="join_as_other">If Other, please specify</label>
+                    <input type="text" id="join_as_other" name="join_as_other" value="{{ old('join_as_other') }}" placeholder="Tell us how you would like to join">
+                </div>
+
+                <div class="membership-field membership-type-field">
+                    <label for="membership_type">Membership Type</label>
+                    <input type="text" id="membership_type" name="membership_type" value="{{ old('membership_type') }}"
+                           placeholder="If known, enter the membership type; otherwise leave for WASMaN to confirm">
+                    <small class="membership-field-note">
+                        The Secretariat may confirm the appropriate membership category during registration and onboarding.
+                    </small>
+                </div>
+            </div>
+
+            <div class="membership-form-block">
+                <div class="membership-form-block-title">
+                    <span>04</span>
+                    <div>
+                        <h3>Interest & Contribution</h3>
+                        <p>Tell us why you want to join and how you would like to contribute.</p>
+                    </div>
+                </div>
+
+                <div class="membership-field membership-field-full">
+                    <label for="interest">Why are you interested in joining WASMaN? <span>*</span></label>
+                    <textarea id="interest" name="interest" rows="5" placeholder="Tell us what motivates you to join the Network" required>{{ old('interest') }}</textarea>
+                </div>
+
+                <fieldset class="membership-contribution-field">
+                    <legend>How would you like to contribute to the Network? <span>(Check all that apply)</span></legend>
+
+                    <div class="contribution-grid">
+                        <label><input type="checkbox" name="contribution[]" value="Research and knowledge generation" {{ in_array('Research and knowledge generation', old('contribution', [])) ? 'checked' : '' }}><span>Research & Knowledge Generation</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Capacity development and mentoring" {{ in_array('Capacity development and mentoring', old('contribution', [])) ? 'checked' : '' }}><span>Capacity Development & Mentoring</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Advocacy and outreach" {{ in_array('Advocacy and outreach', old('contribution', [])) ? 'checked' : '' }}><span>Advocacy & Outreach</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Networking and partnerships" {{ in_array('Networking and partnerships', old('contribution', [])) ? 'checked' : '' }}><span>Networking & Partnerships</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Programmes and events" {{ in_array('Programmes and events', old('contribution', [])) ? 'checked' : '' }}><span>Programmes & Events</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Digital and communications support" {{ in_array('Digital and communications support', old('contribution', [])) ? 'checked' : '' }}><span>Digital & Communications Support</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Resource mobilisation" {{ in_array('Resource mobilisation', old('contribution', [])) ? 'checked' : '' }}><span>Resource Mobilisation</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Other" {{ in_array('Other', old('contribution', [])) ? 'checked' : '' }}><span>Other</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="membership-field membership-field-full membership-contribution-other">
+                    <label for="contribution_other">Other contribution</label>
+                    <input type="text" id="contribution_other" name="contribution_other" value="{{ old('contribution_other') }}" placeholder="Please specify any other way you would like to contribute">
+                </div>
+            </div>
+
+            <div class="membership-form-block membership-declaration-block">
+                <div class="membership-form-block-title">
+                    <span>05</span>
+                    <div>
+                        <h3>Declaration & Consent</h3>
+                        <p>Please read and confirm before submitting your application.</p>
+                    </div>
+                </div>
+
+                <label class="membership-consent">
+                    <input type="checkbox" name="declaration" value="1" required>
+                    <span>
+                        I hereby apply for membership of WASMaN and commit to supporting
+                        its mission and vision. I consent to the use of my details for
+                        official WASMaN communications and networking purposes.
+                    </span>
+                </label>
+
+                <button type="submit" class="membership-submit-btn">
+                    Submit Membership Application
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p class="membership-form-privacy">
+                    Your information should be handled as an official WASMaN membership record.
+                </p>
+            </div>
+
+        </form>
 
     </div>
 
@@ -914,3 +929,21 @@
    
 
 </html>
+
+
+{{-- Return the visitor to the membership form after submission/validation --}}
+@if(session('success') || $errors->any())
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const membershipForm = document.getElementById('membership-application');
+    if (membershipForm) {
+        window.setTimeout(function () {
+            membershipForm.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 120);
+    }
+});
+</script>
+@endif

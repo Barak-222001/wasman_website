@@ -1744,3 +1744,577 @@
         text-align: center;
     }
 }
+
+
+/* =========================================================
+   WASMAN MEMBERSHIP APPLICATION FORM
+========================================================= */
+
+.membership-form-section {
+    padding: 110px 5%;
+    background:
+        linear-gradient(180deg, #f8fbfb 0%, #eef8f7 100%);
+}
+
+.membership-form-shell {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.membership-form-heading {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.membership-form-heading h2 {
+    margin: 8px 0 16px;
+    color: var(--membership-heading);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.35rem, 4vw, 3.5rem);
+    line-height: 1.08;
+    font-weight: 600;
+}
+
+.membership-form-heading p {
+    margin: 0;
+    color: var(--membership-text);
+    font-size: 0.88rem;
+    line-height: 1.85;
+}
+
+.wasman-membership-form {
+    display: grid;
+    gap: 22px;
+}
+
+.membership-form-block {
+    padding: 34px;
+    border: 1px solid var(--membership-border);
+    border-radius: 22px;
+    background: var(--membership-white);
+    box-shadow: var(--membership-shadow);
+}
+
+.membership-form-block-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 22px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--membership-border);
+}
+
+.membership-form-block-title > span {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--membership-deep);
+    color: var(--membership-mint);
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.membership-form-block-title h3 {
+    margin: 0 0 4px;
+    color: var(--membership-heading);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.membership-form-block-title p {
+    margin: 0;
+    color: var(--membership-muted);
+    font-size: 0.72rem;
+    line-height: 1.55;
+}
+
+.membership-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px;
+}
+
+.membership-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.membership-field-full {
+    grid-column: 1 / -1;
+}
+
+.membership-field label,
+.membership-contribution-field legend {
+    color: var(--membership-heading);
+    font-size: 0.73rem;
+    font-weight: 800;
+}
+
+.membership-field label > span {
+    color: var(--membership-teal);
+}
+
+.membership-field input,
+.membership-field select,
+.membership-field textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--membership-border);
+    border-radius: 12px;
+    outline: none;
+    background: #fbfdfd;
+    color: var(--membership-heading);
+    font: inherit;
+    font-size: 0.78rem;
+    transition: var(--membership-transition);
+    box-sizing: border-box;
+}
+
+.membership-field textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.membership-field input:focus,
+.membership-field select:focus,
+.membership-field textarea:focus {
+    border-color: var(--membership-teal);
+    background: var(--membership-white);
+    box-shadow: 0 0 0 3px rgba(8,127,156,0.10);
+}
+
+.membership-field-note {
+    color: var(--membership-muted);
+    font-size: 0.65rem;
+    line-height: 1.55;
+}
+
+.join-option-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.join-option-card {
+    position: relative;
+    min-height: 190px;
+    padding: 23px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--membership-border);
+    border-radius: 18px;
+    background: var(--membership-mist);
+    cursor: pointer;
+    transition: var(--membership-transition);
+}
+
+.join-option-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(8,127,156,0.38);
+    box-shadow: var(--membership-shadow);
+}
+
+.join-option-card input {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    accent-color: var(--membership-ocean);
+}
+
+.join-option-card:has(input:checked) {
+    border-color: var(--membership-ocean);
+    background: var(--membership-seafoam);
+    box-shadow: 0 12px 28px rgba(5,95,109,0.10);
+}
+
+.join-option-icon {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    border-radius: 13px;
+    background: var(--membership-white);
+    color: var(--membership-ocean);
+}
+
+.join-option-card strong {
+    margin-bottom: 7px;
+    color: var(--membership-heading);
+    font-size: 0.92rem;
+}
+
+.join-option-card small {
+    color: var(--membership-text);
+    font-size: 0.67rem;
+    line-height: 1.6;
+}
+
+.membership-other-field,
+.membership-type-field {
+    margin-top: 19px;
+}
+
+.membership-contribution-field {
+    margin: 24px 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.membership-contribution-field legend {
+    margin-bottom: 14px;
+}
+
+.membership-contribution-field legend span {
+    color: var(--membership-muted);
+    font-weight: 500;
+}
+
+.contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+}
+
+.contribution-grid label {
+    padding: 14px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--membership-border);
+    border-radius: 12px;
+    background: var(--membership-mist);
+    color: var(--membership-heading);
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contribution-grid input {
+    accent-color: var(--membership-ocean);
+}
+
+.membership-contribution-other {
+    margin-top: 18px;
+}
+
+.membership-declaration-block {
+    background:
+        linear-gradient(145deg, var(--membership-deep), var(--membership-ocean));
+    border: 0;
+}
+
+.membership-declaration-block .membership-form-block-title {
+    border-color: rgba(255,255,255,0.13);
+}
+
+.membership-declaration-block .membership-form-block-title > span {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.16);
+}
+
+.membership-declaration-block .membership-form-block-title h3 {
+    color: var(--membership-white);
+}
+
+.membership-declaration-block .membership-form-block-title p {
+    color: rgba(255,255,255,0.65);
+}
+
+.membership-consent {
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.86);
+    font-size: 0.76rem;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.membership-consent input {
+    margin-top: 4px;
+    accent-color: var(--membership-mint);
+}
+
+.membership-submit-btn {
+    margin-top: 22px;
+    padding: 14px 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 0;
+    border-radius: 50px;
+    background: var(--membership-mint);
+    color: var(--membership-deep);
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--membership-transition);
+}
+
+.membership-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+}
+
+.membership-form-privacy {
+    margin: 13px 0 0;
+    color: rgba(255,255,255,0.52);
+    font-size: 0.63rem;
+}
+
+@media (max-width: 900px) {
+    .join-option-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .membership-form-section {
+        padding: 80px 5%;
+    }
+
+    .membership-form-block {
+        padding: 24px 18px;
+    }
+
+    .membership-form-grid,
+    .join-option-grid,
+    .contribution-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-field-full {
+        grid-column: auto;
+    }
+
+    .join-option-card {
+        min-height: 160px;
+    }
+}
+
+
+/* ============================================================
+   WASMaN ACCESSIBILITY UPDATE — LARGE TEXT THROUGHOUT THE PAGE
+   Keeps the existing design while removing small paragraph text.
+============================================================ */
+
+body {
+    font-size: 20px;
+}
+
+/* General paragraphs and descriptive text */
+.become-member-page p,
+.become-member-page li,
+.become-member-page small,
+.become-member-page .section-copy,
+.become-member-page .section-description,
+.become-member-page .membership-form-privacy,
+.become-member-page .membership-field-note,
+.become-member-page .join-option-card small,
+.become-member-page .membership-form-block-title p,
+.membership-form-section p,
+.membership-form-section li,
+.membership-form-section small {
+    font-size: 20px !important;
+    line-height: 1.75 !important;
+}
+
+/* Introductory / hero copy */
+.membership-form-heading p {
+    font-size: 23px !important;
+    line-height: 1.75 !important;
+}
+
+/* Form section descriptions */
+.membership-form-block-title p {
+    font-size: 20px !important;
+    line-height: 1.7 !important;
+}
+
+/* Labels, legends and option text */
+.membership-field label,
+.membership-contribution-field legend,
+.membership-consent,
+.contribution-grid label {
+    font-size: 21px !important;
+    line-height: 1.55 !important;
+}
+
+.join-option-card strong {
+    font-size: 23px !important;
+}
+
+.join-option-card small {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+}
+
+/* Inputs must be as readable as surrounding copy */
+.membership-field input,
+.membership-field select,
+.membership-field textarea {
+    font-size: 21px !important;
+    line-height: 1.55 !important;
+    min-height: 62px;
+}
+
+.membership-field textarea {
+    min-height: 190px;
+}
+
+/* Notes and privacy copy were previously among the smallest items */
+.membership-field-note,
+.membership-form-privacy {
+    font-size: 19px !important;
+    line-height: 1.7 !important;
+}
+
+/* Main form section headings */
+.membership-form-block-title h3 {
+    font-size: 31px !important;
+    line-height: 1.3 !important;
+}
+
+.membership-form-heading h2 {
+    font-size: clamp(42px, 4.5vw, 60px) !important;
+    line-height: 1.15 !important;
+}
+
+/* Make controls easier to see and select */
+.join-option-card input,
+.contribution-grid input,
+.membership-consent input {
+    width: 24px !important;
+    height: 24px !important;
+    flex: 0 0 24px;
+}
+
+.membership-submit-btn {
+    min-height: 64px;
+    font-size: 21px !important;
+    padding: 17px 30px;
+}
+
+/* Success/error messages */
+.membership-form-alert,
+.membership-form-alert li,
+.membership-form-alert strong {
+    font-size: 20px !important;
+    line-height: 1.65 !important;
+}
+
+/* Prevent anchored return from hiding beneath a sticky header */
+#membership-application {
+    scroll-margin-top: 120px;
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 19px;
+    }
+
+    .become-member-page p,
+    .become-member-page li,
+    .membership-form-section p,
+    .membership-form-section li,
+    .membership-field label,
+    .membership-contribution-field legend,
+    .membership-consent,
+    .contribution-grid label,
+    .membership-field input,
+    .membership-field select,
+    .membership-field textarea {
+        font-size: 19px !important;
+    }
+
+    .membership-form-heading h2 {
+        font-size: 38px !important;
+    }
+}
+
+
+
+/* ============================================================
+   WASMaN ACCESSIBILITY FIX — NON-FORM MEMBERSHIP PAGE COPY
+   Uses the actual classes present in become_member.blade.php.
+============================================================ */
+
+/* Hero description */
+.membership-hero .membership-hero-content > p {
+    font-size: 24px !important;
+    line-height: 1.75 !important;
+    max-width: 920px;
+}
+
+/* Why WASMaN introduction paragraphs */
+.membership-introduction .membership-intro-content > p {
+    font-size: 23px !important;
+    line-height: 1.75 !important;
+}
+
+/* Explore membership benefits link */
+.membership-introduction .text-link {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+}
+
+/* Other main descriptive copy throughout the page */
+.membership-section-heading > p,
+.membership-benefits .benefits-content > p,
+.membership-eligibility .eligibility-content > p,
+.membership-final-cta .membership-cta-content > p {
+    font-size: 21px !important;
+    line-height: 1.75 !important;
+}
+
+/* Cards, benefits, journey and FAQs */
+.membership-card > p,
+.benefit-item p,
+.journey-step p,
+.faq-item > p {
+    font-size: 19px !important;
+    line-height: 1.7 !important;
+}
+
+/* Smaller supporting text that was originally set below 1rem */
+.membership-stat span,
+.eligibility-list div,
+.membership-card a,
+.membership-hero-note,
+.membership-primary-btn,
+.membership-secondary-btn,
+.cta-button {
+    font-size: 18px !important;
+}
+
+@media (max-width: 768px) {
+    .membership-hero .membership-hero-content > p,
+    .membership-introduction .membership-intro-content > p {
+        font-size: 20px !important;
+    }
+
+    .membership-section-heading > p,
+    .membership-benefits .benefits-content > p,
+    .membership-eligibility .eligibility-content > p,
+    .membership-final-cta .membership-cta-content > p,
+    .membership-card > p,
+    .benefit-item p,
+    .journey-step p,
+    .faq-item > p {
+        font-size: 18px !important;
+    }
+}

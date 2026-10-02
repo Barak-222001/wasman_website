@@ -19,7 +19,7 @@
         rel="stylesheet"
         href="{{ asset('css/admin.css') }}"
     >
-
+    <link rel="stylesheet" href="{{ asset('css/admin-memberships.css') }}">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -204,6 +204,14 @@
 
 </a>
 
+<a href="{{ route('admin.memberships') }}"
+   class="sidebar-link {{ request()->routeIs('admin.memberships*') ? 'active' : '' }}">
+    <span class="sidebar-icon">
+        <i class="fa-solid fa-users"></i>
+    </span>
+
+    <span>Membership Applications</span>
+</a>
 
         </nav>
 

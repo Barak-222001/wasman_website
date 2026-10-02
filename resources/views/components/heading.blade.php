@@ -280,84 +280,29 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
 
-
                 <div class="wasman-dropdown-menu">
 
-                    <a href="/become_member">
-
-                        <div class="wasman-dropdown-icon">
-                            <i class="fas fa-user-plus"></i>
-                        </div>
-
-                        <div>
-                            <strong>Become a Member</strong>
-                            <small>Join the WASMAN network</small>
-                        </div>
-
-                    </a>
-
-                    
-                    <!-- FROZEN --><!-- FROZEN --><!-- FROZEN --><!-- FROZEN --><!-- FROZEN --> 
-                    
-
-                    <!-- <a href="/intern">
-
-                        <div class="wasman-dropdown-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-
-                        <div>
-                            <strong>Intern</strong>
-                            <small>Build your experience</small>
-                        </div>
-
-                    </a>
-
-
-                    <a href="/volunteer">
-
-                        <div class="wasman-dropdown-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-
-                        <div>
-                            <strong>Volunteer</strong>
-                            <small>Support our mission</small>
-                        </div>
-
-                    </a>
-
-
-                    <a href="/research_assistant">
-
-                        <div class="wasman-dropdown-icon">
-                            <i class="fas fa-flask"></i>
-                        </div>
-
-                        <div>
-                            <strong>Research Assistant</strong>
-                            <small>Work with our researchers</small>
-                        </div>
-
-                    </a> -->
-
-
                     <a href="/partner_with_us">
-
                         <div class="wasman-dropdown-icon">
                             <i class="fas fa-handshake"></i>
                         </div>
 
                         <div>
                             <strong>Partner with us</strong>
-                            <small>collaborate with our network</small>
+                            <small>Collaborate with our network</small>
                         </div>
-
                     </a>
 
                 </div>
 
             </div>
+
+
+            <!-- BECOME MEMBER -->
+            <a href="/become_member" class="wasman-nav-item wasman-member-nav">
+                <i class="fas fa-user-plus"></i>
+                <span>Become Member</span>
+            </a>
 
 
             <!-- CONTACT -->

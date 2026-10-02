@@ -1624,3 +1624,35 @@ body {
 
 }
 
+
+
+/* =========================================================
+   BECOME MEMBER NAV TAB
+   Standalone membership link added beside Join Us
+========================================================= */
+.wasman-member-nav {
+    border-color: rgba(73, 200, 189, 0.30);
+}
+
+.wasman-member-nav .fa-user-plus {
+    font-size: 12px;
+}
+
+@media (min-width: 951px) {
+    .wasman-nav {
+        gap: 5px;
+    }
+
+    .wasman-nav-item {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media (min-width: 951px) and (max-width: 1200px) {
+    .wasman-nav-item {
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 10.5px;
+    }
+}
