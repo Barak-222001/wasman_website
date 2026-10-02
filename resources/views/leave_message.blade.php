@@ -889,11 +889,11 @@
     <div class="section-title centered">
 
         <span class="section-eyebrow">
-            FREQUENTLY ASKED QUESTIONS
+            Frequently Asked Questions
         </span>
 
         <h2>
-            Before You Send Us a Message
+            BEFORE YOU SEND US A MESSAGE
         </h2>
 
     </div>
