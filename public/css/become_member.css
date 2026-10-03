@@ -2248,73 +2248,58 @@ body {
 
 
 
-/* ============================================================
-   WASMaN ACCESSIBILITY FIX — NON-FORM MEMBERSHIP PAGE COPY
-   Uses the actual classes present in become_member.blade.php.
-============================================================ */
 
-/* Hero description */
-.membership-hero .membership-hero-content > p {
-    font-size: 24px !important;
-    line-height: 1.75 !important;
-    max-width: 920px;
-}
-
-/* Why WASMaN introduction paragraphs */
-.membership-introduction .membership-intro-content > p {
+/* =========================================================
+   Accessibility: enlarged paragraph and descriptive text
+   Applies to the Become Member page while preserving layout.
+   ========================================================= */
+.membership-hero p,
+.membership-introduction p,
+.membership-section-heading p,
+.membership-card p,
+.membership-benefit-card p,
+.membership-journey p,
+.membership-journey-card p,
+.membership-eligibility p,
+.membership-eligibility li,
+.membership-application-section p,
+.membership-form p,
+.membership-form .form-help,
+.membership-form small,
+main p {
     font-size: 23px !important;
-    line-height: 1.75 !important;
+    line-height: 1.65 !important;
 }
 
-/* Explore membership benefits link */
-.membership-introduction .text-link {
+/* Keep card/supporting copy comfortably readable too. */
+.membership-card a,
+.membership-introduction a,
+.membership-benefits a,
+.membership-journey a {
     font-size: 20px !important;
+}
+
+/* Form readability */
+.membership-form label,
+.membership-form legend {
+    font-size: 21px !important;
     line-height: 1.5 !important;
 }
 
-/* Other main descriptive copy throughout the page */
-.membership-section-heading > p,
-.membership-benefits .benefits-content > p,
-.membership-eligibility .eligibility-content > p,
-.membership-final-cta .membership-cta-content > p {
-    font-size: 21px !important;
-    line-height: 1.75 !important;
-}
-
-/* Cards, benefits, journey and FAQs */
-.membership-card > p,
-.benefit-item p,
-.journey-step p,
-.faq-item > p {
-    font-size: 19px !important;
-    line-height: 1.7 !important;
-}
-
-/* Smaller supporting text that was originally set below 1rem */
-.membership-stat span,
-.eligibility-list div,
-.membership-card a,
-.membership-hero-note,
-.membership-primary-btn,
-.membership-secondary-btn,
-.cta-button {
-    font-size: 18px !important;
-}
-
 @media (max-width: 768px) {
-    .membership-hero .membership-hero-content > p,
-    .membership-introduction .membership-intro-content > p {
+    .membership-hero p,
+    .membership-introduction p,
+    .membership-section-heading p,
+    .membership-card p,
+    .membership-benefit-card p,
+    .membership-journey p,
+    .membership-journey-card p,
+    .membership-eligibility p,
+    .membership-eligibility li,
+    .membership-application-section p,
+    .membership-form p,
+    main p {
         font-size: 20px !important;
-    }
-
-    .membership-section-heading > p,
-    .membership-benefits .benefits-content > p,
-    .membership-eligibility .eligibility-content > p,
-    .membership-final-cta .membership-cta-content > p,
-    .membership-card > p,
-    .benefit-item p,
-    .journey-step p,
-    .faq-item > p {
-        font-size: 18px !important;
+        line-height: 1.6 !important;
     }
 }

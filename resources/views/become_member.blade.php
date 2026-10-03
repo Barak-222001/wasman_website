@@ -169,66 +169,94 @@
 
     <div class="membership-category-grid">
 
+
+        {{-- STUDENT --}}
         <article class="membership-card">
-            <div class="membership-card-number">01</div>
-            <div class="membership-card-icon">
-                <i class="fa-solid fa-file-signature"></i>
+
+            <div class="membership-card-number">
+                01
             </div>
 
-            <h3>Register Your Interest</h3>
+            <div class="membership-card-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+
+            <h3>
+                Student
+            </h3>
 
             <p>
-                Express your interest in joining WASMaN and provide the
-                information required for the Secretariat to create and
-                maintain an accurate membership record.
+                For undergraduate and postgraduate students pursuing studies
+                related to aquatic science, marine conservation,
+                environmental management or related disciplines.
             </p>
 
-            <a href="#membership-application">
-                Start Membership Enquiry
+            <a href="#">
+                Explore Membership
                 <i class="fas fa-arrow-right"></i>
             </a>
+
         </article>
 
+
+        {{-- PROFESSIONAL --}}
         <article class="membership-card membership-card-featured">
-            <div class="membership-popular">MEMBER SUPPORT</div>
-            <div class="membership-card-number">02</div>
-            <div class="membership-card-icon">
-                <i class="fa-solid fa-user-check"></i>
+
+            <div class="membership-popular">
+                POPULAR
             </div>
 
-            <h3>Complete Onboarding</h3>
+            <div class="membership-card-number">
+                02
+            </div>
+
+            <div class="membership-card-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+
+            <h3>
+                Researcher
+            </h3>
 
             <p>
-                The Secretariat supports registration and onboarding and
-                keeps the membership database updated with the relevant
-                membership category, professional affiliation, contact
-                details and membership status.
+                Designed for researchers, lecturers, consultants, government
+                officers, conservation practitioners and industry professionals.
             </p>
 
-            <a href="#membership-journey">
-                See How It Works
+            <a href="#">
+                Explore Membership
                 <i class="fas fa-arrow-right"></i>
             </a>
+
         </article>
 
+
+        {{-- INSTITUTION --}}
         <article class="membership-card">
-            <div class="membership-card-number">03</div>
-            <div class="membership-card-icon">
-                <i class="fa-solid fa-people-group"></i>
+
+            <div class="membership-card-number">
+                03
             </div>
 
-            <h3>Engage in the Network</h3>
+            <div class="membership-card-icon">
+                <i class="fas fa-university"></i>
+            </div>
+
+            <h3>
+                Institutional Partner
+            </h3>
 
             <p>
-                Members receive updates, professional-development
-                opportunities and avenues to participate in WASMaN's
-                research, learning, networking and other activities.
+                For universities, NGOs, research institutes, government
+                agencies and organizations interested in collaborating
+                with WASMaN.
             </p>
 
-            <a href="#membership-benefits">
-                Explore Member Opportunities
+            <a href="#">
+                Explore Partnership
                 <i class="fas fa-arrow-right"></i>
             </a>
+
         </article>
 
     </div>
@@ -446,69 +474,6 @@
     </div>
 </section>
 
-
-{{-- =========================
-     FAQ
-========================= --}}
-<section class="membership-faq" id="membership-faq">
-
-    <div class="membership-section-heading">
-        <span>QUESTIONS?</span>
-        <h2>Frequently Asked Questions</h2>
-    </div>
-
-    <div class="faq-grid">
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>Who manages WASMaN membership?</h3>
-                <i class="fas fa-plus"></i>
-            </div>
-            <p>
-                Membership administration is handled through the Secretariat.
-                The Administrative Officer supports registration, onboarding,
-                renewals, membership records and routine member communication.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>What information is kept in the membership database?</h3>
-                <i class="fas fa-plus"></i>
-            </div>
-            <p>
-                The Manual identifies membership category, professional
-                affiliation, contact details and membership status as key
-                information maintained in the membership database.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>What opportunities are available to members?</h3>
-                <i class="fas fa-plus"></i>
-            </div>
-            <p>
-                Members are to receive regular updates, professional-development
-                opportunities and avenues for participation in WASMaN activities.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>What membership categories can I choose from?</h3>
-                <i class="fas fa-plus"></i>
-            </div>
-            <p>
-                The reviewed Secretariat Manual records a member's membership
-                category but does not define the official category names.
-                WASMaN can therefore confirm the appropriate category during
-                registration rather than presenting unapproved categories here.
-            </p>
-        </div>
-
-    </div>
-</section>
 
 
 
