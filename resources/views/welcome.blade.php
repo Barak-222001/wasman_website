@@ -64,16 +64,26 @@
 
             <div class="swiper-slide hero-slide knowledge-card knowledge-card-light">
                 <picture>
-                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/knw.webp') }}" type="image/webp">
-                    <img src="{{ versioned_asset('pics_vids/knw.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/what_we_do/sea.png') }}" type="image/webp">
+                    <img src="{{ versioned_asset('pics_vids/what_we_do/sea.png') }}" alt="Women advancing aquatic science through research, learning and professional development" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
                 </picture>
+                <div class="hero-slide-overlay hero-slide-overlay-left">
+                    <span class="hero-slide-kicker">RESEARCH • CAPACITY DEVELOPMENT</span>
+                    <h2>Advancing Women in Aquatic Science</h2>
+                    <p>Strengthening research, professional development and mentoring so women can grow, lead and contribute to sustainable aquatic resource management.</p>
+                </div>
             </div>
 
             <div class="swiper-slide hero-slide knowledge-card knowledge-card-soft">
                 <picture>
-                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/knw2.webp') }}" type="image/webp">
-                    <img src="{{ versioned_asset('pics_vids/knw2.webp') }}" alt="WASMaN knowledge bite graphic" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
+                    <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/four.jpg') }}" type="image/webp">
+                    <img src="{{ versioned_asset('pics_vids/four.jpg') }}" alt="Women building networks, partnerships and leadership in aquatic science and management" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
                 </picture>
+                <div class="hero-slide-overlay hero-slide-overlay-right">
+                    <span class="hero-slide-kicker">ADVOCACY • NETWORKING • PARTNERSHIPS</span>
+                    <h2>Building Visibility, Leadership &amp; Collaboration</h2>
+                    <p>Connecting women, institutions and partners to expand opportunities, strengthen professional networks and advance women’s representation and leadership.</p>
+                </div>
             </div>
 
             </div>
@@ -282,10 +292,10 @@
                     and environmental challenges.
                 </p>
 
-                <a href="/publications">
+                <!-- <a href="/publications">
                     Explore
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </article>
 
@@ -309,10 +319,10 @@
                     development opportunities for women and girls.
                 </p>
 
-                <a href="/areas_of_interest">
+                <!-- <a href="/areas_of_interest">
                     Explore
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </article>
 
@@ -332,17 +342,13 @@
                 </h3>
 
                 <p>
-                    Encourage the recognition of women’s professional skills, and advocate for equal 
-                    opportunities with male scientists in the region 
-                    Celebrate the achievements of women in aquatic systems management. 
-                    Influence national, regional, and international policies trajectory on aquatic science and 
-                    management. 
+                    Advancing recognition of women's professional skills, celebrating their achievements, and advocating for equal opportunities and greater influence in national, regional and international aquatic science and management policies. 
                 </p>
 
-                <a href="/what_we_do">
+                <!-- <a href="/what_we_do">
                     Explore
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </article>
 
@@ -367,10 +373,10 @@
                     and build meaningful partnerships.
                 </p>
 
-                <a href="/become_member">
+                <!-- <a href="/become_member">
                    Explore
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </article>
 

@@ -217,7 +217,7 @@
                 <div class="history-image">
 
                     <img
-                        src="{{ asset('pics_vids/what_is_wasman.jpg') }}"
+                        src="{{ asset('pics_vids/six.jpeg') }}"
                         alt="Women working in aquatic science and management"
                     >
 
@@ -270,7 +270,7 @@
                 <div class="history-image">
 
                     <img
-                        src="{{ asset('pics_vids/what_inspired.jpg') }}"
+                        src="{{ asset('pics_vids/in_pool.jpg') }}"
                         alt="Women inspired by aquatic science and conservation"
                     >
 

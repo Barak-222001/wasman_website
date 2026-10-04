@@ -630,7 +630,7 @@
                     <i class="fa-solid fa-users"></i>
                 </div>
 
-                <h2>500+</h2>
+                <h2>1+</h2>
 
                 <h3>
                     Women Engaged
@@ -650,7 +650,7 @@
                     <i class="fa-solid fa-flask-vial"></i>
                 </div>
 
-                <h2>35+</h2>
+                <h2>1+</h2>
 
                 <h3>
                     Research Projects
@@ -670,7 +670,7 @@
                     <i class="fa-solid fa-handshake"></i>
                 </div>
 
-                <h2>20+</h2>
+                <h2>1+</h2>
 
                 <h3>
                     Strategic Partners
@@ -690,7 +690,7 @@
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
 
-                <h2>12+</h2>
+                <h2>1+</h2>
 
                 <h3>
                     Communities Reached

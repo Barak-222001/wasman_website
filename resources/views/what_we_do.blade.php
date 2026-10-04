@@ -74,7 +74,7 @@
         </div>
 
          <div class="featured-image">
-             <img src="{{asset('pics_vids/what_we_do/capacity-fieldwork.png')}}">
+             <img src="{{asset('pics_vids/michelle_pre.jpeg')}}">
         </div>
         
 
@@ -115,7 +115,7 @@
         </div>
 
          <div class="featured-image">
-             <img src="{{asset('pics_vids/what_we_do/collaboration-network.png')}}">
+             <img src="{{asset('pics_vids/what_we_do/cap.png')}}">
         </div>
         
 
@@ -177,9 +177,9 @@
 
     </div>
 
-    <!-- More Activities -->
+   
 
-    <!-- <div class="activities">
+    <div class="pre-footer-activities">
 
         <div class="activity">
 
@@ -220,7 +220,7 @@
 
         </div>
 
-    </div> -->
+    </div>
 
 </section>
 <!-- ================= FOOTER ================= -->

@@ -20,7 +20,7 @@
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin:24px 0;background:#f2f8f9;border-radius:12px;">
         <tr><td style="padding:20px;font-size:16px;line-height:1.8;">
             <strong>Application summary</strong><br>
-            Join as: {{ $application->join_as }}<br>
+            Membership Category: <strong>{{ $application->membership_type ?: 'Not specified' }}</strong><br>
             Institution/Organisation: {{ $application->institution }}<br>
             Area of expertise/study: {{ $application->expertise }}
         </td></tr>

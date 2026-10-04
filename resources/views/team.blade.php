@@ -195,23 +195,7 @@
         <div class="members-grid">
 
         
-            <article class="network-member secretariat-card" tabindex="0" role="button" aria-label="View full biography of Gertrude Tibu" data-section="NETWORK SECRETARIAT" data-name="Gertrude Tibu" data-role="Administration & Membership Officer" data-specialty="Freshwater & Coastal Ecosystems • Administration" data-image="{{ asset('pics_vids/tibu.jpeg') }}" data-bio="Gertrude Tibu serves as the Administrative Officer of the WASMaN Secretariat. She is an early-career aquatic scientist with experience in freshwater and coastal ecosystem research, fisheries, biodiversity assessment, water quality and environmental data analysis. She holds a BSc in Fisheries and Aquatic Sciences from the University of Cape Coast, Ghana, and has experience as a Teaching Assistant in the Department of Fisheries and Aquatic Sciences.
-
-Within WASMaN, Gertrude coordinates administrative operations including records and membership management, meetings, correspondence, events, resources, scheduling and reporting. Her role supports efficient coordination, communication and member engagement across the Network. She is particularly committed to strengthening the visibility and participation of women in aquatic science and management.">
-
-                <div class="network-member-image">
-                    <img src="{{ asset('pics_vids/tibu.jpeg') }}" alt="Dr. Linda Owusu">
-                </div>
-
-                <div class="network-member-info">
-                    <h3>Gertrude Tibu</h3>
-                    <span>Administration &amp; Membership Officer</span>
-                                    <span class="secretariat-bio-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i> View profile</span>
-                </div>
-
-                <i class="fa-solid fa-fish-fins member-mini-icon"></i>
-
-            </article>
+        
 
             <article class="network-member secretariat-card" tabindex="0" role="button" aria-label="View full biography of Faustina Sarpong" data-section="NETWORK SECRETARIAT" data-name="Faustina Sarpong" data-role="Acting Network Coordinator · Research & Capacity Development" data-specialty="Fisheries • Aquaculture • Molecular Genetics" data-image="{{ asset('pics_vids/fausty.png') }}" data-bio="Faustina Sarpong serves as the Research and Capacity Development Officer and Acting Network Coordinator of the WASMaN Secretariat. She is a fisheries and aquaculture researcher with experience in aquatic science, molecular genetics, research coordination and capacity development. She holds a BSc in Fisheries Science and is pursuing an MPhil in Aquaculture at the University of Ghana, where her research investigates the genetic diversity of tilapia populations in the Volta Lake following the 2023 Akosombo Dam spillage.
 
@@ -228,6 +212,24 @@ Within WASMaN, Faustina supports research development, training programmes, know
                 </div>
 
                 <i class="fa-solid fa-water member-mini-icon"></i>
+
+            </article>
+
+                <article class="network-member secretariat-card" tabindex="0" role="button" aria-label="View full biography of Gertrude Tibu" data-section="NETWORK SECRETARIAT" data-name="Gertrude Tibu" data-role="Administration & Membership Officer" data-specialty="Freshwater & Coastal Ecosystems • Administration" data-image="{{ asset('pics_vids/tibu.jpeg') }}" data-bio="Gertrude Tibu serves as the Administrative Officer of the WASMaN Secretariat. She is an early-career aquatic scientist with experience in freshwater and coastal ecosystem research, fisheries, biodiversity assessment, water quality and environmental data analysis. She holds a BSc in Fisheries and Aquatic Sciences from the University of Cape Coast, Ghana, and has experience as a Teaching Assistant in the Department of Fisheries and Aquatic Sciences.
+
+Within WASMaN, Gertrude coordinates administrative operations including records and membership management, meetings, correspondence, events, resources, scheduling and reporting. Her role supports efficient coordination, communication and member engagement across the Network. She is particularly committed to strengthening the visibility and participation of women in aquatic science and management.">
+
+                <div class="network-member-image">
+                    <img src="{{ asset('pics_vids/tibu.jpeg') }}" alt="Dr. Linda Owusu">
+                </div>
+
+                <div class="network-member-info">
+                    <h3>Gertrude Tibu</h3>
+                    <span>Administration &amp; Membership Officer</span>
+                                    <span class="secretariat-bio-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i> View profile</span>
+                </div>
+
+                <i class="fa-solid fa-fish-fins member-mini-icon"></i>
 
             </article>
 
@@ -309,7 +311,7 @@ Within WASMaN, he supports the management, security and improvement of the Netwo
                 <div class="count-icon">
                     <i class="fa-solid fa-user-group"></i>
                 </div>
-                <strong>100+</strong>
+                <strong>40+</strong>
                 <span>Network Members</span>
             </div>
 
@@ -317,7 +319,7 @@ Within WASMaN, he supports the management, security and improvement of the Netwo
                 <div class="count-icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </div>
-                <strong>10+</strong>
+                <strong>4+</strong>
                 <span>Disciplines</span>
             </div>
 
@@ -325,7 +327,7 @@ Within WASMaN, he supports the management, security and improvement of the Netwo
                 <div class="count-icon">
                     <i class="fa-solid fa-earth-africa"></i>
                 </div>
-                <strong>5+</strong>
+                <strong>1+</strong>
                 <span>Countries</span>
             </div>
 

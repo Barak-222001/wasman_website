@@ -725,3 +725,36 @@ input {
         font-size: 21px;
     }
 }
+
+/* =========================================================
+   PRE-FOOTER ACTIVITY CARDS — 3 COLUMNS × 1 ROW
+========================================================= */
+
+.pre-footer-activities {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 85px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.pre-footer-activities .activity {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1000px) {
+    .pre-footer-activities {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .pre-footer-activities {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-bottom: 60px;
+    }
+}

@@ -151,112 +151,56 @@
 <section class="membership-categories" id="membership-categories">
 
     <div class="membership-section-heading">
-        <span>BECOMING A MEMBER</span>
+        <span>MEMBERSHIP APPLICATION</span>
 
-        <h2>
-            Find Your Place Within WASMaN
-        </h2>
+        <h2>Choose Your WASMaN Membership Category</h2>
 
         <p>
-            WASMaN's Secretariat manages member registration, onboarding,
-            membership records, renewals and routine member communication.
-            The reviewed Secretariat Manual refers to membership categories,
-            but it does not define or name separate membership classes.
-            Your appropriate membership category can therefore be confirmed
-            by WASMaN during registration.
+            Select the category that best describes you. Each application card takes you
+            directly to the corresponding membership option in the application form below.
         </p>
     </div>
 
-    <div class="membership-category-grid">
+    <div class="membership-category-grid membership-category-grid-five">
 
-
-        {{-- STUDENT --}}
         <article class="membership-card">
-
-            <div class="membership-card-number">
-                01
-            </div>
-
-            <div class="membership-card-icon">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-
-            <h3>
-                Student
-            </h3>
-
-            <p>
-                For undergraduate and postgraduate students pursuing studies
-                related to aquatic science, marine conservation,
-                environmental management or related disciplines.
-            </p>
-
-            <a href="#">
-                Explore Membership
-                <i class="fas fa-arrow-right"></i>
-            </a>
-
+            <div class="membership-card-number">01</div>
+            <div class="membership-card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Student Member</h3>
+            <p>For female undergraduate and postgraduate students pursuing aquatic science, fisheries, marine science, water resources management, environmental science or related disciplines.</p>
+            <a href="#category-student">Apply as Student Member <i class="fas fa-arrow-right"></i></a>
         </article>
 
-
-        {{-- PROFESSIONAL --}}
         <article class="membership-card membership-card-featured">
-
-            <div class="membership-popular">
-                POPULAR
-            </div>
-
-            <div class="membership-card-number">
-                02
-            </div>
-
-            <div class="membership-card-icon">
-                <i class="fas fa-flask"></i>
-            </div>
-
-            <h3>
-                Researcher
-            </h3>
-
-            <p>
-                Designed for researchers, lecturers, consultants, government
-                officers, conservation practitioners and industry professionals.
-            </p>
-
-            <a href="#">
-                Explore Membership
-                <i class="fas fa-arrow-right"></i>
-            </a>
-
+            <div class="membership-card-number">02</div>
+            <div class="membership-card-icon"><i class="fas fa-seedling"></i></div>
+            <h3>Early Career Professional</h3>
+            <p>For women with 0–7 years of post-graduation experience transitioning into professional practice, research leadership, policy engagement or industry roles.</p>
+            <a href="#category-early-career">Apply as Early Career <i class="fas fa-arrow-right"></i></a>
         </article>
 
-
-        {{-- INSTITUTION --}}
         <article class="membership-card">
+            <div class="membership-card-number">03</div>
+            <div class="membership-card-icon"><i class="fas fa-briefcase"></i></div>
+            <h3>Professional Member</h3>
+            <p>For female professionals engaged in aquatic science, aquatic resource management, conservation, policy, research, academia, industry, consultancy or related fields.</p>
+            <a href="#category-professional">Apply as Professional <i class="fas fa-arrow-right"></i></a>
+        </article>
 
-            <div class="membership-card-number">
-                03
-            </div>
+        <article class="membership-card">
+            <div class="membership-card-number">04</div>
+            <div class="membership-card-icon"><i class="fas fa-award"></i></div>
+            <h3>Fellow of WASMaN</h3>
+            <p>For distinguished women who have demonstrated exceptional leadership, contribution and impact in aquatic science and management. Fellowship is by nomination and Leadership Committee approval.</p>
+            <a href="#category-fellow">View Fellowship Information <i class="fas fa-arrow-right"></i></a>
+        </article>
 
-            <div class="membership-card-icon">
-                <i class="fas fa-university"></i>
-            </div>
-
-            <h3>
-                Institutional Partner
-            </h3>
-
-            <p>
-                For universities, NGOs, research institutes, government
-                agencies and organizations interested in collaborating
-                with WASMaN.
-            </p>
-
-            <a href="#">
-                Explore Partnership
-                <i class="fas fa-arrow-right"></i>
-            </a>
-
+        <article class="membership-card">
+            <div class="membership-card-number">05</div>
+            <div class="membership-card-icon"><i class="fas fa-people-group"></i></div>
+            <h3>Associate / Ally Member</h3>
+            <p>For individuals and institutions supporting WASMaN’s objectives, including male professionals and institutional partners committed to advancing gender equity in aquatic science and management.</p>
+            <a href="#category-associate">Apply as Associate / Ally <i class="fas fa-arrow-right"></i></a>
         </article>
 
     </div>
@@ -271,7 +215,7 @@
     <div class="benefits-image">
 
         <img
-            src="{{ asset('pics_vids/bf.png') }}"
+            src="{{ asset('pics_vids/two.jpeg') }}"
             alt="WASMaN community engagement"
         >
 
@@ -615,55 +559,29 @@
                 <div class="membership-form-block-title">
                     <span>03</span>
                     <div>
-                        <h3>Join Us</h3>
-                        <p>Select the option that best describes how you are joining WASMaN.</p>
+                        <h3>Membership Category <span>*</span></h3>
+                        <p>Select the WASMaN membership category that best fits you. Membership becomes effective after Secretariat approval and payment of the prescribed membership fee.</p>
                     </div>
                 </div>
 
-                <div class="join-option-grid">
+                {{-- Legacy backend compatibility.
+                     These hidden fields preserve the existing controller/database contract
+                     while membership_type remains the applicant-facing category field. --}}
+                <input type="hidden" id="join_as" name="join_as" value="{{ old('join_as', 'Staff') }}">
+                <input type="hidden" id="join_as_other" name="join_as_other" value="{{ old('join_as_other') }}">
 
-                    <label class="join-option-card">
-                        <input type="radio" name="join_as" value="Student" {{ old('join_as') === 'Student' ? 'checked' : '' }} required>
-                        <span class="join-option-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-                        <strong>Student</strong>
-                        <small>For applicants currently pursuing an academic programme.</small>
-                    </label>
-
-                    <label class="join-option-card">
-                        <input type="radio" name="join_as" value="Staff" {{ old('join_as') === 'Staff' ? 'checked' : '' }} required>
-                        <span class="join-option-icon"><i class="fa-solid fa-briefcase"></i></span>
-                        <strong>Staff</strong>
-                        <small>For staff and professionals working within relevant institutions or organisations.</small>
-                    </label>
-
-                    <label class="join-option-card">
-                        <input type="radio" name="join_as" value="Volunteer" {{ old('join_as') === 'Volunteer' ? 'checked' : '' }} required>
-                        <span class="join-option-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
-                        <strong>Volunteer</strong>
-                        <small>For applicants interested in contributing time and skills to Network activities.</small>
-                    </label>
-
-                    <label class="join-option-card">
-                        <input type="radio" name="join_as" value="Other" {{ old('join_as') === 'Other' ? 'checked' : '' }} required>
-                        <span class="join-option-icon"><i class="fa-solid fa-user-plus"></i></span>
-                        <strong>Other</strong>
-                        <small>Select this if the options above do not describe you.</small>
-                    </label>
-
-                </div>
-
-                <div class="membership-field membership-other-field">
-                    <label for="join_as_other">If Other, please specify</label>
-                    <input type="text" id="join_as_other" name="join_as_other" value="{{ old('join_as_other') }}" placeholder="Tell us how you would like to join">
-                </div>
-
-                <div class="membership-field membership-type-field">
-                    <label for="membership_type">Membership Type</label>
-                    <input type="text" id="membership_type" name="membership_type" value="{{ old('membership_type') }}"
-                           placeholder="If known, enter the membership type; otherwise leave for WASMaN to confirm">
-                    <small class="membership-field-note">
-                        The Secretariat may confirm the appropriate membership category during registration and onboarding.
-                    </small>
+                <div class="membership-field membership-field-full membership-type-field">
+                    <div class="join-option-grid membership-category-grid">
+                        <label class="join-option-card" id="category-student"><input type="radio" name="membership_type" value="Student Member" {{ old('membership_type') === 'Student Member' ? 'checked' : '' }} required><span class="join-option-icon"><i class="fa-solid fa-graduation-cap"></i></span><strong>Student Member</strong><small>For female undergraduate and postgraduate students in aquatic science, fisheries, marine science, water resources, environmental science or related disciplines.</small></label>
+                        <label class="join-option-card" id="category-early-career"><input type="radio" name="membership_type" value="Early Career Professional Member" {{ old('membership_type') === 'Early Career Professional Member' ? 'checked' : '' }} required><span class="join-option-icon"><i class="fa-solid fa-seedling"></i></span><strong>Early Career Professional</strong><small>For women with 0–7 years of post-graduation experience transitioning into professional practice, research, policy or industry roles.</small></label>
+                        <label class="join-option-card" id="category-professional"><input type="radio" name="membership_type" value="Professional Member" {{ old('membership_type') === 'Professional Member' ? 'checked' : '' }} required><span class="join-option-icon"><i class="fa-solid fa-briefcase"></i></span><strong>Professional Member</strong><small>For female professionals working in aquatic science, resource management, conservation, policy, research, academia, industry, consultancy or related fields.</small></label>
+                        <label class="join-option-card" id="category-associate"><input type="radio" name="membership_type" value="Associate/Ally Member" {{ old('membership_type') === 'Associate/Ally Member' ? 'checked' : '' }} required><span class="join-option-icon"><i class="fa-solid fa-people-group"></i></span><strong>Associate / Ally Member</strong><small>For individuals and institutions supporting WASMaN’s objectives, including male professionals and institutional partners advancing gender equity.</small></label>
+                    </div>
+                    <div class="join-option-card membership-fellow-application-card" id="category-fellow">
+                        <span class="join-option-icon"><i class="fa-solid fa-award"></i></span>
+                        <strong>Fellow of WASMaN</strong>
+                        <small>Fellowship is conferred on distinguished women who have demonstrated exceptional leadership, contribution and impact in aquatic science and management. It is granted through nomination and approval by the Leadership Committee and is therefore not submitted as a standard membership application.</small>
+                    </div>
                 </div>
             </div>
 
@@ -685,13 +603,10 @@
                     <legend>How would you like to contribute to the Network? <span>(Check all that apply)</span></legend>
 
                     <div class="contribution-grid">
-                        <label><input type="checkbox" name="contribution[]" value="Research and knowledge generation" {{ in_array('Research and knowledge generation', old('contribution', [])) ? 'checked' : '' }}><span>Research & Knowledge Generation</span></label>
-                        <label><input type="checkbox" name="contribution[]" value="Capacity development and mentoring" {{ in_array('Capacity development and mentoring', old('contribution', [])) ? 'checked' : '' }}><span>Capacity Development & Mentoring</span></label>
-                        <label><input type="checkbox" name="contribution[]" value="Advocacy and outreach" {{ in_array('Advocacy and outreach', old('contribution', [])) ? 'checked' : '' }}><span>Advocacy & Outreach</span></label>
-                        <label><input type="checkbox" name="contribution[]" value="Networking and partnerships" {{ in_array('Networking and partnerships', old('contribution', [])) ? 'checked' : '' }}><span>Networking & Partnerships</span></label>
-                        <label><input type="checkbox" name="contribution[]" value="Programmes and events" {{ in_array('Programmes and events', old('contribution', [])) ? 'checked' : '' }}><span>Programmes & Events</span></label>
-                        <label><input type="checkbox" name="contribution[]" value="Digital and communications support" {{ in_array('Digital and communications support', old('contribution', [])) ? 'checked' : '' }}><span>Digital & Communications Support</span></label>
-                        <label><input type="checkbox" name="contribution[]" value="Resource mobilisation" {{ in_array('Resource mobilisation', old('contribution', [])) ? 'checked' : '' }}><span>Resource Mobilisation</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Research Enhancement" {{ in_array('Research Enhancement', old('contribution', [])) ? 'checked' : '' }}><span>Research Enhancement</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Capacity Development" {{ in_array('Capacity Development', old('contribution', [])) ? 'checked' : '' }}><span>Capacity Development</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Advocacy" {{ in_array('Advocacy', old('contribution', [])) ? 'checked' : '' }}><span>Advocacy</span></label>
+                        <label><input type="checkbox" name="contribution[]" value="Networking and Outreach" {{ in_array('Networking and Outreach', old('contribution', [])) ? 'checked' : '' }}><span>Networking & Outreach</span></label>
                         <label><input type="checkbox" name="contribution[]" value="Other" {{ in_array('Other', old('contribution', [])) ? 'checked' : '' }}><span>Other</span></label>
                     </div>
                 </fieldset>
@@ -714,9 +629,10 @@
                 <label class="membership-consent">
                     <input type="checkbox" name="declaration" value="1" required>
                     <span>
-                        I hereby apply for membership of WASMaN and commit to supporting
-                        its mission and vision. I consent to the use of my details for
-                        official WASMaN communications and networking purposes.
+                        I hereby apply for membership of WASMaN and commit to supporting its vision,
+                        mission and values. I understand that membership becomes effective upon approval
+                        by the Secretariat and payment of the prescribed membership fee. I consent to the
+                        use of my details for official WASMaN communications and networking purposes.
                     </span>
                 </label>
 
@@ -890,7 +806,46 @@
      <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
-    </body>
+    
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const membershipOptions = document.querySelectorAll('input[name="membership_type"]');
+    const joinAs = document.getElementById('join_as');
+    const joinAsOther = document.getElementById('join_as_other');
+
+    function syncLegacyMembershipFields() {
+        const selected = document.querySelector('input[name="membership_type"]:checked');
+        if (!selected || !joinAs || !joinAsOther) return;
+
+        switch (selected.value) {
+            case 'Student Member':
+                joinAs.value = 'Student';
+                joinAsOther.value = '';
+                break;
+
+            case 'Associate/Ally Member':
+                joinAs.value = 'Other';
+                joinAsOther.value = 'Associate / Ally Member';
+                break;
+
+            case 'Early Career Professional Member':
+            case 'Professional Member':
+            default:
+                joinAs.value = 'Staff';
+                joinAsOther.value = '';
+                break;
+        }
+    }
+
+    membershipOptions.forEach(function (option) {
+        option.addEventListener('change', syncLegacyMembershipFields);
+    });
+
+    syncLegacyMembershipFields();
+});
+</script>
+
+</body>
    
 
 </html>

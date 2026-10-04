@@ -197,7 +197,7 @@
         <div class="content-container">
             <div class="section-title previous-bites-heading">
                 <span class="section-label">PREVIOUS KNOWLEDGE BITES</span>
-                <h2>Earlier Fisheries &amp; Aquaculture Knowledge Bites</h2>
+                <h2>Exlore earlier Knowledge Bites</h2>
                 <p>
                     Continue through the fisheries value chain series from Part 4 back to Part 1,
                     followed by the earlier Aquaculture and IUU Fishing Knowledge Bites.
@@ -223,42 +223,6 @@
                         'slug' => 'cat-fisheries-value-chain-3',
                         'image' => 'pics_vids/knowledge-bites/fisheries/part-3.webp',
                         'summary' => 'Part 3 focuses on handling, processing and packaging after harvest, showing how these activities preserve fish quality, improve food safety, reduce losses and create higher-value products.'
-                    ],
-                    [
-                        'part' => 'Part 2 of 5',
-                        'title' => 'The Fisheries Sector: From Catch to Consumer — Part 2',
-                        'date' => '30 August 2026',
-                        'topic' => 'Fish Production & Harvesting',
-                        'slug' => 'cat-fisheries-value-chain-2',
-                        'image' => 'pics_vids/knowledge-bites/fisheries/part-2.webp',
-                        'summary' => 'Part 2 explores where fish enters the value chain through capture fisheries and aquaculture, including responsible harvesting, farm management, water quality, fisheries monitoring and production services.'
-                    ],
-                    [
-                        'part' => 'Part 1 of 5',
-                        'title' => 'The Fisheries Sector: From Catch to Consumer — Part 1',
-                        'date' => '24 August 2026',
-                        'topic' => 'Pre-Harvest',
-                        'slug' => 'cat-fisheries-value-chain-1',
-                        'image' => 'pics_vids/knowledge-bites/fisheries/part-1.webp',
-                        'summary' => 'Part 1 introduces the fisheries value chain and explores the pre-harvest stage, including inputs, equipment, finance, technical services, feed, fingerlings, fishing gear and cold-storage support.'
-                    ],
-                    [
-                        'part' => 'Knowledge Bite',
-                        'title' => 'Aquaculture and Africa’s Growing Demand for Fish',
-                        'date' => '10 August 2026',
-                        'topic' => 'Aquaculture',
-                        'slug' => 'cat-aquaculture',
-                        'image' => 'pics_vids/knowledge-bites/fisheries/aquaculture.webp',
-                        'summary' => 'This Knowledge Bite explains aquaculture and its potential to help meet Africa’s growing demand for aquatic foods while complementing responsible management of capture fisheries.'
-                    ],
-                    [
-                        'part' => 'Knowledge Bite',
-                        'title' => 'Illegal, Unreported and Unregulated Fishing',
-                        'date' => '18 May 2026',
-                        'topic' => 'IUU Fishing',
-                        'slug' => 'cat-iuu-fishing',
-                        'image' => 'pics_vids/knowledge-bites/fisheries/iuu-fishing.webp',
-                        'summary' => 'This Knowledge Bite explains the hidden faces of IUU fishing, including how illegal practices can occur at different levels of fisheries and affect fish stocks, livelihoods and the wider fisheries value chain.'
                     ],
                 ];
             @endphp

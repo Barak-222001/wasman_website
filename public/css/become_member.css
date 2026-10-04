@@ -2303,3 +2303,145 @@ main p {
         line-height: 1.6 !important;
     }
 }
+
+.membership-fellow-note{margin-top:18px;padding:18px 20px;border:1px solid rgba(0,135,160,.22);border-radius:14px;background:rgba(0,135,160,.06);font-size:20px;line-height:1.6}.membership-category-grid .join-option-card small{font-size:18px!important;line-height:1.55!important}
+
+
+/* =========================================================
+   Five handbook membership application cards
+   ========================================================= */
+.membership-category-grid-five {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.membership-category-grid-five .membership-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-category-grid-five .membership-card p {
+    flex: 1;
+}
+
+.membership-category-grid-five .membership-card a {
+    margin-top: auto;
+}
+
+.membership-category-grid-five .membership-card-featured {
+    transform: none;
+}
+
+#category-student,
+#category-early-career,
+#category-professional,
+#category-fellow,
+#category-associate {
+    scroll-margin-top: 120px;
+}
+
+.membership-fellow-application-card {
+    margin-top: 16px;
+    cursor: default;
+    border: 1px solid rgba(0, 135, 160, 0.22);
+    background: rgba(0, 135, 160, 0.06);
+}
+
+.membership-fellow-application-card strong {
+    display: block;
+    margin-top: 8px;
+}
+
+.membership-fellow-application-card small {
+    display: block;
+    margin-top: 8px;
+    font-size: 18px !important;
+    line-height: 1.55 !important;
+}
+
+@media (max-width: 1280px) {
+    .membership-category-grid-five {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .membership-category-grid-five {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .membership-category-grid-five {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   Membership cards — 3-column desktop layout
+   5 cards display as 3 + 2, with wider/shorter cards.
+   ========================================================= */
+.membership-category-grid-five {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+    align-items: stretch !important;
+}
+
+.membership-category-grid-five .membership-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 34px 34px 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.membership-category-grid-five .membership-card h3 {
+    margin-bottom: 16px !important;
+}
+
+.membership-category-grid-five .membership-card p {
+    flex: 0 1 auto !important;
+    font-size: 21px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 22px !important;
+}
+
+.membership-category-grid-five .membership-card a {
+    margin-top: auto !important;
+}
+
+/* Second row: keep the final two cards wide and balanced */
+.membership-category-grid-five .membership-card:nth-child(4) {
+    grid-column: 1 / 2;
+}
+
+.membership-category-grid-five .membership-card:nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+@media (max-width: 1000px) {
+    .membership-category-grid-five {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .membership-category-grid-five .membership-card:nth-child(4),
+    .membership-category-grid-five .membership-card:nth-child(5) {
+        grid-column: auto !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .membership-category-grid-five {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .membership-category-grid-five .membership-card {
+        padding: 28px 24px !important;
+    }
+}

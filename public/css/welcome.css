@@ -94,8 +94,7 @@ img {
     width: 100%;
     height: clamp(360px, 48vw, 620px);
     min-height: 0;
-    overflow: hidden;
-   
+    overflow: hidden;  
 }
 
 .hero-banner .swiper,
@@ -1659,5 +1658,221 @@ img {
         height: 340px !important;
         min-height: 340px !important;
         max-height: 340px !important;
+    }
+}
+
+
+/* =========================================================
+   PROFESSIONAL HOME HERO CAROUSEL — FINAL OVERRIDE
+   Preserve image proportions; no stretching. Slides 2–3 carry
+   readable handbook-aligned editorial overlays.
+========================================================= */
+.hero-banner {
+    width: min(1440px, 100%) !important;
+    height: clamp(440px, 42vw, 600px) !important;
+    min-height: 440px !important;
+    max-height: 600px !important;
+    margin: 0 auto !important;
+    background: #062c3d !important;
+    overflow: hidden !important;
+}
+
+.hero-banner .hero-swiper,
+.hero-banner .hero-swiper .swiper-wrapper,
+.hero-banner .hero-swiper .hero-slide,
+.hero-banner .hero-swiper .hero-slide picture {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.hero-banner .hero-swiper .hero-slide {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.hero-banner .hero-swiper .hero-slide picture {
+    display: block !important;
+    background: #062c3d !important;
+}
+
+/* Critical fix: cover preserves aspect ratio. Never use object-fit: fill. */
+.hero-banner .hero-swiper .hero-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+}
+
+/* Keep the artwork/logo on the first slide comfortably framed. */
+.hero-banner .hero-swiper .hero-slide:first-child img {
+    object-fit: contain !important;
+    background: #ffffff !important;
+}
+
+/* Gentle darkening only where overlay text needs contrast. */
+.hero-banner .hero-swiper .hero-slide:nth-child(2)::after,
+.hero-banner .hero-swiper .hero-slide:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(3,39,56,.80) 0%, rgba(3,39,56,.48) 42%, rgba(3,39,56,.08) 72%);
+}
+
+.hero-banner .hero-swiper .hero-slide:nth-child(3)::after {
+    background: linear-gradient(270deg, rgba(3,39,56,.82) 0%, rgba(3,39,56,.48) 42%, rgba(3,39,56,.08) 72%);
+}
+
+.hero-slide-overlay {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(590px, 46%);
+    color: #ffffff;
+    text-shadow: 0 2px 18px rgba(0,0,0,.18);
+}
+
+.hero-slide-overlay-left { left: clamp(38px, 6vw, 88px); }
+.hero-slide-overlay-right { right: clamp(38px, 6vw, 88px); text-align: left; }
+
+.hero-slide-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #79e4d8;
+    font-size: clamp(.78rem, .9vw, .94rem);
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+
+.hero-slide-overlay h2 {
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-size: clamp(2rem, 3.2vw, 3.35rem);
+    line-height: 1.08;
+    font-weight: 600;
+}
+
+.hero-slide-overlay p {
+    margin: 0;
+    max-width: 560px;
+    color: rgba(255,255,255,.94);
+    font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+    line-height: 1.65;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .hero-banner {
+        height: 500px !important;
+        min-height: 500px !important;
+    }
+    .hero-slide-overlay {
+        width: min(620px, 76%);
+    }
+}
+
+@media (max-width: 650px) {
+    .hero-banner {
+        width: 100% !important;
+        height: 430px !important;
+        min-height: 430px !important;
+        max-height: 430px !important;
+    }
+    .hero-banner .hero-swiper .hero-slide:not(:first-child) img {
+        object-position: center center !important;
+    }
+    .hero-banner .hero-swiper .hero-slide:nth-child(2)::after,
+    .hero-banner .hero-swiper .hero-slide:nth-child(3)::after {
+        background: linear-gradient(0deg, rgba(3,39,56,.92) 0%, rgba(3,39,56,.60) 58%, rgba(3,39,56,.18) 100%);
+    }
+    .hero-slide-overlay,
+    .hero-slide-overlay-left,
+    .hero-slide-overlay-right {
+        left: 24px !important;
+        right: 24px !important;
+        top: auto !important;
+        bottom: 48px !important;
+        width: auto !important;
+        transform: none !important;
+    }
+    .hero-slide-overlay h2 {
+        font-size: clamp(1.75rem, 8vw, 2.25rem);
+        margin-bottom: 10px;
+    }
+    .hero-slide-overlay p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .hero-slide-kicker {
+        font-size: .72rem;
+        margin-bottom: 9px;
+    }
+}
+
+/* =========================================================
+   FIRST HERO SLIDE — CLEAN / NO OVERLAY
+   Explicitly prevents any text shadow, gradient or pseudo-overlay
+   from affecting the opening carousel card.
+========================================================= */
+.hero-banner .hero-swiper .hero-slide:first-child::before,
+.hero-banner .hero-swiper .hero-slide:first-child::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.hero-banner .hero-swiper .hero-slide:first-child {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+}
+
+.hero-banner .hero-swiper .hero-slide:first-child picture,
+.hero-banner .hero-swiper .hero-slide:first-child img {
+    background: #ffffff !important;
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+/* =========================================================
+   WHAT WE DO — CENTERED 2 x 2 CARD MATRIX
+========================================================= */
+@media (min-width: 851px) {
+    .focus-grid {
+        width: min(1180px, 100%);
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .focus-card {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 34px 36px;
+    }
+
+    .focus-card h3 {
+        min-height: 0;
+        margin-bottom: 16px;
+    }
+
+    .focus-card p {
+        flex: 0 1 auto;
+        line-height: 1.65;
+    }
+
+    .focus-card a {
+        margin-top: 24px;
     }
 }
