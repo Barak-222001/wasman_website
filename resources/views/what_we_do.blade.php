@@ -183,7 +183,7 @@
 
         <div class="activity">
 
-             <img src="{{asset('pics_vids/policy_advo.png')}}">
+             <div class="activity-icon" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></div>
 
             <h3>Policy & Advocacy</h3>
 
@@ -196,7 +196,7 @@
 
         <div class="activity">
 
-             <img src="{{asset('pics_vids/comm_eng.png')}}">
+             <div class="activity-icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
 
             <h3>Community Engagement</h3>
 
@@ -209,7 +209,7 @@
 
         <div class="activity">
 
-             <img src="{{asset('pics_vids/stra_part.png')}}">
+             <div class="activity-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></div>
 
             <h3>Strategic Partnerships</h3>
 
@@ -334,7 +334,7 @@
 
             <p>
                 <strong>Phone</strong><br>
-                +233 XX XXX XXXX
+                +233 50 363 4684
             </p>
 
             <p>

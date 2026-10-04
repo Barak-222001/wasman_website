@@ -727,9 +727,8 @@ input {
 }
 
 /* =========================================================
-   PRE-FOOTER ACTIVITY CARDS — 3 COLUMNS × 1 ROW
+   THREE PRE-FOOTER CARDS
 ========================================================= */
-
 .pre-footer-activities {
     width: 100%;
     max-width: 1200px;
@@ -737,12 +736,35 @@ input {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
-    align-items: stretch;
 }
 
 .pre-footer-activities .activity {
     width: 100%;
     height: 100%;
+    padding-top: 34px;
+}
+
+.pre-footer-activities .activity-icon {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 22px;
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    box-shadow: 0 10px 28px rgba(7, 59, 76, 0.10);
+}
+
+.pre-footer-activities .activity-icon i {
+    font-size: 54px;
+    color: #087f8c;
+}
+
+.pre-footer-activities .activity h3,
+.pre-footer-activities .activity p {
+    text-align: center;
 }
 
 @media (max-width: 1000px) {
@@ -756,5 +778,14 @@ input {
         grid-template-columns: 1fr;
         gap: 22px;
         margin-bottom: 60px;
+    }
+
+    .pre-footer-activities .activity-icon {
+        width: 96px;
+        height: 96px;
+    }
+
+    .pre-footer-activities .activity-icon i {
+        font-size: 46px;
     }
 }

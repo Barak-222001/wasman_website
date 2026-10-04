@@ -114,10 +114,21 @@
 
         <div class="intro-image">
 
-            <img
-                src="{{ asset('pics_vids/en.png') }}"
-                alt="WASMaN Support Team"
-            >
+            <div class="connect-visual-art" aria-hidden="true">
+                <span class="connect-orbit connect-orbit-one">
+                    <i class="fa-solid fa-comments"></i>
+                </span>
+                <span class="connect-orbit connect-orbit-two">
+                    <i class="fa-solid fa-handshake"></i>
+                </span>
+                <span class="connect-orbit connect-orbit-three">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </span>
+
+                <div class="connect-main-icon">
+                    <i class="fa-solid fa-people-arrows"></i>
+                </div>
+            </div>
 
 
             <div class="image-caption">
@@ -575,7 +586,7 @@
             </span>
 
             <h3>
-                +233 XXX XXX XXX
+                +233 50 363 4684
             </h3>
 
             <p>

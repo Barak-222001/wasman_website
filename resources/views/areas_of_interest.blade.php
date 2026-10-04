@@ -202,26 +202,27 @@
                     and environmental assessment.
                 </p>
 
-                <a href="#" class="interest-link">
+                <!-- <a href="#" class="interest-link">
                     Explore this area
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </div>
 
 
-            <div class="interest-image">
-
-                <img
-                    src="{{ asset('pics_vids/sci_rese.png') }}"
-                    alt="Aquatic science research"
-                >
+            <div class="interest-image interest-icon-panel">
+                <div class="elegant-icon-scene" aria-hidden="true">
+                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-droplet"></i></span>
+                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-flask-vial"></i></span>
+                    <div class="main-elegant-icon">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                </div>
 
                 <div class="image-label">
                     <span>01</span>
                     <strong>Science & Research</strong>
                 </div>
-
             </div>
 
         </article>
@@ -257,26 +258,27 @@
                     protection and water conservation.
                 </p>
 
-                <a href="#" class="interest-link">
+                <!-- <a href="#" class="interest-link">
                     Explore this area
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </div>
 
 
-            <div class="interest-image">
-
-                <img
-                    src="{{ asset('pics_vids/clim_wat.png') }}"
-                    alt="Climate and water sustainability"
-                >
+            <div class="interest-image interest-icon-panel">
+                <div class="elegant-icon-scene" aria-hidden="true">
+                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-water"></i></span>
+                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-leaf"></i></span>
+                    <div class="main-elegant-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                </div>
 
                 <div class="image-label">
                     <span>02</span>
                     <strong>Climate & Water</strong>
                 </div>
-
             </div>
 
         </article>
@@ -312,26 +314,27 @@
                     while promoting responsible use of aquatic resources.
                 </p>
 
-                <a href="#" class="interest-link">
+                <!-- <a href="#" class="interest-link">
                     Explore this area
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </div>
 
 
-            <div class="interest-image">
-
-                <img
-                    src="{{ asset('pics_vids/blue_eco.png') }}"
-                    alt="Blue economy and coastal development"
-                >
+            <div class="interest-image interest-icon-panel">
+                <div class="elegant-icon-scene" aria-hidden="true">
+                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-fish-fins"></i></span>
+                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-chart-line"></i></span>
+                    <div class="main-elegant-icon">
+                        <i class="fa-solid fa-sailboat"></i>
+                    </div>
+                </div>
 
                 <div class="image-label">
                     <span>03</span>
                     <strong>Blue Economy</strong>
                 </div>
-
             </div>
 
         </article>
@@ -367,26 +370,27 @@
                     the next generation of female scientists and innovators.
                 </p>
 
-                <a href="#" class="interest-link">
+                <!-- <a href="#" class="interest-link">
                     Explore this area
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </div>
 
 
-            <div class="interest-image">
-
-                <img
-                    src="{{ asset('pics_vids/wom_lead.png') }}"
-                    alt="Women in aquatic science"
-                >
+            <div class="interest-image interest-icon-panel">
+                <div class="elegant-icon-scene" aria-hidden="true">
+                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-lightbulb"></i></span>
+                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-award"></i></span>
+                    <div class="main-elegant-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                </div>
 
                 <div class="image-label">
                     <span>04</span>
                     <strong>Women & Leadership</strong>
                 </div>
-
             </div>
 
         </article>
@@ -422,26 +426,27 @@
                     collaborative conservation initiatives.
                 </p>
 
-                <a href="#" class="interest-link">
+                <!-- <a href="#" class="interest-link">
                     Explore this area
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </a> -->
 
             </div>
 
 
-            <div class="interest-image">
-
-                <img
-                    src="{{ asset('pics_vids/com_part.png') }}"
-                    alt="Community engagement"
-                >
+            <div class="interest-image interest-icon-panel">
+                <div class="elegant-icon-scene" aria-hidden="true">
+                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-handshake"></i></span>
+                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-comments"></i></span>
+                    <div class="main-elegant-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                </div>
 
                 <div class="image-label">
                     <span>05</span>
                     <strong>Community Outreach and Extension</strong>
                 </div>
-
             </div>
 
         </article>
@@ -847,7 +852,7 @@
                 <i class="fa-solid fa-phone"></i>
                 <div>
                     <span>Phone</span>
-                    <p>+233 XX XXX XXXX</p>
+                    <p>+233 50 363 4684</p>
                 </div>
             </div>
 

@@ -463,7 +463,7 @@
                 <i class="fa-solid fa-phone"></i>
                 <div>
                     <span>Phone</span>
-                    <p>+233 XX XXX XXXX</p>
+                    <p>+233 50 363 4684</p>
                 </div>
             </div>
 

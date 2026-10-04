@@ -1850,3 +1850,301 @@
         scroll-margin-top: 80px;
     }
 }
+
+
+/* =========================================================
+   COLLABORATION IN ACTION — ICON VISUAL
+   Replaces the former featured partnership photograph.
+========================================================= */
+
+.featured-partnership-image {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 22% 22%, rgba(79,210,196,.26), transparent 27%),
+        radial-gradient(circle at 80% 78%, rgba(8,127,156,.22), transparent 30%),
+        linear-gradient(145deg, #f8fdfc 0%, #e8f8f5 48%, #d9f1f0 100%);
+}
+
+.featured-partnership-image::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(8,127,156,.14);
+    box-shadow:
+        0 0 0 38px rgba(255,255,255,.28),
+        0 0 0 78px rgba(8,127,156,.05);
+}
+
+.collaboration-icon-art {
+    position: relative;
+    z-index: 2;
+    width: 350px;
+    height: 350px;
+    display: grid;
+    place-items: center;
+}
+
+.collaboration-main-icon {
+    width: 180px;
+    height: 180px;
+    display: grid;
+    place-items: center;
+    border-radius: 44px;
+    color: var(--partner-white);
+    background: linear-gradient(145deg, var(--partner-ocean), var(--partner-teal));
+    border: 1px solid rgba(255,255,255,.65);
+    box-shadow:
+        0 30px 62px rgba(5,47,67,.20),
+        inset 0 1px 0 rgba(255,255,255,.35);
+    transform: rotate(-4deg);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.collaboration-main-icon i {
+    font-size: 76px;
+    transform: rotate(4deg);
+}
+
+.collaboration-orbit {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    display: grid;
+    place-items: center;
+    border-radius: 22px;
+    color: var(--partner-ocean);
+    background: rgba(255,255,255,.96);
+    border: 1px solid rgba(8,127,156,.12);
+    box-shadow: 0 18px 38px rgba(5,47,67,.13);
+    backdrop-filter: blur(8px);
+}
+
+.collaboration-orbit i {
+    font-size: 27px;
+}
+
+.collaboration-orbit-one {
+    top: 20px;
+    right: 20px;
+    transform: rotate(7deg);
+}
+
+.collaboration-orbit-two {
+    left: 10px;
+    bottom: 34px;
+    transform: rotate(-8deg);
+}
+
+.collaboration-orbit-three {
+    right: 3px;
+    bottom: 56px;
+    width: 62px;
+    height: 62px;
+    border-radius: 19px;
+}
+
+.collaboration-orbit-three i {
+    font-size: 22px;
+}
+
+.featured-partnership-image:hover .collaboration-main-icon {
+    transform: rotate(0) translateY(-7px) scale(1.035);
+    box-shadow:
+        0 38px 72px rgba(5,47,67,.25),
+        inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+@media (max-width: 650px) {
+    .featured-partnership-image {
+        min-height: 390px;
+    }
+
+    .collaboration-icon-art {
+        width: 285px;
+        height: 285px;
+    }
+
+    .collaboration-main-icon {
+        width: 145px;
+        height: 145px;
+        border-radius: 36px;
+    }
+
+    .collaboration-main-icon i {
+        font-size: 60px;
+    }
+
+    .collaboration-orbit {
+        width: 64px;
+        height: 64px;
+        border-radius: 19px;
+    }
+
+    .collaboration-orbit i {
+        font-size: 23px;
+    }
+}
+
+
+/* =========================================================
+   BUILDING STRONGER CONNECTIONS — ICON VISUAL
+   Replaces the former st.png photograph.
+========================================================= */
+
+.partner-intro-image {
+    position: relative;
+    min-height: 540px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+    border-radius: 26px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(79,210,196,.30), transparent 28%),
+        radial-gradient(circle at 82% 78%, rgba(8,127,156,.20), transparent 30%),
+        linear-gradient(145deg, #f9fdfd 0%, #e9f8f5 48%, #dceff0 100%);
+    box-shadow: var(--partner-shadow-lg);
+}
+
+.partner-intro-image::before {
+    content: "";
+    position: absolute;
+    width: 355px;
+    height: 355px;
+    border-radius: 50%;
+    border: 1px solid rgba(8,127,156,.14);
+    box-shadow:
+        0 0 0 40px rgba(255,255,255,.30),
+        0 0 0 82px rgba(8,127,156,.05);
+}
+
+.partner-intro-image::after {
+    content: "";
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    right: -20px;
+    bottom: -20px;
+    z-index: 0;
+    border-radius: 30px;
+    background: rgba(79,210,196,.20);
+}
+
+.connection-icon-art {
+    position: relative;
+    z-index: 2;
+    width: 365px;
+    height: 365px;
+    display: grid;
+    place-items: center;
+}
+
+.connection-main-icon {
+    width: 185px;
+    height: 185px;
+    display: grid;
+    place-items: center;
+    border-radius: 46px;
+    color: var(--partner-white);
+    background: linear-gradient(145deg, var(--partner-ocean), var(--partner-teal));
+    border: 1px solid rgba(255,255,255,.65);
+    box-shadow:
+        0 30px 62px rgba(5,47,67,.20),
+        inset 0 1px 0 rgba(255,255,255,.35);
+    transform: rotate(-4deg);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.connection-main-icon i {
+    font-size: 72px;
+    transform: rotate(4deg);
+}
+
+.connection-orbit {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    display: grid;
+    place-items: center;
+    border-radius: 23px;
+    color: var(--partner-ocean);
+    background: rgba(255,255,255,.96);
+    border: 1px solid rgba(8,127,156,.12);
+    box-shadow: 0 18px 38px rgba(5,47,67,.13);
+    backdrop-filter: blur(8px);
+}
+
+.connection-orbit i {
+    font-size: 28px;
+}
+
+.connection-orbit-one {
+    top: 17px;
+    right: 22px;
+    transform: rotate(7deg);
+}
+
+.connection-orbit-two {
+    left: 5px;
+    bottom: 42px;
+    transform: rotate(-8deg);
+}
+
+.connection-orbit-three {
+    right: 0;
+    bottom: 65px;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+}
+
+.connection-orbit-three i {
+    font-size: 23px;
+}
+
+.partner-intro-image:hover .connection-main-icon {
+    transform: rotate(0) translateY(-7px) scale(1.035);
+    box-shadow:
+        0 38px 72px rgba(5,47,67,.25),
+        inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+@media (max-width: 650px) {
+    .partner-intro-image {
+        min-height: 390px;
+    }
+
+    .connection-icon-art {
+        width: 285px;
+        height: 285px;
+    }
+
+    .connection-main-icon {
+        width: 145px;
+        height: 145px;
+        border-radius: 36px;
+    }
+
+    .connection-main-icon i {
+        font-size: 57px;
+    }
+
+    .connection-orbit {
+        width: 64px;
+        height: 64px;
+        border-radius: 19px;
+    }
+
+    .connection-orbit i {
+        font-size: 23px;
+    }
+}

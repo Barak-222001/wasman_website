@@ -93,9 +93,21 @@
 
         <div class="connect-image">
 
-            <img
-                src="{{ asset('pics_vids/cc.png') }}"
-                alt="WASMaN Team">
+            <div class="connect-visual-art" aria-hidden="true">
+                <span class="connect-orbit connect-orbit-one">
+                    <i class="fas fa-comments"></i>
+                </span>
+                <span class="connect-orbit connect-orbit-two">
+                    <i class="fas fa-handshake"></i>
+                </span>
+                <span class="connect-orbit connect-orbit-three">
+                    <i class="fas fa-paper-plane"></i>
+                </span>
+
+                <div class="connect-main-icon">
+                    <i class="fas fa-people-arrows"></i>
+                </div>
+            </div>
 
             <div class="image-caption">
 
@@ -449,7 +461,7 @@
                     </h3>
 
                     <a href="tel:+233000000000">
-                        +233 XXX XXX XXX
+                        +233 50 363 4684
                     </a>
 
                     <small>

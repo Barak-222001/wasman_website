@@ -70,10 +70,23 @@
 
     <div class="partner-intro-image">
 
-        <img
-            src="{{ asset('pics_vids/st.png') }}"
-            alt="WASMaN Partnership Team"
-        >
+        <div class="connection-icon-art" aria-hidden="true">
+            <span class="connection-orbit connection-orbit-one">
+                <i class="fa-solid fa-flask"></i>
+            </span>
+
+            <span class="connection-orbit connection-orbit-two">
+                <i class="fa-solid fa-water"></i>
+            </span>
+
+            <span class="connection-orbit connection-orbit-three">
+                <i class="fa-solid fa-globe-africa"></i>
+            </span>
+
+            <div class="connection-main-icon">
+                <i class="fa-solid fa-people-group"></i>
+            </div>
+        </div>
 
     </div>
 
@@ -115,7 +128,7 @@
 
     <div class="partner-stat">
 
-        <strong>25+</strong>
+        <strong>1+</strong>
 
         <span>
             Partner Institutions
@@ -126,7 +139,7 @@
 
     <div class="partner-stat">
 
-        <strong>18</strong>
+        <strong>1</strong>
 
         <span>
             Countries Connected
@@ -137,7 +150,7 @@
 
     <div class="partner-stat">
 
-        <strong>50+</strong>
+        <strong>1+</strong>
 
         <span>
             Collaborative Projects
@@ -148,7 +161,7 @@
 
     <div class="partner-stat">
 
-        <strong>100+</strong>
+        <strong>5+</strong>
 
         <span>
             Researchers & Experts
@@ -690,10 +703,23 @@
 
     <div class="featured-partnership-image">
 
-        <img
-            src="{{ asset('pics_vids/dd.png') }}"
-            alt="WASMaN Collaboration"
-        >
+        <div class="collaboration-icon-art" aria-hidden="true">
+            <span class="collaboration-orbit collaboration-orbit-one">
+                <i class="fa-solid fa-flask"></i>
+            </span>
+
+            <span class="collaboration-orbit collaboration-orbit-two">
+                <i class="fa-solid fa-water"></i>
+            </span>
+
+            <span class="collaboration-orbit collaboration-orbit-three">
+                <i class="fa-solid fa-users"></i>
+            </span>
+
+            <div class="collaboration-main-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+        </div>
 
     </div>
 

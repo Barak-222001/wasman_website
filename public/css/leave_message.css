@@ -1830,3 +1830,89 @@
         scroll-margin-top: 80px;
     }
 }
+
+
+/* =========================================================
+   CONNECT WITH US — ELEGANT ICON VISUAL
+   Replaces the former photograph in the connect card.
+========================================================= */
+.connect-image {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 76% 18%, rgba(79,210,196,.30), transparent 25%),
+        radial-gradient(circle at 18% 82%, rgba(8,127,156,.18), transparent 31%),
+        linear-gradient(145deg, #f9fdfd 0%, #e9f8f5 52%, #dff4f3 100%);
+}
+
+.connect-image::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(8,127,156,.14);
+    box-shadow: 0 0 0 38px rgba(255,255,255,.30), 0 0 0 78px rgba(8,127,156,.045);
+}
+
+.connect-visual-art {
+    position: relative;
+    z-index: 2;
+    width: 350px;
+    height: 350px;
+    display: grid;
+    place-items: center;
+}
+
+.connect-main-icon {
+    width: 180px;
+    height: 180px;
+    display: grid;
+    place-items: center;
+    border-radius: 44px;
+    color: #fff;
+    background: linear-gradient(145deg, var(--message-ocean), var(--message-teal));
+    border: 1px solid rgba(255,255,255,.65);
+    box-shadow: 0 30px 62px rgba(5,47,67,.21), inset 0 1px 0 rgba(255,255,255,.36);
+    transform: rotate(-4deg);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.connect-main-icon i { font-size: 76px; transform: rotate(4deg); }
+
+.connect-orbit {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    display: grid;
+    place-items: center;
+    border-radius: 22px;
+    color: var(--message-ocean);
+    background: rgba(255,255,255,.95);
+    border: 1px solid rgba(8,127,156,.12);
+    box-shadow: 0 18px 38px rgba(5,47,67,.13);
+    backdrop-filter: blur(8px);
+}
+
+.connect-orbit i { font-size: 27px; }
+.connect-orbit-one { top: 20px; right: 20px; transform: rotate(7deg); }
+.connect-orbit-two { left: 10px; bottom: 34px; transform: rotate(-8deg); }
+.connect-orbit-three { right: 3px; bottom: 56px; width: 62px; height: 62px; border-radius: 19px; }
+.connect-orbit-three i { font-size: 22px; }
+
+.connect-image:hover .connect-main-icon {
+    transform: rotate(0) translateY(-7px) scale(1.035);
+    box-shadow: 0 38px 72px rgba(5,47,67,.25), inset 0 1px 0 rgba(255,255,255,.36);
+}
+
+@media (max-width: 650px) {
+    .connect-image { min-height: 390px; }
+    .connect-visual-art { width: 285px; height: 285px; }
+    .connect-main-icon { width: 145px; height: 145px; border-radius: 36px; }
+    .connect-main-icon i { font-size: 60px; }
+    .connect-orbit { width: 64px; height: 64px; border-radius: 19px; }
+    .connect-orbit i { font-size: 23px; }
+}
