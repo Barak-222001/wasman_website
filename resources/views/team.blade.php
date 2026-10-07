@@ -319,7 +319,7 @@ Within WASMaN, he supports the management, security and improvement of the Netwo
                 <div class="count-icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </div>
-                <strong>4+</strong>
+                <strong>13+</strong>
                 <span>Disciplines</span>
             </div>
 
@@ -327,7 +327,7 @@ Within WASMaN, he supports the management, security and improvement of the Netwo
                 <div class="count-icon">
                     <i class="fa-solid fa-earth-africa"></i>
                 </div>
-                <strong>1+</strong>
+                <strong>4+</strong>
                 <span>Countries</span>
             </div>
 
