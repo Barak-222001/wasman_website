@@ -183,7 +183,7 @@
 
         <div class="activity">
 
-             <img class="activity-photo" src="{{ asset('pics_vids/Website photos/IMG_20240726_115851_022.jpg') }}" alt="Policy and stakeholder engagement">
+             <img class="activity-photo" src="{{ asset('pics_vids/Website photos/FB_IMG_1770721812797.jpg') }}" alt="Policy and stakeholder engagement">
 
             <h3>Policy & Advocacy</h3>
 
