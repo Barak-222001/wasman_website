@@ -680,7 +680,7 @@ public function messages(Request $request)
 public function showMessage(ContactMessage $message)
 {
     if(!$message->is_read){$message->update(['is_read'=>true]);}
-    return view('message-show',compact('message'));
+    return view('admin-message-show', compact('message'));
 }
 
 public function downloadMessageAttachment(ContactMessage $message)
@@ -743,7 +743,7 @@ public function generalEnquiries(Request $request)
 public function showGeneralEnquiry(GeneralEnquiry $enquiry)
 {
     if(!$enquiry->is_read){$enquiry->update(['is_read'=>true]);}
-    return view('general-enquiry-show',compact('enquiry'));
+    return view('admin-general-enquiry-show', compact('enquiry'));
 }
 
 public function destroyGeneralEnquiry(GeneralEnquiry $enquiry)
