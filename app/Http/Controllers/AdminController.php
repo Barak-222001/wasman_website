@@ -8,6 +8,9 @@ use App\Models\VolunteerApplication;
 use App\Models\ResearchAssistantApplication;
 use App\Models\PartnerApplication;
 use App\Models\MembershipApplication;
+use App\Models\ContactMessage;
+use App\Models\GeneralEnquiry;
+use Illuminate\Support\Facades\DB;
 
 
 use Illuminate\Http\Request;
@@ -49,7 +52,7 @@ class AdminController extends Controller
 
         // CHART 2
         $monthlyStats = InternApplication::selectRaw(
-                "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+                $this->monthlyExpression()
             )
             ->groupBy('month')
             ->orderBy('month')
@@ -185,7 +188,7 @@ public function volunteers(Request $request)
 
 
     $volunteerMonthlyStats = VolunteerApplication::selectRaw(
-            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+            $this->monthlyExpression()
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -325,7 +328,7 @@ public function researchAssistants(Request $request)
 
 
     $researchMonthlyStats = ResearchAssistantApplication::selectRaw(
-            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+            $this->monthlyExpression()
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -536,7 +539,7 @@ public function partners(Request $request)
 
 
     $partnerMonthlyStats = PartnerApplication::selectRaw(
-            "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+            $this->monthlyExpression()
         )
         ->groupBy('month')
         ->orderBy('month')
@@ -634,6 +637,127 @@ public function destroyPartner(
 }
 
 
+
+
+/*
+|--------------------------------------------------------------------------
+| MESSAGES
+|--------------------------------------------------------------------------
+*/
+public function messages(Request $request)
+{
+    $search=$request->input('search'); $category=$request->input('category');
+    $status=$request->input('status'); $sort=$request->input('sort','newest');
+
+    $messages=ContactMessage::query()
+        ->when($search,function($query,$search){
+            $query->where(function($q) use($search){
+                $q->where('full_name','like',"%{$search}%")
+                  ->orWhere('email','like',"%{$search}%")
+                  ->orWhere('subject','like',"%{$search}%")
+                  ->orWhere('message','like',"%{$search}%");
+            });
+        })
+        ->when($category,fn($q,$v)=>$q->where('category',$v))
+        ->when($status==='unread',fn($q)=>$q->where('is_read',false))
+        ->when($status==='read',fn($q)=>$q->where('is_read',true))
+        ->when($sort==='oldest',fn($q)=>$q->oldest(),fn($q)=>$q->latest())
+        ->paginate(10)->withQueryString();
+
+    $categoryStats=ContactMessage::selectRaw('category, COUNT(*) as total')->groupBy('category')->orderBy('category')->get();
+    $monthlyStats=ContactMessage::selectRaw($this->monthlyExpression())->groupBy('month')->orderBy('month')->get();
+
+    return view('admin-messages',[
+        'messages'=>$messages,
+        'totalMessages'=>ContactMessage::count(),
+        'unreadMessages'=>ContactMessage::where('is_read',false)->count(),
+        'readMessages'=>ContactMessage::where('is_read',true)->count(),
+        'categoryStats'=>$categoryStats,
+        'monthlyStats'=>$monthlyStats,
+    ]);
+}
+
+public function showMessage(ContactMessage $message)
+{
+    if(!$message->is_read){$message->update(['is_read'=>true]);}
+    return view('message-show',compact('message'));
+}
+
+public function downloadMessageAttachment(ContactMessage $message)
+{
+    if(!$message->attachment){abort(404);}
+    $disk=app()->environment('production')?'private':'public';
+    if(!Storage::disk($disk)->exists($message->attachment)){abort(404);}
+    return Storage::disk($disk)->download($message->attachment);
+}
+
+public function destroyMessage(ContactMessage $message)
+{
+    if($message->attachment){
+        $disk=app()->environment('production')?'private':'public';
+        if(Storage::disk($disk)->exists($message->attachment)){Storage::disk($disk)->delete($message->attachment);}
+    }
+    $message->delete();
+    return redirect()->route('admin.messages')->with('success','Message deleted successfully.');
+}
+
+/*
+|--------------------------------------------------------------------------
+| GENERAL ENQUIRIES
+|--------------------------------------------------------------------------
+*/
+public function generalEnquiries(Request $request)
+{
+    $search=$request->input('search'); $type=$request->input('type');
+    $status=$request->input('status'); $sort=$request->input('sort','newest');
+
+    $enquiries=GeneralEnquiry::query()
+        ->when($search,function($query,$search){
+            $query->where(function($q) use($search){
+                $q->where('full_name','like',"%{$search}%")
+                  ->orWhere('email','like',"%{$search}%")
+                  ->orWhere('phone_number','like',"%{$search}%")
+                  ->orWhere('enquiry_type','like',"%{$search}%")
+                  ->orWhere('message','like',"%{$search}%");
+            });
+        })
+        ->when($type,fn($q,$v)=>$q->where('enquiry_type',$v))
+        ->when($status==='unread',fn($q)=>$q->where('is_read',false))
+        ->when($status==='read',fn($q)=>$q->where('is_read',true))
+        ->when($sort==='oldest',fn($q)=>$q->oldest(),fn($q)=>$q->latest())
+        ->paginate(10)->withQueryString();
+
+    $typeStats=GeneralEnquiry::selectRaw('enquiry_type, COUNT(*) as total')->groupBy('enquiry_type')->orderBy('enquiry_type')->get();
+    $monthlyStats=GeneralEnquiry::selectRaw($this->monthlyExpression())->groupBy('month')->orderBy('month')->get();
+
+    return view('admin-general-enquiries',[
+        'enquiries'=>$enquiries,
+        'totalEnquiries'=>GeneralEnquiry::count(),
+        'unreadEnquiries'=>GeneralEnquiry::where('is_read',false)->count(),
+        'readEnquiries'=>GeneralEnquiry::where('is_read',true)->count(),
+        'typeStats'=>$typeStats,
+        'monthlyStats'=>$monthlyStats,
+    ]);
+}
+
+public function showGeneralEnquiry(GeneralEnquiry $enquiry)
+{
+    if(!$enquiry->is_read){$enquiry->update(['is_read'=>true]);}
+    return view('general-enquiry-show',compact('enquiry'));
+}
+
+public function destroyGeneralEnquiry(GeneralEnquiry $enquiry)
+{
+    $enquiry->delete();
+    return redirect()->route('admin.general-enquiries')->with('success','General enquiry deleted successfully.');
+}
+
+private function monthlyExpression(): string
+{
+    return DB::connection()->getDriverName()==='sqlite'
+        ? "strftime('%Y-%m', created_at) as month, COUNT(*) as total"
+        : "DATE_FORMAT(created_at, '%Y-%m') as month, COUNT(*) as total";
+}
 
 /*
 |--------------------------------------------------------------------------
