@@ -215,7 +215,7 @@
     <div class="benefits-image">
 
         <img
-            src="{{ asset('pics_vids/two.jpeg') }}"
+            src="{{ asset('pics_vids/Wesite photos/unnamed (2) (1).png') }}"
             alt="WASMaN community engagement"
         >
 

@@ -1876,3 +1876,589 @@ img {
         margin-top: 24px;
     }
 }
+
+
+/* =========================================================
+   FLOATING DONATE BUTTON
+========================================================= */
+.wasman-donate-float {
+    position: fixed;
+    right: 24px;
+    bottom: 28px;
+    z-index: 9998;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 142px;
+    padding: 15px 23px;
+    border: 1px solid rgba(255,255,255,.32);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #087f9c, #18a7b5);
+    color: #fff !important;
+    font-family: 'Manrope', sans-serif;
+    font-size: .92rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+    text-decoration: none !important;
+    box-shadow: 0 16px 38px rgba(5,47,67,.28);
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    isolation: isolate;
+}
+.wasman-donate-float i { font-size: 1rem; }
+.wasman-donate-float:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(135deg, #07586b, #087f9c);
+    box-shadow: 0 22px 48px rgba(5,47,67,.34);
+}
+.wasman-donate-pulse {
+    position: absolute; inset: -5px; border-radius: inherit; z-index: -1;
+    border: 2px solid rgba(24,167,181,.35); animation: wasmanDonatePulse 2.2s infinite;
+}
+@keyframes wasmanDonatePulse {
+    0% { transform: scale(.96); opacity: .8; }
+    70%,100% { transform: scale(1.14); opacity: 0; }
+}
+@media (max-width: 640px) {
+    .wasman-donate-float { right: 16px; bottom: 18px; min-width: 122px; padding: 13px 18px; font-size: .84rem; }
+}
+@media (prefers-reduced-motion: reduce) { .wasman-donate-pulse { animation: none; } }
+
+/* =========================================================
+   RESEARCH SPOTLIGHT — UPCOMING EVENT ADVERT
+========================================================= */
+
+.home-spotlight-ad {
+    position: relative;
+    padding: 88px 0 96px;
+    background:
+        radial-gradient(circle at 8% 12%, rgba(79, 210, 196, .14), transparent 28%),
+        linear-gradient(135deg, #f8fcfc 0%, #edf8f7 100%);
+    overflow: hidden;
+}
+
+.home-spotlight-ad::after {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    right: -150px;
+    bottom: -180px;
+    border-radius: 50%;
+    border: 1px solid rgba(8, 127, 156, .12);
+}
+
+.spotlight-ad-heading {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.spotlight-ad-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--blue);
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.spotlight-ad-heading h2 {
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(2.35rem, 4vw, 4rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -.025em;
+}
+
+.spotlight-ad-layout {
+    position: relative;
+    z-index: 1;
+    width: min(1040px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(290px, .8fr);
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+}
+
+.spotlight-ad-flyer {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 24px;
+    background: #ffffff;
+    border: 1px solid rgba(8, 127, 156, .13);
+    box-shadow: 0 28px 65px rgba(6, 44, 61, .15);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.spotlight-ad-flyer:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 34px 78px rgba(6, 44, 61, .20);
+}
+
+.spotlight-ad-flyer img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 760px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.spotlight-ad-details {
+    display: grid;
+    gap: 14px;
+}
+
+.spotlight-event-detail {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .92);
+    border: 1px solid rgba(8, 127, 156, .12);
+    box-shadow: 0 10px 28px rgba(6, 44, 61, .06);
+}
+
+.spotlight-event-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    color: #ffffff;
+    font-size: 1.08rem;
+}
+
+.spotlight-event-detail small {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--muted);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+}
+
+.spotlight-event-detail strong {
+    display: block;
+    color: var(--navy);
+    font-size: 1.06rem;
+    line-height: 1.4;
+}
+
+.spotlight-ad-register {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+    padding: 16px 24px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    color: #ffffff;
+    font-size: .92rem;
+    font-weight: 800;
+    box-shadow: 0 14px 30px rgba(8, 127, 156, .22);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.spotlight-ad-register:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgba(8, 127, 156, .29);
+}
+
+@media (max-width: 850px) {
+    .home-spotlight-ad {
+        padding: 72px 0 80px;
+    }
+
+    .spotlight-ad-layout {
+        grid-template-columns: 1fr;
+        width: min(650px, 100%);
+    }
+
+    .spotlight-ad-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .spotlight-event-detail {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .spotlight-ad-register {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 650px) {
+    .home-spotlight-ad {
+        padding: 60px 0 68px;
+    }
+
+    .spotlight-ad-heading {
+        margin-bottom: 30px;
+    }
+
+    .spotlight-ad-heading h2 {
+        font-size: 2.25rem;
+    }
+
+    .spotlight-ad-layout {
+        gap: 25px;
+    }
+
+    .spotlight-ad-flyer {
+        padding: 8px;
+        border-radius: 18px;
+    }
+
+    .spotlight-ad-flyer img {
+        border-radius: 12px;
+    }
+
+    .spotlight-ad-details {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlight-event-detail {
+        grid-template-columns: 50px 1fr;
+        justify-items: initial;
+        text-align: left;
+        padding: 15px 17px;
+    }
+
+    .spotlight-event-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .spotlight-ad-register {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   RESEARCH SPOTLIGHT — FRESH EVENT ENTRANCE ANIMATION
+   Replays whenever the homepage is loaded/refreshed.
+========================================================= */
+
+/* Initial states */
+.spotlight-new-arrival .spotlight-ad-eyebrow,
+.spotlight-new-arrival .spotlight-ad-heading h2,
+.spotlight-new-arrival .spotlight-ad-flyer,
+.spotlight-new-arrival .spotlight-event-detail,
+.spotlight-new-arrival .spotlight-ad-register {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.spotlight-new-arrival .spotlight-ad-eyebrow {
+    transform: translateY(-16px);
+}
+
+.spotlight-new-arrival .spotlight-ad-heading h2 {
+    transform: translateY(20px);
+}
+
+.spotlight-new-arrival .spotlight-ad-flyer {
+    transform: translateY(38px) scale(.94) rotate(-1deg);
+    transform-origin: center center;
+}
+
+.spotlight-new-arrival .spotlight-event-detail {
+    transform: translateX(28px);
+}
+
+.spotlight-new-arrival .spotlight-ad-register {
+    transform: translateY(18px) scale(.96);
+}
+
+/* Entrance sequence */
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-eyebrow {
+    animation: spotlightEyebrowIn .55s cubic-bezier(.22,.8,.3,1) .08s forwards;
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-heading h2 {
+    animation: spotlightHeadingIn .72s cubic-bezier(.16,1,.3,1) .20s forwards;
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-flyer {
+    animation: spotlightFlyerReveal 1s cubic-bezier(.16,1,.3,1) .36s forwards;
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-event-detail:nth-child(1) {
+    animation: spotlightDetailIn .62s cubic-bezier(.16,1,.3,1) .72s forwards;
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-event-detail:nth-child(2) {
+    animation: spotlightDetailIn .62s cubic-bezier(.16,1,.3,1) .86s forwards;
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-event-detail:nth-child(3) {
+    animation: spotlightDetailIn .62s cubic-bezier(.16,1,.3,1) 1s forwards;
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-register {
+    animation:
+        spotlightButtonIn .62s cubic-bezier(.16,1,.3,1) 1.14s forwards,
+        spotlightButtonAttention 1.1s ease-in-out 1.95s 2;
+}
+
+/* A short "new announcement" glow around the flyer, then it settles. */
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-flyer::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 26px;
+    pointer-events: none;
+    opacity: 0;
+    box-shadow: 0 0 0 0 rgba(24,167,181,.30);
+    animation: spotlightFreshGlow 1.15s ease-out 1.05s 1;
+}
+
+@keyframes spotlightEyebrowIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spotlightHeadingIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spotlightFlyerReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(38px) scale(.94) rotate(-1deg);
+        filter: blur(3px);
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(-5px) scale(1.012) rotate(.25deg);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes spotlightDetailIn {
+    0% {
+        opacity: 0;
+        transform: translateX(28px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes spotlightButtonIn {
+    0% {
+        opacity: 0;
+        transform: translateY(18px) scale(.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes spotlightButtonAttention {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 14px 30px rgba(8,127,156,.22);
+    }
+    50% {
+        transform: translateY(-2px) scale(1.035);
+        box-shadow: 0 18px 38px rgba(8,127,156,.34);
+    }
+}
+
+@keyframes spotlightFreshGlow {
+    0% {
+        opacity: 0;
+        box-shadow: 0 0 0 0 rgba(24,167,181,.34);
+    }
+    35% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        box-shadow: 0 0 0 22px rgba(24,167,181,0);
+    }
+}
+
+/* Keep hover behaviour available after the entrance animation finishes. */
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-flyer:hover {
+    transform: translateY(-6px);
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-register:hover {
+    transform: translateY(-3px);
+}
+
+/* Accessibility: no entrance motion for visitors who request reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    .spotlight-new-arrival .spotlight-ad-eyebrow,
+    .spotlight-new-arrival .spotlight-ad-heading h2,
+    .spotlight-new-arrival .spotlight-ad-flyer,
+    .spotlight-new-arrival .spotlight-event-detail,
+    .spotlight-new-arrival .spotlight-ad-register {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        filter: none !important;
+    }
+
+    .spotlight-new-arrival .spotlight-ad-flyer::after {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   RESEARCH SPOTLIGHT — CONTINUOUS ATTENTION MOTION
+   Starts when the section enters the viewport and continues
+   while the visitor remains around the Spotlight section.
+========================================================= */
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-flyer {
+    animation:
+        spotlightFlyerReveal 1s cubic-bezier(.16,1,.3,1) .12s forwards,
+        spotlightFlyerFloat 3.8s ease-in-out 1.2s infinite;
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-register {
+    animation:
+        spotlightButtonIn .62s cubic-bezier(.16,1,.3,1) .9s forwards,
+        spotlightButtonContinuousPulse 2.5s ease-in-out 1.7s infinite;
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-flyer::after {
+    animation: spotlightFreshGlowContinuous 3.6s ease-out 1.2s infinite;
+}
+
+@keyframes spotlightFlyerFloat {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.008);
+    }
+}
+
+@keyframes spotlightButtonContinuousPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        box-shadow: 0 14px 30px rgba(8,127,156,.22);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-2px) scale(1.035);
+        box-shadow: 0 19px 40px rgba(8,127,156,.36);
+    }
+}
+
+@keyframes spotlightFreshGlowContinuous {
+    0%, 55%, 100% {
+        opacity: 0;
+        box-shadow: 0 0 0 0 rgba(24,167,181,0);
+    }
+    68% {
+        opacity: .8;
+        box-shadow: 0 0 0 5px rgba(24,167,181,.20);
+    }
+    88% {
+        opacity: 0;
+        box-shadow: 0 0 0 22px rgba(24,167,181,0);
+    }
+}
+
+/* Keep hover states responsive even while continuous animation is active. */
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-flyer:hover {
+    animation-play-state: paused;
+    transform: translateY(-7px) scale(1.012);
+}
+
+.spotlight-new-arrival.spotlight-animate-in .spotlight-ad-register:hover {
+    animation-play-state: paused;
+    transform: translateY(-3px) scale(1.025);
+}
+
+/* Accessibility remains respected. */
+@media (prefers-reduced-motion: reduce) {
+    .spotlight-new-arrival.spotlight-animate-in .spotlight-ad-flyer,
+    .spotlight-new-arrival.spotlight-animate-in .spotlight-ad-register,
+    .spotlight-new-arrival.spotlight-animate-in .spotlight-ad-flyer::after {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Research Spotlight landing-page link */
+.spotlight-ad-page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 12px;
+    padding: 13px 21px;
+    border: 1px solid rgba(8, 127, 156, 0.24);
+    border-radius: 50px;
+    background: #ffffff;
+    color: var(--blue);
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(6, 44, 61, 0.07);
+    transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease, background .28s ease;
+}
+
+.spotlight-ad-page-link i {
+    transition: transform .28s ease;
+}
+
+.spotlight-ad-page-link:hover {
+    transform: translateY(-2px);
+    border-color: rgba(24, 167, 181, 0.48);
+    background: #f4fbfb;
+    box-shadow: 0 12px 28px rgba(6, 44, 61, 0.11);
+}
+
+.spotlight-ad-page-link:hover i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 650px) {
+    .spotlight-ad-page-link {
+        width: 100%;
+    }
+}
+

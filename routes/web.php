@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\KnowledgeBiteController;
 
+use App\Http\Controllers\ResearchSpotlightController;
+
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\InternController;
@@ -338,7 +341,16 @@ Route::patch('/admin/memberships/{membership}/status', [AdminController::class, 
 
 Route::delete('/admin/memberships/{membership}', [AdminController::class, 'destroyMembership'])
     ->name('admin.memberships.destroy');
+    
+// research spotlight routes
 
+Route::get('/admin/research-spotlight', [ResearchSpotlightController::class, 'adminIndex'])->name('admin.research-spotlight.index');
+Route::get('/admin/research-spotlight/{application}', [ResearchSpotlightController::class, 'adminShow'])->name('admin.research-spotlight.show');
+Route::patch('/admin/research-spotlight/{application}/status', [ResearchSpotlightController::class, 'updateStatus'])->name('admin.research-spotlight.status');
+Route::get('/admin/research-spotlight/{application}/photo', [ResearchSpotlightController::class, 'photo'])->name('admin.research-spotlight.photo');
+Route::delete('/admin/research-spotlight/{application}', [ResearchSpotlightController::class, 'destroy'])->name('admin.research-spotlight.destroy');
+
+    
 });
 
 // INTERN
@@ -439,3 +451,14 @@ Route::view(
 
 Route::post('/become_member', [MembershipController::class, 'store'])
     ->name('membership.store');
+
+    // donate
+    Route::view('/donate', 'donate')->name('donate');
+    // Route::view('/donate', 'donate')->name('donate');
+
+    // RESEARCH SPOTLIGHT ROUTES
+Route::get('/research-spotlight', [ResearchSpotlightController::class, 'index'])->name('research-spotlight.index');
+
+Route::post('/research-spotlight', [ResearchSpotlightController::class, 'store'])->name('research-spotlight.store');
+
+

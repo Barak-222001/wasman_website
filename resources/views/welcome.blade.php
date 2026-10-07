@@ -100,6 +100,82 @@
 
 </section>
 
+{{-- =========================================================
+     RESEARCH SPOTLIGHT — UPCOMING EVENT ADVERT
+========================================================= --}}
+
+<section class="home-spotlight-ad spotlight-new-arrival">
+    <div class="section-container">
+
+        <div class="spotlight-ad-heading">
+            <span class="spotlight-ad-eyebrow">UPCOMING RESEARCH SPOTLIGHT</span>
+            <h2>Join Our Maiden Research Spotlight</h2>
+        </div>
+
+        <div class="spotlight-ad-layout">
+
+            <a href="https://wacren.zoom.us/meeting/register/kuiKZKgQSxyyAkFfwMgaSQ"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="spotlight-ad-flyer"
+               aria-label="Register for the WASMaN Research Spotlight">
+                <img src="{{ asset('pics_vids/spot1.jpeg') }}"
+                     alt="WASMaN Research Spotlight event flyer"
+                     loading="lazy">
+            </a>
+
+            <div class="spotlight-ad-details">
+
+                {{-- Update these three details whenever a new Spotlight event is announced. --}}
+                <div class="spotlight-event-detail">
+                    <span class="spotlight-event-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                    </span>
+                    <div>
+                        <small>Date</small>
+                        <strong>Friday,9 October 2026</strong>
+                    </div>
+                </div>
+
+                <div class="spotlight-event-detail">
+                    <span class="spotlight-event-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
+                    <div>
+                        <small>Time</small>
+                        <strong>1:00pm GMT</strong>
+                    </div>
+                </div>
+
+                <div class="spotlight-event-detail">
+                    <span class="spotlight-event-icon">
+                        <i class="fa-solid fa-video"></i>
+                    </span>
+                    <div>
+                        <small>Venue</small>
+                        <strong>Online via Zoom</strong>
+                    </div>
+                </div>
+
+                <a href="https://wacren.zoom.us/meeting/register/kuiKZKgQSxyyAkFfwMgaSQ"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="spotlight-ad-register">
+                    Join &amp; Register
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a href="{{ url('/research-spotlight') }}"
+                   class="spotlight-ad-page-link">
+                    Explore Research Spotlight
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</section>
 
 {{-- =========================================================
      INTRO / KNOWLEDGE
@@ -118,7 +194,7 @@
                 </span>
 
                 <h2 class="section-title">
-                    Knowledge Bite
+                    Knowledge Bites
                 </h2>
 
             </div>
@@ -140,6 +216,9 @@
     </div>
 
 </section>
+
+
+
 
 
 {{-- =========================================================
@@ -513,6 +592,45 @@
 <script src="{{ versioned_asset('created_js/swiper-bundle.min.js') }}"></script>
 <script src="{{ versioned_asset('created_js/carousel.js') }}"></script>
 <script src="{{ versioned_asset('created_js/animation.js') }}"></script>
+
+
+<!-- Floating Donate Button -->
+<!-- <a href="{{ url('/donate') }}" class="wasman-donate-float" aria-label="Donate to WASMaN">
+    <span class="wasman-donate-pulse"></span>
+    <i class="fa-solid fa-heart"></i>
+    <span>Donate</span>
+</a> -->
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const spotlight = document.querySelector('.spotlight-new-arrival');
+
+    if (!spotlight) return;
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                /*
+                 Restart the entrance sequence every time the visitor scrolls
+                 back to the Research Spotlight advert.
+                */
+                spotlight.classList.remove('spotlight-animate-in');
+
+                void spotlight.offsetWidth;
+
+                spotlight.classList.add('spotlight-animate-in');
+            } else {
+                spotlight.classList.remove('spotlight-animate-in');
+            }
+        });
+    }, {
+        threshold: 0.25
+    });
+
+    observer.observe(spotlight);
+});
+</script>
 
 </body>
 </html>

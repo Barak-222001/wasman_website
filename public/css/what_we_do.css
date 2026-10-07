@@ -726,66 +726,11 @@ input {
     }
 }
 
-/* =========================================================
-   THREE PRE-FOOTER CARDS
-========================================================= */
-.pre-footer-activities {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 85px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 28px;
-}
-
-.pre-footer-activities .activity {
-    width: 100%;
-    height: 100%;
-    padding-top: 34px;
-}
-
-.pre-footer-activities .activity-icon {
-    width: 112px;
-    height: 112px;
-    margin: 0 auto 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    border-radius: 22px;
-    border: 1px solid rgba(8, 127, 140, 0.10);
-    box-shadow: 0 10px 28px rgba(7, 59, 76, 0.10);
-}
-
-.pre-footer-activities .activity-icon i {
-    font-size: 54px;
-    color: #087f8c;
-}
-
-.pre-footer-activities .activity h3,
-.pre-footer-activities .activity p {
-    text-align: center;
-}
-
-@media (max-width: 1000px) {
-    .pre-footer-activities {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 650px) {
-    .pre-footer-activities {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        margin-bottom: 60px;
-    }
-
-    .pre-footer-activities .activity-icon {
-        width: 96px;
-        height: 96px;
-    }
-
-    .pre-footer-activities .activity-icon i {
-        font-size: 46px;
-    }
-}
+/* Real-photo pre-footer activity cards */
+.pre-footer-activities{max-width:1200px;margin:0 auto 90px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;}
+.pre-footer-activities .activity{overflow:hidden;text-align:left;}
+.pre-footer-activities .activity-photo{width:100%;height:230px;display:block;object-fit:cover;object-position:center;}
+.pre-footer-activities .activity h3{padding:24px 24px 0;margin:0;}
+.pre-footer-activities .activity p{padding:10px 24px 28px;margin:0;}
+@media(max-width:900px){.pre-footer-activities{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:650px){.pre-footer-activities{grid-template-columns:1fr;gap:22px;margin-bottom:60px}.pre-footer-activities .activity-photo{height:220px;}}

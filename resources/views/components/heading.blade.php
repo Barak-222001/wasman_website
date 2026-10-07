@@ -132,6 +132,17 @@
                     </a>
 
 
+
+                    <a href="{{ route('research-spotlight.index') }}">
+                        <div class="wasman-dropdown-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div>
+                            <strong>Research Spotlight</strong>
+                            <small>Women presenting their research</small>
+                        </div>
+                    </a>
+
                     <a href="/knowledge_bite">
 
                         <div class="wasman-dropdown-icon">
@@ -139,7 +150,7 @@
                         </div>
 
                         <div>
-                            <strong>Knowledge Bite</strong>
+                            <strong>Knowledge Bites</strong>
                             <small>view updates</small>
                         </div>
 
@@ -355,6 +366,13 @@
     </div>
 
 </header>
+
+
+<!-- GLOBAL WASMaN DONATE BUTTON -->
+<a href="{{ route('donate') }}" class="wasman-global-donate" aria-label="Donate to WASMaN">
+    <span class="wasman-donate-heart"><i class="fas fa-heart"></i></span>
+    <span>Donate</span>
+</a>
 
 <script>
 

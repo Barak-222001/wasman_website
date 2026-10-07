@@ -106,17 +106,17 @@
                 <div class="highlight-icon">
                     <i class="fa-solid fa-lightbulb"></i>
                 </div>
-                <strong>120+</strong>
+                <strong>19+</strong>
                 <span>Knowledge Bites</span>
             </div>
 
-            <div class="highlight-item">
+            <!-- <div class="highlight-item">
                 <div class="highlight-icon">
                     <i class="fa-solid fa-file-lines"></i>
                 </div>
                 <strong>50+</strong>
                 <span>Research Resources</span>
-            </div>
+            </div> -->
 
             <div class="highlight-item">
                 <div class="highlight-icon">
@@ -126,13 +126,13 @@
                 <span>Emerging Topics</span>
             </div>
 
-            <div class="highlight-item">
+            <!-- <div class="highlight-item">
                 <div class="highlight-icon">
                     <i class="fa-solid fa-earth-africa"></i>
                 </div>
                 <strong>15</strong>
                 <span>Countries Covered</span>
-            </div>
+            </div> -->
 
         </div>
 

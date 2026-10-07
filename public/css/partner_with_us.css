@@ -181,7 +181,7 @@
             rgba(5,72,85,0.78) 48%,
             rgba(8,127,156,0.25) 100%
         ),
-        url("../pics_vids/IMG-20260709-WA0043.jpg")
+        url("../pics_vids/Website photos/DJI_0619.JPG")
         center / cover no-repeat;
 
     background-attachment: fixed;
@@ -1294,7 +1294,7 @@
             rgba(3,47,67,0.89),
             rgba(3,47,67,0.89)
         ),
-        url("../images/partner-cta.jpg")
+        url("../pics_vids/Website photos/unnamed (2) (1).png")
         center / cover no-repeat;
 }
 
@@ -2148,3 +2148,83 @@
         font-size: 23px;
     }
 }
+
+
+/* =========================================================
+   CLICKABLE PARTNERSHIP CARDS
+========================================================= */
+.partner-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.partner-type-card.partner-card-link,
+.partnership-area-card.partner-card-link,
+.model-card.partner-card-link {
+    text-decoration: none;
+}
+
+.partner-card-link h3,
+.partner-card-link p,
+.partner-card-link span,
+.partner-card-link i {
+    text-decoration: none;
+}
+
+.partner-card-link:focus-visible {
+    outline: 3px solid rgba(8,127,156,0.28);
+    outline-offset: 4px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   FLOATING DONATE BUTTON
+========================================================= */
+.wasman-donate-float {
+    position: fixed;
+    right: 24px;
+    bottom: 28px;
+    z-index: 9998;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 142px;
+    padding: 15px 23px;
+    border: 1px solid rgba(255,255,255,.32);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #087f9c, #18a7b5);
+    color: #fff !important;
+    font-family: 'Manrope', sans-serif;
+    font-size: .92rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+    text-decoration: none !important;
+    box-shadow: 0 16px 38px rgba(5,47,67,.28);
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    isolation: isolate;
+}
+.wasman-donate-float i { font-size: 1rem; }
+.wasman-donate-float:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(135deg, #07586b, #087f9c);
+    box-shadow: 0 22px 48px rgba(5,47,67,.34);
+}
+.wasman-donate-pulse {
+    position: absolute; inset: -5px; border-radius: inherit; z-index: -1;
+    border: 2px solid rgba(24,167,181,.35); animation: wasmanDonatePulse 2.2s infinite;
+}
+@keyframes wasmanDonatePulse {
+    0% { transform: scale(.96); opacity: .8; }
+    70%,100% { transform: scale(1.14); opacity: 0; }
+}
+@media (max-width: 640px) {
+    .wasman-donate-float { right: 16px; bottom: 18px; min-width: 122px; padding: 13px 18px; font-size: .84rem; }
+}
+@media (prefers-reduced-motion: reduce) { .wasman-donate-pulse { animation: none; } }

@@ -24,6 +24,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 >
+<link rel="stylesheet" href="{{ asset('css/admin-research-spotlight.css') }}">
 
     @stack('styles')
 
@@ -212,6 +213,14 @@
 
     <span>Membership Applications</span>
 </a>
+
+<!-- RESEARCH SPOTLIGHT -->
+<a href="{{ route('admin.research-spotlight.index') }}" class="sidebar-link {{ request()->routeIs('admin.research-spotlight*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fas fa-microscope"></i></span>
+    <span>Research Spotlight</span>
+</a>
+
+
 
         </nav>
 

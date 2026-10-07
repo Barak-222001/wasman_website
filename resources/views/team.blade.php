@@ -311,7 +311,7 @@ Within WASMaN, he supports the management, security and improvement of the Netwo
                 <div class="count-icon">
                     <i class="fa-solid fa-user-group"></i>
                 </div>
-                <strong>40+</strong>
+                <strong>60+</strong>
                 <span>Network Members</span>
             </div>
 

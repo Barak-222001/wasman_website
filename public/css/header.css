@@ -1656,3 +1656,24 @@ body {
         font-size: 10.5px;
     }
 }
+
+
+/* =========================================================
+   GLOBAL WASMaN FLOATING DONATE BUTTON
+========================================================= */
+.wasman-global-donate {
+    position: fixed; right: 28px; bottom: 28px; z-index: 100000;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 10px 19px 10px 10px; border-radius: 50px;
+    background: linear-gradient(135deg,#087f9c,#18a7b5);
+    color: #fff !important; text-decoration: none !important;
+    font-family: "Manrope", Arial, sans-serif; font-size: .88rem; font-weight: 800;
+    box-shadow: 0 12px 32px rgba(5,47,67,.24),0 4px 12px rgba(8,127,156,.20);
+    transition: transform .28s ease, box-shadow .28s ease, background .28s ease;
+}
+.wasman-donate-heart { position:relative; width:39px; height:39px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:#fff; color:#087f9c; }
+.wasman-donate-heart::before { content:""; position:absolute; inset:-5px; border-radius:50%; border:2px solid rgba(255,255,255,.45); animation:wasmanDonatePulse 2.2s infinite; }
+.wasman-global-donate:hover { transform:translateY(-4px); background:linear-gradient(135deg,#052f43,#087f9c); box-shadow:0 18px 38px rgba(5,47,67,.30); }
+@keyframes wasmanDonatePulse { 0%{transform:scale(.85);opacity:.8} 70%,100%{transform:scale(1.35);opacity:0} }
+@media(max-width:768px){.wasman-global-donate{right:18px;bottom:20px;padding:8px 16px 8px 8px;font-size:.82rem}.wasman-donate-heart{width:36px;height:36px}}
+@media(max-width:480px){.wasman-global-donate{right:14px;bottom:16px}}

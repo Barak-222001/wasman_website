@@ -124,7 +124,7 @@
 
 
 {{-- PARTNERSHIP STATS --}}
-<section class="partner-stats">
+<!-- <section class="partner-stats">
 
     <div class="partner-stat">
 
@@ -169,7 +169,7 @@
 
     </div>
 
-</section>
+</section> -->
 
 
 {{-- WHO WE PARTNER WITH --}}
@@ -194,7 +194,7 @@
 
     <div class="partner-type-grid">
 
-        <div class="partner-type-card">
+        <a href="#partnership-form" class="partner-type-card partner-card-link">
 
             <div class="partner-icon">
                 <i class="fas fa-university"></i>
@@ -209,10 +209,10 @@
                 knowledge exchange and capacity development.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partner-type-card">
+        <a href="#partnership-form" class="partner-type-card partner-card-link">
 
             <div class="partner-icon">
                 <i class="fas fa-building"></i>
@@ -227,10 +227,10 @@
                 management and sustainable development.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partner-type-card">
+        <a href="#partnership-form" class="partner-type-card partner-card-link">
 
             <div class="partner-icon">
                 <i class="fas fa-globe-africa"></i>
@@ -245,10 +245,10 @@
                 development and environmental initiatives.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partner-type-card">
+        <a href="#partnership-form" class="partner-type-card partner-card-link">
 
             <div class="partner-icon">
                 <i class="fas fa-industry"></i>
@@ -263,10 +263,10 @@
                 approaches to blue economy development.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partner-type-card">
+        <a href="#partnership-form" class="partner-type-card partner-card-link">
 
             <div class="partner-icon">
                 <i class="fas fa-users"></i>
@@ -281,10 +281,10 @@
                 strengthen coastal and aquatic communities.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partner-type-card">
+        <a href="#partnership-form" class="partner-type-card partner-card-link">
 
             <div class="partner-icon">
                 <i class="fas fa-handshake"></i>
@@ -299,7 +299,7 @@
                 opportunities for collaboration and mentorship.
             </p>
 
-        </div>
+        </a>
 
     </div>
 
@@ -322,7 +322,7 @@
 
     <div class="partnership-area-grid">
 
-        <div class="partnership-area-card">
+        <a href="#partnership-form" class="partnership-area-card partner-card-link">
 
             <i class="fas fa-water"></i>
 
@@ -335,10 +335,10 @@
                 aquatic ecosystems and biodiversity.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partnership-area-card">
+        <a href="#partnership-form" class="partnership-area-card partner-card-link">
 
             <i class="fas fa-flask"></i>
 
@@ -351,10 +351,10 @@
                 and knowledge generation.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partnership-area-card">
+        <a href="#partnership-form" class="partnership-area-card partner-card-link">
 
             <i class="fas fa-fish"></i>
 
@@ -367,10 +367,10 @@
                 and sustainable aquatic livelihoods.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partnership-area-card">
+        <a href="#partnership-form" class="partnership-area-card partner-card-link">
 
             <i class="fas fa-leaf"></i>
 
@@ -383,10 +383,10 @@
                 resilience to climate change.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partnership-area-card">
+        <a href="#partnership-form" class="partnership-area-card partner-card-link">
 
             <i class="fas fa-chart-line"></i>
 
@@ -399,10 +399,10 @@
                 linked to aquatic resources.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="partnership-area-card">
+        <a href="#partnership-form" class="partnership-area-card partner-card-link">
 
             <i class="fas fa-graduation-cap"></i>
 
@@ -415,7 +415,7 @@
                 mentorship and professional development.
             </p>
 
-        </div>
+        </a>
 
     </div>
 
@@ -530,7 +530,7 @@
 
     <div class="model-grid">
 
-        <div class="model-card">
+        <a href="#partnership-form" class="model-card partner-card-link">
 
             <span class="model-number">
                 01
@@ -545,10 +545,10 @@
                 institutional goals and programmes.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="model-card">
+        <a href="#partnership-form" class="model-card partner-card-link">
 
             <span class="model-number">
                 02
@@ -563,10 +563,10 @@
                 publications and knowledge exchange.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="model-card">
+        <a href="#partnership-form" class="model-card partner-card-link">
 
             <span class="model-number">
                 03
@@ -581,10 +581,10 @@
                 programmes and community initiatives.
             </p>
 
-        </div>
+        </a>
 
 
-        <div class="model-card">
+        <a href="#partnership-form" class="model-card partner-card-link">
 
             <span class="model-number">
                 04
@@ -599,7 +599,7 @@
                 and environmental initiatives.
             </p>
 
-        </div>
+        </a>
 
     </div>
 
@@ -1210,7 +1210,15 @@
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
      <script src="{{ asset('created_js/animation.js') }}"></script>
-    </body>
+    
+<!-- Floating Donate Button -->
+<!-- <a href="{{ url('/donate') }}" class="wasman-donate-float" aria-label="Donate to WASMaN">
+    <span class="wasman-donate-pulse"></span>
+    <i class="fa-solid fa-heart"></i>
+    <span>Donate</span>
+</a> -->
+
+</body>
    
 
 </html>

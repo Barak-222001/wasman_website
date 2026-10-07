@@ -74,7 +74,7 @@
         </div>
 
          <div class="featured-image">
-             <img src="{{asset('pics_vids/michelle_pre.jpeg')}}">
+             <img src="{{asset('pics_vids/Website photos/alb_2.jpeg')}}">
         </div>
         
 
@@ -83,7 +83,7 @@
     <div class="featured-card">
 
         <div class="featured-image">
-             <img src="{{asset('pics_vids/what_we_do/big2.jpg')}}">
+             <img src="{{asset('pics_vids/Website photos/IMG-20211011-WA0041.jpg')}}">
         </div>
 
         <div class="featured-text">
@@ -115,7 +115,7 @@
         </div>
 
          <div class="featured-image">
-             <img src="{{asset('pics_vids/what_we_do/cap.png')}}">
+             <img src="{{asset('pics_vids/Website photos/unnamed (2)(1).png')}}">
         </div>
         
 
@@ -173,7 +173,7 @@
 
     <div class="banner">
 
-         <img src="{{asset('pics_vids/one.jpg')}}">
+         <img src="{{asset('pics_vids/Website photos/DJI_0704.JPG')}}">
 
     </div>
 
@@ -183,7 +183,7 @@
 
         <div class="activity">
 
-             <div class="activity-icon" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></div>
+             <img class="activity-photo" src="{{ asset('pics_vids/Website photos/IMG_20240726_115851_022.jpg') }}" alt="Policy and stakeholder engagement">
 
             <h3>Policy & Advocacy</h3>
 
@@ -196,7 +196,7 @@
 
         <div class="activity">
 
-             <div class="activity-icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
+             <img class="activity-photo" src="{{ asset('pics_vids/Website photos/alb_1.jpeg') }}" alt="Community field engagement">
 
             <h3>Community Engagement</h3>
 
@@ -209,7 +209,7 @@
 
         <div class="activity">
 
-             <div class="activity-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></div>
+             <img class="activity-photo" src="{{ asset('pics_vids/Website photos/unnamed (1).png') }}" alt="Scientific collaboration and partnership">
 
             <h3>Strategic Partnerships</h3>
 

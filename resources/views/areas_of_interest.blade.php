@@ -78,7 +78,7 @@
         <div class="intro-image">
 
             <img
-                src="{{ asset('pics_vids/outreach.jpeg') }}"
+                src="{{ asset('pics_vids/Website photos/IMG_20250307_152356_964.jpg') }}"
                 alt="WASMaN community outreach"
             >
 
@@ -210,15 +210,8 @@
             </div>
 
 
-            <div class="interest-image interest-icon-panel">
-                <div class="elegant-icon-scene" aria-hidden="true">
-                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-droplet"></i></span>
-                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-flask-vial"></i></span>
-                    <div class="main-elegant-icon">
-                        <i class="fa-solid fa-microscope"></i>
-                    </div>
-                </div>
-
+            <div class="interest-image">
+                <img src="{{ asset('pics_vids/Website photos/unnamed (3).png') }}" alt="Aquatic science laboratory research">
                 <div class="image-label">
                     <span>01</span>
                     <strong>Science & Research</strong>
@@ -266,15 +259,8 @@
             </div>
 
 
-            <div class="interest-image interest-icon-panel">
-                <div class="elegant-icon-scene" aria-hidden="true">
-                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-water"></i></span>
-                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-leaf"></i></span>
-                    <div class="main-elegant-icon">
-                        <i class="fa-solid fa-cloud-sun"></i>
-                    </div>
-                </div>
-
+            <div class="interest-image">
+                <img src="{{ asset('pics_vids/Website photos/DJI_0704.JPG') }}" alt="Coastal and water resources landscape">
                 <div class="image-label">
                     <span>02</span>
                     <strong>Climate & Water</strong>
@@ -322,15 +308,8 @@
             </div>
 
 
-            <div class="interest-image interest-icon-panel">
-                <div class="elegant-icon-scene" aria-hidden="true">
-                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-fish-fins"></i></span>
-                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-chart-line"></i></span>
-                    <div class="main-elegant-icon">
-                        <i class="fa-solid fa-sailboat"></i>
-                    </div>
-                </div>
-
+            <div class="interest-image">
+                <img src="{{ asset('pics_vids/Website photos/unnamed (1)(1).png') }}" alt="Aquatic field sampling from a boat">
                 <div class="image-label">
                     <span>03</span>
                     <strong>Blue Economy</strong>
@@ -378,15 +357,8 @@
             </div>
 
 
-            <div class="interest-image interest-icon-panel">
-                <div class="elegant-icon-scene" aria-hidden="true">
-                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-lightbulb"></i></span>
-                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-award"></i></span>
-                    <div class="main-elegant-icon">
-                        <i class="fa-solid fa-user-graduate"></i>
-                    </div>
-                </div>
-
+            <div class="interest-image">
+                <img src="{{ asset('pics_vids/Website photos/IMG-20250317-WA0021.jpg') }}" alt="Women scientists conducting coastal fieldwork">
                 <div class="image-label">
                     <span>04</span>
                     <strong>Women & Leadership</strong>
@@ -434,15 +406,8 @@
             </div>
 
 
-            <div class="interest-image interest-icon-panel">
-                <div class="elegant-icon-scene" aria-hidden="true">
-                    <span class="icon-orbit orbit-one"><i class="fa-solid fa-handshake"></i></span>
-                    <span class="icon-orbit orbit-two"><i class="fa-solid fa-comments"></i></span>
-                    <div class="main-elegant-icon">
-                        <i class="fa-solid fa-people-group"></i>
-                    </div>
-                </div>
-
+            <div class="interest-image">
+                <img src="{{ asset('pics_vids/Website photos/20221119_111532.jpg') }}" alt="Community engagement and field consultation">
                 <div class="image-label">
                     <span>05</span>
                     <strong>Community Outreach and Extension</strong>
