@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
 <main id="main-content">
 
 {{-- =========================================================
-     MAIN HERO — PRESERVED
+     MAIN HERO â€” PRESERVED
 ========================================================= --}}
 
 <section class="hero-banner">
@@ -58,7 +58,7 @@
             <div class="swiper-slide hero-slide knowledge-card knowledge-card-light">
                 <picture>
                     <source media="(max-width: 650px)" srcset="{{ versioned_asset('pics_vids/home_page_banner_mobile.webp') }}" type="image/webp">
-                    <img src="{{ versioned_asset('pics_vids/home_page_banner.webp') }}" alt="WASMaN — Women in Aquatic Science and Management Network" class="wasman-logo" fetchpriority="high" decoding="async" width="1400" height="788">
+                    <img src="{{ versioned_asset('pics_vids/home_page_banner.webp') }}" alt="WASMaN â€” Women in Aquatic Science and Management Network" class="wasman-logo" fetchpriority="high" decoding="async" width="1400" height="788">
                 </picture>
             </div>
 
@@ -68,7 +68,7 @@
                     <img src="{{ versioned_asset('pics_vids/what_we_do/sea.png') }}" alt="Women advancing aquatic science through research, learning and professional development" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
                 </picture>
                 <div class="hero-slide-overlay hero-slide-overlay-left">
-                    <span class="hero-slide-kicker">RESEARCH • CAPACITY DEVELOPMENT</span>
+                    <span class="hero-slide-kicker">RESEARCH â€¢ CAPACITY DEVELOPMENT</span>
                     <h2>Advancing Women in Aquatic Science</h2>
                     <p>Strengthening research, professional development and mentoring so women can grow, lead and contribute to sustainable aquatic resource management.</p>
                 </div>
@@ -80,9 +80,9 @@
                     <img src="{{ versioned_asset('pics_vids/four.jpg') }}" alt="Women building networks, partnerships and leadership in aquatic science and management" class="wasman-logo" loading="lazy" decoding="async" width="1400" height="788">
                 </picture>
                 <div class="hero-slide-overlay hero-slide-overlay-right">
-                    <span class="hero-slide-kicker">ADVOCACY • NETWORKING • PARTNERSHIPS</span>
+                    <span class="hero-slide-kicker">ADVOCACY â€¢ NETWORKING â€¢ PARTNERSHIPS</span>
                     <h2>Building Visibility, Leadership &amp; Collaboration</h2>
-                    <p>Connecting women, institutions and partners to expand opportunities, strengthen professional networks and advance women’s representation and leadership.</p>
+                    <p>Connecting women, institutions and partners to expand opportunities, strengthen professional networks and advance womenâ€™s representation and leadership.</p>
                 </div>
             </div>
 
@@ -100,9 +100,9 @@
 
 </section>
 
-{-- =========================================================
-     FEATURED RESEARCH SPOTLIGHT — PUBLICATION (NOT WEBINAR)
-========================================================= --}
+{{-- =========================================================
+     FEATURED RESEARCH SPOTLIGHT â€” PUBLICATION (NOT WEBINAR)
+========================================================= --}}
 <section class="home-spotlight-ad spotlight-new-arrival home-featured-research" aria-labelledby="home-research-title">
     <div class="section-container">
         <div class="spotlight-ad-heading">
@@ -119,7 +119,7 @@
                 <span class="home-featured-label"><i class="fa-solid fa-book-open-reader"></i> FEATURED RESEARCH</span>
                 <h3>What Fetu Afahye Reveals About Lagoon Stewardship and Sanitation</h3>
                 <p>By Ms Cindy Owusu &amp; Dr. Alberta Sagoe</p>
-                <p>Learn how cultural practices, fisheries stewardship and communal sanitation intersect at Cape Coast’s Fosu Lagoon.</p>
+                <p>Learn how cultural practices, fisheries stewardship and communal sanitation intersect at Cape Coastâ€™s Fosu Lagoon.</p>
                 <div class="home-featured-actions">
                     <a href="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}" download="WASMaN-Fetu-Afahye-Research-Summary-Flyer.png" class="spotlight-ad-register"><i class="fa-solid fa-download"></i> Download Summary Flyer</a>
                     <a href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}" target="_blank" rel="noopener noreferrer" class="spotlight-ad-page-link"><i class="fa-regular fa-file-pdf"></i> Read Full Article</a>
