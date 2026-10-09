@@ -180,6 +180,54 @@
     </section>
 
     {{-- =========================================================
+         FEATURED RESEARCH ARTICLE — FETU AFAHYE
+    ========================================================= --}}
+    <section class="spotlight-publication" id="featured-article" aria-labelledby="publication-title">
+        <div class="spotlight-shell">
+            <div class="spotlight-section-heading spotlight-section-heading-centered">
+                <span>FEATURED RESEARCH ARTICLE</span>
+                <h2 id="publication-title">Explore the Research Behind the Spotlight</h2>
+                <p>Discover the evidence, traditions and community perspectives behind our featured Research Spotlight.</p>
+            </div>
+
+            <article class="spotlight-publication-card">
+                <a class="spotlight-publication-cover"
+                   href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Read the illustrated Fetu Afahye research article in PDF format">
+                    <img src="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}"
+                         alt="WASMaN Research Spotlight article flyer about Fetu Afahye, lagoon stewardship and sanitation"
+                         loading="lazy">
+                    <span class="spotlight-publication-cover-caption"><i class="fa-regular fa-file-pdf"></i> Open illustrated article</span>
+                </a>
+
+                <div class="spotlight-publication-info">
+                    <span class="spotlight-publication-tag"><i class="fa-solid fa-book-open-reader"></i> RESEARCH SPOTLIGHT · FEATURED ARTICLE</span>
+                    <h3>What Fetu Afahye Reveals About Lagoon Stewardship and Sanitation</h3>
+                    <p class="spotlight-publication-authors"><i class="fa-solid fa-user-pen"></i> Ms Cindy Owusu &amp; Dr. Alberta Sagoe</p>
+                    <p class="spotlight-publication-summary">
+                        Explore how Cape Coast’s Fetu Afahye connects cultural tradition, temporary fishing restrictions and communal clean-up at the Fosu Lagoon. Through photographs and videos, the article documents immediate improvements in visible surface litter, while highlighting the need for year-round sanitation and continued ecological monitoring.
+                    </p>
+                    <div class="spotlight-publication-insights" aria-label="Research themes">
+                        <span><i class="fa-solid fa-water"></i> Lagoon stewardship</span>
+                        <span><i class="fa-solid fa-people-group"></i> Community action</span>
+                        <span><i class="fa-solid fa-microscope"></i> Ecological monitoring</span>
+                    </div>
+                    <p class="spotlight-publication-note">A cleaner-looking lagoon is not, by itself, proof of improved water quality or fish biodiversity.</p>
+                    <div class="spotlight-publication-actions">
+                        <a class="spotlight-publication-read" href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-regular fa-file-pdf"></i> Read Full Article <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a class="spotlight-publication-download" href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}" download="WASMaN-Fetu-Afahye-Research-Spotlight.pdf">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    {{-- =========================================================
          PREVIOUS SPOTLIGHTS
          Keep this compact. Add event cards here after each edition.
     ========================================================= --}}
