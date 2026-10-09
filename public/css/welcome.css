@@ -2462,3 +2462,15 @@ img {
     }
 }
 
+
+/* RESEARCH SPOTLIGHT: FEATURED PUBLICATION — replaces expired webinar advert */
+.home-featured-research .spotlight-ad-heading p { margin: 12px 0 0; color: #536d78; line-height: 1.75; }
+.home-featured-research .spotlight-ad-flyer { position: relative; display: block; overflow: hidden; }
+.home-featured-research .spotlight-ad-flyer img { width: 100%; height: auto; object-fit: contain; }
+.home-featured-research .home-flyer-caption { position: absolute; bottom: 13px; left: 13px; right: 13px; padding: 12px; border-radius: 12px; background: rgba(3,47,67,.93); color: white; font-weight: 800; text-align: center; }
+.home-featured-research-details h3 { color: #063b4c; font: 700 clamp(1.7rem,3vw,2.5rem)/1.2 'Playfair Display',Georgia,serif; margin: 12px 0 14px; }
+.home-featured-research-details > p { line-height: 1.75; margin: 0 0 13px; color: #536d78; }
+.home-featured-label { display: inline-flex; gap: 9px; align-items: center; color: #087f8c; font-size: .8rem; font-weight: 800; letter-spacing: .09em; }
+.home-featured-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.home-featured-actions a { margin-top: 0; max-width: 100%; }
+@media (max-width: 650px) { .home-featured-actions { flex-direction: column; } .home-featured-actions a { justify-content: center; width: 100%; } }

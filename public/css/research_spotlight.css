@@ -592,3 +592,8 @@ body {
 .spotlight-publication-download { color: #075c75; background: #fff; border: 1px solid #b9d9df; }
 @media(max-width: 780px) { .spotlight-publication-card { grid-template-columns: 1fr; max-width: 620px; margin: auto; } .spotlight-publication-cover { max-width: 420px; margin: auto; } }
 @media(max-width: 580px) { .spotlight-publication { padding: 72px 0; } .spotlight-publication-card { padding: 16px; border-radius: 20px; } .spotlight-publication-info h3 { font-size: 2rem; } .spotlight-publication-actions { flex-direction: column; } .spotlight-publication-actions a { width: 100%; } }
+
+/* Separate summary flyer and full article access */
+.spotlight-flyer-separate-note { margin: 14px 0 0; font-size: .92rem; color: #476873; }
+.spotlight-publication-actions .spotlight-publication-flyer-download { color: #fff; background: linear-gradient(135deg,#087e73,#12a89b); box-shadow: 0 10px 25px rgba(8,127,120,.16); }
+.spotlight-publication-actions .spotlight-publication-flyer-download:hover { box-shadow: 0 14px 28px rgba(8,127,120,.22); }

@@ -28,7 +28,7 @@
             <div class="spotlight-hero-copy">
                 <span class="spotlight-kicker">
                     <i class="fa-solid fa-microscope"></i>
-                    WASMaN WEBINAR SERIES
+                    WASMaN RESEARCH SPOTLIGHT
                 </span>
 
                 <h1>Research <span>Spotlight</span></h1>
@@ -101,85 +101,7 @@
     {{-- =========================================================
          CURRENT RESEARCH SPOTLIGHT
     ========================================================= --}}
-    <section class="current-spotlight" id="current-spotlight">
-        <div class="spotlight-shell">
-            <div class="spotlight-section-heading">
-                <span>CURRENT SPOTLIGHT</span>
-                <h2>Join the Conversation</h2>
-            </div>
-
-            <div class="current-event-layout">
-                <a href="https://wacren.zoom.us/meeting/register/kuiKZKgQSxyyAkFfwMgaSQ"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="current-flyer"
-                   aria-label="Register for the current WASMaN Research Spotlight">
-                    <img src="{{ asset('pics_vids/spot1.jpeg') }}"
-                         alt="Research Spotlight flyer: What Fetu Afahye Reveals About Lagoon Stewardship and Sanitation">
-                </a>
-
-                <div class="current-event-copy">
-                    <span class="current-badge">
-                        <span class="live-dot"></span>
-                        UPCOMING SPOTLIGHT
-                    </span>
-
-                    <h3>What Fetu Afahye Reveals About Lagoon Stewardship and Sanitation</h3>
-
-                    <p class="event-theme">
-                        Culture, fisheries restraint and environmental action at Fosu Lagoon.
-                    </p>
-
-                    <div class="event-meta">
-                        <div class="event-meta-item">
-                            <span class="event-meta-icon"><i class="fa-regular fa-calendar"></i></span>
-                            <div>
-                                <small>Date</small>
-                                <strong>Friday, 9 October 2026</strong>
-                            </div>
-                        </div>
-
-                        <div class="event-meta-item">
-                            <span class="event-meta-icon"><i class="fa-regular fa-clock"></i></span>
-                            <div>
-                                <small>Time</small>
-                                <strong>1:00 PM GMT — Ghana Time</strong>
-                            </div>
-                        </div>
-
-                        <div class="event-meta-item">
-                            <span class="event-meta-icon"><i class="fa-solid fa-display"></i></span>
-                            <div>
-                                <small>Venue</small>
-                                <strong>Live Online Webinar</strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="event-people">
-                        <div>
-                            <small>Presenter</small>
-                            <strong>Cindy Owusu</strong>
-                        </div>
-                        <div>
-                            <small>Moderator</small>
-                            <strong>Faustina Sarpong</strong>
-                        </div>
-                    </div>
-
-                    <a href="https://wacren.zoom.us/meeting/register/kuiKZKgQSxyyAkFfwMgaSQ"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="event-register-btn">
-                        Join &amp; Register
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- =========================================================
+{{-- =========================================================
          FEATURED RESEARCH ARTICLE — FETU AFAHYE
     ========================================================= --}}
     <section class="spotlight-publication" id="featured-article" aria-labelledby="publication-title">
@@ -192,13 +114,13 @@
 
             <article class="spotlight-publication-card">
                 <a class="spotlight-publication-cover"
-                   href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}"
+                   href="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}"
                    target="_blank" rel="noopener noreferrer"
-                   aria-label="Read the illustrated Fetu Afahye research article in PDF format">
+                   aria-label="View the Fetu Afahye research summary flyer">
                     <img src="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}"
                          alt="WASMaN Research Spotlight article flyer about Fetu Afahye, lagoon stewardship and sanitation"
                          loading="lazy">
-                    <span class="spotlight-publication-cover-caption"><i class="fa-regular fa-file-pdf"></i> Open illustrated article</span>
+                    <span class="spotlight-publication-cover-caption"><i class="fa-regular fa-file-pdf"></i> View summary flyer</span>
                 </a>
 
                 <div class="spotlight-publication-info">
@@ -214,12 +136,16 @@
                         <span><i class="fa-solid fa-microscope"></i> Ecological monitoring</span>
                     </div>
                     <p class="spotlight-publication-note">A cleaner-looking lagoon is not, by itself, proof of improved water quality or fish biodiversity.</p>
+                    <p class="spotlight-flyer-separate-note">The summary flyer and the full article are available separately.</p>
                     <div class="spotlight-publication-actions">
+                        <a class="spotlight-publication-flyer-download" href="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}" download="WASMaN-Fetu-Afahye-Research-Summary-Flyer.png">
+                            <i class="fa-solid fa-image"></i> Download Summary Flyer
+                        </a>
                         <a class="spotlight-publication-read" href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}" target="_blank" rel="noopener noreferrer">
                             <i class="fa-regular fa-file-pdf"></i> Read Full Article <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                         <a class="spotlight-publication-download" href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}" download="WASMaN-Fetu-Afahye-Research-Spotlight.pdf">
-                            <i class="fa-solid fa-download"></i> Download PDF
+                            <i class="fa-solid fa-download"></i> Download Full Article PDF
                         </a>
                     </div>
                 </div>
@@ -248,7 +174,7 @@
                 <i class="fa-regular fa-folder-open"></i>
                 <div>
                     <strong>Our archive begins with the maiden edition.</strong>
-                    <span>Previous Spotlight sessions will appear here after each event.</span>
+                    <span>More research features will appear here as they are published.</span>
                 </div>
             </div>
         </div>

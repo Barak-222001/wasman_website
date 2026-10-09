@@ -100,79 +100,32 @@
 
 </section>
 
-{{-- =========================================================
-     RESEARCH SPOTLIGHT — UPCOMING EVENT ADVERT
-========================================================= --}}
-
-<section class="home-spotlight-ad spotlight-new-arrival">
+{-- =========================================================
+     FEATURED RESEARCH SPOTLIGHT — PUBLICATION (NOT WEBINAR)
+========================================================= --}
+<section class="home-spotlight-ad spotlight-new-arrival home-featured-research" aria-labelledby="home-research-title">
     <div class="section-container">
-
         <div class="spotlight-ad-heading">
-            <span class="spotlight-ad-eyebrow">UPCOMING RESEARCH SPOTLIGHT</span>
-            <h2>Join Our Maiden Research Spotlight</h2>
+            <span class="spotlight-ad-eyebrow">WASMaN RESEARCH SPOTLIGHT</span>
+            <h2 id="home-research-title">Featured Research: Fetu Afahye and Fosu Lagoon</h2>
+            <p>Explore the research summary flyer or read the complete illustrated article.</p>
         </div>
-
         <div class="spotlight-ad-layout">
-
-            <a href="https://wacren.zoom.us/meeting/register/kuiKZKgQSxyyAkFfwMgaSQ"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="spotlight-ad-flyer"
-               aria-label="Register for the WASMaN Research Spotlight">
-                <img src="{{ asset('pics_vids/spot1.jpeg') }}"
-                     alt="WASMaN Research Spotlight event flyer"
-                     loading="lazy">
+            <a href="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}" class="spotlight-ad-flyer" target="_blank" rel="noopener noreferrer" aria-label="View the Fetu Afahye research summary flyer as an image">
+                <img src="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}" alt="Research summary flyer: What Fetu Afahye Reveals About Lagoon Stewardship and Sanitation" loading="lazy">
+                <span class="home-flyer-caption"><i class="fa-regular fa-image"></i> View summary flyer</span>
             </a>
-
-            <div class="spotlight-ad-details">
-
-                {{-- Update these three details whenever a new Spotlight event is announced. --}}
-                <div class="spotlight-event-detail">
-                    <span class="spotlight-event-icon">
-                        <i class="fa-regular fa-calendar"></i>
-                    </span>
-                    <div>
-                        <small>Date</small>
-                        <strong>Friday,9 October 2026</strong>
-                    </div>
+            <div class="spotlight-ad-details home-featured-research-details">
+                <span class="home-featured-label"><i class="fa-solid fa-book-open-reader"></i> FEATURED RESEARCH</span>
+                <h3>What Fetu Afahye Reveals About Lagoon Stewardship and Sanitation</h3>
+                <p>By Ms Cindy Owusu &amp; Dr. Alberta Sagoe</p>
+                <p>Learn how cultural practices, fisheries stewardship and communal sanitation intersect at Cape Coast’s Fosu Lagoon.</p>
+                <div class="home-featured-actions">
+                    <a href="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}" download="WASMaN-Fetu-Afahye-Research-Summary-Flyer.png" class="spotlight-ad-register"><i class="fa-solid fa-download"></i> Download Summary Flyer</a>
+                    <a href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}" target="_blank" rel="noopener noreferrer" class="spotlight-ad-page-link"><i class="fa-regular fa-file-pdf"></i> Read Full Article</a>
+                    <a href="{{ url('/research-spotlight') }}" class="spotlight-ad-page-link"><i class="fa-solid fa-arrow-right"></i> Explore Research Spotlight</a>
                 </div>
-
-                <div class="spotlight-event-detail">
-                    <span class="spotlight-event-icon">
-                        <i class="fa-regular fa-clock"></i>
-                    </span>
-                    <div>
-                        <small>Time</small>
-                        <strong>1:00pm GMT</strong>
-                    </div>
-                </div>
-
-                <div class="spotlight-event-detail">
-                    <span class="spotlight-event-icon">
-                        <i class="fa-solid fa-video"></i>
-                    </span>
-                    <div>
-                        <small>Venue</small>
-                        <strong>Online via Zoom</strong>
-                    </div>
-                </div>
-
-                <a href="https://wacren.zoom.us/meeting/register/kuiKZKgQSxyyAkFfwMgaSQ"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="spotlight-ad-register">
-                    Join &amp; Register
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-                <a href="{{ url('/research-spotlight') }}"
-                   class="spotlight-ad-page-link">
-                    Explore Research Spotlight
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
             </div>
-
         </div>
     </div>
 </section>
