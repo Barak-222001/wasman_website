@@ -700,7 +700,8 @@
      <script src="{{ asset('created_js/list_hover_background.js') }}"></script>
      <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
      <script src="{{ asset('created_js/carousel.js') }}"></script>
-    </body>
+    @include('partials.wasman_published_items')
+</body>
    
 
 </html>

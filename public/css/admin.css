@@ -2109,3 +2109,65 @@ a {
 
     height: 300px;
 }
+
+
+/* ============================================
+   WASMaN ADMIN SIDEBAR SCROLL FIX
+============================================ */
+
+.admin-sidebar {
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    overscroll-behavior: contain;
+}
+
+/* Allow the sidebar navigation to scroll */
+.sidebar-nav {
+    min-height: 0;
+    flex-shrink: 0;
+}
+
+/* Keep the scrollbar neat */
+.admin-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Grouped WASMaN administrator navigation */
+
+.sidebar-nav .sidebar-section-label {
+    margin: 24px 14px 10px;
+    padding: 0 4px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #8fd6dc;
+}
+
+.sidebar-nav .sidebar-section-label:not(:first-child) {
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.sidebar-nav {
+    padding-bottom: 18px;
+}
+
+.admin-sidebar {
+    overflow-y: auto;
+    overflow-x: hidden;
+}

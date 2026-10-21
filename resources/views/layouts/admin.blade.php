@@ -80,146 +80,120 @@
         {{-- NAVIGATION --}}
 
         <nav class="sidebar-nav">
+{{-- DASHBOARD --}}
+<div class="sidebar-section-label">DASHBOARD</div>
 
-
-            {{-- OVERVIEW --}}
-
-            <a
-                href="{{ route('admin.dashboard') }}"
-                class="sidebar-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"
-            >
-
-                <span class="nav-icon">
-                    ◫
-                </span>
-
-                <span>
-                    Overview
-                </span>
-
-            </a>
-
-
-
-            {{-- INTERNSHIPS --}}
-
-            <a
-                href="{{ route('admin.internships') }}"
-                class="sidebar-link {{ request()->routeIs('admin.internships') || request()->routeIs('applications.*') ? 'active' : '' }}"
-            >
-
-                <span class="nav-icon">
-                    ◉
-                </span>
-
-                <span>
-                    Internships
-                </span>
-
-            </a>
-
-
-
-            {{-- VOLUNTEERS --}}
-
-            <a
-                href="{{ route('admin.volunteers') }}"
-                class="sidebar-link {{ request()->routeIs('admin.volunteers') || request()->routeIs('volunteers.*') ? 'active' : '' }}"
-            >
-
-                <span class="nav-icon">
-                    ◇
-                </span>
-
-                <span>
-                    Volunteers
-                </span>
-
-            </a>
-
-
-
-            {{-- RESEARCH ASSISTANTS --}}
-
-            <a
-                href="{{ route('admin.research-assistants') }}"
-                class="sidebar-link {{ request()->routeIs('admin.research-assistants') || request()->routeIs('research-assistants.*') ? 'active' : '' }}"
-            >
-
-                <span class="nav-icon">
-                    ✦
-                </span>
-
-                <span>
-                    Research Assistants
-                </span>
-
-            </a>
-
-
-
-            {{-- PARTNERSHIPS --}}
-
-            <a
-                href="{{ route('admin.partners') }}"
-                class="sidebar-link {{ request()->routeIs('admin.partners') || request()->routeIs('partners.*') ? 'active' : '' }}"
-            >
-
-                <span class="nav-icon">
-                    ♢
-                </span>
-
-                <span>
-                    Partnerships
-                </span>
-
-            </a>
-
-            <a
-        href="{{ route('admin.messages') }}"
-        class="sidebar-link {{ request()->routeIs('admin.messages') || request()->routeIs('messages.*') ? 'active' : '' }}"
-    >
-
-        <span class="nav-icon">
-            ✉
-        </span>
-
-        <span>
-            Messages
-    </span>
-
+<a href="{{ route('admin.dashboard') }}"
+   class="sidebar-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+    <span>Overview</span>
 </a>
 
-<a
-    href="{{ route('admin.general-enquiries') }}"
-    class="sidebar-link {{ request()->routeIs('admin.general-enquiries') || request()->routeIs('general-enquiries.*') ? 'active' : '' }}"
->
+{{-- APPLICATIONS & MEMBERSHIP --}}
+<div class="sidebar-section-label">APPLICATIONS & MEMBERSHIP</div>
 
-    <span class="nav-icon">
-        <i class="fa-solid fa-circle-question"></i>
-    </span>
+<a href="{{ route('admin.internships') }}"
+   class="sidebar-link {{ request()->routeIs('admin.internships') || request()->routeIs('applications.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-user-graduate"></i></span>
+    <span>Internships</span>
+</a>
 
-    <span>
-        General Enquiries
-    </span>
+<a href="{{ route('admin.volunteers') }}"
+   class="sidebar-link {{ request()->routeIs('admin.volunteers') || request()->routeIs('volunteers.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+    <span>Volunteers</span>
+</a>
 
+<a href="{{ route('admin.research-assistants') }}"
+   class="sidebar-link {{ request()->routeIs('admin.research-assistants') || request()->routeIs('research-assistants.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
+    <span>Research Assistants</span>
 </a>
 
 <a href="{{ route('admin.memberships') }}"
    class="sidebar-link {{ request()->routeIs('admin.memberships*') ? 'active' : '' }}">
-    <span class="sidebar-icon">
-        <i class="fa-solid fa-users"></i>
-    </span>
-
+    <span class="nav-icon"><i class="fa-solid fa-id-card"></i></span>
     <span>Membership Applications</span>
 </a>
 
-<!-- RESEARCH SPOTLIGHT -->
-<a href="{{ route('admin.research-spotlight.index') }}" class="sidebar-link {{ request()->routeIs('admin.research-spotlight*') ? 'active' : '' }}">
-    <span class="nav-icon"><i class="fas fa-microscope"></i></span>
+{{-- CONTENT & UPLOADS --}}
+<div class="sidebar-section-label">CONTENT & UPLOADS</div>
+
+<a href="{{ route('admin.knowledge-bites.index') }}"
+   class="sidebar-link {{ request()->routeIs('admin.knowledge-bites.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-book-open"></i></span>
+    <span>Knowledge Bites</span>
+</a>
+
+<a href="{{ route('admin.publications.index') }}"
+   class="sidebar-link {{ request()->routeIs('admin.publications.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-file-pdf"></i></span>
+    <span>Publications</span>
+</a>
+
+@foreach([
+    'reports' => ['Reports','fa-file-lines'],
+    'news' => ['News','fa-newspaper'],
+    'events' => ['Events','fa-calendar-days'],
+    'photos-videos' => ['Photos & Videos','fa-images']
+] as $key => $item)
+    <a href="{{ route('wasman.publish.admin', ['section' => $key]) }}"
+       class="sidebar-link {{ request()->is('admin/publishing/'.$key) ? 'active' : '' }}">
+        <span class="nav-icon">
+            <i class="fa-solid {{ $item[1] }}"></i>
+        </span>
+        <span>{{ $item[0] }}</span>
+    </a>
+@endforeach
+
+{{-- RESEARCH & PROJECTS --}}
+<div class="sidebar-section-label">RESEARCH & PROJECTS</div>
+
+<a href="{{ route('admin.research-spotlight.index') }}"
+   class="sidebar-link {{ request()->routeIs('admin.research-spotlight*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-microscope"></i></span>
     <span>Research Spotlight</span>
 </a>
 
+<a href="{{ route('admin.homepage-spotlights.index') }}"
+   class="sidebar-link {{ request()->routeIs('admin.homepage-spotlights.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-star"></i></span>
+    <span>Homepage Spotlight</span>
+</a>
+
+@foreach([
+    'ongoing-projects' => ['Ongoing Projects','fa-spinner'],
+    'completed-projects' => ['Completed Projects','fa-circle-check']
+] as $key => $item)
+    <a href="{{ route('wasman.publish.admin', ['section' => $key]) }}"
+       class="sidebar-link {{ request()->is('admin/publishing/'.$key) ? 'active' : '' }}">
+        <span class="nav-icon">
+            <i class="fa-solid {{ $item[1] }}"></i>
+        </span>
+        <span>{{ $item[0] }}</span>
+    </a>
+@endforeach
+
+{{-- COMMUNICATION & PARTNERSHIPS --}}
+<div class="sidebar-section-label">COMMUNICATION & PARTNERSHIPS</div>
+
+<a href="{{ route('admin.partners') }}"
+   class="sidebar-link {{ request()->routeIs('admin.partners') || request()->routeIs('partners.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-handshake"></i></span>
+    <span>Partnerships</span>
+</a>
+
+<a href="{{ route('admin.messages') }}"
+   class="sidebar-link {{ request()->routeIs('admin.messages') || request()->routeIs('messages.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-envelope"></i></span>
+    <span>Messages</span>
+</a>
+
+<a href="{{ route('admin.general-enquiries') }}"
+   class="sidebar-link {{ request()->routeIs('admin.general-enquiries') || request()->routeIs('general-enquiries.*') ? 'active' : '' }}">
+    <span class="nav-icon"><i class="fa-solid fa-circle-question"></i></span>
+    <span>General Enquiries</span>
+</a>
 
 
         </nav>

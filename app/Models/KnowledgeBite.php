@@ -1,0 +1,10 @@
+<?php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class KnowledgeBite extends Model
+{
+    protected $fillable = ['title', 'category', 'description', 'pdf_path', 'cover_path', 'is_published', 'published_at'];
+    protected $casts = ['is_published' => 'boolean', 'published_at' => 'datetime'];
+}
