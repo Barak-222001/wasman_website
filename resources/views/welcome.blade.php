@@ -103,6 +103,34 @@
 {{-- =========================================================
      FEATURED RESEARCH SPOTLIGHT - PUBLICATION (NOT WEBINAR)
 ========================================================= --}}
+@if($homeSpotlight)
+<section class="home-spotlight-ad spotlight-new-arrival home-featured-research" aria-labelledby="home-research-title">
+    <div class="section-container">
+        <div class="spotlight-ad-heading">
+            <span class="spotlight-ad-eyebrow">WASMaN RESEARCH SPOTLIGHT</span>
+            <h2 id="home-research-title">{{ $homeSpotlight->heading }}</h2>
+            <p>{{ $homeSpotlight->intro }}</p>
+        </div>
+        <div class="spotlight-ad-layout">
+            <a href="{{ route('home-spotlights.flyer', $homeSpotlight) }}" class="spotlight-ad-flyer" target="_blank" rel="noopener noreferrer" aria-label="View research flyer">
+                <img src="{{ route('home-spotlights.flyer', $homeSpotlight) }}" alt="{{ $homeSpotlight->title }} research flyer" loading="lazy">
+                <span class="home-flyer-caption"><i class="fa-regular fa-image"></i> View summary flyer</span>
+            </a>
+            <div class="spotlight-ad-details home-featured-research-details">
+                <span class="home-featured-label"><i class="fa-solid fa-book-open-reader"></i> FEATURED RESEARCH</span>
+                <h3>{{ $homeSpotlight->title }}</h3>
+                <p>By {{ $homeSpotlight->authors }}</p>
+                <p>{{ $homeSpotlight->description }}</p>
+                <div class="home-featured-actions">
+                    <a href="{{ route('home-spotlights.flyer', $homeSpotlight) }}?download=1" class="spotlight-ad-register"><i class="fa-solid fa-download"></i> Download Summary Flyer</a>
+                    <a href="{{ route('home-spotlights.article', $homeSpotlight) }}" target="_blank" rel="noopener noreferrer" class="spotlight-ad-page-link"><i class="fa-regular fa-file-pdf"></i> Read Full Article</a>
+                    <a href="{{ url('/research-spotlight') }}" class="spotlight-ad-page-link"><i class="fa-solid fa-arrow-right"></i> Explore Research Spotlight</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@else
 <section class="home-spotlight-ad spotlight-new-arrival home-featured-research" aria-labelledby="home-research-title">
     <div class="section-container">
         <div class="spotlight-ad-heading">
@@ -129,6 +157,7 @@
         </div>
     </div>
 </section>
+@endif
 
 {{-- =========================================================
      INTRO / KNOWLEDGE

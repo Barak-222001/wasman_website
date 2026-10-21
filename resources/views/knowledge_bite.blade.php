@@ -145,10 +145,29 @@
         <div class="content-container">
             <div class="latest-bite-heading">
                 <span class="section-label">LATEST KNOWLEDGE BITE</span>
-                <h2>Fisheries Value Chain Series</h2>
-                <p>The newest release in WASMaN's five-part series, presented from the latest issue backwards.</p>
+                <h2>{{ $publishedBites->isNotEmpty() ? $publishedBites->first()->title : 'Fisheries Value Chain Series' }}</h2>
+                <p>The latest WASMaN Knowledge Bite, with earlier publications available below.</p>
             </div>
 
+            @if($publishedBites->isNotEmpty())
+            @php $latestBite = $publishedBites->first(); @endphp
+            <article class="latest-bite-card">
+                <div class="latest-bite-photo">
+                    <img src="{{ route('knowledge-bites.published.cover', $latestBite) }}" alt="{{ $latestBite->title }}">
+                    <span class="latest-badge"><i class="fa-solid fa-bolt"></i> Latest</span>
+                </div>
+                <div class="latest-bite-content">
+                    <span class="current-bite-category">{{ $latestBite->category ?: 'WASMaN Knowledge Bite' }}</span>
+                    <h3>{{ $latestBite->title }}</h3>
+                    <div class="latest-bite-meta"><span><i class="fa-regular fa-calendar"></i> {{ $latestBite->published_at->format('j F Y') }}</span></div>
+                    <p>{{ $latestBite->description }}</p>
+                    <div class="latest-bite-actions">
+                        <a class="bite-read-button" href="{{ route('knowledge-bites.published.read', $latestBite) }}" target="_blank" rel="noopener"><i class="fa-regular fa-eye"></i> Read Knowledge Bite</a>
+                        <a class="bite-download-button" href="{{ route('knowledge-bites.published.download', $latestBite) }}"><i class="fa-solid fa-download"></i> Download PDF</a>
+                    </div>
+                </div>
+            </article>
+            @else
             <article class="latest-bite-card">
                 <div class="latest-bite-photo">
                     <img src="{{ asset('pics_vids/knowledge-bites/fisheries/part-5.webp') }}"
@@ -188,6 +207,7 @@
                 </div>
             </article>
         </div>
+            @endif
     </section>
 
     {{-- =========================================================
@@ -197,10 +217,9 @@
         <div class="content-container">
             <div class="section-title previous-bites-heading">
                 <span class="section-label">PREVIOUS KNOWLEDGE BITES</span>
-                <h2>Exlore earlier Knowledge Bites</h2>
+                <h2>Explore Earlier Knowledge Bites</h2>
                 <p>
-                    Continue through the fisheries value chain series from Part 4 back to Part 1,
-                    followed by the earlier Aquaculture and IUU Fishing Knowledge Bites.
+                    Browse previous publications, ordered from newest to oldest, followed by the existing Knowledge Bites library.
                 </p>
             </div>
 
@@ -228,6 +247,39 @@
             @endphp
 
             <div class="current-bites-grid">
+                {{-- New admin-uploaded publications (excluding the latest) appear first. --}}
+                @foreach($publishedBites->skip(1) as $bite)
+                    <article class="current-bite-card">
+                        <div class="current-bite-photo"><img src="{{ route('knowledge-bites.published.cover', $bite) }}" alt="{{ $bite->title }}" loading="lazy"></div>
+                        <div class="current-bite-body">
+                            <span class="current-bite-category">{{ $bite->category ?: 'WASMaN Knowledge Bite' }}</span>
+                            <h3>{{ $bite->title }}</h3>
+                            <div class="current-bite-date"><i class="fa-regular fa-calendar"></i> {{ $bite->published_at->format('j F Y') }}</div>
+                            <p>{{ $bite->description }}</p>
+                            <div class="current-bite-actions">
+                                <a class="bite-read-button" href="{{ route('knowledge-bites.published.read', $bite) }}" target="_blank" rel="noopener"><i class="fa-regular fa-eye"></i> Read Knowledge Bite</a>
+                                <a class="bite-download-button" href="{{ route('knowledge-bites.published.download', $bite) }}"><i class="fa-solid fa-download"></i> Download PDF</a>
+                            </div>
+                        </div>
+                    </article>
+                @endforeach
+                {{-- The previous manually featured Part 5 moves into the archive when the first upload goes live. --}}
+                @if($publishedBites->isNotEmpty())
+                <article class="current-bite-card">
+                    <div class="current-bite-photo"><img src="{{ asset('pics_vids/knowledge-bites/fisheries/part-5.webp') }}" alt="Fisheries Value Chain Part 5" loading="lazy"></div>
+                    <div class="current-bite-body">
+                        <span class="current-bite-category">Fisheries &amp; Aquaculture · Part 5 of 5</span>
+                        <h3>The Fisheries Sector: From Catch to Consumer — Part 5</h3>
+                        <div class="current-bite-date"><i class="fa-regular fa-calendar"></i> 21 September 2026</div>
+                        <p>The final part of the series explores responsible fish consumption and the safe recovery of fish by-products, highlighting circular fisheries opportunities.</p>
+                        <div class="current-bite-actions">
+                            <a class="bite-read-button" href="{{ route('knowledge-bites.read', 'cat-fisheries-value-chain-5') }}" target="_blank" rel="noopener">Read Knowledge Bite</a>
+                            <a class="bite-download-button" href="{{ route('knowledge-bites.download', 'cat-fisheries-value-chain-5') }}">Download PDF</a>
+                        </div>
+                    </div>
+                </article>
+                @endif
+
                 @foreach($fisheriesPreviousBites as $bite)
                     <article class="current-bite-card">
                         <div class="current-bite-photo">

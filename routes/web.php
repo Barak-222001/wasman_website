@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\KnowledgeBiteController;
+use App\Http\Controllers\HomepageSpotlightController;
+use App\Http\Controllers\KnowledgeBitePublishingController;
+use App\Http\Controllers\PublicationPublishingController;
 
 use App\Http\Controllers\ResearchSpotlightController;
 
@@ -20,9 +23,7 @@ use App\Http\Controllers\MembershipController;
 
 use App\Http\Controllers\VolunteerController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomepageSpotlightController::class, 'homepage']);
 
 Route::get('/history',function (){
     return view('history');
@@ -58,9 +59,10 @@ Route::get('/completed_projects',function (){
     return view ('completed_projects');
 });
 
-Route::get('/publications',function (){
-    return view ('publications');
-});
+Route::get(
+    '/publications',
+    [PublicationPublishingController::class, 'publicIndex']
+)->name('publications.index');
 
 Route::get('/news',function (){
     return view ('news');
@@ -103,9 +105,7 @@ Route::get('/general_enquiries',function (){
 });
 
 
-Route::get('/knowledge_bite',function(){
-    return view ('knowledge_bite');
-});
+Route::get('/knowledge_bite', [KnowledgeBitePublishingController::class, 'publicIndex']);
 Route::get('/partner_with_us',function(){
     return view ('partner_with_us');
 });
@@ -121,7 +121,12 @@ Route::get(
 Route::get('/intern', [InternController::class, 'create']);
 Route::post('/intern', [InternController::class, 'store']);
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'wasman.admin'])->group(function () {    // WASMaN Knowledge Bites publishing: authenticated administrators only.
+    Route::get('/admin/knowledge-bites', [KnowledgeBitePublishingController::class, 'adminIndex'])->name('admin.knowledge-bites.index');
+    Route::post('/admin/knowledge-bites', [KnowledgeBitePublishingController::class, 'store'])->name('admin.knowledge-bites.store');
+    Route::patch('/admin/knowledge-bites/{bite}/status', [KnowledgeBitePublishingController::class, 'setStatus'])->name('admin.knowledge-bites.status');
+    Route::delete('/admin/knowledge-bites/{bite}', [KnowledgeBitePublishingController::class, 'destroy'])->name('admin.knowledge-bites.destroy');
+
 
     // Route::get('/admin', [AdminController::class, 'index'])
     //     ->name('admin.dashboard');
@@ -160,6 +165,12 @@ Route::get(
         '/admin/applications/{application}/cv',
         [AdminController::class, 'downloadCv']
     )->name('applications.cv');
+
+    // HOME PAGE RESEARCH SPOTLIGHT PUBLISHING (separate from Research Spotlight applications)
+    Route::get('/admin/homepage-spotlights', [HomepageSpotlightController::class, 'index'])->name('admin.homepage-spotlights.index');
+    Route::post('/admin/homepage-spotlights', [HomepageSpotlightController::class, 'store'])->name('admin.homepage-spotlights.store');
+    Route::patch('/admin/homepage-spotlights/{spotlight}/feature', [HomepageSpotlightController::class, 'feature'])->name('admin.homepage-spotlights.feature');
+    Route::delete('/admin/homepage-spotlights/{spotlight}', [HomepageSpotlightController::class, 'destroy'])->name('admin.homepage-spotlights.destroy');
 
     Route::post('/logout', [AuthController::class, 'logout'])
         ->name('logout');
@@ -225,30 +236,6 @@ Route::delete(
     '/admin/research-assistants/{application}',
     [AdminController::class, 'destroyResearchAssistant']
 )->name('research-assistants.destroy');
-
-// PARTNER WITH US
-Route::get(
-    '/admin/partners',
-    [AdminController::class, 'partners']
-)->name('admin.partners');
-
-
-Route::get(
-    '/admin/partners/{partner}/edit',
-    [AdminController::class, 'editPartner']
-)->name('partners.edit');
-
-
-Route::put(
-    '/admin/partners/{partner}',
-    [AdminController::class, 'updatePartner']
-)->name('partners.update');
-
-
-Route::delete(
-    '/admin/partners/{partner}',
-    [AdminController::class, 'destroyPartner']
-)->name('partners.destroy');
 
 // PARTNER WITH US
 Route::get(
@@ -351,6 +338,37 @@ Route::get('/admin/research-spotlight/{application}/photo', [ResearchSpotlightCo
 Route::delete('/admin/research-spotlight/{application}', [ResearchSpotlightController::class, 'destroy'])->name('admin.research-spotlight.destroy');
 
     
+
+    // ==========================================
+    // PUBLICATIONS ADMINISTRATOR ROUTES
+    // ==========================================
+
+    Route::get(
+        '/admin/publications',
+        [PublicationPublishingController::class, 'adminIndex']
+    )->name('admin.publications.index');
+
+    Route::post(
+        '/admin/publications',
+        [PublicationPublishingController::class, 'store']
+    )->name('admin.publications.store');
+
+    Route::patch(
+        '/admin/publications/{publication}/status',
+        [PublicationPublishingController::class, 'setStatus']
+    )->name('admin.publications.status');
+
+    Route::patch(
+        '/admin/publications/{publication}/feature',
+        [PublicationPublishingController::class, 'feature']
+    )->name('admin.publications.feature');
+
+    Route::delete(
+        '/admin/publications/{publication}',
+        [PublicationPublishingController::class, 'destroy']
+    )->name('admin.publications.destroy');
+
+
 });
 
 // INTERN
@@ -425,6 +443,9 @@ Route::get('/knowledge-bites/{slug}/read', [KnowledgeBiteController::class, 'rea
 Route::get('/knowledge-bites/{slug}/download', [KnowledgeBiteController::class, 'download'])
     ->name('knowledge-bites.download');
 
+Route::get('/homepage-spotlights/{spotlight}/flyer', [HomepageSpotlightController::class, 'flyer'])->name('home-spotlights.flyer');
+Route::get('/homepage-spotlights/{spotlight}/article', [HomepageSpotlightController::class, 'article'])->name('home-spotlights.article');
+
 // =============================================
 // WHAT WE DO - DETAIL PAGES
 // =============================================
@@ -457,8 +478,36 @@ Route::post('/become_member', [MembershipController::class, 'store'])
     // Route::view('/donate', 'donate')->name('donate');
 
     // RESEARCH SPOTLIGHT ROUTES
-Route::get('/research-spotlight', [ResearchSpotlightController::class, 'index'])->name('research-spotlight.index');
+Route::get('/research-spotlight', [HomepageSpotlightController::class, 'publicResearchPage'])->name('research-spotlight.index');
 
 Route::post('/research-spotlight', [ResearchSpotlightController::class, 'store'])->name('research-spotlight.store');
 
 
+
+// Public routes for new uploaded publications; legacy PDF routes above remain unchanged.
+Route::get('/knowledge-bites/published/{bite}/cover', [KnowledgeBitePublishingController::class, 'cover'])->name('knowledge-bites.published.cover');
+Route::get('/knowledge-bites/published/{bite}/read', [KnowledgeBitePublishingController::class, 'read'])->name('knowledge-bites.published.read');
+Route::get('/knowledge-bites/published/{bite}/download', [KnowledgeBitePublishingController::class, 'download'])->name('knowledge-bites.published.download');
+
+
+// ==========================================
+// PUBLICATIONS PUBLIC FILE ROUTES
+// ==========================================
+
+Route::get(
+    '/publications/{publication}/cover',
+    [PublicationPublishingController::class, 'cover']
+)->name('publications.cover');
+
+Route::get(
+    '/publications/{publication}/read',
+    [PublicationPublishingController::class, 'read']
+)->name('publications.read');
+
+Route::get(
+    '/publications/{publication}/download',
+    [PublicationPublishingController::class, 'download']
+)->name('publications.download');
+
+// WASMaN additional publishing modules
+require __DIR__.'/wasman_publishing.php';

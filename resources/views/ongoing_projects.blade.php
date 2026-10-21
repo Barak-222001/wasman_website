@@ -825,5 +825,6 @@
 <script src="{{ asset('created_js/swiper-bundle.min.js') }}"></script>
 <script src="{{ asset('created_js/carousel.js') }}"></script>
 
+@include('partials.wasman_published_items')
 </body>
 </html>

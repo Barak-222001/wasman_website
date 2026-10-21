@@ -104,6 +104,35 @@
 {{-- =========================================================
          FEATURED RESEARCH ARTICLE — FETU AFAHYE
     ========================================================= --}}
+    @if($currentSpotlight)
+    <section class="spotlight-publication" id="featured-article" aria-labelledby="publication-title">
+        <div class="spotlight-shell">
+            <div class="spotlight-section-heading spotlight-section-heading-centered">
+                <span>FEATURED RESEARCH ARTICLE</span>
+                <h2 id="publication-title">{{ $currentSpotlight->heading }}</h2>
+                <p>{{ $currentSpotlight->intro }}</p>
+            </div>
+            <article class="spotlight-publication-card">
+                <a class="spotlight-publication-cover" href="{{ route('home-spotlights.flyer', $currentSpotlight) }}" target="_blank" rel="noopener noreferrer" aria-label="View research summary flyer">
+                    <img src="{{ route('home-spotlights.flyer', $currentSpotlight) }}" alt="Research flyer: {{ $currentSpotlight->title }}" loading="lazy">
+                    <span class="spotlight-publication-cover-caption"><i class="fa-regular fa-image"></i> View summary flyer</span>
+                </a>
+                <div class="spotlight-publication-info">
+                    <span class="spotlight-publication-tag"><i class="fa-solid fa-book-open-reader"></i> RESEARCH SPOTLIGHT · FEATURED ARTICLE</span>
+                    <h3>{{ $currentSpotlight->title }}</h3>
+                    <p class="spotlight-publication-authors"><i class="fa-solid fa-user-pen"></i> {{ $currentSpotlight->authors }}</p>
+                    <p class="spotlight-publication-summary">{{ $currentSpotlight->description }}</p>
+                    <p class="spotlight-flyer-separate-note">The summary flyer and the full article are available separately.</p>
+                    <div class="spotlight-publication-actions">
+                        <a class="spotlight-publication-flyer-download" href="{{ route('home-spotlights.flyer', ['spotlight' => $currentSpotlight, 'download' => 1]) }}"><i class="fa-solid fa-image"></i> Download Summary Flyer</a>
+                        <a class="spotlight-publication-read" href="{{ route('home-spotlights.article', $currentSpotlight) }}" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-pdf"></i> Read Full Article</a>
+                        <a class="spotlight-publication-download" href="{{ route('home-spotlights.article', ['spotlight' => $currentSpotlight, 'download' => 1]) }}"><i class="fa-solid fa-download"></i> Download Full Article PDF</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    @else
     <section class="spotlight-publication" id="featured-article" aria-labelledby="publication-title">
         <div class="spotlight-shell">
             <div class="spotlight-section-heading spotlight-section-heading-centered">
@@ -153,30 +182,48 @@
         </div>
     </section>
 
+    @endif
+
     {{-- =========================================================
          PREVIOUS SPOTLIGHTS
          Keep this compact. Add event cards here after each edition.
     ========================================================= --}}
     <section class="previous-spotlights">
         <div class="spotlight-shell">
-            <div class="archive-heading">
-                <div>
-                    <span>SPOTLIGHT ARCHIVE</span>
-                    <h2>Previous Research Spotlights</h2>
+            <div class="archive-heading"><div><span>SPOTLIGHT ARCHIVE</span><h2>Previous Research Spotlights</h2></div>
+                <p>Explore previously featured research publications and download their resources.</p></div>
+            @if($previousSpotlights->isNotEmpty() || $currentSpotlight)
+                <div class="spotlight-archive-grid">
+                    @foreach($previousSpotlights as $item)
+                    <article class="spotlight-archive-card">
+                        <a href="{{ route('home-spotlights.flyer', $item) }}" target="_blank" rel="noopener noreferrer"><img src="{{ route('home-spotlights.flyer', $item) }}" loading="lazy" alt="Research flyer: {{ $item->title }}"></a>
+                        <div class="spotlight-archive-body">
+                            <h3>{{ $item->title }}</h3><p><strong>{{ $item->authors }}</strong></p><p>{{ $item->description }}</p>
+                            <div class="spotlight-archive-links">
+                                <a href="{{ route('home-spotlights.article', $item) }}" target="_blank" rel="noopener noreferrer">Read PDF</a>
+                                <a href="{{ route('home-spotlights.article', ['spotlight' => $item, 'download' => 1]) }}">Download PDF</a>
+                            </div>
+                        </div>
+                    </article>
+                    @endforeach
+                    @if($currentSpotlight)
+                    <article class="spotlight-archive-card">
+                        <a href="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}" target="_blank" rel="noopener noreferrer"><img src="{{ asset('pics_vids/research-spotlight/fetu-afahye-research-flyer.png') }}" loading="lazy" alt="Fetu Afahye research summary flyer"></a>
+                        <div class="spotlight-archive-body">
+                            <h3>What Fetu Afahye Reveals About Lagoon Stewardship and Sanitation</h3>
+                            <p><strong>Ms Cindy Owusu &amp; Dr. Alberta Sagoe</strong></p>
+                            <p>Explore the connections between cultural tradition, lagoon stewardship and community sanitation at Fosu Lagoon.</p>
+                            <div class="spotlight-archive-links">
+                                <a href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}" target="_blank" rel="noopener noreferrer">Read PDF</a>
+                                <a href="{{ asset('resources/research-spotlight/fetu-afahye-lagoon-stewardship-and-sanitation.pdf') }}" download>Download PDF</a>
+                            </div>
+                        </div>
+                    </article>
+                    @endif
                 </div>
-                <p>
-                    Completed editions will be added here over time, creating a simple
-                    record of the research and voices featured through the series.
-                </p>
-            </div>
-
-            <div class="archive-empty">
-                <i class="fa-regular fa-folder-open"></i>
-                <div>
-                    <strong>Our archive begins with the maiden edition.</strong>
-                    <span>More research features will appear here as they are published.</span>
-                </div>
-            </div>
+            @else
+                <div class="archive-empty"><i class="fa-regular fa-folder-open"></i><div><strong>Our archive begins with the maiden edition.</strong><span>More research features will appear here as they are published.</span></div></div>
+            @endif
         </div>
     </section>
 

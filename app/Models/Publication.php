@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Publication extends Model
+{
+    protected $fillable = [
+        'title',
+        'author',
+        'description',
+        'category',
+        'publication_date',
+        'pdf_path',
+        'cover_path',
+        'is_published',
+        'is_featured',
+        'published_at',
+    ];
+
+    protected $casts = [
+        'publication_date' => 'date',
+        'is_published' => 'boolean',
+        'is_featured' => 'boolean',
+        'published_at' => 'datetime',
+    ];
+}
