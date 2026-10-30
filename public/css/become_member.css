@@ -2807,4 +2807,8 @@ main p {
         width: 24px;
         margin: 0 8px;
     }
+    /* Preserve the correct WASMaN capitalization */
+#who-can-join .eligibility-header .section-label {
+    text-transform: none !important;
+}
 }
