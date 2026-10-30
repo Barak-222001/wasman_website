@@ -2617,3 +2617,194 @@ main p {
         padding: 20px 18px;
     }
 }
+/* =========================================
+   WHO CAN JOIN WASMaN?
+========================================= */
+.membership-eligibility {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%);
+}
+
+.eligibility-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eligibility-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 42px;
+}
+
+.eligibility-header .section-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #11a0c7;
+    position: relative;
+}
+
+.eligibility-header .section-label::before,
+.eligibility-header .section-label::after {
+    content: "";
+    display: inline-block;
+    width: 38px;
+    height: 2px;
+    background: #11a0c7;
+    vertical-align: middle;
+    margin: 0 12px;
+}
+
+.eligibility-header h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+    color: #0e223d;
+    margin-bottom: 14px;
+}
+
+.eligibility-header p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #556677;
+    margin: 0 auto;
+}
+
+.eligibility-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.eligibility-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 26px 22px;
+    box-shadow: 0 10px 28px rgba(14, 34, 61, 0.08);
+    border: 1px solid rgba(17, 160, 199, 0.08);
+    text-align: left;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: eligibilityFadeUp 0.7s ease forwards;
+    min-height: 100%;
+}
+
+.eligibility-card-1 { animation-delay: 0.08s; }
+.eligibility-card-2 { animation-delay: 0.18s; }
+.eligibility-card-3 { animation-delay: 0.28s; }
+.eligibility-card-4 { animation-delay: 0.38s; }
+
+.eligibility-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 36px rgba(14, 34, 61, 0.14);
+}
+
+.eligibility-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #11a0c7, #1b6da8);
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 18px rgba(17, 160, 199, 0.22);
+}
+
+.eligibility-card h3 {
+    font-size: 1.06rem;
+    line-height: 1.45;
+    color: #0e223d;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.eligibility-card p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #5c6b7a;
+    margin: 0;
+}
+
+.eligibility-note {
+    margin: 34px auto 0;
+    max-width: 780px;
+    background: #eef8fc;
+    border: 1px solid rgba(17, 160, 199, 0.12);
+    border-radius: 16px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    animation: eligibilityFadeUp 0.7s ease forwards;
+}
+
+.eligibility-note i {
+    color: #11a0c7;
+    font-size: 1rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.eligibility-note p {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: #33485c;
+}
+
+.eligibility-note strong {
+    color: #0e223d;
+}
+
+@keyframes eligibilityFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1100px) {
+    .eligibility-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 680px) {
+    .membership-eligibility {
+        padding: 64px 16px;
+    }
+
+    .eligibility-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .eligibility-header p {
+        font-size: 0.95rem;
+    }
+
+    .eligibility-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .eligibility-card {
+        padding: 22px 18px;
+    }
+
+    .eligibility-header .section-label::before,
+    .eligibility-header .section-label::after {
+        width: 24px;
+        margin: 0 8px;
+    }
+}

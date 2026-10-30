@@ -383,106 +383,80 @@
 
 
 {{-- =========================
-     WHO THE NETWORK SERVES
+     WHO CAN JOIN WASMaN?
 ========================= --}}
 <section class="membership-eligibility" id="who-can-join">
-    <div class="eligibility-container">
+    <div class="eligibility-wrapper">
 
-        <div class="eligibility-intro">
+        <div class="eligibility-header">
             <span class="section-label">WHO CAN JOIN WASMaN?</span>
-
-            <h2>
-                Diverse Expertise.
-                <span>Shared Vision. Collective Impact.</span>
-            </h2>
-
-            <p class="eligibility-opening">
-                The Women in Aquatic Science & Management Network (WASMaN)
-                welcomes eligible individuals from diverse academic,
-                professional and institutional backgrounds who share and
-                support the Network’s vision, mission and objectives.
-            </p>
-
+            <h2>Membership Eligibility at a Glance</h2>
             <p>
-                WASMaN recognises that advancing women’s participation,
-                visibility and leadership in aquatic science and management
-                requires collective efforts, diverse expertise and meaningful
-                collaboration. Membership is therefore not limited to
-                scientists or individuals directly working in aquatic science.
-                The Network also welcomes those whose knowledge, skills,
-                experiences and interests can contribute to achieving its
-                objectives.
+                WASMaN welcomes eligible individuals and organisations whose
+                interests, expertise and values align with the Network’s mission
+                of advancing women in aquatic science and management.
             </p>
+        </div>
 
-            <div class="eligibility-highlight">
-                <i class="fas fa-people-group" aria-hidden="true"></i>
-                <div>
-                    <strong>WASMaN fosters equity, not exclusion.</strong>
-                    <p>
-                        While WASMaN places particular emphasis on empowering
-                        women and girls, the Network also welcomes male
-                        professionals, allies and institutional partners
-                        committed to advancing gender equity through its
-                        <strong>Associate/Ally Membership</strong> category.
-                    </p>
+        <div class="eligibility-cards">
+
+            <div class="eligibility-card eligibility-card-1">
+                <div class="eligibility-icon">
+                    <i class="fas fa-user-graduate" aria-hidden="true"></i>
                 </div>
+                <h3>Students & Early-Career Professionals</h3>
+                <p>
+                    For emerging professionals building knowledge, confidence
+                    and careers in aquatic science and management.
+                </p>
             </div>
 
-            <p class="eligibility-disclaimer">
+            <div class="eligibility-card eligibility-card-2">
+                <div class="eligibility-icon">
+                    <i class="fas fa-microscope" aria-hidden="true"></i>
+                </div>
+                <h3>Researchers & Academics</h3>
+                <p>
+                    For lecturers, scientists and scholars generating evidence,
+                    innovation and solutions for aquatic systems.
+                </p>
+            </div>
+
+            <div class="eligibility-card eligibility-card-3">
+                <div class="eligibility-icon">
+                    <i class="fas fa-briefcase" aria-hidden="true"></i>
+                </div>
+                <h3>Practitioners & Professionals</h3>
+                <p>
+                    For experts working in fisheries, aquaculture, marine
+                    governance, conservation and related fields.
+                </p>
+            </div>
+
+            <div class="eligibility-card eligibility-card-4">
+                <div class="eligibility-icon">
+                    <i class="fas fa-handshake" aria-hidden="true"></i>
+                </div>
+                <h3>Allies & Institutional Partners</h3>
+                <p>
+                    For supporters and institutions committed to collaboration,
+                    inclusion and women’s leadership in the sector.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="eligibility-note">
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            <p>
                 Membership is subject to the eligibility requirements of the
                 relevant category and approval by the
                 <strong>WASMaN Leadership Committee.</strong>
             </p>
-
-            <a class="membership-primary-btn eligibility-action" href="#membership-categories">
-                Explore Membership Categories
-                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </a>
-        </div>
-
-        <div class="eligibility-visuals" aria-label="Examples of people who can contribute to WASMaN">
-
-            <div class="eligibility-card">
-                <div class="eligibility-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
-                <h3>Students & Early-Career Professionals</h3>
-                <p>Emerging professionals building knowledge, confidence and careers in aquatic science and management.</p>
-            </div>
-
-            <div class="eligibility-card">
-                <div class="eligibility-icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
-                <h3>Researchers & Academics</h3>
-                <p>Scientists, lecturers and scholars generating evidence, innovation and solutions for aquatic systems.</p>
-            </div>
-
-            <div class="eligibility-card">
-                <div class="eligibility-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
-                <h3>Practitioners & Entrepreneurs</h3>
-                <p>Professionals applying practical expertise across fisheries, aquaculture, coastal governance and enterprise.</p>
-            </div>
-
-            <div class="eligibility-card">
-                <div class="eligibility-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
-                <h3>Technology & Communication Specialists</h3>
-                <p>Experts supporting innovation, visibility, digital systems, science communication and outreach.</p>
-            </div>
-
-            <div class="eligibility-card">
-                <div class="eligibility-icon"><i class="fas fa-bullhorn" aria-hidden="true"></i></div>
-                <h3>Educators, Policymakers & Advocates</h3>
-                <p>Individuals influencing learning, policy, advocacy and evidence-informed decision-making.</p>
-            </div>
-
-            <div class="eligibility-card">
-                <div class="eligibility-icon"><i class="fas fa-handshake" aria-hidden="true"></i></div>
-                <h3>Allies & Institutional Partners</h3>
-                <p>Supporters and institutions committed to collaboration and advancing women’s leadership in the sector.</p>
-            </div>
-
         </div>
 
     </div>
 </section>
-
 
 
 <section class="membership-application membership-form-section" id="membership-application">
@@ -624,7 +598,7 @@
                     <span>03</span>
                     <div>
                         <h3>Membership Category <span>*</span></h3>
-                        <p>Select the WASMaN membership category that best fits you. Membership becomes effective after Secretariat approval and payment of the prescribed membership fee.</p>
+                        <p>Select the WASMaN membership category that best fits you.Membership is subject to the eligibility requirements of the relevant category and approval by the WASMaN Leadership Committee.</p>
                     </div>
                 </div>
 
@@ -695,7 +669,7 @@
                     <span>
                         I hereby apply for membership of WASMaN and commit to supporting its vision,
                         mission and values. I understand that membership becomes effective upon approval
-                        by the Secretariat and payment of the prescribed membership fee. I consent to the
+                        by the Leadership Comitee. I consent to the
                         use of my details for official WASMaN communications and networking purposes.
                     </span>
                 </label>
