@@ -2808,7 +2808,10 @@ main p {
         margin: 0 8px;
     }
     /* Preserve the correct WASMaN capitalization */
-#who-can-join .eligibility-header .section-label {
-    text-transform: none !important;
+
 }
+/* Preserve the official WASMaN spelling */
+#who-can-join .eligibility-header .section-label,
+#who-can-join .eligibility-header p {
+    text-transform: none !important;
 }
