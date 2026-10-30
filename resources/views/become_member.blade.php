@@ -215,7 +215,7 @@
     <div class="benefits-image">
 
         <img
-            src="{{ asset('pics_vids/Wesite photos/unnamed (2) (1).png') }}"
+            src="{{ asset('pics_vids/Website photos/unnamed (2)(1).png') }}"
             alt="WASMaN community engagement"
         >
 
@@ -385,36 +385,58 @@
 {{-- =========================
      WHO THE NETWORK SERVES
 ========================= --}}
-<section class="membership-eligibility">
-
+<section class="membership-eligibility" id="who-can-join">
     <div class="eligibility-container">
-
         <div class="eligibility-content">
-            <span class="section-label">WHO IS WASMaN FOR?</span>
-
-            <h2>
-                Women Advancing
-                <span>Aquatic Science & Management</span>
-            </h2>
-
-            <p>
-                WASMaN is a professional platform dedicated to strengthening
-                the participation, visibility and leadership of women in
-                aquatic science and management. The Network advances this
-                mission through research, capacity development, advocacy,
-                networking and partnerships.
+            <span class="section-label">WHO CAN JOIN WASMaN?</span>
+            <h2>Diverse Expertise. <span>Shared Vision. Collective Impact.</span></h2>
+            <p class="eligibility-opening">
+                The Women in Aquatic Science & Management Network (WASMaN) welcomes
+                eligible individuals from diverse academic, professional and institutional
+                backgrounds who share and support the Network's vision, mission and objectives.
             </p>
+            <p>
+                WASMaN recognises that advancing women's participation, visibility and
+                leadership in aquatic science and management requires collective efforts,
+                diverse expertise and meaningful collaboration. Membership is therefore
+                not limited to scientists or individuals directly working in aquatic
+                science. The Network also welcomes those whose knowledge, skills,
+                experiences and interests can contribute to achieving its objectives.
+            </p>
+            <p>
+                Whether you are a student, researcher, academic, early-career professional,
+                experienced practitioner, entrepreneur, educator, technology specialist,
+                communicator, policymaker, development practitioner or an individual
+                passionate about making a positive impact,
+                <strong>there is an opportunity to contribute to WASMaN's mission through
+                the appropriate membership category.</strong>
+            </p>
+            <p>
+                While WASMaN places particular emphasis on empowering women and girls,
+                the Network also welcomes male professionals, allies and institutional
+                partners committed to advancing gender equity through its
+                <strong>Associate/Ally Membership</strong> category.
+            </p>
+            <div class="eligibility-statement"><i class="fas fa-people-group" aria-hidden="true"></i>
+                <strong>WASMaN fosters equity, not exclusion.</strong>
+            </div>
+            <p class="eligibility-disclaimer">
+                Membership is subject to the eligibility requirements of the relevant
+                category, approval by the Network Secretariat and payment of applicable
+                membership fees.
+            </p>
+            <a class="membership-primary-btn eligibility-action" href="#membership-categories">
+                Explore Membership Categories <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
         </div>
-
-        <div class="eligibility-list">
-            <div><i class="fas fa-check"></i> Aquatic Science</div>
-            <div><i class="fas fa-check"></i> Aquatic Management</div>
-            <div><i class="fas fa-check"></i> Research & Knowledge</div>
-            <div><i class="fas fa-check"></i> Professional Development</div>
-            <div><i class="fas fa-check"></i> Advocacy & Leadership</div>
-            <div><i class="fas fa-check"></i> Networking & Collaboration</div>
+        <div class="eligibility-list" aria-label="Examples of people who can contribute to WASMaN">
+            <div><i class="fas fa-graduation-cap" aria-hidden="true"></i> Students &amp; Early-Career Professionals</div>
+            <div><i class="fas fa-microscope" aria-hidden="true"></i> Researchers &amp; Academics</div>
+            <div><i class="fas fa-briefcase" aria-hidden="true"></i> Practitioners &amp; Entrepreneurs</div>
+            <div><i class="fas fa-laptop-code" aria-hidden="true"></i> Technology &amp; Communication Specialists</div>
+            <div><i class="fas fa-bullhorn" aria-hidden="true"></i> Educators, Policymakers &amp; Advocates</div>
+            <div><i class="fas fa-handshake" aria-hidden="true"></i> Allies &amp; Institutional Partners</div>
         </div>
-
     </div>
 </section>
 
