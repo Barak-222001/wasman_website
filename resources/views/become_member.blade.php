@@ -392,9 +392,10 @@
             <span class="section-label">WHO CAN JOIN WASMaN?</span>
             <h2>Membership Eligibility at a Glance</h2>
             <p>
-                WASMaN welcomes eligible individuals and organisations whose
-                interests, expertise and values align with the Network’s mission
-                of advancing women in aquatic science and management.
+                WASMaN welcomes individuals from diverse professional backgrounds
+                who support its mission of advancing women in aquatic science
+                and management. Men are also welcome through the
+                <strong>Associate/Ally Membership</strong> category.
             </p>
         </div>
 
@@ -433,14 +434,16 @@
                 </p>
             </div>
 
-            <div class="eligibility-card eligibility-card-4">
+           <div class="eligibility-card eligibility-card-4">
                 <div class="eligibility-icon">
                     <i class="fas fa-handshake" aria-hidden="true"></i>
                 </div>
-                <h3>Allies & Institutional Partners</h3>
+
+                <h3>Male Allies & Institutional Partners</h3>
+
                 <p>
-                    For supporters and institutions committed to collaboration,
-                    inclusion and women’s leadership in the sector.
+                    Men and institutional partners can support WASMaN's mission
+                    through the <strong>Associate/Ally Membership</strong> category.
                 </p>
             </div>
 
@@ -449,8 +452,8 @@
         <div class="eligibility-note">
             <i class="fas fa-circle-check" aria-hidden="true"></i>
             <p>
-                Membership is subject to the eligibility requirements of the
-                relevant category and approval by the
+                WASMaN fosters equity, not exclusion. Membership is subject
+                to category eligibility and approval by the
                 <strong>WASMaN Leadership Committee.</strong>
             </p>
         </div>
@@ -598,7 +601,7 @@
                     <span>03</span>
                     <div>
                         <h3>Membership Category <span>*</span></h3>
-                        <p>Select the WASMaN membership category that best fits you.Membership is subject to the eligibility requirements of the relevant category and approval by the WASMaN Leadership Committee.</p>
+                        <p>Select the WASMaN membership category that best fits you. Membership is subject to the eligibility requirements of the relevant category and approval by the WASMaN Leadership Committee.</p>
                     </div>
                 </div>
 
