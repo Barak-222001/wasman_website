@@ -2445,3 +2445,175 @@ main p {
         padding: 28px 24px !important;
     }
 }
+
+/* =========================================
+   WHO CAN JOIN WASMaN
+========================================= */
+.membership-eligibility {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.eligibility-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.eligibility-intro {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 36px;
+    box-shadow: 0 12px 35px rgba(12, 44, 84, 0.08);
+}
+
+.eligibility-intro h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 14px 0 18px;
+    color: #0f2747;
+}
+
+.eligibility-intro h2 span {
+    color: #1f6fb2;
+}
+
+.eligibility-opening {
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: #223b57;
+}
+
+.eligibility-intro p {
+    color: #425466;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.eligibility-highlight {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: #eef6ff;
+    border-left: 4px solid #1f6fb2;
+    border-radius: 16px;
+    padding: 18px 18px 14px;
+    margin: 24px 0;
+}
+
+.eligibility-highlight i {
+    color: #1f6fb2;
+    font-size: 1.4rem;
+    margin-top: 4px;
+}
+
+.eligibility-highlight strong {
+    color: #0f2747;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.eligibility-disclaimer {
+    font-weight: 500;
+    color: #1e3550;
+    background: #f5f9fc;
+    border-radius: 14px;
+    padding: 14px 16px;
+}
+
+.eligibility-action {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eligibility-visuals {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.eligibility-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px 20px;
+    box-shadow: 0 12px 30px rgba(15, 39, 71, 0.08);
+    border: 1px solid rgba(31, 111, 178, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: floatInUp 0.7s ease both;
+}
+
+.eligibility-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(15, 39, 71, 0.14);
+}
+
+.eligibility-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1f6fb2, #44a3d9);
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+.eligibility-card h3 {
+    font-size: 1.05rem;
+    color: #0f2747;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.eligibility-card p {
+    color: #556677;
+    line-height: 1.7;
+    font-size: 0.96rem;
+    margin: 0;
+}
+
+@keyframes floatInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 991px) {
+    .eligibility-container {
+        grid-template-columns: 1fr;
+    }
+
+    .eligibility-visuals {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .eligibility-intro {
+        padding: 26px 20px;
+    }
+
+    .eligibility-intro h2 {
+        font-size: 1.7rem;
+    }
+
+    .eligibility-visuals {
+        grid-template-columns: 1fr;
+    }
+
+    .eligibility-card {
+        padding: 20px 18px;
+    }
+}
